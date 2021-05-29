@@ -20,7 +20,7 @@ function explain( text) {
   var lineNumber = 0;
   goto(-.90 * cWidth + maxX(), .9 * cHeight - maxY());
   కోణము(90);
-  setfont("bold 20px arial,sans-serif");
+  అక్షరరూపము_స్థాపించు("bold 20px arial,sans-serif");
 
   var lines = text.split("@");
   for (var i=0; i<lines.length; i++) {

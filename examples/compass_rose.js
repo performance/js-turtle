@@ -145,17 +145,17 @@ function boxTheCompass(size) {
       pointSize = size/48
       textLen = boxedCompass[i].length*pointSize/2
       వెనుకకు_జరుగు(textLen)
-      setfont("normal " + pointSize + "pt Helvetica")
+      అక్షరరూపము_స్థాపించు("normal " + pointSize + "pt Helvetica")
     } else if (fontSize == 2) {
       pointSize = size/48
       textLen = boxedCompass[i].length*pointSize/2
       వెనుకకు_జరుగు(textLen)
-      setfont("bold " + pointSize + "pt Helvetica")
+      అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")
     } else {
       pointSize = size/40
       textLen = boxedCompass[i].length*pointSize/2
       వెనుకకు_జరుగు(textLen)
-      setfont("bold " + pointSize + "pt Helvetica")
+      అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")
     }
     write(boxedCompass[i])
     ముందుకు_జరుగు(textLen)

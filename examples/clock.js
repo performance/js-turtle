@@ -30,7 +30,7 @@ function ticks(x, y, వ్యాసార్థము) {
 function numbers(x, y, వ్యాసార్థము) {
    కలమును_పైకి_ఎత్తు();
    fontSize = 20/130 * size
-   setFont(fontSize+"px sans-serif");
+   అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");
    రంగు("black");
    for (var hour = 1; hour <= 12; hour++) {
       goto(x,y);

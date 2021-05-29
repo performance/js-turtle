@@ -52,7 +52,7 @@ function kochSnowflakeDelay() {
   kochSnowflake (.8 * side,i);
   goto(minX(),minY());
   కోణము(90);
-  setfont("Helvetica,san-serif 12pt")
+  అక్షరరూపము_స్థాపించు("Helvetica,san-serif 12pt")
   write ("Koch snowflake of order " +i);
   draw();
   i = i + 1;

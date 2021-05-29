@@ -1229,25 +1229,26 @@ function రంగు (col) {
 }
 
 colour = రంగు;
-// color = రంగు;
+color = రంగు;
 
 
 /*******************************************************************************
- * setfont -- set the font used by the write function
- *
+ * అక్షరరూపము_స్థాపించు -- set the font used by the write function
+ * అక్షరరూపము_స్థాపించు 
  * arguments:
  *   font: string defining the font characteristics (style, variant, weight, size,
  *         and font-family for fi ads a subsequent writes.
- *         Example: setfont("italic small-caps bold 12px courier")
+ *         Example: అక్షరరూపము_స్థాపించు("italic small-caps bold 12px courier")
  *
  * returns: None
  ******************************************************************************/
-function setfont(font) {
+function అక్షరరూపము_స్థాపించు(font) {
    turtle.font = font;
    imageContext.font = font;
 }
 
-setFont = setfont;
+setFont = అక్షరరూపము_స్థాపించు;
+అక్షరరూపము_స్థాపించు = అక్షరరూపము_స్థాపించు;
 
 
 /*******************************************************************************

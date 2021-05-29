@@ -30,7 +30,7 @@ function kochLineDelay() {
   kochLine (side, i);
   goto(minX(),minY());
   కోణము(90);
-  setfont("bold 12pt Ariel,san-serif")
+  అక్షరరూపము_స్థాపించు("bold 12pt Ariel,san-serif")
   write ("Koch line of order " +i);
   draw();
   i = i + 1;

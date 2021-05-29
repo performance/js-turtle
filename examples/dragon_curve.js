@@ -36,7 +36,7 @@ function caption (message) {
   goto (minX()+10, minY()+5)
   రంగు("black")
 
-  setfont( "bold 12px Helvitica,sans-serif")
+  అక్షరరూపము_స్థాపించు( "bold 12px Helvitica,sans-serif")
   write( message)
 
   //go back from whence you came

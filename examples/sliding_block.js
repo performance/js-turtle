@@ -703,7 +703,7 @@ function caption (message) {
   setheading( 90)
 
   // erase what will be in the path
-  setfont("bold 16px helvitica,sans-serif")
+  అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
   రంగు( తెలుపు )
   వెడల్పు(22)
   ముందుకు_జరుగు(maxY() * 2 - 12)

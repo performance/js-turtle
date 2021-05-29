@@ -732,7 +732,7 @@ function showError(e) {
 
     // write the error message
     రంగు( ఎరుపు );
-    setfont (height + "pt bold Helvetica, sans-serif")
+    అక్షరరూపము_స్థాపించు (height + "pt bold Helvetica, sans-serif")
     write(e.name + ": " + e.message);
     console.log(e.name + ": " + e.message);
     if (e.filename !== undefined) {
@@ -746,7 +746,7 @@ function showError(e) {
 
         // write the file message
         రంగు( నీలము );
-        setfont (height + "pt bold Helvetica, sans-serif")
+        అక్షరరూపము_స్థాపించు (height + "pt bold Helvetica, sans-serif")
         goto (minX(), minY()+5)
         write(e.fileName.substr(-40) + " line: " + e.lineNumber);
         console.log("Error: " + e.fileName.substr(-40) + " line: " + e.lineNumber);

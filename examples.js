@@ -820,7 +820,7 @@ function ticks(x, y, వ్యాసార్థము) {\n\
 function numbers(x, y, వ్యాసార్థము) {\n\
    కలమును_పైకి_ఎత్తు();\n\
    fontSize = 20/130 * size\n\
-   setFont(fontSize+"px sans-serif");\n\
+   అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");\n\
    రంగు("black");\n\
    for (var hour = 1; hour <= 12; hour++) {\n\
       స్థితి_మార్చు(x,y);\n\
@@ -1742,17 +1742,17 @@ function boxTheCompass(size) {\n\
       pointSize = size/48\n\
       textLen = boxedCompass[i].length*pointSize/2\n\
       వెనుకకు_జరుగు(textLen)\n\
-      setfont("normal " + pointSize + "pt Helvetica")\n\
+      అక్షరరూపము_స్థాపించు("normal " + pointSize + "pt Helvetica")\n\
     } else if (fontSize == 2) {\n\
       pointSize = size/48\n\
       textLen = boxedCompass[i].length*pointSize/2\n\
       వెనుకకు_జరుగు(textLen)\n\
-      setfont("bold " + pointSize + "pt Helvetica")\n\
+      అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")\n\
     } else {\n\
       pointSize = size/40\n\
       textLen = boxedCompass[i].length*pointSize/2\n\
       వెనుకకు_జరుగు(textLen)\n\
-      setfont("bold " + pointSize + "pt Helvetica")\n\
+      అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")\n\
     }\n\
     write(boxedCompass[i])\n\
     ముందుకు_జరుగు(textLen)\n\
@@ -1931,17 +1931,17 @@ function labelPoints(size) {\n\
       pointSize = size *.04\n\
       textLen = boxedCompass[i].length * pointSize/2\n\
       వెనుకకు_జరుగు(textLen)\n\
-      setfont("normal " + pointSize + "pt Helvetica")\n\
+      అక్షరరూపము_స్థాపించు("normal " + pointSize + "pt Helvetica")\n\
     } else if (fontSize == 2) {\n\
       pointSize = size *.04\n\
       textLen = boxedCompass[i].length * pointSize/2\n\
       వెనుకకు_జరుగు(textLen)\n\
-      setfont("bold " + pointSize + "pt Helvetica")\n\
+      అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")\n\
     } else {\n\
       pointSize = size *.06\n\
       textLen = boxedCompass[i].length * pointSize/2\n\
       వెనుకకు_జరుగు(textLen)\n\
-      setfont("bold " + pointSize + "pt Helvetica")\n\
+      అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")\n\
     }\n\
     write(boxedCompass[i])\n\
     ముందుకు_జరుగు(textLen)\n\
@@ -2377,7 +2377,7 @@ function demo() {\n\
   వెనుకకు_జరుగు(side)\n\
 \n\
   // label the sides of the triangle\n\
-  setfont("bold 14px sans-serif")\n\
+  అక్షరరూపము_స్థాపించు("bold 14px sans-serif")\n\
   ఎడమ_వైపు_తిరుగు( anglea)\n\
   ముందుకు_జరుగు( side+50)\n\
   కుడి_వైపు_తిరుగు( anglea)\n\
@@ -2764,7 +2764,7 @@ function lines () {\n\
   ముందుకు_జరుగు(2*maxX())\n\
 \n\
   //lable the axes\n\
-  setFont("bold 14px sans-serif");\n\
+  అక్షరరూపము_స్థాపించు("bold 14px sans-serif");\n\
   స్థితి_మార్చు(0+10,maxY()-25)\n\
   కోణము (90)\n\
   write (maxY())\n\
@@ -2962,7 +2962,7 @@ function caption (message) {\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   రంగు("black")\n\
 \n\
-  setfont( "bold 12px Helvitica,sans-serif")\n\
+  అక్షరరూపము_స్థాపించు( "bold 12px Helvitica,sans-serif")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
@@ -3598,7 +3598,7 @@ function caption (message) {\n\
     setheading( 90)\n\
 \n\
     // erase what will be in the path\n\
-    setfont("bold 16px helvitica,sans-serif")\n\
+    అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
     రంగు( తెలుపు )\n\
     వెడల్పు(22)\n\
     ముందుకు_జరుగు(maxY() * 2 - 12)\n\
@@ -4144,7 +4144,7 @@ function caption (message) {\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   రంగు("black")\n\
-  setfont( "bold 12px Helvitica,sans-serif")\n\
+  అక్షరరూపము_స్థాపించు( "bold 12px Helvitica,sans-serif")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
@@ -5151,7 +5151,7 @@ function caption (message) {\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   రంగు("black")\n\
-  setfont("bold 12pt Ariel,sans-serif")\n\
+  అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
@@ -7209,7 +7209,7 @@ function kochLineDelay() {\n\
   kochLine (side, i);\n\
   స్థితి_మార్చు(minX(),minY());\n\
   కోణము(90);\n\
-  setfont("bold 12pt Ariel,san-serif")\n\
+  అక్షరరూపము_స్థాపించు("bold 12pt Ariel,san-serif")\n\
   write ("Koch line of order " +i);\n\
   draw();\n\
   i = i + 1;\n\
@@ -7419,7 +7419,7 @@ function kochSnowflakeDelay() {\n\
   kochSnowflake (.8 * side,i);\n\
   స్థితి_మార్చు(minX(),minY());\n\
   కోణము(90);\n\
-  setfont("Helvetica,san-serif 12pt")\n\
+  అక్షరరూపము_స్థాపించు("Helvetica,san-serif 12pt")\n\
   write ("Koch snowflake of order " +i);\n\
   draw();\n\
   i = i + 1;\n\
@@ -7742,7 +7742,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase what will be in the path\n\
-  setfont("bold 16px helvitica,sans-serif")\n\
+  అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
   రంగు( తెలుపు )\n\
   వెడల్పు(22)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
@@ -9864,7 +9864,7 @@ function delayed() {\n\
     sierpinski(side, i);\n\
     స్థితి_మార్చు(minX(),minY());\n\
     కోణము(90);\n\
-    setfont("bold 12pt Ariel,sans-serif")\n\
+    అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")\n\
     write ("Sierpinski curve of order "+ i);\n\
     draw();\n\
     i = i + 1;\n\
@@ -9931,7 +9931,7 @@ function sier (order) {\n\
     sierpinski( order, side)\n\
 \n\
     స్థితి_మార్చు(0+10- side/2,minY()+10)\n\
-    setfont("bold 16px helvitica,sans-serif")\n\
+    అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
     write ("Sierpinski triangle of order " + order)  \n\
 }\n\
 \n\
@@ -9966,7 +9966,7 @@ function explain( text) {\n\
   var lineNumber = 0;\n\
   స్థితి_మార్చు(-.90 * cWidth + maxX(), .9 * cHeight - maxY());\n\
   కోణము(90);\n\
-  setfont("bold 20px arial,sans-serif");\n\
+  అక్షరరూపము_స్థాపించు("bold 20px arial,sans-serif");\n\
 \n\
   var lines = text.split("@");\n\
   for (var i=0; i<lines.length; i++) {\n\
@@ -10785,7 +10785,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase what will be in the path\n\
-  setfont("bold 16px helvitica,sans-serif")\n\
+  అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
   రంగు( తెలుపు )\n\
   వెడల్పు(22)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\

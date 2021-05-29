@@ -76,7 +76,7 @@ function delayed() {
     sierpinski(side, i);
     goto (minX(),minY());
     కోణము(90);
-    setfont("bold 12pt Ariel,sans-serif")
+    అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")
     write ("Sierpinski curve of order "+ i);
     draw();
     i = i + 1;

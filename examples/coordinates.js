@@ -13,7 +13,7 @@ function lines () {
   ముందుకు_జరుగు(2*maxX())
 
   //lable the axes
-  setFont("bold 14px sans-serif");
+  అక్షరరూపము_స్థాపించు("bold 14px sans-serif");
   goto (0+10,maxY()-25)
   కోణము (90)
   write (maxY())

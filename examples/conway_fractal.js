@@ -290,7 +290,7 @@ function demo() {
   వెనుకకు_జరుగు(side)
 
   // label the sides of the triangle
-  setfont("bold 14px sans-serif")
+  అక్షరరూపము_స్థాపించు("bold 14px sans-serif")
   ఎడమ_వైపు_తిరుగు( anglea)
   ముందుకు_జరుగు( side+50)
   కుడి_వైపు_తిరుగు( anglea)

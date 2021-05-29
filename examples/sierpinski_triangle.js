@@ -51,7 +51,7 @@ function sier (order) {
     sierpinski( order, side)
 
     goto (0+10- side/2,minY()+10)
-    setfont("bold 16px helvitica,sans-serif")
+    అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
     write ("Sierpinski triangle of order " + order)  
 }
 
