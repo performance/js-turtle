@@ -87,7 +87,7 @@ function B (side, gen) {
 
 
 function delayDemo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   size = 1.5 * Math.min(maxX(), maxY())
   goto( .5* size, (.2*gen -.6) * size)

@@ -65,7 +65,7 @@ function newRow(lastx, lasty) {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   side = 20
   rowx = minX() - side // - 5.5 * side

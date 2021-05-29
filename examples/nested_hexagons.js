@@ -15,7 +15,7 @@ function demo() {
      size = maxX()
    }
    steps = size/10 // 10 is the step size
-   reset();
+   ఆది_స్థితి();
    తాబేలును_దాచు();
    for(step=1; step < steps; step=step+1) {
       రంగు(random(16));

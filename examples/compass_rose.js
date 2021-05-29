@@ -167,7 +167,7 @@ function boxTheCompass(size) {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   తాబేలును_దాచు() // do not want it to show, so do this early
   redrawOnMove(false) // do not redraw image each move

@@ -84,7 +84,7 @@ function with a color as in the following example:
 }
 
 function demo() {
-  reset() // just clear the screen and home the turtle
+  ఆది_స్థితి() // just చెరిపి_వేయి the screen and home the turtle
   రంగు( ఎరుపు )
   spikey(5, 2, 50)
 }
@@ -105,7 +105,7 @@ size of smallest piece of the display, a dot or maybe a period.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   రంగు( నీలము )
   వెడల్పు(5)
   spikey(5, 2, 50)
@@ -136,7 +136,7 @@ So let's give it a try:
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   రంగు("black")
   beginShape()
   spikey(5, 2, 50)
@@ -165,7 +165,7 @@ it, you need to re-stroke the graphic to get it on top of the fill.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   వెడల్పు(1)
   రంగు( తెలుపు )
   beginShape()
@@ -196,7 +196,7 @@ the following code to move the figure:
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   ముందుకు_జరుగు(100)
   కుడి_వైపు_తిరుగు(90)
   ముందుకు_జరుగు( 100)
@@ -220,7 +220,7 @@ turtle from marking by having it lift the pen as in the following code.
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   కలమును_పైకి_ఎత్తు()
   ముందుకు_జరుగు(100)
   కుడి_వైపు_తిరుగు(90)
@@ -316,7 +316,7 @@ spikey will be drawn with a point straight up, it could be set to any కోణ�
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   for (rad = 40; rad <=100; rad = rad + 10) {
     spikey( 5, 2, rad, -10, 10)
@@ -380,7 +380,7 @@ the object notation in the argument. So taking the familiar, by now,
 }
 
 function demo() {
-  reset();
+  ఆది_స్థితి();
   spikey({points:5, revs:2, side:50})
   ఎడమ_వైపు_తిరుగు(180)
   spikey({side:50, revs:2, points:5}) // order doesn't matter.
@@ -420,7 +420,7 @@ the user of the function having to call it twice.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   spikey({ points:5,
            revs:2,
@@ -544,7 +544,7 @@ var twistAngle
 // FUNCTIONS
 
 function twistStar() {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   spikey({
     points:5,
@@ -563,7 +563,7 @@ function twistStar() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   twistAngle = 0
   twistStar()
@@ -623,7 +623,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function twistStar() {
-  clear()
+  చెరిపి_వేయి()
   spikey(star1)
   star1.heading = star1.heading + deltaRotation
   delay( twistStar, frameDelay)
@@ -631,7 +631,7 @@ function twistStar() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   twistStar()
 }
@@ -683,7 +683,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function moveStar() {
-  clear()
+  చెరిపి_వేయి()
   spikey(star1)
   star1.x = star1.x + deltaX
   star1.y = star1.y + deltaY
@@ -692,7 +692,7 @@ function moveStar() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   moveStar()
@@ -741,7 +741,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function growStar() {
-  clear()
+  చెరిపి_వేయి()
   spikey(star1)
   star1.వ్యాసార్థము = star1.వ్యాసార్థము + deltaRadius
   delay( growStar, frameDelay)
@@ -749,7 +749,7 @@ function growStar() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   growStar()
@@ -801,7 +801,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function changeStar() {
-  clear()
+  చెరిపి_వేయి()
   spikey(star1)
   star1.x = star1.x + deltaX
   star1.y = star1.y + deltaY
@@ -812,7 +812,7 @@ function changeStar() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   changeStar()
@@ -883,7 +883,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function changeStars() {
-  clear()
+  చెరిపి_వేయి()
 
   spikey(star1)
   star1.x = star1.x + star1.dx
@@ -902,7 +902,7 @@ function changeStars() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   changeStars()
@@ -987,7 +987,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function changeStar() {
-  clear()
+  చెరిపి_వేయి()
 
   spikey(star1)
   star1.x = star1.x + star1.dx
@@ -1014,7 +1014,7 @@ function changeStar() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   changeStar()
@@ -1089,7 +1089,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function changeStars() {
-  clear()
+  చెరిపి_వేయి()
 
   for (i=0; i < 10; i++) { //>
     spikey(polys[i])
@@ -1108,7 +1108,7 @@ function changeStars() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys()
@@ -1183,7 +1183,7 @@ function spikey ( args ) { // the simpler version for brevity
 
 
 function changeStars() {
-  clear()
+  చెరిపి_వేయి()
 
   for (i=0; i < polys.length; i++) { //>
     spikey(polys[i])
@@ -1203,7 +1203,7 @@ function changeStars() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
@@ -1310,7 +1310,7 @@ function killPolys() {
 }
 
 function changeStars() {
-  clear()
+  చెరిపి_వేయి()
 
   for (i=0; i < polys.length; i++) { //>
     spikey(polys[i])
@@ -1331,7 +1331,7 @@ function changeStars() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
@@ -1522,7 +1522,7 @@ function killPolys() {
 }
 
 function changeStars() {
-  clear()
+  చెరిపి_వేయి()
 
   for (i=0; i < polys.length; i++) { //>
     polys[i].draw()
@@ -1539,7 +1539,7 @@ function changeStars() {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)

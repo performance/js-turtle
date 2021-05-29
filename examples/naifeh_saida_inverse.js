@@ -34,7 +34,7 @@ function antilayer (side, innerSide, offset) {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   తాబేలును_దాచు()
   side = .023 * Math.min( maxX(), maxY())

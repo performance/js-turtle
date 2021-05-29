@@ -160,7 +160,7 @@ var direction = +1;
 
 
 function moveBody () {
-  clear();
+  చెరిపి_వేయి();
   height = 40;
   height = 1.5 * Math.min( maxX(), maxY())
   headDiameter = .25 * height;
@@ -181,7 +181,7 @@ function moveBody () {
 
 
 function demo () {
-  reset();
+  ఆది_స్థితి();
   తాబేలును_దాచు();
   n = 0;
   direction = +1;

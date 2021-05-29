@@ -90,7 +90,7 @@ function mizen6(side) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   side = .08 * Math.min( maxX(), maxY())
   //center canvas more or less
   goto (-8*side, 9*side)

@@ -63,7 +63,7 @@ function pent(side) {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   size = .4 * Math.min( maxX(), maxY())
   //goto (-50,-22)
   //కుడి_వైపు_తిరుగు(17)

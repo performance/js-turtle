@@ -202,7 +202,7 @@ function moveToExpandOrigin (side) {
 
 function startDelayedDivide() {
   // move to the origin of the big triangle
-  reset()
+  ఆది_స్థితి()
   రంగు(mainColor)
   కలమును_పైకి_ఎత్తు()
 
@@ -323,7 +323,7 @@ basically:
   when that is over
   continue with a delayed expansion
 */
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   side = targetSide
   wrap(false)

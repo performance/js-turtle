@@ -29,7 +29,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   size = .9* Math.min( maxX(), maxY())
   //size=200

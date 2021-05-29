@@ -111,7 +111,7 @@ function displayBinaryDots(hSpacing, vSpacing) {
 
 
 function displayTime() {
-  clear()
+  చెరిపి_వేయి()
   కోణము(180)
   spacing = Math.min(maxX(), maxY()) *1.8/6
   hSpacing = spacing

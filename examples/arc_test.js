@@ -85,7 +85,7 @@ function demo () {
   h2 = 0
   h3 = +2/6 * size
 
-  reset();
+  ఆది_స్థితి();
   తాబేలును_దాచు();
 
   tSize = cellSize/2 * .90

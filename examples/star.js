@@ -16,7 +16,7 @@ function star (side) {
     
     
 function demo () {
-  reset()
+  ఆది_స్థితి()
   side =  1.8* Math.min( maxX(), maxY())
   beginShape()
   star ( side)

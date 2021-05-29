@@ -122,7 +122,7 @@ function kochLine (length, order) {
 
 
 function demo () {
-  reset();
+  ఆది_స్థితి();
   size = Math.min( maxX(), maxY()) * .6
   తాబేలును_దాచు();
   starOfDavid( size)

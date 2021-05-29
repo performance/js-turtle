@@ -44,7 +44,7 @@ function stickMan (height) {
 }
 
 function demo () {
-  reset();
+  ఆది_స్థితి();
   తాబేలును_దాచు();
   number = 0.0005 *  maxX() * maxY() // uniform density no matter size
   for (i=0; i<number; i++) {

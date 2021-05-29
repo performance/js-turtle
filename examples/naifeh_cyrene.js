@@ -92,7 +92,7 @@ function kites( count, back) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   side = 2.5 * Math.min( maxX()/9, maxY()/8)
 

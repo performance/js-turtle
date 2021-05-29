@@ -85,7 +85,7 @@ function restorePos2() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   side = .23 * Math.min(maxX(), maxY())
   goto (-.6* side, -.5* side)

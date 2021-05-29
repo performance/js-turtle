@@ -43,7 +43,7 @@ function square ( side, fColor) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   count = 0
   yB = maxY() + small
   xB = minX()

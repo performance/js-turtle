@@ -86,7 +86,7 @@ function demo () {\n\
   h2 = 0\n\
   h3 = +2/6 * size\n\
 \n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   తాబేలును_దాచు();\n\
 \n\
   tSize = cellSize/2 * .90\n\
@@ -217,7 +217,7 @@ function square ( side, fColor) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   yB = maxY() + small\n\
   xB = minX()\n\
@@ -299,7 +299,7 @@ function init_drops(n) {\n\
 }\n\
 \n\
 function rain (drops, n) {\n\
-   clear();\n\
+   చెరిపి_వేయి();\n\
    for (var i = 0; i < n; i++) {\n\
       // access each drop object\n\
       var d = drops[i]; // access each drop object and react with it\n\
@@ -369,7 +369,7 @@ function hRect( sSide, lSide, fColor) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   yB = maxY()\n\
   xB = minX()\n\
@@ -432,7 +432,7 @@ function cafeTiles (h, w, gw, gc, off) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
   తాబేలును_దాచు();\n\
 \n\
@@ -467,7 +467,7 @@ function circleEye (x, y, n, outerRadius, innerRadius) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
   తాబేలును_దాచు();\n\
   రంగు( random(16));\n\
@@ -494,7 +494,7 @@ function circleEye (x, y, n, outerRadius) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
   తాబేలును_దాచు();\n\
   రంగు( random(16));\n\
@@ -615,7 +615,7 @@ function displayBinaryDots(hSpacing, vSpacing) {\n\
 \n\
 \n\
 function displayTime() {\n\
-  clear()\n\
+  చెరిపి_వేయి()\n\
   కోణము(180)\n\
   spacing = Math.min(maxX(), maxY()) *1.8/6\n\
   hSpacing = spacing\n\
@@ -870,7 +870,7 @@ function hands(hours, minutes, seconds) {\n\
 \n\
 // refresh the entire clock\n\
 function clock() {\n\
-   clear();\n\
+   చెరిపి_వేయి();\n\
    size = .9 *  Math.min( maxX(), maxY())\n\
   numbers(0, 0, 110/130 * size);\n\
    రంగు("lightgreen");\n\
@@ -1466,7 +1466,7 @@ function spiral( ) {\n\
 \n\
 \n\
 function demo () {\n\
-    reset()\n\
+    ఆది_స్థితి()\n\
     wrap(false)\n\
     కలమును_కింద_పెట్టు()\n\
     spiral( )\n\
@@ -1492,7 +1492,7 @@ function drawRowOfDots () {\n\
 }\n\
 \n\
 function colorChangingDots () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   setpos(minX(),0)\n\
   కోణము(90)\n\
@@ -1587,7 +1587,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
   తాబేలును_దాచు();\n\
   //రంగు( random(16));\n\
@@ -1764,7 +1764,7 @@ function boxTheCompass(size) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   తాబేలును_దాచు() // do not want it to show, so do this early\n\
   redrawOnMove(false) // do not redraw image each move\n\
@@ -1953,7 +1953,7 @@ function labelPoints(size) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   size = .9 * Math.min( maxX(), maxY()) //120\n\
 console.log("size "+ size)\n\
   wrap(false)\n\
@@ -2059,7 +2059,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   size = .9* Math.min( maxX(), maxY())\n\
   //size=200\n\
@@ -2368,7 +2368,7 @@ function delayedDivide() {\n\
 \n\
 function demo() {\n\
   // initialize\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   తాబేలును_దాచు()\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -2613,7 +2613,7 @@ function moveToExpandOrigin (side) {\n\
 \n\
 function startDelayedDivide() {\n\
   // move to the origin of the big triangle\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   రంగు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
 \n\
@@ -2734,7 +2734,7 @@ basically:\n\
   when that is over\n\
   continue with a delayed expansion\n\
 */\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
   side = targetSide\n\
   wrap(false)\n\
@@ -2752,7 +2752,7 @@ coordinates ='\
 // Coordinates -- Draw the axes of the coordinate system on the canvas\n\
 \n\
 function lines () {\n\
-  clear()\n\
+  చెరిపి_వేయి()\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
   స్థితి_మార్చు(0,minY())\n\
@@ -2861,7 +2861,7 @@ function tier () {\n\
 \n\
 \n\
 function demo() {\n\
-  clear();\n\
+  చెరిపి_వేయి();\n\
   తాబేలును_దాచు();\n\
   home();\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -3000,7 +3000,7 @@ function Y (side, gen) {\n\
 \n\
 \n\
 function delayedDragon () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
   స్థితి_మార్చు(-side * .4, +side *.2)\n\
   setheading (90+ gen * 45)\n\
@@ -3042,7 +3042,7 @@ function square (side) {\n\
 }\n\
 \n\
 function demo() {\n\
-   reset();\n\
+   ఆది_స్థితి();\n\
    తాబేలును_దాచు();\n\
    రంగు( నీలము );\n\
    var side = 100;\n\
@@ -4053,7 +4053,7 @@ function executeCommand () {\n\
 \n\
 \n\
 function demo() {\n\
-    reset()\n\
+    ఆది_స్థితి()\n\
     తాబేలును_దాచు()\n\
     commandDue = undefined\n\
     commandSequence = simulatorCommands\n\
@@ -4106,7 +4106,7 @@ function fib(count, side) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   స్థితి_మార్చు(150,60)\n\
   కోణము(90)\n\
   తాబేలును_దాచు()\n\
@@ -4203,7 +4203,7 @@ function B (side, gen) {\n\
 \n\
 \n\
 function delayDemo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
   size = 1.5 * Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు( .5* size, (.2*gen -.6) * size)\n\
@@ -4243,7 +4243,7 @@ function plotOne() {\n\
 }\n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   animate (plotOne, 20);\n\
 }\n\
 '
@@ -4371,7 +4371,7 @@ function heart(size)\n\
 \n\
 function demo()\n\
 {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
 \n\
   size = 50\n\
   oheart(5 * size)\n\
@@ -4412,7 +4412,7 @@ function hRect( sSide, lSide, fColor) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   yB = maxY() + sSide\n\
   xB = minX()\n\
@@ -4583,7 +4583,7 @@ function restorePos4() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   side = .13* Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు(1.8*side,0)\n\
   కుడి_వైపు_తిరుగు(80)\n\
@@ -4813,7 +4813,7 @@ function restorePos4() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   side = .13* Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు(0,0)\n\
   కుడి_వైపు_తిరుగు(80)\n\
@@ -5000,7 +5000,7 @@ function restorePos2() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
   side = .23 * Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు(-.6* side, -.5* side)\n\
@@ -5091,7 +5091,7 @@ function demo() {\n\
   side = 50;\n\
   \n\
   \n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   wrap(false);\n\
   వెడల్పు(1);\n\
   స్థితి_మార్చు(minX()-1, maxY()-1);\n\
@@ -5216,7 +5216,7 @@ function B (side,gen) {\n\
 \n\
 \n\
 function delayedHilbert () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
 \n\
   // targeting 80% of window\n\
@@ -5620,7 +5620,7 @@ function hirchhorn(side) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   size = .07* Math.min(maxX(), maxY())\n\
   hirchhorn(size)\n\
@@ -5676,7 +5676,7 @@ function nextColor() { \n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   s = 50\n\
   rowOffset = s/3 // offset between rows\n\
@@ -5768,7 +5768,7 @@ function pent(side) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   size = .4 * Math.min( maxX(), maxY())\n\
   //స్థితి_మార్చు(-50,-22)\n\
   //కుడి_వైపు_తిరుగు(17)\n\
@@ -6970,7 +6970,7 @@ function loop() {\n\
 \n\
   // update drawing\n\
   if (changed) {\n\
-    clear();\n\
+    చెరిపి_వేయి();\n\
     drawStreets();\n\
     drawSignals();\n\
     drawQueues();\n\
@@ -7148,7 +7148,7 @@ var direction = +1;\n\
 \n\
 \n\
 function moveBody () {\n\
-  clear();\n\
+  చెరిపి_వేయి();\n\
   height = 40;\n\
   height = 1.5 * Math.min( maxX(), maxY())\n\
   headDiameter = .25 * height;\n\
@@ -7169,7 +7169,7 @@ function moveBody () {\n\
 \n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   తాబేలును_దాచు();\n\
   n = 0;\n\
   direction = +1;\n\
@@ -7198,7 +7198,7 @@ function kochLine (length, order) {\n\
 \n\
 function kochLineDelay() {\n\
 ;\n\
-  clear();\n\
+  చెరిపి_వేయి();\n\
   var side = maxY() - minY();\n\
   if (side > maxX() - minX()) {\n\
     side = maxX() - minX()\n\
@@ -7219,7 +7219,7 @@ function kochLineDelay() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   తాబేలును_దాచు();\n\
   steps = 6;\n\
   span = 240;\n\
@@ -7353,7 +7353,7 @@ function kochLine (length, order) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   size = Math.min( maxX(), maxY()) * .6\n\
   తాబేలును_దాచు();\n\
   starOfDavid( size)\n\
@@ -7396,7 +7396,7 @@ function kochSnowflake (length, order) {\n\
 }\n\
   \n\
 \n\
-reset();\n\
+ఆది_స్థితి();\n\
 \n\
 var steps = 6;\n\
 var span = 240;\n\
@@ -7411,7 +7411,7 @@ function kochLines () {\n\
 \n\
 function kochSnowflakeDelay() {\n\
 \n\
-  clear();\n\
+  చెరిపి_వేయి();\n\
   var side = maxY() - minY();\n\
   if (side > maxX() - minX()) {\n\
     side = maxX() - minX()\n\
@@ -7468,7 +7468,7 @@ function kochSnowflake (length, order) {\n\
   \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   size = .045* Math.min(maxX(), maxY())\n\
   తాబేలును_దాచు();\n\
   for (var i=0; i<6; i++) {\n\
@@ -8122,7 +8122,7 @@ var numDemos = 16\n\
 var demoNumber\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
   demoNumber = 0\n\
   gen = 10000000\n\
@@ -8245,7 +8245,7 @@ function vert( size) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap( false)\n\
   size = 100\n\
   horiz( size)\n\
@@ -8320,7 +8320,7 @@ function newRow(lastx, lasty) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   side = 20\n\
   rowx = minX() - side // - 5.5 * side\n\
@@ -8413,7 +8413,7 @@ function quadrangle( ){\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   rows = 4\n\
   columns = 5\n\
@@ -8552,7 +8552,7 @@ function kites( count, back) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
   side = 2.5 * Math.min( maxX()/9, maxY()/8)\n\
 \n\
@@ -8663,7 +8663,7 @@ function demo() {\n\
   negative numbers have overlap, so\n\
   something is not quite right\n\
   */\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   కలమును_పైకి_ఎత్తు()\n\
   var pointAngle = 30\n\
   var side = 60\n\
@@ -8721,7 +8721,7 @@ function decagon(s, fcolor) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap( false)\n\
   కుడి_వైపు_తిరుగు(90)\n\
   side = 40\n\
@@ -8848,7 +8848,7 @@ function mizen6(side) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   side = .08 * Math.min( maxX(), maxY())\n\
   //center canvas more or less\n\
   స్థితి_మార్చు(-8*side, 9*side)\n\
@@ -8936,7 +8936,7 @@ function mizenSimple() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   side = 40 // 1/2 basic face of hexagon, width...\n\
   side = .15 * Math.min( maxX(), maxY())\n\
@@ -9060,7 +9060,7 @@ function slashes(count, fColor) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   fColor = "blue"\n\
   size = .17 * Math.min( maxX(), maxY())\n\
   రంగు( తెలుపు )\n\
@@ -9157,7 +9157,7 @@ function antilayer (side, innerSide, offset) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   తాబేలును_దాచు()\n\
   side = .023 * Math.min( maxX(), maxY())\n\
@@ -9213,7 +9213,7 @@ function layer (side, offsetAngle) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   side = 14\n\
   side = .033 * Math.min( maxX(), maxY())\n\
@@ -9249,7 +9249,7 @@ function demo() {\n\
      size = maxX()\n\
    }\n\
    steps = size/10 // 10 is the step size\n\
-   reset();\n\
+   ఆది_స్థితి();\n\
    తాబేలును_దాచు();\n\
    for(step=1; step < steps; step=step+1) {\n\
       రంగు(random(16));\n\
@@ -9276,7 +9276,7 @@ function square(side) {\n\
 \n\
 // draw some nested squares\n\
 function nestedSquares(count) {\n\
-  clear();\n\
+  చెరిపి_వేయి();\n\
   స్థితి_మార్చు(0,0);\n\
   తాబేలును_దాచు();\n\
   for (s=1; s<count*4; s=s+4) {\n\
@@ -9294,7 +9294,7 @@ function nestedSquares(count) {\n\
 }\n\
 \n\
 function demo1() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   size = 2* maxY()\n\
   if (2* maxX() < size) {\n\
     size = 2*maxX()\n\
@@ -9309,7 +9309,7 @@ function demo1() {\n\
 \n\
 function demo() {\n\
   // animate with function needing a parameter passed\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   size = 2* maxY()\n\
   if (2* maxX() < size) {\n\
     size = 2*maxX()\n\
@@ -9394,7 +9394,7 @@ function shape( bx, by, axis, turns, fillColor ) {\n\
 }\n\
 \n\
 function drawAll() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   side = 15\n\
   baseX = -200\n\
   baseY = -200\n\
@@ -9424,7 +9424,7 @@ function drawAll() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   తాబేలును_దాచు()\n\
 \n\
@@ -9471,7 +9471,7 @@ function polygon(sides,side) {\n\
 \n\
 // draw a random polygon\n\
 function demo() {\n\
-   reset();\n\
+   ఆది_స్థితి();\n\
    side = maxY()\n\
    if (maxX() < side) {\n\
      side = maxX()\n\
@@ -9503,7 +9503,7 @@ function star (side, sColor) {\n\
 \n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   for (i=1; i< 150; i=i+1) {\n\
     స్థితి_మార్చు(random(minX(),maxX()), random( minY(),maxY()))\n\
     ఎడమ_వైపు_తిరుగు(random(359))\n\
@@ -9559,7 +9559,7 @@ function stickMan (height) {\n\
 }\n\
 \n\
 function demo () {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   తాబేలును_దాచు();\n\
   number = 0.0005 *  maxX() * maxY() // uniform density no matter size\n\
   for (i=0; i<number; i++) {\n\
@@ -9639,7 +9639,7 @@ function nextColor() { \n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   side = .075 * Math.min(maxX(), maxY())\n\
   cent( side, 12)\n\
@@ -9717,7 +9717,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap( false)\n\
   size = 10\n\
 \n\
@@ -9761,7 +9761,7 @@ serendipitous ='\
 // Serendipitous Circles -- draw ellipses with quadratic equation\n\
 // from Byte magazine Aug 1977\n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   x1 = random(minX(),maxX())\n\
   y1 = random(minY(),maxY())\n\
   i = 0\n\
@@ -9843,7 +9843,7 @@ var i = 1; // a global variable used for each iteration of delayed\n\
 \n\
 function delayed() {\n\
   if (i<7) {\n\
-    clear();\n\
+    చెరిపి_వేయి();\n\
     తాబేలును_దాచు();\n\
     redrawOnMove(true);\n\
     స్థితి_మార్చు(0,.9*minY());\n\
@@ -9921,7 +9921,7 @@ function delayed() {\n\
 \n\
 \n\
 function sier (order) {\n\
-    reset()\n\
+    ఆది_స్థితి()\n\
     తాబేలును_దాచు()\n\
     side = 2* Math.min(maxX(),maxY()) -20\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -9938,7 +9938,7 @@ function sier (order) {\n\
 var i ; //global iteration variable\n\
 \n\
 function demo() {\n\
-    reset()\n\
+    ఆది_స్థితి()\n\
     i = 0\n\
     delayed()\n\
 }\n\
@@ -9960,7 +9960,7 @@ var frameDelay = 0\n\
 \n\
 function explain( text) {\n\
   // lines within the text string are separated with an at "@" character.\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   var cWidth = 2* maxX();\n\
   var cHeight = 2* maxY();\n\
   var lineNumber = 0;\n\
@@ -10558,7 +10558,7 @@ function getState() {\n\
 \n\
 \n\
 function demo1() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   init()\n\
   console.log("demo: " + blocks[0])\n\
   console.log("demo: " + blocks)\n\
@@ -10667,7 +10667,7 @@ function demo1() {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   init()\n\
 \n\
   drag( 3, ee)\n\
@@ -10901,7 +10901,7 @@ moves = [ // series of moves\n\
 \n\
 \n\
 function moveOne() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   //console.log( "mO " + moveCount)\n\
   //console.log( "mO " + moves[moveCount])\n\
 \n\
@@ -10926,7 +10926,7 @@ function moveOne() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   init()\n\
   moveCount=0\n\
 \n\
@@ -10937,7 +10937,7 @@ snowman ='\
 // Snowman -- draw a simple snowman\n\
 \n\
 // draw the three cirles for the body\n\
-clear()\n\
+చెరిపి_వేయి()\n\
 వెడల్పు(1)\n\
 స్థితి_మార్చు(0,-100)\n\
 circle (80)\n\
@@ -11084,7 +11084,7 @@ function rightPentagon(side) {\n\
 \n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   side = .25 * Math.min( maxX(), maxY())\n\
   స్థితి_మార్చు(-.666 * side, - .333 * side)\n\
   rightPentagon(side) // inner pentagon\n\
@@ -11104,7 +11104,7 @@ function square (side) {\n\
 }\n\
 \n\
 function spinningSquare2() {\n\
-   reset();\n\
+   ఆది_స్థితి();\n\
    తాబేలును_దాచు();\n\
    రంగు( నీలము );\n\
    var side = 100;\n\
@@ -11116,7 +11116,7 @@ function spinningSquare2() {\n\
 }\n\
 \n\
 function spinningSquare() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   var steps = 100\n\
   stepSize = 2 * maxX()\n\
   if (1.5 * maxY() < stepSize) {\n\
@@ -11137,7 +11137,7 @@ spiral ='\
 // Spiral -- demonstrate some simple spirals\n\
 \n\
 function spiral1() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   n=0\n\
   while (n<400) {\n\
     ముందుకు_జరుగు(n)\n\
@@ -11147,7 +11147,7 @@ function spiral1() {\n\
 }\n\
 \n\
 function spiral2() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   n=0\n\
   while (n<75) {\n\
     ముందుకు_జరుగు(n)\n\
@@ -11158,7 +11158,7 @@ function spiral2() {\n\
 \n\
 \n\
 function spiral3() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   n=0\n\
   while (n<40) {\n\
@@ -11169,7 +11169,7 @@ function spiral3() {\n\
 }\n\
 \n\
 function spiral() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   n=0\n\
   while (n<1000) {\n\
@@ -11196,7 +11196,7 @@ square_lines ='\
 // Square Lines -- draw a set of overlapping squares without turns\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   side = 30\n\
   side2 = side + side\n\
@@ -11344,7 +11344,7 @@ function nextColor() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3\n\
   wrap(false)\n\
@@ -11396,7 +11396,7 @@ function drawRandomSquiggle() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు();\n\
   drawRandomSquiggle();\n\
 }\n\
@@ -11419,7 +11419,7 @@ function star (side) {\n\
 }\n\
 \n\
 function stamps () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   var x = minX()\n\
   while (x <= maxX()) {\n\
@@ -11461,7 +11461,7 @@ function starburst () {\n\
 }\n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap( false)\n\
   starburst()\n\
 } \n\
@@ -11485,7 +11485,7 @@ function star (side) {\n\
     \n\
     \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   side =  1.8* Math.min( maxX(), maxY())\n\
   beginShape()\n\
   star ( side)\n\
@@ -11513,7 +11513,7 @@ function quadRhom( side) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap( false)\n\
   తాబేలును_దాచు()\n\
   ang = 60\n\
@@ -11585,7 +11585,7 @@ function drawRTree(depth, branches) {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset();\n\
+  ఆది_స్థితి();\n\
   తాబేలును_దాచు();\n\
   scale = .01 * Math.min( maxX(), maxY())\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -11625,7 +11625,7 @@ function nextColor() { \n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3 // offset between rows\n\
   wrap(false)\n\
@@ -11685,7 +11685,7 @@ function nestTri () {\n\
 \n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   తాబేలును_దాచు()\n\
 \n\
   maxSide = 1.8* Math.min( maxX(), maxY())\n\
@@ -11731,7 +11731,7 @@ function nextColor() {\n\
 }\n\
 \n\
 function demo() {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   count = 0\n\
   rowCount = 0\n\
   column = minX()\n\
@@ -11846,7 +11846,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)\n
   var ySeparation = .054 * flagHeight\n\
   starSize = .05 *flagHeight // star size\n\
   //outline flag and field\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   wrap(false)\n\
   తాబేలును_దాచు()\n\
   స్థితి_మార్చు(xBase, yBase)\n\
@@ -12182,7 +12182,7 @@ function delayedBuild () {\n\
 //****MAIN****\n\
 \n\
 function demo () {\n\
-  reset()\n\
+  ఆది_స్థితి()\n\
   //తాబేలును_దాచు()\n\
   tiles = []\n\
   // build a logical array of tiles\n\
@@ -12229,7 +12229,7 @@ distances are known. This math is a bit tough.\n\
 \n\
 //\n\
 function demo() {\n\
-	reset()\n\
+	ఆది_స్థితి()\n\
 	wrap(false)\n\
 	తాబేలును_దాచు()\n\
 	size=200\n\

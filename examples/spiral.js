@@ -1,7 +1,7 @@
 // Spiral -- demonstrate some simple spirals
 
 function spiral1() {
-  reset()
+  ఆది_స్థితి()
   n=0
   while (n<400) {
     ముందుకు_జరుగు(n)
@@ -11,7 +11,7 @@ function spiral1() {
 }
 
 function spiral2() {
-  reset()
+  ఆది_స్థితి()
   n=0
   while (n<75) {
     ముందుకు_జరుగు(n)
@@ -22,7 +22,7 @@ function spiral2() {
 
 
 function spiral3() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   n=0
   while (n<40) {
@@ -33,7 +33,7 @@ function spiral3() {
 }
 
 function spiral() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   n=0
   while (n<1000) {

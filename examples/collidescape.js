@@ -575,7 +575,7 @@ function spiral( ) {
 
 
 function demo () {
-    reset()
+    ఆది_స్థితి()
     wrap(false)
     కలమును_కింద_పెట్టు()
     spiral( )

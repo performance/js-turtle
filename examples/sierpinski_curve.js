@@ -55,7 +55,7 @@ var i = 1; // a global variable used for each iteration of delayed
 
 function delayed() {
   if (i<7) {
-    clear();
+    చెరిపి_వేయి();
     తాబేలును_దాచు();
     redrawOnMove(true);
     goto(0,.9*minY());

@@ -10,7 +10,7 @@ function polygon(sides,side) {
 
 // draw a random polygon
 function demo() {
-   reset();
+   ఆది_స్థితి();
    side = maxY()
    if (maxX() < side) {
      side = maxX()

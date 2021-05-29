@@ -73,7 +73,7 @@ function shape( bx, by, axis, turns, fillColor ) {
 }
 
 function drawAll() {
-  reset()
+  ఆది_స్థితి()
   side = 15
   baseX = -200
   baseY = -200
@@ -103,7 +103,7 @@ function drawAll() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   తాబేలును_దాచు()
 

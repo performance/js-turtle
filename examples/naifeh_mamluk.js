@@ -37,7 +37,7 @@ function decagon(s, fcolor) {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap( false)
   కుడి_వైపు_తిరుగు(90)
   side = 40

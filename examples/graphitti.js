@@ -18,6 +18,6 @@ function plotOne() {
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   animate (plotOne, 20);
 }

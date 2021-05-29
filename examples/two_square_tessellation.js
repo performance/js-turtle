@@ -31,7 +31,7 @@ function nextColor() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   count = 0
   rowCount = 0
   column = minX()

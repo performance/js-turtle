@@ -422,7 +422,7 @@ if (command.addEventListener) {
  *   None
  *************************************************************************/
 function resetClicked() {
-    reset()
+    ఆది_స్థితి()
 }
 
 /*************************************************************************
@@ -538,7 +538,7 @@ function saveCanvasClicked(e) {
 
 
 /*************************************************************************
- * clearClicked -- handler for when the clear button is clicked
+ * clearClicked -- handler for when the చెరిపి_వేయి button is clicked
  *
  * arguments:
  *   None
@@ -547,7 +547,7 @@ function saveCanvasClicked(e) {
  *   None
  *************************************************************************/
 function clearClicked() {
-    //console.log("clear clicked")
+    //console.log("చెరిపి_వేయి clicked")
     document.getElementById("codeArea").value = "";
 }
 
@@ -696,7 +696,7 @@ function commandChanged () {
             showError(e)
             stopClicked()
         } finally {
-            // clear the command box
+            // చెరిపి_వేయి the command box
             this.value = "";
         }
     }
@@ -723,7 +723,7 @@ function showError(e) {
     కోణము(90);
     wrap(false);
 
-    // clear the line for the error message
+    // చెరిపి_వేయి the line for the error message
     కలమును_కింద_పెట్టు()
     రంగు( పసుపు )
     వెడల్పు(height+4)
@@ -737,7 +737,7 @@ function showError(e) {
     console.log(e.name + ": " + e.message);
     if (e.filename !== undefined) {
 
-        // clear the line for the file message
+        // చెరిపి_వేయి the line for the file message
         height=10 // points
         రంగు( పసుపు )
         వెడల్పు(height+4)

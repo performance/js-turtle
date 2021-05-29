@@ -19,7 +19,7 @@ function kochLine (length, order) {
 
 function kochLineDelay() {
 ;
-  clear();
+  చెరిపి_వేయి();
   var side = maxY() - minY();
   if (side > maxX() - minX()) {
     side = maxX() - minX()
@@ -40,7 +40,7 @@ function kochLineDelay() {
 }
 
 function demo() {
-  reset();
+  ఆది_స్థితి();
   తాబేలును_దాచు();
   steps = 6;
   span = 240;

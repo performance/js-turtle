@@ -28,7 +28,7 @@ function hRect( sSide, lSide, fColor) {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   count = 0
   yB = maxY() + sSide
   xB = minX()

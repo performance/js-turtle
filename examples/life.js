@@ -643,7 +643,7 @@ var numDemos = 16
 var demoNumber
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   demoNumber = 0
   gen = 10000000

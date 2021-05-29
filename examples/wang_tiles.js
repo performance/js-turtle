@@ -287,7 +287,7 @@ function delayedBuild () {
 //****MAIN****
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   //తాబేలును_దాచు()
   tiles = []
   // build a logical array of tiles

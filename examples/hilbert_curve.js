@@ -92,7 +92,7 @@ function B (side,gen) {
 
 
 function delayedHilbert () {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
 
   // targeting 80% of window

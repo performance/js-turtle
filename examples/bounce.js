@@ -26,7 +26,7 @@ function init_drops(n) {
 }
 
 function rain (drops, n) {
-   clear();
+   చెరిపి_వేయి();
    for (var i = 0; i < n; i++) {
       // access each drop object
       var d = drops[i]; // access each drop object and react with it

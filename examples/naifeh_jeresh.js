@@ -71,7 +71,7 @@ function demo() {
   negative numbers have overlap, so
   something is not quite right
   */
-  reset()
+  ఆది_స్థితి()
   కలమును_పైకి_ఎత్తు()
   var pointAngle = 30
   var side = 60

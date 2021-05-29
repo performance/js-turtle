@@ -28,7 +28,7 @@ function nextColor() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   count = 0
   rowOffset = s/3 // offset between rows
   wrap(false)

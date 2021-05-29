@@ -78,7 +78,7 @@ function mizenSimple() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   side = 40 // 1/2 basic face of hexagon, width...
   side = .15 * Math.min( maxX(), maxY())

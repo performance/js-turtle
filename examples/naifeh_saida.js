@@ -30,7 +30,7 @@ function layer (side, offsetAngle) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   side = 14
   side = .033 * Math.min( maxX(), maxY())

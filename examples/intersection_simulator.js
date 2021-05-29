@@ -1191,7 +1191,7 @@ function loop() {
 
   // update drawing
   if (changed) {
-    clear();
+    చెరిపి_వేయి();
     drawStreets();
     drawSignals();
     drawQueues();

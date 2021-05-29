@@ -16,7 +16,7 @@ if [ ${DIRECTORY}NotSpecified =  NotSpecified ]; then
   exit
 fi
 
-rm -f examples.js # clear temporary file
+rm -f examples.js # చెరిపి_వేయి temporary file
 
 for FILE_NAME in `ls $DIRECTORY` ; do
   STRING_NAME=`echo $FILE_NAME | sed -e s/.js\$//`

@@ -17,7 +17,7 @@ function quadRhom( side) {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap( false)
   తాబేలును_దాచు()
   ang = 60

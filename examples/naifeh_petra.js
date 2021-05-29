@@ -113,7 +113,7 @@ function slashes(count, fColor) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   fColor = "blue"
   size = .17 * Math.min( maxX(), maxY())
   రంగు( తెలుపు )

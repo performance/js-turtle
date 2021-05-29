@@ -14,7 +14,7 @@ var frameDelay = 0
 
 function explain( text) {
   // lines within the text string are separated with an at "@" character.
-  reset();
+  ఆది_స్థితి();
   var cWidth = 2* maxX();
   var cHeight = 2* maxY();
   var lineNumber = 0;

@@ -29,7 +29,7 @@ function kochSnowflake (length, order) {
 }
   
 
-reset();
+ఆది_స్థితి();
 
 var steps = 6;
 var span = 240;
@@ -44,7 +44,7 @@ function kochLines () {
 
 function kochSnowflakeDelay() {
 
-  clear();
+  చెరిపి_వేయి();
   var side = maxY() - minY();
   if (side > maxX() - minX()) {
     side = maxX() - minX()

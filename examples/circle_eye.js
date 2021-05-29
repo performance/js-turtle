@@ -17,7 +17,7 @@ function circleEye (x, y, n, outerRadius) {
 
 
 function demo () {
-  reset();
+  ఆది_స్థితి();
   size = Math.min( maxX(), maxY()) * .9
   తాబేలును_దాచు();
   రంగు( random(16));

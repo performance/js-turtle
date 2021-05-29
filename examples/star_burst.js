@@ -21,7 +21,7 @@ function starburst () {
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   wrap( false)
   starburst()
 } 

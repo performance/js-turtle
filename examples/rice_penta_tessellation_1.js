@@ -68,7 +68,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap( false)
   size = 10
 

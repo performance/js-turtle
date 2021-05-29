@@ -10,7 +10,7 @@ function square (side) {
 }
 
 function spinningSquare2() {
-   reset();
+   ఆది_స్థితి();
    తాబేలును_దాచు();
    రంగు( నీలము );
    var side = 100;
@@ -22,7 +22,7 @@ function spinningSquare2() {
 }
 
 function spinningSquare() {
-  reset()
+  ఆది_స్థితి()
   var steps = 100
   stepSize = 2 * maxX()
   if (1.5 * maxY() < stepSize) {

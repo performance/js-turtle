@@ -1,7 +1,7 @@
 // Square Lines -- draw a set of overlapping squares without turns
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   side = 30
   side2 = side + side

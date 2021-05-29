@@ -17,7 +17,7 @@ function drawRowOfDots () {
 }
 
 function colorChangingDots () {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   setpos(minX(),0)
   కోణము(90)

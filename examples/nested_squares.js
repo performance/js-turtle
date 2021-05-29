@@ -11,7 +11,7 @@ function square(side) {
 
 // draw some nested squares
 function nestedSquares(count) {
-  clear();
+  చెరిపి_వేయి();
   goto(0,0);
   తాబేలును_దాచు();
   for (s=1; s<count*4; s=s+4) {
@@ -29,7 +29,7 @@ function nestedSquares(count) {
 }
 
 function demo1() {
-  reset()
+  ఆది_స్థితి()
   size = 2* maxY()
   if (2* maxX() < size) {
     size = 2*maxX()
@@ -44,7 +44,7 @@ function demo1() {
 
 function demo() {
   // animate with function needing a parameter passed
-  reset()
+  ఆది_స్థితి()
   size = 2* maxY()
   if (2* maxX() < size) {
     size = 2*maxX()

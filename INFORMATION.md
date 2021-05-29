@@ -203,7 +203,7 @@ separate selector from the example selector].
 	* Should add example for rounded rectangles
 * [ ] hexagon tessellation is not working
 * [ ] circle eye could be bigger, maybe different colors for each inscribed circle
-* [ ] color changing dots is not working, should start with a clear
+* [ ] color changing dots is not working, should start with a చెరిపి_వేయి
 * [ ] dividing a circle is not working *****Fixed without identifying problem*****
 * [ ] Add tag //*sourceURL=foo.js to bottom of all examples for debugging purposes (or just add ~=definitions.js via the exec command?) <--alternate is better because it works for user entered code
 * optionally 
@@ -217,7 +217,7 @@ separate selector from the example selector].
 *  [ ] error handling is inconsistant
 *  [ ] examples should be consistant
 	-    [ ] include demo()
-	-    [ ] include reset()
+	-    [ ] include ఆది_స్థితి()
 *  [ ] add example checker
 	-    [ ] no single quote
 	-    [ ] Name Capitalized
@@ -226,7 +226,7 @@ separate selector from the example selector].
 *  [ ] can a pause button be implemented? -- just an asyncronous event
 *  [ ] resume uses the play/run button. If pause in progress, resume, else play from start
 
-*  [ ] reset() sets stokeStyle to "black". is that complete?
+*  [ ] ఆది_స్థితి() sets stokeStyle to "black". is that complete?
    [ ] see also other references...
 
 * [ ] decahedron graph does not auto start while animation in progress

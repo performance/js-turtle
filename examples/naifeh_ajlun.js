@@ -26,7 +26,7 @@ function quadrangle( ){
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   rows = 4
   columns = 5

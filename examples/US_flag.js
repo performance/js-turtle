@@ -88,7 +88,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   var ySeparation = .054 * flagHeight
   starSize = .05 *flagHeight // star size
   //outline flag and field
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   తాబేలును_దాచు()
   goto (xBase, yBase)

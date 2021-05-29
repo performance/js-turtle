@@ -37,7 +37,7 @@ function demo() {
   side = 50;
   
   
-  reset();
+  ఆది_స్థితి();
   wrap(false);
   వెడల్పు(1);
   goto(minX()-1, maxY()-1);

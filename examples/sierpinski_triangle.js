@@ -41,7 +41,7 @@ function delayed() {
 
 
 function sier (order) {
-    reset()
+    ఆది_స్థితి()
     తాబేలును_దాచు()
     side = 2* Math.min(maxX(),maxY()) -20
     కలమును_పైకి_ఎత్తు()
@@ -58,7 +58,7 @@ function sier (order) {
 var i ; //global iteration variable
 
 function demo() {
-    reset()
+    ఆది_స్థితి()
     i = 0
     delayed()
 }

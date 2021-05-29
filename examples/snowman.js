@@ -1,7 +1,7 @@
 // Snowman -- draw a simple snowman
 
 // draw the three cirles for the body
-clear()
+చెరిపి_వేయి()
 వెడల్పు(1)
 goto (0,-100)
 circle (80)

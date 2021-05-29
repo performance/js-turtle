@@ -329,7 +329,7 @@ writing to the canvas.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   helloWorld()
 }
 </code>
@@ -400,7 +400,7 @@ square, as we have learned previously.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   square1()
 }
 </code>
@@ -425,7 +425,7 @@ function as follows:
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   square1()
   కుడి_వైపు_తిరుగు(30)
   square1()
@@ -454,7 +454,7 @@ function square () {
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   square()
 }
 </code>
@@ -472,7 +472,7 @@ when using the <code>repeat()</code> function. The code is shown below.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   square()
 }
 </code>
@@ -603,7 +603,7 @@ turn the corner, and increment the number of sides.
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   square()
 }
 </code>
@@ -626,7 +626,7 @@ The equivalent code for drawing a square is shown below.
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   square()
 }
 </code>
@@ -648,7 +648,7 @@ draw a square is as follows:
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   square()
 }
 </code>
@@ -685,7 +685,7 @@ the parameter name or names within the parentheses as in the following code.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   square(100) // 100 is an argument
 }
 </code>
@@ -716,7 +716,7 @@ Of all this there can be no argument, or was that a parameter.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   square(100) // 100 is an argument
 }
 </code>
@@ -743,7 +743,7 @@ Let's do this one step at a time. First just turn it.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   var i = 0
   while (i &lt; 12) {
     square(75)
@@ -770,7 +770,7 @@ the while loop of the <code>demo()</code> function.
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   var i = 0
   while ( i &lt; 12) {
     రంగు(i)
@@ -810,7 +810,7 @@ function square(side) {
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   i = 0
   while ( i &lt; 12) {
     రంగు(i)
@@ -1002,7 +1002,7 @@ function.
 
 function demo(){
   var i
-  reset()
+  ఆది_స్థితి()
   for (i=0; i&lt;20; i= i + 1) {
     రంగు( random(15))
     goto (random( minX(), maxX()), random(minY(), maxY()))
@@ -1027,7 +1027,7 @@ Let's use the same basic program that we used in the last exercise.
 We need to break the <code>demo()</code> function into two parts, because
 animate needs to call a function that draws something on the canvas.
 The iteration is no longer needed, because that is effectively done by
-the <code>animate()</code> function. The <code>reset()</code> should only be
+the <code>animate()</code> function. The <code>ఆది_స్థితి()</code> should only be
 done in the demo function as well as the <code>animate()</code> function.
 Everything else can be put into a <code>randomSquare()</code> function.
 </p>
@@ -1047,7 +1047,7 @@ function randomSquare(){
 }
 
 function demo(){
-  reset()
+  ఆది_స్థితి()
   animate( randomSquare, 100) // pass address of function,
                               // not results of the function
 }
@@ -1086,7 +1086,7 @@ function randomSquare(){
 }
 
 function demo(){
-  reset()
+  ఆది_స్థితి()
   animate( randomSquare, 100) // pass address of function,
                               // not results of the function
 }
@@ -1120,7 +1120,7 @@ function randomSquare(){
 }
 
 function demo(){
-  reset()
+  ఆది_స్థితి()
   animate( randomSquare, 100) // pass address of function,
                               // not results of the function
 }
@@ -1185,7 +1185,7 @@ sides and the number of sides required.
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   for (var i=3; i < 10; i = i+1) {
     polygon( 40+2*i, i)
   }
@@ -1265,7 +1265,7 @@ function star (size) {
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   star(200)
 }
 </code>
@@ -1288,7 +1288,7 @@ function polygon (size, sides) {
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   polygon(20, 20)
 }
 </code>
@@ -1308,13 +1308,13 @@ function demo () {
 }
 
 function starN ( size, points) {
-  reset()
+  ఆది_స్థితి()
   వెనుకకు_జరుగు(size/2)
   spikey (size, points, Math.floor(points/2))
 }
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   starN (200, 21)
 }
 </code>

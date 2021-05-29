@@ -997,7 +997,7 @@ function executeCommand () {
 
 
 function demo() {
-    reset()
+    ఆది_స్థితి()
     తాబేలును_దాచు()
     commandDue = undefined
     commandSequence = simulatorCommands

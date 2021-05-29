@@ -1,7 +1,7 @@
 // Coordinates -- Draw the axes of the coordinate system on the canvas
 
 function lines () {
-  clear()
+  చెరిపి_వేయి()
   కలమును_కింద_పెట్టు()
 
   goto(0,minY())

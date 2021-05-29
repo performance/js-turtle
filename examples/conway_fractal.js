@@ -281,7 +281,7 @@ function delayedDivide() {
 
 function demo() {
   // initialize
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   తాబేలును_దాచు()
   కలమును_పైకి_ఎత్తు()

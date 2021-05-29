@@ -41,7 +41,7 @@ function fib(count, side) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   goto(150,60)
   కోణము(90)
   తాబేలును_దాచు()

@@ -15,7 +15,7 @@ function star (side) {
 }
 
 function stamps () {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   var x = minX()
   while (x <= maxX()) {

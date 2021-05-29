@@ -29,7 +29,7 @@ function vert( size) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap( false)
   size = 100
   horiz( size)

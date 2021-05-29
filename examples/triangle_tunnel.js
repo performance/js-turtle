@@ -32,7 +32,7 @@ function nestTri () {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
 
   maxSide = 1.8* Math.min( maxX(), maxY())

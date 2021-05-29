@@ -18,7 +18,7 @@ distances are known. This math is a bit tough.
 
 //
 function demo() {
-	reset()
+	ఆది_స్థితి()
 	wrap(false)
 	తాబేలును_దాచు()
 	size=200

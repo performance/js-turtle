@@ -476,7 +476,7 @@ function getState() {
 
 
 function demo1() {
-  reset()
+  ఆది_స్థితి()
   init()
   console.log("demo: " + blocks[0])
   console.log("demo: " + blocks)
@@ -585,7 +585,7 @@ function demo1() {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   init()
 
   drag( 3, ee)
@@ -819,7 +819,7 @@ moves = [ // series of moves
 
 
 function moveOne() {
-  reset()
+  ఆది_స్థితి()
   //console.log( "mO " + moveCount)
   //console.log( "mO " + moves[moveCount])
 
@@ -844,7 +844,7 @@ function moveOne() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   init()
   moveCount=0
 

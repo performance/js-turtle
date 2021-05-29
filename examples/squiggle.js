@@ -21,7 +21,7 @@ function drawRandomSquiggle() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు();
   drawRandomSquiggle();
 }

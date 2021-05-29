@@ -365,20 +365,20 @@ function centerCoords (context) {
 
 
 /*******************************************************************************
- * clear -- clear the display, don't move the turtle
+ * చెరిపి_వేయి -- చెరిపి_వేయి the display, don't move the turtle
  *
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function clear() {
+function చెరిపి_వేయి() {
    clearContext(imageContext);
    drawIf();
 }
 
 
 /*******************************************************************************
- * clearContext -- clear the specified context
+ * clearContext -- చెరిపి_వేయి the specified context
  *
  * arguments: context for an image
  *
@@ -393,16 +393,16 @@ function clearContext(context) {
 
 
 /*******************************************************************************
- * reset -- reset the turtle graphics and move turtle to center facing North
- *
+ * ఆది_స్థితి -- reset the turtle graphics and move turtle to center facing North
+ * ఆది_స్థితి 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function reset() {
+function ఆది_స్థితి() {
    //console.log(document.getElementById("stopButton").onClick)
    initialize();
-   clear();
+   చెరిపి_వేయి();
    draw();
    stopAnimation();
    turtle.shape = false;
@@ -1214,14 +1214,18 @@ function రంగు (col) {
   } else if (typeof(col) != "string") { // col is not a supported type
     col = "black";
   } 
-  // else {
-  //   const idx = రంగుల_పేర్లు.indexOf(col);
-  //   if ( idx > 0 ) {
-  //     turtle.రంగు = logoColors[idx];
-  //   }
-  // }
-  turtle.రంగు = col;
-  imageContext.strokeStyle = col;
+  else {
+    const idx = రంగుల_పేర్లు.indexOf(col);
+    console.log( "col, idx = ", col, idx );
+    if ( idx > 0 ) {
+      console.log( " రంగు = ", logoColors[idx] );
+      turtle.రంగు = logoColors[idx];
+      imageContext.strokeStyle = logoColors[idx];
+    } else {
+      turtle.రంగు = col;
+      imageContext.strokeStyle = col;
+    }
+  }
 }
 
 colour = రంగు;
@@ -1465,4 +1469,4 @@ function logTurtle( where) {
 }
 
 
-reset();
+ఆది_స్థితి();

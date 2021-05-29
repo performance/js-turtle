@@ -121,7 +121,7 @@ function heart(size)
 
 function demo()
 {
-  reset()
+  ఆది_స్థితి()
 
   size = 50
   oheart(5 * size)

@@ -74,7 +74,7 @@ function Y (side, gen) {
 
 
 function delayedDragon () {
-  reset()
+  ఆది_స్థితి()
   తాబేలును_దాచు()
   goto (-side * .4, +side *.2)
   setheading (90+ gen * 45)

@@ -67,7 +67,7 @@ function nextColor() {
 }
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   wrap(false)
   side = .075 * Math.min(maxX(), maxY())
   cent( side, 12)

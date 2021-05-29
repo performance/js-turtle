@@ -151,7 +151,7 @@ function labelPoints(size) {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   size = .9 * Math.min( maxX(), maxY()) //120
 console.log("size "+ size)
   wrap(false)

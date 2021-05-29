@@ -83,7 +83,7 @@ function rightPentagon(side) {
 
 
 function demo() {
-  reset()
+  ఆది_స్థితి()
   side = .25 * Math.min( maxX(), maxY())
   goto (-.666 * side, - .333 * side)
   rightPentagon(side) // inner pentagon

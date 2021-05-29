@@ -1,7 +1,7 @@
 // Serendipitous Circles -- draw ellipses with quadratic equation
 // from Byte magazine Aug 1977
 function demo () {
-  reset()
+  ఆది_స్థితి()
   x1 = random(minX(),maxX())
   y1 = random(minY(),maxY())
   i = 0

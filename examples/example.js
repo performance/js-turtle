@@ -16,7 +16,7 @@ function square (side) {
 }
 
 function demo() {
-   reset();
+   ఆది_స్థితి();
    తాబేలును_దాచు();
    రంగు( నీలము );
    var side = 100;

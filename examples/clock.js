@@ -80,7 +80,7 @@ function hands(hours, minutes, seconds) {
 
 // refresh the entire clock
 function clock() {
-   clear();
+   చెరిపి_వేయి();
    size = .9 *  Math.min( maxX(), maxY())
   numbers(0, 0, 110/130 * size);
    రంగు("lightgreen");

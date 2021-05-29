@@ -32,7 +32,7 @@ function cafeTiles (h, w, gw, gc, off) {
 
 
 function demo () {
-  reset();
+  ఆది_స్థితి();
   size = Math.min( maxX(), maxY()) * .9
   తాబేలును_దాచు();
 

@@ -18,7 +18,7 @@ function star (side, sColor) {
 
 
 function demo () {
-  reset()
+  ఆది_స్థితి()
   for (i=1; i< 150; i=i+1) {
     goto (random(minX(),maxX()), random( minY(),maxY()))
     ఎడమ_వైపు_తిరుగు(random(359))
