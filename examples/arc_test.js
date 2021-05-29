@@ -12,28 +12,28 @@ function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent
 }
 
 
-function turbine(x,y, radius, pedals, dir) {
+function turbine(x,y, వ్యాసార్థము, pedals, dir) {
   for (i=0; i<pedals; i++) {
     if (dir) {
-      radialArc (x,y, radius, 360*i/pedals, -135, 10, 90, dir);
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, -135, 10, 90, dir);
     } else {
-      radialArc (x,y, radius, 360*i/pedals, 45, 10, 90, !dir);
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, 45, 10, 90, !dir);
     }
   }
 }
 
-function roundedOctogon (side, radius) {
+function roundedOctogon (side, వ్యాసార్థము) {
   repeat((8), function () {
     ముందుకు_జరుగు(side);
-    curveright(radius,45);
+    curveright(వ్యాసార్థము,45);
   })
 }
 
 
-function roundedOctogonL (side, radius) {
+function roundedOctogonL (side, వ్యాసార్థము) {
   repeat((8), function () {
     ముందుకు_జరుగు(side);
-    curveleft(radius,45);
+    curveleft(వ్యాసార్థము,45);
   })
 }
 
@@ -89,7 +89,7 @@ function demo () {
   తాబేలును_దాచు();
 
   tSize = cellSize/2 * .90
-// turbine(x,y, radius, pedals, dir) {
+// turbine(x,y, వ్యాసార్థము, pedals, dir) {
   turbine (h1, v1, 10/55*tSize, 8, CW);
   turbine (h1, v1, 25/55*tSize, 16, CCW);
   turbine (h1, v1, 40/55*tSize, 32, CW);

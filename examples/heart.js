@@ -17,7 +17,7 @@ to make solid:
 
 function oheart(size)
 {
-  రంగు("red")
+  రంగు( ఎరుపు )
   వెడల్పు(4)
   కలమును_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(.707*size)
@@ -79,7 +79,7 @@ function fheart(size, fcolor)
 
 function heart(size)
 {
-  రంగు("red")
+  రంగు( ఎరుపు )
   వెడల్పు(4)
   కలమును_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(.707*size)

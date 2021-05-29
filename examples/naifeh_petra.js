@@ -116,7 +116,7 @@ function demo() {
   reset()
   fColor = "blue"
   size = .17 * Math.min( maxX(), maxY())
-  రంగు("white")
+  రంగు( తెలుపు )
   //వెడల్పు(.1* size)
 
   //center canvas more or less

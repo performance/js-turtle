@@ -5,24 +5,24 @@ var i; // loop variable
 
 
 // *** CONSTANTS ***
-rad = 50; // circle radius
+rad = 50; // circle వ్యాసార్థము
 limit = 6; // times to loop
 delayTime = 1000; // milliseconds
 
 
 // *** FUNCTIONS ***
 
-function divideCenter(radii, radius) {
+function divideCenter(radii, వ్యాసార్థము) {
   ఎడమ_వైపు_తిరుగు(60);
-  ముందుకు_జరుగు(radius);
+  ముందుకు_జరుగు(వ్యాసార్థము);
   కుడి_వైపు_తిరుగు(60);
   var side = 0
   while (side < 6) { // go to each side
     కుడి_వైపు_తిరుగు(60);
     var step = 0
     while (step < radii) { // step off side
-      ముందుకు_జరుగు(radius);
-      circle(radius);
+      ముందుకు_జరుగు(వ్యాసార్థము);
+      circle(వ్యాసార్థము);
       step = step + 1
     };
     side = side + 1;

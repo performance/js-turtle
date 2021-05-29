@@ -4,15 +4,15 @@ function circleEye (x, y, n, outerRadius, innerRadius) {
   goto (x, y);
   //circle (outerRadius); //outer circle
   //circle (innerRadius)
-  radius = outerRadius-innerRadius
+  వ్యాసార్థము = outerRadius-innerRadius
 
   for (i=0; i<n; i++) {
     goto (x, y);
     కోణము (i/n * 360);
     కలమును_పైకి_ఎత్తు();
-    ముందుకు_జరుగు(innerRadius + radius/2);
+    ముందుకు_జరుగు(innerRadius + వ్యాసార్థము/2);
     కలమును_కింద_పెట్టు();
-    circle(radius/2); // one inscribed circle
+    circle(వ్యాసార్థము/2); // one inscribed circle
   }
 }
 

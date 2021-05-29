@@ -246,7 +246,7 @@ label {
 #stopButton,
 #uploadButton {
   background-color:whitesmoke;
-  border-radius:5px;
+  border-వ్యాసార్థము:5px;
   border:black solid 2px;
   font-size:80%;
   font-weight:bold;
@@ -275,9 +275,9 @@ label {
 #infoButton{
   background-color:whitesmoke;
   background-color: #ffffb3;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius:20pt;
+  -webkit-border-వ్యాసార్థము: 10px;
+  -moz-border-వ్యాసార్థము: 10px;
+  border-వ్యాసార్థము:20pt;
   border:blue solid 1pt;
   color:blue;
   float:right;
@@ -309,9 +309,9 @@ label {
 .left_help_text,
 .help_text {
   background: #ffffb3;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-వ్యాసార్థము: 5px;
+  -moz-border-వ్యాసార్థము: 5px;
+  border-వ్యాసార్థము: 5px;
   border: 1px solid #ccc;
   display: none;
   font: normal 70% sans-serif;
@@ -405,17 +405,17 @@ label {
   width: 7em;
 }
 
-button#black{
+button#నలుపు{
   background-color:black;
   color:white;
 }
 
-button#blue{
+button#నీలము{
   background-color:blue;
   color:white;
 }
 
-button#lime{
+button#నిమ్మ{
   background-color:lime;
 }
 
@@ -423,7 +423,7 @@ button#cyan{
   background-color:cyan;
 }
 
-button#red{
+button#ఎరుపు{
   background-color:red;
 }
 
@@ -431,15 +431,15 @@ button#magenta{
   background-color:magenta;
 }
 
-button#yellow{
+button#పసుపు{
   background-color:yellow;
 }
 
-button#white{
+button#తెలుపు{
   background-color:white;
 }
 
-button#brown{
+button#కపిలము{
   background-color:brown;
   color:white;
 }
@@ -448,12 +448,12 @@ button#tan{
   background-color:tan;
 }
 
-button#green{
+button#ఆకుపచ్చ{
   background-color:green;
   color:white;
 }
 
-button#aqua{
+button#సముద్రము{
   background-color:aqua;
 }
 
@@ -466,11 +466,11 @@ button#purple{
   color:white;
 }
 
-button#orange{
+button#నారింజ{
   background-color:orange;
 }
 
-button#gray{
+button#బూడిద{
   background-color:gray;
   color:white;
 }

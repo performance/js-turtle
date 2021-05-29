@@ -551,7 +551,7 @@ lt = ఎడమ;
   imageContext.save();
   సెంటర్‌కార్డ్స్ (ఇమేజ్‌కాంటెక్స్ట్);
   imageContext.beginPath ();
-  imageContext.arc (centerX, centerY, radius, startAngle, stopAngle, అపసవ్య దిశలో);
+  imageContext.arc (centerX, centerY, వ్యాసార్థము, startAngle, stopAngle, అపసవ్య దిశలో);
   // దాన్ని గీయండి
   if (turtle.కుంచికనుదింపు) {
     imageContext.stroke ();
@@ -593,7 +593,7 @@ curLeft = కర్వ్లెఫ్ట్;
   imageContext.save();
   సెంటర్‌కార్డ్స్ (ఇమేజ్‌కాంటెక్స్ట్);
   imageContext.beginPath ();
-  imageContext.arc (centerX, centerY, radius, startAngle, stopAngle, అపసవ్య దిశలో);
+  imageContext.arc (centerX, centerY, వ్యాసార్థము, startAngle, stopAngle, అపసవ్య దిశలో);
   // దాన్ని గీయండి
   if (turtle.కుంచికనుదింపు) {
     imageContext.stroke ();
@@ -629,9 +629,9 @@ curRight = వక్రత;
   if (పరిధి === నిర్వచించబడలేదు) {
    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థం, 0, 2 * Math.PI);
   } else ఉంటే (CW) {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, radius, -startAngle, - (startAngle + degToRad (పరిధి)), CW);
+    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, -startAngle, - (startAngle + degToRad (పరిధి)), CW);
   } లేకపోతే {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, radius, -startAngle, - (startAngle-degToRad (పరిధి)), CW);
+    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, -startAngle, - (startAngle-degToRad (పరిధి)), CW);
   }
   // పెన్ను పైకి లేదా క్రిందికి సంబంధం లేకుండా గీయండి
   imageContext.stroke ();

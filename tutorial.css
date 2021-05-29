@@ -6,9 +6,9 @@
 
 .tryme::after {
   background-color:red;
-  -webkit-border-radius: 5pt;
-  -moz-border-radius: 5pt;
-  border-radius:5pt;
+  -webkit-border-వ్యాసార్థము: 5pt;
+  -moz-border-వ్యాసార్థము: 5pt;
+  border-వ్యాసార్థము:5pt;
   border: black solid 1pt;
   color: white;
   content: "Try Me";

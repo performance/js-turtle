@@ -54,7 +54,7 @@ var COLORS = { // original colors
   "G": "green",
   "B": "blue",
   "Y": "yellow",
-  "K": "gray",
+  "K": "బూడిద",
   "W": "white"
 };
 

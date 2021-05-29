@@ -1,13 +1,13 @@
 // Rice Penta Tessellation 1 -- pentagon tessellation discovered by Margorie Rice
 
 c1 = "yellow"
-c2 = "orange"
+c2 = "నారింజ"
 c3 = "red"
 c4 = "blue"
 c5 = "blue"
 c6 = "red"
 c7 = "yellow"
-c8 = "orange"
+c8 = "నారింజ"
 
 function pr(fill) {
   beginShape()

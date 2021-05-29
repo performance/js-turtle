@@ -203,7 +203,7 @@ function drawNSstreet() {
 function drawEWstripe() {
   setpos(minX(),0);
   కోణము(90);
-  రంగు("yellow");
+  రంగు( పసుపు );
   వెడల్పు(1);
   ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);
   కలమును_పైకి_ఎత్తు();
@@ -215,7 +215,7 @@ function drawEWstripe() {
 function drawNSstripe() {
   setpos(0,maxY());
   కోణము(180);
-  రంగు("yellow");
+  రంగు( పసుపు );
   వెడల్పు(1);
   ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);
   కలమును_పైకి_ఎత్తు();
@@ -230,7 +230,7 @@ function drawCrossWalk(x, y, dir) {
   // dir is direction across road
     
   // draw inner cross walk line
-  రంగు("white");
+  రంగు( తెలుపు );
   setposition(x, y);
   కోణము(dir);
   వెడల్పు(1);
@@ -262,7 +262,7 @@ function drawTurnArrow(x, y, dir) {
   goto (x,y);
   కోణము (dir);
   కలమును_కింద_పెట్టు();
-  రంగు("white");
+  రంగు( తెలుపు );
   వెడల్పు(5);
   ముందుకు_జరుగు(5);
   curveLeft(5,90);
@@ -378,7 +378,7 @@ function drawWalkSignal(state) {
   కుడి_వైపు_తిరుగు(90);
   setLightColor("red", state);
   if (state === "yellow") {
-    రంగు("yellow")
+    రంగు( పసుపు )
   }
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(8);

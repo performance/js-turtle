@@ -22,7 +22,7 @@ function caption (message) {
   setheading( 90)
 
   // erase wha will be in the path
-  రంగు("white")
+  రంగు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)

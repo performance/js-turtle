@@ -701,23 +701,23 @@ lt = ఎడమ_వైపు_తిరుగు;
  * curveleft -- move the turtle forward along a path curving to the left
  *
  * arguments:
- *   radius: radius of the curve
+ *   వ్యాసార్థము: వ్యాసార్థము of the curve
  *   extent: number of degrees in the curve
  *
  * returns: None
  ******************************************************************************/
-function curveleft (radius, extent) {
+function curveleft (వ్యాసార్థము, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
   var startAngle = turtle.కోణము; // in radians from 12 o'clock .. heading is same as start
   var counterclockwise = true;
-  var centerX = turtle.pos.x - radius * Math.cos (turtle.కోణము); // left of turtle
-  var centerY = turtle.pos.y + radius * Math.sin (turtle.కోణము);
+  var centerX = turtle.pos.x - వ్యాసార్థము * Math.cos (turtle.కోణము); // left of turtle
+  var centerY = turtle.pos.y + వ్యాసార్థము * Math.sin (turtle.కోణము);
   stopAngle = constrain( (startAngle - degToRad(extent)), 0, 2*Math.PI); // in radians CCW
   turtle.కోణము = stopAngle;
-  turtle.pos.x = centerX + radius * Math.cos(stopAngle);
-  turtle.pos.y = centerY - radius * Math.sin(stopAngle);
+  turtle.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
+  turtle.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
 
   // correct for flipping of x values, this changes rotation and angles
   counterclockwise = !counterclockwise;
@@ -727,7 +727,7 @@ function curveleft (radius, extent) {
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
-  imageContext.arc (centerX, centerY, radius, startAngle, stopAngle, counterclockwise);
+  imageContext.arc (centerX, centerY, వ్యాసార్థము, startAngle, stopAngle, counterclockwise);
   // draw it
   if (turtle.penDown) {
     imageContext.stroke();
@@ -744,9 +744,9 @@ large-arg-flag
 sweep-flag
 dx and dy are the center of the arc
 
-so this translates "curveleft (radius, extent)" roughly to:
+so this translates "curveleft (వ్యాసార్థము, extent)" roughly to:
 
-<path ... d="... a <radius> <radius> 0 1 <turtle.pos.x> + <radius> * sin(<turtle.heading>) <turtle.pos.x> + <radius> * cos(<turtle.heading>)
+<path ... d="... a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 <turtle.pos.x> + <వ్యాసార్థము> * sin(<turtle.heading>) <turtle.pos.x> + <వ్యాసార్థము> * cos(<turtle.heading>)
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
 */
@@ -757,23 +757,23 @@ curveLeft = curveleft;
  * curveright -- move the turtle forward along a path curving to the right
  *
  * arguments:
- *   radius: radius of the curve
+ *   వ్యాసార్థము: వ్యాసార్థము of the curve
  *   extent: number of degrees in the curve
  *
  * returns: None
  ******************************************************************************/
-function curveright (radius, extent) {
+function curveright (వ్యాసార్థము, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
   var startAngle = Math.PI + turtle.కోణము; // in radians .. heading is same as start
   var counterclockwise = false;
-  var centerX = turtle.pos.x + radius * Math.cos (turtle.కోణము); // right of turtle
-  var centerY = turtle.pos.y - radius * Math.sin (turtle.కోణము);
+  var centerX = turtle.pos.x + వ్యాసార్థము * Math.cos (turtle.కోణము); // right of turtle
+  var centerY = turtle.pos.y - వ్యాసార్థము * Math.sin (turtle.కోణము);
   stopAngle = constrain( startAngle + degToRad(extent), 0, 2*Math.PI); // in radians CW
   turtle.కోణము = stopAngle + Math.PI;
-  turtle.pos.x = centerX + radius * Math.cos(stopAngle);
-  turtle.pos.y = centerY - radius * Math.sin(stopAngle);
+  turtle.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
+  turtle.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
 
   // correct for flipping of x values, this changes rotation and angles
   counterclockwise = !counterclockwise;
@@ -783,7 +783,7 @@ function curveright (radius, extent) {
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
-  imageContext.arc (centerX, centerY, radius, startAngle, stopAngle, counterclockwise);
+  imageContext.arc (centerX, centerY, వ్యాసార్థము, startAngle, stopAngle, counterclockwise);
   // draw it
   if (turtle.penDown) {
     imageContext.stroke();
@@ -799,13 +799,13 @@ curveRight = curveright;
  * circle -- draw a cirle about the current turtle position
  *
  * arguments:
- *   radius:  radius of circle in pixels
+ *   వ్యాసార్థము:  వ్యాసార్థము of circle in pixels
  *   extent:  size of arc in degrees (optional, defaults to full circle)
  *   CW:      boolean for direction of arc (optional defaults to true or clockwise)
  *
  * returns: None
  ******************************************************************************/
-function circle(radius, extent, CW) {
+function circle(వ్యాసార్థము, extent, CW) {
   if (CW === undefined) {
     CW = true;
   }
@@ -817,17 +817,17 @@ function circle(radius, extent, CW) {
   //imageContext.fillStyle=turtle.రంగు;
   // negate angles and CW due to context translation
   if (extent === undefined) {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, radius, 0, 2*Math.PI);
+    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, 0, 2*Math.PI);
     svgClosePath()
     svgBlob = svgBlob + '<circle cx="' + round( turtle.pos.x, svgPrecision) + '" cy="' + round( turtle.pos.y, svgPrecision)
-              + '" r="' + round( radius, svgPrecision) + '"'
+              + '" r="' + round( వ్యాసార్థము, svgPrecision) + '"'
               + ' style="stroke:' + turtle.రంగు + '; stroke-width:' + turtle.వెడల్పు + '; fill:none"/>\n'; 
-    updateHighWater( turtle.pos.x, turtle.pos.y,  radius + turtle.వెడల్పు, radius + turtle.వెడల్పు)
+    updateHighWater( turtle.pos.x, turtle.pos.y,  వ్యాసార్థము + turtle.వెడల్పు, వ్యాసార్థము + turtle.వెడల్పు)
    
   } else if (CW) {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, radius, -startAngle, -(startAngle+degToRad(extent)), CW);
+    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, -startAngle, -(startAngle+degToRad(extent)), CW);
   } else {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, radius, -startAngle, -(startAngle-degToRad(extent)), CW);
+    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, -startAngle, -(startAngle-degToRad(extent)), CW);
   }
   // draw it regardless of pen up or down
   imageContext.stroke();
@@ -850,14 +850,14 @@ large-arg-flag
 sweep-flag
 dx and dy are the center of the arc
 
-so this translates "circle (radius, extent, CW)" roughly to:
+so this translates "circle (వ్యాసార్థము, extent, CW)" roughly to:
 
 need to compute path start, path end and circle center
 కోణము start = turtle.heading
 circle center = turtle.pos
-path start = turtle.pos.x + radius * Math.cos( turtle.కోణము), turtle.pos.y + radius * Math.sin( turtle.కోణము)
-path end = turtle.pos.x + radius * Math.cos( turtle.కోణము + extent), turtle.pos.y + radius * Math.sin( turtle.కోణము + extent)
-<path ... d="M <pathStartX> <pathStartY a <radius> <radius> 0 1 0 circleCenterX circleCenterY l pathEndX pathEndY
+path start = turtle.pos.x + వ్యాసార్థము * Math.cos( turtle.కోణము), turtle.pos.y + వ్యాసార్థము * Math.sin( turtle.కోణము)
+path end = turtle.pos.x + వ్యాసార్థము * Math.cos( turtle.కోణము + extent), turtle.pos.y + వ్యాసార్థము * Math.sin( turtle.కోణము + extent)
+<path ... d="M <pathStartX> <pathStartY a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 0 circleCenterX circleCenterY l pathEndX pathEndY
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
 */
@@ -867,7 +867,7 @@ arc = circle;
  * dot -- draw a filled circle at the turtle position
  *
  * arguments:
- *   size:  radius of dot in pixels (optional defaults to max of pensize+4, 2*pensize)
+ *   size:  వ్యాసార్థము of dot in pixels (optional defaults to max of pensize+4, 2*pensize)
  *
  * returns: None
  ******************************************************************************/
@@ -1179,6 +1179,25 @@ penWidth = వెడల్పు;
  *     HSLA colors (e.g., "hsla(120, 100%, 50%, 1)")
  *     Predefined/Cross-browser రంగు names (e.g., "red")
  *     logo రంగు numbers 0 to 15 as index into:*/
+const నలుపు = "నలుపు";
+const నీలము = "నీలము";
+const నిమ్మ = "నిమ్మ";
+// "cyan", 
+const ఎరుపు = "ఎరుపు";
+// "magenta"
+const పసుపు = "పసుపు";
+const తెలుపు = "తెలుపు";
+const కపిలము = "కపిలము";
+// "tan"
+const ఆకుపచ్చ = "ఆకుపచ్చ";
+const సముద్రము = "సముద్రము";
+// "salmon",
+// "purple", 
+const నారింజ = "నారింజ";
+const బూడిద = "బూడిద";
+
+రంగుల_పేర్లు = ["నలుపు", "నీలము", "నిమ్మ", "cyan", "ఎరుపు", "magenta", "పసుపు", "తెలుపు",
+"కపిలము", "tan", "ఆకుపచ్చ", "సముద్రము", "salmon", "purple", "నారింజ", "బూడిద"]
 logoColors = ["black", "blue", "lime", "cyan", "red", "magenta", "yellow", "white",
               "brown", "tan", "green", "aqua", "salmon", "purple", "orange", "gray"]
 /*
@@ -1194,7 +1213,13 @@ function రంగు (col) {
     //}
   } else if (typeof(col) != "string") { // col is not a supported type
     col = "black";
-  }
+  } 
+  // else {
+  //   const idx = రంగుల_పేర్లు.indexOf(col);
+  //   if ( idx > 0 ) {
+  //     turtle.రంగు = logoColors[idx];
+  //   }
+  // }
   turtle.రంగు = col;
   imageContext.strokeStyle = col;
 }

@@ -13,28 +13,28 @@ function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent
 }\n\
 \n\
 \n\
-function turbine(x,y, radius, pedals, dir) {\n\
+function turbine(x,y, వ్యాసార్థము, pedals, dir) {\n\
   for (i=0; i<pedals; i++) {\n\
     if (dir) {\n\
-      radialArc (x,y, radius, 360*i/pedals, -135, 10, 90, dir);\n\
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, -135, 10, 90, dir);\n\
     } else {\n\
-      radialArc (x,y, radius, 360*i/pedals, 45, 10, 90, !dir);\n\
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, 45, 10, 90, !dir);\n\
     }\n\
   }\n\
 }\n\
 \n\
-function roundedOctogon (side, radius) {\n\
+function roundedOctogon (side, వ్యాసార్థము) {\n\
   repeat((8), function () {\n\
     ముందుకు_జరుగు(side);\n\
-    curveright(radius,45);\n\
+    curveright(వ్యాసార్థము,45);\n\
   })\n\
 }\n\
 \n\
 \n\
-function roundedOctogonL (side, radius) {\n\
+function roundedOctogonL (side, వ్యాసార్థము) {\n\
   repeat((8), function () {\n\
     ముందుకు_జరుగు(side);\n\
-    curveleft(radius,45);\n\
+    curveleft(వ్యాసార్థము,45);\n\
   })\n\
 }\n\
 \n\
@@ -90,7 +90,7 @@ function demo () {\n\
   తాబేలును_దాచు();\n\
 \n\
   tSize = cellSize/2 * .90\n\
-// turbine(x,y, radius, pedals, dir) {\n\
+// turbine(x,y, వ్యాసార్థము, pedals, dir) {\n\
   turbine (h1, v1, 10/55*tSize, 8, CW);\n\
   turbine (h1, v1, 25/55*tSize, 16, CCW);\n\
   turbine (h1, v1, 40/55*tSize, 32, CW);\n\
@@ -375,7 +375,7 @@ function demo() {\n\
   xB = minX()\n\
   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > minY()) {\n\
@@ -452,15 +452,15 @@ function circleEye (x, y, n, outerRadius, innerRadius) {\n\
   స్థితి_మార్చు(x, y);\n\
   //circle (outerRadius); //outer circle\n\
   //circle (innerRadius)\n\
-  radius = outerRadius-innerRadius\n\
+  వ్యాసార్థము = outerRadius-innerRadius\n\
 \n\
   for (i=0; i<n; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
     కోణము (i/n * 360);\n\
     కలమును_పైకి_ఎత్తు();\n\
-    ముందుకు_జరుగు(innerRadius + radius/2);\n\
+    ముందుకు_జరుగు(innerRadius + వ్యాసార్థము/2);\n\
     కలమును_కింద_పెట్టు();\n\
-    circle(radius/2); // one inscribed circle\n\
+    circle(వ్యాసార్థము/2); // one inscribed circle\n\
   }\n\
 }\n\
 \n\
@@ -794,10 +794,10 @@ clock ='\
 var size;\n\
 \n\
 //draw the tick marks around the edge of the clock\n\
-function ticks(x, y, radius) {\n\
+function ticks(x, y, వ్యాసార్థము) {\n\
    var tickLen = 7;\n\
-   var gap = radius - tickLen;\n\
-   రంగు("blue");\n\
+   var gap = వ్యాసార్థము - tickLen;\n\
+   రంగు( నీలము );\n\
    వెడల్పు(1);\n\
    for (var theta = 0; theta < 360; theta = theta + 6) {\n\
       // Thicken hour marks\n\
@@ -817,7 +817,7 @@ function ticks(x, y, radius) {\n\
 \n\
 \n\
 // draw the hour numbers on the clock face\n\
-function numbers(x, y, radius) {\n\
+function numbers(x, y, వ్యాసార్థము) {\n\
    కలమును_పైకి_ఎత్తు();\n\
    fontSize = 20/130 * size\n\
    setFont(fontSize+"px sans-serif");\n\
@@ -825,7 +825,7 @@ function numbers(x, y, radius) {\n\
    for (var hour = 1; hour <= 12; hour++) {\n\
       స్థితి_మార్చు(x,y);\n\
       కోణము(hour * 30);\n\
-      ముందుకు_జరుగు(radius); // to center of digit\n\
+      ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit\n\
       కోణము(180);\n\
       ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline\n\
       కుడి_వైపు_తిరుగు(90);\n\
@@ -2039,14 +2039,14 @@ function drawRadials(side) {\n\
   }\n\
 }\n\
 \n\
-function spikey ( points, revs, radius, x, y, head) {\n\
+function spikey ( points, revs, వ్యాసార్థము, x, y, head) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   స్థితి_మార్చు(x, y)\n\
   setheading(head)\n\
-  ముందుకు_జరుగు(radius)\n\
+  ముందుకు_జరుగు(వ్యాసార్థము)\n\
   var turnAngle = 360 * revs/points\n\
   var angleA = ( 180 - turnAngle)/2\n\
-  var stroke = 2 * radius * Math.cos( degToRad( angleA))\n\
+  var stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))\n\
   కుడి_వైపు_తిరుగు( 180 - angleA)\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
@@ -2169,7 +2169,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase what will be in the path\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -2493,7 +2493,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase wha will be in the path\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -2682,7 +2682,7 @@ function startDelayedExpansion() {\n\
   }\n\
 \n\
   కలమును_కింద_పెట్టు()\n\
-  రంగు("blue")\n\
+  రంగు( నీలము )\n\
   shadeTriangle( CCW, tempSide, stepsize)\n\
   రంగు("black")\n\
   delay( delayedExpansion,1000)\n\
@@ -2826,24 +2826,24 @@ var i; // loop variable\n\
 \n\
 \n\
 // *** CONSTANTS ***\n\
-rad = 50; // circle radius\n\
+rad = 50; // circle వ్యాసార్థము\n\
 limit = 6; // times to loop\n\
 delayTime = 1000; // milliseconds\n\
 \n\
 \n\
 // *** FUNCTIONS ***\n\
 \n\
-function divideCenter(radii, radius) {\n\
+function divideCenter(radii, వ్యాసార్థము) {\n\
   ఎడమ_వైపు_తిరుగు(60);\n\
-  ముందుకు_జరుగు(radius);\n\
+  ముందుకు_జరుగు(వ్యాసార్థము);\n\
   కుడి_వైపు_తిరుగు(60);\n\
   var side = 0\n\
   while (side < 6) { // go to each side\n\
     కుడి_వైపు_తిరుగు(60);\n\
     var step = 0\n\
     while (step < radii) { // step off side\n\
-      ముందుకు_జరుగు(radius);\n\
-      circle(radius);\n\
+      ముందుకు_జరుగు(వ్యాసార్థము);\n\
+      circle(వ్యాసార్థము);\n\
       step = step + 1\n\
     };\n\
     side = side + 1;\n\
@@ -2956,7 +2956,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase what will be in the path\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -3044,7 +3044,7 @@ function square (side) {\n\
 function demo() {\n\
    reset();\n\
    తాబేలును_దాచు();\n\
-   రంగు("blue");\n\
+   రంగు( నీలము );\n\
    var side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
@@ -3599,7 +3599,7 @@ function caption (message) {\n\
 \n\
     // erase what will be in the path\n\
     setfont("bold 16px helvitica,sans-serif")\n\
-    రంగు("white")\n\
+    రంగు( తెలుపు )\n\
     వెడల్పు(22)\n\
     ముందుకు_జరుగు(maxY() * 2 - 12)\n\
     స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -4139,7 +4139,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase what will be in the path\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -4267,7 +4267,7 @@ to make solid:\n\
 \n\
 function oheart(size)\n\
 {\n\
-  రంగు("red")\n\
+  రంగు( ఎరుపు )\n\
   వెడల్పు(4)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(.707*size)\n\
@@ -4329,7 +4329,7 @@ function fheart(size, fcolor)\n\
 \n\
 function heart(size)\n\
 {\n\
-  రంగు("red")\n\
+  రంగు( ఎరుపు )\n\
   వెడల్పు(4)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(.707*size)\n\
@@ -4418,7 +4418,7 @@ function demo() {\n\
   xB = minX()\n\
   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > minY()) {\n\
@@ -5146,7 +5146,7 @@ function caption (message) {\n\
   setheading( 90)\n\
 \n\
   // erase wha will be in the path\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -5291,7 +5291,7 @@ angles = [ang0, ang1, ang2, ang3, ang4 ]\n\
 \n\
 fColors = [\n\
            "yellow",\n\
-           "orange",\n\
+           "నారింజ",\n\
            "lime",\n\
            "red",\n\
            "purple",\n\
@@ -5299,9 +5299,9 @@ fColors = [\n\
            "cyan",\n\
            "blue",\n\
            "blue",\n\
-           "brown",\n\
-           "brown",\n\
-           "brown",\n\
+           "కపిలము",\n\
+           "కపిలము",\n\
+           "కపిలము",\n\
            "tan",\n\
            "tan",\n\
            "tan",\n\
@@ -5313,11 +5313,11 @@ fColors = [\n\
            "salmon",\n\
            "salmon",\n\
            "salmon",\n\
-           "gray",\n\
-           "gray",\n\
-           "gray",\n\
-           "gray",\n\
-           "gray",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
            "black",\n\
            "black",\n\
            "black",\n\
@@ -5349,11 +5349,11 @@ fColors = [\n\
            "tan",\n\
            "tan",\n\
            "tan",\n\
-           "gray",\n\
-           "gray",\n\
-           "gray",\n\
-           "gray",\n\
-           "gray",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
+           "బూడిద",\n\
            "black",\n\
            "black",\n\
            "black",\n\
@@ -5723,7 +5723,7 @@ function pent(side) {\n\
     ముందుకు_జరుగు(side)\n\
       ఎడమ_వైపు_తిరుగు(angle2)\n\
 \n\
-      రంగు("red")\n\
+      రంగు( ఎరుపు )\n\
       కుడి_వైపు_తిరుగు(angle3)\n\
       ముందుకు_జరుగు(side3)\n\
       వెనుకకు_జరుగు(side3)\n\
@@ -5732,7 +5732,7 @@ function pent(side) {\n\
       రంగు("black")\n\
       ముందుకు_జరుగు(side2)\n\
 \n\
-      రంగు("blue")\n\
+      రంగు( నీలము )\n\
       కుడి_వైపు_తిరుగు(180-angle3)\n\
       ముందుకు_జరుగు(side3)\n\
 \n\
@@ -5982,7 +5982,7 @@ function drawNSstreet() {\n\
 function drawEWstripe() {\n\
   setpos(minX(),0);\n\
   కోణము(90);\n\
-  రంగు("yellow");\n\
+  రంగు( పసుపు );\n\
   వెడల్పు(1);\n\
   ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -5994,7 +5994,7 @@ function drawEWstripe() {\n\
 function drawNSstripe() {\n\
   setpos(0,maxY());\n\
   కోణము(180);\n\
-  రంగు("yellow");\n\
+  రంగు( పసుపు );\n\
   వెడల్పు(1);\n\
   ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -6009,7 +6009,7 @@ function drawCrossWalk(x, y, dir) {\n\
   // dir is direction across road\n\
     \n\
   // draw inner cross walk line\n\
-  రంగు("white");\n\
+  రంగు( తెలుపు );\n\
   setposition(x, y);\n\
   కోణము(dir);\n\
   వెడల్పు(1);\n\
@@ -6041,7 +6041,7 @@ function drawTurnArrow(x, y, dir) {\n\
   స్థితి_మార్చు(x,y);\n\
   కోణము (dir);\n\
   కలమును_కింద_పెట్టు();\n\
-  రంగు("white");\n\
+  రంగు( తెలుపు );\n\
   వెడల్పు(5);\n\
   ముందుకు_జరుగు(5);\n\
   curveLeft(5,90);\n\
@@ -6157,7 +6157,7 @@ function drawWalkSignal(state) {\n\
   కుడి_వైపు_తిరుగు(90);\n\
   setLightColor("red", state);\n\
   if (state === "yellow") {\n\
-    రంగు("yellow")\n\
+    రంగు( పసుపు )\n\
   }\n\
   కుడి_వైపు_తిరుగు(90);\n\
   ముందుకు_జరుగు(8);\n\
@@ -7743,7 +7743,7 @@ function caption (message) {\n\
 \n\
   // erase what will be in the path\n\
   setfont("bold 16px helvitica,sans-serif")\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(22)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -9063,7 +9063,7 @@ function demo() {\n\
   reset()\n\
   fColor = "blue"\n\
   size = .17 * Math.min( maxX(), maxY())\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   //వెడల్పు(.1* size)\n\
 \n\
   //center canvas more or less\n\
@@ -9218,7 +9218,7 @@ function demo() {\n\
   side = 14\n\
   side = .033 * Math.min( maxX(), maxY())\n\
   factor = Math.sqrt(2 + Math.sqrt( 2))\n\
-  //    side, radius, offsetAngle\n\
+  //    side, వ్యాసార్థము, offsetAngle\n\
   layer(      side, 0)\n\
   side = side * factor\n\
   layer( side, 22.5)\n\
@@ -9650,13 +9650,13 @@ rice_penta_tessellation_1 ='\
 // Rice Penta Tessellation 1 -- pentagon tessellation discovered by Margorie Rice\n\
 \n\
 c1 = "yellow"\n\
-c2 = "orange"\n\
+c2 = "నారింజ"\n\
 c3 = "red"\n\
 c4 = "blue"\n\
 c5 = "blue"\n\
 c6 = "red"\n\
 c7 = "yellow"\n\
-c8 = "orange"\n\
+c8 = "నారింజ"\n\
 \n\
 function pr(fill) {\n\
   beginShape()\n\
@@ -9765,7 +9765,7 @@ function demo () {\n\
   x1 = random(minX(),maxX())\n\
   y1 = random(minY(),maxY())\n\
   i = 0\n\
-  రంగు("blue")\n\
+  రంగు( నీలము )\n\
   while (i < 100) {\n\
     i++\n\
     //write (x + " " + y)\n\
@@ -10786,7 +10786,7 @@ function caption (message) {\n\
 \n\
   // erase what will be in the path\n\
   setfont("bold 16px helvitica,sans-serif")\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   వెడల్పు(22)\n\
   ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
@@ -11106,7 +11106,7 @@ function square (side) {\n\
 function spinningSquare2() {\n\
    reset();\n\
    తాబేలును_దాచు();\n\
-   రంగు("blue");\n\
+   రంగు( నీలము );\n\
    var side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
@@ -11124,7 +11124,7 @@ function spinningSquare() {\n\
   }\n\
   stepSize = .5 * stepSize/steps\n\
   //var stepSize = 200/steps\n\
-  రంగు("blue");\n\
+  రంగు( నీలము );\n\
   for (var i=0; i<steps; i=i+1) {\n\
     square(stepSize*i);\n\
     కుడి_వైపు_తిరుగు(360/steps)\n\
@@ -11307,7 +11307,7 @@ function demo() {\n\
     sety(i)\n\
     cwRow( side)\n\
     sety(i + 3*side)\n\
-    రంగు("red")\n\
+    రంగు( ఎరుపు )\n\
     ccwRow( side)\n\
     రంగు("black")\n\
   }\n\
@@ -11858,7 +11858,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)\n
   rectangle (fieldWidth, fieldHeight)\n\
 \n\
   //  draw stripes\n\
-  రంగు("red");\n\
+  రంగు( ఎరుపు );\n\
   వెడల్పు(stripeWidth);\n\
   స్థితి_మార్చు(xBase+flagWidth, yBase-stripeWidth/2)\n\
   కోణము (-90)\n\
@@ -11866,7 +11866,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)\n
   stripes (flagWidth, 2*stripeWidth, 3)\n\
 \n\
   //draw field\n\
-  రంగు("blue")\n\
+  రంగు( నీలము )\n\
   స్థితి_మార్చు(xBase+fieldWidth, yBase-stripeWidth/2)\n\
   కోణము (-90)\n\
   stripes (fieldWidth, stripeWidth, 7)\n\
@@ -11874,7 +11874,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)\n
   //draw field of stars\n\
   కోణము(0)\n\
   వెడల్పు(2)\n\
-  రంగు("white")\n\
+  రంగు( తెలుపు )\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
   var row = 0\n\
@@ -11949,7 +11949,7 @@ var COLORS = { // original colors\n\
   "G": "green",\n\
   "B": "blue",\n\
   "Y": "yellow",\n\
-  "K": "gray",\n\
+  "K": "బూడిద",\n\
   "W": "white"\n\
 };\n\
 \n\

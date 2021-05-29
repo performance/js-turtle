@@ -100,7 +100,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   rectangle (fieldWidth, fieldHeight)
 
   //  draw stripes
-  రంగు("red");
+  రంగు( ఎరుపు );
   వెడల్పు(stripeWidth);
   goto (xBase+flagWidth, yBase-stripeWidth/2)
   కోణము (-90)
@@ -108,7 +108,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   stripes (flagWidth, 2*stripeWidth, 3)
 
   //draw field
-  రంగు("blue")
+  రంగు( నీలము )
   goto (xBase+fieldWidth, yBase-stripeWidth/2)
   కోణము (-90)
   stripes (fieldWidth, stripeWidth, 7)
@@ -116,7 +116,7 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   //draw field of stars
   కోణము(0)
   వెడల్పు(2)
-  రంగు("white")
+  రంగు( తెలుపు )
   కలమును_కింద_పెట్టు()
 
   var row = 0

@@ -85,7 +85,7 @@ function with a color as in the following example:
 
 function demo() {
   reset() // just clear the screen and home the turtle
-  రంగు("red")
+  రంగు( ఎరుపు )
   spikey(5, 2, 50)
 }
 </code>
@@ -106,7 +106,7 @@ size of smallest piece of the display, a dot or maybe a period.
 
 function demo () {
   reset()
-  రంగు("blue")
+  రంగు( నీలము )
   వెడల్పు(5)
   spikey(5, 2, 50)
 }
@@ -167,12 +167,12 @@ it, you need to re-stroke the graphic to get it on top of the fill.
 function demo () {
   reset()
   వెడల్పు(1)
-  రంగు("white")
+  రంగు( తెలుపు )
   beginShape()
   spikey(5, 2, 50)
   fillShape("blue")
   వెడల్పు(2)
-  రంగు("white")
+  రంగు( తెలుపు )
   spikey(5, 2, 50)
 }
 </code>
@@ -262,23 +262,23 @@ Angle a = (180° - Turn Angle) / 2
 Angle a = (180° - (360 * revolutions / number of points)) / 2
 </li>
 <li>
-adjacent side = stroke length /2 = radius * cosine (Angle a)
+adjacent side = stroke length /2 = వ్యాసార్థము * cosine (Angle a)
 </li>
 <li>
 multiplying both sides by 2 gives:
 <br>
-stroke length = 2 * radius * cosine (Angle a)
+stroke length = 2 * వ్యాసార్థము * cosine (Angle a)
 </li>
 <li>
 or replacing Angle a:
 <br>
-stroke length = 2 * radius * cosine((180° - Turn Angle) / 2)
+stroke length = 2 * వ్యాసార్థము * cosine((180° - Turn Angle) / 2)
 </li>
 </ul>
 <p>
 These calculations can be used to center a spikey. The size of the spikey
-can now be the radius of a circle that would go around the spikey.
-The code for a spikey that uses a central point and a radius
+can now be the వ్యాసార్థము of a circle that would go around the spikey.
+The code for a spikey that uses a central point and a వ్యాసార్థము
 instead of a side to determine size in the following code.
 <code>Math.cos()</code> is the cosine function from the JavaScript Math
 library. The beauty of the cosine function is that it expresses the ratio of
@@ -298,14 +298,14 @@ canvas Cartesian coordinate system. It also uses the
 <code>setheading()</code> function to orient the spikey. Although the
 spikey will be drawn with a point straight up, it could be set to any కోణము.
 </p>
-<code class="tryme">function spikey ( points, revs, radius, x, y) {
+<code class="tryme">function spikey ( points, revs, వ్యాసార్థము, x, y) {
   కలమును_పైకి_ఎత్తు()
   goto(x, y)
   setheading(0)
-  ముందుకు_జరుగు(radius)
+  ముందుకు_జరుగు(వ్యాసార్థము)
   var turnAngle = 360 * revs/points
   var angleA = ( 180 - turnAngle)/2
-  var stroke = 2 * radius * Math.cos( degToRad( angleA))
+  var stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))
   కుడి_వైపు_తిరుగు( 180 - angleA)
   కలమును_కింద_పెట్టు()
 
@@ -332,8 +332,8 @@ The <span class="var">points</span> and
 that is to limit the scope of the variables to within the <code>spikey</code>
 function.
 The <span class="var">side</span> parameter has been replaced with a
-<span class="var">radius</span> parameter. Both specify the size of the spikey,
-but in different ways. <span class="var">radius</span> specifies the radius
+<span class="var">వ్యాసార్థము</span> parameter. Both specify the size of the spikey,
+but in different ways. <span class="var">వ్యాసార్థము</span> specifies the వ్యాసార్థము
 of a circle that would go around all of the points of the spikey. So spikeys
 with different
 number of <span class="var">points</span> or different number of
@@ -402,10 +402,10 @@ the user of the function having to call it twice.
 <code class="tryme">function spikey ( args ) {
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -424,7 +424,7 @@ function demo () {
   తాబేలును_దాచు()
   spikey({ points:5,
            revs:2,
-           radius:15,
+           వ్యాసార్థము:15,
            x:0,
            y:0,
            heading:0,
@@ -434,7 +434,7 @@ function demo () {
          })
   spikey({ x:0,
            y:30,
-           radius: 10,
+           వ్యాసార్థము: 10,
            heading:180,
            side:50,
            points:5,
@@ -444,7 +444,7 @@ function demo () {
          })
   spikey({ x:30,
            y:10,
-           radius: 10,
+           వ్యాసార్థము: 10,
            heading:180-72,
            side:50,
            points:5,
@@ -454,7 +454,7 @@ function demo () {
          })
   spikey({ x:20,
            y:-28,
-           radius: 10,
+           వ్యాసార్థము: 10,
            heading:-36,
            side:50,
            points:5,
@@ -464,7 +464,7 @@ function demo () {
          })
   spikey({ x:-20,
            y:-28,
-           radius: 10,
+           వ్యాసార్థము: 10,
            heading:36,
            side:50,
            points:5,
@@ -474,7 +474,7 @@ function demo () {
          })
   spikey({ x:-30,
            y:10,
-           radius: 10,
+           వ్యాసార్థము: 10,
            heading:180-72,
            side:50,
            points:5,
@@ -501,7 +501,7 @@ The following is a code segment to handle default values
 <code>// fill out default values for undefined attributes
   if (args.x === undefined) args.x = 0
   if (args.y === undefined) args.y = 0
-  if (args.radius === undefined) args.radius = 10 // shouldn't default
+  if (args.వ్యాసార్థము === undefined) args.వ్యాసార్థము = 10 // shouldn't default
   if (args.heading === undefined) args.heading = 0
   if (args.color === undefined) args.color = "black"
   if (args.fill === undefined) args.fill = "white"
@@ -521,10 +521,10 @@ Let's start with simply twisting a simple star.
 <code class="tryme">function spikey ( args ) {
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -549,7 +549,7 @@ function twistStar() {
   spikey({
     points:5,
     revs:2,
-    radius:40,
+    వ్యాసార్థము:40,
     x:0,
     y:0,
     heading:twistAngle,
@@ -587,7 +587,7 @@ physisist would talk about change in rotation.
 var star1 = {
               points:5,
               revs:2,
-              radius:40,
+              వ్యాసార్థము:40,
               x:0,
               y:0,
               heading:0,
@@ -604,10 +604,10 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -646,7 +646,7 @@ using a negative change or delta.
 var star1 = {
               points:5,
               revs:2,
-              radius:40,
+              వ్యాసార్థము:40,
               x:0,
               y:0,
               heading:0,
@@ -664,10 +664,10 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -699,13 +699,13 @@ function demo () {
 }
 </code>
 <p>
-Now let's grow the star over time. We do that by adding a delta to the radius for each frame.
+Now let's grow the star over time. We do that by adding a delta to the వ్యాసార్థము for each frame.
 </p>
 <code class="tryme">// GLOBALS
 var star1 = {
               points:5,
               revs:2,
-              radius:40,
+              వ్యాసార్థము:40,
               x:0,
               y:0,
               heading:0,
@@ -722,10 +722,10 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -743,7 +743,7 @@ function spikey ( args ) { // the simpler version for brevity
 function growStar() {
   clear()
   spikey(star1)
-  star1.radius = star1.radius + deltaRadius
+  star1.వ్యాసార్థము = star1.వ్యాసార్థము + deltaRadius
   delay( growStar, frameDelay)
 }
 
@@ -762,7 +762,7 @@ Now let's combine all three and move, grow, and twist it at the same time.
 var star1 = {
               points:5,
               revs:2,
-              radius:40,
+              వ్యాసార్థము:40,
               x:0,
               y:0,
               heading:0,
@@ -773,7 +773,7 @@ var star1 = {
 var deltaX = 2  // change in pixels per frame in x direction
 var deltaY = 2  // change in pixels per frame in y direction
 var deltaHeading = 2  // change in heading per frame
-var deltaRadius = 2  // change in radius per frame
+var deltaRadius = 2  // change in వ్యాసార్థము per frame
 var frameDelay = 30    // milliseconds between frames
 
 
@@ -782,10 +782,10 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -806,7 +806,7 @@ function changeStar() {
   star1.x = star1.x + deltaX
   star1.y = star1.y + deltaY
   star1.heading = star1.heading + deltaHeading
-  star1.radius = star1.radius + deltaRadius
+  star1.వ్యాసార్థము = star1.వ్యాసార్థము + deltaRadius
   delay( changeStar, frameDelay)
 }
 
@@ -829,7 +829,7 @@ To make it interesting, we will also add a second star.
 var star1 = {
               points:5,
               revs:2,
-              radius:40,
+              వ్యాసార్థము:40,
               x:0,
               y:0,
               heading:0,
@@ -844,7 +844,7 @@ var star1 = {
 var star2 = {
               points:7,
               revs:3,
-              radius:40,
+              వ్యాసార్థము:40,
               x:-100,
               y:0,
               heading:0,
@@ -864,10 +864,10 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -889,13 +889,13 @@ function changeStars() {
   star1.x = star1.x + star1.dx
   star1.y = star1.y + star1.dy
   star1.heading = star1.heading + star1.dhead
-  star1.radius = star1.radius + star1.drad
+  star1.వ్యాసార్థము = star1.వ్యాసార్థము + star1.drad
 
   spikey(star2)
   star2.x = star2.x + star2.dx
   star2.y = star2.y + star2.dy
   star2.heading = star2.heading + star2.dhead
-  star2.radius = star2.radius + star2.drad
+  star2.వ్యాసార్థము = star2.వ్యాసార్థము + star2.drad
 
   delay( changeStars, frameDelay)
 }
@@ -919,13 +919,13 @@ We can add acceleration to any speed attribute, so
 we will add variables <span class="var">ddx</span>,
 <span class="var">ddx</span>, <span class="var">ddy</span>,
 <span class="var">ddhead</span>, and <span class="var">dddrad</span> to add
-acceleration attributes for x, y, heading and radius respectively.
+acceleration attributes for x, y, heading and వ్యాసార్థము respectively.
 </p>
 <code class="tryme">// GLOBALS
 var star1 = {
               points:5,
               revs:2,
-              radius:40,
+              వ్యాసార్థము:40,
               x:0,
               y:0,
               heading:0,
@@ -944,7 +944,7 @@ var star1 = {
 var star2 = {
               points:7,
               revs:3,
-              radius:40,
+              వ్యాసార్థము:40,
               x:-100,
               y:0,
               heading:0,
@@ -968,10 +968,10 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -993,7 +993,7 @@ function changeStar() {
   star1.x = star1.x + star1.dx
   star1.y = star1.y + star1.dy
   star1.heading = star1.heading + star1.dhead
-  star1.radius = star1.radius + star1.drad
+  star1.వ్యాసార్థము = star1.వ్యాసార్థము + star1.drad
   star1.dx = star1.dx + star1.ddx
   star1.dy = star1.dy + star1.ddy
   star1.dhead = star1.dhead + star1.ddhead
@@ -1003,7 +1003,7 @@ function changeStar() {
   star2.x = star2.x + star2.dx
   star2.y = star2.y + star2.dy
   star2.heading = star2.heading + star2.dhead
-  star2.radius = star2.radius + star2.drad
+  star2.వ్యాసార్థము = star2.వ్యాసార్థము + star2.drad
   star2.dx = star2.dx + star2.ddx
   star2.dy = star2.dy + star2.ddy
   star2.dhead = star2.dhead + star2.ddhead
@@ -1048,7 +1048,7 @@ function generatePolys () {
     polys.push ({
       points: points,
       revs: revs[ points],
-      radius: random( 1,6)/2,
+      వ్యాసార్థము: random( 1,6)/2,
       color: logoColors[ random(15)],
       fill: logoColors[ random(15)],
       width: 1,
@@ -1070,10 +1070,10 @@ function generatePolys () {
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -1096,7 +1096,7 @@ function changeStars() {
     polys[i].x = polys[i].x + polys[i].dx
     polys[i].y = polys[i].y + polys[i].dy
     polys[i].heading = polys[i].heading + polys[i].dhead
-    polys[i].radius = polys[i].radius + polys[i].drad
+    polys[i].వ్యాసార్థము = polys[i].వ్యాసార్థము + polys[i].drad
     polys[i].dx = polys[i].dx + polys[i].ddx
     polys[i].dy = polys[i].dy + polys[i].ddy
     polys[i].dhead = polys[i].dhead + polys[i].ddhead
@@ -1142,7 +1142,7 @@ function generatePolys (count) {
     polys.push ({
       points: 5,
       revs: 2,
-      radius: random( 1,6)/2,
+      వ్యాసార్థము: random( 1,6)/2,
       color: logoColors[ random(15)],
       fill: logoColors[ random(15)],
       width: 1,
@@ -1164,10 +1164,10 @@ function generatePolys (count) {
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -1190,7 +1190,7 @@ function changeStars() {
     polys[i].x = polys[i].x + polys[i].dx
     polys[i].y = polys[i].y + polys[i].dy
     polys[i].heading = polys[i].heading + polys[i].dhead
-    polys[i].radius = polys[i].radius + polys[i].drad
+    polys[i].వ్యాసార్థము = polys[i].వ్యాసార్థము + polys[i].drad
     polys[i].dx = polys[i].dx + polys[i].ddx
     polys[i].dy = polys[i].dy + polys[i].ddy
     polys[i].dhead = polys[i].dhead + polys[i].ddhead
@@ -1227,7 +1227,7 @@ The edges of the canvas are given by the Turtle Graphics functions
 <code>maxY()</code>.
 But remember its not just when the center of the star passes by the edge.
 but the extremities of the star. All of the arms of the star are within
-the radius of the star, so that needs to be added to the dimension of the canvas.
+the వ్యాసార్థము of the star, so that needs to be added to the dimension of the canvas.
 <code>Array.splice(start, count)</code> is method for chopping out members of an array.
 This has two arguments <span class="var">start</span>, the element where the deletion should
 start, and <span class="var">count</span>, the number of elements to delete. Since this deletes
@@ -1254,7 +1254,7 @@ function generatePolys (count) {
     polys.push ({
       points: 5,
       revs: 2,
-      radius: random( 1,6)/2,
+      వ్యాసార్థము: random( 1,6)/2,
       color: logoColors[ random(15)],
       fill: logoColors[ random(15)],
       width: 1,
@@ -1276,10 +1276,10 @@ function generatePolys (count) {
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  ముందుకు_జరుగు( args.radius)
+  ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * args.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -1296,10 +1296,10 @@ function spikey ( args ) { // the simpler version for brevity
 
 function killPolys() {
   for (i=polys.length-2; i >= 0; i = i - 1) { //>
-    if (polys[i].x -polys[i].radius > maxX() ||
-        polys[i].x + polys[i].radius < minX() ||
-        polys[i].y - polys[i].radius > maxY() ||
-        polys[i].x + polys[i].radius < minX()) {
+    if (polys[i].x -polys[i].వ్యాసార్థము > maxX() ||
+        polys[i].x + polys[i].వ్యాసార్థము < minX() ||
+        polys[i].y - polys[i].వ్యాసార్థము > maxY() ||
+        polys[i].x + polys[i].వ్యాసార్థము < minX()) {
       console.log("killing " + i + " " +
                                 polys[i].x + " " +
                                 polys[i].y + " " +
@@ -1317,7 +1317,7 @@ function changeStars() {
     polys[i].x = polys[i].x + polys[i].dx
     polys[i].y = polys[i].y + polys[i].dy
     polys[i].heading = polys[i].heading + polys[i].dhead
-    polys[i].radius = polys[i].radius + polys[i].drad
+    polys[i].వ్యాసార్థము = polys[i].వ్యాసార్థము + polys[i].drad
     polys[i].dx = polys[i].dx + polys[i].ddx
     polys[i].dy = polys[i].dy + polys[i].ddy
     polys[i].dhead = polys[i].dhead + polys[i].ddhead
@@ -1349,10 +1349,10 @@ A constructor is a special function that sets the attributes of
 an object. It uses the special key word "this" that refers to the
 object being created by the constructor.
 </p>
-<code>function Spikey ( points, revs, radius) {
+<code>function Spikey ( points, revs, వ్యాసార్థము) {
   this.points = points
   this.revs = revs
-  this.radius = radius
+  this.వ్యాసార్థము = వ్యాసార్థము
 )
 </code>
 <p>
@@ -1366,12 +1366,12 @@ Other objects can have methods with the same name and an object may have
 many methods. The following shows the definition of a Spikey Class with
 a <code>grow()</code> method.
 </p>
-<code>function Spikey ( points, revs, radius) {
+<code>function Spikey ( points, revs, వ్యాసార్థము) {
   this.points = points
   this.revs = revs
-  this.radius = radius
+  this.వ్యాసార్థము = వ్యాసార్థము
   this.grow = function (delta) {
-    this.radius = this.radius + delta
+    this.వ్యాసార్థము = this.వ్యాసార్థము + delta
   }
 )
 </code>
@@ -1388,14 +1388,14 @@ The definition using the prototype keyword is as if it were part of the
 original constructor, so the keyword "this" still refers to the object
 being created.
 </p>
-<code>function Spikey ( points, revs, radius) {
+<code>function Spikey ( points, revs, వ్యాసార్థము) {
   this.points = points
   this.revs = revs
-  this.radius = radius
+  this.వ్యాసార్థము = వ్యాసార్థము
 }
 
 Spikey.prototype.grow = function (delta) {
-  this.radius = this.radius + delta
+  this.వ్యాసార్థము = this.వ్యాసార్థము + delta
 }
 </code>
 <p>
@@ -1408,7 +1408,7 @@ function Spikey ( ) {
   // set to default value initially
   this.points = 5
   this.revs = 2
-  this.radius = 10
+  this.వ్యాసార్థము = 10
   this.color = "black"
   this.fill = "white"
   this.width = 1
@@ -1426,7 +1426,7 @@ function Spikey ( ) {
 }
 
 Spikey.prototype.grow = function () {
-  this.radius = this.radius + this.drad
+  this.వ్యాసార్థము = this.వ్యాసార్థము + this.drad
 }
 
 Spikey.prototype.move = function () {
@@ -1449,10 +1449,10 @@ Spikey.prototype.accelerate = function () {
 Spikey.prototype.draw = function () { // the simpler version for brevity
   goto( this.x, this.y)
   setheading( this.heading)
-  ముందుకు_జరుగు( this.radius)
+  ముందుకు_జరుగు( this.వ్యాసార్థము)
   var turnAngle = 360 * this.revs/this.points
   var angleA = (180 - turnAngle)/2
-  var stroke = 2 * this.radius * Math.cos(degToRad(angleA))
+  var stroke = 2 * this.వ్యాసార్థము * Math.cos(degToRad(angleA))
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
@@ -1487,7 +1487,7 @@ function generatePolys (count) {
     var last = polys.length -1
     polys[last].points = 5
     polys[last].revs = 2
-    polys[last].radius = random( 1,6)/2
+    polys[last].వ్యాసార్థము = random( 1,6)/2
     polys[last].color = logoColors[ random(15)]
     polys[last].fill = logoColors[ random(15)]
     polys[last].width = 1
@@ -1508,10 +1508,10 @@ function generatePolys (count) {
 
 function killPolys() {
   for (i=polys.length-2; i >= 0; i = i - 1) { //>
-    if (polys[i].x -polys[i].radius > maxX() ||
-        polys[i].x + polys[i].radius < minX() ||
-        polys[i].y - polys[i].radius > maxY() ||
-        polys[i].x + polys[i].radius < minX()) {
+    if (polys[i].x -polys[i].వ్యాసార్థము > maxX() ||
+        polys[i].x + polys[i].వ్యాసార్థము < minX() ||
+        polys[i].y - polys[i].వ్యాసార్థము > maxY() ||
+        polys[i].x + polys[i].వ్యాసార్థము < minX()) {
       console.log("killing " + i + " " +
                                 polys[i].x + " " +
                                 polys[i].y + " " +

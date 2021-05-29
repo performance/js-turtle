@@ -725,13 +725,13 @@ function showError(e) {
 
     // clear the line for the error message
     కలమును_కింద_పెట్టు()
-    రంగు("yellow")
+    రంగు( పసుపు )
     వెడల్పు(height+4)
     ముందుకు_జరుగు(maxY() * 2)
     goto (minX(), minY()+24)
 
     // write the error message
-    రంగు("red");
+    రంగు( ఎరుపు );
     setfont (height + "pt bold Helvetica, sans-serif")
     write(e.name + ": " + e.message);
     console.log(e.name + ": " + e.message);
@@ -739,13 +739,13 @@ function showError(e) {
 
         // clear the line for the file message
         height=10 // points
-        రంగు("yellow")
+        రంగు( పసుపు )
         వెడల్పు(height+4)
         goto (minX(), minY()+5+height/2 +2)
         ముందుకు_జరుగు(maxY() * 2)
 
         // write the file message
-        రంగు("blue");
+        రంగు( నీలము );
         setfont (height + "pt bold Helvetica, sans-serif")
         goto (minX(), minY()+5)
         write(e.fileName.substr(-40) + " line: " + e.lineNumber);

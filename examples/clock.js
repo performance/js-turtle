@@ -4,10 +4,10 @@
 var size;
 
 //draw the tick marks around the edge of the clock
-function ticks(x, y, radius) {
+function ticks(x, y, వ్యాసార్థము) {
    var tickLen = 7;
-   var gap = radius - tickLen;
-   రంగు("blue");
+   var gap = వ్యాసార్థము - tickLen;
+   రంగు( నీలము );
    వెడల్పు(1);
    for (var theta = 0; theta < 360; theta = theta + 6) {
       // Thicken hour marks
@@ -27,7 +27,7 @@ function ticks(x, y, radius) {
 
 
 // draw the hour numbers on the clock face
-function numbers(x, y, radius) {
+function numbers(x, y, వ్యాసార్థము) {
    కలమును_పైకి_ఎత్తు();
    fontSize = 20/130 * size
    setFont(fontSize+"px sans-serif");
@@ -35,7 +35,7 @@ function numbers(x, y, radius) {
    for (var hour = 1; hour <= 12; hour++) {
       goto(x,y);
       కోణము(hour * 30);
-      ముందుకు_జరుగు(radius); // to center of digit
+      ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit
       కోణము(180);
       ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline
       కుడి_వైపు_తిరుగు(90);

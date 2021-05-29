@@ -9,14 +9,14 @@ function drawRadials(side) {
   }
 }
 
-function spikey ( points, revs, radius, x, y, head) {
+function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
   కలమును_పైకి_ఎత్తు()
   goto(x, y)
   setheading(head)
-  ముందుకు_జరుగు(radius)
+  ముందుకు_జరుగు(వ్యాసార్థము)
   var turnAngle = 360 * revs/points
   var angleA = ( 180 - turnAngle)/2
-  var stroke = 2 * radius * Math.cos( degToRad( angleA))
+  var stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))
   కుడి_వైపు_తిరుగు( 180 - angleA)
   కలమును_కింద_పెట్టు()
 

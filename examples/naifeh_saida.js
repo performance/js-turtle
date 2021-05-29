@@ -35,7 +35,7 @@ function demo() {
   side = 14
   side = .033 * Math.min( maxX(), maxY())
   factor = Math.sqrt(2 + Math.sqrt( 2))
-  //    side, radius, offsetAngle
+  //    side, వ్యాసార్థము, offsetAngle
   layer(      side, 0)
   side = side * factor
   layer( side, 22.5)

@@ -264,7 +264,7 @@ function caption (message) {
 
   // erase what will be in the path
   setfont("bold 16px helvitica,sans-serif")
-  రంగు("white")
+  రంగు( తెలుపు )
   వెడల్పు(22)
   ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
