@@ -68,9 +68,9 @@ function getBinaryTime() {
 
 function drawDot (digit, onColor, offColor, step) {
   if (digit == 1) {
-    color( onColor)
+    రంగు( onColor)
   } else {
-    color( offColor)
+    రంగు( offColor)
   }
   dot ()
   ముందుకు_జరుగు(step)
@@ -116,7 +116,7 @@ function displayTime() {
   spacing = Math.min(maxX(), maxY()) *1.8/6
   hSpacing = spacing
   vSpacing = spacing
-  width (spacing/10)
+  వెడల్పు(spacing/10)
   తాబేలును_దాచు()
   getBinaryTime()
   displayBinaryDots(hSpacing, vSpacing)

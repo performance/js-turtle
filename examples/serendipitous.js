@@ -5,7 +5,7 @@ function demo () {
   x1 = random(minX(),maxX())
   y1 = random(minY(),maxY())
   i = 0
-  color ("blue")
+  రంగు("blue")
   while (i < 100) {
     i++
     //write (x + " " + y)

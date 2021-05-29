@@ -39,7 +39,7 @@ function demo() {
   
   reset();
   wrap(false);
-  width(1);
+  వెడల్పు(1);
   goto(minX()-1, maxY()-1);
   
   while (turtle.pos.y > minY()) {

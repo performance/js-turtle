@@ -586,7 +586,7 @@ var codeElements = document.querySelectorAll ("#reference button");
 for (var i=0; i< codeElements.length; i++) {
     //console.log(codeElements[i].id)
     codeElements[i].onclick = function () {
-        cmd ("color(\"" + this.id +"\");");
+        cmd ("రంగు(\"" + this.id +"\");");
         commandChanged();
     }
 }
@@ -725,13 +725,13 @@ function showError(e) {
 
     // clear the line for the error message
     కలమును_కింద_పెట్టు()
-    color ("yellow")
-    width (height+4)
+    రంగు("yellow")
+    వెడల్పు(height+4)
     ముందుకు_జరుగు(maxY() * 2)
     goto (minX(), minY()+24)
 
     // write the error message
-    color("red");
+    రంగు("red");
     setfont (height + "pt bold Helvetica, sans-serif")
     write(e.name + ": " + e.message);
     console.log(e.name + ": " + e.message);
@@ -739,13 +739,13 @@ function showError(e) {
 
         // clear the line for the file message
         height=10 // points
-        color ("yellow")
-        width (height+4)
+        రంగు("yellow")
+        వెడల్పు(height+4)
         goto (minX(), minY()+5+height/2 +2)
         ముందుకు_జరుగు(maxY() * 2)
 
         // write the file message
-        color("blue");
+        రంగు("blue");
         setfont (height + "pt bold Helvetica, sans-serif")
         goto (minX(), minY()+5)
         write(e.fileName.substr(-40) + " line: " + e.lineNumber);

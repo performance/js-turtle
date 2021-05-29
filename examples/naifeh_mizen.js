@@ -28,7 +28,7 @@ function v (side, fColor) {
 
 
 function mizen( side, lColor, fColor) {
-  color(lColor)
+  రంగు(lColor)
   కుడి_వైపు_తిరుగు(120)
   for (var i=0; i<6; i++) {
     v( side, fColor)
@@ -66,13 +66,13 @@ function mizenSimple() {
 
   //center canvas more or less
   goto(-5*side, 3.5*side)
-  width (1)
+  వెడల్పు(1)
   కోణము(0)
   mizen( side, "black", "red")
 
   // do again to make lines stand out
   goto(-5*side, 3.5*side)
-  width (3)
+  వెడల్పు(3)
   కోణము(0)
   mizen( side, "white", "")
 }

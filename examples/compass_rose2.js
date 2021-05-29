@@ -80,6 +80,6 @@ function demo () {
   reset();
   size = Math.min( maxX(), maxY()) * .9
   తాబేలును_దాచు();
-  //color( random(16));
+  //రంగు( random(16));
   compassRose( 0, 0, 16, size, .2*size);
 }

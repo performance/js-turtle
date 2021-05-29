@@ -29,7 +29,7 @@ function v (side, fColor) {
 function mizen( side, lColor, fColor) {
   // assume pointing up at upper left corner
   // ends up rotated 120 CW at same point
-  color(lColor)
+  రంగు(lColor)
   కుడి_వైపు_తిరుగు(120)
   for (var i=0; i<6; i++) {
     కలమును_కింద_పెట్టు()
@@ -68,13 +68,13 @@ function mizen6(side) {
     mx = turtle.pos.x
     my = turtle.pos.y
     ma = turtle.కోణము
-    width(0)
+    వెడల్పు(0)
     mizen( side, "white", "blue")
 
     // do it again for the border lines
     goto( mx, my)
     కోణము( radToDeg( ma))
-    width(.1 * side)
+    వెడల్పు(.1 * side)
     mizen( side, "white", "")
 
     కలమును_పైకి_ఎత్తు()

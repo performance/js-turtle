@@ -14,20 +14,20 @@ function pent(side) {
   var angle5 = 31
   var side5 = 1.27 * side
   for (var i=0; i<5; i++) {
-    color("black")
+    రంగు("black")
     ముందుకు_జరుగు(side)
       ఎడమ_వైపు_తిరుగు(angle2)
 
-      color("red")
+      రంగు("red")
       కుడి_వైపు_తిరుగు(angle3)
       ముందుకు_జరుగు(side3)
       వెనుకకు_జరుగు(side3)
       ఎడమ_వైపు_తిరుగు(angle3)
 
-      color ("black")
+      రంగు("black")
       ముందుకు_జరుగు(side2)
 
-      color("blue")
+      రంగు("blue")
       కుడి_వైపు_తిరుగు(180-angle3)
       ముందుకు_జరుగు(side3)
 
@@ -52,7 +52,7 @@ function pent(side) {
       వెనుకకు_జరుగు(side3)
       ఎడమ_వైపు_తిరుగు(180-angle3)
 
-      color ("black")
+      రంగు("black")
       వెనుకకు_జరుగు(side2)
       కుడి_వైపు_తిరుగు(angle2)
 

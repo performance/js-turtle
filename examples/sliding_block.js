@@ -83,7 +83,7 @@ function init () {
 function drawBlock( h, v, x, y, n) {
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)
   // draw a block
-  color ("black")
+  రంగు("black")
   beginShape()
   goto (baseX + x * side, baseY - y * side)
   setHeading(90)
@@ -704,18 +704,18 @@ function caption (message) {
 
   // erase what will be in the path
   setfont("bold 16px helvitica,sans-serif")
-  color ("white")
-  width (22)
+  రంగు("white")
+  వెడల్పు(22)
   ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
-  color ("black")
+  రంగు("black")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   setheading( savedHeading)
-  color ( savedColor)
-  width (savedWidth)
+  రంగు( savedColor)
+  వెడల్పు(savedWidth)
 }
 
 var moveCount;

@@ -80,10 +80,10 @@ function demo() {
   goto (side, -.3 * side)
 
   background(bColor)
-  color( sColor)
-  width( 1)
+  రంగు( sColor)
+  వెడల్పు( 1)
   jeresh( side, pointAngle, true)
-  width( 3)
+  వెడల్పు( 3)
   jeresh( side, pointAngle, false)
 
   తాబేలును_దాచు()

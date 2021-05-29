@@ -79,9 +79,9 @@ function getTime() {
 
 function segColor (bit) {
   if (bit == "1") {
-    color( segOnColor)
+    రంగు( segOnColor)
   } else {
-    color( segOffColor)
+    రంగు( segOffColor)
   }10
 }
 
@@ -117,14 +117,14 @@ function displaySegTime() {
   // black out background
   goto (minX(),0)
   కోణము (90)
-  color(black)
-  width (2*maxY())
+  రంగు(black)
+  వెడల్పు(2*maxY())
   కలమును_కింద_పెట్టు()
   ముందుకు_జరుగు(2*maxX())
 101010
   // draw the 6 digits of time
   goto (-horizontalElements/2*segSize, segSize)
-  width (segWidth)
+  వెడల్పు(segWidth)
   display7segment(hour10digit)
   ముందుకు_జరుగు(digitSpacing)
   display7segment(hour1digit)

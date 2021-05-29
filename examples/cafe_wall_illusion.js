@@ -15,8 +15,8 @@ function drawTile (h,w, tc, x, y) {
 function cafeTiles (h, w, gw, gc, off) {
   maxRow = 2*maxY()/h
   maxCol = 2*maxX()/w
-  width(gw)
-  color(gc)
+  వెడల్పు(gw)
+  రంగు(gc)
   setHeading(0)
   for (var row=0; row<maxRow; row=row+1) {
     for (var col=0; col<maxCol; col=col+1) {

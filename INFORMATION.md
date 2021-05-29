@@ -64,7 +64,7 @@ The following are the initial enhancements to the forked project:
 and are executed when clicked.
 * added synonyms for commands (e.g., colour=color, fd=forward).
 * added **setx()** to **sety()** functions to change only the x or y coodinate.
-* changed **colour()** to use 16 *standard* logo colors (integer) as well as strings for
+* changed **రంగు()** to use 16 *standard* logo colors (integer) as well as strings for
 all of the Javascript color variations.
 * added buttons and samples of the 16 logo *standard* colors to the reference.
 * changed **write()** function to apply text along direction of turtle.

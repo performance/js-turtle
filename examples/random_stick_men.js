@@ -49,7 +49,7 @@ function demo () {
   number = 0.0005 *  maxX() * maxY() // uniform density no matter size
   for (i=0; i<number; i++) {
     goto (random( minX()+20, maxX()-20),random( minY()+20, maxY()-20));
-    color(random(16));
+    రంగు(random(16));
     stickMan(random (30,60));
   }
 }

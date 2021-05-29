@@ -2,7 +2,7 @@
 
 // draw the three cirles for the body
 clear()
-width(1)
+వెడల్పు(1)
 goto (0,-100)
 circle (80)
 goto (0,-100+80+60)
@@ -37,7 +37,7 @@ dot()
 // add stick for a right arm
 goto (56,60)
 కోణము (60)
-width(3)
+వెడల్పు(3)
 ముందుకు_జరుగు(40)
 ఎడమ_వైపు_తిరుగు(15)
 ముందుకు_జరుగు(25)
@@ -51,7 +51,7 @@ width(3)
 // add stick for a left arm
 goto (-56,60)
 కోణము (-60)
-width(3)
+వెడల్పు(3)
 ముందుకు_జరుగు(40)
 ఎడమ_వైపు_తిరుగు(15)
 ముందుకు_జరుగు(25)

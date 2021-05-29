@@ -25,7 +25,7 @@ function nestTri () {
   tColor.push(random (15));
   tColor.shift();
   for (var i=0; i<sides; i++) {
-    color (tColor[i]);
+    రంగు(tColor[i]);
     triangle (i*15);
   }
 }

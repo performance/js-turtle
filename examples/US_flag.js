@@ -93,30 +93,30 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   తాబేలును_దాచు()
   goto (xBase, yBase)
   కోణము (90)
-  color("black")
+  రంగు("black")
 
-  width(1)
+  వెడల్పు(1)
   rectangle (flagWidth, flagHeight)
   rectangle (fieldWidth, fieldHeight)
 
   //  draw stripes
-  color("red");
-  width(stripeWidth);
+  రంగు("red");
+  వెడల్పు(stripeWidth);
   goto (xBase+flagWidth, yBase-stripeWidth/2)
   కోణము (-90)
   stripes (flagWidth-fieldWidth, 2*stripeWidth, 4)
   stripes (flagWidth, 2*stripeWidth, 3)
 
   //draw field
-  color("blue")
+  రంగు("blue")
   goto (xBase+fieldWidth, yBase-stripeWidth/2)
   కోణము (-90)
   stripes (fieldWidth, stripeWidth, 7)
 
   //draw field of stars
   కోణము(0)
-  width (2)
-  color("white")
+  వెడల్పు(2)
+  రంగు("white")
   కలమును_కింద_పెట్టు()
 
   var row = 0

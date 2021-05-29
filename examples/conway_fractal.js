@@ -82,18 +82,18 @@ function caption (message) {
   setheading( 90)
 
   // erase what will be in the path
-  color ("white")
-  width (10)
+  రంగు("white")
+  వెడల్పు(10)
   ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
-  color ("black")
+  రంగు("black")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   setheading( savedHeading)
-  color ( savedColor)
-  width (savedWidth)
+  రంగు( savedColor)
+  వెడల్పు(savedWidth)
 }
 
 
@@ -253,11 +253,11 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
   } else {
     if (triangle == 3) {
     //if (triangle == specialTriangle) {
-      color( highlight)
+      రంగు( highlight)
       console.log("shading " + highlight)
       shadeTriangle (dir, side, stepsize)
     } else {
-      color( background)
+      రంగు( background)
       shadeTriangle (dir, side, stepsize)
     }
   }
@@ -268,7 +268,7 @@ function delayedDivide() {
   level = level + 1
   if (level <= targetLevel) {
     recursiveDivideBlocks( CCW, side, level, 0, mainColor, subColor)
-    color(dividerColor)
+    రంగు(dividerColor)
     recursiveDivide( CCW, side, level, 0)
     drawTriangle( CCW, side)
     caption( "Fractal divide, generation " + level)

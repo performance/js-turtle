@@ -34,7 +34,7 @@ function demo() {
   xB = minX()
   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
-  color("white")
+  రంగు("white")
 
   s = 50
   while( turtle.pos.y > minY()) {

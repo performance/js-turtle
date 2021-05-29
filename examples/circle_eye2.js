@@ -22,6 +22,6 @@ function demo () {
   reset();
   size = Math.min( maxX(), maxY()) * .9
   తాబేలును_దాచు();
-  color( random(16));
+  రంగు( random(16));
   circleEye( 0, 0, 32, size, .2*size);
 }

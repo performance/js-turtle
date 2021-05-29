@@ -22,19 +22,19 @@ function caption (message) {
   setheading( 90)
 
   // erase wha will be in the path
-  color ("white")
-  width (10)
+  రంగు("white")
+  వెడల్పు(10)
   ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
-  color ("black")
+  రంగు("black")
   setfont("bold 12pt Ariel,sans-serif")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   setheading( savedHeading)
-  color ( savedColor)
-  width (savedWidth)
+  రంగు( savedColor)
+  వెడల్పు(savedWidth)
 }
 
 

@@ -7,14 +7,14 @@ var size;
 function ticks(x, y, radius) {
    var tickLen = 7;
    var gap = radius - tickLen;
-   color("blue");
-   width(1);
+   రంగు("blue");
+   వెడల్పు(1);
    for (var theta = 0; theta < 360; theta = theta + 6) {
       // Thicken hour marks
       if (theta % 30 != 0) {
-         width(1/130* size);
+         వెడల్పు(1/130* size);
       } else {
-         width(3/130* size);
+         వెడల్పు(3/130* size);
       }
       కలమును_పైకి_ఎత్తు();
       goto(0,0);
@@ -31,7 +31,7 @@ function numbers(x, y, radius) {
    కలమును_పైకి_ఎత్తు();
    fontSize = 20/130 * size
    setFont(fontSize+"px sans-serif");
-   color("black");
+   రంగు("black");
    for (var hour = 1; hour <= 12; hour++) {
       goto(x,y);
       కోణము(hour * 30);
@@ -56,9 +56,9 @@ function hand (theta, w, length, col) {
    var widthDelta = w / (length / stepSize);
    goto(0, 0);
    కోణము(theta);
-   color(col);
+   రంగు(col);
    for (var step = 0; step < length; step = step + stepSize) {
-      width(w);
+      వెడల్పు(w);
       ముందుకు_జరుగు(stepSize);
       w = w - widthDelta;
    }
@@ -83,9 +83,9 @@ function clock() {
    clear();
    size = .9 *  Math.min( maxX(), maxY())
   numbers(0, 0, 110/130 * size);
-   color("lightgreen");
+   రంగు("lightgreen");
    goto (0,0);
-   width(1/130* size)
+   వెడల్పు(1/130* size)
    circle(130/130 * size );
    ticks(0, 0, 130/130 * size );
    var d = new Date();

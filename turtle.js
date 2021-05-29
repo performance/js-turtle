@@ -71,13 +71,13 @@ function Turtle () {
   this.pos = new Pos(0,0)
   this.కోణము = 0
   this.penDown = true
-  this.width = 1
+  this.వెడల్పు = 1
   this.visible = true // controls turtle visibility
   this.redraw = true //  controls redrawing turtle every move
   this.shape = false //  controls inclusion of segments from a filled shape
   this.wrap = true //    controls wraping at the edge
   this.font = "10pt normal Helvetica, sans-serif"
-  this.color = "black"
+  this.రంగు = "black"
 };
 
 // initialize the state of the turtle
@@ -96,13 +96,13 @@ function initialize() {
   turtle.pos.y = 0
   turtle.కోణము = 0
   turtle.penDown = true
-  turtle.width = 1
+  turtle.వెడల్పు = 1
   turtle.visible = true
   turtle.redraw = true
   turtle.shape = false
   turtle.wrap = true
   turtle.font = "10pt normal Helvetica, sans-serif"
-  turtle.color = "black"
+  turtle.రంగు = "black"
 /*
    turtle = { pos: {
                  x: 0,
@@ -110,19 +110,19 @@ function initialize() {
               },
               కోణము: 0, //12 o'clock
               penDown: true,
-              width: 1,
+              వెడల్పు: 1,
               visible: true, // controls turtle visibility
               redraw: true, //  controls redrawing turtle every move
               shape: false, //  controls inclusion of segments from a filled shape
               wrap: true, //    controls wraping at the edge
               font: "10pt normal Helvetica, sans-serif",
-              color: "black"
+              రంగు: "black"
             };
 */
   //turtle = Turtle();
   imageContext.font = turtle.font;
-  imageContext.lineWidth = turtle.width;
-  imageContext.strokeStyle = turtle.color;
+  imageContext.lineWidth = turtle.వెడల్పు;
+  imageContext.strokeStyle = turtle.రంగు;
   imageContext.globalAlpha = 1;
 
   svgInitialize()
@@ -156,7 +156,7 @@ var svgYHighWater = 0
 var svgYLowWater = 0
 
 function svgInitialize() {
-// width and height are problemmatic here as not all or more of the canvas may be used.
+// వెడల్పు and height are problemmatic here as not all or more of the canvas may be used.
   svgBlob = ""
   svgD = ""
   svgPath = "";
@@ -203,7 +203,7 @@ function svgInitialize() {
 function svgOpenPath( x, y) {
    console.log( "sOP:", x, y, svgD)
    if (svgPath == "") { // no path open
-     svgPath = '<path stroke="' + turtle.color
+     svgPath = '<path stroke="' + turtle.రంగు
      svgD =  ' d="M ' + round( x, svgPrecision) + ' ' + round( y, svgPrecision)
      svgLastMove = undefined
    }
@@ -213,10 +213,10 @@ function svgOpenPath( x, y) {
 
 function updateHighWater( x, y, radx, rady) {
   if (radx === undefined) {
-    radx = turtle.width
+    radx = turtle.వెడల్పు
   }
   if (rady === undefined) {
-    rady = turtle.width
+    rady = turtle.వెడల్పు
   }
   if (x + radx> svgXHighWater) {
     svgXHighWater = x + radx
@@ -260,7 +260,7 @@ function svgAppendPath( rx, ry) {
 }
 
 
-// assuming on color change, width change or shape begin or shape end, the current path is closed
+// assuming on రంగు change, వెడల్పు change or shape begin or shape end, the current path is closed
 // really should not close path if nothing has marked... can this be done in the open path?
 function svgClosePath() {
   if (svgPath !== "") { // something to close
@@ -357,9 +357,9 @@ function draw() {
  ******************************************************************************/
 // use canvas centered coordinates facing upwards
 function centerCoords (context) {
-   var width = context.canvas.width;
+   var వెడల్పు = context.canvas.width;
    var height = context.canvas.height;
-   context.translate(width/2, height/2);
+   context.translate(వెడల్పు/2, height/2);
    context.transform(1, 0, 0, -1, 0, 0);
 }
 
@@ -487,20 +487,20 @@ beginShape = beginshape;
  * fillshape -- fill shape
  *
  * arguments:
- *   styl: fill style (color, gradient, or pattern), defaulting to turtle color
+ *   styl: fill style (రంగు, gradient, or pattern), defaulting to turtle రంగు
  *
  * returns: None
  ******************************************************************************/
 function fillshape( styl) {
   if (turtle.shape) {
     if (styl == undefined) {
-       styl = turtle.color;
+       styl = turtle.రంగు;
     }
     if (typeof(styl) === "number") {
-      if (styl < 16) { // assume standard logo turtle color
+      if (styl < 16) { // assume standard logo turtle రంగు
         styl = logoColors [styl];
       } //else {
-        //color is assumed to be a 32-bit color value
+        //రంగు is assumed to be a 32-bit రంగు value
       //}
     } else if (typeof(styl) != "string") { // col is not a supported type
       styl = "black";
@@ -509,7 +509,7 @@ function fillshape( styl) {
     //imageContext.save()
     imageContext.closePath();
     imageContext.fillStyle=styl;
-    imageContext.strokeStyle=turtle.color; //stroke and fill can be different
+    imageContext.strokeStyle=turtle.రంగు; //stroke and fill can be different
     if (turtle.penDown) {
       imageContext.stroke();
       imageContext.fill();
@@ -813,16 +813,16 @@ function circle(radius, extent, CW) {
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
-  imageContext.strokeStyle=turtle.color;
-  //imageContext.fillStyle=turtle.color;
+  imageContext.strokeStyle=turtle.రంగు;
+  //imageContext.fillStyle=turtle.రంగు;
   // negate angles and CW due to context translation
   if (extent === undefined) {
     imageContext.arc (turtle.pos.x, turtle.pos.y, radius, 0, 2*Math.PI);
     svgClosePath()
     svgBlob = svgBlob + '<circle cx="' + round( turtle.pos.x, svgPrecision) + '" cy="' + round( turtle.pos.y, svgPrecision)
               + '" r="' + round( radius, svgPrecision) + '"'
-              + ' style="stroke:' + turtle.color + '; stroke-width:' + turtle.width + '; fill:none"/>\n'; 
-    updateHighWater( turtle.pos.x, turtle.pos.y,  radius + turtle.width, radius + turtle.width)
+              + ' style="stroke:' + turtle.రంగు + '; stroke-width:' + turtle.వెడల్పు + '; fill:none"/>\n'; 
+    updateHighWater( turtle.pos.x, turtle.pos.y,  radius + turtle.వెడల్పు, radius + turtle.వెడల్పు)
    
   } else if (CW) {
     imageContext.arc (turtle.pos.x, turtle.pos.y, radius, -startAngle, -(startAngle+degToRad(extent)), CW);
@@ -873,13 +873,13 @@ arc = circle;
  ******************************************************************************/
 function dot(size) {
   if (size == undefined) {
-    size = Math.max(turtle.width+4, turtle.width*2);
+    size = Math.max(turtle.వెడల్పు+4, turtle.వెడల్పు*2);
   }
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
-  imageContext.fillStyle=turtle.color;
-  imageContext.strokeStyle=turtle.color;
+  imageContext.fillStyle=turtle.రంగు;
+  imageContext.strokeStyle=turtle.రంగు;
   imageContext.arc (turtle.pos.x, turtle.pos.y, size, 0, 2*Math.PI);
   // draw it regardless of pen up or down
   imageContext.stroke();
@@ -888,7 +888,7 @@ function dot(size) {
   svgClosePath()
   svgBlob = svgBlob + '<circle cx="' + round( turtle.pos.x, svgPrecision) + '" cy="' + round( turtle.pos.y, svgPrecision)
             + '" r="' + round( size, svgPrecision) + '"'
-            + ' style="stroke:' + turtle.color + '; stroke-width:' + turtle.width + '; fill:' + turtle.color + '"/>\n';
+            + ' style="stroke:' + turtle.రంగు + '; stroke-width:' + turtle.వెడల్పు + '; fill:' + turtle.రంగు + '"/>\n';
   drawIf();
 }
 
@@ -1030,23 +1030,23 @@ seth = కోణము;
 
 
 /*******************************************************************************
- * background -- set the background color
+ * background -- set the background రంగు
  *
  * arguments:
- *   styl: fill style (color, gradient, or pattern), defaulting to turtle color
+ *   styl: fill style (రంగు, gradient, or pattern), defaulting to turtle రంగు
  *
  * returns: None
  ******************************************************************************/
 
 function background( styl) {
     if (styl == undefined) {
-       styl = turtle.color;
+       styl = turtle.రంగు;
     }
     if (typeof(styl) === "number") {
-      if (styl < 16) { // assume standard logo turtle color
+      if (styl < 16) { // assume standard logo turtle రంగు
         styl = logoColors [styl];
       } //else {
-        //color is assumed to be a 32-bit color value
+        //రంగు is assumed to be a 32-bit రంగు value
       //}
     } else if (typeof(styl) != "string") { // col is not a supported type
       styl = "black";
@@ -1074,7 +1074,7 @@ function write(msg) {
    imageContext.rotate(turtle.కోణము - Math.PI/2);
    imageContext.textAlign = "left";
    imageContext.textBaseline = "bottom";
-   imageContext.fillStyle = turtle.color;
+   imageContext.fillStyle = turtle.రంగు;
    imageContext.fillText(msg, 0, 0);
    imageContext.restore();
    drawIf();
@@ -1149,57 +1149,58 @@ pause = sleep;
 
 
 /*******************************************************************************
- * width -- set the width of the line
- *
+ * వెడల్పు -- set the వెడల్పు of the line
+ * వెడల్పు 
  * arguments:
- *   w: (int) width of the line
+ *   w: (int) వెడల్పు of the line
  *
  * returns: None
  ******************************************************************************/
-function width(w) {
-   turtle.width = w;
+function వెడల్పు(w) {
+   turtle.వెడల్పు = w;
    imageContext.lineWidth = w;
 }
 
-pensize = width;
-penwidth = width;
-penSize = width;
-penWidth = width;
+pensize = వెడల్పు;
+penwidth = వెడల్పు;
+penSize = వెడల్పు;
+penWidth = వెడల్పు;
 
 
 /*******************************************************************************
- * color -- set the color of the line and fill using turtle graphic and CSS colors
+ * రంగు -- set the రంగు of the line and fill using turtle graphic and CSS colors
  *
  * arguments:
- *   col: color in one of several formats:
+ *   col: రంగు in one of several formats:
  *     Hexadecimal colors (e.g., "#ff0000", "#f00")
  *     RGB colors (e.g., "rgb(255,0,0)")
  *     RGBA colors (e.g., "rgba(255,0,0,1)")
  *     HSL colors (e.g., "hsl(120, 100%, 50%)")
  *     HSLA colors (e.g., "hsla(120, 100%, 50%, 1)")
- *     Predefined/Cross-browser color names (e.g., "red")
- *     logo color numbers 0 to 15 as index into:*/
+ *     Predefined/Cross-browser రంగు names (e.g., "red")
+ *     logo రంగు numbers 0 to 15 as index into:*/
 logoColors = ["black", "blue", "lime", "cyan", "red", "magenta", "yellow", "white",
               "brown", "tan", "green", "aqua", "salmon", "purple", "orange", "gray"]
 /*
  * returns: None
  ******************************************************************************/
-function color (col) {
+function రంగు (col) {
   svgClosePath();
   if (typeof(col) === "number") {
-    if (col < 16) { // assume standard logo turtle color
+    if (col < 16) { // assume standard logo turtle రంగు
       col = logoColors [col];
     } //else {
-      //color is assumed to be a 32-bit color value
+      //రంగు is assumed to be a 32-bit రంగు value
     //}
   } else if (typeof(col) != "string") { // col is not a supported type
     col = "black";
   }
-  turtle.color = col;
+  turtle.రంగు = col;
   imageContext.strokeStyle = col;
 }
 
-colour = color;
+colour = రంగు;
+// color = రంగు;
 
 
 /*******************************************************************************
@@ -1394,14 +1395,14 @@ function saveTurtleState(tState) {
   tState.pos.y = turtle.pos.y
   tState.కోణము = turtle.కోణము
   tState.penDown = turtle.penDown
-  tState.width = turtle.width
+  tState.వెడల్పు = turtle.వెడల్పు
   tState.visible = turtle.visible
   tState.redraw = turtle.redraw
   tState.shape = turtle.shape
   tState.wrap = turtle.wrap
   tState.font = turtle.font
-  tState.color = turtle.color
-  console.log("sTS font: "+ tState.font + " color:" + tState.color)
+  tState.రంగు = turtle.రంగు
+  console.log("sTS font: "+ tState.font + " రంగు:" + tState.రంగు)
 }
 
 
@@ -1413,27 +1414,27 @@ function restoreTurtleState(tState) {
   turtle.pos.y = tState.pos.y
   turtle.కోణము = tState.కోణము
   turtle.penDown = tState.penDown
-  turtle.width = tState.width
+  turtle.వెడల్పు = tState.వెడల్పు
   turtle.visible = tState.visible
   turtle.redraw = tState.redraw
   turtle.shape = tState.shape
   turtle.wrap = tState.wrap
   turtle.font = tState.font
-  turtle.color = tState.color
+  turtle.రంగు = tState.రంగు
 
   imageContext.font = tState.font;
-  imageContext.lineWidth = tState.width;
-  imageContext.strokeStyle = tState.color;
-  console.log("rTS font: "+ turtle.font + " color:" + turtle.color)
-  console.log("rTS font: "+ imageContext.font + " color:" + imageContext.strokeStyle)
+  imageContext.lineWidth = tState.వెడల్పు;
+  imageContext.strokeStyle = tState.రంగు;
+  console.log("rTS font: "+ turtle.font + " రంగు:" + turtle.రంగు)
+  console.log("rTS font: "+ imageContext.font + " రంగు:" + imageContext.strokeStyle)
 }
 
 
 function logTurtle( where) {
   // t is an object defining the state of a turtle
   if (where === undefined) where = "???"
-  console.log (where + " x:" + turtle.pos.x + " y:" + turtle.pos.y + " కోణము:" + turtle.కోణము + " color:" + turtle.color)
-  console.log ("  penDown:" + turtle.penDown + " width:" + turtle.width + " visible:" + turtle.visible)
+  console.log (where + " x:" + turtle.pos.x + " y:" + turtle.pos.y + " కోణము:" + turtle.కోణము + " రంగు:" + turtle.రంగు)
+  console.log ("  penDown:" + turtle.penDown + " వెడల్పు:" + turtle.వెడల్పు + " visible:" + turtle.visible)
   console.log ("  redraw:" + turtle.redraw + " shape:" + turtle.shape + " wrap:" + turtle.wrap)
   console.log ("  font:" + turtle.font)
 }

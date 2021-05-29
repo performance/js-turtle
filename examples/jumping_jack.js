@@ -168,7 +168,7 @@ function moveBody () {
   neckLength = .5 * torsoLength;
   armLength = .4 * height;
   legLength = .5 * height;
-  width( .05*height)
+  వెడల్పు( .05*height)
 
   drawBody(45 + n * (175-45)/4,
     45 - n * (45-5)/4);

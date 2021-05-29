@@ -773,7 +773,7 @@ function demo () {
   reset()
   var i = 0
   while ( i &lt; 12) {
-    color (i)
+    రంగు(i)
     square(i * 10)
     turn (30)
     i = i + 1
@@ -813,7 +813,7 @@ function demo () {
   reset()
   i = 0
   while ( i &lt; 12) {
-    color (i)
+    రంగు(i)
     square(i * 10)
     turn (30)
     i = i + 1
@@ -901,7 +901,7 @@ as the location of the variable. Inside a function: it is local to that function
 outside the functions: it is global to all.
 </p>
 <p>
-This example also introduced the <code>color()</code> function. It works
+This example also introduced the <code>రంగు()</code> function. It works
 with simple numbered colors like a numbered box of crayons. It is limited to
 a number between 0 and 15. This works great in this case, except for white,
 which is number 7, doesn't show up well on a white background.
@@ -960,9 +960,9 @@ an integer between the two numbers.
 </p>
     <img src="images/random_squares.png" alt="">
 <p>
-We used the <code>color()</code> function in the last exercise.  It works on
+We used the <code>రంగు()</code> function in the last exercise.  It works on
 a number between 0 and 15, so <code>random( 15)</code> will work for a random
-color (as long has you are happy with crayon colors).
+రంగు(as long has you are happy with crayon colors).
 </p>
 
   <img src="./images/coordinates.png">
@@ -1004,7 +1004,7 @@ function demo(){
   var i
   reset()
   for (i=0; i&lt;20; i= i + 1) {
-    color( random(15))
+    రంగు( random(15))
     goto (random( minX(), maxX()), random(minY(), maxY()))
     square( random( 15,150))
   }
@@ -1041,7 +1041,7 @@ Everything else can be put into a <code>randomSquare()</code> function.
 }
 
 function randomSquare(){
-  color( random(15))
+  రంగు( random(15))
   goto (random( minX(), maxX()), random(minY(), maxY()))
   square( random( 15,150))
 }
@@ -1079,7 +1079,7 @@ mix.
 }
 
 function randomSquare(){
-  color( random(15))
+  రంగు( random(15))
   goto (random( minX(), maxX()), random(minY(), maxY()))
   కుడి_వైపు_తిరుగు(random( 5, 30))
   square( random( 15,150))
@@ -1098,7 +1098,7 @@ function demo(){
 <p>
 The line widths of squares can also be varied by throwing in <code>width</code>
 function. So in keeping with the randomness theme, why not make the lines a
-random width with <code>width (random(</code>something<code>))</code> into the mix.
+random width with <code>వెడల్పు(random(</code>something<code>))</code> into the mix.
 You may not want lines that are too thin (zero?) or too wide, so limit the range
 of the widths. This code looks something like the following.
 </p>
@@ -1112,10 +1112,10 @@ of the widths. This code looks something like the following.
 }
 
 function randomSquare(){
-  color( random(15))
+  రంగు( random(15))
   goto (random( minX(), maxX()), random(minY(), maxY()))
   కుడి_వైపు_తిరుగు(random( 5, 30))
-  width( random( 1, 6))
+  వెడల్పు( random( 1, 6))
   square( random( 15,150))
 }
 
@@ -1349,16 +1349,16 @@ next coding adventure.
 </li>
 <li>
     Play with random colors.
-    Hint: <code>color (random(15))</code> or even more colors if
+    Hint: <code>రంగు(random(15))</code> or even more colors if
     you use individual red, green and blue color codes like
-    <code>color ("rgb(" + </code>
+    <code>రంగు("rgb(" + </code>
     <code>random(255) + "," + </code>
     <code>random(255) + "," + </code>
     <code>random(255) + ")" )</code>.
 </li>
 <li>
     Play with color around a color wheel to change colors more subtly.
-    Hint: <code>color(&quot;hsl(&quot; + i/n*360 + &quot;, 100%, 50%&quot;)</code>
+    Hint: <code>రంగు(&quot;hsl(&quot; + i/n*360 + &quot;, 100%, 50%&quot;)</code>
 </li>
 <li>
     Investigate other fractals and draw them. Many can be found on Wikipedia.
