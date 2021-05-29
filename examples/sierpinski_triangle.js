@@ -3,29 +3,29 @@
 function sierpinski (order, side) {
     if (order == 0) {
         beginShape()
-        forward (side)
-        left (120)
-        forward (side)
-        left (120)
-        forward (side)
-        left (120)
+        ముందుకు_జరుగు(side)
+        ఎడమ_వైపు_తిరుగు(120)
+        ముందుకు_జరుగు(side)
+        ఎడమ_వైపు_తిరుగు(120)
+        ముందుకు_జరుగు(side)
+        ఎడమ_వైపు_తిరుగు(120)
         fillShape("red")
     } else {
-        penup()
-        forward (side/2)
-        pendown()
+        కలమును_పైకి_ఎత్తు()
+        ముందుకు_జరుగు(side/2)
+        కలమును_కింద_పెట్టు()
         sierpinski( order-1, side/2) // bottom right
-        penup()
-        left (120)
-        forward (side/2)
-        right(120)
-        pendown()
+        కలమును_పైకి_ఎత్తు()
+        ఎడమ_వైపు_తిరుగు(120)
+        ముందుకు_జరుగు(side/2)
+        కుడి_వైపు_తిరుగు(120)
+        కలమును_కింద_పెట్టు()
         sierpinski( order-1, side/2) // top center
-        penup()
-        right (120)
-        forward (side/2)
-        left (120)
-        pendown()
+        కలమును_పైకి_ఎత్తు()
+        కుడి_వైపు_తిరుగు(120)
+        ముందుకు_జరుగు(side/2)
+        ఎడమ_వైపు_తిరుగు(120)
+        కలమును_కింద_పెట్టు()
         sierpinski( order-1, side/2) // bottom left
     }
 }
@@ -42,12 +42,12 @@ function delayed() {
 
 function sier (order) {
     reset()
-    hideturtle()
+    తాబేలును_దాచు()
     side = 2* Math.min(maxX(),maxY()) -20
-    penup()
+    కలమును_పైకి_ఎత్తు()
     goto(-side/2, -side/2+20)
-    right(90)
-    pendown()
+    కుడి_వైపు_తిరుగు(90)
+    కలమును_కింద_పెట్టు()
     sierpinski( order, side)
 
     goto (0+10- side/2,minY()+10)

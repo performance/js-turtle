@@ -1,14 +1,14 @@
 // Star -- draw a simple star
 
 function star (side) {
-  penup()
-  forward(.54*side)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(.54*side)
   turn (180-18)
-  pendown()
+  కలమును_కింద_పెట్టు()
   var i=0
   while (i<5){
-    forward(side)
-    right(180-36)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(180-36)
     i = i + 1
   } 
   turn (180+18)
@@ -21,5 +21,5 @@ function demo () {
   beginShape()
   star ( side)
   fillShape("gold")
-  hideTurtle()
+  తాబేలును_దాచు()
 }

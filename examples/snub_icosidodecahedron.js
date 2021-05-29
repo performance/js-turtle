@@ -12,40 +12,40 @@ Have fun.
 
 function leftTriangle(side) {
   for (var i=0; i<3; i++) {
-    forward (side)
-    left(120)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(120)
   }
 }
 
 function leftTab( side) {
   var x = turtle.pos.x
   var y = turtle.pos.y
-  left( 180 - 45)
-  forward( side * .2)
-  left( 45)
-  forward( side * .72)
-  left( 45)
-  forward( side * .2)
-  left( 180 - 45)
-  forward( side)
+  ఎడమ_వైపు_తిరుగు( 180 - 45)
+  ముందుకు_జరుగు( side * .2)
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side * .72)
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side * .2)
+  ఎడమ_వైపు_తిరుగు( 180 - 45)
+  ముందుకు_జరుగు( side)
   goto( x, y)
 }
 
 
 function rightTriangle(side, tabs) {
   for (var i=0; i<3; i++) {
-    forward (side)
+    ముందుకు_జరుగు(side)
     if (tabs.includes (""+i)) {
       leftTab(side)
     }
-    right(120)
+    కుడి_వైపు_తిరుగు(120)
   }
 }
 
 function leftPentagon(side) {
   for (var i=0; i<5; i++) {
-    forward (side)
-    left(72)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(72)
     if (i  == 0) {
       rightTriangle(side, "1")
     }
@@ -54,29 +54,29 @@ function leftPentagon(side) {
     }
     if (i == 3) {
       rightTriangle(side, "1")
-      right(60)
+      కుడి_వైపు_తిరుగు(60)
       //beginShape()
       rightTriangle(side, "1,2")
       //fillShape("red")
-      left(60)
+      ఎడమ_వైపు_తిరుగు(60)
     }
   }
 }
 
 function rightPentagon(side) {
   for (var i=0; i<5; i++) {
-    left(120)
-    forward(side)
-    right(120)
+    ఎడమ_వైపు_తిరుగు(120)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(120)
     leftPentagon(side) // outer pentagon
-    left(120)
-    backward (side)
-    right(120)
-    forward (side)
-    left(120)
+    ఎడమ_వైపు_తిరుగు(120)
+    వెనుకకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(120)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(120)
     rightTriangle(side, "")
-    right(120)
-    right(72)
+    కుడి_వైపు_తిరుగు(120)
+    కుడి_వైపు_తిరుగు(72)
     leftTriangle(side)
   }
 }
@@ -87,5 +87,5 @@ function demo() {
   side = .25 * Math.min( maxX(), maxY())
   goto (-.666 * side, - .333 * side)
   rightPentagon(side) // inner pentagon
-  hideturtle()
+  తాబేలును_దాచు()
 }

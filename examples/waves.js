@@ -4,8 +4,8 @@
 function drawRadials(side) {
 	for (var i=0; i<16; i++) {
 		goto(0,0)
-		angle(i/16 * 360)
-		forward( size)
+		కోణము(i/16 * 360)
+		ముందుకు_జరుగు( size)
 	}
 }
 
@@ -20,7 +20,7 @@ distances are known. This math is a bit tough.
 function demo() {
 	reset()
 	wrap(false)
-	hideTurtle()
+	తాబేలును_దాచు()
 	size=200
 	step = 4
 	n = 2* size/step

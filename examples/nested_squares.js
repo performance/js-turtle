@@ -3,8 +3,8 @@
 //draw a square
 function square(side) {
    repeat(4, function () {
-      forward(side);
-      right(90);
+      ముందుకు_జరుగు(side);
+      కుడి_వైపు_తిరుగు(90);
    });
 }
 
@@ -13,16 +13,16 @@ function square(side) {
 function nestedSquares(count) {
   clear();
   goto(0,0);
-  hideturtle();
+  తాబేలును_దాచు();
   for (s=1; s<count*4; s=s+4) {
-    penup();
+    కలమును_పైకి_ఎత్తు();
     // move down and back 2 spaces
-    left(90);
-    forward(2);
-    left(90);
-    forward(2);
-    left(180);
-    pendown();
+    ఎడమ_వైపు_తిరుగు(90);
+    ముందుకు_జరుగు(2);
+    ఎడమ_వైపు_తిరుగు(90);
+    ముందుకు_జరుగు(2);
+    ఎడమ_వైపు_తిరుగు(180);
+    కలమును_కింద_పెట్టు();
     color (random(16));
     square (s);
   }

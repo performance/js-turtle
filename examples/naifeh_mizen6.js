@@ -7,19 +7,19 @@ function v (side, fColor) {
   if (fColor != "") {
     beginShape()
   }
-  left( 30)
-  forward( 3*side)
-  right( 120)
-  forward( side)
-  right(60)
-  forward(side)
-  left( 120)
-  forward( side)
-  right(60)
-  forward( side)
-  right( 120)
-  forward( 3*side)
-  right(150)
+  ఎడమ_వైపు_తిరుగు( 30)
+  ముందుకు_జరుగు( 3*side)
+  కుడి_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(side)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( 3*side)
+  కుడి_వైపు_తిరుగు(150)
   if (fColor != "") {
     fillShape(fColor)
   }
@@ -30,62 +30,62 @@ function mizen( side, lColor, fColor) {
   // assume pointing up at upper left corner
   // ends up rotated 120 CW at same point
   color(lColor)
-  right(120)
+  కుడి_వైపు_తిరుగు(120)
   for (var i=0; i<6; i++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     v( side, fColor)
-    penup()
-    right(30)
-    forward( side)
-    left( 60)
-    forward( 2*side)
-    left(30)
-    pendown()
-    v( side, fColor)
-
-    penup()
-    right(30)
-    forward( 2*side)
-    right( 150)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 60)
+    ముందుకు_జరుగు( 2*side)
+    ఎడమ_వైపు_తిరుగు(30)
+    కలమును_కింద_పెట్టు()
     v( side, fColor)
 
-    penup()
-    right(30)
-    forward( side)
-    right(120)
-    forward( 4*side)
-    right(150)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు( 2*side)
+    కుడి_వైపు_తిరుగు( 150)
+    కలమును_కింద_పెట్టు()
+    v( side, fColor)
+
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు(120)
+    ముందుకు_జరుగు( 4*side)
+    కుడి_వైపు_తిరుగు(150)
+    కలమును_కింద_పెట్టు()
   }
 }
 
 
 
 function mizen6(side) {
-  penup()
+  కలమును_పైకి_ఎత్తు()
   for (var j=0; j<6; j++) {
     mx = turtle.pos.x
     my = turtle.pos.y
-    ma = turtle.angle
+    ma = turtle.కోణము
     width(0)
     mizen( side, "white", "blue")
 
     // do it again for the border lines
     goto( mx, my)
-    angle( radToDeg( ma))
+    కోణము( radToDeg( ma))
     width(.1 * side)
     mizen( side, "white", "")
 
-    penup()
-    left(30)
-    forward (13 * side)
-    left(120)
-    forward( 3*side)
-    right(90)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ఎడమ_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు(13 * side)
+    ఎడమ_వైపు_తిరుగు(120)
+    ముందుకు_జరుగు( 3*side)
+    కుడి_వైపు_తిరుగు(90)
+    కలమును_కింద_పెట్టు()
   }
-  hideturtle()
+  తాబేలును_దాచు()
 }
 
 

@@ -84,31 +84,31 @@ var vHumber; // number of tiles vertically
 function drawTriangle (fill) {
   // draw triangle in place
   beginShape()
-  forward( side)
-  right( 135)
-  forward ( side/Math.sqrt(2))
-  right( 90)
-  forward( side/Math.sqrt(2))
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 135)
+  ముందుకు_జరుగు( side/Math.sqrt(2))
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side/Math.sqrt(2))
   fillShape( fill)
-  right( 135)
+  కుడి_వైపు_తిరుగు( 135)
 }
 
 
 function drawTile (x, y, tile) {
   goto(x,y)
-  angle(90)
+  కోణము(90)
   drawTriangle( COLORS[ TILES[tile][N]])
-  forward( side)
-  right( 90)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 90)
   drawTriangle( COLORS[ TILES[tile][E]])
-  forward( side)
-  right( 90)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 90)
   drawTriangle( COLORS[ TILES[tile][S]])
-  forward( side)
-  right( 90)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 90)
   drawTriangle( COLORS[ TILES[tile][W]])
-  forward( side)
-  right( 90)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 90)
 }
 
 
@@ -255,16 +255,16 @@ class Tile {
     color( "white")
     goto( minX()+margin + this.tx * side * 1,
           maxY()-margin - this.ty * side * 1)
-    angle(90)
+    కోణము(90)
     beginShape()
-    forward( side)
-    right( 90)
-    forward( side)
-    right( 90)
-    forward( side)
-    right( 90)
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
     fillShape("lightblue")
     color("black")
   }
@@ -272,7 +272,7 @@ class Tile {
 
 
 function delayedBuild () {
-  hideTurtle()
+  తాబేలును_దాచు()
   if (currentTile.findPossibles()) { // currentTile may change here
     currentTile.plot()
     if( (currentTile.tx != hNumber-1) ||
@@ -288,7 +288,7 @@ function delayedBuild () {
 
 function demo () {
   reset()
-  //hideTurtle()
+  //తాబేలును_దాచు()
   tiles = []
   // build a logical array of tiles
   hNumber = Math.floor((maxX()*2 - margin * 2) / side)

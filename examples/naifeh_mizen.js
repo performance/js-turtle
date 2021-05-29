@@ -8,19 +8,19 @@ function v (side, fColor) {
   if (fColor != "") {
     beginShape()
   }
-  left( 30)
-  forward( 3*side)
-  right( 120)
-  forward( side)
-  right(60)
-  forward(side)
-  left( 120)
-  forward( side)
-  right(60)
-  forward( side)
-  right( 120)
-  forward( 3*side)
-  right(150)
+  ఎడమ_వైపు_తిరుగు( 30)
+  ముందుకు_జరుగు( 3*side)
+  కుడి_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(side)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( 3*side)
+  కుడి_వైపు_తిరుగు(150)
   if (fColor != "") {
     fillShape(fColor)
   }
@@ -29,32 +29,32 @@ function v (side, fColor) {
 
 function mizen( side, lColor, fColor) {
   color(lColor)
-  right(120)
+  కుడి_వైపు_తిరుగు(120)
   for (var i=0; i<6; i++) {
     v( side, fColor)
-    penup()
-    right(30)
-    forward( side)
-    left( 60)
-    forward( 2*side)
-    left(30)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 60)
+    ముందుకు_జరుగు( 2*side)
+    ఎడమ_వైపు_తిరుగు(30)
+    కలమును_కింద_పెట్టు()
     v( side, fColor)
 
-    penup()
-    right(30)
-    forward( 2*side)
-    right( 150)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు( 2*side)
+    కుడి_వైపు_తిరుగు( 150)
+    కలమును_కింద_పెట్టు()
     v( side, fColor)
 
-    penup()
-    right(30)
-    forward( side)
-    right(120)
-    forward( 4*side)
-    right(150)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(30)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు(120)
+    ముందుకు_జరుగు( 4*side)
+    కుడి_వైపు_తిరుగు(150)
+    కలమును_కింద_పెట్టు()
   }
 }
 
@@ -67,13 +67,13 @@ function mizenSimple() {
   //center canvas more or less
   goto(-5*side, 3.5*side)
   width (1)
-  angle(0)
+  కోణము(0)
   mizen( side, "black", "red")
 
   // do again to make lines stand out
   goto(-5*side, 3.5*side)
   width (3)
-  angle(0)
+  కోణము(0)
   mizen( side, "white", "")
 }
 
@@ -83,5 +83,5 @@ function demo() {
   side = 40 // 1/2 basic face of hexagon, width...
   side = .15 * Math.min( maxX(), maxY())
   mizenSimple()
-  hideturtle()
+  తాబేలును_దాచు()
 }

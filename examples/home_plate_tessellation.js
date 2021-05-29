@@ -9,32 +9,32 @@ colors = ["red", "white", "blue", "yellow", "green"]
 
 function pentUp( side, fColor) {
   beginShape()
-  forward( side)
-  left( 90)
-  forward( side/2)
-  left( 45)
-  forward( side * .5 * Math.sqrt(2))
-  left( 90)
-  forward( side * .5 * Math.sqrt(2))
-  left( 45)
-  forward( side/2)
-  left(90)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side/2)
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side/2)
+  ఎడమ_వైపు_తిరుగు(90)
   fillShape( fColor)
 }
 
 
 function pentDown( side, fColor) {
   beginShape()
-  forward( side)
-  right( 90)
-  forward( side/2)
-  right( 45)
-  forward( side * .5 * Math.sqrt(2))
-  right( 90)
-  forward( side * .5 * Math.sqrt(2))
-  right( 45)
-  forward( side/2)
-  right(90)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side/2)
+  కుడి_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))
+  కుడి_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side/2)
+  కుడి_వైపు_తిరుగు(90)
   fillShape( fColor)
 }
 
@@ -53,22 +53,22 @@ function demo() {
   rowOffset = s/3 // offset between rows
   wrap(false)
   goto (minX(), maxY())
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
 
   s = 50
   while (turtle.pos.y > minY()) {
   while (turtle.pos.x < maxX()) {
     pentDown(s, nextColor())
-    forward(s)
+    ముందుకు_జరుగు(s)
   }
-  right(90)
-  forward( 3/2*s)
-  right(90)
-  backward(s/2)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు( 3/2*s)
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(s/2)
   while (turtle.pos.x > minX()) {
     pentDown(s, nextColor())
-    forward(s)
+    ముందుకు_జరుగు(s)
   }
-  left(180)
+  ఎడమ_వైపు_తిరుగు(180)
   }
 }

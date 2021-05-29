@@ -53,19 +53,19 @@ var CW = true
 
 function dturn( dir, degrees) { // allows turning based on triangle type
   if (dir) {
-    right( degrees)
+    కుడి_వైపు_తిరుగు( degrees)
   } else {
-    left ( degrees)
+    ఎడమ_వైపు_తిరుగు( degrees)
   }
 }
 
 
 function drawTriangle (dir, side) {
-  forward (2*side)
+  ముందుకు_జరుగు(2*side)
   dturn(dir, 180-anglea)
-  forward (root5*side)
+  ముందుకు_జరుగు(root5*side)
   dturn (dir, 180-angleb)
-  forward (side)
+  ముందుకు_జరుగు(side)
   dturn (dir, 90)
 }
 
@@ -74,7 +74,7 @@ function caption (message) {
   // save your current position, heading, etc.
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = turtle.color
   var savedWidth = turtle.width
 
@@ -84,7 +84,7 @@ function caption (message) {
   // erase wha will be in the path
   color ("white")
   width (10)
-  forward (maxY() * 2 - 12)
+  ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
   color ("black")
   write( message)
@@ -105,21 +105,21 @@ function shadeTriangle( dir, side, stepsize) {
   var steps = Math.floor( side/stepsize)
 
   for (var i=0; i< steps; i++) {
-     forward( 2*side * (steps-i)/steps)
-     backward( 2*side * (steps-i)/steps)
-     penup()
+     ముందుకు_జరుగు( 2*side * (steps-i)/steps)
+     వెనుకకు_జరుగు( 2*side * (steps-i)/steps)
+     కలమును_పైకి_ఎత్తు()
      dturn( dir, 90)
-     forward( stepsize)
+     ముందుకు_జరుగు( stepsize)
      dturn( !dir, 90)
-     pendown()
+     కలమును_కింద_పెట్టు()
   }
   //return to start
-  penup()
+  కలమును_పైకి_ఎత్తు()
   dturn( !dir, 90)
-  forward( side)
+  ముందుకు_జరుగు( side)
   dturn( dir, 90)
   //goto(x,y) // cancel cumulative error
-  pendown()
+  కలమును_కింద_పెట్టు()
 }
 
 
@@ -132,44 +132,44 @@ function recursiveDivide( dir, side, level, triangle) {
     
     //draw the first line to point A
     dturn( dir, angleb)
-    pendown()
-    forward (2*side)
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(2*side)
 
     //sub triangle 1
-    right (180)
+    కుడి_వైపు_తిరుగు(180)
     recursiveDivide( !dir, side, level-1, 1)
-    right (180)
+    కుడి_వైపు_తిరుగు(180)
 
     //draw the second line to point B
     dturn( !dir, 180-angleb)
-    pendown()
-    forward (root5*side)
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(root5*side)
     
     //draw third line to point C
     dturn( dir, 180-angleb)
-    forward(side)
-    penup()
+    ముందుకు_జరుగు(side)
+    కలమును_పైకి_ఎత్తు()
 
 i    //sub triangle 4
     dturn( dir, 90)
     recursiveDivide( dir, side, level-1, 4)
 
     //sub triangle 5
-    right( 180)
+    కుడి_వైపు_తిరుగు( 180)
     recursiveDivide( !dir, side, level-1, 5)
     dturn( dir, 90)
     
     //retreat to point B
-    backward(side)
+    వెనుకకు_జరుగు(side)
     dturn( dir, 90)
     
     //draw fourth line to point D
-    pendown()
-    forward( 2*side)
-    penup()
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు( 2*side)
+    కలమును_పైకి_ఎత్తు()
 
     //sub triangle 2
-    right( 180)
+    కుడి_వైపు_తిరుగు( 180)
     recursiveDivide( !dir, side, level-1, 2)
 
     //sub triangle 3
@@ -177,9 +177,9 @@ i    //sub triangle 4
     
     //retreat to origin
     dturn( !dir, 90)
-    penup()
-    forward( side)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    కలమును_కింద_పెట్టు()
     dturn( dir, 180-angleb)
     //goto (x,y) //cancel cumulative error
 //  } else {
@@ -192,11 +192,11 @@ i    //sub triangle 4
 
 
 function moveToExpandOrigin (side) {
-  penup()
-  right( 90)
-  forward( side)
-  left( 180 - angleb)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 180 - angleb)
+  కలమును_కింద_పెట్టు()
 }
 
 
@@ -204,18 +204,18 @@ function startDelayedDivide() {
   // move to the origin of the big triangle
   reset()
   color(mainColor)
-  penup()
+  కలమును_పైకి_ఎత్తు()
 
   side = targetSide
-  backward (side/2)
-  right(90)
-  backward (side)
-  pendown()
+  వెనుకకు_జరుగు(side/2)
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side)
+  కలమును_కింద_పెట్టు()
 
   iterations = 4
   level = 0
 
-  pendown()
+  కలమును_కింద_పెట్టు()
   color("black")
   delayedDivide()
 }
@@ -239,12 +239,12 @@ function startDelayedExpansion() {
   reset ()
   wrap( false)
   color(mainColor)
-  penup()
+  కలమును_పైకి_ఎత్తు()
 
   var tempSide = targetSide
-  backward (side/2)
-  right(90)
-  backward (side)
+  వెనుకకు_జరుగు(side/2)
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side)
 
   iterations = 4
   depth = 0
@@ -259,18 +259,18 @@ function startDelayedExpansion() {
     tempSide = tempSide * root5
   }
   for (var i=0; i<iterations; i++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     drawTriangle( dir, tempSide)
-    penup()
+    కలమును_పైకి_ఎత్తు()
     dturn( dir, angleb)
-    forward( tempSide/root5)
+    ముందుకు_జరుగు( tempSide/root5)
     dturn( !dir, 90)
     tempSide = tempSide / root5
     drawTriangle( tempSide) // really just for reference
     console.log(i)
   }
 
-  pendown()
+  కలమును_కింద_పెట్టు()
   color ("blue")
   shadeTriangle( CCW, tempSide, stepsize)
   color("black")
@@ -308,8 +308,8 @@ iterations = 4
 iterations = 2
 level = 1
 depth = 0
-CCW = false // triangle is to the left side of the right angle ( height, hypotenuse, base)
-CW = true // triangle is to the right side of the right angle( height, hypotenuse, base)
+CCW = false // triangle is to the left side of the right కోణము ( height, hypotenuse, base)
+CW = true // triangle is to the right side of the right కోణము( height, hypotenuse, base)
 mainColor = "tan"
 subColor = "wheat"
 specialTriangle = 0
@@ -324,15 +324,15 @@ basically:
   continue with a delayed expansion
 */
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   side = targetSide
   wrap(false)
   color(mainColor)
-  penup()
-  backward (side/2)
-  right(90)
-  backward (side)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  వెనుకకు_జరుగు(side/2)
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side)
+  కలమును_కింద_పెట్టు()
 
   startDelayedExpansion()
 }

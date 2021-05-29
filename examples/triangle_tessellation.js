@@ -5,8 +5,8 @@ colors = ["red", "white", "blue", "yellow", "green"]
 function triUp( side, fColor) {
   beginShape()
   for (var i=0; i<3; i++) {
-    forward( side)
-    left( 120)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 120)
   }
   fillShape( fColor)
 }
@@ -14,8 +14,8 @@ function triUp( side, fColor) {
 function triDown( side, fColor) {
   beginShape()
   for (var i=0; i<3; i++) {
-    forward( side)
-    right( 120)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 120)
   }
   fillShape( fColor)
 }
@@ -33,22 +33,22 @@ function demo() {
   rowOffset = s/3 // offset between rows
   wrap(false)
   goto (minX(), maxY())
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
 
   s = 50
   while (turtle.pos.y > minY()) {
   while (turtle.pos.x < maxX()) {
     triDown(s, nextColor())
-    forward(s)
+    ముందుకు_జరుగు(s)
   }
-  right(120)
-  forward( s)
-  right(60)
+  కుడి_వైపు_తిరుగు(120)
+  ముందుకు_జరుగు( s)
+  కుడి_వైపు_తిరుగు(60)
   while (turtle.pos.x > minX()) {
     triDown(s, nextColor())
-    forward(s)
+    ముందుకు_జరుగు(s)
   }
-  left(180)
-  forward(rowOffset)
+  ఎడమ_వైపు_తిరుగు(180)
+  ముందుకు_జరుగు(rowOffset)
   }
 }

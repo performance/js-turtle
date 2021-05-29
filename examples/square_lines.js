@@ -8,34 +8,34 @@ function demo() {
   offset = true
   for (var i=minY(); i<maxY(); i = i + side) {
     goto(minX(),i)
-    angle(90)
+    కోణము(90)
     if (offset) {
-      penup()
-      forward( side)
-      pendown()
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు( side)
+      కలమును_కింద_పెట్టు()
     }
     offset = !offset
     for (var j=minX(); j<maxX(); j = j + 3*side) {
-      forward( side2)
-      penup()
-      forward( side)
-      pendown()
+      ముందుకు_జరుగు( side2)
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు( side)
+      కలమును_కింద_పెట్టు()
     }
   }
 
   offset = true
   for (var i=minX(); i<maxX(); i = i + side) {
     goto(i, minY())
-    angle(0)
+    కోణము(0)
     if (offset) {
-      forward( side)
+      ముందుకు_జరుగు( side)
     }
     offset = !offset
     for (var j=maxY(); j>minY(); j = j - 3*side) {
-      penup()
-      forward( side)
-      pendown()
-      forward( side2)
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు( side)
+      కలమును_కింద_పెట్టు()
+      ముందుకు_జరుగు( side2)
     }
   }
 }

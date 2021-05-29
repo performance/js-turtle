@@ -9,46 +9,46 @@ colors = ["red", "white", "blue", "yellow", "green"]
 function shapeUp (side, fillColor) {
   // assume pointing in direction of base
   beginShape()
-  forward(3* side)
-  left(120)
-  forward(2*side)
-  left( 120)
-  forward(side)
-  right( 120)
-  forward( side)
-  left( 120)
-  forward( 2*side)
-  left(120)
+  ముందుకు_జరుగు(3* side)
+  ఎడమ_వైపు_తిరుగు(120)
+  ముందుకు_జరుగు(2*side)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు(side)
+  కుడి_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( 2*side)
+  ఎడమ_వైపు_తిరుగు(120)
   fillShape( fillColor)
 }
 
 function mountainUnit(side){
-  pendown()
+  కలమును_కింద_పెట్టు()
   shapeUp(side, "darkgreen")//1,1
-  penup()
-  left(60)
-  forward(side)
-  right(60)
-  forward(5*side)
-  right(180)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  ఎడమ_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(side)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(5*side)
+  కుడి_వైపు_తిరుగు(180)
+  కలమును_కింద_పెట్టు()
   shapeUp(side, "skyblue")//1,0
-  penup()
+  కలమును_పైకి_ఎత్తు()
 
-  forward(3*side)
-  left(180)
-  pendown()
+  ముందుకు_జరుగు(3*side)
+  ఎడమ_వైపు_తిరుగు(180)
+  కలమును_కింద_పెట్టు()
   shapeUp(side, "green") //0,0
 
-  penup()
-  left(60)
-  forward(2*side)
-  left(120)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  ఎడమ_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(2*side)
+  ఎడమ_వైపు_తిరుగు(120)
+  కలమును_కింద_పెట్టు()
   shapeUp(side, "lightblue")//0,1
-  forward( 3*side)
-  left( 180)
-  penup()
+  ముందుకు_జరుగు( 3*side)
+  ఎడమ_వైపు_తిరుగు( 180)
+  కలమును_పైకి_ఎత్తు()
 
 }
 
@@ -70,7 +70,7 @@ function demo() {
   side = 20
   rowx = minX() - side // - 5.5 * side
   rowy = minY()// +2*side
-  right(90)
+  కుడి_వైపు_తిరుగు(90)
   mx = rowx
   my = rowy
 

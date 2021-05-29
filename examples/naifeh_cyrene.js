@@ -16,84 +16,84 @@ function bowties (count, back){
   //assume on left edge pointing up, moving to right
   // routine has invariance
   // back = 0 big end first, =1 small end first
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
   for (var i=0; i<count; i++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     if (i % 2 == back) {
       downKite()
     } else {
       upKite()
     }
-    penup()
-    forward( hypoteneuse)
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( hypoteneuse)
   }
-  left(180)
-  penup()
-  forward( count * hypoteneuse)
-  pendown()
-  right(90)
+  ఎడమ_వైపు_తిరుగు(180)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు( count * hypoteneuse)
+  కలమును_కింద_పెట్టు()
+  కుడి_వైపు_తిరుగు(90)
 }
 
 
 function upKite() {
   //assume direction is in the axis of the kite
   beginShape()
-  right( shortAngle)
-  forward( longSide)
-  left( 90)
-  forward( shortSide)
-  left( 180 - 2 * longAngle)
-  forward( shortSide)
-  left( 90)
-  forward( longSide)
-  right(180+ shortAngle)
+  కుడి_వైపు_తిరుగు( shortAngle)
+  ముందుకు_జరుగు( longSide)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( shortSide)
+  ఎడమ_వైపు_తిరుగు( 180 - 2 * longAngle)
+  ముందుకు_జరుగు( shortSide)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( longSide)
+  కుడి_వైపు_తిరుగు(180+ shortAngle)
   fillShape("lightblue")
 }
 
 function downKite() {
   //assume direction is in the axis of the kite
   beginShape()
-  right( longAngle)
-  forward( shortSide)
-  left( 90)
-  forward( longSide)
-  left(180 - 2 * shortAngle)
-  forward( longSide)
-  left( 90)
-  forward( shortSide)
-  right( 180 + longAngle)
+  కుడి_వైపు_తిరుగు( longAngle)
+  ముందుకు_జరుగు( shortSide)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( longSide)
+  ఎడమ_వైపు_తిరుగు(180 - 2 * shortAngle)
+  ముందుకు_జరుగు( longSide)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( shortSide)
+  కుడి_వైపు_తిరుగు( 180 + longAngle)
   fillShape("lightblue")
 }
 
 function kites( count, back) {
   //assume pointing up, perpendicular to flow
   // routine has invariance
-  left(180)
+  ఎడమ_వైపు_తిరుగు(180)
   for( var i=0; i<count; i++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     if (i % 2 == back) {
       downKite()
     } else {
       upKite()
     }
 
-    penup()
-    left(90)
-    forward( hypoteneuse)
-    right(90)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు( hypoteneuse)
+    కుడి_వైపు_తిరుగు(90)
+    కలమును_కింద_పెట్టు()
   }
-  penup()
-  right(90)
-  forward( count * hypoteneuse)
-  right(90)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు( count * hypoteneuse)
+  కుడి_వైపు_తిరుగు(90)
+  కలమును_కింద_పెట్టు()
 }
 
 
 function demo() {
   reset()
-  hideturtle()
+  తాబేలును_దాచు()
   side = 2.5 * Math.min( maxX()/9, maxY()/8)
 
   //side = 50 // size of the basic block not the inner square
@@ -110,21 +110,21 @@ function demo() {
   longAngle = 90 - shortAngle
 
   // center the figure
-  penup()
-  forward (side * horizontalCount * 1.3 / 4)
-  left(90)
-  forward (side * verticalCount * 1.7 /4)
-  right(90)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(side * horizontalCount * 1.3 / 4)
+  ఎడమ_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(side * verticalCount * 1.7 /4)
+  కుడి_వైపు_తిరుగు(90)
+  కలమును_కింద_పెట్టు()
 
   for (var i=0; i<verticalCount; i++) {
     bowties( horizontalCount, i % 2)
     kites( horizontalCount+1, 1 - (i % 2)) // change 1 to 0 and 0 to 1
-    penup()
-    right(180)
-    forward( hypoteneuse)
-    right(180)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(180)
+    ముందుకు_జరుగు( hypoteneuse)
+    కుడి_వైపు_తిరుగు(180)
+    కలమును_కింద_పెట్టు()
   }
   bowties( horizontalCount,i%2) // row across bottom to be neat
 }

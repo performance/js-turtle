@@ -8,13 +8,13 @@ var sides = 80;
 function triangle (side) {
   if (side < maxSide) {
     home()
-    penup();
-    forward (side/2);
-    right(150);
-    pendown();
+    కలమును_పైకి_ఎత్తు();
+    ముందుకు_జరుగు(side/2);
+    కుడి_వైపు_తిరుగు(150);
+    కలమును_కింద_పెట్టు();
     for (var i=0; i<3; i++) {
-      forward(side);
-      right(120);
+      ముందుకు_జరుగు(side);
+      కుడి_వైపు_తిరుగు(120);
     }
   }
 }
@@ -33,7 +33,7 @@ function nestTri () {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
 
   maxSide = 1.8* Math.min( maxX(), maxY())
   tColor = []

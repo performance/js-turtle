@@ -9,7 +9,7 @@ For example:    */
 function square (side) {
   var i=0
   while (i<4) {
-    forward( side)
+    ముందుకు_జరుగు( side)
     turn(90)
     i=i+1
   }
@@ -17,12 +17,12 @@ function square (side) {
 
 function demo() {
    reset();
-   hideTurtle();
+   తాబేలును_దాచు();
    color("blue");
    var side = 100;
    while (side > 0) {
       square(side);
-      right(36);
+      కుడి_వైపు_తిరుగు(36);
       side = side - 10;
    }
 }

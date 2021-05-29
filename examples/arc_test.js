@@ -3,11 +3,11 @@
 
 function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir) {
   స్థితి_మార్చు(x,y);
-  penup();
-  angle(armAngle);
-  forward(startRadius);
-  right(tangentAngle);
-  pendown();
+  కలమును_పైకి_ఎత్తు();
+  కోణము(armAngle);
+  ముందుకు_జరుగు(startRadius);
+  కుడి_వైపు_తిరుగు(tangentAngle);
+  కలమును_కింద_పెట్టు();
   circle(arcRadius,extent, dir);
 }
 
@@ -24,7 +24,7 @@ function turbine(x,y, radius, pedals, dir) {
 
 function roundedOctogon (side, radius) {
   repeat((8), function () {
-    forward (side);
+    ముందుకు_జరుగు(side);
     curveright(radius,45);
   })
 }
@@ -32,7 +32,7 @@ function roundedOctogon (side, radius) {
 
 function roundedOctogonL (side, radius) {
   repeat((8), function () {
-    forward (side);
+    ముందుకు_జరుగు(side);
     curveleft(radius,45);
   })
 }
@@ -44,11 +44,11 @@ function circleEyeR (x, y, n, outerRadius) {
 
   for (var i=0; i<n; i++) {
     స్థితి_మార్చు (x, y);
-    angle (i/n * 360);
-    penup();
-    forward (outerRadius);
-    right(90)
-    pendown();
+    కోణము (i/n * 360);
+    కలమును_పైకి_ఎత్తు();
+    ముందుకు_జరుగు(outerRadius);
+    కుడి_వైపు_తిరుగు(90)
+    కలమును_కింద_పెట్టు();
     write(i)
     curveRight(outerRadius/2) // one inscribed circle
   }
@@ -60,11 +60,11 @@ function circleEyeL (x, y, n, outerRadius) {
 
   for (var i=0; i<n; i++) {
     స్థితి_మార్చు (x, y);
-    angle (i/n * 360);
-    penup();
-    forward (outerRadius);
-    pendown();
-    left(90)
+    కోణము (i/n * 360);
+    కలమును_పైకి_ఎత్తు();
+    ముందుకు_జరుగు(outerRadius);
+    కలమును_కింద_పెట్టు();
+    ఎడమ_వైపు_తిరుగు(90)
     write(i)
     curveLeft(outerRadius/2); // one inscribed circle
   }
@@ -86,7 +86,7 @@ function demo () {
   h3 = +2/6 * size
 
   reset();
-  hideturtle();
+  తాబేలును_దాచు();
 
   tSize = cellSize/2 * .90
 // turbine(x,y, radius, pedals, dir) {
@@ -111,59 +111,59 @@ function demo () {
   circle(60/60 * tSize);
 
   స్థితి_మార్చు( h1, v2)
-  angle(0)
+  కోణము(0)
   oRadius = cellSize/2 * .9
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  penup()
-  forward (height)
-  pendown()
-  right(90)
-  backward(side/2)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(height)
+  కలమును_కింద_పెట్టు()
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
   స్థితి_మార్చు( h1, v2)
-  angle(0)
+  కోణము(0)
   oRadius = cellSize/2 * .8
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  penup()
-  forward (height)
-  pendown()
-  right(90)
-  backward(side/2)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(height)
+  కలమును_కింద_పెట్టు()
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
   స్థితి_మార్చు( h1, v2)
-  angle(22.5)
+  కోణము(22.5)
   oRadius = cellSize/2 * .7
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  penup()
-  forward (height)
-  pendown()
-  right(90)
-  backward(side/2)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(height)
+  కలమును_కింద_పెట్టు()
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
   స్థితి_మార్చు( h1, v2)
-  angle(22.5)
+  కోణము(22.5)
   oRadius = cellSize/2 * .6
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  penup()
-  forward (height)
-  pendown()
-  right(90)
-  backward(side/2)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(height)
+  కలమును_కింద_పెట్టు()
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
   circleEyeR( h2, v2, 16, cellSize/2 * .8);

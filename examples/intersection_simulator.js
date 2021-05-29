@@ -184,44 +184,44 @@ testRates();
 function drawEWstreet() {
   wrap(false);
   setpos(minX(),0);
-  angle(90);
-  pendown();
+  కోణము(90);
+  కలమును_కింద_పెట్టు();
   color("black");
   penwidth(roadWidth);
-  forward(maxX() + maxX());
+  ముందుకు_జరుగు(maxX() + maxX());
 }
 
 function drawNSstreet() {
   setpos(0,maxY());
-  angle(180);
-  pendown();
+  కోణము(180);
+  కలమును_కింద_పెట్టు();
   color("black");
   penwidth(roadWidth);
-  forward(maxY() + maxY());
+  ముందుకు_జరుగు(maxY() + maxY());
 }
 
 function drawEWstripe() {
   setpos(minX(),0);
-  angle(90);
+  కోణము(90);
   color("yellow");
   penwidth(1);
-  forward(maxX() - roadWidth / 2 - crossWalkWidth);
-  penup();
-  forward(roadWidth + 2 * crossWalkWidth);
-  pendown();
-  forward(maxX() - roadWidth / 2 - crossWalkWidth);
+  ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);
+  కలమును_పైకి_ఎత్తు();
+  ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);
+  కలమును_కింద_పెట్టు();
+  ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);
 }
 
 function drawNSstripe() {
   setpos(0,maxY());
-  angle(180);
+  కోణము(180);
   color("yellow");
   penwidth(1);
-  forward(maxY() - roadWidth / 2 - crossWalkWidth);
-  penup();
-  forward(roadWidth + 2 * crossWalkWidth);
-  pendown();
-  forward(maxY() - roadWidth / 2 - crossWalkWidth);
+  ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);
+  కలమును_పైకి_ఎత్తు();
+  ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);
+  కలమును_కింద_పెట్టు();
+  ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);
 }
 
 function drawCrossWalk(x, y, dir) {
@@ -232,50 +232,50 @@ function drawCrossWalk(x, y, dir) {
   // draw inner cross walk line
   color("white");
   setposition(x, y);
-  angle(dir);
+  కోణము(dir);
   width(1);
-  penDown();
-  forward(roadWidth);
+  కలమును_కింద_పెట్టు();
+  ముందుకు_జరుగు(roadWidth);
     
   // draw outer cross walk line
-  penUp();
-  left(90);
-  forward(crossWalkWidth);
-  left(90);
-  penDown();
-  forward(roadWidth);
+  కలమును_పైకి_ఎత్తు();
+  ఎడమ_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(crossWalkWidth);
+  ఎడమ_వైపు_తిరుగు(90);
+  కలమును_కింద_పెట్టు();
+  ముందుకు_జరుగు(roadWidth);
     
   // draw stop line
-  penUp();
-  right(90);
-  forward(stopLineSeparation);
-  right(90);
-  forward(2);
+  కలమును_పైకి_ఎత్తు();
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(stopLineSeparation);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(2);
   penWidth(stopLineWidth);
-  penDown();
-  forward(roadWidth / 2 - 4);
+  కలమును_కింద_పెట్టు();
+  ముందుకు_జరుగు(roadWidth / 2 - 4);
   penWidth(1);
 }
 
 function drawTurnArrow(x, y, dir) {
-  hideturtle();
+  తాబేలును_దాచు();
   goto (x,y);
-  angle (dir);
-  pendown();
+  కోణము (dir);
+  కలమును_కింద_పెట్టు();
   color("white");
   penwidth(5);
-  forward (5);
+  ముందుకు_జరుగు(5);
   curveLeft(5,90);
-  forward(4);
+  ముందుకు_జరుగు(4);
   penwidth (2);
-  left(130);
-  forward (5);
-  right (160);
-  forward (9);
-  right(120);
-  forward (9);
-  right(160);
-  forward(5);
+  ఎడమ_వైపు_తిరుగు(130);
+  ముందుకు_జరుగు(5);
+  కుడి_వైపు_తిరుగు(160);
+  ముందుకు_జరుగు(9);
+  కుడి_వైపు_తిరుగు(120);
+  ముందుకు_జరుగు(9);
+  కుడి_వైపు_తిరుగు(160);
+  ముందుకు_జరుగు(5);
 }
   
 
@@ -312,99 +312,99 @@ function drawArrow() { // assume pointing up, color set and pen up
   var penWidth = turtle.width;
   var arrowSize = 8;
   var vertOffset = 5;
-  backward(vertOffset);
-  pendown();
+  వెనుకకు_జరుగు(vertOffset);
+  కలమును_కింద_పెట్టు();
   penwidth(3);
-  left(45);
-  forward(arrowSize);
-  right(90);
-  forward(arrowSize);
-  penup();
-  backward(arrowSize);
-  left(90);
-  backward(arrowSize);
-  right(45);
+  ఎడమ_వైపు_తిరుగు(45);
+  ముందుకు_జరుగు(arrowSize);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(arrowSize);
+  కలమును_పైకి_ఎత్తు();
+  వెనుకకు_జరుగు(arrowSize);
+  ఎడమ_వైపు_తిరుగు(90);
+  వెనుకకు_జరుగు(arrowSize);
+  కుడి_వైపు_తిరుగు(45);
   penwidth(penWidth);
-  forward(vertOffset);
+  ముందుకు_జరుగు(vertOffset);
 }
 
 function drawTurnSignal(state) {
-  left(90);
-  forward(13);
+  ఎడమ_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(13);
   setLightColor("green", state);
   drawArrow();
 
-  backward(13);
+  వెనుకకు_జరుగు(13);
   setLightColor("yellow", state);
   drawArrow();
 
-  backward(13);
+  వెనుకకు_జరుగు(13);
   setLightColor("red", state);
   drawArrow();
 
-  forward(13);
-  right(90);
+  ముందుకు_జరుగు(13);
+  కుడి_వైపు_తిరుగు(90);
 }
 
 function drawMainSignal(state) { // main signal is straight ahead
-  left(90);
-  forward(13);
+  ఎడమ_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(13);
   setLightColor("green", state);
   dot();
 
-  backward(13);
+  వెనుకకు_జరుగు(13);
   setLightColor("yellow", state);
   dot();
 
-  backward(13);
+  వెనుకకు_జరుగు(13);
   setLightColor("red", state);
   dot();
 
-  forward(13);
-  right(90);
+  ముందుకు_జరుగు(13);
+  కుడి_వైపు_తిరుగు(90);
 }
 
 function drawWalkSignal(state) {
   // should do the flashing red for don\'t start
   // could do the flash down counter
   setLightColor("green", state);
-  left(90);
-  forward(5);
-  right(90);
+  ఎడమ_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(5);
+  కుడి_వైపు_తిరుగు(90);
   write("WALK");
 
-  left(90);
-  backward(5);
-  right(90);
+  ఎడమ_వైపు_తిరుగు(90);
+  వెనుకకు_జరుగు(5);
+  కుడి_వైపు_తిరుగు(90);
   setLightColor("red", state);
   if (state === "yellow") {
     color("yellow")
   }
-  right(90);
-  forward(8);
-  left(90);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(8);
+  ఎడమ_వైపు_తిరుగు(90);
   write("DONT");
 
-  right(90);
-  forward(13);
-  left(90);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(13);
+  ఎడమ_వైపు_తిరుగు(90);
   write("WALK");
 
-  right(90);
-  backward(25);
-  left(90);
+  కుడి_వైపు_తిరుగు(90);
+  వెనుకకు_జరుగు(25);
+  ఎడమ_వైపు_తిరుగు(90);
 }
 
 function drawSignal(x, y, orient, mainState, turnState, walkState) {
-  // move turtle to position and angle depending on street direction
+  // move turtle to position and కోణము depending on street direction
   setpos (x, y);
-  angle(orient);
+  కోణము(orient);
   drawTurnSignal(turnState);
 
-  forward(10);
+  ముందుకు_జరుగు(10);
   drawMainSignal(mainState);
 
-  forward(10);
+  ముందుకు_జరుగు(10);
   drawWalkSignal(walkState);
 }
 
@@ -456,23 +456,23 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
 //  main is the main light queue
 //  walk is the walk light queue
   setpos(x,y)
-  angle(orientation)
+  కోణము(orientation)
 /*
   if (dir === "N") {
     setpos(55,-maxY()+5);
-    angle(0);
+    కోణము(0);
   } else if (dir === "S") {
     setpos(-68,maxY()-20);
-    angle(0);
+    కోణము(0);
   } else if (dir === "E") {
     setpos(-maxX()+5, -55);
-    angle(90);
+    కోణము(90);
   } else if (dir === "W") {
     setpos(maxX()-20, 68);
-    angle(90);
+    కోణము(90);
   } else {
     setpos(-200,200);
-    angle(90);
+    కోణము(90);
   }
 */
   penwidth(1);
@@ -483,14 +483,14 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
     write(turn);
   }
 
-  right(90);
-  forward(12);
-  left(90);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(12);
+  ఎడమ_వైపు_తిరుగు(90);
   write(main);
 
-  right(90);
-  forward(12);
-  left(90);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(12);
+  ఎడమ_వైపు_తిరుగు(90);
   if (dir === "S" || dir === "W") {
     write(turn);
   } else {
@@ -523,14 +523,14 @@ function drawQueues() {
 
 function drawQueue(x, y, dir, queue, len) {
   goto(x, y);
-  angle(dir);
+  కోణము(dir);
   width(10);
   for (var i=0; i<queue.length; i++) {
-    pendown();
+    కలమును_కింద_పెట్టు();
     color(queue[i].color);
-    forward(len); 
-    penup();
-    forward(4);
+    ముందుకు_జరుగు(len); 
+    కలమును_పైకి_ఎత్తు();
+    ముందుకు_జరుగు(4);
   }
 }
 

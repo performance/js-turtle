@@ -1,9 +1,9 @@
-// Spinning Squares -- draw some square of increasing size and angle.
+// Spinning Squares -- draw some square of increasing size and కోణము.
 
 function square (side) {
   var i=0
   while (i<4) {
-    forward( side)
+    ముందుకు_జరుగు( side)
     turn(90)
     i=i+1
   }
@@ -11,12 +11,12 @@ function square (side) {
 
 function spinningSquare2() {
    reset();
-   hideTurtle();
+   తాబేలును_దాచు();
    color("blue");
    var side = 100;
    while (side > 0) {
       square(side);
-      right(36);
+      కుడి_వైపు_తిరుగు(36);
       side = side - 10;
    }
 }
@@ -33,7 +33,7 @@ function spinningSquare() {
   color("blue");
   for (var i=0; i<steps; i=i+1) {
     square(stepSize*i);
-    right(360/steps)
+    కుడి_వైపు_తిరుగు(360/steps)
   }
 }
 

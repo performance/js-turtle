@@ -3,25 +3,25 @@
 
 // kite has side b and h, square has side s
 // b = s + h
-// either vary the angle or vary the sides
-// try calulating the angle
+// either vary the కోణము or vary the sides
+// try calulating the కోణము
 
 
 function quadrangle( ){
   // start at lower left corner of outer square
   beginShape()
-  forward(longSide)
-  right( 180 - angleA)
-  forward (longSide)
-  right(90)
-  forward( shortSide)
-  right(180 - angleC)
-  forward(shortSide)
-  right(90)
-  penup()
-  forward( longSide + shortSide)
-  right(90)
-  pendown()
+  ముందుకు_జరుగు(longSide)
+  కుడి_వైపు_తిరుగు( 180 - angleA)
+  ముందుకు_జరుగు(longSide)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు( shortSide)
+  కుడి_వైపు_తిరుగు(180 - angleC)
+  ముందుకు_జరుగు(shortSide)
+  కుడి_వైపు_తిరుగు(90)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు( longSide + shortSide)
+  కుడి_వైపు_తిరుగు(90)
+  కలమును_కింద_పెట్టు()
   fillShape("lightblue")
 }
 
@@ -43,29 +43,29 @@ console.log ("side:"+side)
 
   // center this more or less
   goto(-.5 * columns * (shortSide + longSide) + .4 *side, .5 * (rows-2) * (shortSide + longSide) + .4*side)
-  left( offsetAngle)
+  ఎడమ_వైపు_తిరుగు( offsetAngle)
   for (var k=0; k<rows; k++) {
     for (var j=0; j<columns; j++) { // across row
       for (var i=0; i<4; i++) { // around inner square
         quadrangle()
       }
-      penup()
-      right(90)
-      forward( shortSide + longSide)
-      right(90)
-      forward( side)
-      left(180)
-      pendown()
+      కలమును_పైకి_ఎత్తు()
+      కుడి_వైపు_తిరుగు(90)
+      ముందుకు_జరుగు( shortSide + longSide)
+      కుడి_వైపు_తిరుగు(90)
+      ముందుకు_జరుగు( side)
+      ఎడమ_వైపు_తిరుగు(180)
+      కలమును_కింద_పెట్టు()
     }
-    penup()
-    left( 90- offsetAngle)
-    forward( columns * (shortSide + longSide)/Math.sin( degToRad( 90-offsetAngle)))
-    left( offsetAngle)
-    forward( side)
-    left(90)
-    forward( shortSide + longSide)
-    left( 180)
-    pendown()
-    hideTurtle()
+    కలమును_పైకి_ఎత్తు()
+    ఎడమ_వైపు_తిరుగు( 90- offsetAngle)
+    ముందుకు_జరుగు( columns * (shortSide + longSide)/Math.sin( degToRad( 90-offsetAngle)))
+    ఎడమ_వైపు_తిరుగు( offsetAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు( shortSide + longSide)
+    ఎడమ_వైపు_తిరుగు( 180)
+    కలమును_కింద_పెట్టు()
+    తాబేలును_దాచు()
   }
 }

@@ -720,14 +720,14 @@ function showError(e) {
     //logTurtle("sEtop")
     height=10 // points
     goto (minX(), minY()+24+height/2 +2);
-    angle(90);
+    కోణము(90);
     wrap(false);
 
     // clear the line for the error message
-    penDown()
+    కలమును_కింద_పెట్టు()
     color ("yellow")
     width (height+4)
-    forward (maxY() * 2)
+    ముందుకు_జరుగు(maxY() * 2)
     goto (minX(), minY()+24)
 
     // write the error message
@@ -742,7 +742,7 @@ function showError(e) {
         color ("yellow")
         width (height+4)
         goto (minX(), minY()+5+height/2 +2)
-        forward (maxY() * 2)
+        ముందుకు_జరుగు(maxY() * 2)
 
         // write the file message
         color("blue");

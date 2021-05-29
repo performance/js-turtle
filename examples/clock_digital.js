@@ -87,56 +87,56 @@ function segColor (bit) {
 
 
 function display7segment(digit) {
-  pendown()
+  కలమును_కింద_పెట్టు()
   segColor (segments [digit].substr(0,1)) //a
-  forward (segSize)
-  right(90+segAngle)
+  ముందుకు_జరుగు(segSize)
+  కుడి_వైపు_తిరుగు(90+segAngle)
   segColor (segments [digit].substr(1,1)) //b
-  forward (segSize)
+  ముందుకు_జరుగు(segSize)
   segColor (segments [digit].substr(2,1)) //c
-  forward (segSize)
-  right (90-segAngle)
+  ముందుకు_జరుగు(segSize)
+  కుడి_వైపు_తిరుగు(90-segAngle)
   segColor (segments [digit].substr(3,1)) //d
-  forward (segSize)
-  right (90+segAngle)
+  ముందుకు_జరుగు(segSize)
+  కుడి_వైపు_తిరుగు(90+segAngle)
   segColor (segments [digit].substr(4,1)) //e
-  forward (segSize)
-  right (90-segAngle)
+  ముందుకు_జరుగు(segSize)
+  కుడి_వైపు_తిరుగు(90-segAngle)
   segColor (segments [digit].substr(6,1)) //g
-  forward (segSize)
-  backward (segSize)
-  left (90-segAngle)
+  ముందుకు_జరుగు(segSize)
+  వెనుకకు_జరుగు(segSize)
+  ఎడమ_వైపు_తిరుగు(90-segAngle)
   segColor (segments [digit].substr(5,1)) //f
-  forward (segSize)
-  right (90-segAngle)
-  penup()
+  ముందుకు_జరుగు(segSize)
+  కుడి_వైపు_తిరుగు(90-segAngle)
+  కలమును_పైకి_ఎత్తు()
 }
 
 
 function displaySegTime() {
   // black out background
   goto (minX(),0)
-  angle (90)
+  కోణము (90)
   color(black)
   width (2*maxY())
-  pendown()
-  forward(2*maxX())
+  కలమును_కింద_పెట్టు()
+  ముందుకు_జరుగు(2*maxX())
 101010
   // draw the 6 digits of time
   goto (-horizontalElements/2*segSize, segSize)
   width (segWidth)
   display7segment(hour10digit)
-  forward (digitSpacing)
+  ముందుకు_జరుగు(digitSpacing)
   display7segment(hour1digit)
 
-  forward (interdigitSpacing)
+  ముందుకు_జరుగు(interdigitSpacing)
   display7segment(min10digit)
-  forward (digitSpacing)
+  ముందుకు_జరుగు(digitSpacing)
   display7segment(min1digit)
 
-  forward (interdigitSpacing)
+  ముందుకు_జరుగు(interdigitSpacing)
   display7segment(sec10digit)
-  forward (digitSpacing)
+  ముందుకు_జరుగు(digitSpacing)
   display7segment(sec1digit)
 }
 
@@ -147,7 +147,7 @@ function displayTime() {
   digitSpacing = 1.4 * segSize
   interdigitSpacing = 2.24 * segSize
   segWidth = segSize/6
-  hideturtle() 
+  తాబేలును_దాచు() 
   getTime()
   displaySegTime()
 }

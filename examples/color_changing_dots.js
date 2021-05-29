@@ -8,7 +8,7 @@ controller.
 function drawDot () {
     color(random(16))
     dot()
-    forward (15)
+    ముందుకు_జరుగు(15)
 }
 
 function drawRowOfDots () {
@@ -20,12 +20,12 @@ function colorChangingDots () {
   reset()
   wrap(false)
   setpos(minX(),0)
-  angle(90)
-  pendown()
+  కోణము(90)
+  కలమును_కింద_పెట్టు()
   color ("black")
   penwidth (80)
-  forward (maxX() + maxX()) //draw black band
-  penup()
+  ముందుకు_జరుగు(maxX() + maxX()) //draw black band
+  కలమును_పైకి_ఎత్తు()
   width (1)
   animate( drawRowOfDots, 500)
 }

@@ -4,8 +4,8 @@ function horiz( size){
   hy = maxY()
   while (hy > minY()) {
     goto (minX(), hy)
-    angle(90)
-    forward( 2*maxX())
+    కోణము(90)
+    ముందుకు_జరుగు( 2*maxX())
     hy = hy - size
   } 
 }
@@ -16,10 +16,10 @@ function vert( size) {
     vy = maxY()
     while (vy > minY()) {
       goto( vx, vy)
-      angle( 180 - 6)
-      forward( size * Math.cos( degToRad(6)))
-      right( 12)
-      forward( size * Math.cos( degToRad(6)))
+      కోణము( 180 - 6)
+      ముందుకు_జరుగు( size * Math.cos( degToRad(6)))
+      కుడి_వైపు_తిరుగు( 12)
+      ముందుకు_జరుగు( size * Math.cos( degToRad(6)))
       vy = vy - 2 * size
 
     }

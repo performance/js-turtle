@@ -10,12 +10,12 @@ function starburst () {
   var i = 0
   while ( i < steps) {
     goto ( 0,0)
-    angle( 360/steps*i)
+    కోణము( 360/steps*i)
     color( random (16))
     //color ("hsl("+ 360 * i/steps + ", 100%, 50%)") // color wheel
     //color (i%16)
     //color (Math.floor(16 * i/steps)) // logo colors
-    forward (len)
+    ముందుకు_జరుగు(len)
     i = i + 1
   }
 }

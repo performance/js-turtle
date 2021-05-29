@@ -47,7 +47,7 @@ function rain (drops, n) {
       color ("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");
       width(d.width);
       goto(d.x, d.y);
-      forward(d.size);
+      ముందుకు_జరుగు(d.size);
       // move the drop for the next time
       d.y = d.y + d.velocityY;
       d.x = d.x + d.velocityX;
@@ -56,7 +56,7 @@ function rain (drops, n) {
 
 function let_them_drop (n) {
    wrap(false);
-   hideTurtle();
+   తాబేలును_దాచు();
    drops = init_drops(n);
    animate(function () { rain(drops, n)}, 100);
 }

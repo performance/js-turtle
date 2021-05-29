@@ -5,8 +5,8 @@ colors = ["red", "white", "blue","yellow", "green"]
 function squ( side, fColor) {
   beginShape()
   for (var i=0; i<4; i++) {
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
   }
   fillShape( fColor)
 }
@@ -14,8 +14,8 @@ function squ( side, fColor) {
 function squLeft( side, fColor) {
   beginShape()
   for (var i=0; i<4; i++) {
-    forward( side)
-    left( 90)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 90)
   }
   fillShape( fColor)
 }
@@ -33,25 +33,25 @@ function demo() {
   rowOffset = s/3
   wrap(false)
   goto (minX(), maxY())
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
 
   s = 50
   while (turtle.pos.y > minY()) {
     while (turtle.pos.x < maxX()) {
       squ(s, nextColor())
-      forward(s)
+      ముందుకు_జరుగు(s)
     }
-    right(90)
-    forward( s)
-    right(90)
-    backward(rowOffset)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు( s)
+    కుడి_వైపు_తిరుగు(90)
+    వెనుకకు_జరుగు(rowOffset)
     while (turtle.pos.x > minX()) {
       squLeft(s, nextColor())
-      forward(s)
+      ముందుకు_జరుగు(s)
     }
-    left(90)
-    forward(s)
-    left(90)
-    forward(rowOffset)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(s)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(rowOffset)
   }
 }

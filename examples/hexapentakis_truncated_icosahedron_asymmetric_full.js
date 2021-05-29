@@ -20,15 +20,15 @@ function penta (side, faceColor) {
 
   for( i=0; i<5; i++) {
     beginShape()
-    forward( side)
-    right( 180-basePentaAngle)
-    forward( pentaSide)
-    right( 180-centralPentaAngle)
-    forward( pentaSide)
-    right( 180-basePentaAngle)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)
+    ముందుకు_జరుగు( pentaSide)
+    కుడి_వైపు_తిరుగు( 180-centralPentaAngle)
+    ముందుకు_జరుగు( pentaSide)
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)
     fillShape(faceColor)
-    forward( side)
-    right( 180-(2*basePentaAngle))
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180-(2*basePentaAngle))
   }
 }
 
@@ -39,15 +39,15 @@ function hexa (side, faceColor) {
 
   for( var i=0; i<6; i++) {
     beginShape()
-    forward( side)
-    right( 180-baseHexaAngle)
-    forward( hexaSide)
-    right( 180-centralHexaAngle)
-    forward( hexaSide)
-    right( 180-baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)
+    ముందుకు_జరుగు( hexaSide)
+    కుడి_వైపు_తిరుగు( 180-centralHexaAngle)
+    ముందుకు_జరుగు( hexaSide)
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)
     fillShape(faceColor)
-    forward( side)
-    right( 180-(2*baseHexaAngle))
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180-(2*baseHexaAngle))
   }
 }
 
@@ -58,13 +58,13 @@ pangle = 0
 function savePos () {
   px = turtle.pos.x
   py = turtle.pos.y
-  pangle = turtle.angle
+  pangle = turtle.కోణము
 }
 
 function restorePos() {
   turtle.pos.x = px
   turtle.pos.y = py
-  turtle.angle = pangle
+  turtle.కోణము = pangle
 }
 
 p2x = 0
@@ -74,13 +74,13 @@ p2angle = 0
 function savePos2 () {
   p2x = turtle.pos.x
   p2y = turtle.pos.y
-  p2angle = turtle.angle
+  p2angle = turtle.కోణము
 }
 
 function restorePos2() {
   turtle.pos.x = p2x
   turtle.pos.y = p2y
-  turtle.angle = p2angle
+  turtle.కోణము = p2angle
 }
 
 p3x = 0
@@ -90,13 +90,13 @@ p3angle = 0
 function savePos3 () {
   p3x = turtle.pos.x
   p3y = turtle.pos.y
-  p3angle = turtle.angle
+  p3angle = turtle.కోణము
 }
 
 function restorePos3() {
   turtle.pos.x = p3x
   turtle.pos.y = p3y
-  turtle.angle = p3angle
+  turtle.కోణము = p3angle
 }
 
 p4x = 0
@@ -106,99 +106,99 @@ p4angle = 0
 function savePos4 () {
   p4x = turtle.pos.x
   p4y = turtle.pos.y
-  p4angle = turtle.angle
+  p4angle = turtle.కోణము
 }
 
 function restorePos4() {
   turtle.pos.x = p4x
   turtle.pos.y = p4y
-  turtle.angle = p4angle
+  turtle.కోణము = p4angle
 }
 
 function demo() {
   reset()
   side = .13* Math.min(maxX(), maxY())
   goto (1.8*side,0)
-  right(80)
+  కుడి_వైపు_తిరుగు(80)
   penta (side, "green")
-  right( (2*basePentaAngle))
+  కుడి_వైపు_తిరుగు( (2*basePentaAngle))
   for (var i=0; i<5; i++) {
     savePos()
     // start with the base opposite of where you are now
-    right(2*baseHexaAngle)
-    forward(side)
-    left(180-2*baseHexaAngle)
-    forward(side)
-    left(180-2*baseHexaAngle)
-    forward(side)
-    right(180)
+    కుడి_వైపు_తిరుగు(2*baseHexaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(180)
 
     // draw another hexa out from where the first will be
     savePos2()
-    forward(side)
-    left(180-2*baseHexaAngle)
-    forward(side)
-    left(180-2*baseHexaAngle)
-    forward(side)
-    left(180-2*baseHexaAngle)
-    forward(side)
-    right(180)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(180)
     savePos3()
     hexa (side, "red")
     restorePos3()
 
     //draw a penta outside of the last hexa
-    forward(side)
-    left( 180-2*basePentaAngle)
-    forward(side)
-    left( 180-2*basePentaAngle)
-    forward(side)
-    left( 180)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 180)
     savePos4()
     penta( side, "green")
 
     // draw a hexa touching last penta
 
     restorePos3()
-    forward( side)
-    left(180-2*basePentaAngle-2*baseHexaAngle)
-    forward( side)
-    left( 180-2*baseHexaAngle)
-    forward( side)
-    left( 180-2*baseHexaAngle)
-    forward( side)
-    left( 180)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(180-2*basePentaAngle-2*baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180)
     hexa( side, "yellow")
 
     if (i == 0) {
     restorePos4()
-    forward( side)
-    left( 180 - 2* baseHexaAngle)
-    forward( side)
-    left( 180 - 2*baseHexaAngle)
-    forward( side)
-    right( 180)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - 2* baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - 2*baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180)
     savePos4()
     hexa( side, "lightblue")
    
 
     // draw a penta to oppose first
-      left(-2*baseHexaAngle)
-      forward( side)
-      left( 180-2*baseHexaAngle)
+      ఎడమ_వైపు_తిరుగు(-2*baseHexaAngle)
+      ముందుకు_జరుగు( side)
+      ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)
       savePos4()
       penta(side, "green")
       restorePos4()
-      forward(side)
+      ముందుకు_జరుగు(side)
       savePos4()
       for (var j=1; j<5; j++) {
          restorePos4()
-         right( 180 - 2*basePentaAngle)
-         forward( side)
+         కుడి_వైపు_తిరుగు( 180 - 2*basePentaAngle)
+         ముందుకు_జరుగు( side)
          savePos4()
-         left(180 - 2* baseHexaAngle)
-         forward( side)
-         left(180)
+         ఎడమ_వైపు_తిరుగు(180 - 2* baseHexaAngle)
+         ముందుకు_జరుగు( side)
+         ఎడమ_వైపు_తిరుగు(180)
          hexa( side, "lightblue")
       }
 
@@ -208,20 +208,20 @@ function demo() {
     restorePos2()
 
     // draw a penta on the free face one away
-    forward( side)
-    right( 180-2*baseHexaAngle)
-    forward( side)
-    left( 180-2*basePentaAngle)
-    forward(side)
-    left( 180-2*basePentaAngle)
-    forward(side)
-    left( 180)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180-2*baseHexaAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 180)
     penta(side, "green")
     restorePos2()
 
     hexa (side, "blue")
     restorePos()
-    forward( side)
-    left(180-(2*basePentaAngle))
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(180-(2*basePentaAngle))
   }
 }

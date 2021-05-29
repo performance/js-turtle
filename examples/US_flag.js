@@ -1,31 +1,31 @@
 // US Flag -- draw an American Flag
 
 function star (size) {
-  penup()
-  forward(.54*size)
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(.54*size)
   turn (180-18)
-  pendown()
+  కలమును_కింద_పెట్టు()
   var i=0
   beginShape()
   while (i<5){
-    forward(size)
-    right(180-36)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(180-36)
     i = i + 1
   }
   fillShape("white")
   turn (180+18)
-  backward(.54*size)
+  వెనుకకు_జరుగు(.54*size)
 }
 
 
 function starLine(count, size, sep) {
   while (count > 0) {
     star(size)
-    penup()
-    right(90)
-    forward (sep)
-    left(90)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(sep)
+    ఎడమ_వైపు_తిరుగు(90)
+    కలమును_కింద_పెట్టు()
     count = count -1;
   }
 }
@@ -33,36 +33,36 @@ function starLine(count, size, sep) {
 
 function rectangle (width, height) {
   // assume x, y at upper right hand corner in and out
-  // assume angle is 90 in and out
-  angle (90)
-  forward (width)
-  right(90)
-  forward (height)
-  right (90)
-  forward (width)
-  right (90)
-  forward (height)
-  right (90)
+  // assume కోణము is 90 in and out
+  కోణము (90)
+  ముందుకు_జరుగు(width)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(height)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(width)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(height)
+  కుడి_వైపు_తిరుగు(90)
 }
 
 
 function stripes (width, spacing, number) {
   //assume x, y is at right side of stripe
-  //assume angle is -90
+  //assume కోణము is -90
   var i = 0
   while (i<number) {
-    pendown()
-    forward (width)
-    penup()
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(width)
+    కలమును_పైకి_ఎత్తు()
     // make the turn
     if (i%2 == 0) {
-      left(90)
-      forward(spacing)
-      left(90)
+      ఎడమ_వైపు_తిరుగు(90)
+      ముందుకు_జరుగు(spacing)
+      ఎడమ_వైపు_తిరుగు(90)
     } else {
-      right(90)
-      forward(spacing)
-      right(90)
+      కుడి_వైపు_తిరుగు(90)
+      ముందుకు_జరుగు(spacing)
+      కుడి_వైపు_తిరుగు(90)
     }
     i = i + 1
   }
@@ -90,9 +90,9 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   //outline flag and field
   reset()
   wrap(false)
-  hideTurtle()
+  తాబేలును_దాచు()
   goto (xBase, yBase)
-  angle (90)
+  కోణము (90)
   color("black")
 
   width(1)
@@ -103,21 +103,21 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   color("red");
   width(stripeWidth);
   goto (xBase+flagWidth, yBase-stripeWidth/2)
-  angle (-90)
+  కోణము (-90)
   stripes (flagWidth-fieldWidth, 2*stripeWidth, 4)
   stripes (flagWidth, 2*stripeWidth, 3)
 
   //draw field
   color("blue")
   goto (xBase+fieldWidth, yBase-stripeWidth/2)
-  angle (-90)
+  కోణము (-90)
   stripes (fieldWidth, stripeWidth, 7)
 
   //draw field of stars
-  angle(0)
+  కోణము(0)
   width (2)
   color("white")
-  pendown()
+  కలమును_కింద_పెట్టు()
 
   var row = 0
   while (row<9) {

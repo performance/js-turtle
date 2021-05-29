@@ -77,8 +77,8 @@ function with a color as in the following example:
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
@@ -98,8 +98,8 @@ size of smallest piece of the display, a dot or maybe a period.
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
@@ -129,8 +129,8 @@ So let's give it a try:
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
@@ -158,8 +158,8 @@ it, you need to re-stroke the graphic to get it on top of the fill.
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
@@ -189,18 +189,18 @@ the following code to move the figure:
   var i = 0
   while (i &lt; n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
 
 function demo() {
   reset()
-  forward (100)
-  right(90)
-  forward( 100)
-  left(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు( 100)
+  ఎడమ_వైపు_తిరుగు(90)
   spikey( 5, 2, 40)
 }
 </code>
@@ -213,20 +213,20 @@ turtle from marking by having it lift the pen as in the following code.
   var i = 0
   while (i &lt; n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
 
 function demo() {
   reset()
-  penup()
-  forward (100)
-  right(90)
-  forward( 100)
-  left(90)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు( 100)
+  ఎడమ_వైపు_తిరుగు(90)
+  కలమును_కింద_పెట్టు()
   spikey( 5, 2, 40)
 }
 </code>
@@ -282,8 +282,8 @@ The code for a spikey that uses a central point and a radius
 instead of a side to determine size in the following code.
 <code>Math.cos()</code> is the cosine function from the JavaScript Math
 library. The beauty of the cosine function is that it expresses the ratio of
-the side adjacent to the angle to the hypotenuse (the long side of the
-right triagle as a function of the angle. Since the JavaScript implementation
+the side adjacent to the కోణము to the hypotenuse (the long side of the
+right triagle as a function of the కోణము. Since the JavaScript implementation
 of the cosine function uses radians instead of degrees, the function
 <code>degToRad()</code> is used to make the proper conversion. There
 are 2 pi radians in a circle and there are 360 in the same circle. So this
@@ -296,28 +296,28 @@ This also uses the
 <code>goto()</code> function to move the turtle to an x, y position on the
 canvas Cartesian coordinate system. It also uses the
 <code>setheading()</code> function to orient the spikey. Although the
-spikey will be drawn with a point straight up, it could be set to any angle.
+spikey will be drawn with a point straight up, it could be set to any కోణము.
 </p>
 <code class="tryme">function spikey ( points, revs, radius, x, y) {
-  penup()
+  కలమును_పైకి_ఎత్తు()
   goto(x, y)
   setheading(0)
-  forward(radius)
+  ముందుకు_జరుగు(radius)
   var turnAngle = 360 * revs/points
   var angleA = ( 180 - turnAngle)/2
   var stroke = 2 * radius * Math.cos( degToRad( angleA))
-  right( 180 - angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు( 180 - angleA)
+  కలమును_కింద_పెట్టు()
 
   for( var i = 0; i < points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
 }
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   for (rad = 40; rad <=100; rad = rad + 10) {
     spikey( 5, 2, rad, -10, 10)
   }
@@ -374,22 +374,22 @@ the object notation in the argument. So taking the familiar, by now,
 </p>
 <code class="tryme">function spikey ( args ) {
   for( var i=0; i < args.points; i = i+1) { //>
-    forward (args.side)
-    right( 360*args.revs/args.points)
+    ముందుకు_జరుగు(args.side)
+    కుడి_వైపు_తిరుగు( 360*args.revs/args.points)
   }
 }
 
 function demo() {
   reset();
   spikey({points:5, revs:2, side:50})
-  left(180)
+  ఎడమ_వైపు_తిరుగు(180)
   spikey({side:50, revs:2, points:5}) // order doesn't matter.
 }
 </code>
 <p>
 This was for the old simple spikey function.
 Let's say you want a spikey function that does what a
-spikey does, but now you want to add a starting point, a starting angle,
+spikey does, but now you want to add a starting point, a starting కోణము,
 a stroke width and color and a fill color. That's a lot to remember just in
 itself, but then you also have to remember the parameter order.
 Naming the parameters reduces that complexity.
@@ -402,26 +402,26 @@ the user of the function having to call it twice.
 <code class="tryme">function spikey ( args ) {
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   spikey({ points:5,
            revs:2,
            radius:15,
@@ -521,19 +521,19 @@ Let's start with simply twisting a simple star.
 <code class="tryme">function spikey ( args ) {
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -545,7 +545,7 @@ var twistAngle
 
 function twistStar() {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   spikey({
     points:5,
     revs:2,
@@ -564,7 +564,7 @@ function twistStar() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   twistAngle = 0
   twistStar()
 }
@@ -604,19 +604,19 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -632,7 +632,7 @@ function twistStar() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   twistStar()
 }
 </code>
@@ -664,19 +664,19 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -693,7 +693,7 @@ function moveStar() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   moveStar()
 }
@@ -722,19 +722,19 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -750,7 +750,7 @@ function growStar() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   growStar()
 }
@@ -782,19 +782,19 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -813,7 +813,7 @@ function changeStar() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   changeStar()
 }
@@ -864,19 +864,19 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -903,7 +903,7 @@ function changeStars() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   changeStars()
 }
@@ -968,19 +968,19 @@ var frameDelay = 30    // milliseconds between frames
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -1015,7 +1015,7 @@ function changeStar() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   changeStar()
 }
@@ -1070,19 +1070,19 @@ function generatePolys () {
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -1109,7 +1109,7 @@ function changeStars() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys()
   changeStars()
@@ -1164,19 +1164,19 @@ function generatePolys (count) {
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -1204,7 +1204,7 @@ function changeStars() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
   changeStars()
@@ -1276,19 +1276,19 @@ function generatePolys (count) {
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
   setheading( args.heading)
-  forward( args.radius)
+  ముందుకు_జరుగు( args.radius)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * args.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( args.color)
   width( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( args.fill)
 }
@@ -1332,7 +1332,7 @@ function changeStars() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
   changeStars()
@@ -1449,19 +1449,19 @@ Spikey.prototype.accelerate = function () {
 Spikey.prototype.draw = function () { // the simpler version for brevity
   goto( this.x, this.y)
   setheading( this.heading)
-  forward( this.radius)
+  ముందుకు_జరుగు( this.radius)
   var turnAngle = 360 * this.revs/this.points
   var angleA = (180 - turnAngle)/2
   var stroke = 2 * this.radius * Math.cos(degToRad(angleA))
-  right(180-angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు(180-angleA)
+  కలమును_కింద_పెట్టు()
 
   color( this.color)
   width( this.width)
   beginShape()
   for( var i = 0; i < this.points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
   fillShape( this.fill)
 }
@@ -1540,7 +1540,7 @@ function changeStars() {
 
 function demo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
   changeStars()

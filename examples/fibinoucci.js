@@ -8,12 +8,12 @@
 
 function box (side) {
   for (var i = 0; i<4; i++) {
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
   }
-  forward( side)
-  right( 90)
-  forward( side)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side)
 }
 
 function fib(count, side) {
@@ -43,7 +43,7 @@ function fib(count, side) {
 function demo() {
   reset()
   goto(150,60)
-  angle(90)
-  hideTurtle()
+  కోణము(90)
+  తాబేలును_దాచు()
   fib( 11,4)
 }

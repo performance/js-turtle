@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+   <title>తాబేలు గ్రాఫిక్స్</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <link type="text/css" rel="stylesheet" href="./turtle.css">
+<!--body onresize="resizeColumns();"> -->
+<body id="body" >
+  <a href="javascript:void(0)" id="dragbarleft"></a>
+    <span class="help_text" id="dragbarleft_help_text">
+      నిలువు వరుసల పరిమాణాన్ని మార్చడానికి డ్రాగ్ బార్‌పై క్లిక్ చేసి లాగండి.
+    </span>
+  <a href="javascript:void(0)" id="dragbarright"></a>
+    <span class="help_text" id="dragbarright_help_text">
+      నిలువు వరుసల పరిమాణాన్ని మార్చడానికి డ్రాగ్ బార్‌పై క్లిక్ చేసి లాగండి.
+    </span>
+  <div id="wrap" style="width: 1438px; height: 684px;">
+    <div id="container">
+    <div id="leftcolumncontainer">
+    <div id="leftcolumn" style="height: 680px;">
+    <div id="referencewrapper">
+      <h4 id="referenceTitle">
+        భాషా సూచన
+<!--
+        <button id="referenceClose">
+          <svg class="fi" viewBox="0 0 64 64">
+            <line x1="2" y1="2" x2="62" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
+            <line x1="62" y1="2" x2="2" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
+          </svg>
+        </button>
+-->
+<!--
+add a menu .. sort of a table of contents to jump to contents
+       <a href="#color">jump to color</a>
+also roll in the tutorial stuff
+-->
+      </h4>
+      <div id="reference">
+       <ul>
+         <li>
+           ముందుకు ( <em>దూరం</em> )
+           <p>
+             తాబేలు ముందుకు <em>దూరం</em> పిక్సెల్స్ తరలించండి .
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">ముందుకు (10)</code>
+           </p>
+         </li>
+         <li>
+           వెనుకకు ( <em>దూరం</em> )
+           <p>
+             తాబేలు వెనుకకు <em>దూరం</em> పిక్సెల్‌లు జరపండి, కానీ ముందుకే చూస్తూ ఉండండి.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">వెనుకకు (10)</code>
+           </p>
+         </li>
+         <li>
+           కుడి ( <em>కోణం</em> ) | rt ( <em>కోణం</em> ) | మలుపు ( <em>కోణం</em> )
+           <p>
+             తాబేలు లంబ <em>కోణ</em> డిగ్రీలకు తిరగండి .
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">కుడి_వైపు_తిరుగు(90)</code>
+           </p>
+         </li>
+         <li>
+           ఎడమ ( <em>కోణం</em> )
+           <p>
+             తాబేలును ఎడమ <em>కోణ</em> డిగ్రీలకు తిప్పండి.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">ఎడమ_వైపు_తిరుగు(90)</code>
+           </p>
+         </li>
+         <li>
+           కుంచికనుఎత్తు () | కుంచికనుఎత్తు () | పైకి () | pu ()
+           <p>
+              తాబేలులో పెన్ను ఎత్తండి, తద్వారా అది కదులుతున్నప్పుడు గుర్తు ఉండదు.
+           </p>
+           <p>
+              ఉదాహరణ: <code class="linked">కుంచికనుఎత్తు()</code>
+           </p>
+         </li>
+         <li>
+           పెండౌన్ () | కుంచికనుదింపు () | డౌన్ () | pd ()
+           <p>
+             తాబేలులో పెన్ను తగ్గించండి, తద్వారా అది కదిలేటప్పుడు ఒక గుర్తును వదిలివేస్తుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">కుంచికనుదింపు()</code>
+           </p>
+         </li>
+         <li>
+           తాబేలునుఅదృశ్యముచేయి () | తాబేలునుఅదృశ్యముచేయి () | ht ()
+           <p>
+             తాబేలు దాచు. ఇది ఇప్పటికీ డ్రా చేయగలదు, కానీ అది చూపబడలేదు.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">తాబేలునుఅదృశ్యముచేయి()</code>
+           </p>
+         </li>
+         <li>
+           తాబేలునుచూపు () | తాబేలునుచూపు () | st ()
+           <p>
+             తాబేలు చూపించు.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">తాబేలునుచూపు()</code>
+           </p>
+         </li>
+         <li>
+           హోమ్ ()
+           <p><font class="" style="vertical-align: inherit;">
+             తాబేలును మధ్యలో ఉన్న దాని ఇంటికి తరలించండి (x = 0, y = 0) మరియు పైభాగానికి (కోణం = 0) గురిపెట్టి.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">home()</code>
+           </p>
+         </li>
+         <li>
+           క్లియర్ ()
+           <p>
+             గ్రాఫిక్స్ ప్రాంతాన్ని క్లియర్ చేయండి, కానీ తాబేలు ఉన్న చోట వదిలివేయండి.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">clear()</code>
+           </p>
+         </li>
+         <li>
+           రీసెట్ ()
+           <p>
+             గ్రాఫిక్స్ ప్రాంతాన్ని క్లియర్ చేసి, తాబేలును మధ్యలో ఉన్న దాని ఇంటికి (x = 0, y = 0) తరలించి, పై వైపుకు (కోణం = 0) చూపండి.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">reset()</code>
+           </p>
+         </li>
+         <li>
+           స్థానానికివెళ్ళు ( <em>x</em> , <em>y</em> ) | స్థానానికివెళ్ళు ( <em>x</em> , <em>y</em> ) | స్థానానికివెళ్ళు ( <em>x</em> , <em>y</em> ) | స్థానానికివెళ్ళు ( <em>x</em> , <em>y</em> ) | స్థానానికివెళ్ళు ( <em>x</em> , <em>y</em> )
+           <p>
+             తాబేలు డ్రాయింగ్ ప్రాంతం మధ్యలో కుడి వైపున ఉన్న <em>x</em> పిక్సెల్స్ (లేదా మధ్యలో ఎడమవైపు <em>-x</em> పిక్సెల్స్) మరియు డ్రాయింగ్ ప్రాంతం మధ్యలో <em>y</em> పిక్సెల్స్ (లేదా <em>-y</em> మధ్యలో దిగువకు) <em>తరలించండి</em> . ఇది మార్గంలో డ్రా చేయదు.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">స్థానానికివెళ్ళు (20,10)</code>
+           </p>
+         </li>
+         <li>
+           setx ( <em>x</em> ) | setX ( <em>x</em> )
+           <p>డ్రాయింగ్ ప్రాంతం మధ్యలో కుడి వైపున 
+             ఉన్న కోఆర్డినేట్స్ <em>x</em> పిక్సెల్‌లకు తాబేలును అడ్డంగా తరలించండి (లేదా మధ్యలో ఎడమవైపు <em>-x</em> పిక్సెల్‌లు).
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">setx (0)</code>
+           </p>
+         </li>
+         <li>
+           సెట్లు ( <em>లు</em> ) | setY ( <em>లు</em> )
+           <p>
+             తాబేలు నిలువుగా డ్రాయింగ్ ప్రాంతం మధ్యలో ఉన్న కోఆర్డినేట్స్ <em>y</em> పిక్సెల్‌లకు తరలించండి (లేదా <em>-y</em> మధ్యలో దిగువకు). ఇది మార్గంలో డ్రా చేయదు.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">sety (0)</code>
+           </p>
+         </li>
+         <li>
+           కోణం ( <em>కోణం</em> ) | సెట్ హెడ్డింగ్ ( <em>కోణం</em> ) | seth ( <em>కోణం</em> )
+           <p>
+             తాబేలు గ్రాఫిక్ ప్రాంతానికి పైభాగానికి సంబంధించి సంపూర్ణ <em>కోణానికి</em> తిరగండి . <em>0</em> పైభాగం, <em>0</em> పైభాగం,
+              <em>90</em> కుడి వైపు, <em>180</em> దిగువ వైపు, మరియు
+              <em>270 </em> <em>-90</em> ఎడమ వైపు.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">కోణము (90)</code>
+           </p>
+         </li>
+         <li>
+           వెడల్పు ( <em>వెడల్పు</em> ) | పెన్సైజ్ ( <em>వెడల్పు</em> ) | penSize ( <em>వెడల్పు</em> ) | పెన్విడ్త్ ( <em>వెడల్పు</em> ) | penWidth ( <em>వెడల్పు</em> ) | 
+           <p>తాబేలు పెన్ 
+             యొక్క <em>వెడల్పును</em> మార్చండి (పిక్సెల్‌లలో).
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">వెడల్పు(5);</code>
+           </p>
+         </li>
+         <li>
+<!--
+<a name="color"></a>
+-->
+           రంగు ( <em>కలర్‌కోడ్</em> )
+           <p>
+             తాబేలు పెన్ యొక్క రంగును మార్చండి. <em>ColorCode</em> ప్రామాణిక తాబేలు గ్రాఫిక్స్ రంగులను తెలిపే నుండి 0 15 ఒక సంఖ్య కావచ్చు.
+             <br>
+             <button id="black">0 నలుపు</button>
+             <button id="blue">1 నీలం</button>
+             <button id="lime">2 సున్నం</button>
+             <button id="cyan">3 సియాన్</button>
+             <button id="red">4 ఎరుపు</button>
+             <button id="magenta">5 మెజెంటా</button>
+             <button id="yellow">6 పసుపు</button>
+             <button id="white">7 తెలుపు</button>
+             <button id="brown">8 బ్రౌన్</button>
+             <button id="tan">9 తాన్</button>
+             <button id="green">10 ఆకుపచ్చ</button>
+             <button id="aqua">11 ఆక్వా</button>
+             <button id="salmon">12 సాల్మన్</button>
+             <button id="purple">13 ple దా</button>
+             <button id="orange">14 నారింజ</button>
+             <button id="gray">15 బూడిద</button>
+           </p>
+           <p><em>ColorCode</em> కూడా వంటి ఏ ఆమోదయోగ్యమైన CSS రంగు కోడ్ తో ఒక కోటెడ్ స్ట్రింగ్ ఉండవచ్చు:
+           </p>
+             <ul>
+               <li>
+                 " <em>colorName</em> ", ఇక్కడ <em>colorName</em> పేరున్న CSS రంగులలో ఏదైనా.
+               </li>
+               <li>
+                 "# <em>RRGGBB</em> " ఇక్కడ <em>RR</em> , <em>GG</em> మరియు <em>BB</em> వరుసగా ఎరుపు, ఆకుపచ్చ మరియు నీలం యొక్క హెక్సిడెసిమల్ మొత్తం.
+               </li>
+               <li>
+                 "rgb ( <em>RR</em> , <em>GG</em> , <em>BB</em> )" ఇక్కడ <em>RR</em> , <em>GG</em> మరియు <em>BB</em> వరుసగా ఎరుపు, ఆకుపచ్చ మరియు నీలం యొక్క దశాంశ మొత్తం. ప్రతి విలువ 0 మరియు 255 మధ్య ఉంటుంది.
+               </li>
+               <li>
+                 "rgba ( <em>RR</em> , <em>GG</em> , <em>BB</em> , <em>AA</em> )" ఇక్కడ <em>RR</em> , <em>GG</em> మరియు <em>BB</em> వరుసగా ఎరుపు, ఆకుపచ్చ మరియు నీలం యొక్క దశాంశ మొత్తం మరియు
+                  <em>AA</em> అపారదర్శకతకు 1.0 మరియు పూర్తిగా పారదర్శకంగా 0.0 మధ్య పారదర్శకత కోసం ఆల్ఫా ఛానల్.
+               </li>
+               <li>
+                 "hsl ( <em>రంగు</em> , <em>సంతృప్తత%</em> , <em>తేలిక%</em> , <em>AA</em> )" విలువలు ఇక్కడ ఉన్నాయి:
+		  <em>రంగు</em> రంగు చక్రంలో స్థానం (0 నుండి 360 వరకు),
+                  <em>సంతృప్తత%</em> సంతృప్త శాతం మరియు
+	          <em>తేలిక</em> %% తేలిక శాతం.
+               </li>
+               <li>
+                 "HSL ( <em>రంగు</em> , <em>సంతృప్త%</em> , <em>తేలిక%</em> , <em>AA</em> )" విలువలు ఎక్కడ:
+		  <em>రంగు</em> రంగు చక్రం స్థానం (0 360) ఉంది,
+                  <em>సంతృప్త%</em> సంతృప్త శాతం, ఉంది
+	          <em>తేలిక%</em> తేలిక శాతం, మరియు 
+                  <em>AA</em> ఉంది అపారదర్శకతకు 1.0 మరియు పూర్తిగా పారదర్శకంగా 0.0 మధ్య పారదర్శకత కోసం ఆల్ఫా ఛానల్.
+               </li>
+             </ul> 
+           <p>
+             ఉదాహరణ: <code class="linked">color(1)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">color("red")</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">color("#ff0000")</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">color("rbg(255,0,0)")</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">color("rbg(255,0,0, .5)")</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">color("hsl( 0, 100, 100")</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">color("hsl( 0, 100, 100, .4")</code>
+           </p>
+         </li>
+         <li>
+           వ్రాయండి ( <em>స్ట్రింగ్</em> )
+           <p>తాబేలు యొక్క అంచనా మార్గంలో 
+             వచనాన్ని <em>స్ట్రింగ్‌లో</em> ఉంచుతుంది. <em>స్ట్రింగ్</em> సింగిల్ లేదా డబుల్ కొటేషన్ మార్కులు చుట్టబడి అక్షరాలు సమితి ఉండవచ్చు. <em>స్ట్రింగ్</em> కూడా ఒక ఫంక్షన్ ద్వారా తిరిగి ఒక విలువ కావచ్చు.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము("Hello World")</code>
+           </p>
+         </li>
+         <li>
+           setfont ( <em>fontName</em> ) | <em>setFont</em> ( <em>fontName</em> )
+           <p>తదుపరి రచనల కోసం ఫాంట్ కోసం కావలసిన 
+             లక్షణాలను ( <em>శైలి</em> , <em>వేరియంట్</em> , <em>బరువు</em> ,
+              <em>పరిమాణం</em> మరియు <em>ఫాంట్-కుటుంబం సెట్ చేయండి</em> .
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">setfont("italic small-caps bold 12px courier")</code>
+           </p>
+         </li>
+         <li>
+           వక్రత ( <em>వ్యాసార్థం</em> [, <em>పరిధి</em> ]) | కర్వ్‌రైట్ ( <em>వ్యాసార్థం</em> [, <em>పరిధి</em> ])
+           <p>
+             తాబేలు యొక్క స్థానం నుండి వృత్తాకార వక్రరేఖను గీయండి. వక్రరేఖ యొక్క కేంద్రం తాబేలు యొక్క కుడి వైపున <em>వ్యాసార్థం</em> పిక్సెల్స్ లంబంగా ఉంటుంది . తప్ప వక్రత పూర్తి సర్కిల్
+              <em>మేరకు</em> ఆర్క్ డిగ్రీల సంఖ్య పరిమితం అందించబడుతుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">కుడివైపువక్రగీత(30)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">కుడివైపువక్రగీత(10,45)</code>
+           </p>
+         </li>
+         <li>
+           కర్వ్లెఫ్ట్ ( <em>వ్యాసార్థం</em> [, <em>పరిధి</em> ]) | కర్వ్ లెఫ్ట్ ( <em>వ్యాసార్థం</em> [, <em>పరిధి</em> ])
+           <p>
+             తాబేలు యొక్క స్థానం నుండి వృత్తాకార వక్రరేఖను గీయండి. వక్రరేఖ యొక్క కేంద్రం తాబేలు యొక్క ఎడమ వైపున <em>వ్యాసార్థం</em> పిక్సెల్స్ యొక్క లంబ దూరం వద్ద ఉంటుంది . తప్ప వక్రత పూర్తి సర్కిల్
+              <em>మేరకు</em> ఆర్క్ డిగ్రీల సంఖ్య పరిమితం అందించబడుతుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">ఎడమవైపువక్రగీత(20)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">ఎడమవైపువక్రగీత(10,45)</code>
+           </p>
+         </li>
+         <li>
+           వృత్తం ( <em>వ్యాసార్థం</em> [[, ( <em>పరిధి</em> ], ( <em>CCW</em> ])
+           <p>
+             తాబేలు యొక్క స్థానం మీద కేంద్రీకృతమై ఒక వృత్తం లేదా ఆర్క్ గీయండి. వరకు ఒక పూర్తి వృత్తం గీస్తారు <em>మేరకు</em> ఆర్క్ డిగ్రీల సంఖ్య పరిమితం అందించబడుతుంది. బూలియన్ <em>CCW</em> 
+             సరఫరా చేయబడితే మరియు <em>తప్పుడు</em> విలువను కలిగి ఉండకపోతే ఆర్క్ సవ్యదిశలో డ్రా అవుతుంది .
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">వృత్తము(10)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">వృత్తము(20,90)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">వృత్తము(30,-90,false)</code>
+           </p>
+         </li>
+         <li>
+           డాట్ ([ <em>వ్యాసార్థం</em> ])
+           <p>
+// పిక్సెల్‌లలో వ్యాసార్థం (ఏదీ లేకపోతే, గరిష్టంగా పెన్సైజ్ + 4, 2 * పెన్సైజ్) తాబేలు యొక్క స్థానం మీద కేంద్రీకృతమై నిండిన వృత్తాన్ని గీయండి. వృత్తం <em>వ్యాసార్థం</em> ) పిక్సెల్‌లతో గీస్తారు . ఉంటే
+              <em>వ్యాసార్థం</em> ) పేర్కొనబడలేదు, దానిని వెడల్పు ప్లస్ 4 లేదా రెండుసార్లు pensize) పెద్ద డిఫాల్ట్. 
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">నిండువృత్తము()</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">నిండువృత్తము(10)</code>
+           </p>
+         </li>
+         <li>
+           ప్రారంభ షేప్ () | beginShape ()
+           <p>
+              నింపాల్సిన ఆకారం యొక్క ప్రారంభాన్ని సూచిస్తుంది. ఆకారం పంక్తి విభాగాల సమితిని కలిగి ఉంటుంది (ముందుకు, వెనుకకు, కుడి, ఎడమ, వక్రత, కర్వ్ లెఫ్ట్). సెట్ నిరంతరంగా ఉండాలి మరియు ప్రారంభించి అదే సమయంలో ముగుస్తుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">beginShape()</code>
+           </p>
+         </li>
+         <li>
+           fillShape ([శైలి])
+           <p>
+              చివరి ప్రారంభ షేప్ () ఆదేశంతో ప్రారంభించిన ఆకారాన్ని నింపుతుంది. ఆకారం <em>స్టైల్‌తో</em> నిండి ఉంటుంది , ఇది లోగో రంగు సంఖ్య, సాధారణ HTML రంగు నిర్వచనం (పై రంగు చూడండి), ప్రవణత లేదా నమూనా కావచ్చు. ఇది తాబేలు రంగుకు డిఫాల్ట్ అవుతుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">fillShape("blue")</code>
+           </p>
+         </li>
+         <li>
+           n = యాదృచ్ఛిక ([ <em>తక్కువ,</em> ] <em>అధిక</em> )
+           <p><em>తక్కువ</em> మరియు <em>అధిక</em> -1 
+             మధ్య యాదృచ్ఛిక సంఖ్యను ఎంచుకోండి . ఒక విలువ <em>అధికంగా</em> మాత్రమే అందించబడితే, 0 మరియు <em>అధిక</em> -1 మధ్య సంఖ్యను ఎంచుకోండి
+              .
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము(యాదృచ్ఛికసంఖ్య(1,7)+ " ")</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము(యాదృచ్ఛికసంఖ్య(6)+ " ")</code>
+           </p>
+         </li>
+         <li>
+           పునరావృతం ( <em>n</em> , <em>చర్య</em> )
+           <p>
+             ఫంక్షన్ <em>చర్య</em> లేదా చర్యల సమూహాన్ని <em>n</em> సార్లు పునరావృతం చేయడానికి
+              అనుమతిస్తుంది .
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">repeat (4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; repeat (4, el)</code>
+           </p>
+         </li>
+         <li>
+           చుట్టు ( <em>బూల్</em> )
+           <p>
+             గ్రాఫిక్ ప్రాంతం యొక్క అంచుల వద్ద <em>నిజం</em> లేదా <em>తప్పు అని</em> చెప్పడం ద్వారా చుట్టడం ఆన్ మరియు ఆఫ్
+              చేస్తుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">wrap(true)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">wrap(false)</code>
+           </p>
+         </li>
+         <li>
+           యానిమేట్ ( <em>చర్య</em> , <em>ఎంఎస్</em> )
+           <p>ప్రతి <em>ఎంఎస్</em> మిల్లీసెకన్ల <em>చర్యను అంచనా</em> 
+             వేస్తుంది .
+           <em></em></p>
+           <p>
+             ఉదాహరణ: <code class="linked">animate ("ముందుకు_జరుగు(10)",100)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">animate ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; animate (el,100)</code>
+           </p>
+         </li>
+         <li>
+           ఆలస్యం ( <em>చర్య</em> , <em>ms</em> )
+           <p><em>MS</em> మిల్లీసెకన్ల ఆలస్యం తర్వాత <em>చర్యను అంచనా</em> 
+             వేస్తుంది .
+           <em></em></p>
+           <p>
+             ఉదాహరణ: <code class="linked">delay ("ముందుకు_జరుగు(10)",1000)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">delay ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",1000)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
+           </p>
+         </li>
+         <li>
+           redrawOnMove ( <em>బూల్</em> )
+           <p>
+             పేర్కొనడం ద్వారా లేదా ఆఫ్ redrawing అంతటినీ తిరగండి <em>bool</em> వంటి
+              <em>నిజమైన</em> లేదా <em>తప్పుడు</em> .
+             <!-- Not sure that this is useful. -->
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">redrawOnMove(true)</code>
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">redrawOnMove(false)</code>
+           </p>
+         </li>
+         <li>
+           డ్రా ()
+           <p>
+             తాబేలు మరియు ప్రస్తుత చిత్రాన్ని గీయండి.
+             <!-- Not sure that this is useful. -->
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">draw()</code>
+           </p>
+         </li>
+         <li>
+           n = minx () | n = minX ()
+           <p>
+             X యొక్క కనీస విలువను పిక్సెల్‌లలో తిరిగి ఇవ్వండి
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము(minX())</code>
+           </p>
+         </li>
+         <li>
+           n = గరిష్టంగా () | n = maxX ()
+           <p>
+             X యొక్క గరిష్ట విలువను పిక్సెల్‌లలో తిరిగి ఇవ్వండి
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము(maxX())</code>
+           </p>
+         </li>
+         <li>
+           n = గనులు () | n = minY ()
+           <p>
+             Y యొక్క కనీస విలువను పిక్సెల్‌లలో తిరిగి ఇవ్వండి
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము(minY())</code>
+           </p>
+         </li>
+         <li>
+           n = మాక్సి () | n = maxY ()
+           <p>
+             Y యొక్క గరిష్ట విలువను పిక్సెల్‌లలో తిరిగి ఇవ్వండి
+           </p>
+           <p>
+             ఉదాహరణ: <code class="linked">సందేశము(maxY())</code>
+           </p>
+         </li>
+       </ul>
+      </div> <!-- reference -->
+      </div> <!-- referencewrapper -->
+      </div> <!-- leftcolumn -->
+      </div> <!-- leftcolumncontainer -->
+         <span class="help_text" id="reference_help_text" style="top: 421px; left: 352px; display: none;">
+           <p>
+           తాబేలు గ్రాఫిక్స్ కోసం అందుబాటులో ఉన్న విధులను భాషా సూచన జాబితా చేస్తుంది.
+           </p>
+           <p>
+           పారామితులు కుండలీకరణాలు '(' మరియు ')' <em>అక్షరాలలో</em> చేర్చబడ్డాయి. ఐచ్ఛిక పారామితులు మరియు వేరుచేసే కామాలతో చదరపు బ్రాకెట్ '[' మరియు ']' అక్షరాలతో జతచేయబడతాయి (చదరపు బ్రాకెట్లను నమోదు చేయకూడదు).
+           </p>
+           <p>
+           ఫంక్షన్ల యొక్క ప్రత్యామ్నాయ రూపాలు '|' పైపుతో వేరు చేయబడతాయి అక్షరం (ఉదా., పిల్లి () | కుక్క () అంటే పిల్లి () లేదా కుక్క ()). 
+           </p>
+           <p>
+            ఉదాహరణలు చూపించబడ్డాయి <code>bold typewriter font</code>. ప్రతి ఉదాహరణ అది ఏమి చేస్తుందో చూడటానికి దాన్ని వెంటనే అమలు చేయడానికి క్లిక్ చేయవచ్చు.
+           </p>
+         </span>
+      <div id="midcolumncontainer">
+      <div id="midcolumn" style="height: 680px;">
+        <h4 id="canvastitle">కాన్వాస్
+         <button id="infoButton">i</button>
+         <span class="help_text" id="infoButton_help_text">
+           <p><strong>నేను</strong> బటన్ చెల్లింపులో టెక్స్ట్ సహాయం పనిచేస్తుంటుంది.
+           </p>
+         </span>
+        </h4>
+<!--
+          <canvas2 id="turtlecanvas2" width="300" height="300"></canvas2>
+          <canvas2 id="imagecanvas2" width="300" height="300" style="display:none"></canvas2>
+-->
+      <div id="canvaswrapper" style="height: 551px;">
+          <canvas id="turtlecanvas" width="463" height="543"></canvas>
+          <canvas id="imagecanvas" width="463" height="543"></canvas>
+         <span class="help_text" id="turtlecanvas_help_text" style="top: 448px; left: 911px; display: none;">
+           <p>
+           తాబేలు గ్రాఫిక్స్ గీసిన చోట కాన్వాస్ ఉంటుంది. తాబేలు దాని ప్రయాణ దిశలో సూచించే ఆకుపచ్చ త్రిభుజం.
+           </p>
+         </span>
+      </div> <!-- canvaswrapper -->
+      <div id="commandwrapper"> <!-- commandwrapper -->
+        <label id="commandLabel" for="#command">ఆదేశం</label>
+        <input type="text" id="command">
+         <span class="help_text" id="command_help_text">
+           <p>
+           కమాండ్ ప్రాంతం అంటే ENTER (రిటర్న్) కీని నొక్కడం ద్వారా టెక్స్ట్ ఎంటర్ చేసి అమలు చేయవచ్చు.
+           </p>
+         </span>
+         <button id="resetButton">రీసెట్ చేయండి</button>
+         <span class="help_text" id="resetButton_help_text">
+           <p>
+           The <strong>Reset</strong> button clears the canvas and moves the turtle to its start
+           position.
+           </p>
+         </span>
+         <button id="runButton">డెమోని అమలు చేయండి</button>
+         <span class="help_text" id="runButton_help_text">
+           <p the="" <strong="">Run Demo button runs the function in the <strong>Code</strong> area named 
+           demo().
+           </p>
+         </span>
+         <button id="stopButton" hidden="">Stop</button>
+         <span class="help_text" id="stopButton_help_text">
+           <p>
+           The <strong>Stop</strong> button stops animation.
+           </p>
+         </span>
+         <a id="saveCanvasButton">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 333.668 333.668" style="enable-background:new 0 0 333.668 333.668;" xml:space="preserve">
+<g>
+        <path d="M295.101,298.649H38.561C17.295,298.649,0,281.354,0,260.088V103.703c0-21.266,17.295-38.561,38.561-38.561h52.347
+                l4.582-15.457c1.87-8.458,9.602-14.666,18.696-14.666h105.297c8.837,0,16.658,6.176,18.728,14.743l0.122,0.527l4.177,14.852h52.597
+                c21.266,0,38.561,17.295,38.561,38.561v156.384C333.662,281.354,316.361,298.649,295.101,298.649z M38.561,77.996
+                c-14.178,0-25.707,11.53-25.707,25.707v156.384c0,14.178,11.53,25.707,25.707,25.707h256.54c14.178,0,25.707-11.53,25.707-25.707
+                V103.703c0-14.178-11.53-25.707-25.707-25.707h-62.327l-7.037-25.097c-0.649-2.918-3.278-5.032-6.26-5.032H114.179
+                c-3.027,0-5.598,2.069-6.26,5.039l-7.429,25.09H38.561z M166.841,259.798c-44.981,0-81.576-36.588-81.576-81.563
+                c0-44.981,36.594-81.569,81.576-81.569c44.969,0,81.557,36.594,81.557,81.569C248.397,223.204,211.809,259.798,166.841,259.798z
+                 M166.841,109.513c-37.893,0-68.722,30.823-68.722,68.716s30.83,68.709,68.722,68.709c37.886,0,68.703-30.823,68.703-68.709
+                C235.543,140.336,204.72,109.513,166.841,109.513z M286.804,101.852c-6.555,0-11.858,5.315-11.858,11.858
+                c0,6.549,5.302,11.857,11.858,11.857c6.549,0,11.851-5.309,11.851-11.857C298.649,107.167,293.346,101.852,286.804,101.852z"></path>
+</g></svg>
+        </a>
+         <span class="help_text" id="saveCanvasButton_help_text">
+           <p>
+           The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser download file with the name TurtleGraphic.png.
+           </p>
+         </span>
+        </div> <!-- commandwrapper -->
+      </div> <!-- midcolumn -->
+      </div> <!-- midcolumncontainer -->
+      <div id="rightcolumncontainer">
+      <div id="rightcolumn" style="height: 680px;">
+      <div id="examplewrapper">
+	<h4>కోడ్ ప్రాంతం
+        <!-- need to change name Examples to Code Area -->
+        <!-- The select options are populated with a tool, DO NOT EDIT. -->
+        <select id="examples">
+          <option selected="" value="example">ఉదాహరణలు</option>
+          <option value="arc_test">ఆర్క్ మరియు కర్వ్ టెస్ట్</option>
+          <option value="basket_weave_tessellation">బాస్కెట్ వీవ్ టెస్సెలేషన్</option>
+          <option value="bounce">బౌన్స్ దీర్ఘచతురస్రాలు</option>
+          <option value="brick_tessellation">ఇటుక టెస్సెలేషన్</option>
+          <option value="cafe_wall_illusion">కేఫ్ వాల్ ఇల్యూజన్</option>
+          <option value="circle_eye2">సర్కిల్ ఐ 2</option>
+          <option value="circle_eye">సర్కిల్ ఐ</option>
+          <option value="clock_BCD">గడియారం, బిసిడి</option>
+          <option value="clock_digital">గడియారం, డిజిటల్</option>
+          <option value="clock">గడియారం, అనలాగ్</option>
+          <option value="collidescape">కొలిడ్‌స్కేప్ (టిఎం)</option>
+          <option value="color_changing_dots">రంగు మారుతున్న చుక్కలు</option>
+          <option value="compass_rose2">కంపాస్ రోజ్ 2</option>
+          <option value="compass_rose">కంపాస్ రోజ్</option>
+          <option value="compass_rose_quilt">కంపాస్ రోజ్ క్విల్ట్</option>
+          <option value="connected_points">కనెక్ట్ చేయబడిన పాయింట్లు</option>
+          <option value="conway_fractal">కాన్వే ఫ్రాక్టల్</option>
+          <option value="conway_pinwheel">కాన్వే పిన్‌వీల్</option>
+          <option value="coordinates">కోఆర్డినేట్స్</option>
+          <option value="dividing_circle">ఒక వృత్తాన్ని విభజించడం</option>
+          <option value="dodecahedron_graph">Dodecahedron Graph</option>
+          <option value="dragon_curve">Dragon Curve</option>
+          <option value="example">Example</option>
+          <option value="eye_simulator">Eye Simulator</option>
+          <option value="fibinoucci">Fibanochi sequence</option>
+          <option value="gosper_curve">Gosper Curve</option>
+          <option value="graphitti">Graphitti</option>
+          <option value="heart">Heart</option>
+          <option value="herring_bone_tessellation">Herring Bone Tessellation</option>
+          <option value="hexapentakis_truncated_icosahedron_asymmetric_full">Hexapentakis-Truncated-Icosahedron-Asymmetric full</option>
+          <option value="hexapentakis_truncated_icosahedron_symmetric_full">Hexapentakis-Truncated-Icosahedron Symmetric full</option>
+          <option value="hexapentakis_truncated_icosahedron_symmetric_half">Hexapentakis Truncated Icosahedron half</option>
+          <option value="hex_tessellation">Hexagon Tessellation</option>
+          <option value="hilbert_curve">Hilbert Curve</option>
+          <option value="hirschhorn_tiles">Hircshhorn Tiles</option>
+          <option value="home_plate_tessellation">Home Plate Tessellation</option>
+          <option value="icosahedron_graph">Icosahedron Graph</option>
+          <option value="intersection_simulator">Intersection Simulator</option>
+          <option value="jumping_jack">Jumping Jack</option>
+          <option value="koch_line">Koch Lines</option>
+          <option value="koch_snowflake2">Koch Snowflake 2</option>
+          <option value="koch_snowflake">Koch Snowflakes</option>
+          <option value="koch_triangles_stacked">Koch Snowflakes, Stacked</option>
+          <option value="life">Life</option>
+          <option value="miura_origami">Miura Origami</option>
+          <option value="mountain_tessellation">Mountain Tessellation</option>
+          <option value="naifeh_ajlun">Naifah Ajlun</option>
+          <option value="naifeh_cyrene">Naifah Cyrene</option>
+          <option value="naifeh_jeresh">Naifah Jeresh</option>
+          <option value="naifeh_mamluk">Naifeh Mamluk</option>
+          <option value="naifeh_mizen6">Naifeh Mizen Six</option>
+          <option value="naifeh_mizen">Naifeh Mizen Simple</option>
+          <option value="naifeh_petra">Naifeh Petra</option>
+          <option value="naifeh_saida_inverse">Naifeh Saida Inverse</option>
+          <option value="naifeh_saida">Naifeh Saida</option>
+          <option value="nested_hexagons">Nested Hexagons</option>
+          <option value="nested_squares">Nested Squares</option>
+          <option value="pentahex">Pentahex</option>
+          <option value="polygon">Polygon</option>
+          <option value="random_stars">Random Stars</option>
+          <option value="random_stick_men">Random Stick Men</option>
+          <option value="rhombic_star_tessellation">Rhombic Star Tessellation</option>
+          <option value="rice_penta_tessellation_1">Rice Penta Tessellation 1</option>
+          <option value="serendipitous">Serendipitous Circles</option>
+          <option value="sierpinski_curve">Sierpinski Curve</option>
+          <option value="sierpinski_triangle">Sierpinski Triangle</option>
+          <option value="simple_story">Simple Story</option>
+          <option value="sliding_block">Sliding Block Puzzle</option>
+          <option value="snowman">Snowman</option>
+          <option value="snub_icosidodecahedron">Snub Icosidodecahedron Half</option>
+          <option value="spinning_squares">స్పిన్నింగ్ స్క్వేర్స్</option>
+          <option value="spiral">మురి</option>
+          <option value="square_lines">స్క్వేర్ లైన్స్</option>
+          <option value="square_series">స్క్వేర్ సిరీస్</option>
+          <option value="square_tessellation">స్క్వేర్ టెస్సెలేషన్</option>
+          <option value="squiggle">స్క్విగ్లే</option>
+          <option value="stamps">స్టాంపులు</option>
+          <option value="star_burst">స్టార్‌బర్స్ట్</option>
+          <option value="star">నక్షత్రం</option>
+          <option value="stars_and_rhombuses">స్టార్స్ మరియు రాంబస్</option>
+          <option value="tree">చెట్టు సుష్ట</option>
+          <option value="triangle_tessellation">త్రిభుజం టెస్లేషన్</option>
+          <option value="triangle_tunnel">ట్రయాంగిల్ టన్నెల్</option>
+          <option value="two_square_tessellation">రెండు స్క్వేర్ టెస్సెలేషన్</option>
+          <option value="US_flag">యుఎస్ ఫ్లాగ్</option>
+          <option value="wang_tiles">వాంగ్ టైల్స్</option>
+          <option value="waves">తరంగాలు</option>
+        </select>
+        <!-- The above select options are populated with a tool, DO NOT EDIT. -->
+        <span class="left_help_text" id="examples_help_text" style="top: 51px; right: 27px; display: none;">
+          <p>
+          The <strong>Examples select</strong> is used to load an example into the
+          <strong>defintions</strong> area.
+          </p>
+          <p>
+          The example can be run with the <strong>Run Demo</strong> button.
+          </p>
+        </span>
+      </h4>
+      <textarea id="codeArea" style="height: 615px;">/* Define helper functions here
+or write your own functions
+
+For example:    */
+
+function square(side) {
+  repeat(4, function () {
+    ముందుకు_జరుగు(side);
+    కుడి_వైపు_తిరుగు(90);
+  });
+}
+
+function demo() {
+  తాబేలునుఅదృశ్యముచేయి();
+  color("blue");
+  var s = 100;
+  while (s &gt; 0) {
+    square(s);
+    కుడి_వైపు_తిరుగు(36);
+    s = s - 10;
+  }
+}
+         </textarea> <!-- codeArea -->
+         <span class="left_help_text" id="codeArea_help_text" style="top: 424px; right: 348px; display: none;">
+           <p>
+           కోడ్ ప్రాంతం బహుళ-లైన్ ప్రోగ్రామ్‌లు, సహాయక విధులు మరియు ఉదాహరణల ప్రవేశం కోసం.
+           </p>
+           <p>
+           కోడ్‌ను పరిశీలించవచ్చు లేదా కావలసిన విధంగా సవరించవచ్చు.
+           </p>
+           <p><strong>కమాండ్</strong> లైన్‌లో (ఉదాహరణకు 
+           :) టైప్ చేసి, <code>demo()</code>ENTER లేదా RETURN నొక్కడం ద్వారా వ్యక్తిగత ఫంక్షన్లను అమలు చేయవచ్చు
+            .
+           </p>
+        </span>
+      <div id="codeButtons"> <!-- codebuttons -->
+        <input type="file" id="uploadFile" accept=".js,.txt">
+        <button id="uploadButton">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60.903 60.903" style="enable-background:new 0 0 60.903 60.903;" xml:space="preserve">
+<g>
+	<path d="M49.561,16.464H39.45v6h10.111c3.008,0,5.341,1.535,5.341,2.857v26.607c0,1.321-2.333,2.858-5.341,2.858H11.34
+		c-3.007,0-5.34-1.537-5.34-2.858V25.324c0-1.322,2.333-2.858,5.34-2.858h10.11v-6H11.34C4.981,16.466,0,20.357,0,25.324v26.605
+		c0,4.968,4.981,8.857,11.34,8.857h38.223c6.357,0,11.34-3.891,11.34-8.857V25.324C60.902,20.355,55.921,16.464,49.561,16.464z"></path>
+	<path d="M39.529,29.004c-0.768,0-1.535,0.294-2.121,0.88l-3.756,3.755V20.612v-6V3.117c0-1.656-1.343-3-3-3s-3,1.344-3,3v11.494v6
+		v13.23l-3.959-3.958c-0.586-0.586-1.354-0.88-2.121-0.88s-1.535,0.294-2.121,0.88c-1.172,1.17-1.172,3.07,0,4.241l8.957,8.957
+		c0.586,0.586,1.354,0.877,2.12,0.877c0.008,0,0.016,0,0.023,0s0.015,0,0.022,0c0.768,0,1.534-0.291,2.12-0.877l8.957-8.957
+		c1.172-1.171,1.172-3.071,0-4.241C41.064,29.298,40.298,29.004,39.529,29.004z"></path>
+</g></svg>
+        </button>
+         <span class="left_help_text" id="uploadButton_help_text">
+           <p><strong>అప్లోడ్</strong> బటన్ కోడ్ అక్షర పేటికలో లోడ్ ఫైల్ ను ఒక డైలాగ్ తెరుచుకుంటుంది.
+           </p>
+         </span>
+        <button id="downloadButton">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 67.671 67.671" style="enable-background:new 0 0 67.671 67.671;" xml:space="preserve">
+<g>
+	<path d="M52.946,23.348H42.834v6h10.112c3.007,0,5.34,1.536,5.34,2.858v26.606c0,1.322-2.333,2.858-5.34,2.858H14.724
+		c-3.007,0-5.34-1.536-5.34-2.858V32.207c0-1.322,2.333-2.858,5.34-2.858h10.11v-6h-10.11c-6.359,0-11.34,3.891-11.34,8.858v26.606
+		c0,4.968,4.981,8.858,11.34,8.858h38.223c6.358,0,11.34-3.891,11.34-8.858V32.207C64.286,27.239,59.305,23.348,52.946,23.348z"></path>
+	<path d="M24.957,14.955c0.768,0,1.535-0.293,2.121-0.879l3.756-3.756v13.028v6v11.494c0,1.657,1.343,3,3,3s3-1.343,3-3V29.348v-6
+		V10.117l3.959,3.959c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242l-8.957-8.957
+		C35.492,0.291,34.725,0,33.958,0c-0.008,0-0.015,0-0.023,0s-0.015,0-0.023,0c-0.767,0-1.534,0.291-2.12,0.877l-8.957,8.957
+		c-1.172,1.171-1.172,3.071,0,4.242C23.422,14.662,24.189,14.955,24.957,14.955z"></path>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+</svg>
+        </button>
+         <span class="left_help_text" id="downloadButton_help_text">
+           <p><strong>డౌన్లోడ్</strong> బటన్ బ్రౌజర్ ద్వారా డౌన్ నియమించబడిన డైరెక్టరీ కోడ్ అక్షర పేటికలో డౌన్లోడ్ చేసుకుంటుంది.
+           </p>
+         </span>
+        <input type="text" id="downloadFilename" placeholder="తాబేలు గ్రాఫిక్">.js
+         <span class="left_help_text" id="downloadFilename_help_text">
+           <p><strong>డౌన్లోడ్ ఫైలుపేరు</strong> టెక్స్ట్ ప్రాంతం డౌన్లోడ్ డైరెక్టరీని కోడ్ టెక్స్ట్ ప్రాంతాన్ని డౌన్లోడ్ చేసినప్పుడు ఉపయోగించిన ఫైల్ పేరు కలిగి.
+           </p>
+         </span>
+
+<!--
+         <button id="saveButton">Download</button>
+         <span class='left_help_text' id='saveButton_help_text'>
+           <p>
+           The <strong>Save</strong> button downloads the code in the code area to the filename in the download directory designated by the browser.
+           </p>
+         </span>
+         <input type="text" class="filename" id="code_filename" placeholder="turtleCode"/>.js</label>
+         <span class='help_text' id='code_filename_help_text'>
+           <p>
+              The <strong>Save</strong> text area accepts the name of a JavaScript file name to be saved.
+           </p>
+         </span>
+-->
+         <button id="clearButton">క్లియర్</button>
+         <span class="left_help_text" id="clearButton_help_text">
+           <p><strong>ప్రశాంతంగా</strong> బటన్ కొత్త కార్యక్రమాలను ఎంట్రీ అనుమతించటానికి టెక్స్ట్ ప్రాంతం క్లియర్ చేస్తుంది.
+           </p>
+         </span>
+        </div> <!-- codebuttons -->
+      </div> <!-- examplewrapper -->
+      </div> <!-- rightcolumn -->
+      </div> <!-- rightcolumncontainer -->
+   </div> <!-- container-->
+   </div> <!-- wrap-->
+
+<!-- scripts -->
+   <script type="text/javascript" src="examples.js"></script>
+   <script type="text/javascript" src="turtle.js"></script>
+   <script type="text/javascript" src="turtleConsole.js"></script>
+   <script type="text/javascript" src="FileSaver.min.js"></script>
+   <script src="he.js"></script>
+
+</body></html>

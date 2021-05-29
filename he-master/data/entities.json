@@ -664,7 +664,7 @@
 	"&andv;": { "codepoints": [10842], "characters": "\u2A5A" },
 	"&ang;": { "codepoints": [8736], "characters": "\u2220" },
 	"&ange;": { "codepoints": [10660], "characters": "\u29A4" },
-	"&angle;": { "codepoints": [8736], "characters": "\u2220" },
+	"&కోణము;": { "codepoints": [8736], "characters": "\u2220" },
 	"&angmsd;": { "codepoints": [8737], "characters": "\u2221" },
 	"&angmsdaa;": { "codepoints": [10664], "characters": "\u29A8" },
 	"&angmsdab;": { "codepoints": [10665], "characters": "\u29A9" },

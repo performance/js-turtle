@@ -4,11 +4,11 @@ arc_test ='\
 \n\
 function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir) {\n\
   స్థితి_మార్చు(x,y);\n\
-  penup();\n\
-  angle(armAngle);\n\
-  forward(startRadius);\n\
-  right(tangentAngle);\n\
-  pendown();\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  కోణము(armAngle);\n\
+  ముందుకు_జరుగు(startRadius);\n\
+  కుడి_వైపు_తిరుగు(tangentAngle);\n\
+  కలమును_కింద_పెట్టు();\n\
   circle(arcRadius,extent, dir);\n\
 }\n\
 \n\
@@ -25,7 +25,7 @@ function turbine(x,y, radius, pedals, dir) {\n\
 \n\
 function roundedOctogon (side, radius) {\n\
   repeat((8), function () {\n\
-    forward (side);\n\
+    ముందుకు_జరుగు(side);\n\
     curveright(radius,45);\n\
   })\n\
 }\n\
@@ -33,7 +33,7 @@ function roundedOctogon (side, radius) {\n\
 \n\
 function roundedOctogonL (side, radius) {\n\
   repeat((8), function () {\n\
-    forward (side);\n\
+    ముందుకు_జరుగు(side);\n\
     curveleft(radius,45);\n\
   })\n\
 }\n\
@@ -45,11 +45,11 @@ function circleEyeR (x, y, n, outerRadius) {\n\
 \n\
   for (var i=0; i<n; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (i/n * 360);\n\
-    penup();\n\
-    forward (outerRadius);\n\
-    right(90)\n\
-    pendown();\n\
+    కోణము (i/n * 360);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(outerRadius);\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు();\n\
     write(i)\n\
     curveRight(outerRadius/2) // one inscribed circle\n\
   }\n\
@@ -61,11 +61,11 @@ function circleEyeL (x, y, n, outerRadius) {\n\
 \n\
   for (var i=0; i<n; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (i/n * 360);\n\
-    penup();\n\
-    forward (outerRadius);\n\
-    pendown();\n\
-    left(90)\n\
+    కోణము (i/n * 360);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(outerRadius);\n\
+    కలమును_కింద_పెట్టు();\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
     write(i)\n\
     curveLeft(outerRadius/2); // one inscribed circle\n\
   }\n\
@@ -87,7 +87,7 @@ function demo () {\n\
   h3 = +2/6 * size\n\
 \n\
   reset();\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
 \n\
   tSize = cellSize/2 * .90\n\
 // turbine(x,y, radius, pedals, dir) {\n\
@@ -112,59 +112,59 @@ function demo () {\n\
   circle(60/60 * tSize);\n\
 \n\
   స్థితి_మార్చు( h1, v2)\n\
-  angle(0)\n\
+  కోణము(0)\n\
   oRadius = cellSize/2 * .9\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
   height = oRadius * Math.cos( degToRad( 22.5))\n\
-  penup()\n\
-  forward (height)\n\
-  pendown()\n\
-  right(90)\n\
-  backward(side/2)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(height)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
   స్థితి_మార్చు( h1, v2)\n\
-  angle(0)\n\
+  కోణము(0)\n\
   oRadius = cellSize/2 * .8\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
   height = oRadius * Math.cos( degToRad( 22.5))\n\
-  penup()\n\
-  forward (height)\n\
-  pendown()\n\
-  right(90)\n\
-  backward(side/2)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(height)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
   స్థితి_మార్చు( h1, v2)\n\
-  angle(22.5)\n\
+  కోణము(22.5)\n\
   oRadius = cellSize/2 * .7\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
   height = oRadius * Math.cos( degToRad( 22.5))\n\
-  penup()\n\
-  forward (height)\n\
-  pendown()\n\
-  right(90)\n\
-  backward(side/2)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(height)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
   స్థితి_మార్చు( h1, v2)\n\
-  angle(22.5)\n\
+  కోణము(22.5)\n\
   oRadius = cellSize/2 * .6\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
   height = oRadius * Math.cos( degToRad( 22.5))\n\
-  penup()\n\
-  forward (height)\n\
-  pendown()\n\
-  right(90)\n\
-  backward(side/2)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(height)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
   circleEyeR( h2, v2, 16, cellSize/2 * .8);\n\
@@ -184,35 +184,35 @@ lSide = sSide + 2 * small\n\
 function vRect( sSide, lSide, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<2; i++) {\n\
-    forward( sSide)\n\
-    right(90)\n\
-    forward( lSide)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( sSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( lSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( sSide)\n\
+  ముందుకు_జరుగు( sSide)\n\
 }\n\
 \n\
 function hRect( sSide, lSide, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<2; i++) {\n\
-    forward( lSide)\n\
-    right(90)\n\
-    forward( sSide)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( lSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( sSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( lSide)\n\
+  ముందుకు_జరుగు( lSide)\n\
 }\n\
 \n\
 function square ( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<4; i++) {\n\
-    forward( side)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( side)\n\
+  ముందుకు_జరుగు( side)\n\
 }\n\
 \n\
 \n\
@@ -222,17 +222,17 @@ function demo() {\n\
   yB = maxY() + small\n\
   xB = minX()\n\
   wrap(false)\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > minY()) {\n\
     స్థితి_మార్చు(xB, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       square(small, "yellow")\n\
-      penup()\n\
-      forward( sSide)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
+      కలమును_కింద_పెట్టు()\n\
       square(small, "yellow")\n\
       vRect(sSide, lSide, "lightblue")\n\
     }\n\
@@ -240,31 +240,31 @@ function demo() {\n\
 \n\
     స్థితి_మార్చు(xB, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "red")\n\
-      penup()\n\
-      forward( sSide)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
     }\n\
     yB = yB - sSide\n\
 \n\
     స్థితి_మార్చు(xB, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       square(small, "yellow")\n\
       vRect(sSide, lSide, "lightblue")\n\
       square(small, "yellow")\n\
-      penup()\n\
-      forward( sSide)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
+      కలమును_కింద_పెట్టు()\n\
     }\n\
     yB = yB - small\n\
 \n\
     స్థితి_మార్చు(xB- lSide +small, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "red")\n\
-      penup()\n\
-      forward(sSide)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు(sSide)\n\
     }\n\
     yB = yB - sSide\n\
   }\n\
@@ -320,7 +320,7 @@ function rain (drops, n) {\n\
       color ("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");\n\
       width(d.width);\n\
       స్థితి_మార్చు(d.x, d.y);\n\
-      forward(d.size);\n\
+      ముందుకు_జరుగు(d.size);\n\
       // move the drop for the next time\n\
       d.y = d.y + d.velocityY;\n\
       d.x = d.x + d.velocityX;\n\
@@ -329,7 +329,7 @@ function rain (drops, n) {\n\
 \n\
 function let_them_drop (n) {\n\
    wrap(false);\n\
-   hideTurtle();\n\
+   తాబేలును_దాచు();\n\
    drops = init_drops(n);\n\
    animate(function () { rain(drops, n)}, 100);\n\
 }\n\
@@ -347,25 +347,25 @@ lSide = 2* sSide \n\
 function vRect( sSide, lSide, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<2; i++) {\n\
-    forward( sSide)\n\
-    right(90)\n\
-    forward( lSide)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( sSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( lSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( sSide)\n\
+  ముందుకు_జరుగు( sSide)\n\
 }\n\
 \n\
 function hRect( sSide, lSide, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<2; i++) {\n\
-    forward( lSide)\n\
-    right(90)\n\
-    forward( sSide)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( lSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( sSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( lSide)\n\
+  ముందుకు_జరుగు( lSide)\n\
 }\n\
 \n\
 function demo() {\n\
@@ -374,24 +374,24 @@ function demo() {\n\
   yB = maxY()\n\
   xB = minX()\n\
   wrap(false)\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   color("white")\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > minY()) {\n\
     స్థితి_మార్చు(xB, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
-      penup()\n\
+      కలమును_పైకి_ఎత్తు()\n\
     }\n\
     yB = yB - sSide\n\
 \n\
     స్థితి_మార్చు(xB - lSide/2, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
-      penup()\n\
+      కలమును_పైకి_ఎత్తు()\n\
     }\n\
     yB = yB - sSide\n\
   }\n\
@@ -404,10 +404,10 @@ function drawTile (h,w, tc, x, y) {\n\
   స్థితి_మార్చు(x,y)\n\
   beginShape()\n\
   for( var i=0; i<2; i=i+1) {\n\
-    forward(h)\n\
-    right(90)\n\
-    forward(w)\n\
-    right(90)\n\
+    ముందుకు_జరుగు(h)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(w)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( tc)\n\
 }\n\
@@ -434,7 +434,7 @@ function cafeTiles (h, w, gw, gc, off) {\n\
 function demo () {\n\
   reset();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
 \n\
   var tileHeight = 50\n\
   var tileWidth = 50\n\
@@ -456,10 +456,10 @@ function circleEye (x, y, n, outerRadius, innerRadius) {\n\
 \n\
   for (i=0; i<n; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (i/n * 360);\n\
-    penup();\n\
-    forward (innerRadius + radius/2);\n\
-    pendown();\n\
+    కోణము (i/n * 360);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(innerRadius + radius/2);\n\
+    కలమును_కింద_పెట్టు();\n\
     circle(radius/2); // one inscribed circle\n\
   }\n\
 }\n\
@@ -469,7 +469,7 @@ function circleEye (x, y, n, outerRadius, innerRadius) {\n\
 function demo () {\n\
   reset();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   color( random(16));\n\
   circleEye( 0, 0, 32, size, .2*size);\n\
 }\n\
@@ -483,10 +483,10 @@ function circleEye (x, y, n, outerRadius) {\n\
 \n\
   for (i=0; i<n; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (i/n * 360);\n\
-    penup();\n\
-    forward (outerRadius/2);\n\
-    pendown();\n\
+    కోణము (i/n * 360);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(outerRadius/2);\n\
+    కలమును_కింద_పెట్టు();\n\
     circle(outerRadius/2); // one inscribed circle\n\
   }\n\
 }\n\
@@ -496,7 +496,7 @@ function circleEye (x, y, n, outerRadius) {\n\
 function demo () {\n\
   reset();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   color( random(16));\n\
   circleEye( 0, 0, 16, size);\n\
 }\n\
@@ -577,7 +577,7 @@ function drawDot (digit, onColor, offColor, step) {\n\
     color( offColor)\n\
   }\n\
   dot ()\n\
-  forward (step)\n\
+  ముందుకు_జరుగు(step)\n\
 }\n\
 \n\
 \n\
@@ -586,14 +586,14 @@ function drawNumberDots (digitString, onColor, offColor, spacing) {\n\
   drawDot( digitString[1], onColor, offColor, spacing)\n\
   drawDot( digitString[2], onColor, offColor, spacing)\n\
   drawDot( digitString[3], onColor, offColor, spacing)\n\
-  backward (60)\n\
+  వెనుకకు_జరుగు(60)\n\
 }\n\
 \n\
 \n\
 function displayBinaryDots(hSpacing, vSpacing) {\n\
   bottom = vSpacing * 1.5\n\
   leftSide = -hSpacing * 2.5\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   స్థితి_మార్చు(leftSide + hSpacing *0, bottom)\n\
   drawNumberDots (hour10, hourColor, offColor, vSpacing)\n\
 \n\
@@ -616,12 +616,12 @@ function displayBinaryDots(hSpacing, vSpacing) {\n\
 \n\
 function displayTime() {\n\
   clear()\n\
-  angle(180)\n\
+  కోణము(180)\n\
   spacing = Math.min(maxX(), maxY()) *1.8/6\n\
   hSpacing = spacing\n\
   vSpacing = spacing\n\
   width (spacing/10)\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
   getBinaryTime()\n\
   displayBinaryDots(hSpacing, vSpacing)\n\
 }\n\
@@ -719,56 +719,56 @@ function segColor (bit) {\n\
 \n\
 \n\
 function display7segment(digit) {\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   segColor (segments [digit].substr(0,1)) //a\n\
-  forward (segSize)\n\
-  right(90+segAngle)\n\
+  ముందుకు_జరుగు(segSize)\n\
+  కుడి_వైపు_తిరుగు(90+segAngle)\n\
   segColor (segments [digit].substr(1,1)) //b\n\
-  forward (segSize)\n\
+  ముందుకు_జరుగు(segSize)\n\
   segColor (segments [digit].substr(2,1)) //c\n\
-  forward (segSize)\n\
-  right (90-segAngle)\n\
+  ముందుకు_జరుగు(segSize)\n\
+  కుడి_వైపు_తిరుగు(90-segAngle)\n\
   segColor (segments [digit].substr(3,1)) //d\n\
-  forward (segSize)\n\
-  right (90+segAngle)\n\
+  ముందుకు_జరుగు(segSize)\n\
+  కుడి_వైపు_తిరుగు(90+segAngle)\n\
   segColor (segments [digit].substr(4,1)) //e\n\
-  forward (segSize)\n\
-  right (90-segAngle)\n\
+  ముందుకు_జరుగు(segSize)\n\
+  కుడి_వైపు_తిరుగు(90-segAngle)\n\
   segColor (segments [digit].substr(6,1)) //g\n\
-  forward (segSize)\n\
-  backward (segSize)\n\
-  left (90-segAngle)\n\
+  ముందుకు_జరుగు(segSize)\n\
+  వెనుకకు_జరుగు(segSize)\n\
+  ఎడమ_వైపు_తిరుగు(90-segAngle)\n\
   segColor (segments [digit].substr(5,1)) //f\n\
-  forward (segSize)\n\
-  right (90-segAngle)\n\
-  penup()\n\
+  ముందుకు_జరుగు(segSize)\n\
+  కుడి_వైపు_తిరుగు(90-segAngle)\n\
+  కలమును_పైకి_ఎత్తు()\n\
 }\n\
 \n\
 \n\
 function displaySegTime() {\n\
   // black out background\n\
   స్థితి_మార్చు(minX(),0)\n\
-  angle (90)\n\
+  కోణము (90)\n\
   color(black)\n\
   width (2*maxY())\n\
-  pendown()\n\
-  forward(2*maxX())\n\
+  కలమును_కింద_పెట్టు()\n\
+  ముందుకు_జరుగు(2*maxX())\n\
 101010\n\
   // draw the 6 digits of time\n\
   స్థితి_మార్చు(-horizontalElements/2*segSize, segSize)\n\
   width (segWidth)\n\
   display7segment(hour10digit)\n\
-  forward (digitSpacing)\n\
+  ముందుకు_జరుగు(digitSpacing)\n\
   display7segment(hour1digit)\n\
 \n\
-  forward (interdigitSpacing)\n\
+  ముందుకు_జరుగు(interdigitSpacing)\n\
   display7segment(min10digit)\n\
-  forward (digitSpacing)\n\
+  ముందుకు_జరుగు(digitSpacing)\n\
   display7segment(min1digit)\n\
 \n\
-  forward (interdigitSpacing)\n\
+  ముందుకు_జరుగు(interdigitSpacing)\n\
   display7segment(sec10digit)\n\
-  forward (digitSpacing)\n\
+  ముందుకు_జరుగు(digitSpacing)\n\
   display7segment(sec1digit)\n\
 }\n\
 \n\
@@ -779,7 +779,7 @@ function displayTime() {\n\
   digitSpacing = 1.4 * segSize\n\
   interdigitSpacing = 2.24 * segSize\n\
   segWidth = segSize/6\n\
-  hideturtle() \n\
+  తాబేలును_దాచు() \n\
   getTime()\n\
   displaySegTime()\n\
 }\n\
@@ -806,38 +806,38 @@ function ticks(x, y, radius) {\n\
       } else {\n\
          width(3/130* size);\n\
       }\n\
-      penup();\n\
+      కలమును_పైకి_ఎత్తు();\n\
       స్థితి_మార్చు(0,0);\n\
-      angle(theta);\n\
-      forward(gap);\n\
-      pendown();\n\
-      forward(tickLen);\n\
+      కోణము(theta);\n\
+      ముందుకు_జరుగు(gap);\n\
+      కలమును_కింద_పెట్టు();\n\
+      ముందుకు_జరుగు(tickLen);\n\
    }\n\
 }\n\
 \n\
 \n\
 // draw the hour numbers on the clock face\n\
 function numbers(x, y, radius) {\n\
-   penup();\n\
+   కలమును_పైకి_ఎత్తు();\n\
    fontSize = 20/130 * size\n\
    setFont(fontSize+"px sans-serif");\n\
    color("black");\n\
    for (var hour = 1; hour <= 12; hour++) {\n\
       స్థితి_మార్చు(x,y);\n\
-      angle(hour * 30);\n\
-      forward(radius); // to center of digit\n\
-      angle(180);\n\
-      forward(10/130 * size); // vertical correction to baseline\n\
-      right(90);\n\
+      కోణము(hour * 30);\n\
+      ముందుకు_జరుగు(radius); // to center of digit\n\
+      కోణము(180);\n\
+      ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline\n\
+      కుడి_వైపు_తిరుగు(90);\n\
       if (hour < 10) {\n\
-        forward(6/130 * size); // horizontal correction to lower left corner\n\
+        ముందుకు_జరుగు(6/130 * size); // horizontal correction to lower left corner\n\
       } else {\n\
-        forward (10/130 * size)\n\
+        ముందుకు_జరుగు(10/130 * size)\n\
       }\n\
-      right(180);\n\
+      కుడి_వైపు_తిరుగు(180);\n\
       write(hour);\n\
    }\n\
-   pendown();\n\
+   కలమును_కింద_పెట్టు();\n\
 }\n\
 \n\
 // draw one of the clock hands\n\
@@ -845,11 +845,11 @@ function hand (theta, w, length, col) {\n\
    var stepSize = 5;\n\
    var widthDelta = w / (length / stepSize);\n\
    స్థితి_మార్చు(0, 0);\n\
-   angle(theta);\n\
+   కోణము(theta);\n\
    color(col);\n\
    for (var step = 0; step < length; step = step + stepSize) {\n\
       width(w);\n\
-      forward(stepSize);\n\
+      ముందుకు_జరుగు(stepSize);\n\
       w = w - widthDelta;\n\
    }\n\
 }\n\
@@ -883,7 +883,7 @@ function clock() {\n\
 }\n\
 \n\
 function demo() {\n\
-   hideTurtle();\n\
+   తాబేలును_దాచు();\n\
    // refresh the clock every second\n\
    animate(clock,1000);\n\
 }\n\
@@ -893,80 +893,80 @@ collidescape ='\
 // angles for the two isosceles triangles are: \n\
 // 36, 72, 72 and 36, 36, 108 ..degrees\n\
 //  1,2,2 and 1,1,3 times pi/5 .. radians\n\
-ang = 360/10 // the basic angle (pi/5 radians)\n\
+ang = 360/10 // the basic కోణము (pi/5 radians)\n\
 side = 50 // length of the common side of the isosceles triangles\n\
 bBase = 2* side * Math.cos( degToRad( ang)) // length of big base\n\
 sBase = 2* side * Math.sin( degToRad( ang/2)) // length of small base\n\
 \n\
 \n\
-function bb (fColor) { //big piece, big angle\n\
+function bb (fColor) { //big piece, big కోణము\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 4 * ang)\n\
-    forward( bBase)\n\
-    right( 4 * ang)\n\
-    forward( side)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 4 * ang)\n\
+    ముందుకు_జరుగు( bBase)\n\
+    కుడి_వైపు_తిరుగు( 4 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     fillShape( fColor)\n\
 }\n\
 \n\
 \n\
-function bs (fColor) { // big piece, small angle\n\
+function bs (fColor) { // big piece, small కోణము\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 2 * ang)\n\
-    forward( side)\n\
-    right( 4 * ang)\n\
-    forward( bBase)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 2 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 4 * ang)\n\
+    ముందుకు_జరుగు( bBase)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     fillShape( fColor)\n\
 }\n\
 \n\
 \n\
-function bs2 (fColor) { // big piece, small angle other corner\n\
+function bs2 (fColor) { // big piece, small కోణము other corner\n\
     beginShape()\n\
-    forward( bBase)\n\
-    right( 4 * ang)\n\
-    forward( side)\n\
-    right( 2 * ang)\n\
-    forward( side)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( bBase)\n\
+    కుడి_వైపు_తిరుగు( 4 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 2 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     fillShape( fColor)\n\
 }\n\
 \n\
 \n\
-function ss (fColor) { // small piece, small angle\n\
+function ss (fColor) { // small piece, small కోణము\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 3 * ang)\n\
-    forward( sBase)\n\
-    right( 3 * ang)\n\
-    forward( side)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 3 * ang)\n\
+    ముందుకు_జరుగు( sBase)\n\
+    కుడి_వైపు_తిరుగు( 3 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     fillShape( fColor)\n\
 }\n\
 \n\
 \n\
-function sb (fColor) { // small piece, big angle\n\
+function sb (fColor) { // small piece, big కోణము\n\
     beginShape()\n\
-    forward( sBase)\n\
-    right( 3 * ang)\n\
-    forward( side)\n\
-    right( 4 * ang)\n\
-    forward( side)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( sBase)\n\
+    కుడి_వైపు_తిరుగు( 3 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 4 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     fillShape( fColor)\n\
 }\n\
 \n\
 \n\
-function sb2 (fColor) { // small piece, big angle other corner\n\
+function sb2 (fColor) { // small piece, big కోణము other corner\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 4 * ang)\n\
-    forward( side)\n\
-    right( 3 * ang)\n\
-    forward( sBase)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 4 * ang)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 3 * ang)\n\
+    ముందుకు_జరుగు( sBase)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     fillShape( fColor)\n\
 }\n\
 \n\
@@ -990,11 +990,11 @@ function spiral( ) {\n\
         bs( c2)\n\
 \n\
 //point1:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i * 2 + 1) * ang)\n\
-        forward( bBase)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c2)\n\
         bs( c2)\n\
@@ -1006,13 +1006,13 @@ function spiral( ) {\n\
         //write( "1")\n\
 \n\
 //point2:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i * 2 + 1) * ang)\n\
         bs( c2)\n\
-        forward( bBase + side)\n\
-        left( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c2)\n\
         ss( c2)\n\
@@ -1020,14 +1020,14 @@ function spiral( ) {\n\
         //write( "2")\n\
 \n\
 //point3:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2* ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side)\n\
-        left( 2 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c1)\n\
         bs2( c1)\n\
@@ -1037,19 +1037,19 @@ function spiral( ) {\n\
         //write( "3")\n\
 \n\
 //point4:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2 * ang)\n\
-        forward( bBase)\n\
-        right (ang)\n\
+        ముందుకు_జరుగు( bBase)\n\
+        కుడి_వైపు_తిరుగు(ang)\n\
 \n\
-	pendown()\n\
+	కలమును_కింద_పెట్టు()\n\
         bs( c1)\n\
-        left ( ang)\n\
+        ఎడమ_వైపు_తిరుగు( ang)\n\
 \n\
-	penup()\n\
-        forward( bBase)\n\
-	pendown()\n\
+	కలమును_పైకి_ఎత్తు()\n\
+        ముందుకు_జరుగు( bBase)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c2)\n\
         sb( c1)\n\
@@ -1062,14 +1062,14 @@ function spiral( ) {\n\
         //write( "4")\n\
 \n\
 //point5:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2* ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase)\n\
-        left( 2 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs2( c2)\n\
         sb2( c2)\n\
@@ -1079,12 +1079,12 @@ function spiral( ) {\n\
         //write( "5")\n\
 \n\
 //point6:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2* ang)\n\
-        forward(  bBase + side + bBase)\n\
-        left( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase)\n\
+        ఎడమ_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs2( c1)\n\
         bb( c1)\n\
@@ -1094,16 +1094,16 @@ function spiral( ) {\n\
         //write( "6")\n\
 \n\
 //point7:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading(( i + 1)* 2 * ang)\n\
-        forward(  bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side)\n\
-        right( 2* ang)\n\
-        forward( side)\n\
-        left ( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side)\n\
+        కుడి_వైపు_తిరుగు( 2* ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        ఎడమ_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         sb2( c2)\n\
         sb( c2)\n\
@@ -1112,15 +1112,15 @@ function spiral( ) {\n\
         //write( "7")\n\
 \n\
 //point8:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading(( i + 1)* 2 * ang)\n\
-        forward(  bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side)\n\
-        right( 3 * ang)\n\
-        forward( bBase + side)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side)\n\
+        కుడి_వైపు_తిరుగు( 3 * ang)\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c2)\n\
         sb2( c2)\n\
@@ -1131,16 +1131,16 @@ function spiral( ) {\n\
         //write( "8")\n\
 \n\
 //point9:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2* ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        left( 2 * ang)\n\
-        forward( side)\n\
-        right( ang)\n\
-        forward( sBase + sBase)\n\
-        right( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase + sBase)\n\
+        కుడి_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         sb2( c2)\n\
         sb( c2)\n\
@@ -1151,14 +1151,14 @@ function spiral( ) {\n\
         //write( "9")\n\
 \n\
 //point10:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2 * ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        right( 2 * ang)\n\
-        forward( bBase)\n\
-        left( 4 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( bBase)\n\
+        ఎడమ_వైపు_తిరుగు( 4 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         sb2( c1)\n\
         sb( c1)\n\
@@ -1167,15 +1167,15 @@ function spiral( ) {\n\
         //write( "10")\n\
 \n\
 //point11:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2 * ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        right( 2 * ang)\n\
-        forward( bBase + side)\n\
-        right( 1 * ang)\n\
-        forward( side)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        కుడి_వైపు_తిరుగు( 1 * ang)\n\
+        ముందుకు_జరుగు( side)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bb( c1)\n\
         bs( c1)\n\
@@ -1183,34 +1183,34 @@ function spiral( ) {\n\
         //write( "11")\n\
 \n\
 //point12:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2 * ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        right( 2 * ang)\n\
-        forward( bBase + side)\n\
-        right( ang)\n\
-        forward( side) // @11\n\
-        forward(side)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side) // @11\n\
+        ముందుకు_జరుగు(side)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bb( c1)\n\
         bs( c1)\n\
         //write( "12")\n\
 \n\
 //point13:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading(( i + 1)* 2 * ang)\n\
-        forward(  bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side)\n\
-        right( 3 * ang)\n\
-        forward( bBase + side) //@8\n\
-        right( ang)\n\
-        forward( side)\n\
-        left( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side)\n\
+        కుడి_వైపు_తిరుగు( 3 * ang)\n\
+        ముందుకు_జరుగు( bBase + side) //@8\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        ఎడమ_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         sb( c2)\n\
         bs( c2)\n\
@@ -1219,17 +1219,17 @@ function spiral( ) {\n\
         //write( "13")\n\
 \n\
 //point14:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2 * ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase) // @5\n\
-        left(  ang)\n\
-        forward( side)\n\
-        right( 2* ang)\n\
-        forward( side + side)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase) // @5\n\
+        ఎడమ_వైపు_తిరుగు(  ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( 2* ang)\n\
+        ముందుకు_జరుగు( side + side)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c1)\n\
         bs2( c1)\n\
@@ -1240,20 +1240,20 @@ function spiral( ) {\n\
         //write( "14")\n\
 \n\
 //point15:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading(( i + 1)* 2 * ang)\n\
-        forward(  bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side)\n\
-        right( 3 * ang)\n\
-        forward( bBase + side) //@8\n\
-        right( ang)\n\
-        forward( side) //@13\n\
-        forward( bBase)\n\
-        left( ang)\n\
-        forward( side)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side)\n\
+        కుడి_వైపు_తిరుగు( 3 * ang)\n\
+        ముందుకు_జరుగు( bBase + side) //@8\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side) //@13\n\
+        ముందుకు_జరుగు( bBase)\n\
+        ఎడమ_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c2)\n\
         bs2( c2)\n\
@@ -1264,20 +1264,20 @@ function spiral( ) {\n\
         //write( "15")\n\
 \n\
 //point16:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2* ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        left( 2 * ang)\n\
-        forward( side)\n\
-        right( ang)\n\
-        forward( sBase + sBase) //@9\n\
-        right( 2 * ang)\n\
-        forward( bBase)\n\
-        right( ang)\n\
-        forward( side)\n\
-        left( 2* ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase + sBase) //@9\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( bBase)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        ఎడమ_వైపు_తిరుగు( 2* ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c2)\n\
         bs2( c2)\n\
@@ -1288,21 +1288,21 @@ function spiral( ) {\n\
         //write( "16")\n\
 \n\
 //point17:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2* ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        left( 2 * ang)\n\
-        forward( side)\n\
-        right( ang)\n\
-        forward( sBase + sBase) //@9\n\
-        right( 2 * ang)\n\
-        forward( bBase)\n\
-        right( ang)\n\
-        forward( side) //@16\n\
-        forward( side)\n\
-        left( 2 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase + sBase) //@9\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( bBase)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side) //@16\n\
+        ముందుకు_జరుగు( side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c2)\n\
         sb2( c2)\n\
@@ -1311,30 +1311,30 @@ function spiral( ) {\n\
         //write( "17")\n\
 \n\
 //point18:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2 * ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase) // @5\n\
-        left(  ang)\n\
-        forward( side)\n\
-        right( 2 * ang)\n\
-        forward( side + side) //@14\n\
-        right( 2 * ang)\n\
-        forward( side) //@ intermediate point\n\
-        right( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase) // @5\n\
+        ఎడమ_వైపు_తిరుగు(  ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side) //@14\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side) //@ intermediate point\n\
+        కుడి_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c2)\n\
-        right( 4 * ang)\n\
+        కుడి_వైపు_తిరుగు( 4 * ang)\n\
         //write ( "14b")\n\
         bs( c1)\n\
-        right( 1 * ang)\n\
+        కుడి_వైపు_తిరుగు( 1 * ang)\n\
 \n\
 	penup\n\
-        forward( side)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( side)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bb( c2)\n\
         bs( c2)\n\
@@ -1345,20 +1345,20 @@ function spiral( ) {\n\
         //write( "18")\n\
 \n\
 //point19:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2 * ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase) // @5\n\
-        left(  ang)\n\
-        forward( side)\n\
-        right( 2 * ang)\n\
-        forward( side + side) //@14\n\
-        right( 2 * ang)\n\
-        forward( side + side + side)\n\
-        left( 2*ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase) // @5\n\
+        ఎడమ_వైపు_తిరుగు(  ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side) //@14\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2*ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c1)\n\
         sb2( c1)\n\
@@ -1367,22 +1367,22 @@ function spiral( ) {\n\
         //write( "19")\n\
 \n\
 //point20:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2 * ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase) // @5\n\
-        left(  ang)\n\
-        forward( side)\n\
-        right( 2 * ang)\n\
-        forward( side + side) //@14\n\
-        right( 2 * ang)\n\
-        forward( side + side + side) //@19\n\
-        right( ang)\n\
-        forward( sBase)\n\
-        left( 3*ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase) // @5\n\
+        ఎడమ_వైపు_తిరుగు(  ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side) //@14\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + side) //@19\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase)\n\
+        ఎడమ_వైపు_తిరుగు( 3*ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c1)\n\
         sb2( c1)\n\
@@ -1391,23 +1391,23 @@ function spiral( ) {\n\
         //write( "20")\n\
 \n\
 //point21:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2 * ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase) // @5\n\
-        left(  ang)\n\
-        forward( side)\n\
-        right( 2 * ang)\n\
-        forward( side + side) //@14\n\
-        right( 2 * ang)\n\
-        forward( side + side + side)\n\
-        right( ang)\n\
-        forward( sBase) //@20\n\
-        forward( sBase)\n\
-        left( 3*ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase) // @5\n\
+        ఎడమ_వైపు_తిరుగు(  ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side) //@14\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase) //@20\n\
+        ముందుకు_జరుగు( sBase)\n\
+        ఎడమ_వైపు_తిరుగు( 3*ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c1)\n\
         bs( c1)\n\
@@ -1416,23 +1416,23 @@ function spiral( ) {\n\
         //write( "21")\n\
 \n\
 //point22:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( (i +1) * 2 * ang)\n\
-        forward( bBase + side)\n\
-        left( 2 * ang)\n\
-        forward( side + side + sBase) // @5\n\
-        left(  ang)\n\
-        forward( side)\n\
-        right( 2 * ang)\n\
-        forward( side + side) //@14\n\
-        right( 2 * ang)\n\
-        forward( side + side + side)\n\
-        right( ang)\n\
-        forward( sBase + sBase) //@21\n\
-        forward( side)\n\
-        left( 2*ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు( bBase + side)\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + sBase) // @5\n\
+        ఎడమ_వైపు_తిరుగు(  ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side) //@14\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side + side + side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase + sBase) //@21\n\
+        ముందుకు_జరుగు( side)\n\
+        ఎడమ_వైపు_తిరుగు( 2*ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         bs( c1)\n\
         bs2( c1)\n\
@@ -1441,22 +1441,22 @@ function spiral( ) {\n\
         //write( "22")\n\
 \n\
 //point23:\n\
-	penup()\n\
+	కలమును_పైకి_ఎత్తు()\n\
         స్థితి_మార్చు(0,0)\n\
         setHeading( i * 2* ang)\n\
-        forward(  bBase + side + bBase) //@6\n\
-        left( 2 * ang)\n\
-        forward( side)\n\
-        right( ang)\n\
-        forward( sBase + sBase) //@9\n\
-        right( 2 * ang)\n\
-        forward( bBase)\n\
-        right( ang)\n\
-        forward( side + side) //@17\n\
-        right( ang)\n\
-        forward( sBase)\n\
-        left( 3 * ang)\n\
-	pendown()\n\
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6\n\
+        ఎడమ_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( side)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase + sBase) //@9\n\
+        కుడి_వైపు_తిరుగు( 2 * ang)\n\
+        ముందుకు_జరుగు( bBase)\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( side + side) //@17\n\
+        కుడి_వైపు_తిరుగు( ang)\n\
+        ముందుకు_జరుగు( sBase)\n\
+        ఎడమ_వైపు_తిరుగు( 3 * ang)\n\
+	కలమును_కింద_పెట్టు()\n\
 \n\
         ss( c2)\n\
         bs( c2)\n\
@@ -1468,7 +1468,7 @@ function spiral( ) {\n\
 function demo () {\n\
     reset()\n\
     wrap(false)\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     spiral( )\n\
 }\n\
 '
@@ -1483,7 +1483,7 @@ controller.\n\
 function drawDot () {\n\
     color(random(16))\n\
     dot()\n\
-    forward (15)\n\
+    ముందుకు_జరుగు(15)\n\
 }\n\
 \n\
 function drawRowOfDots () {\n\
@@ -1495,12 +1495,12 @@ function colorChangingDots () {\n\
   reset()\n\
   wrap(false)\n\
   setpos(minX(),0)\n\
-  angle(90)\n\
-  pendown()\n\
+  కోణము(90)\n\
+  కలమును_కింద_పెట్టు()\n\
   color ("black")\n\
   penwidth (80)\n\
-  forward (maxX() + maxX()) //draw black band\n\
-  penup()\n\
+  ముందుకు_జరుగు(maxX() + maxX()) //draw black band\n\
+  కలమును_పైకి_ఎత్తు()\n\
   width (1)\n\
   animate( drawRowOfDots, 500)\n\
 }\n\
@@ -1520,16 +1520,16 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
   side2= side1/Math.cos(angleA)\n\
   for (i=0; i<4; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (i/4 * 360);\n\
-    penup()\n\
-    forward( innerRadius)\n\
-    pendown()\n\
-    forward (outerRadius-innerRadius);\n\
-    right( 180-radToDeg( angleA));\n\
-    forward( side2);\n\
-    backward( side2);\n\
-    right( radToDeg( 2* angleA));\n\
-    forward( side2);\n\
+    కోణము (i/4 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( innerRadius)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(outerRadius-innerRadius);\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( side2);\n\
+    వెనుకకు_జరుగు( side2);\n\
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
+    ముందుకు_జరుగు( side2);\n\
   }\n\
 \n\
   side3= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/8))\n\
@@ -1537,16 +1537,16 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
   console.log( "side3:"+side3 + " r3: " + r3)\n\
   for (i=0; i<4; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (45 + i/4 * 360);\n\
-    penup()\n\
-    forward( innerRadius)\n\
-    pendown()\n\
-    forward (outerRadius-innerRadius);\n\
-    right( 180-radToDeg( angleA));\n\
-    forward( r3);\n\
-    backward( r3);\n\
-    right( radToDeg( 2* angleA));\n\
-    forward( r3);\n\
+    కోణము (45 + i/4 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( innerRadius)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(outerRadius-innerRadius);\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( r3);\n\
+    వెనుకకు_జరుగు( r3);\n\
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
+    ముందుకు_జరుగు( r3);\n\
   }\n\
 \n\
   r4=outerRadius/2\n\
@@ -1556,31 +1556,31 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
   console.log( "side4:"+side4 + " r4: " + r4)\n\
   for (i=0; i<8; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (22.5 + i/8 * 360);\n\
-    penup()\n\
-    forward (outerRadius);\n\
-    pendown()\n\
-    right( 180-radToDeg( angleA));\n\
-    forward( r4);\n\
-    backward( r4);\n\
-    right( radToDeg( 2* angleA));\n\
-    forward( r4);\n\
+    కోణము (22.5 + i/8 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు(outerRadius);\n\
+    కలమును_కింద_పెట్టు()\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( r4);\n\
+    వెనుకకు_జరుగు( r4);\n\
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
+    ముందుకు_జరుగు( r4);\n\
   }\n\
 \n\
   r5 = .1 * outerRadius\n\
   base = 2* r5* Math.sin(angleA)\n\
   for (i=0; i<16; i++) {\n\
     స్థితి_మార్చు(x, y);\n\
-    angle (11.25 + i/16 * 360);\n\
-    penup()\n\
-    forward (outerRadius);\n\
-    pendown()\n\
-    right( 180-radToDeg( angleA));\n\
-    forward( r5);\n\
-    right(90+radToDeg(angleA))\n\
-    forward (base)\n\
-    right(90+radToDeg(angleA))\n\
-    forward( r5);\n\
+    కోణము (11.25 + i/16 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు(outerRadius);\n\
+    కలమును_కింద_పెట్టు()\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( r5);\n\
+    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))\n\
+    ముందుకు_జరుగు(base)\n\
+    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))\n\
+    ముందుకు_జరుగు( r5);\n\
   }\n\
 }\n\
 \n\
@@ -1589,7 +1589,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
 function demo () {\n\
   reset();\n\
   size = Math.min( maxX(), maxY()) * .9\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   //color( random(16));\n\
   compassRose( 0, 0, 16, size, .2*size);\n\
 }\n\
@@ -1600,165 +1600,165 @@ compass_rose ='\
 // The triangle functions could provide shading and color\n\
 \n\
 function triangle (side){\n\
-  forward (side)\n\
+  ముందుకు_జరుగు(side)\n\
   a = 45\n\
   b = (180-a)/2\n\
-  right (180 - b)\n\
-  //forward (.748* side)\n\
-  forward (side * 2 * Math.sin(a/2/360*6.28))\n\
-  right (180 - b)\n\
-  forward (side)\n\
-  right (180-a)\n\
+  కుడి_వైపు_తిరుగు(180 - b)\n\
+  //ముందుకు_జరుగు(.748* side)\n\
+  ముందుకు_జరుగు(side * 2 * Math.sin(a/2/360*6.28))\n\
+  కుడి_వైపు_తిరుగు(180 - b)\n\
+  ముందుకు_జరుగు(side)\n\
+  కుడి_వైపు_తిరుగు(180-a)\n\
 }\n\
 \n\
 function triangleL (side){\n\
-  forward (side)\n\
+  ముందుకు_జరుగు(side)\n\
   a = 45\n\
   b = (180-a)/2\n\
-  left (180 - b)\n\
-  forward (side * 2 * Math.sin(a/2/360*6.28))\n\
-  left (180 - b)\n\
-  forward (side)\n\
-  left (180-a)\n\
+  ఎడమ_వైపు_తిరుగు(180 - b)\n\
+  ముందుకు_జరుగు(side * 2 * Math.sin(a/2/360*6.28))\n\
+  ఎడమ_వైపు_తిరుగు(180 - b)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు(180-a)\n\
 }\n\
 \n\
 function halfTri(side) {\n\
   triangle (side)\n\
-  forward(side)\n\
+  ముందుకు_జరుగు(side)\n\
   triangle (side)\n\
-  right(45+(180-45)/2)\n\
-  forward(side * 2 * Math.sin( 45/2/360*6.28))\n\
-  left(180-(180-45)/2)\n\
+  కుడి_వైపు_తిరుగు(45+(180-45)/2)\n\
+  ముందుకు_జరుగు(side * 2 * Math.sin( 45/2/360*6.28))\n\
+  ఎడమ_వైపు_తిరుగు(180-(180-45)/2)\n\
   triangle(side)\n\
-  left(180-45)\n\
-  forward( side)\n\
-  right(180-45)\n\
+  ఎడమ_వైపు_తిరుగు(180-45)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(180-45)\n\
 }\n\
 \n\
 function flipIt (side) {\n\
   //not quite symmetrical...\n\
-  penup()\n\
-  forward( side*3)\n\
-  right( 45)\n\
-  forward(side*3)\n\
-  right(180-45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు( side*3)\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  కుడి_వైపు_తిరుగు(180-45)\n\
+  కలమును_కింద_పెట్టు()\n\
   thirdTri(side)\n\
-  penup()\n\
-  right (45)\n\
-  forward(side*3)\n\
-  left(45)\n\
-  forward(side*3)\n\
-  left(180)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function flipHalf (side) {\n\
   //not quite symmetrical...\n\
-  penup()\n\
-  forward( side*3)\n\
-  right( 45)\n\
-  forward(side*3)\n\
-  right(180-45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు( side*3)\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  కుడి_వైపు_తిరుగు(180-45)\n\
+  కలమును_కింద_పెట్టు()\n\
   halfTri(side)\n\
-  penup()\n\
-  right (45)\n\
-  forward(side*3)\n\
-  left(45)\n\
-  forward(side*3)\n\
-  left(180)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function flipPoint (side) {\n\
   //not quite symmetrical...\n\
-  penup()\n\
-  forward( side*3)\n\
-  right( 45)\n\
-  forward(side*3)\n\
-  right(180-45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు( side*3)\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  కుడి_వైపు_తిరుగు(180-45)\n\
+  కలమును_కింద_పెట్టు()\n\
   //triangle(side/2)\n\
   halfTri(side/2)\n\
-  penup()\n\
-  right (45)\n\
-  forward(side*3)\n\
-  left(45)\n\
-  forward(side*3)\n\
-  left(180)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(side*3)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 function thirdTri(side) {\n\
   triangle (side)//1\n\
-  penup()\n\
-  forward(side)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(side)\n\
+  కలమును_కింద_పెట్టు()\n\
   triangle (side)//2\n\
-  penup()\n\
-  forward(side)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(side)\n\
+  కలమును_కింద_పెట్టు()\n\
   triangle (side)//3\n\
-  penup()\n\
-  right(45+(180-45)/2)\n\
-  forward(side * 2 * Math.sin( 45/2/360*6.28))\n\
-  left(180-(180-45)/2)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(45+(180-45)/2)\n\
+  ముందుకు_జరుగు(side * 2 * Math.sin( 45/2/360*6.28))\n\
+  ఎడమ_వైపు_తిరుగు(180-(180-45)/2)\n\
+  కలమును_కింద_పెట్టు()\n\
   triangle(side)//4\n\
-  penup()\n\
-  backward(side)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  వెనుకకు_జరుగు(side)\n\
+  కలమును_కింద_పెట్టు()\n\
   triangle(side)//5\n\
-  penup()\n\
-  right(45)\n\
-  forward( side)\n\
-  left(45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  కలమును_కింద_పెట్టు()\n\
   triangle(side)//6\n\
-  penup()\n\
-  left(180-45)\n\
-  forward( side * 2)\n\
-  right(180-45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు(180-45)\n\
+  ముందుకు_జరుగు( side * 2)\n\
+  కుడి_వైపు_తిరుగు(180-45)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function boxTheCompass(size) {\n\
-  penup()\n\
-  angle( 0)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కోణము( 0)\n\
   boxedCompass=["N", "NxE", "NNE", "NExN", "NE", "NExE", "ENE", "ExN", "E", "ExS", "ESE", "SExE", "SE", "SExS", "SSE", "SxE", "S", "SxW", "SSW", "SWxS", "SW", "SWxW", "WSW", "WxS", "W", "WxN", "WNW", "NWxW", "NW", "NWxN", "NNW", "NxW"]\n\
   textRadius = size/14  * 5.6\n\
   for (i=0; i<32; i++) {\n\
   \n\
-    forward (textRadius)\n\
-    right(90)\n\
+    ముందుకు_జరుగు(textRadius)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
     //textLen = boxedCompass[i].length*10/2\n\
-   // backward (textLen)\n\
+   // వెనుకకు_జరుగు(textLen)\n\
     fontSize = i % 4\n\
     if (fontSize == 1 || fontSize == 3) {\n\
       pointSize = size/48\n\
       textLen = boxedCompass[i].length*pointSize/2\n\
-      backward (textLen)\n\
+      వెనుకకు_జరుగు(textLen)\n\
       setfont("normal " + pointSize + "pt Helvetica")\n\
     } else if (fontSize == 2) {\n\
       pointSize = size/48\n\
       textLen = boxedCompass[i].length*pointSize/2\n\
-      backward (textLen)\n\
+      వెనుకకు_జరుగు(textLen)\n\
       setfont("bold " + pointSize + "pt Helvetica")\n\
     } else {\n\
       pointSize = size/40\n\
       textLen = boxedCompass[i].length*pointSize/2\n\
-      backward (textLen)\n\
+      వెనుకకు_జరుగు(textLen)\n\
       setfont("bold " + pointSize + "pt Helvetica")\n\
     }\n\
     write(boxedCompass[i])\n\
-    forward (textLen)\n\
-    left(90)\n\
-    backward (textRadius)\n\
-    right(360/32)\n\
+    ముందుకు_జరుగు(textLen)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    వెనుకకు_జరుగు(textRadius)\n\
+    కుడి_వైపు_తిరుగు(360/32)\n\
   }\n\
 }\n\
 \n\
@@ -1766,30 +1766,30 @@ function boxTheCompass(size) {\n\
 function demo () {\n\
   reset()\n\
   wrap(false)\n\
-  hideTurtle() // do not want it to show, so do this early\n\
+  తాబేలును_దాచు() // do not want it to show, so do this early\n\
   redrawOnMove(false) // do not redraw image each move\n\
   size = 2* Math.min(maxX(), maxY())\n\
   side = size/14\n\
-  left(22.5)\n\
+  ఎడమ_వైపు_తిరుగు(22.5)\n\
   for (i=0; i<8; i++) {\n\
     thirdTri (side)\n\
     flipIt (side)\n\
-    right(45)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
   for (i=0; i<8; i++) {\n\
     halfTri (side/2)\n\
-    right(45)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
-  right(22.5)\n\
+  కుడి_వైపు_తిరుగు(22.5)\n\
   for (i=0; i<84; i++) {\n\
     flipHalf (side)\n\
-    right(45)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
-  right(11.25)\n\
+  కుడి_వైపు_తిరుగు(11.25)\n\
   side = size/14\n\
   for (i=0; i<16; i++) {\n\
     flipPoint (side)\n\
-    right(22.5)\n\
+    కుడి_వైపు_తిరుగు(22.5)\n\
   }\n\
 \n\
   boxTheCompass(size)\n\
@@ -1850,15 +1850,15 @@ function indexColor(index, colors) {\n\
 \n\
 \n\
 function triangle (side){\n\
-  forward (side)\n\
+  ముందుకు_జరుగు(side)\n\
   a = 45\n\
   b = (180-a)/2\n\
-  right (180 - b)\n\
-  //forward (.748* side)\n\
-  forward (side * 2 * Math.sin(a/2/360*6.28))\n\
-  right (180 - b)\n\
-  forward (side)\n\
-  right (180-a)\n\
+  కుడి_వైపు_తిరుగు(180 - b)\n\
+  //ముందుకు_జరుగు(.748* side)\n\
+  ముందుకు_జరుగు(side * 2 * Math.sin(a/2/360*6.28))\n\
+  కుడి_వైపు_తిరుగు(180 - b)\n\
+  ముందుకు_జరుగు(side)\n\
+  కుడి_వైపు_తిరుగు(180-a)\n\
 }\n\
 \n\
 \n\
@@ -1874,46 +1874,46 @@ function splitTri(outerSide, num, foreColor, triSide) {\n\
         beginShape()\n\
         triangle (innerSide)\n\
         fillShape(foreColor)\n\
-        penup()\n\
-        forward(innerSide)\n\
-        pendown()\n\
+        కలమును_పైకి_ఎత్తు()\n\
+        ముందుకు_జరుగు(innerSide)\n\
+        కలమును_కింద_పెట్టు()\n\
     }\n\
-    penup()\n\
-    backward( j * innerSide)\n\
-    right(45)\n\
-    forward( innerSide)\n\
-    left(45)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    వెనుకకు_జరుగు( j * innerSide)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
+    ముందుకు_జరుగు( innerSide)\n\
+    ఎడమ_వైపు_తిరుగు(45)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
-  penup()\n\
-  right(45)\n\
-  backward( innerSide * num)\n\
-  left(45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(45)\n\
+  వెనుకకు_జరుగు( innerSide * num)\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function flipSplitTri( outerSide, num, foreColor, triSide) {\n\
-  penup()\n\
-  forward( outerSide)\n\
-  right( 45)\n\
-  forward( outerSide)\n\
-  right( 180-45)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు( outerSide)\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( outerSide)\n\
+  కుడి_వైపు_తిరుగు( 180-45)\n\
+  కలమును_కింద_పెట్టు()\n\
   splitTri( outerSide, num, foreColor, triSide)\n\
-  penup()\n\
-  right( 45)\n\
-  forward( outerSide)\n\
-  left( 45)\n\
-  forward( outerSide)\n\
-  left( 180)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( outerSide)\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( outerSide)\n\
+  ఎడమ_వైపు_తిరుగు( 180)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function labelPoints(size) {\n\
-  penup()\n\
-  angle( 0)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కోణము( 0)\n\
   boxedCompass=["N", "NxE", "NNE", "NExN", "NE", "NExE", "ENE", "ExN", "E", "ExS", "ESE", "SExE", "SE", "SExS", "SSE", "SxE", "S", "SxW", "SSW", "SWxS", "SW", "SWxW", "WSW", "WxS", "W", "WxN", "WNW", "NWxW", "NW", "NWxN", "NNW", "NxW"]\n\
 \n\
   // fill in the compass background\n\
@@ -1924,30 +1924,30 @@ function labelPoints(size) {\n\
 \n\
   for (i=0; i<32; i++) {\n\
   \n\
-    forward (textRadius)\n\
-    right(90)\n\
+    ముందుకు_జరుగు(textRadius)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
     fontSize = i % 4\n\
     if (fontSize == 1 || fontSize == 3) {\n\
       pointSize = size *.04\n\
       textLen = boxedCompass[i].length * pointSize/2\n\
-      backward (textLen)\n\
+      వెనుకకు_జరుగు(textLen)\n\
       setfont("normal " + pointSize + "pt Helvetica")\n\
     } else if (fontSize == 2) {\n\
       pointSize = size *.04\n\
       textLen = boxedCompass[i].length * pointSize/2\n\
-      backward (textLen)\n\
+      వెనుకకు_జరుగు(textLen)\n\
       setfont("bold " + pointSize + "pt Helvetica")\n\
     } else {\n\
       pointSize = size *.06\n\
       textLen = boxedCompass[i].length * pointSize/2\n\
-      backward (textLen)\n\
+      వెనుకకు_జరుగు(textLen)\n\
       setfont("bold " + pointSize + "pt Helvetica")\n\
     }\n\
     write(boxedCompass[i])\n\
-    forward (textLen)\n\
-    left(90)\n\
-    backward (textRadius)\n\
-    right(360/32)\n\
+    ముందుకు_జరుగు(textLen)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    వెనుకకు_జరుగు(textRadius)\n\
+    కుడి_వైపు_తిరుగు(360/32)\n\
   }\n\
 }\n\
 \n\
@@ -1957,22 +1957,22 @@ function demo () {\n\
   size = .9 * Math.min( maxX(), maxY()) //120\n\
 console.log("size "+ size)\n\
   wrap(false)\n\
-  hideTurtle() // don"t want it to show,  do this early\n\
+  తాబేలును_దాచు() // don"t want it to show,  do this early\n\
   redrawOnMove(false) // don"t redraw image each move\n\
 \n\
   // fill in the background\n\
   background( backgroundColor)\n\
 /*\n\
   స్థితి_మార్చు( minX()+1, maxY()-1)\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   beginShape()\n\
-  forward( 2 * maxX()-2)\n\
-  right( 90)\n\
-  forward( 2 * maxY()-2)\n\
-  right( 90)\n\
-  forward( 2 * maxX()-2)\n\
-  right( 90)\n\
-  forward( 2 * maxY()-2)\n\
+  ముందుకు_జరుగు( 2 * maxX()-2)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( 2 * maxY()-2)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( 2 * maxX()-2)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( 2 * maxY()-2)\n\
   fillShape( backgroundColor)\n\
 */\n\
 \n\
@@ -1986,39 +1986,39 @@ console.log("size "+ size)\n\
 \n\
   //fill in the eight compass major points\n\
   స్థితి_మార్చు(0,0)\n\
-  angle(0)\n\
-  left(22.5)\n\
+  కోణము(0)\n\
+  ఎడమ_వైపు_తిరుగు(22.5)\n\
   side = size * .47\n\
   for (i=0; i<8; i++) {\n\
     splitTri (side, mainDivisions, indexColor( i, inner8Colors))\n\
     flipSplitTri( side, mainDivisions, indexColor( i, outer8Colors))\n\
-    right(45)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
 \n\
   //ornament the center\n\
   for (i=0; i<8; i++) {\n\
     splitTri (side/mainDivisions, subDivisions8, "yellow")\n\
-    right(45)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
 \n\
  //place the sixteenth points\n\
-  right(22.5)\n\
+  కుడి_వైపు_తిరుగు(22.5)\n\
   for (i=0; i<8; i++) {\n\
     flipSplitTri (side, 1, background16Color,\n\
         side * mainDivisions16/mainDivisions)\n\
     flipSplitTri (side, subDivisions16, foreground16Color,\n\
         side * mainDivisions16/mainDivisions)\n\
-    right(45)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
 \n\
    //place the thirty-second points\n\
-  right(11.25)\n\
+  కుడి_వైపు_తిరుగు(11.25)\n\
   for (i=0; i<16; i++) {\n\
     flipSplitTri (side, 1, background32Color,\n\
         side * mainDivisions32/mainDivisions)\n\
     flipSplitTri (side, subDivisions32, foreground32Color,\n\
         side * mainDivisions32/mainDivisions)\n\
-    right(22.5)\n\
+    కుడి_వైపు_తిరుగు(22.5)\n\
   }\n\
 \n\
   labelPoints( size)\n\
@@ -2034,25 +2034,25 @@ connected_points ='\
 function drawRadials(side) {\n\
   for (var i=0; i<16; i++) {\n\
     స్థితి_మార్చు(0,0)\n\
-    angle(i/16 * 360)\n\
-    forward( size)\n\
+    కోణము(i/16 * 360)\n\
+    ముందుకు_జరుగు( size)\n\
   }\n\
 }\n\
 \n\
 function spikey ( points, revs, radius, x, y, head) {\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   స్థితి_మార్చు(x, y)\n\
   setheading(head)\n\
-  forward(radius)\n\
+  ముందుకు_జరుగు(radius)\n\
   var turnAngle = 360 * revs/points\n\
   var angleA = ( 180 - turnAngle)/2\n\
   var stroke = 2 * radius * Math.cos( degToRad( angleA))\n\
-  right( 180 - angleA)\n\
-  pendown()\n\
+  కుడి_వైపు_తిరుగు( 180 - angleA)\n\
+  కలమును_కింద_పెట్టు()\n\
 \n\
   for( var i = 0; i < points; i = i + 1) { //>\n\
-    forward( stroke)\n\
-    right( turnAngle)\n\
+    ముందుకు_జరుగు( stroke)\n\
+    కుడి_వైపు_తిరుగు( turnAngle)\n\
   }\n\
 }\n\
 \n\
@@ -2081,7 +2081,7 @@ function demo() {\n\
   drawRadials( size)\n\
   స్థితి_మార్చు(0,0)\n\
   circle( inr)\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 conway_fractal ='\
@@ -2141,18 +2141,18 @@ var CW = true\n\
 \n\
 function dturn( dir, degrees) {\n\
   if (dir) {\n\
-    right( degrees)\n\
+    కుడి_వైపు_తిరుగు( degrees)\n\
   } else {\n\
-    left ( degrees)\n\
+    ఎడమ_వైపు_తిరుగు( degrees)\n\
   }\n\
 }\n\
 \n\
 function drawTriangle (dir, side) {\n\
-  forward (2*side)\n\
+  ముందుకు_జరుగు(2*side)\n\
   dturn(dir, 180-anglea)\n\
-  forward (root5*side)\n\
+  ముందుకు_జరుగు(root5*side)\n\
   dturn (dir, 180-angleb)\n\
-  forward (side)\n\
+  ముందుకు_జరుగు(side)\n\
   dturn (dir, 90)\n\
 }\n\
 \n\
@@ -2161,7 +2161,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -2171,7 +2171,7 @@ function caption (message) {\n\
   // erase what will be in the path\n\
   color ("white")\n\
   width (10)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
   write( message)\n\
@@ -2191,21 +2191,21 @@ function shadeTriangle( dir, side, stepsize) {\n\
   var steps = Math.floor( side/stepsize)\n\
 \n\
   for (var i=0; i< steps; i++) {\n\
-     forward( 2*side * (steps-i)/steps)\n\
-     backward( 2*side * (steps-i)/steps)\n\
-     penup()\n\
+     ముందుకు_జరుగు( 2*side * (steps-i)/steps)\n\
+     వెనుకకు_జరుగు( 2*side * (steps-i)/steps)\n\
+     కలమును_పైకి_ఎత్తు()\n\
      dturn( dir, 90)\n\
-     forward( stepsize)\n\
+     ముందుకు_జరుగు( stepsize)\n\
      dturn( !dir, 90)\n\
-     pendown()\n\
+     కలమును_కింద_పెట్టు()\n\
   }\n\
   //return to start\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   dturn( !dir, 90)\n\
-  forward( side)\n\
+  ముందుకు_జరుగు( side)\n\
   dturn( dir, 90)\n\
   //స్థితి_మార్చు(x,y) // cancel cumulative error\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 function recursiveDivide( dir, side, level, triangle) {\n\
@@ -2217,44 +2217,44 @@ function recursiveDivide( dir, side, level, triangle) {\n\
     \n\
     //draw the first line to point A\n\
     dturn( dir, angleb)\n\
-    pendown()\n\
-    forward (2*side)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(2*side)\n\
 \n\
     //sub triangle 1\n\
-    right (180)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
     recursiveDivide( !dir, side, level-1, 1)\n\
-    right (180)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
 \n\
     //draw the second line to point B\n\
     dturn( !dir, 180-angleb)\n\
-    pendown()\n\
-    forward (root5*side)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(root5*side)\n\
     \n\
     //draw third line to point C\n\
     dturn( dir, 180-angleb)\n\
-    forward(side)\n\
-    penup()\n\
+    ముందుకు_జరుగు(side)\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
 i    //sub triangle 4\n\
     dturn( dir, 90)\n\
     recursiveDivide( dir, side, level-1, 4)\n\
 \n\
     //sub triangle 5\n\
-    right( 180)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     recursiveDivide( !dir, side, level-1, 5)\n\
     dturn( dir, 90)\n\
     \n\
     //retreat to point B\n\
-    backward(side)\n\
+    వెనుకకు_జరుగు(side)\n\
     dturn( dir, 90)\n\
     \n\
     //draw fourth line to point D\n\
-    pendown()\n\
-    forward( 2*side)\n\
-    penup()\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
     //sub triangle 2\n\
-    right( 180)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     recursiveDivide( !dir, side, level-1, 2)\n\
 \n\
     //sub triangle 3\n\
@@ -2262,9 +2262,9 @@ i    //sub triangle 4\n\
     \n\
     //retreat to origin\n\
     dturn( !dir, 90)\n\
-    penup()\n\
-    forward( side)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    కలమును_కింద_పెట్టు()\n\
     dturn( dir, 180-angleb)\n\
     //స్థితి_మార్చు(x,y) //cancel cumulative error\n\
 //  } else {\n\
@@ -2283,57 +2283,57 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
     var y = turtle.pos.y\n\
 \n\
     //move to point A\n\
-    penup()\n\
+    కలమును_పైకి_ఎత్తు()\n\
     dturn( dir, angleb)\n\
-    forward (2 * side)\n\
+    ముందుకు_జరుగు(2 * side)\n\
 \n\
     //sub triangle 1\n\
-    right (180)\n\
-    pendown()\n\
+    కుడి_వైపు_తిరుగు(180)\n\
+    కలమును_కింద_పెట్టు()\n\
     recursiveDivideBlocks( !dir, side, level-1, 1, background, highlight)\n\
-    penup()\n\
-    right (180)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(180)\n\
 \n\
     //move to pint B\n\
     dturn( !dir, 180-angleb)\n\
-    forward (root5*side)\n\
+    ముందుకు_జరుగు(root5*side)\n\
     \n\
     //move to point C\n\
     dturn( dir, 180-angleb)\n\
-    forward(side)\n\
+    ముందుకు_జరుగు(side)\n\
 \n\
     //sub triangle 4\n\
     dturn( dir, 90)\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     recursiveDivideBlocks( dir, side, level-1, 4, background, highlight)\n\
-    penup()\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
     //sub triangle 5\n\
-    right( 180)\n\
-    pendown()\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
+    కలమును_కింద_పెట్టు()\n\
     recursiveDivideBlocks( !dir, side, level-1, 5, background, highlight)\n\
-    penup()\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
     //retreat to point B\n\
     dturn( dir, 90)\n\
-    backward(side)\n\
+    వెనుకకు_జరుగు(side)\n\
 \n\
     //move to point B\n\
     dturn( dir, 90)\n\
-    forward( 2*side)\n\
+    ముందుకు_జరుగు( 2*side)\n\
 \n\
 //sub triangle 2\n\
-    right( 180)\n\
-    pendown()\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
+    కలమును_కింద_పెట్టు()\n\
     recursiveDivideBlocks( !dir, side, level-1, 2, background, highlight)\n\
 \n\
     //sub triangle 3\n\
     recursiveDivideBlocks( dir, side, level-1, 3, highlight, highlight)\n\
-    penup()\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
     //move to origin\n\
     dturn( !dir, 90)\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
 \n\
     dturn( dir, 180-angleb)\n\
     స్థితి_మార్చు(x,y) //cancel cumulative error\n\
@@ -2370,37 +2370,37 @@ function demo() {\n\
   // initialize\n\
   reset()\n\
   wrap(false)\n\
-  hideTurtle()\n\
-  penup()\n\
-  backward (side/4)\n\
-  right(90)\n\
-  backward (side)\n\
+  తాబేలును_దాచు()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  వెనుకకు_జరుగు(side/4)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side)\n\
 \n\
   // label the sides of the triangle\n\
   setfont("bold 14px sans-serif")\n\
-  left( anglea)\n\
-  forward( side+50)\n\
-  right( anglea)\n\
+  ఎడమ_వైపు_తిరుగు( anglea)\n\
+  ముందుకు_జరుగు( side+50)\n\
+  కుడి_వైపు_తిరుగు( anglea)\n\
   write( "√5")\n\
-  left( anglea)\n\
-  backward( side+50)\n\
-  right( anglea)\n\
-  right( 90)\n\
-  forward (20)\n\
-  left( 90)\n\
-  forward( side)\n\
+  ఎడమ_వైపు_తిరుగు( anglea)\n\
+  వెనుకకు_జరుగు( side+50)\n\
+  కుడి_వైపు_తిరుగు( anglea)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు(20)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side)\n\
   write (2)\n\
-  backward( side+20)\n\
-  left( 90)\n\
-  forward( side/2 + 20)\n\
-  right( 90)\n\
+  వెనుకకు_జరుగు( side+20)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side/2 + 20)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   write( 1)\n\
-  forward( 20)\n\
-  right(90)\n\
-  forward (side/2)\n\
-  left(90)\n\
+  ముందుకు_జరుగు( 20)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(side/2)\n\
+  ఎడమ_వైపు_తిరుగు(90)\n\
 \n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   drawTriangle( CCW, side)\n\
 \n\
   level = 0\n\
@@ -2464,19 +2464,19 @@ var CW = true\n\
 \n\
 function dturn( dir, degrees) { // allows turning based on triangle type\n\
   if (dir) {\n\
-    right( degrees)\n\
+    కుడి_వైపు_తిరుగు( degrees)\n\
   } else {\n\
-    left ( degrees)\n\
+    ఎడమ_వైపు_తిరుగు( degrees)\n\
   }\n\
 }\n\
 \n\
 \n\
 function drawTriangle (dir, side) {\n\
-  forward (2*side)\n\
+  ముందుకు_జరుగు(2*side)\n\
   dturn(dir, 180-anglea)\n\
-  forward (root5*side)\n\
+  ముందుకు_జరుగు(root5*side)\n\
   dturn (dir, 180-angleb)\n\
-  forward (side)\n\
+  ముందుకు_జరుగు(side)\n\
   dturn (dir, 90)\n\
 }\n\
 \n\
@@ -2485,7 +2485,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -2495,7 +2495,7 @@ function caption (message) {\n\
   // erase wha will be in the path\n\
   color ("white")\n\
   width (10)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
   write( message)\n\
@@ -2516,21 +2516,21 @@ function shadeTriangle( dir, side, stepsize) {\n\
   var steps = Math.floor( side/stepsize)\n\
 \n\
   for (var i=0; i< steps; i++) {\n\
-     forward( 2*side * (steps-i)/steps)\n\
-     backward( 2*side * (steps-i)/steps)\n\
-     penup()\n\
+     ముందుకు_జరుగు( 2*side * (steps-i)/steps)\n\
+     వెనుకకు_జరుగు( 2*side * (steps-i)/steps)\n\
+     కలమును_పైకి_ఎత్తు()\n\
      dturn( dir, 90)\n\
-     forward( stepsize)\n\
+     ముందుకు_జరుగు( stepsize)\n\
      dturn( !dir, 90)\n\
-     pendown()\n\
+     కలమును_కింద_పెట్టు()\n\
   }\n\
   //return to start\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   dturn( !dir, 90)\n\
-  forward( side)\n\
+  ముందుకు_జరుగు( side)\n\
   dturn( dir, 90)\n\
   //స్థితి_మార్చు(x,y) // cancel cumulative error\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
@@ -2543,44 +2543,44 @@ function recursiveDivide( dir, side, level, triangle) {\n\
     \n\
     //draw the first line to point A\n\
     dturn( dir, angleb)\n\
-    pendown()\n\
-    forward (2*side)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(2*side)\n\
 \n\
     //sub triangle 1\n\
-    right (180)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
     recursiveDivide( !dir, side, level-1, 1)\n\
-    right (180)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
 \n\
     //draw the second line to point B\n\
     dturn( !dir, 180-angleb)\n\
-    pendown()\n\
-    forward (root5*side)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(root5*side)\n\
     \n\
     //draw third line to point C\n\
     dturn( dir, 180-angleb)\n\
-    forward(side)\n\
-    penup()\n\
+    ముందుకు_జరుగు(side)\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
 i    //sub triangle 4\n\
     dturn( dir, 90)\n\
     recursiveDivide( dir, side, level-1, 4)\n\
 \n\
     //sub triangle 5\n\
-    right( 180)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     recursiveDivide( !dir, side, level-1, 5)\n\
     dturn( dir, 90)\n\
     \n\
     //retreat to point B\n\
-    backward(side)\n\
+    వెనుకకు_జరుగు(side)\n\
     dturn( dir, 90)\n\
     \n\
     //draw fourth line to point D\n\
-    pendown()\n\
-    forward( 2*side)\n\
-    penup()\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    కలమును_పైకి_ఎత్తు()\n\
 \n\
     //sub triangle 2\n\
-    right( 180)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     recursiveDivide( !dir, side, level-1, 2)\n\
 \n\
     //sub triangle 3\n\
@@ -2588,9 +2588,9 @@ i    //sub triangle 4\n\
     \n\
     //retreat to origin\n\
     dturn( !dir, 90)\n\
-    penup()\n\
-    forward( side)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    కలమును_కింద_పెట్టు()\n\
     dturn( dir, 180-angleb)\n\
     //స్థితి_మార్చు(x,y) //cancel cumulative error\n\
 //  } else {\n\
@@ -2603,11 +2603,11 @@ i    //sub triangle 4\n\
 \n\
 \n\
 function moveToExpandOrigin (side) {\n\
-  penup()\n\
-  right( 90)\n\
-  forward( side)\n\
-  left( 180 - angleb)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - angleb)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
@@ -2615,18 +2615,18 @@ function startDelayedDivide() {\n\
   // move to the origin of the big triangle\n\
   reset()\n\
   color(mainColor)\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
 \n\
   side = targetSide\n\
-  backward (side/2)\n\
-  right(90)\n\
-  backward (side)\n\
-  pendown()\n\
+  వెనుకకు_జరుగు(side/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side)\n\
+  కలమును_కింద_పెట్టు()\n\
 \n\
   iterations = 4\n\
   level = 0\n\
 \n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   color("black")\n\
   delayedDivide()\n\
 }\n\
@@ -2650,12 +2650,12 @@ function startDelayedExpansion() {\n\
   reset ()\n\
   wrap( false)\n\
   color(mainColor)\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
 \n\
   var tempSide = targetSide\n\
-  backward (side/2)\n\
-  right(90)\n\
-  backward (side)\n\
+  వెనుకకు_జరుగు(side/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side)\n\
 \n\
   iterations = 4\n\
   depth = 0\n\
@@ -2670,18 +2670,18 @@ function startDelayedExpansion() {\n\
     tempSide = tempSide * root5\n\
   }\n\
   for (var i=0; i<iterations; i++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     drawTriangle( dir, tempSide)\n\
-    penup()\n\
+    కలమును_పైకి_ఎత్తు()\n\
     dturn( dir, angleb)\n\
-    forward( tempSide/root5)\n\
+    ముందుకు_జరుగు( tempSide/root5)\n\
     dturn( !dir, 90)\n\
     tempSide = tempSide / root5\n\
     drawTriangle( tempSide) // really just for reference\n\
     console.log(i)\n\
   }\n\
 \n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   color ("blue")\n\
   shadeTriangle( CCW, tempSide, stepsize)\n\
   color("black")\n\
@@ -2719,8 +2719,8 @@ iterations = 4\n\
 iterations = 2\n\
 level = 1\n\
 depth = 0\n\
-CCW = false // triangle is to the left side of the right angle ( height, hypotenuse, base)\n\
-CW = true // triangle is to the right side of the right angle( height, hypotenuse, base)\n\
+CCW = false // triangle is to the left side of the right కోణము ( height, hypotenuse, base)\n\
+CW = true // triangle is to the right side of the right కోణము( height, hypotenuse, base)\n\
 mainColor = "tan"\n\
 subColor = "wheat"\n\
 specialTriangle = 0\n\
@@ -2735,15 +2735,15 @@ basically:\n\
   continue with a delayed expansion\n\
 */\n\
   reset()\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   side = targetSide\n\
   wrap(false)\n\
   color(mainColor)\n\
-  penup()\n\
-  backward (side/2)\n\
-  right(90)\n\
-  backward (side)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  వెనుకకు_జరుగు(side/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(side)\n\
+  కలమును_కింద_పెట్టు()\n\
 \n\
   startDelayedExpansion()\n\
 }\n\
@@ -2753,59 +2753,59 @@ coordinates ='\
 \n\
 function lines () {\n\
   clear()\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
 \n\
   స్థితి_మార్చు(0,minY())\n\
-  angle(0)\n\
-  forward (2*maxY())\n\
+  కోణము(0)\n\
+  ముందుకు_జరుగు(2*maxY())\n\
 \n\
   స్థితి_మార్చు(minX(),0)\n\
-  angle(90)\n\
-  forward (2*maxX())\n\
+  కోణము(90)\n\
+  ముందుకు_జరుగు(2*maxX())\n\
 \n\
   //lable the axes\n\
   setFont("bold 14px sans-serif");\n\
   స్థితి_మార్చు(0+10,maxY()-25)\n\
-  angle (90)\n\
+  కోణము (90)\n\
   write (maxY())\n\
 \n\
   స్థితి_మార్చు(maxX()-5,+10)\n\
-  angle (0)\n\
+  కోణము (0)\n\
   write (maxX())\n\
 \n\
   స్థితి_మార్చు(10,minY()+5)\n\
-  angle (90)\n\
+  కోణము (90)\n\
   write (minY())\n\
 \n\
   స్థితి_మార్చు(minX()+25,0+10)\n\
-  angle (0)\n\
+  కోణము (0)\n\
   write (minX())\n\
 }\n\
 \n\
 \n\
 function ticks (dir, limit, step) {\n\
   var tickLen = 5\n\
-  angle(dir)\n\
+  కోణము(dir)\n\
   స్థితి_మార్చు(0,0)\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   for (i=1; i*step<limit; i=i+1) {\n\
 \n\
-    forward(step)\n\
-    left(90)\n\
+    ముందుకు_జరుగు(step)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
     if (i%5 == 0) {\n\
-      forward(tickLen)\n\
-      pendown()\n\
-      backward (tickLen*2)\n\
-      penup()\n\
-      forward(tickLen)\n\
-      right(90)\n\
+      ముందుకు_జరుగు(tickLen)\n\
+      కలమును_కింద_పెట్టు()\n\
+      వెనుకకు_జరుగు(tickLen*2)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు(tickLen)\n\
+      కుడి_వైపు_తిరుగు(90)\n\
     } else {\n\
-      forward(tickLen/2)\n\
-      pendown()\n\
-      backward (tickLen)\n\
-      penup()\n\
-      forward(tickLen/2)\n\
-      right(90)\n\
+      ముందుకు_జరుగు(tickLen/2)\n\
+      కలమును_కింద_పెట్టు()\n\
+      వెనుకకు_జరుగు(tickLen)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు(tickLen/2)\n\
+      కుడి_వైపు_తిరుగు(90)\n\
     }\n\
   }\n\
 }\n\
@@ -2834,15 +2834,15 @@ delayTime = 1000; // milliseconds\n\
 // *** FUNCTIONS ***\n\
 \n\
 function divideCenter(radii, radius) {\n\
-  left(60);\n\
-  forward(radius);\n\
-  right(60);\n\
+  ఎడమ_వైపు_తిరుగు(60);\n\
+  ముందుకు_జరుగు(radius);\n\
+  కుడి_వైపు_తిరుగు(60);\n\
   var side = 0\n\
   while (side < 6) { // go to each side\n\
-    right(60);\n\
+    కుడి_వైపు_తిరుగు(60);\n\
     var step = 0\n\
     while (step < radii) { // step off side\n\
-      forward(radius);\n\
+      ముందుకు_జరుగు(radius);\n\
       circle(radius);\n\
       step = step + 1\n\
     };\n\
@@ -2862,9 +2862,9 @@ function tier () {\n\
 \n\
 function demo() {\n\
   clear();\n\
-  hideTurtle();\n\
+  తాబేలును_దాచు();\n\
   home();\n\
-  penup();\n\
+  కలమును_పైకి_ఎత్తు();\n\
   wrap(false);\n\
   circle (rad);\n\
   i = 1;\n\
@@ -2891,36 +2891,36 @@ function pent(side) {\n\
   var angle5 = 129\n\
   var side5 = 2.65 * side\n\
   for (var i=0; i<5; i++) {\n\
-    forward (side)\n\
-      right(angle2)\n\
-      forward (side2)\n\
-        right(angle3)\n\
-        forward(side3)\n\
-          left(angle4)\n\
-          forward(side4)\n\
-            left(angle5)\n\
-            forward(side5)\n\
-            backward(side5)\n\
-            right(angle5)\n\
-          backward(side4)\n\
-          right(angle4)\n\
-        backward(side3)\n\
-        left(angle3)\n\
-        left(angle3)\n\
-        forward(side3)\n\
-        backward(side3)\n\
-        right(angle3)\n\
-      backward (side2)\n\
-      left(angle2)\n\
-    right(72)\n\
+    ముందుకు_జరుగు(side)\n\
+      కుడి_వైపు_తిరుగు(angle2)\n\
+      ముందుకు_జరుగు(side2)\n\
+        కుడి_వైపు_తిరుగు(angle3)\n\
+        ముందుకు_జరుగు(side3)\n\
+          ఎడమ_వైపు_తిరుగు(angle4)\n\
+          ముందుకు_జరుగు(side4)\n\
+            ఎడమ_వైపు_తిరుగు(angle5)\n\
+            ముందుకు_జరుగు(side5)\n\
+            వెనుకకు_జరుగు(side5)\n\
+            కుడి_వైపు_తిరుగు(angle5)\n\
+          వెనుకకు_జరుగు(side4)\n\
+          కుడి_వైపు_తిరుగు(angle4)\n\
+        వెనుకకు_జరుగు(side3)\n\
+        ఎడమ_వైపు_తిరుగు(angle3)\n\
+        ఎడమ_వైపు_తిరుగు(angle3)\n\
+        ముందుకు_జరుగు(side3)\n\
+        వెనుకకు_జరుగు(side3)\n\
+        కుడి_వైపు_తిరుగు(angle3)\n\
+      వెనుకకు_జరుగు(side2)\n\
+      ఎడమ_వైపు_తిరుగు(angle2)\n\
+    కుడి_వైపు_తిరుగు(72)\n\
   }\n\
 }\n\
 \n\
 function demo() {\n\
   స్థితి_మార్చు(-50,-22)\n\
-  right(17)\n\
+  కుడి_వైపు_తిరుగు(17)\n\
   pent(50)\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 dragon_curve ='\
@@ -2938,7 +2938,7 @@ var side\n\
 var root2 = Math.sqrt(2)\n\
 //  X ↦ X+YF+\n\
 //  Y ↦ −FX−Y.\n\
-// angle is 90\n\
+// కోణము is 90\n\
 // start is order * 45°\n\
 \n\
 \n\
@@ -2948,7 +2948,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -2958,7 +2958,7 @@ function caption (message) {\n\
   // erase what will be in the path\n\
   color ("white")\n\
   width (10)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
 \n\
@@ -2974,26 +2974,26 @@ function caption (message) {\n\
 \n\
 function X (side, gen) {\n\
   if (gen <= 0) {\n\
-     forward (side)\n\
+     ముందుకు_జరుగు(side)\n\
   }\n\
   else {\n\
     X(side/root2, gen-1)\n\
-    left (90)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
     Y(side/root2, gen-1)\n\
-    //forward(side/2)\n\
-    left (90)\n\
+    //ముందుకు_జరుగు(side/2)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
   }\n\
 }\n\
 \n\
 function Y (side, gen) {\n\
   if (gen <= 0) {\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
   }\n\
   else {\n\
-    right (90)\n\
-    //forward (side/root2)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    //ముందుకు_జరుగు(side/root2)\n\
     X (side/root2, gen-1)\n\
-    right (90)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
     Y (side/root2, gen-1)\n\
   }\n\
 }\n\
@@ -3001,10 +3001,10 @@ function Y (side, gen) {\n\
 \n\
 function delayedDragon () {\n\
   reset()\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   స్థితి_మార్చు(-side * .4, +side *.2)\n\
   setheading (90+ gen * 45)\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   X (side, gen)\n\
   caption( "Dragon curve, generation " + gen)\n\
 \n\
@@ -3035,7 +3035,7 @@ For example:    */\n\
 function square (side) {\n\
   var i=0\n\
   while (i<4) {\n\
-    forward( side)\n\
+    ముందుకు_జరుగు( side)\n\
     turn(90)\n\
     i=i+1\n\
   }\n\
@@ -3043,12 +3043,12 @@ function square (side) {\n\
 \n\
 function demo() {\n\
    reset();\n\
-   hideTurtle();\n\
+   తాబేలును_దాచు();\n\
    color("blue");\n\
    var side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
-      right(36);\n\
+      కుడి_వైపు_తిరుగు(36);\n\
       side = side - 10;\n\
    }\n\
 }\n\
@@ -3590,7 +3590,7 @@ function caption (message) {\n\
     // save your current position, heading, etc.\n\
     var savedX = turtle.pos.x\n\
     var savedY = turtle.pos.y\n\
-    var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+    var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
     var savedColor = turtle.color\n\
     var savedWidth = turtle.width\n\
 \n\
@@ -3601,7 +3601,7 @@ function caption (message) {\n\
     setfont("bold 16px helvitica,sans-serif")\n\
     color ("white")\n\
     width (22)\n\
-    forward (maxY() * 2 - 12)\n\
+    ముందుకు_జరుగు(maxY() * 2 - 12)\n\
     స్థితి_మార్చు(minX()+10, minY()+5)\n\
     color ("black")\n\
     write( message)\n\
@@ -4054,7 +4054,7 @@ function executeCommand () {\n\
 \n\
 function demo() {\n\
     reset()\n\
-    hideTurtle()\n\
+    తాబేలును_దాచు()\n\
     commandDue = undefined\n\
     commandSequence = simulatorCommands\n\
     currentCommand = 0\n\
@@ -4073,12 +4073,12 @@ fibinoucci ='\
 \n\
 function box (side) {\n\
   for (var i = 0; i<4; i++) {\n\
-    forward( side)\n\
-    right( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
-  forward( side)\n\
-  right( 90)\n\
-  forward( side)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side)\n\
 }\n\
 \n\
 function fib(count, side) {\n\
@@ -4108,8 +4108,8 @@ function fib(count, side) {\n\
 function demo() {\n\
   reset()\n\
   స్థితి_మార్చు(150,60)\n\
-  angle(90)\n\
-  hideTurtle()\n\
+  కోణము(90)\n\
+  తాబేలును_దాచు()\n\
   fib( 11,4)\n\
 }\n\
 '
@@ -4131,7 +4131,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -4141,7 +4141,7 @@ function caption (message) {\n\
   // erase what will be in the path\n\
   color ("white")\n\
   width (10)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
   setfont( "bold 12px Helvitica,sans-serif")\n\
@@ -4157,23 +4157,23 @@ function caption (message) {\n\
 \n\
 function A (side, gen) {\n\
   if (gen ===0) {\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
   }\n\
   else {\n\
     side = side / Math.sqrt(7)\n\
     A (side, gen-1)\n\
-    left (60)\n\
+    ఎడమ_వైపు_తిరుగు(60)\n\
     B (side, gen-1)\n\
-    left (120)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
     B (side, gen-1)\n\
-    right (60)\n\
+    కుడి_వైపు_తిరుగు(60)\n\
     A (side, gen-1)\n\
-    right (120)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
     A (side, gen-1)\n\
     A (side, gen-1)\n\
-    right (60)\n\
+    కుడి_వైపు_తిరుగు(60)\n\
     B (side, gen-1)\n\
-    left (60)\n\
+    ఎడమ_వైపు_తిరుగు(60)\n\
   }\n\
 }\n\
 \n\
@@ -4181,22 +4181,22 @@ function A (side, gen) {\n\
 \n\
 function B (side, gen) {\n\
   if (gen ===0) {\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
   }\n\
   else {\n\
     side = side / Math.sqrt(7)\n\
-    right (60)\n\
+    కుడి_వైపు_తిరుగు(60)\n\
     A (side, gen-1)\n\
-    left (60)\n\
+    ఎడమ_వైపు_తిరుగు(60)\n\
     B (side, gen-1)\n\
     B (side, gen-1)\n\
-    left (120)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
     B (side, gen-1)\n\
-    left (60)\n\
+    ఎడమ_వైపు_తిరుగు(60)\n\
     A (side, gen-1)\n\
-    right (120)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
     A (side, gen-1)\n\
-    right (60)\n\
+    కుడి_వైపు_తిరుగు(60)\n\
     B (side, gen-1)\n\
   }\n\
 }\n\
@@ -4204,7 +4204,7 @@ function B (side, gen) {\n\
 \n\
 function delayDemo () {\n\
   reset()\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   size = 1.5 * Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు( .5* size, (.2*gen -.6) * size)\n\
   A( size,gen)\n\
@@ -4237,9 +4237,9 @@ var maxVelocity = 12;\n\
 function plotOne() {\n\
   స్థితి_మార్చు(random(minX, maxX), random(minY, maxY));\n\
   color(random(16));\n\
-  angle(random(0, 180));\n\
+  కోణము(random(0, 180));\n\
   width(random(1, 20));\n\
-  forward(random(10, 30));\n\
+  ముందుకు_జరుగు(random(10, 30));\n\
 }\n\
 \n\
 function demo () {\n\
@@ -4269,104 +4269,104 @@ function oheart(size)\n\
 {\n\
   color("red")\n\
   width(4)\n\
-  penup()\n\
-  backward(.707*size)\n\
-  pendown()\n\
-  left (45)\n\
-  forward(size)\n\
-  right (90)\n\
-  penup()\n\
-  forward (size/2)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  వెనుకకు_జరుగు(.707*size)\n\
+  కలమును_కింద_పెట్టు()\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కలమును_కింద_పెట్టు()\n\
   circle(size/2,180,false)\n\
-  penup()\n\
-  forward (size/2)\n\
-  right(90)\n\
-  forward (size/2)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కలమును_కింద_పెట్టు()\n\
   circle(size/2,180,false)\n\
-  penup()\n\
-  forward (size/2)\n\
-  pendown()\n\
-  right(90)\n\
-  forward (size)\n\
-  right(135)\n\
-  penup()\n\
-  forward(.707*size)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(135)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.707*size)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 function fheart(size, fcolor)\n\
 {\n\
   color(fcolor)\n\
-  backward(.707*size)\n\
-  left (45)\n\
-  forward(size)\n\
-  right (90)\n\
-  forward (size/2)\n\
+  వెనుకకు_జరుగు(.707*size)\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size/2)\n\
   beginShape()\n\
   circle(size/2,180,false)\n\
   fillShape(fcolor)\n\
-  forward (size/2)\n\
-  right(90)\n\
-  forward (size/2)\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size/2)\n\
   beginShape()\n\
   circle(size/2,180,false)\n\
   fillShape(fcolor)\n\
-  forward (size/2)\n\
-  right(90)\n\
-  forward (size)\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size)\n\
   beginShape()\n\
   for (i=0;i<4;i++)\n\
   {\n\
-    right(90)\n\
-    forward(size)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(size)\n\
   }\n\
   fillShape(fcolor)\n\
-  right(135)\n\
-  forward(.707*size)\n\
+  కుడి_వైపు_తిరుగు(135)\n\
+  ముందుకు_జరుగు(.707*size)\n\
 }\n\
 \n\
 function heart(size)\n\
 {\n\
   color("red")\n\
   width(4)\n\
-  penup()\n\
-  backward(.707*size)\n\
-  pendown()\n\
-  left (45)\n\
-  forward(size)\n\
-  right (90)\n\
-  penup()\n\
-  forward (size/2)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  వెనుకకు_జరుగు(.707*size)\n\
+  కలమును_కింద_పెట్టు()\n\
+  ఎడమ_వైపు_తిరుగు(45)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కలమును_కింద_పెట్టు()\n\
   beginShape()\n\
   circle(size/2,180,false)\n\
   fillShape("red")\n\
-  penup()\n\
-  forward (size/2)\n\
-  right(90)\n\
-  forward (size/2)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కలమును_కింద_పెట్టు()\n\
   beginShape()\n\
   circle(size/2,180,false)\n\
   fillShape("red")\n\
-  penup()\n\
-  forward (size/2)\n\
-  pendown()\n\
-  right(90)\n\
-  forward (size)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(size/2)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(size)\n\
   beginShape()\n\
   for (i=0;i<4;i++)\n\
   {\n\
-    right(90)\n\
-    forward(size)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(size)\n\
   }\n\
   fillShape()\n\
-  right(135)\n\
-  penup()\n\
-  forward(.707*size)\n\
-  pendown()\n\
+  కుడి_వైపు_తిరుగు(135)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.707*size)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 function demo()\n\
@@ -4390,25 +4390,25 @@ lSide = 2* sSide \n\
 function vRect( sSide, lSide, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<2; i++) {\n\
-    forward( sSide)\n\
-    right(90)\n\
-    forward( lSide)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( sSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( lSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( sSide)\n\
+  ముందుకు_జరుగు( sSide)\n\
 }\n\
 \n\
 function hRect( sSide, lSide, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<2; i++) {\n\
-    forward( lSide)\n\
-    right(90)\n\
-    forward( sSide)\n\
-    right(90)\n\
+    ముందుకు_జరుగు( lSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( sSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape( fColor)\n\
-  forward( lSide)\n\
+  ముందుకు_జరుగు( lSide)\n\
 }\n\
 \n\
 function demo() {\n\
@@ -4417,48 +4417,48 @@ function demo() {\n\
   yB = maxY() + sSide\n\
   xB = minX()\n\
   wrap(false)\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   color("white")\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > minY()) {\n\
     స్థితి_మార్చు(xB, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
-      penup()\n\
-      forward( sSide)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
     }\n\
     yB = yB - sSide\n\
 \n\
     స్థితి_మార్చు(xB - lSide/2, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
-      penup()\n\
-      forward( sSide)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
     }\n\
     yB = yB - sSide\n\
 \n\
     స్థితి_మార్చు(xB - lSide, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
-      penup()\n\
-      forward( sSide)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
     }\n\
     yB = yB - sSide\n\
 \n\
     స్థితి_మార్చు(xB - 3/2 * lSide, yB)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
-      penup()\n\
-      forward( sSide)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( sSide)\n\
     }\n\
     yB = yB - sSide\n\
   }\n\
@@ -4487,15 +4487,15 @@ function penta (side, faceColor) {\n\
 \n\
   for( i=0; i<5; i++) {\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 180-basePentaAngle)\n\
-    forward( pentaSide)\n\
-    right( 180-centralPentaAngle)\n\
-    forward( pentaSide)\n\
-    right( 180-basePentaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)\n\
+    ముందుకు_జరుగు( pentaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-centralPentaAngle)\n\
+    ముందుకు_జరుగు( pentaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)\n\
     fillShape(faceColor)\n\
-    forward( side)\n\
-    right( 180-(2*basePentaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-(2*basePentaAngle))\n\
   }\n\
 }\n\
 \n\
@@ -4506,15 +4506,15 @@ function hexa (side, faceColor) {\n\
 \n\
   for( var i=0; i<6; i++) {\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 180-baseHexaAngle)\n\
-    forward( hexaSide)\n\
-    right( 180-centralHexaAngle)\n\
-    forward( hexaSide)\n\
-    right( 180-baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
+    ముందుకు_జరుగు( hexaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-centralHexaAngle)\n\
+    ముందుకు_జరుగు( hexaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
     fillShape(faceColor)\n\
-    forward( side)\n\
-    right( 180-(2*baseHexaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-(2*baseHexaAngle))\n\
   }\n\
 }\n\
 \n\
@@ -4525,13 +4525,13 @@ pangle = 0\n\
 function savePos () {\n\
   px = turtle.pos.x\n\
   py = turtle.pos.y\n\
-  pangle = turtle.angle\n\
+  pangle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos() {\n\
   turtle.pos.x = px\n\
   turtle.pos.y = py\n\
-  turtle.angle = pangle\n\
+  turtle.కోణము = pangle\n\
 }\n\
 \n\
 p2x = 0\n\
@@ -4541,13 +4541,13 @@ p2angle = 0\n\
 function savePos2 () {\n\
   p2x = turtle.pos.x\n\
   p2y = turtle.pos.y\n\
-  p2angle = turtle.angle\n\
+  p2angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos2() {\n\
   turtle.pos.x = p2x\n\
   turtle.pos.y = p2y\n\
-  turtle.angle = p2angle\n\
+  turtle.కోణము = p2angle\n\
 }\n\
 \n\
 p3x = 0\n\
@@ -4557,13 +4557,13 @@ p3angle = 0\n\
 function savePos3 () {\n\
   p3x = turtle.pos.x\n\
   p3y = turtle.pos.y\n\
-  p3angle = turtle.angle\n\
+  p3angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos3() {\n\
   turtle.pos.x = p3x\n\
   turtle.pos.y = p3y\n\
-  turtle.angle = p3angle\n\
+  turtle.కోణము = p3angle\n\
 }\n\
 \n\
 p4x = 0\n\
@@ -4573,99 +4573,99 @@ p4angle = 0\n\
 function savePos4 () {\n\
   p4x = turtle.pos.x\n\
   p4y = turtle.pos.y\n\
-  p4angle = turtle.angle\n\
+  p4angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos4() {\n\
   turtle.pos.x = p4x\n\
   turtle.pos.y = p4y\n\
-  turtle.angle = p4angle\n\
+  turtle.కోణము = p4angle\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
   side = .13* Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు(1.8*side,0)\n\
-  right(80)\n\
+  కుడి_వైపు_తిరుగు(80)\n\
   penta (side, "green")\n\
-  right( (2*basePentaAngle))\n\
+  కుడి_వైపు_తిరుగు( (2*basePentaAngle))\n\
   for (var i=0; i<5; i++) {\n\
     savePos()\n\
     // start with the base opposite of where you are now\n\
-    right(2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    right(180)\n\
+    కుడి_వైపు_తిరుగు(2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
 \n\
     // draw another hexa out from where the first will be\n\
     savePos2()\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    right(180)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
     savePos3()\n\
     hexa (side, "red")\n\
     restorePos3()\n\
 \n\
     //draw a penta outside of the last hexa\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     savePos4()\n\
     penta( side, "green")\n\
 \n\
     // draw a hexa touching last penta\n\
 \n\
     restorePos3()\n\
-    forward( side)\n\
-    left(180-2*basePentaAngle-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*basePentaAngle-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     hexa( side, "yellow")\n\
 \n\
     if (i == 0) {\n\
     restorePos4()\n\
-    forward( side)\n\
-    left( 180 - 2* baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180 - 2*baseHexaAngle)\n\
-    forward( side)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - 2* baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - 2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     savePos4()\n\
     hexa( side, "lightblue")\n\
    \n\
 \n\
     // draw a penta to oppose first\n\
-      left(-2*baseHexaAngle)\n\
-      forward( side)\n\
-      left( 180-2*baseHexaAngle)\n\
+      ఎడమ_వైపు_తిరుగు(-2*baseHexaAngle)\n\
+      ముందుకు_జరుగు( side)\n\
+      ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
       savePos4()\n\
       penta(side, "green")\n\
       restorePos4()\n\
-      forward(side)\n\
+      ముందుకు_జరుగు(side)\n\
       savePos4()\n\
       for (var j=1; j<5; j++) {\n\
          restorePos4()\n\
-         right( 180 - 2*basePentaAngle)\n\
-         forward( side)\n\
+         కుడి_వైపు_తిరుగు( 180 - 2*basePentaAngle)\n\
+         ముందుకు_జరుగు( side)\n\
          savePos4()\n\
-         left(180 - 2* baseHexaAngle)\n\
-         forward( side)\n\
-         left(180)\n\
+         ఎడమ_వైపు_తిరుగు(180 - 2* baseHexaAngle)\n\
+         ముందుకు_జరుగు( side)\n\
+         ఎడమ_వైపు_తిరుగు(180)\n\
          hexa( side, "lightblue")\n\
       }\n\
 \n\
@@ -4675,21 +4675,21 @@ function demo() {\n\
     restorePos2()\n\
 \n\
     // draw a penta on the free face one away\n\
-    forward( side)\n\
-    right( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     penta(side, "green")\n\
     restorePos2()\n\
 \n\
     hexa (side, "blue")\n\
     restorePos()\n\
-    forward( side)\n\
-    left(180-(2*basePentaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(180-(2*basePentaAngle))\n\
   }\n\
 }\n\
 '
@@ -4717,15 +4717,15 @@ function penta (side, faceColor) {\n\
 \n\
   for( i=0; i<5; i++) {\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 180-baseAngle)\n\
-    forward( pentaSide)\n\
-    right( 180-centralPentaAngle)\n\
-    forward( pentaSide)\n\
-    right( 180-basePentaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-baseAngle)\n\
+    ముందుకు_జరుగు( pentaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-centralPentaAngle)\n\
+    ముందుకు_జరుగు( pentaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)\n\
     fillShape(faceColor)\n\
-    forward( side)\n\
-    right( 180-(2*basePentaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-(2*basePentaAngle))\n\
   }\n\
 }\n\
 \n\
@@ -4736,15 +4736,15 @@ function hexa (side, faceColor) {\n\
 \n\
   for( var i=0; i<6; i++) {\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 180-baseHexaAngle)\n\
-    forward( hexaSide)\n\
-    right( 180-centralHexaAngle)\n\
-    forward( hexaSide)\n\
-    right( 180-baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
+    ముందుకు_జరుగు( hexaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-centralHexaAngle)\n\
+    ముందుకు_జరుగు( hexaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
     fillShape(faceColor)\n\
-    forward( side)\n\
-    right( 180-(2*baseHexaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-(2*baseHexaAngle))\n\
   }\n\
 }\n\
 \n\
@@ -4755,13 +4755,13 @@ pangle = 0\n\
 function savePos () {\n\
   px = turtle.pos.x\n\
   py = turtle.pos.y\n\
-  pangle = turtle.angle\n\
+  pangle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos() {\n\
   turtle.pos.x = px\n\
   turtle.pos.y = py\n\
-  turtle.angle = pangle\n\
+  turtle.కోణము = pangle\n\
 }\n\
 \n\
 p2x = 0\n\
@@ -4771,13 +4771,13 @@ p2angle = 0\n\
 function savePos2 () {\n\
   p2x = turtle.pos.x\n\
   p2y = turtle.pos.y\n\
-  p2angle = turtle.angle\n\
+  p2angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos2() {\n\
   turtle.pos.x = p2x\n\
   turtle.pos.y = p2y\n\
-  turtle.angle = p2angle\n\
+  turtle.కోణము = p2angle\n\
 }\n\
 \n\
 p3x = 0\n\
@@ -4787,13 +4787,13 @@ p3angle = 0\n\
 function savePos3 () {\n\
   p3x = turtle.pos.x\n\
   p3y = turtle.pos.y\n\
-  p3angle = turtle.angle\n\
+  p3angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos3() {\n\
   turtle.pos.x = p3x\n\
   turtle.pos.y = p3y\n\
-  turtle.angle = p3angle\n\
+  turtle.కోణము = p3angle\n\
 }\n\
 \n\
 p4x = 0\n\
@@ -4803,77 +4803,77 @@ p4angle = 0\n\
 function savePos4 () {\n\
   p4x = turtle.pos.x\n\
   p4y = turtle.pos.y\n\
-  p4angle = turtle.angle\n\
+  p4angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos4() {\n\
   turtle.pos.x = p4x\n\
   turtle.pos.y = p4y\n\
-  turtle.angle = p4angle\n\
+  turtle.కోణము = p4angle\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
   side = .13* Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు(0,0)\n\
-  right(80)\n\
+  కుడి_వైపు_తిరుగు(80)\n\
   penta (side, "green")\n\
-  right( (2*basePentaAngle))\n\
+  కుడి_వైపు_తిరుగు( (2*basePentaAngle))\n\
   for (var i=0; i<5; i++) {\n\
     savePos()\n\
     // start with the base opposite of where you are now\n\
-    right(2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    right(180)\n\
+    కుడి_వైపు_తిరుగు(2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
 \n\
     // draw another hexa out from where the first will be\n\
     savePos2()\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    right(180)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
     savePos3()\n\
     hexa (side, "red")\n\
     restorePos3()\n\
 \n\
     //draw a penta outside of the last hexa\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     savePos4()\n\
     penta( side, "green")\n\
 \n\
     // draw a hexa touching last penta\n\
 \n\
     restorePos3()\n\
-    forward( side)\n\
-    left(180-2*basePentaAngle-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*basePentaAngle-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     hexa( side, "yellow")\n\
 \n\
     restorePos4()\n\
-    forward( side)\n\
-    left( 180 - 2* baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180 - 2*baseHexaAngle)\n\
-    forward( side)\n\
-    right( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - 2* baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - 2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180)\n\
     savePos4()\n\
     hexa( side, "lightblue")\n\
    \n\
@@ -4881,12 +4881,12 @@ function demo() {\n\
     // draw a penta to oppose first\n\
     //restorePos4()\n\
     if (i == 0) {\n\
-      left(-2*baseHexaAngle)\n\
-      forward( side)\n\
-      left( 180-2*baseHexaAngle)\n\
-      //forward( side)\n\
-      //right( 180-2*baseHexaAngle)\n\
-      //forward(side)\n\
+      ఎడమ_వైపు_తిరుగు(-2*baseHexaAngle)\n\
+      ముందుకు_జరుగు( side)\n\
+      ఎడమ_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+      //ముందుకు_జరుగు( side)\n\
+      //కుడి_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+      //ముందుకు_జరుగు(side)\n\
       penta(side, "green")\n\
     }\n\
 \n\
@@ -4894,21 +4894,21 @@ function demo() {\n\
     restorePos2()\n\
 \n\
     // draw a penta on the free face one away\n\
-    forward( side)\n\
-    right( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     penta(side, "green")\n\
     restorePos2()\n\
 \n\
     hexa (side, "blue")\n\
     restorePos()\n\
-    forward( side)\n\
-    left(180-(2*basePentaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(180-(2*basePentaAngle))\n\
   }\n\
 }\n\
 '
@@ -4936,15 +4936,15 @@ function penta (side, faceColor) {\n\
 \n\
   for( i=0; i<5; i++) {\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 180-basePentaAngle)\n\
-    forward( pentaSide)\n\
-    right( 180-centralPentaAngle)\n\
-    forward( pentaSide)\n\
-    right( 180-basePentaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)\n\
+    ముందుకు_జరుగు( pentaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-centralPentaAngle)\n\
+    ముందుకు_జరుగు( pentaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-basePentaAngle)\n\
     fillShape(faceColor)\n\
-    forward( side)\n\
-    right( 180-(2*basePentaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-(2*basePentaAngle))\n\
   }\n\
 }\n\
 \n\
@@ -4955,15 +4955,15 @@ function hexa (side, faceColor) {\n\
 \n\
   for( var i=0; i<6; i++) {\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 180-baseHexaAngle)\n\
-    forward( hexaSide)\n\
-    right( 180-centralHexaAngle)\n\
-    forward( hexaSide)\n\
-    right( 180-baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
+    ముందుకు_జరుగు( hexaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-centralHexaAngle)\n\
+    ముందుకు_జరుగు( hexaSide)\n\
+    కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
     fillShape(faceColor)\n\
-    forward( side)\n\
-    right( 180-(2*baseHexaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-(2*baseHexaAngle))\n\
   }\n\
 }\n\
 \n\
@@ -4974,13 +4974,13 @@ pangle = 0\n\
 function savePos () {\n\
   px = turtle.pos.x\n\
   py = turtle.pos.y\n\
-  pangle = turtle.angle\n\
+  pangle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos() {\n\
   turtle.pos.x = px\n\
   turtle.pos.y = py\n\
-  turtle.angle = pangle\n\
+  turtle.కోణము = pangle\n\
 }\n\
 \n\
 p2x = 0\n\
@@ -4990,64 +4990,64 @@ p2angle = 0\n\
 function savePos2 () {\n\
   p2x = turtle.pos.x\n\
   p2y = turtle.pos.y\n\
-  p2angle = turtle.angle\n\
+  p2angle = turtle.కోణము\n\
 }\n\
 \n\
 function restorePos2() {\n\
   turtle.pos.x = p2x\n\
   turtle.pos.y = p2y\n\
-  turtle.angle = p2angle\n\
+  turtle.కోణము = p2angle\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
   side = .23 * Math.min(maxX(), maxY())\n\
   స్థితి_మార్చు(-.6* side, -.5* side)\n\
-  right(18)\n\
+  కుడి_వైపు_తిరుగు(18)\n\
   penta (side, "green")\n\
-  right( (2*basePentaAngle))\n\
+  కుడి_వైపు_తిరుగు( (2*basePentaAngle))\n\
   for (var i=0; i<5; i++) {\n\
     savePos()\n\
     // start with the base opposite of where you are now\n\
-    right(2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    right(180)\n\
+    కుడి_వైపు_తిరుగు(2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
 \n\
     // draw another hexa out from where the first will be\n\
     savePos2()\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    left(180-2*baseHexaAngle)\n\
-    forward(side)\n\
-    right(180)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
     hexa (side, "red")\n\
 \n\
     restorePos2()\n\
 \n\
     // draw a penta on the free face one away\n\
-    forward( side)\n\
-    right( 180-2*baseHexaAngle)\n\
-    forward( side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180-2*basePentaAngle)\n\
-    forward(side)\n\
-    left( 180)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180-2*baseHexaAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180-2*basePentaAngle)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
     penta(side, "green")\n\
     restorePos2()\n\
 \n\
     hexa (side, "blue")\n\
     restorePos()\n\
-    forward( side)\n\
-    left(180-(2*basePentaAngle))\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(180-(2*basePentaAngle))\n\
   }\n\
 }\n\
 '
@@ -5055,23 +5055,23 @@ hex_tessellation ='\
 // Hexagon Tessellation -- tile a surface with hexagons\n\
 \n\
 function hexagon (side) {\n\
-  penup();\n\
-  forward(side);\n\
-  right(120);\n\
-  pendown();\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  ముందుకు_జరుగు(side);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  కలమును_కింద_పెట్టు();\n\
   repeat (6, function () {\n\
-    forward(side);\n\
-    right(60);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(60);\n\
   })\n\
 }\n\
 \n\
 function repeatToRight (side) {\n\
   while (turtle.pos.x < maxX()) {\n\
     hexagon(side);\n\
-    penup();\n\
-    forward(side * 2);\n\
-    left(120);\n\
-    pendown();\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(side * 2);\n\
+    ఎడమ_వైపు_తిరుగు(120);\n\
+    కలమును_కింద_పెట్టు();\n\
   }\n\
 }\n\
 \n\
@@ -5079,10 +5079,10 @@ function repeatToLeft(side) {\n\
   while (turtle.pos.x > minX())\n\
    {\n\
     hexagon(side);\n\
-    penup();\n\
-    forward(side * 2);\n\
-    left(120);\n\
-    pendown();\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(side * 2);\n\
+    ఎడమ_వైపు_తిరుగు(120);\n\
+    కలమును_కింద_పెట్టు();\n\
   }\n\
 }\n\
 \n\
@@ -5100,23 +5100,23 @@ function demo() {\n\
     repeatToRight(side); // draw a row of hexagons\n\
   \n\
     //advance to next row on right side\n\
-    penup();\n\
-    left(120);\n\
-    forward(side);\n\
-    left(60);\n\
-    forward(side)\n\
-    pendown();\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ఎడమ_వైపు_తిరుగు(120);\n\
+    ముందుకు_జరుగు(side);\n\
+    ఎడమ_వైపు_తిరుగు(60);\n\
+    ముందుకు_జరుగు(side)\n\
+    కలమును_కింద_పెట్టు();\n\
   \n\
     repeatToLeft (side);  // draw a row of hexagons\n\
   \n\
     //advance on next row on left side\n\
-    penup();\n\
-    left(60);\n\
-    forward(side);\n\
-    right(60);\n\
-    forward(side);\n\
-    right(180);\n\
-    pendown();\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ఎడమ_వైపు_తిరుగు(60);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(60);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(180);\n\
+    కలమును_కింద_పెట్టు();\n\
     draw();\n\
   }\n\
 }\n\
@@ -5138,7 +5138,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -5148,7 +5148,7 @@ function caption (message) {\n\
   // erase wha will be in the path\n\
   color ("white")\n\
   width (10)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
   setfont("bold 12pt Ariel,sans-serif")\n\
@@ -5164,26 +5164,26 @@ function caption (message) {\n\
 \n\
 function A (side,gen) {\n\
   if (gen === 0) {\n\
-    left (90)\n\
-    forward (side)\n\
-    right (90)\n\
-    forward (side)\n\
-    right (90)\n\
-    forward (side)\n\
-    left (90)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
   }\n\
   else {\n\
-    left (90)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
     B (side, gen-1)\n\
-    forward (side)\n\
-    right (90)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
     A (side, gen-1)\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
     A (side, gen-1)\n\
-    right (90)\n\
-    forward (side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
     B (side, gen-1)\n\
-    left (90)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
   }\n\
 }\n\
 //  B → + A F − B F B − F A +\n\
@@ -5191,26 +5191,26 @@ function A (side,gen) {\n\
 \n\
 function B (side,gen) {\n\
   if (gen === 0) {\n\
-    right (90)\n\
-    forward (side)\n\
-    left (90)\n\
-    forward (side)\n\
-    left (90)\n\
-    forward (side)\n\
-    right (90)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   else {\n\
-    right (90)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
     A (side, gen-1)\n\
-    forward (side)\n\
-    left (90)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
     B (side, gen-1)\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
     B (side, gen-1)\n\
-    left (90)\n\
-    forward (side)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side)\n\
     A (side, gen-1)\n\
-    right (90)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
 }\n\
 \n\
@@ -5278,7 +5278,7 @@ hirschhorn_tiles ='\
 // this means that\n\
 // side0 = side4 = side3 = side2 = side1... equalateral\n\
 \n\
-ang0 = 360/6 //point angle\n\
+ang0 = 360/6 //point కోణము\n\
 ang1 = 160\n\
 ang2 = 80\n\
 ang3 = 100\n\
@@ -5367,17 +5367,17 @@ function pentagon(side, fColor) {\n\
   // direction of the point\n\
   // invariant\n\
   beginShape()\n\
-  left( ang0/2)\n\
-  forward( side)\n\
-  right( 180 - ang1)\n\
-  forward( side)\n\
-  right( 180 - ang2)\n\
-  forward( side)\n\
-  right( 180 - ang3)\n\
-  forward( side)\n\
-  right( 180 - ang4)\n\
-  forward( side)\n\
-  right( 180 - ang0/2)\n\
+  ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - ang1)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - ang2)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - ang3)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - ang4)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
   fillShape( fColor)\n\
 }\n\
 \n\
@@ -5388,14 +5388,14 @@ function p(pNum, ccw, side, fColor) {\n\
     r = 1\n\
   }\n\
   beginShape()\n\
-  left( angles[pNum]/2)\n\
+  ఎడమ_వైపు_తిరుగు( angles[pNum]/2)\n\
   for (var i=1; i<5; i++) {\n\
-    forward( side)\n\
+    ముందుకు_జరుగు( side)\n\
     //write( angles[(i+pNum)%5])\n\
-    right( 180 - angles[(5+r*i+pNum)%5])  \n\
+    కుడి_వైపు_తిరుగు( 180 - angles[(5+r*i+pNum)%5])  \n\
   }\n\
-  forward( side)\n\
-  right( 180 - angles[pNum]/2)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - angles[pNum]/2)\n\
   fillShape( fColor)\n\
 }\n\
 \n\
@@ -5403,217 +5403,217 @@ function hirchhorn(side) {\n\
   for (var i=0; i<6; i++) {\n\
     //pentagon( s, fColors[colorlayer])\n\
     p( 0, CW, side, fColors[colorlayer])\n\
-    left( 60)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
   }\n\
   colorlayer++\n\
 \n\
-  left(30)\n\
+  ఎడమ_వైపు_తిరుగు(30)\n\
   for (var i=0; i<6; i++) {\n\
-    forward( side)\n\
-    left( 10)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 10)\n\
     //pentagon( s, fColors[colorlayer])\n\
     p( 0, CW, side, fColors[colorlayer])\n\
-    right( 10)\n\
-    backward( side)\n\
-    left( 60)\n\
+    కుడి_వైపు_తిరుగు( 10)\n\
+    వెనుకకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
   }\n\
   colorlayer++\n\
 \n\
   for (var i=0; i<6; i++) {\n\
-    forward( side)\n\
-    right( 180 - ang1)\n\
-    forward( side)\n\
-    left( 180 - ang4 - ang4/2 )\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang1)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang4 - ang4/2 )\n\
 \n\
     p ( 4, 0, side, fColors[colorlayer])\n\
-    right( 180 - ang4 - ang4/2 )\n\
-    backward( side)\n\
-    left( 180 - ang1)\n\
-    backward(side)\n\
-    left( 60)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang4 - ang4/2 )\n\
+    వెనుకకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang1)\n\
+    వెనుకకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
   }\n\
   colorlayer++\n\
   \n\
-  forward( side)\n\
-  right( 180 - ang1)\n\
-  forward( side)\n\
-  left( 180 - ang4)\n\
-  forward( side)\n\
-  left( 180 - ang3 - ang0/2)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 180 - ang1)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - ang4)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - ang3 - ang0/2)\n\
   \n\
   cl = colorlayer\n\
   for( var i=0; i<18; i++) {\n\
     colorlayer = cl\n\
     p( 0, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
-    right( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang1 - ang3/2)\n\
+    కుడి_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang1 - ang3/2)\n\
     p( 3, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
-    right( ang3/2)\n\
+    కుడి_వైపు_తిరుగు( ang3/2)\n\
 \n\
-    forward(side)\n\
-    left( 180- ang4 - ang0/2)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు( 180- ang4 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang0/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])//purple\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    right( 180- ang1)\n\
-    forward( side)\n\
-    right( 180 - ang2 - ang2/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180- ang1)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang2 - ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( 180 - ang3)\n\
-    forward( side)\n\
-    left( 180 - ang4 - ang0/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang3)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang4 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang0/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang0/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    right( 180 - ang1)\n\
-    forward( side)\n\
-    right( 180 - ang2 - ang2/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang1)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang2 - ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2)\n\
-    forward( side)\n\
-    left( 180 - ang4 - ang0/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang4 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang0/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang0/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    left( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang0/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    left( ang0/2)\n\
-    forward( side)\n\
-    right( 180 - ang1)\n\
-    forward( side)\n\
-    right( 180 - ang2 - ang2/2)\n\
+    ఎడమ_వైపు_తిరుగు( ang0/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang1)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang2 - ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    left( ang2/2)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( ang2/2)\n\
     p( 2, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
 \n\
     // and back again\n\
-    right( ang2/2)\n\
-    forward( side)\n\
-    right( 180 - ang3)\n\
+    కుడి_వైపు_తిరుగు( ang2/2)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang3)\n\
 \n\
-    forward( side)\n\
-    right( 180 - ang4)\n\
-    forward( side)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang4)\n\
+    ముందుకు_జరుగు( side)\n\
 \n\
-    right( 180 - ang0 - ang4)\n\
-    forward( side)\n\
-    right( 180 - ang3 - ang3)\n\
-    forward( side)\n\
-    right( 180 - ang4)\n\
-    forward( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0 - ang4)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang3 - ang3)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang4)\n\
+    ముందుకు_జరుగు( side)\n\
 \n\
-    right( 180 - ang0 - ang4)\n\
-    forward( side)\n\
-    right( 180 - ang3 - ang3)\n\
-    forward( side)\n\
-    right( 180 - ang4)\n\
-    forward( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0 - ang4)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang3 - ang3)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang4)\n\
+    ముందుకు_జరుగు( side)\n\
 \n\
-    right( 180 - ang0 - ang4)\n\
-    forward( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0 - ang4)\n\
+    ముందుకు_జరుగు( side)\n\
 \n\
-    right( 180 - ang3 - ang1)\n\
-    forward( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang3 - ang1)\n\
+    ముందుకు_జరుగు( side)\n\
 \n\
-    right( 180 - ang0)\n\
-    forward( side)\n\
-    right( 180 - ang4 - ang0/2)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang0)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - ang4 - ang0/2)\n\
 \n\
   }\n\
   \n\
@@ -5638,32 +5638,32 @@ colors = ["red", "white", "blue", "yellow", "green"]\n\
 \n\
 function pentUp( side, fColor) {\n\
   beginShape()\n\
-  forward( side)\n\
-  left( 90)\n\
-  forward( side/2)\n\
-  left( 45)\n\
-  forward( side * .5 * Math.sqrt(2))\n\
-  left( 90)\n\
-  forward( side * .5 * Math.sqrt(2))\n\
-  left( 45)\n\
-  forward( side/2)\n\
-  left(90)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side/2)\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side/2)\n\
+  ఎడమ_వైపు_తిరుగు(90)\n\
   fillShape( fColor)\n\
 }\n\
 \n\
 \n\
 function pentDown( side, fColor) {\n\
   beginShape()\n\
-  forward( side)\n\
-  right( 90)\n\
-  forward( side/2)\n\
-  right( 45)\n\
-  forward( side * .5 * Math.sqrt(2))\n\
-  right( 90)\n\
-  forward( side * .5 * Math.sqrt(2))\n\
-  right( 45)\n\
-  forward( side/2)\n\
-  right(90)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side/2)\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side * .5 * Math.sqrt(2))\n\
+  కుడి_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
   fillShape( fColor)\n\
 }\n\
 \n\
@@ -5682,23 +5682,23 @@ function demo() {\n\
   rowOffset = s/3 // offset between rows\n\
   wrap(false)\n\
   స్థితి_మార్చు(minX(), maxY())\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
   while (turtle.pos.y > minY()) {\n\
   while (turtle.pos.x < maxX()) {\n\
     pentDown(s, nextColor())\n\
-    forward(s)\n\
+    ముందుకు_జరుగు(s)\n\
   }\n\
-  right(90)\n\
-  forward( 3/2*s)\n\
-  right(90)\n\
-  backward(s/2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు( 3/2*s)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  వెనుకకు_జరుగు(s/2)\n\
   while (turtle.pos.x > minX()) {\n\
     pentDown(s, nextColor())\n\
-    forward(s)\n\
+    ముందుకు_జరుగు(s)\n\
   }\n\
-  left(180)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
   }\n\
 }\n\
 '
@@ -5720,48 +5720,48 @@ function pent(side) {\n\
   var side5 = 1.27 * side\n\
   for (var i=0; i<5; i++) {\n\
     color("black")\n\
-    forward (side)\n\
-      left(angle2)\n\
+    ముందుకు_జరుగు(side)\n\
+      ఎడమ_వైపు_తిరుగు(angle2)\n\
 \n\
       color("red")\n\
-      right(angle3)\n\
-      forward(side3)\n\
-      backward(side3)\n\
-      left(angle3)\n\
+      కుడి_వైపు_తిరుగు(angle3)\n\
+      ముందుకు_జరుగు(side3)\n\
+      వెనుకకు_జరుగు(side3)\n\
+      ఎడమ_వైపు_తిరుగు(angle3)\n\
 \n\
       color ("black")\n\
-      forward(side2)\n\
+      ముందుకు_జరుగు(side2)\n\
 \n\
       color("blue")\n\
-      right(180-angle3)\n\
-      forward(side3)\n\
+      కుడి_వైపు_తిరుగు(180-angle3)\n\
+      ముందుకు_జరుగు(side3)\n\
 \n\
-        left(angle4)\n\
+        ఎడమ_వైపు_తిరుగు(angle4)\n\
 \n\
-        right(angle5)\n\
-        forward(side5)\n\
-        backward(side5)\n\
-        left(angle5)\n\
+        కుడి_వైపు_తిరుగు(angle5)\n\
+        ముందుకు_జరుగు(side5)\n\
+        వెనుకకు_జరుగు(side5)\n\
+        ఎడమ_వైపు_తిరుగు(angle5)\n\
 \n\
-        forward(side4)\n\
+        ముందుకు_జరుగు(side4)\n\
  \n\
-        right(180-angle5)\n\
-        forward(side5)\n\
-        backward(side5)\n\
-        left(180-angle5)\n\
+        కుడి_వైపు_తిరుగు(180-angle5)\n\
+        ముందుకు_జరుగు(side5)\n\
+        వెనుకకు_జరుగు(side5)\n\
+        ఎడమ_వైపు_తిరుగు(180-angle5)\n\
 \n\
 \n\
-        backward(side4)\n\
-        right(angle4)\n\
+        వెనుకకు_జరుగు(side4)\n\
+        కుడి_వైపు_తిరుగు(angle4)\n\
 \n\
-      backward(side3)\n\
-      left(180-angle3)\n\
+      వెనుకకు_జరుగు(side3)\n\
+      ఎడమ_వైపు_తిరుగు(180-angle3)\n\
 \n\
       color ("black")\n\
-      backward(side2)\n\
-      right(angle2)\n\
+      వెనుకకు_జరుగు(side2)\n\
+      కుడి_వైపు_తిరుగు(angle2)\n\
 \n\
-    backward(side)\n\
+    వెనుకకు_జరుగు(side)\n\
     turn(72)\n\
   }\n\
   circle(2.13*side)\n\
@@ -5771,9 +5771,9 @@ function demo() {\n\
   reset()\n\
   size = .4 * Math.min( maxX(), maxY())\n\
   //స్థితి_మార్చు(-50,-22)\n\
-  //right(17)\n\
+  //కుడి_వైపు_తిరుగు(17)\n\
   pent(size)\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 intersection_simulator ='\
@@ -5963,44 +5963,44 @@ testRates();\n\
 function drawEWstreet() {\n\
   wrap(false);\n\
   setpos(minX(),0);\n\
-  angle(90);\n\
-  pendown();\n\
+  కోణము(90);\n\
+  కలమును_కింద_పెట్టు();\n\
   color("black");\n\
   penwidth(roadWidth);\n\
-  forward(maxX() + maxX());\n\
+  ముందుకు_జరుగు(maxX() + maxX());\n\
 }\n\
 \n\
 function drawNSstreet() {\n\
   setpos(0,maxY());\n\
-  angle(180);\n\
-  pendown();\n\
+  కోణము(180);\n\
+  కలమును_కింద_పెట్టు();\n\
   color("black");\n\
   penwidth(roadWidth);\n\
-  forward(maxY() + maxY());\n\
+  ముందుకు_జరుగు(maxY() + maxY());\n\
 }\n\
 \n\
 function drawEWstripe() {\n\
   setpos(minX(),0);\n\
-  angle(90);\n\
+  కోణము(90);\n\
   color("yellow");\n\
   penwidth(1);\n\
-  forward(maxX() - roadWidth / 2 - crossWalkWidth);\n\
-  penup();\n\
-  forward(roadWidth + 2 * crossWalkWidth);\n\
-  pendown();\n\
-  forward(maxX() - roadWidth / 2 - crossWalkWidth);\n\
+  ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);\n\
 }\n\
 \n\
 function drawNSstripe() {\n\
   setpos(0,maxY());\n\
-  angle(180);\n\
+  కోణము(180);\n\
   color("yellow");\n\
   penwidth(1);\n\
-  forward(maxY() - roadWidth / 2 - crossWalkWidth);\n\
-  penup();\n\
-  forward(roadWidth + 2 * crossWalkWidth);\n\
-  pendown();\n\
-  forward(maxY() - roadWidth / 2 - crossWalkWidth);\n\
+  ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);\n\
 }\n\
 \n\
 function drawCrossWalk(x, y, dir) {\n\
@@ -6011,50 +6011,50 @@ function drawCrossWalk(x, y, dir) {\n\
   // draw inner cross walk line\n\
   color("white");\n\
   setposition(x, y);\n\
-  angle(dir);\n\
+  కోణము(dir);\n\
   width(1);\n\
-  penDown();\n\
-  forward(roadWidth);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(roadWidth);\n\
     \n\
   // draw outer cross walk line\n\
-  penUp();\n\
-  left(90);\n\
-  forward(crossWalkWidth);\n\
-  left(90);\n\
-  penDown();\n\
-  forward(roadWidth);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(crossWalkWidth);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(roadWidth);\n\
     \n\
   // draw stop line\n\
-  penUp();\n\
-  right(90);\n\
-  forward(stopLineSeparation);\n\
-  right(90);\n\
-  forward(2);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(stopLineSeparation);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(2);\n\
   penWidth(stopLineWidth);\n\
-  penDown();\n\
-  forward(roadWidth / 2 - 4);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(roadWidth / 2 - 4);\n\
   penWidth(1);\n\
 }\n\
 \n\
 function drawTurnArrow(x, y, dir) {\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   స్థితి_మార్చు(x,y);\n\
-  angle (dir);\n\
-  pendown();\n\
+  కోణము (dir);\n\
+  కలమును_కింద_పెట్టు();\n\
   color("white");\n\
   penwidth(5);\n\
-  forward (5);\n\
+  ముందుకు_జరుగు(5);\n\
   curveLeft(5,90);\n\
-  forward(4);\n\
+  ముందుకు_జరుగు(4);\n\
   penwidth (2);\n\
-  left(130);\n\
-  forward (5);\n\
-  right (160);\n\
-  forward (9);\n\
-  right(120);\n\
-  forward (9);\n\
-  right(160);\n\
-  forward(5);\n\
+  ఎడమ_వైపు_తిరుగు(130);\n\
+  ముందుకు_జరుగు(5);\n\
+  కుడి_వైపు_తిరుగు(160);\n\
+  ముందుకు_జరుగు(9);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  ముందుకు_జరుగు(9);\n\
+  కుడి_వైపు_తిరుగు(160);\n\
+  ముందుకు_జరుగు(5);\n\
 }\n\
   \n\
 \n\
@@ -6091,99 +6091,99 @@ function drawArrow() { // assume pointing up, color set and pen up\n\
   var penWidth = turtle.width;\n\
   var arrowSize = 8;\n\
   var vertOffset = 5;\n\
-  backward(vertOffset);\n\
-  pendown();\n\
+  వెనుకకు_జరుగు(vertOffset);\n\
+  కలమును_కింద_పెట్టు();\n\
   penwidth(3);\n\
-  left(45);\n\
-  forward(arrowSize);\n\
-  right(90);\n\
-  forward(arrowSize);\n\
-  penup();\n\
-  backward(arrowSize);\n\
-  left(90);\n\
-  backward(arrowSize);\n\
-  right(45);\n\
+  ఎడమ_వైపు_తిరుగు(45);\n\
+  ముందుకు_జరుగు(arrowSize);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(arrowSize);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(arrowSize);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  వెనుకకు_జరుగు(arrowSize);\n\
+  కుడి_వైపు_తిరుగు(45);\n\
   penwidth(penWidth);\n\
-  forward(vertOffset);\n\
+  ముందుకు_జరుగు(vertOffset);\n\
 }\n\
 \n\
 function drawTurnSignal(state) {\n\
-  left(90);\n\
-  forward(13);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(13);\n\
   setLightColor("green", state);\n\
   drawArrow();\n\
 \n\
-  backward(13);\n\
+  వెనుకకు_జరుగు(13);\n\
   setLightColor("yellow", state);\n\
   drawArrow();\n\
 \n\
-  backward(13);\n\
+  వెనుకకు_జరుగు(13);\n\
   setLightColor("red", state);\n\
   drawArrow();\n\
 \n\
-  forward(13);\n\
-  right(90);\n\
+  ముందుకు_జరుగు(13);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
 }\n\
 \n\
 function drawMainSignal(state) { // main signal is straight ahead\n\
-  left(90);\n\
-  forward(13);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(13);\n\
   setLightColor("green", state);\n\
   dot();\n\
 \n\
-  backward(13);\n\
+  వెనుకకు_జరుగు(13);\n\
   setLightColor("yellow", state);\n\
   dot();\n\
 \n\
-  backward(13);\n\
+  వెనుకకు_జరుగు(13);\n\
   setLightColor("red", state);\n\
   dot();\n\
 \n\
-  forward(13);\n\
-  right(90);\n\
+  ముందుకు_జరుగు(13);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
 }\n\
 \n\
 function drawWalkSignal(state) {\n\
   // should do the flashing red for don\'t start\n\
   // could do the flash down counter\n\
   setLightColor("green", state);\n\
-  left(90);\n\
-  forward(5);\n\
-  right(90);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(5);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
   write("WALK");\n\
 \n\
-  left(90);\n\
-  backward(5);\n\
-  right(90);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
+  వెనుకకు_జరుగు(5);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
   setLightColor("red", state);\n\
   if (state === "yellow") {\n\
     color("yellow")\n\
   }\n\
-  right(90);\n\
-  forward(8);\n\
-  left(90);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(8);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
   write("DONT");\n\
 \n\
-  right(90);\n\
-  forward(13);\n\
-  left(90);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(13);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
   write("WALK");\n\
 \n\
-  right(90);\n\
-  backward(25);\n\
-  left(90);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  వెనుకకు_జరుగు(25);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
 }\n\
 \n\
 function drawSignal(x, y, orient, mainState, turnState, walkState) {\n\
-  // move turtle to position and angle depending on street direction\n\
+  // move turtle to position and కోణము depending on street direction\n\
   setpos (x, y);\n\
-  angle(orient);\n\
+  కోణము(orient);\n\
   drawTurnSignal(turnState);\n\
 \n\
-  forward(10);\n\
+  ముందుకు_జరుగు(10);\n\
   drawMainSignal(mainState);\n\
 \n\
-  forward(10);\n\
+  ముందుకు_జరుగు(10);\n\
   drawWalkSignal(walkState);\n\
 }\n\
 \n\
@@ -6235,23 +6235,23 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {\n\
 //  main is the main light queue\n\
 //  walk is the walk light queue\n\
   setpos(x,y)\n\
-  angle(orientation)\n\
+  కోణము(orientation)\n\
 /*\n\
   if (dir === "N") {\n\
     setpos(55,-maxY()+5);\n\
-    angle(0);\n\
+    కోణము(0);\n\
   } else if (dir === "S") {\n\
     setpos(-68,maxY()-20);\n\
-    angle(0);\n\
+    కోణము(0);\n\
   } else if (dir === "E") {\n\
     setpos(-maxX()+5, -55);\n\
-    angle(90);\n\
+    కోణము(90);\n\
   } else if (dir === "W") {\n\
     setpos(maxX()-20, 68);\n\
-    angle(90);\n\
+    కోణము(90);\n\
   } else {\n\
     setpos(-200,200);\n\
-    angle(90);\n\
+    కోణము(90);\n\
   }\n\
 */\n\
   penwidth(1);\n\
@@ -6262,14 +6262,14 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {\n\
     write(turn);\n\
   }\n\
 \n\
-  right(90);\n\
-  forward(12);\n\
-  left(90);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(12);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
   write(main);\n\
 \n\
-  right(90);\n\
-  forward(12);\n\
-  left(90);\n\
+  కుడి_వైపు_తిరుగు(90);\n\
+  ముందుకు_జరుగు(12);\n\
+  ఎడమ_వైపు_తిరుగు(90);\n\
   if (dir === "S" || dir === "W") {\n\
     write(turn);\n\
   } else {\n\
@@ -6302,14 +6302,14 @@ function drawQueues() {\n\
 \n\
 function drawQueue(x, y, dir, queue, len) {\n\
   స్థితి_మార్చు(x, y);\n\
-  angle(dir);\n\
+  కోణము(dir);\n\
   width(10);\n\
   for (var i=0; i<queue.length; i++) {\n\
-    pendown();\n\
+    కలమును_కింద_పెట్టు();\n\
     color(queue[i].color);\n\
-    forward(len); \n\
-    penup();\n\
-    forward(4);\n\
+    ముందుకు_జరుగు(len); \n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(4);\n\
   }\n\
 }\n\
 \n\
@@ -6999,19 +6999,19 @@ to be moved. Each body part is draw with a function (also called a sub-routine) 
 make the problem easier to understand.\n\
 \n\
 The drawLeftLeg(), drawRightLeg(), drawLeftArm(), and drawRightArm() functions use a\n\
-parameter that is used to determine the angle of\n\
+parameter that is used to determine the కోణము of\n\
 the particular appendage being drawn. This way the same function can be used without\n\
 regard to the arm or leg position.\n\
 \n\
 The drawBody() function ties everything together and draws all of the body parts.\n\
-It has two parameters, one for the arm angle and one for the leg angle. This assumes\n\
+It has two parameters, one for the arm కోణము and one for the leg కోణము. This assumes\n\
 that the arms move together and the legs move together, but that is not a requirement.\n\
 You can change this.\n\
 \n\
 To make this a bit more fun, this can be animated, so the figure\'s arms and legs move\n\
-as if it were doing jumping jacks. To do this we want to vary the angle of the\n\
+as if it were doing jumping jacks. To do this we want to vary the కోణము of the\n\
 arms, from 45 degrees to almost 180 degrees, say 175. The legs should vary from a \n\
-135 degree angle to almost 180, lets say 175.  The two extreme positions of the\n\
+135 degree కోణము to almost 180, lets say 175.  The two extreme positions of the\n\
 body can be drawn as:\n\
   drawBody(45, 45);\n\
 and\n\
@@ -7060,77 +7060,77 @@ var legLength;\n\
 \n\
 \n\
 function drawHead() {\n\
-  forward (torsoLength/2 + neckLength + headDiameter/2); \n\
-  pendown();\n\
+  ముందుకు_జరుగు(torsoLength/2 + neckLength + headDiameter/2); \n\
+  కలమును_కింద_పెట్టు();\n\
   circle (headDiameter/2); //draw head\n\
-  penup();\n\
-  right(180);\n\
-  forward (torsoLength/2 + neckLength + headDiameter/2); \n\
-  right(180);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  కుడి_వైపు_తిరుగు(180);\n\
+  ముందుకు_జరుగు(torsoLength/2 + neckLength + headDiameter/2); \n\
+  కుడి_వైపు_తిరుగు(180);\n\
 }\n\
 \n\
 function drawNeck() {\n\
-  forward (torsoLength/2 ); \n\
-  pendown();\n\
-  forward (neckLength); //neck\n\
-  penup();\n\
-  backward (torsoLength/2 + neckLength); \n\
+  ముందుకు_జరుగు(torsoLength/2 ); \n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(neckLength); //neck\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(torsoLength/2 + neckLength); \n\
 }\n\
 \n\
 function drawTorso() {\n\
-  backward (torsoLength/2); \n\
-  pendown();\n\
-  forward (torsoLength); \n\
-  penup();\n\
-  backward (torsoLength/2); \n\
+  వెనుకకు_జరుగు(torsoLength/2); \n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(torsoLength); \n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(torsoLength/2); \n\
 }\n\
 \n\
-function drawLeftLeg(angle){\n\
-  right(180);\n\
-  forward (torsoLength/2);\n\
-  left(angle);\n\
-  pendown();\n\
-  forward (legLength); //left leg\n\
-  penup();\n\
-  backward (legLength);\n\
-  right(angle);\n\
-  right(180);\n\
-  forward (torsoLength/2); \n\
+function drawLeftLeg(కోణము){\n\
+  కుడి_వైపు_తిరుగు(180);\n\
+  ముందుకు_జరుగు(torsoLength/2);\n\
+  ఎడమ_వైపు_తిరుగు(కోణము);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(legLength); //left leg\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(legLength);\n\
+  కుడి_వైపు_తిరుగు(కోణము);\n\
+  కుడి_వైపు_తిరుగు(180);\n\
+  ముందుకు_జరుగు(torsoLength/2); \n\
 } \n\
 \n\
-function drawRightLeg(angle) {\n\
-  right(180);\n\
-  forward (torsoLength/2);\n\
-  right(angle);\n\
-  pendown();\n\
-  forward (legLength); //right leg\n\
-  penup();\n\
-  backward (legLength);\n\
-  left(angle);\n\
-  right(180);\n\
-  forward (torsoLength/2); \n\
+function drawRightLeg(కోణము) {\n\
+  కుడి_వైపు_తిరుగు(180);\n\
+  ముందుకు_జరుగు(torsoLength/2);\n\
+  కుడి_వైపు_తిరుగు(కోణము);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(legLength); //right leg\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(legLength);\n\
+  ఎడమ_వైపు_తిరుగు(కోణము);\n\
+  కుడి_వైపు_తిరుగు(180);\n\
+  ముందుకు_జరుగు(torsoLength/2); \n\
 }\n\
 \n\
-function drawLeftArm(angle){\n\
-  forward (torsoLength/2);\n\
-  right(angle);\n\
-  pendown();\n\
-  forward (armLength); //left arm\n\
-  penup();\n\
-  backward (armLength);\n\
-  left(angle);\n\
-  backward (torsoLength/2); \n\
+function drawLeftArm(కోణము){\n\
+  ముందుకు_జరుగు(torsoLength/2);\n\
+  కుడి_వైపు_తిరుగు(కోణము);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(armLength); //left arm\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(armLength);\n\
+  ఎడమ_వైపు_తిరుగు(కోణము);\n\
+  వెనుకకు_జరుగు(torsoLength/2); \n\
 } \n\
 \n\
-function drawRightArm(angle) {\n\
-  forward (torsoLength/2);\n\
-  left(angle);\n\
-  pendown();\n\
-  forward (armLength); //left arm\n\
-  penup();\n\
-  backward (armLength);\n\
-  right(angle);\n\
-  backward (torsoLength/2); \n\
+function drawRightArm(కోణము) {\n\
+  ముందుకు_జరుగు(torsoLength/2);\n\
+  ఎడమ_వైపు_తిరుగు(కోణము);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(armLength); //left arm\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(armLength);\n\
+  కుడి_వైపు_తిరుగు(కోణము);\n\
+  వెనుకకు_జరుగు(torsoLength/2); \n\
 }\n\
 \n\
 function drawBody(armAngle, legAngle) {\n\
@@ -7170,7 +7170,7 @@ function moveBody () {\n\
 \n\
 function demo () {\n\
   reset();\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   n = 0;\n\
   direction = +1;\n\
   moveBody();\n\
@@ -7180,17 +7180,17 @@ koch_line ='\
 // Koch Lines -- draw an animated set of Koch lines\n\
 \n\
 function kochLine (length, order) {\n\
-  //assume drawn on the current angle\n\
+  //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
-    forward (length);\n\
+    ముందుకు_జరుగు(length);\n\
   } else {\n\
     //break line and bump out to the left\n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
-    right(120); \n\
+    కుడి_వైపు_తిరుగు(120); \n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
   }\n\
 }\n\
@@ -7203,12 +7203,12 @@ function kochLineDelay() {\n\
   if (side > maxX() - minX()) {\n\
     side = maxX() - minX()\n\
   }\n\
-  angle(90)\n\
+  కోణము(90)\n\
   side = .9 * side\n\
   స్థితి_మార్చు(-side/2, -1/4 * side)\n\
   kochLine (side, i);\n\
   స్థితి_మార్చు(minX(),minY());\n\
-  angle(90);\n\
+  కోణము(90);\n\
   setfont("bold 12pt Ariel,san-serif")\n\
   write ("Koch line of order " +i);\n\
   draw();\n\
@@ -7220,7 +7220,7 @@ function kochLineDelay() {\n\
 \n\
 function demo() {\n\
   reset();\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   steps = 6;\n\
   span = 240;\n\
   i = 0;\n\
@@ -7232,121 +7232,121 @@ koch_snowflake2 ='\
 // Koch Snowflake 2 -- Koch snowflake with embellishments\n\
 \n\
 function diamond(side) {\n\
-  forward(side)\n\
-  left(60)\n\
-  forward(side)\n\
-  left(120)\n\
-  forward(side)\n\
-  left(60)\n\
-  forward(side)\n\
-  left(120)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
 }\n\
 \n\
 function dazzle( side, inset) {\n\
   inner(side,inset)\n\
   newside = (side - Math.sqrt(3)* inset) /3\n\
-  penup()\n\
-  left(30)\n\
-  forward(inset)\n\
-  right(30)\n\
-  forward(newside)\n\
-  left(60)\n\
-  pendown()\n\
-  forward(newside)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు(30)\n\
+  ముందుకు_జరుగు(inset)\n\
+  కుడి_వైపు_తిరుగు(30)\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(60)\n\
+  కలమును_కింద_పెట్టు()\n\
+  ముందుకు_జరుగు(newside)\n\
   diamond(newside/3)\n\
-  forward(newside)\n\
-  left(120)\n\
-  forward(newside)\n\
-  left(120)\n\
-  forward(newside)\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(newside)\n\
   diamond(newside/3)\n\
-  forward(newside)\n\
-  left(120)\n\
-  forward(newside)\n\
-  left(120)\n\
-  forward(newside)\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(newside)\n\
   diamond(newside/3)\n\
-  forward(newside)\n\
-  left(120)\n\
-  forward(newside)\n\
-  penup()\n\
-  right(120)\n\
-  forward(newside)\n\
-  left(30)\n\
-  forward(inset)\n\
-  left(150)\n\
-  pendown()\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(newside)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(newside)\n\
+  ఎడమ_వైపు_తిరుగు(30)\n\
+  ముందుకు_జరుగు(inset)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function inner( side, inset) {\n\
-  penup()\n\
-  left( 30)\n\
-  forward( inset)\n\
-  right(30)\n\
-  pendown()\n\
-  forward( side - Math.sqrt(3)*inset)\n\
-  left(120)\n\
-  forward( side - Math.sqrt(3)*inset)\n\
-  left(120)\n\
-  forward( side - Math.sqrt(3)*inset)\n\
-  penup()\n\
-  right(30)\n\
-  forward( inset)\n\
-  left(150)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు( 30)\n\
+  ముందుకు_జరుగు( inset)\n\
+  కుడి_వైపు_తిరుగు(30)\n\
+  కలమును_కింద_పెట్టు()\n\
+  ముందుకు_జరుగు( side - Math.sqrt(3)*inset)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు( side - Math.sqrt(3)*inset)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు( side - Math.sqrt(3)*inset)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(30)\n\
+  ముందుకు_జరుగు( inset)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 function starOfDavid (side) {\n\
-  penup()\n\
-  backward(2*side)\n\
-  right(30)\n\
-  forward(side)\n\
-  right(60)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  వెనుకకు_జరుగు(2*side)\n\
+  కుడి_వైపు_తిరుగు(30)\n\
+  ముందుకు_జరుగు(side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  కలమును_కింద_పెట్టు()\n\
   for (var i=0;i<6;i=i+1) {\n\
     inner(side, 10)\n\
     inner(side, 20)\n\
     dazzle(side, 30)\n\
-    forward(side)\n\
-    left(120)\n\
-    forward(side)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు(side)\n\
 \n\
-    left(60)\n\
-    forward(side)\n\
-    left(120)\n\
+    ఎడమ_వైపు_తిరుగు(60)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
 \n\
     inner(side, 10)\n\
     inner(side, 20)\n\
     dazzle(side, 30)\n\
-    forward(side)\n\
-    left(120)\n\
-    forward(side)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు(side)\n\
   }\n\
 }\n\
 \n\
 function kochSnowFlake (side, order) {\n\
   kochLine(side, order)\n\
-  right(120)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
   kochLine(side, order)\n\
-  right(120)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
   kochLine(side, order)\n\
-  right(120)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
 } \n\
 \n\
 \n\
 function kochLine (length, order) {\n\
-  //assume drawn on the current angle\n\
+  //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
-    forward (length);\n\
+    ముందుకు_జరుగు(length);\n\
   } else {\n\
     //break line and bump out to the left\n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
-    right(120); \n\
+    కుడి_వైపు_తిరుగు(120); \n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
   }\n\
 }\n\
@@ -7355,11 +7355,11 @@ function kochLine (length, order) {\n\
 function demo () {\n\
   reset();\n\
   size = Math.min( maxX(), maxY()) * .6\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   starOfDavid( size)\n\
-  forward(size)\n\
-  left(180)\n\
-  //showTurtle()\n\
+  ముందుకు_జరుగు(size)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  //తాబేలును_చూపు()\n\
   kochSnowFlake(3*size, 2)\n\
   kochSnowFlake(3*size, 3)\n\
 }\n\
@@ -7369,30 +7369,30 @@ koch_snowflake ='\
 \n\
 \n\
 function kochLine (length, order) {\n\
-  //assume drawn on the current angle\n\
+  //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
-    forward (length);\n\
+    ముందుకు_జరుగు(length);\n\
   } else {\n\
     //break line and bump out to the left\n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
-    right(120); \n\
+    కుడి_వైపు_తిరుగు(120); \n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
   }\n\
 }\n\
 \n\
 function kochSnowflake (length, order) {\n\
-  angle (30);\n\
+  కోణము (30);\n\
   స్థితి_మార్చు(-length/2,-.3 * length);\n\
   kochLine (length, order);\n\
-  right(120);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
   kochLine (length, order);\n\
-  right(120);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
   kochLine (length, order);\n\
-  right(120);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
 }\n\
   \n\
 \n\
@@ -7418,7 +7418,7 @@ function kochSnowflakeDelay() {\n\
   }\n\
   kochSnowflake (.8 * side,i);\n\
   స్థితి_మార్చు(minX(),minY());\n\
-  angle(90);\n\
+  కోణము(90);\n\
   setfont("Helvetica,san-serif 12pt")\n\
   write ("Koch snowflake of order " +i);\n\
   draw();\n\
@@ -7429,7 +7429,7 @@ function kochSnowflakeDelay() {\n\
 }\n\
 \n\
 function demo() {\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   i = 0;\n\
   kochSnowflakeDelay();\n\
 }\n\
@@ -7439,38 +7439,38 @@ koch_triangles_stacked ='\
 \n\
 \n\
 function kochLine (length, order) {\n\
-  //assume drawn on the current angle\n\
+  //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
-    forward (length);\n\
+    ముందుకు_జరుగు(length);\n\
   } else {\n\
     //break line and bump out to the left\n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
-    right(120); \n\
+    కుడి_వైపు_తిరుగు(120); \n\
     kochLine (length/3, order-1);\n\
-    left(60); \n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
     kochLine (length/3, order-1);\n\
   }\n\
 }\n\
 \n\
 \n\
 function kochSnowflake (length, order) {\n\
-  angle (30);\n\
+  కోణము (30);\n\
   స్థితి_మార్చు(-length/2,-.3 * length);\n\
   kochLine (length, order);\n\
-  right(120);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
   kochLine (length, order);\n\
-  right(120);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
   kochLine (length, order);\n\
-  right(120);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
 }\n\
   \n\
 \n\
 function demo() {\n\
   reset()\n\
   size = .045* Math.min(maxX(), maxY())\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   for (var i=0; i<6; i++) {\n\
     kochSnowflake( size*(i+1)*(i+1), i)\n\
   }\n\
@@ -7734,7 +7734,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -7745,7 +7745,7 @@ function caption (message) {\n\
   setfont("bold 16px helvitica,sans-serif")\n\
   color ("white")\n\
   width (22)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
   write( message)\n\
@@ -8123,7 +8123,7 @@ var demoNumber\n\
 \n\
 function demo() {\n\
   reset()\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   demoNumber = 0\n\
   gen = 10000000\n\
   nextGen()\n\
@@ -8220,8 +8220,8 @@ function horiz( size){\n\
   hy = maxY()\n\
   while (hy > minY()) {\n\
     స్థితి_మార్చు(minX(), hy)\n\
-    angle(90)\n\
-    forward( 2*maxX())\n\
+    కోణము(90)\n\
+    ముందుకు_జరుగు( 2*maxX())\n\
     hy = hy - size\n\
   } \n\
 }\n\
@@ -8232,10 +8232,10 @@ function vert( size) {\n\
     vy = maxY()\n\
     while (vy > minY()) {\n\
       స్థితి_మార్చు( vx, vy)\n\
-      angle( 180 - 6)\n\
-      forward( size * Math.cos( degToRad(6)))\n\
-      right( 12)\n\
-      forward( size * Math.cos( degToRad(6)))\n\
+      కోణము( 180 - 6)\n\
+      ముందుకు_జరుగు( size * Math.cos( degToRad(6)))\n\
+      కుడి_వైపు_తిరుగు( 12)\n\
+      ముందుకు_జరుగు( size * Math.cos( degToRad(6)))\n\
       vy = vy - 2 * size\n\
 \n\
     }\n\
@@ -8264,46 +8264,46 @@ colors = ["red", "white", "blue", "yellow", "green"]\n\
 function shapeUp (side, fillColor) {\n\
   // assume pointing in direction of base\n\
   beginShape()\n\
-  forward(3* side)\n\
-  left(120)\n\
-  forward(2*side)\n\
-  left( 120)\n\
-  forward(side)\n\
-  right( 120)\n\
-  forward( side)\n\
-  left( 120)\n\
-  forward( 2*side)\n\
-  left(120)\n\
+  ముందుకు_జరుగు(3* side)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు(2*side)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు(side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( 2*side)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
   fillShape( fillColor)\n\
 }\n\
 \n\
 function mountainUnit(side){\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   shapeUp(side, "darkgreen")//1,1\n\
-  penup()\n\
-  left(60)\n\
-  forward(side)\n\
-  right(60)\n\
-  forward(5*side)\n\
-  right(180)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(5*side)\n\
+  కుడి_వైపు_తిరుగు(180)\n\
+  కలమును_కింద_పెట్టు()\n\
   shapeUp(side, "skyblue")//1,0\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
 \n\
-  forward(3*side)\n\
-  left(180)\n\
-  pendown()\n\
+  ముందుకు_జరుగు(3*side)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  కలమును_కింద_పెట్టు()\n\
   shapeUp(side, "green") //0,0\n\
 \n\
-  penup()\n\
-  left(60)\n\
-  forward(2*side)\n\
-  left(120)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(2*side)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  కలమును_కింద_పెట్టు()\n\
   shapeUp(side, "lightblue")//0,1\n\
-  forward( 3*side)\n\
-  left( 180)\n\
-  penup()\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  ఎడమ_వైపు_తిరుగు( 180)\n\
+  కలమును_పైకి_ఎత్తు()\n\
 \n\
 }\n\
 \n\
@@ -8325,7 +8325,7 @@ function demo() {\n\
   side = 20\n\
   rowx = minX() - side // - 5.5 * side\n\
   rowy = minY()// +2*side\n\
-  right(90)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
   mx = rowx\n\
   my = rowy\n\
 \n\
@@ -8390,25 +8390,25 @@ naifeh_ajlun ='\
 \n\
 // kite has side b and h, square has side s\n\
 // b = s + h\n\
-// either vary the angle or vary the sides\n\
-// try calulating the angle\n\
+// either vary the కోణము or vary the sides\n\
+// try calulating the కోణము\n\
 \n\
 \n\
 function quadrangle( ){\n\
   // start at lower left corner of outer square\n\
   beginShape()\n\
-  forward(longSide)\n\
-  right( 180 - angleA)\n\
-  forward (longSide)\n\
-  right(90)\n\
-  forward( shortSide)\n\
-  right(180 - angleC)\n\
-  forward(shortSide)\n\
-  right(90)\n\
-  penup()\n\
-  forward( longSide + shortSide)\n\
-  right(90)\n\
-  pendown()\n\
+  ముందుకు_జరుగు(longSide)\n\
+  కుడి_వైపు_తిరుగు( 180 - angleA)\n\
+  ముందుకు_జరుగు(longSide)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు( shortSide)\n\
+  కుడి_వైపు_తిరుగు(180 - angleC)\n\
+  ముందుకు_జరుగు(shortSide)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు( longSide + shortSide)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_కింద_పెట్టు()\n\
   fillShape("lightblue")\n\
 }\n\
 \n\
@@ -8430,30 +8430,30 @@ console.log ("side:"+side)\n\
 \n\
   // center this more or less\n\
   స్థితి_మార్చు(-.5 * columns * (shortSide + longSide) + .4 *side, .5 * (rows-2) * (shortSide + longSide) + .4*side)\n\
-  left( offsetAngle)\n\
+  ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
   for (var k=0; k<rows; k++) {\n\
     for (var j=0; j<columns; j++) { // across row\n\
       for (var i=0; i<4; i++) { // around inner square\n\
         quadrangle()\n\
       }\n\
-      penup()\n\
-      right(90)\n\
-      forward( shortSide + longSide)\n\
-      right(90)\n\
-      forward( side)\n\
-      left(180)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు( shortSide + longSide)\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు( side)\n\
+      ఎడమ_వైపు_తిరుగు(180)\n\
+      కలమును_కింద_పెట్టు()\n\
     }\n\
-    penup()\n\
-    left( 90- offsetAngle)\n\
-    forward( columns * (shortSide + longSide)/Math.sin( degToRad( 90-offsetAngle)))\n\
-    left( offsetAngle)\n\
-    forward( side)\n\
-    left(90)\n\
-    forward( shortSide + longSide)\n\
-    left( 180)\n\
-    pendown()\n\
-    hideTurtle()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ఎడమ_వైపు_తిరుగు( 90- offsetAngle)\n\
+    ముందుకు_జరుగు( columns * (shortSide + longSide)/Math.sin( degToRad( 90-offsetAngle)))\n\
+    ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( shortSide + longSide)\n\
+    ఎడమ_వైపు_తిరుగు( 180)\n\
+    కలమును_కింద_పెట్టు()\n\
+    తాబేలును_దాచు()\n\
   }\n\
 }\n\
 '
@@ -8476,84 +8476,84 @@ function bowties (count, back){\n\
   //assume on left edge pointing up, moving to right\n\
   // routine has invariance\n\
   // back = 0 big end first, =1 small end first\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   for (var i=0; i<count; i++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     if (i % 2 == back) {\n\
       downKite()\n\
     } else {\n\
       upKite()\n\
     }\n\
-    penup()\n\
-    forward( hypoteneuse)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( hypoteneuse)\n\
   }\n\
-  left(180)\n\
-  penup()\n\
-  forward( count * hypoteneuse)\n\
-  pendown()\n\
-  right(90)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు( count * hypoteneuse)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
 }\n\
 \n\
 \n\
 function upKite() {\n\
   //assume direction is in the axis of the kite\n\
   beginShape()\n\
-  right( shortAngle)\n\
-  forward( longSide)\n\
-  left( 90)\n\
-  forward( shortSide)\n\
-  left( 180 - 2 * longAngle)\n\
-  forward( shortSide)\n\
-  left( 90)\n\
-  forward( longSide)\n\
-  right(180+ shortAngle)\n\
+  కుడి_వైపు_తిరుగు( shortAngle)\n\
+  ముందుకు_జరుగు( longSide)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( shortSide)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - 2 * longAngle)\n\
+  ముందుకు_జరుగు( shortSide)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( longSide)\n\
+  కుడి_వైపు_తిరుగు(180+ shortAngle)\n\
   fillShape("lightblue")\n\
 }\n\
 \n\
 function downKite() {\n\
   //assume direction is in the axis of the kite\n\
   beginShape()\n\
-  right( longAngle)\n\
-  forward( shortSide)\n\
-  left( 90)\n\
-  forward( longSide)\n\
-  left(180 - 2 * shortAngle)\n\
-  forward( longSide)\n\
-  left( 90)\n\
-  forward( shortSide)\n\
-  right( 180 + longAngle)\n\
+  కుడి_వైపు_తిరుగు( longAngle)\n\
+  ముందుకు_జరుగు( shortSide)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( longSide)\n\
+  ఎడమ_వైపు_తిరుగు(180 - 2 * shortAngle)\n\
+  ముందుకు_జరుగు( longSide)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( shortSide)\n\
+  కుడి_వైపు_తిరుగు( 180 + longAngle)\n\
   fillShape("lightblue")\n\
 }\n\
 \n\
 function kites( count, back) {\n\
   //assume pointing up, perpendicular to flow\n\
   // routine has invariance\n\
-  left(180)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
   for( var i=0; i<count; i++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     if (i % 2 == back) {\n\
       downKite()\n\
     } else {\n\
       upKite()\n\
     }\n\
 \n\
-    penup()\n\
-    left(90)\n\
-    forward( hypoteneuse)\n\
-    right(90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( hypoteneuse)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
-  penup()\n\
-  right(90)\n\
-  forward( count * hypoteneuse)\n\
-  right(90)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు( count * hypoteneuse)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function demo() {\n\
   reset()\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
   side = 2.5 * Math.min( maxX()/9, maxY()/8)\n\
 \n\
   //side = 50 // size of the basic block not the inner square\n\
@@ -8570,21 +8570,21 @@ function demo() {\n\
   longAngle = 90 - shortAngle\n\
 \n\
   // center the figure\n\
-  penup()\n\
-  forward (side * horizontalCount * 1.3 / 4)\n\
-  left(90)\n\
-  forward (side * verticalCount * 1.7 /4)\n\
-  right(90)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(side * horizontalCount * 1.3 / 4)\n\
+  ఎడమ_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(side * verticalCount * 1.7 /4)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_కింద_పెట్టు()\n\
 \n\
   for (var i=0; i<verticalCount; i++) {\n\
     bowties( horizontalCount, i % 2)\n\
     kites( horizontalCount+1, 1 - (i % 2)) // change 1 to 0 and 0 to 1\n\
-    penup()\n\
-    right(180)\n\
-    forward( hypoteneuse)\n\
-    right(180)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(180)\n\
+    ముందుకు_జరుగు( hypoteneuse)\n\
+    కుడి_వైపు_తిరుగు(180)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
   bowties( horizontalCount,i%2) // row across bottom to be neat\n\
 }\n\
@@ -8611,10 +8611,10 @@ function tri( side, pointAngle, fill) {\n\
     beginShape()\n\
   }\n\
   for (var i=0; i<3; i++) {\n\
-    forward( side)\n\
-    left(60 - pointAngle)\n\
-    forward( side)\n\
-    right( 180 - pointAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(60 - pointAngle)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 180 - pointAngle)\n\
   }\n\
   if (fill) {\n\
     fillShape(fColor)\n\
@@ -8624,39 +8624,39 @@ function tri( side, pointAngle, fill) {\n\
 \n\
 function jeresh (sid, pAngle, fill) {\n\
   for (var i=0;i<6;i++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     tri( sid, pAngle, fill)\n\
 \n\
     var tx = turtle.pos.x\n\
     var ty = turtle.pos.y\n\
-    var tHeading = turtle.angle\n\
-    penup()\n\
-    forward( sid)\n\
-    left( 60 - pAngle)\n\
-    forward( sid)\n\
-    right( 180 - pAngle)\n\
-    forward( sid)\n\
-    left( 60)\n\
+    var tHeading = turtle.కోణము\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( sid)\n\
+    ఎడమ_వైపు_తిరుగు( 60 - pAngle)\n\
+    ముందుకు_జరుగు( sid)\n\
+    కుడి_వైపు_తిరుగు( 180 - pAngle)\n\
+    ముందుకు_జరుగు( sid)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
 \n\
     for (var j=0; j<3; j++) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       tri(sid, pAngle, fill)\n\
-      penup()\n\
-      forward(sid)\n\
-      left(60)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు(sid)\n\
+      ఎడమ_వైపు_తిరుగు(60)\n\
     }\n\
     స్థితి_మార్చు(tx,ty)\n\
 \n\
-    turtle.angle=tHeading\n\
-    penup()\n\
-    forward( sid)\n\
-    left(60)\n\
+    turtle.కోణము=tHeading\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( sid)\n\
+    ఎడమ_వైపు_తిరుగు(60)\n\
   }\n\
 }\n\
 \n\
 \n\
 function demo() {\n\
-  /* can vary point angle.\n\
+  /* can vary point కోణము.\n\
   0 and 120 is a hex tesselation\n\
   60 and 180 are triangles\n\
   90\n\
@@ -8664,7 +8664,7 @@ function demo() {\n\
   something is not quite right\n\
   */\n\
   reset()\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   var pointAngle = 30\n\
   var side = 60\n\
   side = .2* Math.min( maxX(), maxY())\n\
@@ -8678,7 +8678,7 @@ function demo() {\n\
   width( 3)\n\
   jeresh( side, pointAngle, false)\n\
 \n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 naifeh_mamluk ='\
@@ -8696,34 +8696,34 @@ function decagon(s, fcolor) {\n\
   //   2*side by sqrt(3)*side\n\
 \n\
   beginShape()\n\
-  forward( s)\n\
-  left( 120)\n\
-  forward( d1)\n\
-  right( 90)\n\
-  forward( d2)\n\
-  left( 120)\n\
-  forward( d2)\n\
-  right(90)\n\
-  forward(d1)\n\
-  left(120)\n\
-  forward( s)\n\
+  ముందుకు_జరుగు( s)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( d1)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( d2)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( d2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(d1)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు( s)\n\
 \n\
-  left( 120)\n\
-  forward( d1)\n\
-  right( 90)\n\
-  forward( d2)\n\
-  left( 120)\n\
-  forward( d2)\n\
-  right(90)\n\
-  forward(d1)\n\
-  left(120)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( d1)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( d2)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( d2)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(d1)\n\
+  ఎడమ_వైపు_తిరుగు(120)\n\
   fillShape( fcolor)\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
   wrap( false)\n\
-  right(90)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
   side = 40\n\
   side = .25 * Math.min( maxX(), maxY())\n\
   స్థితి_మార్చు(-.5* side, side)\n\
@@ -8735,24 +8735,24 @@ function demo() {\n\
   for( var i=0; i<6; i++) {\n\
     decagon( side, "blue")\n\
 \n\
-    penup()\n\
-    left(90)\n\
-    forward( Math.sqrt(3) * side)\n\
-    left(30)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( Math.sqrt(3) * side)\n\
+    ఎడమ_వైపు_తిరుగు(30)\n\
+    కలమును_కింద_పెట్టు()\n\
 \n\
     decagon( side, "blue")\n\
 \n\
-    penup()\n\
-    left(150)\n\
-    forward( Math.sqrt(3) * side)\n\
-    left( 90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ఎడమ_వైపు_తిరుగు(150)\n\
+    ముందుకు_జరుగు( Math.sqrt(3) * side)\n\
+    ఎడమ_వైపు_తిరుగు( 90)\n\
+    కలమును_కింద_పెట్టు()\n\
 \n\
-    forward( side)\n\
-    right( 60)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 60)\n\
   }\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 naifeh_mizen6 ='\
@@ -8765,19 +8765,19 @@ function v (side, fColor) {\n\
   if (fColor != "") {\n\
     beginShape()\n\
   }\n\
-  left( 30)\n\
-  forward( 3*side)\n\
-  right( 120)\n\
-  forward( side)\n\
-  right(60)\n\
-  forward(side)\n\
-  left( 120)\n\
-  forward( side)\n\
-  right(60)\n\
-  forward( side)\n\
-  right( 120)\n\
-  forward( 3*side)\n\
-  right(150)\n\
+  ఎడమ_వైపు_తిరుగు( 30)\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  కుడి_వైపు_తిరుగు(150)\n\
   if (fColor != "") {\n\
     fillShape(fColor)\n\
   }\n\
@@ -8788,62 +8788,62 @@ function mizen( side, lColor, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // ends up rotated 120 CW at same point\n\
   color(lColor)\n\
-  right(120)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
   for (var i=0; i<6; i++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     v( side, fColor)\n\
-    penup()\n\
-    right(30)\n\
-    forward( side)\n\
-    left( 60)\n\
-    forward( 2*side)\n\
-    left(30)\n\
-    pendown()\n\
-    v( side, fColor)\n\
-\n\
-    penup()\n\
-    right(30)\n\
-    forward( 2*side)\n\
-    right( 150)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    ఎడమ_వైపు_తిరుగు(30)\n\
+    కలమును_కింద_పెట్టు()\n\
     v( side, fColor)\n\
 \n\
-    penup()\n\
-    right(30)\n\
-    forward( side)\n\
-    right(120)\n\
-    forward( 4*side)\n\
-    right(150)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    కుడి_వైపు_తిరుగు( 150)\n\
+    కలమును_కింద_పెట్టు()\n\
+    v( side, fColor)\n\
+\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు( 4*side)\n\
+    కుడి_వైపు_తిరుగు(150)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
 }\n\
 \n\
 \n\
 \n\
 function mizen6(side) {\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   for (var j=0; j<6; j++) {\n\
     mx = turtle.pos.x\n\
     my = turtle.pos.y\n\
-    ma = turtle.angle\n\
+    ma = turtle.కోణము\n\
     width(0)\n\
     mizen( side, "white", "blue")\n\
 \n\
     // do it again for the border lines\n\
     స్థితి_మార్చు( mx, my)\n\
-    angle( radToDeg( ma))\n\
+    కోణము( radToDeg( ma))\n\
     width(.1 * side)\n\
     mizen( side, "white", "")\n\
 \n\
-    penup()\n\
-    left(30)\n\
-    forward (13 * side)\n\
-    left(120)\n\
-    forward( 3*side)\n\
-    right(90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ఎడమ_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు(13 * side)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు( 3*side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 \n\
 \n\
@@ -8866,19 +8866,19 @@ function v (side, fColor) {\n\
   if (fColor != "") {\n\
     beginShape()\n\
   }\n\
-  left( 30)\n\
-  forward( 3*side)\n\
-  right( 120)\n\
-  forward( side)\n\
-  right(60)\n\
-  forward(side)\n\
-  left( 120)\n\
-  forward( side)\n\
-  right(60)\n\
-  forward( side)\n\
-  right( 120)\n\
-  forward( 3*side)\n\
-  right(150)\n\
+  ఎడమ_వైపు_తిరుగు( 30)\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  కుడి_వైపు_తిరుగు(150)\n\
   if (fColor != "") {\n\
     fillShape(fColor)\n\
   }\n\
@@ -8887,32 +8887,32 @@ function v (side, fColor) {\n\
 \n\
 function mizen( side, lColor, fColor) {\n\
   color(lColor)\n\
-  right(120)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
   for (var i=0; i<6; i++) {\n\
     v( side, fColor)\n\
-    penup()\n\
-    right(30)\n\
-    forward( side)\n\
-    left( 60)\n\
-    forward( 2*side)\n\
-    left(30)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    ఎడమ_వైపు_తిరుగు(30)\n\
+    కలమును_కింద_పెట్టు()\n\
     v( side, fColor)\n\
 \n\
-    penup()\n\
-    right(30)\n\
-    forward( 2*side)\n\
-    right( 150)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    కుడి_వైపు_తిరుగు( 150)\n\
+    కలమును_కింద_పెట్టు()\n\
     v( side, fColor)\n\
 \n\
-    penup()\n\
-    right(30)\n\
-    forward( side)\n\
-    right(120)\n\
-    forward( 4*side)\n\
-    right(150)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు( 4*side)\n\
+    కుడి_వైపు_తిరుగు(150)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
 }\n\
 \n\
@@ -8925,13 +8925,13 @@ function mizenSimple() {\n\
   //center canvas more or less\n\
   స్థితి_మార్చు(-5*side, 3.5*side)\n\
   width (1)\n\
-  angle(0)\n\
+  కోణము(0)\n\
   mizen( side, "black", "red")\n\
 \n\
   // do again to make lines stand out\n\
   స్థితి_మార్చు(-5*side, 3.5*side)\n\
   width (3)\n\
-  angle(0)\n\
+  కోణము(0)\n\
   mizen( side, "white", "")\n\
 }\n\
 \n\
@@ -8941,7 +8941,7 @@ function demo() {\n\
   side = 40 // 1/2 basic face of hexagon, width...\n\
   side = .15 * Math.min( maxX(), maxY())\n\
   mizenSimple()\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 naifeh_petra ='\
@@ -8960,15 +8960,15 @@ function backslash (fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   beginShape()\n\
-  right( 150)\n\
-  forward( 2*size)\n\
-  left( 120)\n\
-  forward( size)\n\
-  left( 60)\n\
-  forward( 2* size)\n\
-  left( 120)\n\
-  forward( size)\n\
-  right( 150)\n\
+  కుడి_వైపు_తిరుగు( 150)\n\
+  ముందుకు_జరుగు( 2*size)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( size)\n\
+  ఎడమ_వైపు_తిరుగు( 60)\n\
+  ముందుకు_జరుగు( 2* size)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( size)\n\
+  కుడి_వైపు_తిరుగు( 150)\n\
   fillShape(fColor)\n\
 }\n\
 \n\
@@ -8976,15 +8976,15 @@ function slash (fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   beginShape()\n\
-  left( 150)\n\
-  forward( 2*size)\n\
-  left( 120)\n\
-  forward( size)\n\
-  left( 60)\n\
-  forward( 2* size)\n\
-  left( 120)\n\
-  forward( size)\n\
-  right( 90)\n\
+  ఎడమ_వైపు_తిరుగు( 150)\n\
+  ముందుకు_జరుగు( 2*size)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( size)\n\
+  ఎడమ_వైపు_తిరుగు( 60)\n\
+  ముందుకు_జరుగు( 2* size)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( size)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   fillShape(fColor)\n\
 }\n\
 \n\
@@ -8992,15 +8992,15 @@ function dash () {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   beginShape()\n\
-  right( 150)\n\
-  forward( size)\n\
-  left( 60)\n\
-  forward( 2*size)\n\
-  left( 120)\n\
-  forward( size)\n\
-  left( 60)\n\
-  forward( 2*size)\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 150)\n\
+  ముందుకు_జరుగు( size)\n\
+  ఎడమ_వైపు_తిరుగు( 60)\n\
+  ముందుకు_జరుగు( 2*size)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( size)\n\
+  ఎడమ_వైపు_తిరుగు( 60)\n\
+  ముందుకు_జరుగు( 2*size)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   fillShape(fColor)\n\
 }\n\
 \n\
@@ -9010,32 +9010,32 @@ function dashBackslashes(count, mode, fColor) {\n\
   // invariant\n\
   backup = 0\n\
   for (var i=0; i<count; i++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     if (i % 2 == 0) {\n\
       if (mode == 0 || i != 0){\n\
         dash()\n\
       }\n\
-      penup()\n\
-      right(90)\n\
-      forward( 2*size)\n\
-      left(90)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు( 2*size)\n\
+      ఎడమ_వైపు_తిరుగు(90)\n\
+      కలమును_కింద_పెట్టు()\n\
       backup = backup + 2\n\
     } else {\n\
       backslash(fColor)\n\
-      penup()\n\
-      right(90)\n\
-      forward( size)\n\
-      left(90)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు( size)\n\
+      ఎడమ_వైపు_తిరుగు(90)\n\
+      కలమును_కింద_పెట్టు()\n\
       backup = backup + 1\n\
     }\n\
   }\n\
-  penup()\n\
-  left(90)\n\
-  forward(backup * size)\n\
-  right(90)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(backup * size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
@@ -9044,18 +9044,18 @@ function slashes(count, fColor) {\n\
   // invariant\n\
   for (var i=0; i<count; i++) {\n\
     slash( fColor)\n\
-    penup()\n\
-    right(90)\n\
-    forward( 3*size)\n\
-    left(90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( 3*size)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
-  penup()\n\
-  left(90)\n\
-  forward(count * 3 * size)\n\
-  right(90)\n\
-  pendown()\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ఎడమ_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(count * 3 * size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  కలమును_కింద_పెట్టు()\n\
+  కలమును_పైకి_ఎత్తు()\n\
 }\n\
 \n\
 \n\
@@ -9069,54 +9069,54 @@ function demo() {\n\
   //center canvas more or less\n\
   pointUp = false\n\
   if (pointUp) {\n\
-    angle(90)\n\
+    కోణము(90)\n\
     స్థితి_మార్చు(4*size, 3.5*size)\n\
   } else {\n\
-    angle(-60)\n\
+    కోణము(-60)\n\
     స్థితి_మార్చు(-5.5*size, -1*size)\n\
   }\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 \n\
   dashBackslashes(4, 0, fColor)\n\
 \n\
-  right(150)\n\
-  forward( size)\n\
-  left(150)\n\
+  కుడి_వైపు_తిరుగు(150)\n\
+  ముందుకు_జరుగు( size)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
   slashes( 3, fColor)\n\
 \n\
-  left(150)\n\
-  forward(2*size)\n\
-  right(60)\n\
-  forward(size)\n\
-  right(90)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
+  ముందుకు_జరుగు(2*size)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
   dashBackslashes(6, 0, fColor)\n\
 \n\
-  right(150)\n\
-  forward(size)\n\
-  left(150)\n\
+  కుడి_వైపు_తిరుగు(150)\n\
+  ముందుకు_జరుగు(size)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
   slashes(4, fColor)\n\
 \n\
-  left(150)\n\
-  forward(2*size)\n\
-  right(60)\n\
-  forward(size)\n\
-  right(90)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
+  ముందుకు_జరుగు(2*size)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
   dashBackslashes(7, 1, fColor)\n\
 \n\
-  penup()\n\
-  right(90)\n\
-  forward(3*size)\n\
-  right( 60)\n\
-  forward( size)\n\
-  left(150)\n\
-  pendown()\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(3*size)\n\
+  కుడి_వైపు_తిరుగు( 60)\n\
+  ముందుకు_జరుగు( size)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
+  కలమును_కింద_పెట్టు()\n\
   slashes(3, fColor)\n\
   \n\
-  left(150)\n\
-  forward(2*size)\n\
-  right(60)\n\
-  forward(size)\n\
-  right(90)\n\
+  ఎడమ_వైపు_తిరుగు(150)\n\
+  ముందుకు_జరుగు(2*size)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(size)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
   dashBackslashes(5, 1, fColor)\n\
 }\n\
 '
@@ -9126,40 +9126,40 @@ naifeh_saida_inverse ='\
 \n\
 \n\
 function antilayer (side, innerSide, offset) {\n\
-  left( offset)\n\
+  ఎడమ_వైపు_తిరుగు( offset)\n\
   for (var i=0; i<8; i++){\n\
-    penup()\n\
-    forward( side)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    కలమును_కింద_పెట్టు()\n\
   \n\
     beginShape()\n\
-    left(45 + 22.5)\n\
-    forward(innerSide)\n\
-    left(90)\n\
-    forward(innerSide)\n\
-    left(180)\n\
-    forward(innerSide)\n\
-    right(90)\n\
-    forward(innerSide)\n\
-    left(180-22.5)\n\
+    ఎడమ_వైపు_తిరుగు(45 + 22.5)\n\
+    ముందుకు_జరుగు(innerSide)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(innerSide)\n\
+    ఎడమ_వైపు_తిరుగు(180)\n\
+    ముందుకు_జరుగు(innerSide)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(innerSide)\n\
+    ఎడమ_వైపు_తిరుగు(180-22.5)\n\
 \n\
-    forward (side)\n\
-    left(135)\n\
-    forward( side)\n\
-    left(45)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(135)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(45)\n\
     fillShape("black")\n\
-    penup()\n\
-    forward( side)\n\
-    pendown()\n\
-    left(180)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ఎడమ_వైపు_తిరుగు(180)\n\
   }\n\
-  right(offset)\n\
+  కుడి_వైపు_తిరుగు(offset)\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
   wrap(false)\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   side = .023 * Math.min( maxX(), maxY())\n\
 \n\
   factor = Math.sqrt( 2+ Math.sqrt(2))\n\
@@ -9188,27 +9188,27 @@ naifeh_saida ='\
 function square (side) {\n\
   beginShape()\n\
   for (var i=0; i<4; i++){\n\
-    forward(side)\n\
-    right(90)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
   }\n\
   fillShape("blue")\n\
 }\n\
 \n\
 \n\
 function layer (side, offsetAngle) {\n\
-  left( offsetAngle)\n\
+  ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
   for (var i=0; i<8; i++){\n\
-    penup()\n\
-    forward( side)\n\
-    left(45)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(45)\n\
+    కలమును_కింద_పెట్టు()\n\
     square(side)\n\
-    penup()\n\
-    right(45)\n\
-    backward( side)\n\
-    right(45)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(45)\n\
+    వెనుకకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
   }\n\
-  right(offsetAngle)\n\
+  కుడి_వైపు_తిరుగు(offsetAngle)\n\
 }\n\
 \n\
 \n\
@@ -9228,7 +9228,7 @@ function demo() {\n\
   layer( side,   22.5)\n\
   side = side * factor\n\
   layer( side,   0)\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 nested_hexagons ='\
@@ -9237,8 +9237,8 @@ nested_hexagons ='\
 // draw a polygon of n sides of length m\n\
 function polygon(sides,side) {\n\
   repeat(sides, function () {\n\
-    forward(side);\n\
-    right(360/sides);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(360/sides);\n\
   });\n\
 }\n\
 \n\
@@ -9250,15 +9250,15 @@ function demo() {\n\
    }\n\
    steps = size/10 // 10 is the step size\n\
    reset();\n\
-   hideTurtle();\n\
+   తాబేలును_దాచు();\n\
    for(step=1; step < steps; step=step+1) {\n\
       color (random(16));\n\
       polygon(6,step*10);\n\
-      penup();\n\
-      left(120)\n\
-      forward (10);\n\
-      right(120);\n\
-      pendown();\n\
+      కలమును_పైకి_ఎత్తు();\n\
+      ఎడమ_వైపు_తిరుగు(120)\n\
+      ముందుకు_జరుగు(10);\n\
+      కుడి_వైపు_తిరుగు(120);\n\
+      కలమును_కింద_పెట్టు();\n\
    }\n\
 }\n\
 '
@@ -9268,8 +9268,8 @@ nested_squares ='\
 //draw a square\n\
 function square(side) {\n\
    repeat(4, function () {\n\
-      forward(side);\n\
-      right(90);\n\
+      ముందుకు_జరుగు(side);\n\
+      కుడి_వైపు_తిరుగు(90);\n\
    });\n\
 }\n\
 \n\
@@ -9278,16 +9278,16 @@ function square(side) {\n\
 function nestedSquares(count) {\n\
   clear();\n\
   స్థితి_మార్చు(0,0);\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   for (s=1; s<count*4; s=s+4) {\n\
-    penup();\n\
+    కలమును_పైకి_ఎత్తు();\n\
     // move down and back 2 spaces\n\
-    left(90);\n\
-    forward(2);\n\
-    left(90);\n\
-    forward(2);\n\
-    left(180);\n\
-    pendown();\n\
+    ఎడమ_వైపు_తిరుగు(90);\n\
+    ముందుకు_జరుగు(2);\n\
+    ఎడమ_వైపు_తిరుగు(90);\n\
+    ముందుకు_జరుగు(2);\n\
+    ఎడమ_వైపు_తిరుగు(180);\n\
+    కలమును_కింద_పెట్టు();\n\
     color (random(16));\n\
     square (s);\n\
   }\n\
@@ -9321,18 +9321,18 @@ function demo() {\n\
 pentahex ='\
 // Pentahex -- game pieces consisting of five hexagons in a 10x11 field\n\
 \n\
-// This sets up a pseudo interpreter. Each move is a right (r) or left (l)\n\
+// This sets up a pseudo interpreter. Each move is a కుడి_వైపు_తిరుగు(r) or ఎడమ_వైపు_తిరుగు(l)\n\
 // token. Each piece consists of a set of such moves to from the outline\n\
 // of the piece.\n\
 \n\
 function r() {\n\
-  forward( side)\n\
-  right( 60)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 60)\n\
 }\n\
 \n\
 function l() {\n\
-  forward( side)\n\
-  left( 60)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 60)\n\
 }\n\
 \n\
   I5=[l,l,r,l,r,l,r,l,r,l,l,l,l,r,l,r,l,r,l,r,l,l]\n\
@@ -9361,36 +9361,36 @@ function l() {\n\
 function shape( bx, by, axis, turns, fillColor ) {\n\
   // draw a shape at board position bx, by, with the piece oriented\n\
   // on one of six axises. The shape consists of an array of turns.\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
   స్థితి_మార్చు( baseX, baseY)\n\
-  angle(0)\n\
-  forward( 2* by * side * Math.cos(degToRad(30)))\n\
-  right(60)\n\
-  forward( 2* bx * side * Math.cos(degToRad(30)))\n\
-  penup()\n\
+  కోణము(0)\n\
+  ముందుకు_జరుగు( 2* by * side * Math.cos(degToRad(30)))\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు( 2* bx * side * Math.cos(degToRad(30)))\n\
+  కలమును_పైకి_ఎత్తు()\n\
   dot()  //center of start cell\n\
-  angle(60 * axis )\n\
-  left( 180 - 30)\n\
-  forward( side)\n\
-  left (120) \n\
-  pendown()\n\
+  కోణము(60 * axis )\n\
+  ఎడమ_వైపు_తిరుగు( 180 - 30)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు(120) \n\
+  కలమును_కింద_పెట్టు()\n\
   beginShape()\n\
   for (j=0; j< turns.length; j++) {\n\
     turns[j]()\n\
   }\n\
   fillShape( fillColor)\n\
-  penup()\n\
+  కలమును_పైకి_ఎత్తు()\n\
 \n\
-  left( 60)\n\
-  forward(side)\n\
+  ఎడమ_వైపు_తిరుగు( 60)\n\
+  ముందుకు_జరుగు(side)\n\
   dot()\n\
-  backward(side)\n\
-  right( 60)\n\
+  వెనుకకు_జరుగు(side)\n\
+  కుడి_వైపు_తిరుగు( 60)\n\
 \n\
 // return to the start position, not really necessary\n\
-  left(60)\n\
-  forward( side)\n\
-  left( 30)\n\
+  ఎడమ_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 30)\n\
 }\n\
 \n\
 function drawAll() {\n\
@@ -9426,7 +9426,7 @@ function drawAll() {\n\
 function demo() {\n\
   reset()\n\
   wrap(false)\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 \n\
   side =   Math.min( 2*maxX()/ 12/ 1.5, 2*maxY()/ 16/ Math.sqrt(3))\n\
   //side = 20\n\
@@ -9464,8 +9464,8 @@ polygon ='\
 // draw a polygon with n sides of length m\n\
 function polygon(sides,side) {\n\
   repeat(sides, function () {\n\
-    forward(side);\n\
-    right(360/sides);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(360/sides);\n\
   });\n\
 }\n\
 \n\
@@ -9478,7 +9478,7 @@ function demo() {\n\
    }\n\
    side = .4 *side\n\
    స్థితి_మార్చు(-.4 * side, -.5 * side)\n\
-   hideTurtle();\n\
+   తాబేలును_దాచు();\n\
    polygon( random( 3,10), side);\n\
 }\n\
 '
@@ -9486,15 +9486,15 @@ random_stars ='\
 // Random Stars -- draw stars randomly on the canvas\n\
 \n\
 function star (side, sColor) {\n\
-  penup()\n\
-  forward(.54*side)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.54*side)\n\
   turn (180-18)\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   var i=0\n\
   beginShape()\n\
   while (i<5){\n\
-    forward(side)\n\
-    right(180-36)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180-36)\n\
     i = i + 1\n\
   }\n\
   fillShape(sColor)\n\
@@ -9506,10 +9506,10 @@ function demo () {\n\
   reset()\n\
   for (i=1; i< 150; i=i+1) {\n\
     స్థితి_మార్చు(random(minX(),maxX()), random( minY(),maxY()))\n\
-    left(random(359))\n\
+    ఎడమ_వైపు_తిరుగు(random(359))\n\
     star (random(2,15), random(15))\n\
   }\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 random_stick_men ='\
@@ -9524,43 +9524,43 @@ function stickMan (height) {\n\
   var legLength = height/2;\n\
 \n\
   //assume center of man is center of torso and up is in the pointed direction\n\
-  penup();\n\
-  forward (torsoLength/2 + neckLength + headDiameter/2); \n\
-  pendown();\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  ముందుకు_జరుగు(torsoLength/2 + neckLength + headDiameter/2); \n\
+  కలమును_కింద_పెట్టు();\n\
   circle (headDiameter/2); //draw head\n\
-  penup();\n\
-  right (180); //down\n\
-  forward (headDiameter/2);\n\
-  pendown()\n\
-  forward (neckLength); //neck\n\
-  right(120);\n\
-  forward (armLength); //left arm\n\
-  penup();\n\
-  backward (armLength);\n\
-  right(120);\n\
-  pendown();\n\
-  forward (armLength); //right arm\n\
-  penup();\n\
-  backward (armLength);\n\
-  right(120);\n\
-  pendown();\n\
-  forward(torsoLength); // torso\n\
-  right(30);\n\
-  forward(legLength); //left leg\n\
-  penup();\n\
-  backward(legLength);\n\
-  left(60);\n\
-  pendown();\n\
-  forward(legLength); //right leg\n\
-  penup();\n\
-  backward(legLength);\n\
-  right(30+180);\n\
-  forward(torsoLength/2);\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  కుడి_వైపు_తిరుగు(180); //down\n\
+  ముందుకు_జరుగు(headDiameter/2);\n\
+  కలమును_కింద_పెట్టు()\n\
+  ముందుకు_జరుగు(neckLength); //neck\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  ముందుకు_జరుగు(armLength); //left arm\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(armLength);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(armLength); //right arm\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(armLength);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(torsoLength); // torso\n\
+  కుడి_వైపు_తిరుగు(30);\n\
+  ముందుకు_జరుగు(legLength); //left leg\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(legLength);\n\
+  ఎడమ_వైపు_తిరుగు(60);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ముందుకు_జరుగు(legLength); //right leg\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(legLength);\n\
+  కుడి_వైపు_తిరుగు(30+180);\n\
+  ముందుకు_జరుగు(torsoLength/2);\n\
 }\n\
 \n\
 function demo () {\n\
   reset();\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   number = 0.0005 *  maxX() * maxY() // uniform density no matter size\n\
   for (i=0; i<number; i++) {\n\
     స్థితి_మార్చు(random( minX()+20, maxX()-20),random( minY()+20, maxY()-20));\n\
@@ -9577,56 +9577,56 @@ numColors = colors.length\n\
 \n\
 function rh(side, fillColor) {\n\
   beginShape()\n\
-  forward( side)\n\
-  left( 45)\n\
-  forward( side)\n\
-  left( 180-45)\n\
-  forward( side)\n\
-  left( 45)\n\
-  forward( side)\n\
-  left( 180-45)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 180-45)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 180-45)\n\
   fillShape(fillColor)\n\
 }\n\
 \n\
 function sideBySide( count, side, fillColor) {\n\
   for( var j=0; j<count; j++) {\n\
-    pendown()\n\
+    కలమును_కింద_పెట్టు()\n\
     rh( side, fillColor)\n\
-    penup()\n\
-    right( (180-45)/2)\n\
-    forward( 2* side * Math.sin( degToRad( 22.5)))\n\
-    left( ( 180-45)/2)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు( (180-45)/2)\n\
+    ముందుకు_జరుగు( 2* side * Math.sin( degToRad( 22.5)))\n\
+    ఎడమ_వైపు_తిరుగు( ( 180-45)/2)\n\
   }\n\
-  left( ( 180-45)/2 + 45)\n\
-  forward( 2 * count * side * Math.sin( degToRad( 22.5)))\n\
-  right( (180-45)/2)\n\
+  ఎడమ_వైపు_తిరుగు( ( 180-45)/2 + 45)\n\
+  ముందుకు_జరుగు( 2 * count * side * Math.sin( degToRad( 22.5)))\n\
+  కుడి_వైపు_తిరుగు( (180-45)/2)\n\
 }\n\
 \n\
 function cent(side, count) {\n\
   for( var i=0; i<8; i++) { // draw the center\n\
     rh( side, colors[0%numColors])\n\
-    left( 45)\n\
+    ఎడమ_వైపు_తిరుగు( 45)\n\
   }\n\
 \n\
   for( var i=0; i<8; i++) { // draw the second tier\n\
-    forward( side)\n\
+    ముందుకు_జరుగు( side)\n\
     rh( side, colors[1%numColors])\n\
-    right( 45)\n\
+    కుడి_వైపు_తిరుగు( 45)\n\
     rh( side, colors[1%numColors])\n\
-    left(45)\n\
-    backward( side)\n\
-    left(45)\n\
+    ఎడమ_వైపు_తిరుగు(45)\n\
+    వెనుకకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(45)\n\
   }\n\
 \n\
   for( var j=2; j<count; j++) { // draw the other tiers\n\
     for( var i=0; i<8; i++) {\n\
-      forward( j*side)\n\
-      pendown()\n\
+      ముందుకు_జరుగు( j*side)\n\
+      కలమును_కింద_పెట్టు()\n\
       rh( side, colors[j%numColors])\n\
-      right( 45)\n\
+      కుడి_వైపు_తిరుగు( 45)\n\
       sideBySide(j, side, colors[j%numColors])\n\
-      backward( j*side)\n\
-      left(45)\n\
+      వెనుకకు_జరుగు( j*side)\n\
+      ఎడమ_వైపు_తిరుగు(45)\n\
     }\n\
   }\n\
 }\n\
@@ -9643,7 +9643,7 @@ function demo() {\n\
   wrap(false)\n\
   side = .075 * Math.min(maxX(), maxY())\n\
   cent( side, 12)\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 rice_penta_tessellation_1 ='\
@@ -9660,58 +9660,58 @@ c8 = "orange"\n\
 \n\
 function pr(fill) {\n\
   beginShape()\n\
-  forward(sidea)\n\
-  left(180-angleB)\n\
-  forward(sideb)\n\
-  left(180-angleC)\n\
-  forward(sidec)\n\
-  left(180-angleD)\n\
-  forward(sided)\n\
-  left(180-angleE)\n\
-  forward(sidee)\n\
-  left(180-angleA)\n\
+  ముందుకు_జరుగు(sidea)\n\
+  ఎడమ_వైపు_తిరుగు(180-angleB)\n\
+  ముందుకు_జరుగు(sideb)\n\
+  ఎడమ_వైపు_తిరుగు(180-angleC)\n\
+  ముందుకు_జరుగు(sidec)\n\
+  ఎడమ_వైపు_తిరుగు(180-angleD)\n\
+  ముందుకు_జరుగు(sided)\n\
+  ఎడమ_వైపు_తిరుగు(180-angleE)\n\
+  ముందుకు_జరుగు(sidee)\n\
+  ఎడమ_వైపు_తిరుగు(180-angleA)\n\
   fillShape(fill)\n\
 }\n\
 \n\
 function pl(fill) {\n\
   beginShape()\n\
-  forward(sidea)\n\
-  right(180-angleB)\n\
-  forward(sideb)\n\
-  right(180-angleC)\n\
-  forward(sidec)\n\
-  right(180-angleD)\n\
-  forward(sided)\n\
-  right(180-angleE)\n\
-  forward(sidee)\n\
-  right(180-angleA)\n\
+  ముందుకు_జరుగు(sidea)\n\
+  కుడి_వైపు_తిరుగు(180-angleB)\n\
+  ముందుకు_జరుగు(sideb)\n\
+  కుడి_వైపు_తిరుగు(180-angleC)\n\
+  ముందుకు_జరుగు(sidec)\n\
+  కుడి_వైపు_తిరుగు(180-angleD)\n\
+  ముందుకు_జరుగు(sided)\n\
+  కుడి_వైపు_తిరుగు(180-angleE)\n\
+  ముందుకు_జరుగు(sidee)\n\
+  కుడి_వైపు_తిరుగు(180-angleA)\n\
   fillShape(fill)\n\
 }\n\
 \n\
 \n\
-function pu() { // penta unit\n\
+function కలమును_పైకి_ఎత్తు() { // penta unit\n\
   pr(c1)\n\
   pl(c2)\n\
 \n\
-  forward( 2*sidea)\n\
-  left(180)\n\
+  ముందుకు_జరుగు( 2*sidea)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
   pr(c3)\n\
   pl(c4)\n\
 \n\
 \n\
-  left( angleA)\n\
-  forward( sidee)\n\
-  left( 180 - angleC)\n\
-  forward( sideb)\n\
-  left( 180- angleB)\n\
-  forward( sidea)\n\
-  right(180)\n\
+  ఎడమ_వైపు_తిరుగు( angleA)\n\
+  ముందుకు_జరుగు( sidee)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - angleC)\n\
+  ముందుకు_జరుగు( sideb)\n\
+  ఎడమ_వైపు_తిరుగు( 180- angleB)\n\
+  ముందుకు_జరుగు( sidea)\n\
+  కుడి_వైపు_తిరుగు(180)\n\
 \n\
   pl(c5)\n\
   pr(c6)\n\
 \n\
-  forward( 2 * sidea)\n\
-  right(180)\n\
+  ముందుకు_జరుగు( 2 * sidea)\n\
+  కుడి_వైపు_తిరుగు(180)\n\
   pr(c7)\n\
   pl(c8)\n\
 }\n\
@@ -9739,18 +9739,18 @@ function demo() {\n\
   while (turtle.pos.x < maxX()) {\n\
     స్థితి_మార్చు(bigX, bigY)\n\
     while (turtle.pos.y > minY()-8*size) {\n\
-      pu()\n\
-      left( angleA)\n\
-      forward( sidee)\n\
-      right( 180 - angleE)\n\
-      forward( 2* sidec)\n\
-      left( 180 - angleE)\n\
-      forward( sidec)\n\
-      right( 180 - angleD)\n\
-      forward( sided)\n\
-      left( 180- angleA)\n\
-      forward( 2* sidea)\n\
-      right( 180)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ఎడమ_వైపు_తిరుగు( angleA)\n\
+      ముందుకు_జరుగు( sidee)\n\
+      కుడి_వైపు_తిరుగు( 180 - angleE)\n\
+      ముందుకు_జరుగు( 2* sidec)\n\
+      ఎడమ_వైపు_తిరుగు( 180 - angleE)\n\
+      ముందుకు_జరుగు( sidec)\n\
+      కుడి_వైపు_తిరుగు( 180 - angleD)\n\
+      ముందుకు_జరుగు( sided)\n\
+      ఎడమ_వైపు_తిరుగు( 180- angleA)\n\
+      ముందుకు_జరుగు( 2* sidea)\n\
+      కుడి_వైపు_తిరుగు( 180)\n\
     }\n\
     bigX = bigX + 20.72 * size\n\
     bigY = bigY + .4 * size\n\
@@ -9780,8 +9780,8 @@ function demo () {\n\
     //y1 = Math.floor( y2)\n\
     x1 = x2\n\
     y1 = y2\n\
-    angle (360 * dir / 2 / Math.PI)\n\
-    forward (len)\n\
+    కోణము (360 * dir / 2 / Math.PI)\n\
+    ముందుకు_జరుగు(len)\n\
   }\n\
 }\n\
 '
@@ -9811,19 +9811,19 @@ prevent the dreaded infinite loop.\n\
 */\n\
 function halfSierpinski(size, level) {\n\
   if (level == 0)\n\
-    forward(size);\n\
+    ముందుకు_జరుగు(size);\n\
   else {\n\
     function part() {\n\
       halfSierpinski(size, level - 1);\n\
-      left(45);\n\
-      forward(size * Math.sqrt(2));\n\
-      left(45);\n\
+      ఎడమ_వైపు_తిరుగు(45);\n\
+      ముందుకు_జరుగు(size * Math.sqrt(2));\n\
+      ఎడమ_వైపు_తిరుగు(45);\n\
       halfSierpinski(size, level - 1);\n\
     }\n\
     part();\n\
-    right(90);\n\
-    forward(size);\n\
-    right(90);\n\
+    కుడి_వైపు_తిరుగు(90);\n\
+    ముందుకు_జరుగు(size);\n\
+    కుడి_వైపు_తిరుగు(90);\n\
     part();\n\
   }\n\
 }\n\
@@ -9831,9 +9831,9 @@ function halfSierpinski(size, level) {\n\
 function sierpinski(size, level) {\n\
   function part () {\n\
     halfSierpinski(size, level);\n\
-    right(90);\n\
-    forward(size);\n\
-    right(90);\n\
+    కుడి_వైపు_తిరుగు(90);\n\
+    ముందుకు_జరుగు(size);\n\
+    కుడి_వైపు_తిరుగు(90);\n\
   }\n\
   part ();\n\
   part ();\n\
@@ -9844,26 +9844,26 @@ var i = 1; // a global variable used for each iteration of delayed\n\
 function delayed() {\n\
   if (i<7) {\n\
     clear();\n\
-    hideTurtle();\n\
+    తాబేలును_దాచు();\n\
     redrawOnMove(true);\n\
     స్థితి_మార్చు(0,.9*minY());\n\
 \n\
     // move start point so figure stays centered\n\
-    penup();\n\
-    angle(0);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    కోణము(0);\n\
 \n\
     size = 1.8 * Math.min( maxX(), maxY())\n\
     var sides = 4 * 2**i -3 // number of sides\n\
     var side = size/sides;\n\
-    left(90)\n\
-    forward(side/2)\n\
-    right(90)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(side/2)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
 \n\
-    pendown();\n\
+    కలమును_కింద_పెట్టు();\n\
 \n\
     sierpinski(side, i);\n\
     స్థితి_మార్చు(minX(),minY());\n\
-    angle(90);\n\
+    కోణము(90);\n\
     setfont("bold 12pt Ariel,sans-serif")\n\
     write ("Sierpinski curve of order "+ i);\n\
     draw();\n\
@@ -9883,29 +9883,29 @@ sierpinski_triangle ='\
 function sierpinski (order, side) {\n\
     if (order == 0) {\n\
         beginShape()\n\
-        forward (side)\n\
-        left (120)\n\
-        forward (side)\n\
-        left (120)\n\
-        forward (side)\n\
-        left (120)\n\
+        ముందుకు_జరుగు(side)\n\
+        ఎడమ_వైపు_తిరుగు(120)\n\
+        ముందుకు_జరుగు(side)\n\
+        ఎడమ_వైపు_తిరుగు(120)\n\
+        ముందుకు_జరుగు(side)\n\
+        ఎడమ_వైపు_తిరుగు(120)\n\
         fillShape("red")\n\
     } else {\n\
-        penup()\n\
-        forward (side/2)\n\
-        pendown()\n\
+        కలమును_పైకి_ఎత్తు()\n\
+        ముందుకు_జరుగు(side/2)\n\
+        కలమును_కింద_పెట్టు()\n\
         sierpinski( order-1, side/2) // bottom right\n\
-        penup()\n\
-        left (120)\n\
-        forward (side/2)\n\
-        right(120)\n\
-        pendown()\n\
+        కలమును_పైకి_ఎత్తు()\n\
+        ఎడమ_వైపు_తిరుగు(120)\n\
+        ముందుకు_జరుగు(side/2)\n\
+        కుడి_వైపు_తిరుగు(120)\n\
+        కలమును_కింద_పెట్టు()\n\
         sierpinski( order-1, side/2) // top center\n\
-        penup()\n\
-        right (120)\n\
-        forward (side/2)\n\
-        left (120)\n\
-        pendown()\n\
+        కలమును_పైకి_ఎత్తు()\n\
+        కుడి_వైపు_తిరుగు(120)\n\
+        ముందుకు_జరుగు(side/2)\n\
+        ఎడమ_వైపు_తిరుగు(120)\n\
+        కలమును_కింద_పెట్టు()\n\
         sierpinski( order-1, side/2) // bottom left\n\
     }\n\
 }\n\
@@ -9922,12 +9922,12 @@ function delayed() {\n\
 \n\
 function sier (order) {\n\
     reset()\n\
-    hideturtle()\n\
+    తాబేలును_దాచు()\n\
     side = 2* Math.min(maxX(),maxY()) -20\n\
-    penup()\n\
+    కలమును_పైకి_ఎత్తు()\n\
     స్థితి_మార్చు(-side/2, -side/2+20)\n\
-    right(90)\n\
-    pendown()\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు()\n\
     sierpinski( order, side)\n\
 \n\
     స్థితి_మార్చు(0+10- side/2,minY()+10)\n\
@@ -9965,7 +9965,7 @@ function explain( text) {\n\
   var cHeight = 2* maxY();\n\
   var lineNumber = 0;\n\
   స్థితి_మార్చు(-.90 * cWidth + maxX(), .9 * cHeight - maxY());\n\
-  angle(90);\n\
+  కోణము(90);\n\
   setfont("bold 20px arial,sans-serif");\n\
 \n\
   var lines = text.split("@");\n\
@@ -9975,7 +9975,7 @@ function explain( text) {\n\
     write (lines[i]);\n\
     lineNumber = lineNumber + 1;\n\
   }\n\
-  hideTurtle();\n\
+  తాబేలును_దాచు();\n\
 }\n\
 \n\
 function textDemo () {\n\
@@ -10169,14 +10169,14 @@ function drawBlock( h, v, x, y, n) {\n\
   beginShape()\n\
   స్థితి_మార్చు(baseX + x * side, baseY - y * side)\n\
   setHeading(90)\n\
-  forward( h * side)\n\
-  right( 90)\n\
-  forward( v * side)\n\
-  right( 90)\n\
-  forward( h * side)\n\
-  right( 90)\n\
-  forward( v * side)\n\
-  right( 90)\n\
+  ముందుకు_జరుగు( h * side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( v * side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( h * side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( v * side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   fillShape("tan")\n\
 \n\
   స్థితి_మార్చు(baseX + (x + .5)*side, baseY -(y+.5) *side)\n\
@@ -10777,7 +10777,7 @@ function caption (message) {\n\
   // save your current position, heading, etc.\n\
   var savedX = turtle.pos.x\n\
   var savedY = turtle.pos.y\n\
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees\n\
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = turtle.color\n\
   var savedWidth = turtle.width\n\
 \n\
@@ -10788,7 +10788,7 @@ function caption (message) {\n\
   setfont("bold 16px helvitica,sans-serif")\n\
   color ("white")\n\
   width (22)\n\
-  forward (maxY() * 2 - 12)\n\
+  ముందుకు_జరుగు(maxY() * 2 - 12)\n\
   స్థితి_మార్చు(minX()+10, minY()+5)\n\
   color ("black")\n\
   write( message)\n\
@@ -10972,31 +10972,31 @@ dot()\n\
 \n\
 // add stick for a right arm\n\
 స్థితి_మార్చు(56,60)\n\
-angle (60)\n\
+కోణము (60)\n\
 width(3)\n\
-forward (40)\n\
-left(15)\n\
-forward (25)\n\
-backward (25)\n\
-right(20)\n\
-forward(30)\n\
-backward(30)\n\
-right(10)\n\
-forward(20)\n\
+ముందుకు_జరుగు(40)\n\
+ఎడమ_వైపు_తిరుగు(15)\n\
+ముందుకు_జరుగు(25)\n\
+వెనుకకు_జరుగు(25)\n\
+కుడి_వైపు_తిరుగు(20)\n\
+ముందుకు_జరుగు(30)\n\
+వెనుకకు_జరుగు(30)\n\
+కుడి_వైపు_తిరుగు(10)\n\
+ముందుకు_జరుగు(20)\n\
 \n\
 // add stick for a left arm\n\
 స్థితి_మార్చు(-56,60)\n\
-angle (-60)\n\
+కోణము (-60)\n\
 width(3)\n\
-forward (40)\n\
-left(15)\n\
-forward (25)\n\
-backward (25)\n\
-right(20)\n\
-forward(30)\n\
-backward(30)\n\
-right(10)\n\
-forward(20)\n\
+ముందుకు_జరుగు(40)\n\
+ఎడమ_వైపు_తిరుగు(15)\n\
+ముందుకు_జరుగు(25)\n\
+వెనుకకు_జరుగు(25)\n\
+కుడి_వైపు_తిరుగు(20)\n\
+ముందుకు_జరుగు(30)\n\
+వెనుకకు_జరుగు(30)\n\
+కుడి_వైపు_తిరుగు(10)\n\
+ముందుకు_జరుగు(20)\n\
 '
 snub_icosidodecahedron ='\
 // Snub Icosidodecahedron Half -- half pattern for model of snub icosidodecahedron\n\
@@ -11013,40 +11013,40 @@ Have fun.\n\
 \n\
 function leftTriangle(side) {\n\
   for (var i=0; i<3; i++) {\n\
-    forward (side)\n\
-    left(120)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
   }\n\
 }\n\
 \n\
 function leftTab( side) {\n\
   var x = turtle.pos.x\n\
   var y = turtle.pos.y\n\
-  left( 180 - 45)\n\
-  forward( side * .2)\n\
-  left( 45)\n\
-  forward( side * .72)\n\
-  left( 45)\n\
-  forward( side * .2)\n\
-  left( 180 - 45)\n\
-  forward( side)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - 45)\n\
+  ముందుకు_జరుగు( side * .2)\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side * .72)\n\
+  ఎడమ_వైపు_తిరుగు( 45)\n\
+  ముందుకు_జరుగు( side * .2)\n\
+  ఎడమ_వైపు_తిరుగు( 180 - 45)\n\
+  ముందుకు_జరుగు( side)\n\
   స్థితి_మార్చు( x, y)\n\
 }\n\
 \n\
 \n\
 function rightTriangle(side, tabs) {\n\
   for (var i=0; i<3; i++) {\n\
-    forward (side)\n\
+    ముందుకు_జరుగు(side)\n\
     if (tabs.includes (""+i)) {\n\
       leftTab(side)\n\
     }\n\
-    right(120)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
   }\n\
 }\n\
 \n\
 function leftPentagon(side) {\n\
   for (var i=0; i<5; i++) {\n\
-    forward (side)\n\
-    left(72)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(72)\n\
     if (i  == 0) {\n\
       rightTriangle(side, "1")\n\
     }\n\
@@ -11055,29 +11055,29 @@ function leftPentagon(side) {\n\
     }\n\
     if (i == 3) {\n\
       rightTriangle(side, "1")\n\
-      right(60)\n\
+      కుడి_వైపు_తిరుగు(60)\n\
       //beginShape()\n\
       rightTriangle(side, "1,2")\n\
       //fillShape("red")\n\
-      left(60)\n\
+      ఎడమ_వైపు_తిరుగు(60)\n\
     }\n\
   }\n\
 }\n\
 \n\
 function rightPentagon(side) {\n\
   for (var i=0; i<5; i++) {\n\
-    left(120)\n\
-    forward(side)\n\
-    right(120)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
     leftPentagon(side) // outer pentagon\n\
-    left(120)\n\
-    backward (side)\n\
-    right(120)\n\
-    forward (side)\n\
-    left(120)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
+    వెనుకకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు(side)\n\
+    ఎడమ_వైపు_తిరుగు(120)\n\
     rightTriangle(side, "")\n\
-    right(120)\n\
-    right(72)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
+    కుడి_వైపు_తిరుగు(72)\n\
     leftTriangle(side)\n\
   }\n\
 }\n\
@@ -11088,16 +11088,16 @@ function demo() {\n\
   side = .25 * Math.min( maxX(), maxY())\n\
   స్థితి_మార్చు(-.666 * side, - .333 * side)\n\
   rightPentagon(side) // inner pentagon\n\
-  hideturtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 spinning_squares ='\
-// Spinning Squares -- draw some square of increasing size and angle.\n\
+// Spinning Squares -- draw some square of increasing size and కోణము.\n\
 \n\
 function square (side) {\n\
   var i=0\n\
   while (i<4) {\n\
-    forward( side)\n\
+    ముందుకు_జరుగు( side)\n\
     turn(90)\n\
     i=i+1\n\
   }\n\
@@ -11105,12 +11105,12 @@ function square (side) {\n\
 \n\
 function spinningSquare2() {\n\
    reset();\n\
-   hideTurtle();\n\
+   తాబేలును_దాచు();\n\
    color("blue");\n\
    var side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
-      right(36);\n\
+      కుడి_వైపు_తిరుగు(36);\n\
       side = side - 10;\n\
    }\n\
 }\n\
@@ -11127,7 +11127,7 @@ function spinningSquare() {\n\
   color("blue");\n\
   for (var i=0; i<steps; i=i+1) {\n\
     square(stepSize*i);\n\
-    right(360/steps)\n\
+    కుడి_వైపు_తిరుగు(360/steps)\n\
   }\n\
 }\n\
 \n\
@@ -11140,8 +11140,8 @@ function spiral1() {\n\
   reset()\n\
   n=0\n\
   while (n<400) {\n\
-    forward(n)\n\
-    right(90)\n\
+    ముందుకు_జరుగు(n)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
     n=n+3\n\
   }\n\
 }\n\
@@ -11150,8 +11150,8 @@ function spiral2() {\n\
   reset()\n\
   n=0\n\
   while (n<75) {\n\
-    forward(n)\n\
-    right(90-n)\n\
+    ముందుకు_జరుగు(n)\n\
+    కుడి_వైపు_తిరుగు(90-n)\n\
     n=n+1\n\
   }\n\
 }\n\
@@ -11162,8 +11162,8 @@ function spiral3() {\n\
   wrap(false)\n\
   n=0\n\
   while (n<40) {\n\
-    forward(n)\n\
-    right(15)\n\
+    ముందుకు_జరుగు(n)\n\
+    కుడి_వైపు_తిరుగు(15)\n\
     n=n+.25\n\
   }\n\
 }\n\
@@ -11173,8 +11173,8 @@ function spiral() {\n\
   wrap(false)\n\
   n=0\n\
   while (n<1000) {\n\
-    forward(n)\n\
-    right(15)\n\
+    ముందుకు_జరుగు(n)\n\
+    కుడి_వైపు_తిరుగు(15)\n\
     n=n+.25\n\
     // turtle.pos.x is the x position of the turtle\n\
     // turtle.pos.y is the y position of the turtle\n\
@@ -11203,34 +11203,34 @@ function demo() {\n\
   offset = true\n\
   for (var i=minY(); i<maxY(); i = i + side) {\n\
     స్థితి_మార్చు(minX(),i)\n\
-    angle(90)\n\
+    కోణము(90)\n\
     if (offset) {\n\
-      penup()\n\
-      forward( side)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( side)\n\
+      కలమును_కింద_పెట్టు()\n\
     }\n\
     offset = !offset\n\
     for (var j=minX(); j<maxX(); j = j + 3*side) {\n\
-      forward( side2)\n\
-      penup()\n\
-      forward( side)\n\
-      pendown()\n\
+      ముందుకు_జరుగు( side2)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( side)\n\
+      కలమును_కింద_పెట్టు()\n\
     }\n\
   }\n\
 \n\
   offset = true\n\
   for (var i=minX(); i<maxX(); i = i + side) {\n\
     స్థితి_మార్చు(i, minY())\n\
-    angle(0)\n\
+    కోణము(0)\n\
     if (offset) {\n\
-      forward( side)\n\
+      ముందుకు_జరుగు( side)\n\
     }\n\
     offset = !offset\n\
     for (var j=maxY(); j>minY(); j = j - 3*side) {\n\
-      penup()\n\
-      forward( side)\n\
-      pendown()\n\
-      forward( side2)\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు( side)\n\
+      కలమును_కింద_పెట్టు()\n\
+      ముందుకు_జరుగు( side2)\n\
     }\n\
   }\n\
 }\n\
@@ -11242,32 +11242,32 @@ square_series ='\
 \n\
 function paddle (side) {\n\
   side2 = side + side\n\
-  forward( side2)\n\
-  right( 90)\n\
-  forward( side)\n\
-  left( 90)\n\
-  forward( side2)\n\
-  left( 90)\n\
-  forward( side2)\n\
-  left( 90)\n\
-  forward( side2)\n\
-  left( 90)\n\
-  forward( side)\n\
-  penup()\n\
-  right( 90)\n\
-  forward( side2)\n\
-  right( 180)\n\
-  pendown()\n\
+  ముందుకు_జరుగు( side2)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side2)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side2)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side2)\n\
+  ఎడమ_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side2)\n\
+  కుడి_వైపు_తిరుగు( 180)\n\
+  కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
 \n\
 function cwGroup( side) {\n\
   for( var i=0; i<4; i++) {\n\
     paddle( side)\n\
-    penup()\n\
-    forward( side)\n\
-    right( 90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
 }\n\
 \n\
@@ -11275,10 +11275,10 @@ function cwGroup( side) {\n\
 function ccwGroup( side) {\n\
   for( var i=0; i<4; i++) {\n\
     paddle( side)\n\
-    penup()\n\
-    forward( side)\n\
-    left( 90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 90)\n\
+    కలమును_కింద_పెట్టు()\n\
   }\n\
 }\n\
 \n\
@@ -11321,8 +11321,8 @@ colors = ["red", "white", "blue","yellow", "green"]\n\
 function squ( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<4; i++) {\n\
-    forward( side)\n\
-    right( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
   fillShape( fColor)\n\
 }\n\
@@ -11330,8 +11330,8 @@ function squ( side, fColor) {\n\
 function squLeft( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<4; i++) {\n\
-    forward( side)\n\
-    left( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 90)\n\
   }\n\
   fillShape( fColor)\n\
 }\n\
@@ -11349,41 +11349,41 @@ function demo() {\n\
   rowOffset = s/3\n\
   wrap(false)\n\
   స్థితి_మార్చు(minX(), maxY())\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
   while (turtle.pos.y > minY()) {\n\
     while (turtle.pos.x < maxX()) {\n\
       squ(s, nextColor())\n\
-      forward(s)\n\
+      ముందుకు_జరుగు(s)\n\
     }\n\
-    right(90)\n\
-    forward( s)\n\
-    right(90)\n\
-    backward(rowOffset)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు( s)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    వెనుకకు_జరుగు(rowOffset)\n\
     while (turtle.pos.x > minX()) {\n\
       squLeft(s, nextColor())\n\
-      forward(s)\n\
+      ముందుకు_జరుగు(s)\n\
     }\n\
-    left(90)\n\
-    forward(s)\n\
-    left(90)\n\
-    forward(rowOffset)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(s)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(rowOffset)\n\
   }\n\
 }\n\
 '
 squiggle ='\
 // Squiggle -- draw a random squiggle\n\
 \n\
-function squiggle(steps,angle) {\n\
+function squiggle(steps,కోణము) {\n\
   widthInc = 5 / steps;\n\
   distInc = 10 / steps;\n\
   w = 0.1;\n\
   repeat (steps, function () {\n\
     width(w);\n\
-    forward(random(1,10));\n\
-    right(angle);\n\
-    angle = angle - 1;\n\
+    ముందుకు_జరుగు(random(1,10));\n\
+    కుడి_వైపు_తిరుగు(కోణము);\n\
+    కోణము = కోణము - 1;\n\
     w = w + widthInc;\n\
   })\n\
 }\n\
@@ -11391,13 +11391,13 @@ function squiggle(steps,angle) {\n\
 function drawRandomSquiggle() {\n\
   colour(random(16));\n\
   స్థితి_మార్చు(random(minX(), maxX()), random(minY(), maxY()));\n\
-  angle(random(0,360));\n\
+  కోణము(random(0,360));\n\
   squiggle(random(100,1000), random(5,90));\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
-  hideTurtle();\n\
+  తాబేలును_దాచు();\n\
   drawRandomSquiggle();\n\
 }\n\
 '
@@ -11405,14 +11405,14 @@ stamps ='\
 // Stamps -- demonstrate stamping of a star design multiple times\n\
 \n\
 function star (side) {\n\
-  penup()\n\
-  forward(.54*side)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.54*side)\n\
   turn (180-18)\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   var i=0\n\
   while (i<5){\n\
-    forward(side)\n\
-    right(180-36)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180-36)\n\
     i = i + 1\n\
   }\n\
   turn (180+18)\n\
@@ -11426,7 +11426,7 @@ function stamps () {\n\
     var y = minY()\n\
     while (y <= maxY()) {\n\
       స్థితి_మార్చు(x,y)\n\
-      angle (0);\n\
+      కోణము (0);\n\
       star (25);\n\
       y = y+30\n\
     }\n\
@@ -11450,12 +11450,12 @@ function starburst () {\n\
   var i = 0\n\
   while ( i < steps) {\n\
     స్థితి_మార్చు( 0,0)\n\
-    angle( 360/steps*i)\n\
+    కోణము( 360/steps*i)\n\
     color( random (16))\n\
     //color ("hsl("+ 360 * i/steps + ", 100%, 50%)") // color wheel\n\
     //color (i%16)\n\
     //color (Math.floor(16 * i/steps)) // logo colors\n\
-    forward (len)\n\
+    ముందుకు_జరుగు(len)\n\
     i = i + 1\n\
   }\n\
 }\n\
@@ -11470,14 +11470,14 @@ star ='\
 // Star -- draw a simple star\n\
 \n\
 function star (side) {\n\
-  penup()\n\
-  forward(.54*side)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.54*side)\n\
   turn (180-18)\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   var i=0\n\
   while (i<5){\n\
-    forward(side)\n\
-    right(180-36)\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(180-36)\n\
     i = i + 1\n\
   } \n\
   turn (180+18)\n\
@@ -11490,7 +11490,7 @@ function demo () {\n\
   beginShape()\n\
   star ( side)\n\
   fillShape("gold")\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 }\n\
 '
 stars_and_rhombuses ='\
@@ -11499,23 +11499,23 @@ stars_and_rhombuses ='\
 function quadRhom( side) {\n\
   for( var i=0; i<4; i++) {\n\
     for ( var j=0; j<4; j++) {\n\
-      forward( side)\n\
-      right( ang)\n\
-      forward( side)\n\
-      right( 180- ang)\n\
-      forward( side)\n\
-      right( ang)\n\
-      forward( side)\n\
-      right( 180- ang)\n\
+      ముందుకు_జరుగు( side)\n\
+      కుడి_వైపు_తిరుగు( ang)\n\
+      ముందుకు_జరుగు( side)\n\
+      కుడి_వైపు_తిరుగు( 180- ang)\n\
+      ముందుకు_జరుగు( side)\n\
+      కుడి_వైపు_తిరుగు( ang)\n\
+      ముందుకు_జరుగు( side)\n\
+      కుడి_వైపు_తిరుగు( 180- ang)\n\
     }\n\
-    right( 90)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
 }\n\
 \n\
 function demo() {\n\
   reset()\n\
   wrap( false)\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   ang = 60\n\
   side = 20\n\
   xoffset = 0\n\
@@ -11524,7 +11524,7 @@ function demo() {\n\
   for (var fy=maxY(); fy>minY(); fy=fy - chord) {   \n\
     for (var fx=minX(); fx<maxX(); fx=fx + 2*chord) {\n\
       స్థితి_మార్చు( fx+xoffset, fy)\n\
-      angle( 90 - ang/2)\n\
+      కోణము( 90 - ang/2)\n\
       quadRhom( side)\n\
     }\n\
     if (xoffset>0) {\n\
@@ -11544,53 +11544,53 @@ var scale // varible to influence overall tree size\n\
 \n\
 //  code inspired from a code.org lesson\n\
 function drawTree(depth, branches) {\n\
-  var spread = 120;	//spread is angle of left to right branches\n\
-  var tilt = 0;		//tilt is angle of the cluster\n\
+  var spread = 120;	//spread is కోణము of left to right branches\n\
+  var tilt = 0;		//tilt is కోణము of the cluster\n\
   var ratio = 7;	//ratio is branch depth to length ratio\n\
   if (depth>0) { \n\
    color( random( 16));\n\
-   pendown();\n\
+   కలమును_కింద_పెట్టు();\n\
    width (depth + random(0,2));\n\
-   forward(scale* ratio * depth);\n\
-   left(tilt + spread/2 + spread/branches/2);\n\
+   ముందుకు_జరుగు(scale* ratio * depth);\n\
+   ఎడమ_వైపు_తిరుగు(tilt + spread/2 + spread/branches/2);\n\
    repeat(branches, function () {\n\
-     right(spread/branches);\n\
+     కుడి_వైపు_తిరుగు(spread/branches);\n\
      drawTree(depth-1, branches);\n\
    });\n\
-   left(spread - tilt - spread/2 - spread/branches/2); // return to start angle\n\
-   penup();\n\
-   backward (scale * ratio * depth); // backup to start point\n\
+   ఎడమ_వైపు_తిరుగు(spread - tilt - spread/2 - spread/branches/2); // return to start కోణము\n\
+   కలమును_పైకి_ఎత్తు();\n\
+   వెనుకకు_జరుగు(scale * ratio * depth); // backup to start point\n\
   }\n\
 }\n\
 \n\
 // draw a more random tree\n\
 function drawRTree(depth, branches) {\n\
-  var spread = random(90,180);	// spread is angle of left to right branches\n\
-  var tilt = random(-15,15);	// tilt is angle of the cluster\n\
+  var spread = random(90,180);	// spread is కోణము of left to right branches\n\
+  var tilt = random(-15,15);	// tilt is కోణము of the cluster\n\
   var ratio = random (5,9);	// ratio is branch depth to length ratio\n\
   if (depth>0) { \n\
    color( random( 16));\n\
-   pendown();\n\
+   కలమును_కింద_పెట్టు();\n\
    width (depth + random(0,2));\n\
-   forward(scale * ratio * depth);\n\
-   left(tilt + spread/2 + spread/branches/2);\n\
+   ముందుకు_జరుగు(scale * ratio * depth);\n\
+   ఎడమ_వైపు_తిరుగు(tilt + spread/2 + spread/branches/2);\n\
    repeat(branches, function () {\n\
-     right(spread/branches);\n\
+     కుడి_వైపు_తిరుగు(spread/branches);\n\
      drawTree(depth-1, branches);\n\
    });\n\
-   left(spread - tilt - spread/2 - spread/branches/2); // return to start angle\n\
-   penup();\n\
-   backward (scale * ratio * depth); // backup to start point\n\
+   ఎడమ_వైపు_తిరుగు(spread - tilt - spread/2 - spread/branches/2); // return to start కోణము\n\
+   కలమును_పైకి_ఎత్తు();\n\
+   వెనుకకు_జరుగు(scale * ratio * depth); // backup to start point\n\
   }\n\
 }\n\
 \n\
 function demo() {\n\
   reset();\n\
-  hideturtle();\n\
+  తాబేలును_దాచు();\n\
   scale = .01 * Math.min( maxX(), maxY())\n\
-  penup();\n\
-  backward(scale * 70);\n\
-  pendown();\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  వెనుకకు_జరుగు(scale * 70);\n\
+  కలమును_కింద_పెట్టు();\n\
   drawRTree(6,4)\n\
 }\n\
 '
@@ -11602,8 +11602,8 @@ colors = ["red", "white", "blue", "yellow", "green"]\n\
 function triUp( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<3; i++) {\n\
-    forward( side)\n\
-    left( 120)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 120)\n\
   }\n\
   fillShape( fColor)\n\
 }\n\
@@ -11611,8 +11611,8 @@ function triUp( side, fColor) {\n\
 function triDown( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<3; i++) {\n\
-    forward( side)\n\
-    right( 120)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 120)\n\
   }\n\
   fillShape( fColor)\n\
 }\n\
@@ -11630,23 +11630,23 @@ function demo() {\n\
   rowOffset = s/3 // offset between rows\n\
   wrap(false)\n\
   స్థితి_మార్చు(minX(), maxY())\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
   while (turtle.pos.y > minY()) {\n\
   while (turtle.pos.x < maxX()) {\n\
     triDown(s, nextColor())\n\
-    forward(s)\n\
+    ముందుకు_జరుగు(s)\n\
   }\n\
-  right(120)\n\
-  forward( s)\n\
-  right(60)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
+  ముందుకు_జరుగు( s)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
   while (turtle.pos.x > minX()) {\n\
     triDown(s, nextColor())\n\
-    forward(s)\n\
+    ముందుకు_జరుగు(s)\n\
   }\n\
-  left(180)\n\
-  forward(rowOffset)\n\
+  ఎడమ_వైపు_తిరుగు(180)\n\
+  ముందుకు_జరుగు(rowOffset)\n\
   }\n\
 }\n\
 '
@@ -11661,13 +11661,13 @@ var sides = 80;\n\
 function triangle (side) {\n\
   if (side < maxSide) {\n\
     home()\n\
-    penup();\n\
-    forward (side/2);\n\
-    right(150);\n\
-    pendown();\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(side/2);\n\
+    కుడి_వైపు_తిరుగు(150);\n\
+    కలమును_కింద_పెట్టు();\n\
     for (var i=0; i<3; i++) {\n\
-      forward(side);\n\
-      right(120);\n\
+      ముందుకు_జరుగు(side);\n\
+      కుడి_వైపు_తిరుగు(120);\n\
     }\n\
   }\n\
 }\n\
@@ -11686,7 +11686,7 @@ function nestTri () {\n\
 \n\
 function demo () {\n\
   reset()\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
 \n\
   maxSide = 1.8* Math.min( maxX(), maxY())\n\
   tColor = []\n\
@@ -11709,8 +11709,8 @@ offsets = [0, -1, -2, -.5, -1.5]\n\
 function squ( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<4; i++) {\n\
-    forward( side)\n\
-    right( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
   fillShape( fColor)\n\
 }\n\
@@ -11718,8 +11718,8 @@ function squ( side, fColor) {\n\
 function squLeft( side, fColor) {\n\
   beginShape()\n\
   for (var i=0; i<4; i++) {\n\
-    forward( side)\n\
-    left( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 90)\n\
   }\n\
   fillShape( fColor)\n\
 }\n\
@@ -11737,19 +11737,19 @@ function demo() {\n\
   column = minX()\n\
   row = maxY()\n\
   wrap(false)\n\
-  right( 90)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > minY()) {\n\
     స్థితి_మార్చు(minX()+offsets[ rowCount % offsets.length]*s, maxY()-rowCount*s/2+s/2)\n\
     while( turtle.pos.x < maxX()) {\n\
-      pendown()\n\
+      కలమును_కింద_పెట్టు()\n\
       squ(s, nextColor())\n\
-      penup()\n\
-      forward(s*2)\n\
-      pendown()\n\
+      కలమును_పైకి_ఎత్తు()\n\
+      ముందుకు_జరుగు(s*2)\n\
+      కలమును_కింద_పెట్టు()\n\
       squ( s/2, nextColor())\n\
-      forward( s/2)\n\
+      ముందుకు_జరుగు( s/2)\n\
     }\n\
     rowCount = rowCount + 1\n\
   }\n\
@@ -11759,31 +11759,31 @@ US_flag ='\
 // US Flag -- draw an American Flag\n\
 \n\
 function star (size) {\n\
-  penup()\n\
-  forward(.54*size)\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.54*size)\n\
   turn (180-18)\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
   var i=0\n\
   beginShape()\n\
   while (i<5){\n\
-    forward(size)\n\
-    right(180-36)\n\
+    ముందుకు_జరుగు(size)\n\
+    కుడి_వైపు_తిరుగు(180-36)\n\
     i = i + 1\n\
   }\n\
   fillShape("white")\n\
   turn (180+18)\n\
-  backward(.54*size)\n\
+  వెనుకకు_జరుగు(.54*size)\n\
 }\n\
 \n\
 \n\
 function starLine(count, size, sep) {\n\
   while (count > 0) {\n\
     star(size)\n\
-    penup()\n\
-    right(90)\n\
-    forward (sep)\n\
-    left(90)\n\
-    pendown()\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(sep)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు()\n\
     count = count -1;\n\
   }\n\
 }\n\
@@ -11791,36 +11791,36 @@ function starLine(count, size, sep) {\n\
 \n\
 function rectangle (width, height) {\n\
   // assume x, y at upper right hand corner in and out\n\
-  // assume angle is 90 in and out\n\
-  angle (90)\n\
-  forward (width)\n\
-  right(90)\n\
-  forward (height)\n\
-  right (90)\n\
-  forward (width)\n\
-  right (90)\n\
-  forward (height)\n\
-  right (90)\n\
+  // assume కోణము is 90 in and out\n\
+  కోణము (90)\n\
+  ముందుకు_జరుగు(width)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(height)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(width)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(height)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
 }\n\
 \n\
 \n\
 function stripes (width, spacing, number) {\n\
   //assume x, y is at right side of stripe\n\
-  //assume angle is -90\n\
+  //assume కోణము is -90\n\
   var i = 0\n\
   while (i<number) {\n\
-    pendown()\n\
-    forward (width)\n\
-    penup()\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(width)\n\
+    కలమును_పైకి_ఎత్తు()\n\
     // make the turn\n\
     if (i%2 == 0) {\n\
-      left(90)\n\
-      forward(spacing)\n\
-      left(90)\n\
+      ఎడమ_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు(spacing)\n\
+      ఎడమ_వైపు_తిరుగు(90)\n\
     } else {\n\
-      right(90)\n\
-      forward(spacing)\n\
-      right(90)\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు(spacing)\n\
+      కుడి_వైపు_తిరుగు(90)\n\
     }\n\
     i = i + 1\n\
   }\n\
@@ -11848,9 +11848,9 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)\n
   //outline flag and field\n\
   reset()\n\
   wrap(false)\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   స్థితి_మార్చు(xBase, yBase)\n\
-  angle (90)\n\
+  కోణము (90)\n\
   color("black")\n\
 \n\
   width(1)\n\
@@ -11861,21 +11861,21 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)\n
   color("red");\n\
   width(stripeWidth);\n\
   స్థితి_మార్చు(xBase+flagWidth, yBase-stripeWidth/2)\n\
-  angle (-90)\n\
+  కోణము (-90)\n\
   stripes (flagWidth-fieldWidth, 2*stripeWidth, 4)\n\
   stripes (flagWidth, 2*stripeWidth, 3)\n\
 \n\
   //draw field\n\
   color("blue")\n\
   స్థితి_మార్చు(xBase+fieldWidth, yBase-stripeWidth/2)\n\
-  angle (-90)\n\
+  కోణము (-90)\n\
   stripes (fieldWidth, stripeWidth, 7)\n\
 \n\
   //draw field of stars\n\
-  angle(0)\n\
+  కోణము(0)\n\
   width (2)\n\
   color("white")\n\
-  pendown()\n\
+  కలమును_కింద_పెట్టు()\n\
 \n\
   var row = 0\n\
   while (row<9) {\n\
@@ -11979,31 +11979,31 @@ var vHumber; // number of tiles vertically\n\
 function drawTriangle (fill) {\n\
   // draw triangle in place\n\
   beginShape()\n\
-  forward( side)\n\
-  right( 135)\n\
-  forward ( side/Math.sqrt(2))\n\
-  right( 90)\n\
-  forward( side/Math.sqrt(2))\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 135)\n\
+  ముందుకు_జరుగు( side/Math.sqrt(2))\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
+  ముందుకు_జరుగు( side/Math.sqrt(2))\n\
   fillShape( fill)\n\
-  right( 135)\n\
+  కుడి_వైపు_తిరుగు( 135)\n\
 }\n\
 \n\
 \n\
 function drawTile (x, y, tile) {\n\
   స్థితి_మార్చు(x,y)\n\
-  angle(90)\n\
+  కోణము(90)\n\
   drawTriangle( COLORS[ TILES[tile][N]])\n\
-  forward( side)\n\
-  right( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   drawTriangle( COLORS[ TILES[tile][E]])\n\
-  forward( side)\n\
-  right( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   drawTriangle( COLORS[ TILES[tile][S]])\n\
-  forward( side)\n\
-  right( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
   drawTriangle( COLORS[ TILES[tile][W]])\n\
-  forward( side)\n\
-  right( 90)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 90)\n\
 }\n\
 \n\
 \n\
@@ -12150,16 +12150,16 @@ class Tile {\n\
     color( "white")\n\
     స్థితి_మార్చు( minX()+margin + this.tx * side * 1,\n\
           maxY()-margin - this.ty * side * 1)\n\
-    angle(90)\n\
+    కోణము(90)\n\
     beginShape()\n\
-    forward( side)\n\
-    right( 90)\n\
-    forward( side)\n\
-    right( 90)\n\
-    forward( side)\n\
-    right( 90)\n\
-    forward( side)\n\
-    right( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు( 90)\n\
     fillShape("lightblue")\n\
     color("black")\n\
   }\n\
@@ -12167,7 +12167,7 @@ class Tile {\n\
 \n\
 \n\
 function delayedBuild () {\n\
-  hideTurtle()\n\
+  తాబేలును_దాచు()\n\
   if (currentTile.findPossibles()) { // currentTile may change here\n\
     currentTile.plot()\n\
     if( (currentTile.tx != hNumber-1) ||\n\
@@ -12183,7 +12183,7 @@ function delayedBuild () {\n\
 \n\
 function demo () {\n\
   reset()\n\
-  //hideTurtle()\n\
+  //తాబేలును_దాచు()\n\
   tiles = []\n\
   // build a logical array of tiles\n\
   hNumber = Math.floor((maxX()*2 - margin * 2) / side)\n\
@@ -12215,8 +12215,8 @@ waves ='\
 function drawRadials(side) {\n\
 	for (var i=0; i<16; i++) {\n\
 		స్థితి_మార్చు(0,0)\n\
-		angle(i/16 * 360)\n\
-		forward( size)\n\
+		కోణము(i/16 * 360)\n\
+		ముందుకు_జరుగు( size)\n\
 	}\n\
 }\n\
 \n\
@@ -12231,7 +12231,7 @@ distances are known. This math is a bit tough.\n\
 function demo() {\n\
 	reset()\n\
 	wrap(false)\n\
-	hideTurtle()\n\
+	తాబేలును_దాచు()\n\
 	size=200\n\
 	step = 4\n\
 	n = 2* size/step\n\

@@ -1,17 +1,17 @@
 // Pentahex -- game pieces consisting of five hexagons in a 10x11 field
 
-// This sets up a pseudo interpreter. Each move is a right (r) or left (l)
+// This sets up a pseudo interpreter. Each move is a కుడి_వైపు_తిరుగు(r) or ఎడమ_వైపు_తిరుగు(l)
 // token. Each piece consists of a set of such moves to from the outline
 // of the piece.
 
 function r() {
-  forward( side)
-  right( 60)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 60)
 }
 
 function l() {
-  forward( side)
-  left( 60)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 60)
 }
 
   I5=[l,l,r,l,r,l,r,l,r,l,l,l,l,r,l,r,l,r,l,r,l,l]
@@ -40,36 +40,36 @@ function l() {
 function shape( bx, by, axis, turns, fillColor ) {
   // draw a shape at board position bx, by, with the piece oriented
   // on one of six axises. The shape consists of an array of turns.
-  penup()
+  కలమును_పైకి_ఎత్తు()
   goto( baseX, baseY)
-  angle(0)
-  forward( 2* by * side * Math.cos(degToRad(30)))
-  right(60)
-  forward( 2* bx * side * Math.cos(degToRad(30)))
-  penup()
+  కోణము(0)
+  ముందుకు_జరుగు( 2* by * side * Math.cos(degToRad(30)))
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు( 2* bx * side * Math.cos(degToRad(30)))
+  కలమును_పైకి_ఎత్తు()
   dot()  //center of start cell
-  angle(60 * axis )
-  left( 180 - 30)
-  forward( side)
-  left (120) 
-  pendown()
+  కోణము(60 * axis )
+  ఎడమ_వైపు_తిరుగు( 180 - 30)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు(120) 
+  కలమును_కింద_పెట్టు()
   beginShape()
   for (j=0; j< turns.length; j++) {
     turns[j]()
   }
   fillShape( fillColor)
-  penup()
+  కలమును_పైకి_ఎత్తు()
 
-  left( 60)
-  forward(side)
+  ఎడమ_వైపు_తిరుగు( 60)
+  ముందుకు_జరుగు(side)
   dot()
-  backward(side)
-  right( 60)
+  వెనుకకు_జరుగు(side)
+  కుడి_వైపు_తిరుగు( 60)
 
 // return to the start position, not really necessary
-  left(60)
-  forward( side)
-  left( 30)
+  ఎడమ_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 30)
 }
 
 function drawAll() {
@@ -105,7 +105,7 @@ function drawAll() {
 function demo() {
   reset()
   wrap(false)
-  hideTurtle()
+  తాబేలును_దాచు()
 
   side =   Math.min( 2*maxX()/ 12/ 1.5, 2*maxY()/ 16/ Math.sqrt(3))
   //side = 20

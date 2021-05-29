@@ -73,7 +73,7 @@ function drawDot (digit, onColor, offColor, step) {
     color( offColor)
   }
   dot ()
-  forward (step)
+  ముందుకు_జరుగు(step)
 }
 
 
@@ -82,14 +82,14 @@ function drawNumberDots (digitString, onColor, offColor, spacing) {
   drawDot( digitString[1], onColor, offColor, spacing)
   drawDot( digitString[2], onColor, offColor, spacing)
   drawDot( digitString[3], onColor, offColor, spacing)
-  backward (60)
+  వెనుకకు_జరుగు(60)
 }
 
 
 function displayBinaryDots(hSpacing, vSpacing) {
   bottom = vSpacing * 1.5
   leftSide = -hSpacing * 2.5
-  penup()
+  కలమును_పైకి_ఎత్తు()
   goto (leftSide + hSpacing *0, bottom)
   drawNumberDots (hour10, hourColor, offColor, vSpacing)
 
@@ -112,12 +112,12 @@ function displayBinaryDots(hSpacing, vSpacing) {
 
 function displayTime() {
   clear()
-  angle(180)
+  కోణము(180)
   spacing = Math.min(maxX(), maxY()) *1.8/6
   hSpacing = spacing
   vSpacing = spacing
   width (spacing/10)
-  hideturtle()
+  తాబేలును_దాచు()
   getBinaryTime()
   displayBinaryDots(hSpacing, vSpacing)
 }

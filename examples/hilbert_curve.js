@@ -14,7 +14,7 @@ function caption (message) {
   // save your current position, heading, etc.
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = turtle.color
   var savedWidth = turtle.width
 
@@ -24,7 +24,7 @@ function caption (message) {
   // erase wha will be in the path
   color ("white")
   width (10)
-  forward (maxY() * 2 - 12)
+  ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
   color ("black")
   setfont("bold 12pt Ariel,sans-serif")
@@ -40,26 +40,26 @@ function caption (message) {
 
 function A (side,gen) {
   if (gen === 0) {
-    left (90)
-    forward (side)
-    right (90)
-    forward (side)
-    right (90)
-    forward (side)
-    left (90)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(90)
   }
   else {
-    left (90)
+    ఎడమ_వైపు_తిరుగు(90)
     B (side, gen-1)
-    forward (side)
-    right (90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     A (side, gen-1)
-    forward (side)
+    ముందుకు_జరుగు(side)
     A (side, gen-1)
-    right (90)
-    forward (side)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
     B (side, gen-1)
-    left (90)
+    ఎడమ_వైపు_తిరుగు(90)
   }
 }
 //  B → + A F − B F B − F A +
@@ -67,26 +67,26 @@ function A (side,gen) {
 
 function B (side,gen) {
   if (gen === 0) {
-    right (90)
-    forward (side)
-    left (90)
-    forward (side)
-    left (90)
-    forward (side)
-    right (90)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
   }
   else {
-    right (90)
+    కుడి_వైపు_తిరుగు(90)
     A (side, gen-1)
-    forward (side)
-    left (90)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(90)
     B (side, gen-1)
-    forward (side)
+    ముందుకు_జరుగు(side)
     B (side, gen-1)
-    left (90)
-    forward (side)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side)
     A (side, gen-1)
-    right (90)
+    కుడి_వైపు_తిరుగు(90)
   }
 }
 

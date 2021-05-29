@@ -3,8 +3,8 @@
 // draw a polygon with n sides of length m
 function polygon(sides,side) {
   repeat(sides, function () {
-    forward(side);
-    right(360/sides);
+    ముందుకు_జరుగు(side);
+    కుడి_వైపు_తిరుగు(360/sides);
   });
 }
 
@@ -17,6 +17,6 @@ function demo() {
    }
    side = .4 *side
    goto(-.4 * side, -.5 * side)
-   hideTurtle();
+   తాబేలును_దాచు();
    polygon( random( 3,10), side);
 }

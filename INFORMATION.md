@@ -213,7 +213,7 @@ separate selector from the example selector].
 	-    need to catch errors in repeat and delay and STOP!
 *  [ ] names in reference aren't proper camel case
 *  [ ] turtle context not saved and restored properly
-    color, angle, position, width is not restored
+    color, కోణము, position, width is not restored
 *  [ ] error handling is inconsistant
 *  [ ] examples should be consistant
 	-    [ ] include demo()
@@ -281,7 +281,7 @@ tutorial has bugs
     - Random
 	- variables… show polygon functions. first #sides - Stamping
     - Goto (x,y)
-    - Set heading/angle
+    - Set heading/కోణము
     - Setx
     - Sety
 - Variables

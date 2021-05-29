@@ -12,7 +12,7 @@ var side
 var root2 = Math.sqrt(2)
 //  X ↦ X+YF+
 //  Y ↦ −FX−Y.
-// angle is 90
+// కోణము is 90
 // start is order * 45°
 
 
@@ -22,7 +22,7 @@ function caption (message) {
   // save your current position, heading, etc.
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = turtle.color
   var savedWidth = turtle.width
 
@@ -32,7 +32,7 @@ function caption (message) {
   // erase what will be in the path
   color ("white")
   width (10)
-  forward (maxY() * 2 - 12)
+  ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
   color ("black")
 
@@ -48,26 +48,26 @@ function caption (message) {
 
 function X (side, gen) {
   if (gen <= 0) {
-     forward (side)
+     ముందుకు_జరుగు(side)
   }
   else {
     X(side/root2, gen-1)
-    left (90)
+    ఎడమ_వైపు_తిరుగు(90)
     Y(side/root2, gen-1)
-    //forward(side/2)
-    left (90)
+    //ముందుకు_జరుగు(side/2)
+    ఎడమ_వైపు_తిరుగు(90)
   }
 }
 
 function Y (side, gen) {
   if (gen <= 0) {
-    forward (side)
+    ముందుకు_జరుగు(side)
   }
   else {
-    right (90)
-    //forward (side/root2)
+    కుడి_వైపు_తిరుగు(90)
+    //ముందుకు_జరుగు(side/root2)
     X (side/root2, gen-1)
-    right (90)
+    కుడి_వైపు_తిరుగు(90)
     Y (side/root2, gen-1)
   }
 }
@@ -75,10 +75,10 @@ function Y (side, gen) {
 
 function delayedDragon () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   goto (-side * .4, +side *.2)
   setheading (90+ gen * 45)
-  pendown()
+  కలమును_కింద_పెట్టు()
   X (side, gen)
   caption( "Dragon curve, generation " + gen)
 

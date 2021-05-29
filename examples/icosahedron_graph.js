@@ -15,48 +15,48 @@ function pent(side) {
   var side5 = 1.27 * side
   for (var i=0; i<5; i++) {
     color("black")
-    forward (side)
-      left(angle2)
+    ముందుకు_జరుగు(side)
+      ఎడమ_వైపు_తిరుగు(angle2)
 
       color("red")
-      right(angle3)
-      forward(side3)
-      backward(side3)
-      left(angle3)
+      కుడి_వైపు_తిరుగు(angle3)
+      ముందుకు_జరుగు(side3)
+      వెనుకకు_జరుగు(side3)
+      ఎడమ_వైపు_తిరుగు(angle3)
 
       color ("black")
-      forward(side2)
+      ముందుకు_జరుగు(side2)
 
       color("blue")
-      right(180-angle3)
-      forward(side3)
+      కుడి_వైపు_తిరుగు(180-angle3)
+      ముందుకు_జరుగు(side3)
 
-        left(angle4)
+        ఎడమ_వైపు_తిరుగు(angle4)
 
-        right(angle5)
-        forward(side5)
-        backward(side5)
-        left(angle5)
+        కుడి_వైపు_తిరుగు(angle5)
+        ముందుకు_జరుగు(side5)
+        వెనుకకు_జరుగు(side5)
+        ఎడమ_వైపు_తిరుగు(angle5)
 
-        forward(side4)
+        ముందుకు_జరుగు(side4)
  
-        right(180-angle5)
-        forward(side5)
-        backward(side5)
-        left(180-angle5)
+        కుడి_వైపు_తిరుగు(180-angle5)
+        ముందుకు_జరుగు(side5)
+        వెనుకకు_జరుగు(side5)
+        ఎడమ_వైపు_తిరుగు(180-angle5)
 
 
-        backward(side4)
-        right(angle4)
+        వెనుకకు_జరుగు(side4)
+        కుడి_వైపు_తిరుగు(angle4)
 
-      backward(side3)
-      left(180-angle3)
+      వెనుకకు_జరుగు(side3)
+      ఎడమ_వైపు_తిరుగు(180-angle3)
 
       color ("black")
-      backward(side2)
-      right(angle2)
+      వెనుకకు_జరుగు(side2)
+      కుడి_వైపు_తిరుగు(angle2)
 
-    backward(side)
+    వెనుకకు_జరుగు(side)
     turn(72)
   }
   circle(2.13*side)
@@ -66,7 +66,7 @@ function demo() {
   reset()
   size = .4 * Math.min( maxX(), maxY())
   //goto (-50,-22)
-  //right(17)
+  //కుడి_వైపు_తిరుగు(17)
   pent(size)
-  hideturtle()
+  తాబేలును_దాచు()
 }

@@ -13,15 +13,15 @@ delayTime = 1000; // milliseconds
 // *** FUNCTIONS ***
 
 function divideCenter(radii, radius) {
-  left(60);
-  forward(radius);
-  right(60);
+  ఎడమ_వైపు_తిరుగు(60);
+  ముందుకు_జరుగు(radius);
+  కుడి_వైపు_తిరుగు(60);
   var side = 0
   while (side < 6) { // go to each side
-    right(60);
+    కుడి_వైపు_తిరుగు(60);
     var step = 0
     while (step < radii) { // step off side
-      forward(radius);
+      ముందుకు_జరుగు(radius);
       circle(radius);
       step = step + 1
     };
@@ -41,9 +41,9 @@ function tier () {
 
 function demo() {
   clear();
-  hideTurtle();
+  తాబేలును_దాచు();
   home();
-  penup();
+  కలమును_పైకి_ఎత్తు();
   wrap(false);
   circle (rad);
   i = 1;

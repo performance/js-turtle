@@ -9,8 +9,8 @@ offsets = [0, -1, -2, -.5, -1.5]
 function squ( side, fColor) {
   beginShape()
   for (var i=0; i<4; i++) {
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
   }
   fillShape( fColor)
 }
@@ -18,8 +18,8 @@ function squ( side, fColor) {
 function squLeft( side, fColor) {
   beginShape()
   for (var i=0; i<4; i++) {
-    forward( side)
-    left( 90)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 90)
   }
   fillShape( fColor)
 }
@@ -37,19 +37,19 @@ function demo() {
   column = minX()
   row = maxY()
   wrap(false)
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
 
   s = 50
   while( turtle.pos.y > minY()) {
     goto(minX()+offsets[ rowCount % offsets.length]*s, maxY()-rowCount*s/2+s/2)
     while( turtle.pos.x < maxX()) {
-      pendown()
+      కలమును_కింద_పెట్టు()
       squ(s, nextColor())
-      penup()
-      forward(s*2)
-      pendown()
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు(s*2)
+      కలమును_కింద_పెట్టు()
       squ( s/2, nextColor())
-      forward( s/2)
+      ముందుకు_జరుగు( s/2)
     }
     rowCount = rowCount + 1
   }

@@ -23,19 +23,19 @@ prevent the dreaded infinite loop.
 */
 function halfSierpinski(size, level) {
   if (level == 0)
-    forward(size);
+    ముందుకు_జరుగు(size);
   else {
     function part() {
       halfSierpinski(size, level - 1);
-      left(45);
-      forward(size * Math.sqrt(2));
-      left(45);
+      ఎడమ_వైపు_తిరుగు(45);
+      ముందుకు_జరుగు(size * Math.sqrt(2));
+      ఎడమ_వైపు_తిరుగు(45);
       halfSierpinski(size, level - 1);
     }
     part();
-    right(90);
-    forward(size);
-    right(90);
+    కుడి_వైపు_తిరుగు(90);
+    ముందుకు_జరుగు(size);
+    కుడి_వైపు_తిరుగు(90);
     part();
   }
 }
@@ -43,9 +43,9 @@ function halfSierpinski(size, level) {
 function sierpinski(size, level) {
   function part () {
     halfSierpinski(size, level);
-    right(90);
-    forward(size);
-    right(90);
+    కుడి_వైపు_తిరుగు(90);
+    ముందుకు_జరుగు(size);
+    కుడి_వైపు_తిరుగు(90);
   }
   part ();
   part ();
@@ -56,26 +56,26 @@ var i = 1; // a global variable used for each iteration of delayed
 function delayed() {
   if (i<7) {
     clear();
-    hideTurtle();
+    తాబేలును_దాచు();
     redrawOnMove(true);
     goto(0,.9*minY());
 
     // move start point so figure stays centered
-    penup();
-    angle(0);
+    కలమును_పైకి_ఎత్తు();
+    కోణము(0);
 
     size = 1.8 * Math.min( maxX(), maxY())
     var sides = 4 * 2**i -3 // number of sides
     var side = size/sides;
-    left(90)
-    forward(side/2)
-    right(90)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(side/2)
+    కుడి_వైపు_తిరుగు(90)
 
-    pendown();
+    కలమును_కింద_పెట్టు();
 
     sierpinski(side, i);
     goto (minX(),minY());
-    angle(90);
+    కోణము(90);
     setfont("bold 12pt Ariel,sans-serif")
     write ("Sierpinski curve of order "+ i);
     draw();

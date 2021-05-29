@@ -5,56 +5,56 @@ numColors = colors.length
 
 function rh(side, fillColor) {
   beginShape()
-  forward( side)
-  left( 45)
-  forward( side)
-  left( 180-45)
-  forward( side)
-  left( 45)
-  forward( side)
-  left( 180-45)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 180-45)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 180-45)
   fillShape(fillColor)
 }
 
 function sideBySide( count, side, fillColor) {
   for( var j=0; j<count; j++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     rh( side, fillColor)
-    penup()
-    right( (180-45)/2)
-    forward( 2* side * Math.sin( degToRad( 22.5)))
-    left( ( 180-45)/2)
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు( (180-45)/2)
+    ముందుకు_జరుగు( 2* side * Math.sin( degToRad( 22.5)))
+    ఎడమ_వైపు_తిరుగు( ( 180-45)/2)
   }
-  left( ( 180-45)/2 + 45)
-  forward( 2 * count * side * Math.sin( degToRad( 22.5)))
-  right( (180-45)/2)
+  ఎడమ_వైపు_తిరుగు( ( 180-45)/2 + 45)
+  ముందుకు_జరుగు( 2 * count * side * Math.sin( degToRad( 22.5)))
+  కుడి_వైపు_తిరుగు( (180-45)/2)
 }
 
 function cent(side, count) {
   for( var i=0; i<8; i++) { // draw the center
     rh( side, colors[0%numColors])
-    left( 45)
+    ఎడమ_వైపు_తిరుగు( 45)
   }
 
   for( var i=0; i<8; i++) { // draw the second tier
-    forward( side)
+    ముందుకు_జరుగు( side)
     rh( side, colors[1%numColors])
-    right( 45)
+    కుడి_వైపు_తిరుగు( 45)
     rh( side, colors[1%numColors])
-    left(45)
-    backward( side)
-    left(45)
+    ఎడమ_వైపు_తిరుగు(45)
+    వెనుకకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(45)
   }
 
   for( var j=2; j<count; j++) { // draw the other tiers
     for( var i=0; i<8; i++) {
-      forward( j*side)
-      pendown()
+      ముందుకు_జరుగు( j*side)
+      కలమును_కింద_పెట్టు()
       rh( side, colors[j%numColors])
-      right( 45)
+      కుడి_వైపు_తిరుగు( 45)
       sideBySide(j, side, colors[j%numColors])
-      backward( j*side)
-      left(45)
+      వెనుకకు_జరుగు( j*side)
+      ఎడమ_వైపు_తిరుగు(45)
     }
   }
 }
@@ -71,5 +71,5 @@ function demo() {
   wrap(false)
   side = .075 * Math.min(maxX(), maxY())
   cent( side, 12)
-  hideturtle()
+  తాబేలును_దాచు()
 }

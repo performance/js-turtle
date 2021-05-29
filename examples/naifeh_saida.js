@@ -5,27 +5,27 @@
 function square (side) {
   beginShape()
   for (var i=0; i<4; i++){
-    forward(side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
   }
   fillShape("blue")
 }
 
 
 function layer (side, offsetAngle) {
-  left( offsetAngle)
+  ఎడమ_వైపు_తిరుగు( offsetAngle)
   for (var i=0; i<8; i++){
-    penup()
-    forward( side)
-    left(45)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(45)
+    కలమును_కింద_పెట్టు()
     square(side)
-    penup()
-    right(45)
-    backward( side)
-    right(45)
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(45)
+    వెనుకకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు(45)
   }
-  right(offsetAngle)
+  కుడి_వైపు_తిరుగు(offsetAngle)
 }
 
 
@@ -45,5 +45,5 @@ function demo() {
   layer( side,   22.5)
   side = side * factor
   layer( side,   0)
-  hideTurtle()
+  తాబేలును_దాచు()
 }

@@ -4,10 +4,10 @@ function drawTile (h,w, tc, x, y) {
   goto(x,y)
   beginShape()
   for( var i=0; i<2; i=i+1) {
-    forward(h)
-    right(90)
-    forward(w)
-    right(90)
+    ముందుకు_జరుగు(h)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(w)
+    కుడి_వైపు_తిరుగు(90)
   }
   fillShape( tc)
 }
@@ -34,7 +34,7 @@ function cafeTiles (h, w, gw, gc, off) {
 function demo () {
   reset();
   size = Math.min( maxX(), maxY()) * .9
-  hideturtle();
+  తాబేలును_దాచు();
 
   var tileHeight = 50
   var tileWidth = 50

@@ -54,18 +54,18 @@ var CW = true
 
 function dturn( dir, degrees) {
   if (dir) {
-    right( degrees)
+    కుడి_వైపు_తిరుగు( degrees)
   } else {
-    left ( degrees)
+    ఎడమ_వైపు_తిరుగు( degrees)
   }
 }
 
 function drawTriangle (dir, side) {
-  forward (2*side)
+  ముందుకు_జరుగు(2*side)
   dturn(dir, 180-anglea)
-  forward (root5*side)
+  ముందుకు_జరుగు(root5*side)
   dturn (dir, 180-angleb)
-  forward (side)
+  ముందుకు_జరుగు(side)
   dturn (dir, 90)
 }
 
@@ -74,7 +74,7 @@ function caption (message) {
   // save your current position, heading, etc.
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = turtle.color
   var savedWidth = turtle.width
 
@@ -84,7 +84,7 @@ function caption (message) {
   // erase what will be in the path
   color ("white")
   width (10)
-  forward (maxY() * 2 - 12)
+  ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
   color ("black")
   write( message)
@@ -104,21 +104,21 @@ function shadeTriangle( dir, side, stepsize) {
   var steps = Math.floor( side/stepsize)
 
   for (var i=0; i< steps; i++) {
-     forward( 2*side * (steps-i)/steps)
-     backward( 2*side * (steps-i)/steps)
-     penup()
+     ముందుకు_జరుగు( 2*side * (steps-i)/steps)
+     వెనుకకు_జరుగు( 2*side * (steps-i)/steps)
+     కలమును_పైకి_ఎత్తు()
      dturn( dir, 90)
-     forward( stepsize)
+     ముందుకు_జరుగు( stepsize)
      dturn( !dir, 90)
-     pendown()
+     కలమును_కింద_పెట్టు()
   }
   //return to start
-  penup()
+  కలమును_పైకి_ఎత్తు()
   dturn( !dir, 90)
-  forward( side)
+  ముందుకు_జరుగు( side)
   dturn( dir, 90)
   //goto(x,y) // cancel cumulative error
-  pendown()
+  కలమును_కింద_పెట్టు()
 }
 
 function recursiveDivide( dir, side, level, triangle) {
@@ -130,44 +130,44 @@ function recursiveDivide( dir, side, level, triangle) {
     
     //draw the first line to point A
     dturn( dir, angleb)
-    pendown()
-    forward (2*side)
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(2*side)
 
     //sub triangle 1
-    right (180)
+    కుడి_వైపు_తిరుగు(180)
     recursiveDivide( !dir, side, level-1, 1)
-    right (180)
+    కుడి_వైపు_తిరుగు(180)
 
     //draw the second line to point B
     dturn( !dir, 180-angleb)
-    pendown()
-    forward (root5*side)
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(root5*side)
     
     //draw third line to point C
     dturn( dir, 180-angleb)
-    forward(side)
-    penup()
+    ముందుకు_జరుగు(side)
+    కలమును_పైకి_ఎత్తు()
 
 i    //sub triangle 4
     dturn( dir, 90)
     recursiveDivide( dir, side, level-1, 4)
 
     //sub triangle 5
-    right( 180)
+    కుడి_వైపు_తిరుగు( 180)
     recursiveDivide( !dir, side, level-1, 5)
     dturn( dir, 90)
     
     //retreat to point B
-    backward(side)
+    వెనుకకు_జరుగు(side)
     dturn( dir, 90)
     
     //draw fourth line to point D
-    pendown()
-    forward( 2*side)
-    penup()
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు( 2*side)
+    కలమును_పైకి_ఎత్తు()
 
     //sub triangle 2
-    right( 180)
+    కుడి_వైపు_తిరుగు( 180)
     recursiveDivide( !dir, side, level-1, 2)
 
     //sub triangle 3
@@ -175,9 +175,9 @@ i    //sub triangle 4
     
     //retreat to origin
     dturn( !dir, 90)
-    penup()
-    forward( side)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    కలమును_కింద_పెట్టు()
     dturn( dir, 180-angleb)
     //goto (x,y) //cancel cumulative error
 //  } else {
@@ -196,57 +196,57 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
     var y = turtle.pos.y
 
     //move to point A
-    penup()
+    కలమును_పైకి_ఎత్తు()
     dturn( dir, angleb)
-    forward (2 * side)
+    ముందుకు_జరుగు(2 * side)
 
     //sub triangle 1
-    right (180)
-    pendown()
+    కుడి_వైపు_తిరుగు(180)
+    కలమును_కింద_పెట్టు()
     recursiveDivideBlocks( !dir, side, level-1, 1, background, highlight)
-    penup()
-    right (180)
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(180)
 
     //move to pint B
     dturn( !dir, 180-angleb)
-    forward (root5*side)
+    ముందుకు_జరుగు(root5*side)
     
     //move to point C
     dturn( dir, 180-angleb)
-    forward(side)
+    ముందుకు_జరుగు(side)
 
     //sub triangle 4
     dturn( dir, 90)
-    pendown()
+    కలమును_కింద_పెట్టు()
     recursiveDivideBlocks( dir, side, level-1, 4, background, highlight)
-    penup()
+    కలమును_పైకి_ఎత్తు()
 
     //sub triangle 5
-    right( 180)
-    pendown()
+    కుడి_వైపు_తిరుగు( 180)
+    కలమును_కింద_పెట్టు()
     recursiveDivideBlocks( !dir, side, level-1, 5, background, highlight)
-    penup()
+    కలమును_పైకి_ఎత్తు()
 
     //retreat to point B
     dturn( dir, 90)
-    backward(side)
+    వెనుకకు_జరుగు(side)
 
     //move to point B
     dturn( dir, 90)
-    forward( 2*side)
+    ముందుకు_జరుగు( 2*side)
 
 //sub triangle 2
-    right( 180)
-    pendown()
+    కుడి_వైపు_తిరుగు( 180)
+    కలమును_కింద_పెట్టు()
     recursiveDivideBlocks( !dir, side, level-1, 2, background, highlight)
 
     //sub triangle 3
     recursiveDivideBlocks( dir, side, level-1, 3, highlight, highlight)
-    penup()
+    కలమును_పైకి_ఎత్తు()
 
     //move to origin
     dturn( !dir, 90)
-    forward (side)
+    ముందుకు_జరుగు(side)
 
     dturn( dir, 180-angleb)
     goto (x,y) //cancel cumulative error
@@ -283,37 +283,37 @@ function demo() {
   // initialize
   reset()
   wrap(false)
-  hideTurtle()
-  penup()
-  backward (side/4)
-  right(90)
-  backward (side)
+  తాబేలును_దాచు()
+  కలమును_పైకి_ఎత్తు()
+  వెనుకకు_జరుగు(side/4)
+  కుడి_వైపు_తిరుగు(90)
+  వెనుకకు_జరుగు(side)
 
   // label the sides of the triangle
   setfont("bold 14px sans-serif")
-  left( anglea)
-  forward( side+50)
-  right( anglea)
+  ఎడమ_వైపు_తిరుగు( anglea)
+  ముందుకు_జరుగు( side+50)
+  కుడి_వైపు_తిరుగు( anglea)
   write( "√5")
-  left( anglea)
-  backward( side+50)
-  right( anglea)
-  right( 90)
-  forward (20)
-  left( 90)
-  forward( side)
+  ఎడమ_వైపు_తిరుగు( anglea)
+  వెనుకకు_జరుగు( side+50)
+  కుడి_వైపు_తిరుగు( anglea)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు(20)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side)
   write (2)
-  backward( side+20)
-  left( 90)
-  forward( side/2 + 20)
-  right( 90)
+  వెనుకకు_జరుగు( side+20)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side/2 + 20)
+  కుడి_వైపు_తిరుగు( 90)
   write( 1)
-  forward( 20)
-  right(90)
-  forward (side/2)
-  left(90)
+  ముందుకు_జరుగు( 20)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(side/2)
+  ఎడమ_వైపు_తిరుగు(90)
 
-  pendown()
+  కలమును_కింద_పెట్టు()
   drawTriangle( CCW, side)
 
   level = 0

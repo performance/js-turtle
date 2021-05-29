@@ -164,14 +164,14 @@ string in the direction that the turtle is moving without moving the
 turtle. We want the text to go horizontally to make it easier to read.
 We need to rotate the text 90° in a clockwise direction. We can do that
 by turning the turtle before invoking the <code>write()</code> function,
-by invoking a <code>right(90)</code> function to ask it to turn 90 degrees
+by invoking a <code>కుడి_వైపు_తిరుగు(90)</code> function to ask it to turn 90 degrees
 to its right.
 Because this programming has more than one line,
 lets use the coding area, so we can edit the programs and make
 changes to it as necessary. The resulting program for the
 coding area is:
 </p>
-<code class="tryme">right (90)
+<code class="tryme">కుడి_వైపు_తిరుగు(90)
 write (&quot;Hello World&quot;)
 </code>
 
@@ -182,7 +182,7 @@ you should see something like the figure on the right.
 </section>
 
 <p>
-The <code>right()</code> function also takes a
+The <code>కుడి_వైపు_తిరుగు()</code> function also takes a
 parameter like write, but right's parameter is the number of degrees
 to turn right. Look at the parameters of the two functions. Write takes
 a string of characters or more simply just a string. A string is enclosed in
@@ -193,7 +193,7 @@ program languages to allow a character to be used as itself (or as something
 completely different than its normal usage). As you learn programming you
 will probably encounter more examples of escaping or escape mechanisms.
 </p>
-<code class="tryme">right (90)
+<code class="tryme">కుడి_వైపు_తిరుగు(90)
 write ("That's fun! Don't forget to try this at \"home.\"")
 </code>
 <p>
@@ -206,7 +206,7 @@ statements that read better with multiple lines. Each line in formal
 JavaScript must end in a semi-colon ';' as in:
 </p>
 
-<code class="tryme">right( 90);
+<code class="tryme">కుడి_వైపు_తిరుగు( 90);
 write ( &quot;Hello World&quot;);
 </code>
 
@@ -235,14 +235,14 @@ it is a syntax error.
 </p>
 
 <p>
-So both <code>right()</code> and <code>write()</code>,
+So both <code>కుడి_వైపు_తిరుగు()</code> and <code>write()</code>,
 are functions. These hide the details of their implementation for
 their user. JavaScript allows its users to define their own
 functions. We can define a 'Hello World' function, ‘hi()’  as:
 </p>
 
 <code class="tryme">function hi () {
-  right( 90);
+  కుడి_వైపు_తిరుగు( 90);
   write ( &quot;Hello World&quot;);
 }
 </code>
@@ -276,7 +276,7 @@ So let's adds a <code>demo()</code> function to the program:
 </p>
 
 <code class="tryme">function hi () {
-  right( 90);
+  కుడి_వైపు_తిరుగు( 90);
   write ( &quot;Hello World&quot;);
 }
 
@@ -296,7 +296,7 @@ was never called or invoked. Let's add a call or invocation to the <code>hi()</c
 function in the <code>demo()</code> function.
 </p>
 <code class="tryme">function hi () {
-  right( 90);
+  కుడి_వైపు_తిరుగు( 90);
   write ( &quot;Hello World&quot;);
 }
 
@@ -324,7 +324,7 @@ clearing the screen by invoking the <code>reset ()</code> function  before
 writing to the canvas.
 </p>
 <code class="tryme">function hi () {
-  right( 90);
+  కుడి_వైపు_తిరుగు( 90);
   write ( &quot;Hello World&quot;);
 }
 
@@ -370,14 +370,14 @@ OK, but Turtle Graphics is a graphics program, shouldn’t we
 be doing some graphics? Let's see it draw some lines as sort of a
 graphical Hello World example. Let's try to do a simple square.
 
-<code class="tryme">forward(100)
-right(90)
-forward(100)
-right(90)
-forward(100)
-right(90)
-forward(100)
-right(90)
+<code class="tryme">ముందుకు_జరుగు(100)
+కుడి_వైపు_తిరుగు(90)
+ముందుకు_జరుగు(100)
+కుడి_వైపు_తిరుగు(90)
+ముందుకు_జరుగు(100)
+కుడి_వైపు_తిరుగు(90)
+ముందుకు_జరుగు(100)
+కుడి_వైపు_తిరుగు(90)
 </code>
 </section>
 
@@ -389,14 +389,14 @@ square, as we have learned previously.
     <img src="images/square_function.png" alt="">
 
 <code class="tryme">function square1 () {
-  forward(100)
-  right(90)
-  forward(100)
-  right(90)
-  forward(100)
-  right(90)
-  forward(100)
-  right(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
 }
 
 function demo () {
@@ -414,22 +414,22 @@ squares rotated 30° about the starting point. Change the <code>demo ()</code>
 function as follows:
 </p>
 <code class="tryme">function square1 () {
-  forward(100)
-  right(90)
-  forward(100)
-  right(90)
-  forward(100)
-  right(90)
-  forward(100)
-  right(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
 }
 
 function demo () {
   reset()
   square1()
-  right(30)
+  కుడి_వైపు_తిరుగు(30)
   square1()
-  right(30)
+  కుడి_వైపు_తిరుగు(30)
   square1()
 }
 </code>
@@ -445,8 +445,8 @@ code would look something like:
 </p>
 <code class="tryme">// square with repeat
 function el () {
-  forward (100)
-  right (90)
+  ముందుకు_జరుగు(100)
+  కుడి_వైపు_తిరుగు(90)
 }
 
 function square () {
@@ -466,8 +466,8 @@ when using the <code>repeat()</code> function. The code is shown below.
 </p>
 <code class="tryme">function square() {
   repeat( 4, function() {
-    forward( 100)
-    right( 90)}
+    ముందుకు_జరుగు( 100)
+    కుడి_వైపు_తిరుగు( 90)}
   )
 }
 
@@ -596,8 +596,8 @@ turn the corner, and increment the number of sides.
   var i = 0
   while ( i &lt; 4) {
     write (i)
-    forward (100)
-    right(90)
+    ముందుకు_జరుగు(100)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -619,8 +619,8 @@ The equivalent code for drawing a square is shown below.
 <code class="tryme">function square(side) {
   var i = 0
   do {
-    forward( 50);
-    right( 90)
+    ముందుకు_జరుగు( 50);
+    కుడి_వైపు_తిరుగు( 90)
     i = i + 1
   } while (i < 4)
 }
@@ -642,8 +642,8 @@ draw a square is as follows:
 </p>
 <code class="tryme">function square(side) {
   for( var i = 0; i < 4; i = i + 1) { // init; test; and change i
-    forward( 100) // block of code is within curly braces
-    right( 90)
+    ముందుకు_జరుగు( 100) // block of code is within curly braces
+    కుడి_వైపు_తిరుగు( 90)
   }
 }
 
@@ -665,8 +665,8 @@ in this case, is sometimes called an <strong>iterator</strong>.
 <p>
 Wow! OK. Let's say we want to draw another square, but of a different size.
 We can copy the <code> square()</code> function code, change the function
-name, say to <code>square200()</code>, change the <code>forward(100)</code>
-to the size you want say, <code>forward(200)</code>.
+name, say to <code>square200()</code>, change the <code>ముందుకు_జరుగు(100)</code>
+to the size you want say, <code>ముందుకు_జరుగు(200)</code>.
 </p>
     <img src="images/parameterized_square.png" alt="">
 <p>
@@ -679,8 +679,8 @@ the parameter name or names within the parentheses as in the following code.
 </p>
 <code class="tryme">function square(side) {
   for( i=0; i<4; i=i+1) {
-    forward( side);
-    right( 90)
+    ముందుకు_జరుగు( side);
+    కుడి_వైపు_తిరుగు( 90)
   }
 }
 
@@ -691,7 +691,7 @@ function demo () {
 </code>
 <p>
 When the program is executed the value of side is used in the
-<code>forward( side)</code> statement. To use that value, we
+<code>ముందుకు_జరుగు( side)</code> statement. To use that value, we
 just pass an <strong>argument</strong> to the square function by placing
 the argument, say '100,' within the parentheses, as in: <code>square (100)</code>.
 
@@ -707,10 +707,10 @@ Of all this there can be no argument, or was that a parameter.
 <code class="tryme">function square(side) { // side is a parameter
   var i = 0;
   while ( i &lt; 4) {
-    forward (side) // here the parameter is accessed
+    ముందుకు_జరుగు(side) // here the parameter is accessed
                    // it is like a variable local
                    // to the function square()
-    right(90)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -736,8 +736,8 @@ Let's do this one step at a time. First just turn it.
 <code class="tryme">function square(side) {
   var i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -763,8 +763,8 @@ the while loop of the <code>demo()</code> function.
 <code class="tryme">function square(side) {
   var i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -803,8 +803,8 @@ as in the following code, there would be trouble.
 function square(side) {
   i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -994,8 +994,8 @@ function.
 <code class="tryme">function square(side) {
   i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -1034,8 +1034,8 @@ Everything else can be put into a <code>randomSquare()</code> function.
 <code class="tryme">function square(side) {
   i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -1072,8 +1072,8 @@ mix.
 <code class="tryme">function square(side) {
   i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -1081,7 +1081,7 @@ mix.
 function randomSquare(){
   color( random(15))
   goto (random( minX(), maxX()), random(minY(), maxY()))
-  right(random( 5, 30))
+  కుడి_వైపు_తిరుగు(random( 5, 30))
   square( random( 15,150))
 }
 
@@ -1105,8 +1105,8 @@ of the widths. This code looks something like the following.
 <code class="tryme">function square(side) {
   i = 0;
   while ( i &lt; 4) {
-    forward (side)
-    right(90)
+    ముందుకు_జరుగు(side)
+    కుడి_వైపు_తిరుగు(90)
     i = i + 1
   }
 }
@@ -1114,7 +1114,7 @@ of the widths. This code looks something like the following.
 function randomSquare(){
   color( random(15))
   goto (random( minX(), maxX()), random(minY(), maxY()))
-  right(random( 5, 30))
+  కుడి_వైపు_తిరుగు(random( 5, 30))
   width( random( 1, 6))
   square( random( 15,150))
 }
@@ -1148,7 +1148,7 @@ it can generate a polygon.
   What additional parameter(s) is(are) needed?
 </li>
 <li>
-  Can you calculate the corner angle?
+  Can you calculate the corner కోణము?
 </li>
 <li>
   What is the smallest number of parameters that are needed.?
@@ -1165,12 +1165,12 @@ next page if you get stuck, but try to solve these without looking.
     <img src="images/pentagon.png" alt="">
 <p>
 For the square, take 360°, divided by 4 gives 90° for
-each angle. For a triangle, take 360°, divided by 3 gives 120°
-for each angle. This is the outside angle, not the inside angle.
+each కోణము. For a triangle, take 360°, divided by 3 gives 120°
+for each కోణము. This is the outside కోణము, not the inside కోణము.
 Some of you may know that an equilateral triangle, has three sides of the same
 length and three 60° angles.
 Generalizing for polygons, take 360° 
-and divide by the number of sides to get the angle.
+and divide by the number of sides to get the కోణము.
 This would mean that a general polygon can be generated by the length of its
 sides and the number of sides required.
 </p>
@@ -1178,8 +1178,8 @@ sides and the number of sides required.
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(360/n)
     i = i + 1
   }
 }
@@ -1208,7 +1208,7 @@ center point once. When drawing a star, the turtle would have to go around twice
   In a five-pointed star, how many times do you go around the center point?
 </li>
 <li>
-  Can you use that number to calculate the angle that you need to turn?
+  Can you use that number to calculate the కోణము that you need to turn?
 </li>
 <li>
   Can you generalize this?
@@ -1220,14 +1220,14 @@ center point once. When drawing a star, the turtle would have to go around twice
   Is there a maximum?
 </li>
 </ul>
-times and still end up in the same starting position and angle?
+times and still end up in the same starting position and కోణము?
 <p>
 When you draw the star free hand, you go around
 the center point twice and you make 5 turns. You can use that to
-determine the angle. Twice around the center is twice 360° or 720°.
+determine the కోణము. Twice around the center is twice 360° or 720°.
 Dividing this by the number of points, 5, yields 144°. Remember this is the
-turning angle for the turtle. The inside angle is 180° minus the turning
-angle or 36°.
+turning కోణము for the turtle. The inside కోణము is 180° minus the turning
+కోణము or 36°.
 </p>
 
 <section>
@@ -1253,14 +1253,14 @@ narrower.
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
 
 function star (size) {
-  backward (size/2)
+  వెనుకకు_జరుగు(size/2)
   spikey (size, 5, 2)
 }
 
@@ -1277,8 +1277,8 @@ function demo () {
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
@@ -1301,15 +1301,15 @@ function demo () {
   var i = 0
   while (i < n) {
     write (i)
-    forward (size)
-    right (revs*360/n)
+    ముందుకు_జరుగు(size)
+    కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
   }
 }
 
 function starN ( size, points) {
   reset()
-  backward (size/2)
+  వెనుకకు_జరుగు(size/2)
   spikey (size, points, Math.floor(points/2))
 }
 

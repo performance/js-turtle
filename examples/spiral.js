@@ -4,8 +4,8 @@ function spiral1() {
   reset()
   n=0
   while (n<400) {
-    forward(n)
-    right(90)
+    ముందుకు_జరుగు(n)
+    కుడి_వైపు_తిరుగు(90)
     n=n+3
   }
 }
@@ -14,8 +14,8 @@ function spiral2() {
   reset()
   n=0
   while (n<75) {
-    forward(n)
-    right(90-n)
+    ముందుకు_జరుగు(n)
+    కుడి_వైపు_తిరుగు(90-n)
     n=n+1
   }
 }
@@ -26,8 +26,8 @@ function spiral3() {
   wrap(false)
   n=0
   while (n<40) {
-    forward(n)
-    right(15)
+    ముందుకు_జరుగు(n)
+    కుడి_వైపు_తిరుగు(15)
     n=n+.25
   }
 }
@@ -37,8 +37,8 @@ function spiral() {
   wrap(false)
   n=0
   while (n<1000) {
-    forward(n)
-    right(15)
+    ముందుకు_జరుగు(n)
+    కుడి_వైపు_తిరుగు(15)
     n=n+.25
     // turtle.pos.x is the x position of the turtle
     // turtle.pos.y is the y position of the turtle

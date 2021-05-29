@@ -2,30 +2,30 @@
 
 
 function kochLine (length, order) {
-  //assume drawn on the current angle
+  //assume drawn on the current కోణము
   if (order == 0) {
-    forward (length);
+    ముందుకు_జరుగు(length);
   } else {
     //break line and bump out to the left
     kochLine (length/3, order-1);
-    left(60); 
+    ఎడమ_వైపు_తిరుగు(60); 
     kochLine (length/3, order-1);
-    right(120); 
+    కుడి_వైపు_తిరుగు(120); 
     kochLine (length/3, order-1);
-    left(60); 
+    ఎడమ_వైపు_తిరుగు(60); 
     kochLine (length/3, order-1);
   }
 }
 
 function kochSnowflake (length, order) {
-  angle (30);
+  కోణము (30);
   goto (-length/2,-.3 * length);
   kochLine (length, order);
-  right(120);
+  కుడి_వైపు_తిరుగు(120);
   kochLine (length, order);
-  right(120);
+  కుడి_వైపు_తిరుగు(120);
   kochLine (length, order);
-  right(120);
+  కుడి_వైపు_తిరుగు(120);
 }
   
 
@@ -51,7 +51,7 @@ function kochSnowflakeDelay() {
   }
   kochSnowflake (.8 * side,i);
   goto(minX(),minY());
-  angle(90);
+  కోణము(90);
   setfont("Helvetica,san-serif 12pt")
   write ("Koch snowflake of order " +i);
   draw();
@@ -62,7 +62,7 @@ function kochSnowflakeDelay() {
 }
 
 function demo() {
-  hideturtle();
+  తాబేలును_దాచు();
   i = 0;
   kochSnowflakeDelay();
 }

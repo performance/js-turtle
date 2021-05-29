@@ -534,7 +534,7 @@ function caption (message) {
     // save your current position, heading, etc.
     var savedX = turtle.pos.x
     var savedY = turtle.pos.y
-    var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees
+    var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
     var savedColor = turtle.color
     var savedWidth = turtle.width
 
@@ -545,7 +545,7 @@ function caption (message) {
     setfont("bold 16px helvitica,sans-serif")
     color ("white")
     width (22)
-    forward (maxY() * 2 - 12)
+    ముందుకు_జరుగు(maxY() * 2 - 12)
     goto (minX()+10, minY()+5)
     color ("black")
     write( message)
@@ -998,7 +998,7 @@ function executeCommand () {
 
 function demo() {
     reset()
-    hideTurtle()
+    తాబేలును_దాచు()
     commandDue = undefined
     commandSequence = simulatorCommands
     currentCommand = 0

@@ -2,80 +2,80 @@
 // angles for the two isosceles triangles are: 
 // 36, 72, 72 and 36, 36, 108 ..degrees
 //  1,2,2 and 1,1,3 times pi/5 .. radians
-ang = 360/10 // the basic angle (pi/5 radians)
+ang = 360/10 // the basic కోణము (pi/5 radians)
 side = 50 // length of the common side of the isosceles triangles
 bBase = 2* side * Math.cos( degToRad( ang)) // length of big base
 sBase = 2* side * Math.sin( degToRad( ang/2)) // length of small base
 
 
-function bb (fColor) { //big piece, big angle
+function bb (fColor) { //big piece, big కోణము
     beginShape()
-    forward( side)
-    right( 4 * ang)
-    forward( bBase)
-    right( 4 * ang)
-    forward( side)
-    right( 180)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 4 * ang)
+    ముందుకు_జరుగు( bBase)
+    కుడి_వైపు_తిరుగు( 4 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180)
     fillShape( fColor)
 }
 
 
-function bs (fColor) { // big piece, small angle
+function bs (fColor) { // big piece, small కోణము
     beginShape()
-    forward( side)
-    right( 2 * ang)
-    forward( side)
-    right( 4 * ang)
-    forward( bBase)
-    right( 180)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 2 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 4 * ang)
+    ముందుకు_జరుగు( bBase)
+    కుడి_వైపు_తిరుగు( 180)
     fillShape( fColor)
 }
 
 
-function bs2 (fColor) { // big piece, small angle other corner
+function bs2 (fColor) { // big piece, small కోణము other corner
     beginShape()
-    forward( bBase)
-    right( 4 * ang)
-    forward( side)
-    right( 2 * ang)
-    forward( side)
-    right( 180)
+    ముందుకు_జరుగు( bBase)
+    కుడి_వైపు_తిరుగు( 4 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 2 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180)
     fillShape( fColor)
 }
 
 
-function ss (fColor) { // small piece, small angle
+function ss (fColor) { // small piece, small కోణము
     beginShape()
-    forward( side)
-    right( 3 * ang)
-    forward( sBase)
-    right( 3 * ang)
-    forward( side)
-    right( 180)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 3 * ang)
+    ముందుకు_జరుగు( sBase)
+    కుడి_వైపు_తిరుగు( 3 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180)
     fillShape( fColor)
 }
 
 
-function sb (fColor) { // small piece, big angle
+function sb (fColor) { // small piece, big కోణము
     beginShape()
-    forward( sBase)
-    right( 3 * ang)
-    forward( side)
-    right( 4 * ang)
-    forward( side)
-    right( 180)
+    ముందుకు_జరుగు( sBase)
+    కుడి_వైపు_తిరుగు( 3 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 4 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180)
     fillShape( fColor)
 }
 
 
-function sb2 (fColor) { // small piece, big angle other corner
+function sb2 (fColor) { // small piece, big కోణము other corner
     beginShape()
-    forward( side)
-    right( 4 * ang)
-    forward( side)
-    right( 3 * ang)
-    forward( sBase)
-    right( 180)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 4 * ang)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 3 * ang)
+    ముందుకు_జరుగు( sBase)
+    కుడి_వైపు_తిరుగు( 180)
     fillShape( fColor)
 }
 
@@ -99,11 +99,11 @@ function spiral( ) {
         bs( c2)
 
 //point1:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i * 2 + 1) * ang)
-        forward( bBase)
-	pendown()
+        ముందుకు_జరుగు( bBase)
+	కలమును_కింద_పెట్టు()
 
         bs( c2)
         bs( c2)
@@ -115,13 +115,13 @@ function spiral( ) {
         //write( "1")
 
 //point2:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i * 2 + 1) * ang)
         bs( c2)
-        forward( bBase + side)
-        left( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         ss( c2)
         ss( c2)
@@ -129,14 +129,14 @@ function spiral( ) {
         //write( "2")
 
 //point3:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2* ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side)
-        left( 2 * ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+	కలమును_కింద_పెట్టు()
 
         bs( c1)
         bs2( c1)
@@ -146,19 +146,19 @@ function spiral( ) {
         //write( "3")
 
 //point4:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2 * ang)
-        forward( bBase)
-        right (ang)
+        ముందుకు_జరుగు( bBase)
+        కుడి_వైపు_తిరుగు(ang)
 
-	pendown()
+	కలమును_కింద_పెట్టు()
         bs( c1)
-        left ( ang)
+        ఎడమ_వైపు_తిరుగు( ang)
 
-	penup()
-        forward( bBase)
-	pendown()
+	కలమును_పైకి_ఎత్తు()
+        ముందుకు_జరుగు( bBase)
+	కలమును_కింద_పెట్టు()
 
         bs( c2)
         sb( c1)
@@ -171,14 +171,14 @@ function spiral( ) {
         //write( "4")
 
 //point5:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2* ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase)
-        left( 2 * ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+	కలమును_కింద_పెట్టు()
 
         bs2( c2)
         sb2( c2)
@@ -188,12 +188,12 @@ function spiral( ) {
         //write( "5")
 
 //point6:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2* ang)
-        forward(  bBase + side + bBase)
-        left( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase)
+        ఎడమ_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         bs2( c1)
         bb( c1)
@@ -203,16 +203,16 @@ function spiral( ) {
         //write( "6")
 
 //point7:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading(( i + 1)* 2 * ang)
-        forward(  bBase + side)
-        left( 2 * ang)
-        forward( side + side)
-        right( 2* ang)
-        forward( side)
-        left ( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side)
+        కుడి_వైపు_తిరుగు( 2* ang)
+        ముందుకు_జరుగు( side)
+        ఎడమ_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         sb2( c2)
         sb( c2)
@@ -221,15 +221,15 @@ function spiral( ) {
         //write( "7")
 
 //point8:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading(( i + 1)* 2 * ang)
-        forward(  bBase + side)
-        left( 2 * ang)
-        forward( side + side)
-        right( 3 * ang)
-        forward( bBase + side)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side)
+        కుడి_వైపు_తిరుగు( 3 * ang)
+        ముందుకు_జరుగు( bBase + side)
+	కలమును_కింద_పెట్టు()
 
         ss( c2)
         sb2( c2)
@@ -240,16 +240,16 @@ function spiral( ) {
         //write( "8")
 
 //point9:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2* ang)
-        forward(  bBase + side + bBase) //@6
-        left( 2 * ang)
-        forward( side)
-        right( ang)
-        forward( sBase + sBase)
-        right( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase + sBase)
+        కుడి_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         sb2( c2)
         sb( c2)
@@ -260,14 +260,14 @@ function spiral( ) {
         //write( "9")
 
 //point10:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2 * ang)
-        forward(  bBase + side + bBase) //@6
-        right( 2 * ang)
-        forward( bBase)
-        left( 4 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( bBase)
+        ఎడమ_వైపు_తిరుగు( 4 * ang)
+	కలమును_కింద_పెట్టు()
 
         sb2( c1)
         sb( c1)
@@ -276,15 +276,15 @@ function spiral( ) {
         //write( "10")
 
 //point11:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2 * ang)
-        forward(  bBase + side + bBase) //@6
-        right( 2 * ang)
-        forward( bBase + side)
-        right( 1 * ang)
-        forward( side)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( bBase + side)
+        కుడి_వైపు_తిరుగు( 1 * ang)
+        ముందుకు_జరుగు( side)
+	కలమును_కింద_పెట్టు()
 
         bb( c1)
         bs( c1)
@@ -292,34 +292,34 @@ function spiral( ) {
         //write( "11")
 
 //point12:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2 * ang)
-        forward(  bBase + side + bBase) //@6
-        right( 2 * ang)
-        forward( bBase + side)
-        right( ang)
-        forward( side) // @11
-        forward(side)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( bBase + side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side) // @11
+        ముందుకు_జరుగు(side)
+	కలమును_కింద_పెట్టు()
 
         bb( c1)
         bs( c1)
         //write( "12")
 
 //point13:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading(( i + 1)* 2 * ang)
-        forward(  bBase + side)
-        left( 2 * ang)
-        forward( side + side)
-        right( 3 * ang)
-        forward( bBase + side) //@8
-        right( ang)
-        forward( side)
-        left( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side)
+        కుడి_వైపు_తిరుగు( 3 * ang)
+        ముందుకు_జరుగు( bBase + side) //@8
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side)
+        ఎడమ_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         sb( c2)
         bs( c2)
@@ -328,17 +328,17 @@ function spiral( ) {
         //write( "13")
 
 //point14:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2 * ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase) // @5
-        left(  ang)
-        forward( side)
-        right( 2* ang)
-        forward( side + side)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase) // @5
+        ఎడమ_వైపు_తిరుగు(  ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( 2* ang)
+        ముందుకు_జరుగు( side + side)
+	కలమును_కింద_పెట్టు()
 
         bs( c1)
         bs2( c1)
@@ -349,20 +349,20 @@ function spiral( ) {
         //write( "14")
 
 //point15:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading(( i + 1)* 2 * ang)
-        forward(  bBase + side)
-        left( 2 * ang)
-        forward( side + side)
-        right( 3 * ang)
-        forward( bBase + side) //@8
-        right( ang)
-        forward( side) //@13
-        forward( bBase)
-        left( ang)
-        forward( side)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side)
+        కుడి_వైపు_తిరుగు( 3 * ang)
+        ముందుకు_జరుగు( bBase + side) //@8
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side) //@13
+        ముందుకు_జరుగు( bBase)
+        ఎడమ_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side)
+	కలమును_కింద_పెట్టు()
 
         bs( c2)
         bs2( c2)
@@ -373,20 +373,20 @@ function spiral( ) {
         //write( "15")
 
 //point16:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2* ang)
-        forward(  bBase + side + bBase) //@6
-        left( 2 * ang)
-        forward( side)
-        right( ang)
-        forward( sBase + sBase) //@9
-        right( 2 * ang)
-        forward( bBase)
-        right( ang)
-        forward( side)
-        left( 2* ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase + sBase) //@9
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( bBase)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side)
+        ఎడమ_వైపు_తిరుగు( 2* ang)
+	కలమును_కింద_పెట్టు()
 
         bs( c2)
         bs2( c2)
@@ -397,21 +397,21 @@ function spiral( ) {
         //write( "16")
 
 //point17:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2* ang)
-        forward(  bBase + side + bBase) //@6
-        left( 2 * ang)
-        forward( side)
-        right( ang)
-        forward( sBase + sBase) //@9
-        right( 2 * ang)
-        forward( bBase)
-        right( ang)
-        forward( side) //@16
-        forward( side)
-        left( 2 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase + sBase) //@9
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( bBase)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side) //@16
+        ముందుకు_జరుగు( side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+	కలమును_కింద_పెట్టు()
 
         ss( c2)
         sb2( c2)
@@ -420,30 +420,30 @@ function spiral( ) {
         //write( "17")
 
 //point18:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2 * ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase) // @5
-        left(  ang)
-        forward( side)
-        right( 2 * ang)
-        forward( side + side) //@14
-        right( 2 * ang)
-        forward( side) //@ intermediate point
-        right( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase) // @5
+        ఎడమ_వైపు_తిరుగు(  ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side) //@14
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side) //@ intermediate point
+        కుడి_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         bs( c2)
-        right( 4 * ang)
+        కుడి_వైపు_తిరుగు( 4 * ang)
         //write ( "14b")
         bs( c1)
-        right( 1 * ang)
+        కుడి_వైపు_తిరుగు( 1 * ang)
 
 	penup
-        forward( side)
-	pendown()
+        ముందుకు_జరుగు( side)
+	కలమును_కింద_పెట్టు()
 
         bb( c2)
         bs( c2)
@@ -454,20 +454,20 @@ function spiral( ) {
         //write( "18")
 
 //point19:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2 * ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase) // @5
-        left(  ang)
-        forward( side)
-        right( 2 * ang)
-        forward( side + side) //@14
-        right( 2 * ang)
-        forward( side + side + side)
-        left( 2*ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase) // @5
+        ఎడమ_వైపు_తిరుగు(  ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side) //@14
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + side)
+        ఎడమ_వైపు_తిరుగు( 2*ang)
+	కలమును_కింద_పెట్టు()
 
         ss( c1)
         sb2( c1)
@@ -476,22 +476,22 @@ function spiral( ) {
         //write( "19")
 
 //point20:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2 * ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase) // @5
-        left(  ang)
-        forward( side)
-        right( 2 * ang)
-        forward( side + side) //@14
-        right( 2 * ang)
-        forward( side + side + side) //@19
-        right( ang)
-        forward( sBase)
-        left( 3*ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase) // @5
+        ఎడమ_వైపు_తిరుగు(  ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side) //@14
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + side) //@19
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase)
+        ఎడమ_వైపు_తిరుగు( 3*ang)
+	కలమును_కింద_పెట్టు()
 
         ss( c1)
         sb2( c1)
@@ -500,23 +500,23 @@ function spiral( ) {
         //write( "20")
 
 //point21:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2 * ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase) // @5
-        left(  ang)
-        forward( side)
-        right( 2 * ang)
-        forward( side + side) //@14
-        right( 2 * ang)
-        forward( side + side + side)
-        right( ang)
-        forward( sBase) //@20
-        forward( sBase)
-        left( 3*ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase) // @5
+        ఎడమ_వైపు_తిరుగు(  ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side) //@14
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase) //@20
+        ముందుకు_జరుగు( sBase)
+        ఎడమ_వైపు_తిరుగు( 3*ang)
+	కలమును_కింద_పెట్టు()
 
         ss( c1)
         bs( c1)
@@ -525,23 +525,23 @@ function spiral( ) {
         //write( "21")
 
 //point22:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( (i +1) * 2 * ang)
-        forward( bBase + side)
-        left( 2 * ang)
-        forward( side + side + sBase) // @5
-        left(  ang)
-        forward( side)
-        right( 2 * ang)
-        forward( side + side) //@14
-        right( 2 * ang)
-        forward( side + side + side)
-        right( ang)
-        forward( sBase + sBase) //@21
-        forward( side)
-        left( 2*ang)
-	pendown()
+        ముందుకు_జరుగు( bBase + side)
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + sBase) // @5
+        ఎడమ_వైపు_తిరుగు(  ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side) //@14
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side + side + side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase + sBase) //@21
+        ముందుకు_జరుగు( side)
+        ఎడమ_వైపు_తిరుగు( 2*ang)
+	కలమును_కింద_పెట్టు()
 
         bs( c1)
         bs2( c1)
@@ -550,22 +550,22 @@ function spiral( ) {
         //write( "22")
 
 //point23:
-	penup()
+	కలమును_పైకి_ఎత్తు()
         goto(0,0)
         setHeading( i * 2* ang)
-        forward(  bBase + side + bBase) //@6
-        left( 2 * ang)
-        forward( side)
-        right( ang)
-        forward( sBase + sBase) //@9
-        right( 2 * ang)
-        forward( bBase)
-        right( ang)
-        forward( side + side) //@17
-        right( ang)
-        forward( sBase)
-        left( 3 * ang)
-	pendown()
+        ముందుకు_జరుగు(  bBase + side + bBase) //@6
+        ఎడమ_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( side)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase + sBase) //@9
+        కుడి_వైపు_తిరుగు( 2 * ang)
+        ముందుకు_జరుగు( bBase)
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( side + side) //@17
+        కుడి_వైపు_తిరుగు( ang)
+        ముందుకు_జరుగు( sBase)
+        ఎడమ_వైపు_తిరుగు( 3 * ang)
+	కలమును_కింద_పెట్టు()
 
         ss( c2)
         bs( c2)
@@ -577,6 +577,6 @@ function spiral( ) {
 function demo () {
     reset()
     wrap(false)
-    pendown()
+    కలమును_కింద_పెట్టు()
     spiral( )
 }

@@ -3,8 +3,8 @@
 // draw a polygon of n sides of length m
 function polygon(sides,side) {
   repeat(sides, function () {
-    forward(side);
-    right(360/sides);
+    ముందుకు_జరుగు(side);
+    కుడి_వైపు_తిరుగు(360/sides);
   });
 }
 
@@ -16,14 +16,14 @@ function demo() {
    }
    steps = size/10 // 10 is the step size
    reset();
-   hideTurtle();
+   తాబేలును_దాచు();
    for(step=1; step < steps; step=step+1) {
       color (random(16));
       polygon(6,step*10);
-      penup();
-      left(120)
-      forward (10);
-      right(120);
-      pendown();
+      కలమును_పైకి_ఎత్తు();
+      ఎడమ_వైపు_తిరుగు(120)
+      ముందుకు_జరుగు(10);
+      కుడి_వైపు_తిరుగు(120);
+      కలమును_కింద_పెట్టు();
    }
 }

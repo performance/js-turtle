@@ -10,16 +10,16 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   side2= side1/Math.cos(angleA)
   for (i=0; i<4; i++) {
     goto (x, y);
-    angle (i/4 * 360);
-    penup()
-    forward( innerRadius)
-    pendown()
-    forward (outerRadius-innerRadius);
-    right( 180-radToDeg( angleA));
-    forward( side2);
-    backward( side2);
-    right( radToDeg( 2* angleA));
-    forward( side2);
+    కోణము (i/4 * 360);
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( innerRadius)
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(outerRadius-innerRadius);
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
+    ముందుకు_జరుగు( side2);
+    వెనుకకు_జరుగు( side2);
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));
+    ముందుకు_జరుగు( side2);
   }
 
   side3= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/8))
@@ -27,16 +27,16 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   console.log( "side3:"+side3 + " r3: " + r3)
   for (i=0; i<4; i++) {
     goto (x, y);
-    angle (45 + i/4 * 360);
-    penup()
-    forward( innerRadius)
-    pendown()
-    forward (outerRadius-innerRadius);
-    right( 180-radToDeg( angleA));
-    forward( r3);
-    backward( r3);
-    right( radToDeg( 2* angleA));
-    forward( r3);
+    కోణము (45 + i/4 * 360);
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( innerRadius)
+    కలమును_కింద_పెట్టు()
+    ముందుకు_జరుగు(outerRadius-innerRadius);
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
+    ముందుకు_జరుగు( r3);
+    వెనుకకు_జరుగు( r3);
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));
+    ముందుకు_జరుగు( r3);
   }
 
   r4=outerRadius/2
@@ -46,31 +46,31 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   console.log( "side4:"+side4 + " r4: " + r4)
   for (i=0; i<8; i++) {
     goto (x, y);
-    angle (22.5 + i/8 * 360);
-    penup()
-    forward (outerRadius);
-    pendown()
-    right( 180-radToDeg( angleA));
-    forward( r4);
-    backward( r4);
-    right( radToDeg( 2* angleA));
-    forward( r4);
+    కోణము (22.5 + i/8 * 360);
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు(outerRadius);
+    కలమును_కింద_పెట్టు()
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
+    ముందుకు_జరుగు( r4);
+    వెనుకకు_జరుగు( r4);
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));
+    ముందుకు_జరుగు( r4);
   }
 
   r5 = .1 * outerRadius
   base = 2* r5* Math.sin(angleA)
   for (i=0; i<16; i++) {
     goto (x, y);
-    angle (11.25 + i/16 * 360);
-    penup()
-    forward (outerRadius);
-    pendown()
-    right( 180-radToDeg( angleA));
-    forward( r5);
-    right(90+radToDeg(angleA))
-    forward (base)
-    right(90+radToDeg(angleA))
-    forward( r5);
+    కోణము (11.25 + i/16 * 360);
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు(outerRadius);
+    కలమును_కింద_పెట్టు()
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
+    ముందుకు_జరుగు( r5);
+    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))
+    ముందుకు_జరుగు(base)
+    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))
+    ముందుకు_జరుగు( r5);
   }
 }
 
@@ -79,7 +79,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
 function demo () {
   reset();
   size = Math.min( maxX(), maxY()) * .9
-  hideturtle();
+  తాబేలును_దాచు();
   //color( random(16));
   compassRose( 0, 0, 16, size, .2*size);
 }

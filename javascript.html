@@ -92,21 +92,21 @@ a /* a bounded comment may be within code  */ = 1;
        </p>
        <code>// define the square function
 function square () {
-  forward (100);
-  right (90);
-  forward (100);
-  right (90);
-  forward (100);
-  right (90);
-  forward (100);
-  right (90);
+  ముందుకు_జరుగు(100);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(100);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(100);
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(100);
+  కుడి_వైపు_తిరుగు(90);
 }
 
 square () { // invoke the square function
-right(30)   // invoke the Turtle Graphic right() function
+కుడి_వైపు_తిరుగు(30)   // invoke the Turtle Graphic కుడి_వైపు_తిరుగు() function
             // with the distance argument 30
 square () { // invoke the square function again
-right(30)   // invoke the Turtle Graphic right() function again
+కుడి_వైపు_తిరుగు(30)   // invoke the Turtle Graphic కుడి_వైపు_తిరుగు() function again
 square () { // invoke the square function once again
 </code>
        <p>
@@ -323,14 +323,14 @@ ageOfDog = dog["age"] // ageOfDog = 3
          required for the particular function.
        </p>
        <code>function square (size) { // size is a single parameter
-  forward (size); // here it is used in the forward function call
-  right (90);
-  forward (size); // here it is used in the forward function call
-  right (90);
-  forward (size); // here it is used in the forward function call
-  right (90);
-  forward (size); // here it is used in the forward function call
-  right (90);
+  ముందుకు_జరుగు(size); // here it is used in the forward function call
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(size); // here it is used in the forward function call
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(size); // here it is used in the forward function call
+  కుడి_వైపు_తిరుగు(90);
+  ముందుకు_జరుగు(size); // here it is used in the forward function call
+  కుడి_వైపు_తిరుగు(90);
 }
 </code>
        <p>
@@ -788,16 +788,16 @@ b = 3 // another statement
        <p>
        Now let's try some Turtle Graphics functions.
        These statements are simple function calls.
-       turn the turtle the right 90 degrees, <code>right(90)</code>, and
-       move the turtle forward 10 units, <code>forward(10)</code>.
+       turn the turtle the right 90 degrees, <code>కుడి_వైపు_తిరుగు(90)</code>, and
+       move the turtle forward 10 units, <code>ముందుకు_జరుగు(10)</code>.
        </p>
-<code>right(90)
-forward(10)
-right(90)
-forward(10)
-right(90)
-forward(10)
-right(90)
+<code>కుడి_వైపు_తిరుగు(90)
+ముందుకు_జరుగు(10)
+కుడి_వైపు_తిరుగు(90)
+ముందుకు_జరుగు(10)
+కుడి_వైపు_తిరుగు(90)
+ముందుకు_జరుగు(10)
+కుడి_వైపు_తిరుగు(90)
 </code>
 
        <img src="images/square.gif">
@@ -869,8 +869,8 @@ dog = { breed: "dalmatian",        //object with 4 attributes
       color (black);
       width (.5);
     }
-    forward(50);
-    right(90);
+    ముందుకు_జరుగు(50);
+    కుడి_వైపు_తిరుగు(90);
   }
 }
 </code>
@@ -892,8 +892,8 @@ dog = { breed: "dalmatian",        //object with 4 attributes
        </p>
        <code>function square (size) {
   repeat (4, function () {
-    forward (size);
-    right (90);
+    ముందుకు_జరుగు(size);
+    కుడి_వైపు_తిరుగు(90);
   })
 }
 </code>
@@ -924,8 +924,8 @@ dog = { breed: "dalmatian",        //object with 4 attributes
        <code>function spiral () {
   var i = 0;
   while ( i < 10) {
-    forward (i + i);
-    right (90 - i);
+    ముందుకు_జరుగు(i + i);
+    కుడి_వైపు_తిరుగు(90 - i);
     i = i + 1;
   }
 }
@@ -956,8 +956,8 @@ dog = { breed: "dalmatian",        //object with 4 attributes
           && turtle.pos.x > minX()
           && turtle.pos.y < maxY()
           && turtle.pos.y > minY()) {
-    forward (i + i);
-    right (90 - i);
+    ముందుకు_జరుగు(i + i);
+    కుడి_వైపు_తిరుగు(90 - i);
     i = i + 1;
   }
 }
@@ -983,8 +983,8 @@ dog = { breed: "dalmatian",        //object with 4 attributes
        </p>
        <code>function square() {
   for (i=0; i<4; i=i+1) {
-    forward(20);
-    right(90);
+    ముందుకు_జరుగు(20);
+    కుడి_వైపు_తిరుగు(90);
   }
 }
 </code>
@@ -1013,14 +1013,14 @@ dog = { breed: "dalmatian",        //object with 4 attributes
        </p>
 <code>function square (side) {
   for (i=0; i<4; i=i+1) {
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
   }
 }
 
 for (i=0; i<3; i=i+1) {
   square( 100)
-  right(30)
+  కుడి_వైపు_తిరుగు(30)
 }
 </code>
        <p>
@@ -1047,15 +1047,15 @@ for (i=0; i<3; i=i+1) {
        </p>
        <code>function square (side) {
   for (i=0; i<4; i=i+1) {
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
   }
 }
 
 var i; // declares i as a global variable
 for (i=0; i<3; i=i+1) {
   square( 100)
-  right(30)
+  కుడి_వైపు_తిరుగు(30)
 }
 </code>
        <p>
@@ -1076,8 +1076,8 @@ for (i=0; i<3; i=i+1) {
        <code>function square (side) {
   var i; // declares i as a local variable
   for (i=0; i<4; i=i+1) {
-    forward( side)
-    right( 90)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
   }
 }
 
@@ -1086,7 +1086,7 @@ var i; // declares i as a global variable
        // good practice to declare all variables.
 for (i=0; i<3; i=i+1) {
   square( 100)
-  right(30)
+  కుడి_వైపు_తిరుగు(30)
 }
 </code>
        <p>
@@ -1526,20 +1526,20 @@ for (i=0; i<3; i=i+1) {
        </p>
        <code>function kochForward (length) {
   if (length <= 20) {
-    forward (length);
+    ముందుకు_జరుగు(length);
   } else {
     kochForward (length/3);
-    left(60);
+    ఎడమ_వైపు_తిరుగు(60);
     kochForward (length/3);
-    right(120);
+    కుడి_వైపు_తిరుగు(120);
     kochForward (length/3);
-    left(60);
+    ఎడమ_వైపు_తిరుగు(60);
     kochForward (length/3);
   }
 }
 
 setpos(minX() + 20, minY() + 20); // go toward bottom left of canvas
-angle(90);
+కోణము(90);
 kochForward(maxX() + maxX() - 40); // draw a Koch line most of the width of the canvas
 </code>
        <p>
@@ -1606,7 +1606,7 @@ kochForward(maxX() + maxX() - 40); // draw a Koch line most of the width of the 
          implements the
          turtle graphic functions. While the functions are designed to hide the
          details of the mathematics (mostly trigonometry) that are necessary
-         to plot a line of a given angle and length on a canvas that only
+         to plot a line of a given కోణము and length on a canvas that only
          understands the <em>x</em> and <em>y</em> coordinates of a Cartesian
          coordinate system.
        </p>

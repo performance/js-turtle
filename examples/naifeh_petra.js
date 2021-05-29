@@ -13,15 +13,15 @@ function backslash (fColor) {
   // assume pointing up at upper left corner
   // invariant
   beginShape()
-  right( 150)
-  forward( 2*size)
-  left( 120)
-  forward( size)
-  left( 60)
-  forward( 2* size)
-  left( 120)
-  forward( size)
-  right( 150)
+  కుడి_వైపు_తిరుగు( 150)
+  ముందుకు_జరుగు( 2*size)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( size)
+  ఎడమ_వైపు_తిరుగు( 60)
+  ముందుకు_జరుగు( 2* size)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( size)
+  కుడి_వైపు_తిరుగు( 150)
   fillShape(fColor)
 }
 
@@ -29,15 +29,15 @@ function slash (fColor) {
   // assume pointing up at upper left corner
   // invariant
   beginShape()
-  left( 150)
-  forward( 2*size)
-  left( 120)
-  forward( size)
-  left( 60)
-  forward( 2* size)
-  left( 120)
-  forward( size)
-  right( 90)
+  ఎడమ_వైపు_తిరుగు( 150)
+  ముందుకు_జరుగు( 2*size)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( size)
+  ఎడమ_వైపు_తిరుగు( 60)
+  ముందుకు_జరుగు( 2* size)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( size)
+  కుడి_వైపు_తిరుగు( 90)
   fillShape(fColor)
 }
 
@@ -45,15 +45,15 @@ function dash () {
   // assume pointing up at upper left corner
   // invariant
   beginShape()
-  right( 150)
-  forward( size)
-  left( 60)
-  forward( 2*size)
-  left( 120)
-  forward( size)
-  left( 60)
-  forward( 2*size)
-  right( 90)
+  కుడి_వైపు_తిరుగు( 150)
+  ముందుకు_జరుగు( size)
+  ఎడమ_వైపు_తిరుగు( 60)
+  ముందుకు_జరుగు( 2*size)
+  ఎడమ_వైపు_తిరుగు( 120)
+  ముందుకు_జరుగు( size)
+  ఎడమ_వైపు_తిరుగు( 60)
+  ముందుకు_జరుగు( 2*size)
+  కుడి_వైపు_తిరుగు( 90)
   fillShape(fColor)
 }
 
@@ -63,32 +63,32 @@ function dashBackslashes(count, mode, fColor) {
   // invariant
   backup = 0
   for (var i=0; i<count; i++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     if (i % 2 == 0) {
       if (mode == 0 || i != 0){
         dash()
       }
-      penup()
-      right(90)
-      forward( 2*size)
-      left(90)
-      pendown()
+      కలమును_పైకి_ఎత్తు()
+      కుడి_వైపు_తిరుగు(90)
+      ముందుకు_జరుగు( 2*size)
+      ఎడమ_వైపు_తిరుగు(90)
+      కలమును_కింద_పెట్టు()
       backup = backup + 2
     } else {
       backslash(fColor)
-      penup()
-      right(90)
-      forward( size)
-      left(90)
-      pendown()
+      కలమును_పైకి_ఎత్తు()
+      కుడి_వైపు_తిరుగు(90)
+      ముందుకు_జరుగు( size)
+      ఎడమ_వైపు_తిరుగు(90)
+      కలమును_కింద_పెట్టు()
       backup = backup + 1
     }
   }
-  penup()
-  left(90)
-  forward(backup * size)
-  right(90)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  ఎడమ_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(backup * size)
+  కుడి_వైపు_తిరుగు(90)
+  కలమును_కింద_పెట్టు()
 }
 
 
@@ -97,18 +97,18 @@ function slashes(count, fColor) {
   // invariant
   for (var i=0; i<count; i++) {
     slash( fColor)
-    penup()
-    right(90)
-    forward( 3*size)
-    left(90)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు( 3*size)
+    ఎడమ_వైపు_తిరుగు(90)
+    కలమును_కింద_పెట్టు()
   }
-  penup()
-  left(90)
-  forward(count * 3 * size)
-  right(90)
-  pendown()
-  penup()
+  కలమును_పైకి_ఎత్తు()
+  ఎడమ_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(count * 3 * size)
+  కుడి_వైపు_తిరుగు(90)
+  కలమును_కింద_పెట్టు()
+  కలమును_పైకి_ఎత్తు()
 }
 
 
@@ -122,53 +122,53 @@ function demo() {
   //center canvas more or less
   pointUp = false
   if (pointUp) {
-    angle(90)
+    కోణము(90)
     goto (4*size, 3.5*size)
   } else {
-    angle(-60)
+    కోణము(-60)
     goto (-5.5*size, -1*size)
   }
-  hideTurtle()
+  తాబేలును_దాచు()
 
   dashBackslashes(4, 0, fColor)
 
-  right(150)
-  forward( size)
-  left(150)
+  కుడి_వైపు_తిరుగు(150)
+  ముందుకు_జరుగు( size)
+  ఎడమ_వైపు_తిరుగు(150)
   slashes( 3, fColor)
 
-  left(150)
-  forward(2*size)
-  right(60)
-  forward(size)
-  right(90)
+  ఎడమ_వైపు_తిరుగు(150)
+  ముందుకు_జరుగు(2*size)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(size)
+  కుడి_వైపు_తిరుగు(90)
   dashBackslashes(6, 0, fColor)
 
-  right(150)
-  forward(size)
-  left(150)
+  కుడి_వైపు_తిరుగు(150)
+  ముందుకు_జరుగు(size)
+  ఎడమ_వైపు_తిరుగు(150)
   slashes(4, fColor)
 
-  left(150)
-  forward(2*size)
-  right(60)
-  forward(size)
-  right(90)
+  ఎడమ_వైపు_తిరుగు(150)
+  ముందుకు_జరుగు(2*size)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(size)
+  కుడి_వైపు_తిరుగు(90)
   dashBackslashes(7, 1, fColor)
 
-  penup()
-  right(90)
-  forward(3*size)
-  right( 60)
-  forward( size)
-  left(150)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  కుడి_వైపు_తిరుగు(90)
+  ముందుకు_జరుగు(3*size)
+  కుడి_వైపు_తిరుగు( 60)
+  ముందుకు_జరుగు( size)
+  ఎడమ_వైపు_తిరుగు(150)
+  కలమును_కింద_పెట్టు()
   slashes(3, fColor)
   
-  left(150)
-  forward(2*size)
-  right(60)
-  forward(size)
-  right(90)
+  ఎడమ_వైపు_తిరుగు(150)
+  ముందుకు_జరుగు(2*size)
+  కుడి_వైపు_తిరుగు(60)
+  ముందుకు_జరుగు(size)
+  కుడి_వైపు_తిరుగు(90)
   dashBackslashes(5, 1, fColor)
 }

@@ -15,7 +15,7 @@ function caption (message) {
   // save your current position, heading, etc.
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
-  var savedHeading = turtle.angle / 2 / Math.PI * 360 //convert radians to degrees
+  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = turtle.color
   var savedWidth = turtle.width
 
@@ -25,7 +25,7 @@ function caption (message) {
   // erase what will be in the path
   color ("white")
   width (10)
-  forward (maxY() * 2 - 12)
+  ముందుకు_జరుగు(maxY() * 2 - 12)
   goto (minX()+10, minY()+5)
   color ("black")
   setfont( "bold 12px Helvitica,sans-serif")
@@ -41,23 +41,23 @@ function caption (message) {
 
 function A (side, gen) {
   if (gen ===0) {
-    forward (side)
+    ముందుకు_జరుగు(side)
   }
   else {
     side = side / Math.sqrt(7)
     A (side, gen-1)
-    left (60)
+    ఎడమ_వైపు_తిరుగు(60)
     B (side, gen-1)
-    left (120)
+    ఎడమ_వైపు_తిరుగు(120)
     B (side, gen-1)
-    right (60)
+    కుడి_వైపు_తిరుగు(60)
     A (side, gen-1)
-    right (120)
+    కుడి_వైపు_తిరుగు(120)
     A (side, gen-1)
     A (side, gen-1)
-    right (60)
+    కుడి_వైపు_తిరుగు(60)
     B (side, gen-1)
-    left (60)
+    ఎడమ_వైపు_తిరుగు(60)
   }
 }
 
@@ -65,22 +65,22 @@ function A (side, gen) {
 
 function B (side, gen) {
   if (gen ===0) {
-    forward (side)
+    ముందుకు_జరుగు(side)
   }
   else {
     side = side / Math.sqrt(7)
-    right (60)
+    కుడి_వైపు_తిరుగు(60)
     A (side, gen-1)
-    left (60)
+    ఎడమ_వైపు_తిరుగు(60)
     B (side, gen-1)
     B (side, gen-1)
-    left (120)
+    ఎడమ_వైపు_తిరుగు(120)
     B (side, gen-1)
-    left (60)
+    ఎడమ_వైపు_తిరుగు(60)
     A (side, gen-1)
-    right (120)
+    కుడి_వైపు_తిరుగు(120)
     A (side, gen-1)
-    right (60)
+    కుడి_వైపు_తిరుగు(60)
     B (side, gen-1)
   }
 }
@@ -88,7 +88,7 @@ function B (side, gen) {
 
 function delayDemo () {
   reset()
-  hideTurtle()
+  తాబేలును_దాచు()
   size = 1.5 * Math.min(maxX(), maxY())
   goto( .5* size, (.2*gen -.6) * size)
   A( size,gen)

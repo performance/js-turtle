@@ -1,17 +1,17 @@
 // Koch Lines -- draw an animated set of Koch lines
 
 function kochLine (length, order) {
-  //assume drawn on the current angle
+  //assume drawn on the current కోణము
   if (order == 0) {
-    forward (length);
+    ముందుకు_జరుగు(length);
   } else {
     //break line and bump out to the left
     kochLine (length/3, order-1);
-    left(60); 
+    ఎడమ_వైపు_తిరుగు(60); 
     kochLine (length/3, order-1);
-    right(120); 
+    కుడి_వైపు_తిరుగు(120); 
     kochLine (length/3, order-1);
-    left(60); 
+    ఎడమ_వైపు_తిరుగు(60); 
     kochLine (length/3, order-1);
   }
 }
@@ -24,12 +24,12 @@ function kochLineDelay() {
   if (side > maxX() - minX()) {
     side = maxX() - minX()
   }
-  angle(90)
+  కోణము(90)
   side = .9 * side
   goto (-side/2, -1/4 * side)
   kochLine (side, i);
   goto(minX(),minY());
-  angle(90);
+  కోణము(90);
   setfont("bold 12pt Ariel,san-serif")
   write ("Koch line of order " +i);
   draw();
@@ -41,7 +41,7 @@ function kochLineDelay() {
 
 function demo() {
   reset();
-  hideturtle();
+  తాబేలును_దాచు();
   steps = 6;
   span = 240;
   i = 0;

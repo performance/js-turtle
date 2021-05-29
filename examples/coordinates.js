@@ -2,59 +2,59 @@
 
 function lines () {
   clear()
-  pendown()
+  కలమును_కింద_పెట్టు()
 
   goto(0,minY())
-  angle(0)
-  forward (2*maxY())
+  కోణము(0)
+  ముందుకు_జరుగు(2*maxY())
 
   goto(minX(),0)
-  angle(90)
-  forward (2*maxX())
+  కోణము(90)
+  ముందుకు_జరుగు(2*maxX())
 
   //lable the axes
   setFont("bold 14px sans-serif");
   goto (0+10,maxY()-25)
-  angle (90)
+  కోణము (90)
   write (maxY())
 
   goto (maxX()-5,+10)
-  angle (0)
+  కోణము (0)
   write (maxX())
 
   goto (10,minY()+5)
-  angle (90)
+  కోణము (90)
   write (minY())
 
   goto (minX()+25,0+10)
-  angle (0)
+  కోణము (0)
   write (minX())
 }
 
 
 function ticks (dir, limit, step) {
   var tickLen = 5
-  angle(dir)
+  కోణము(dir)
   goto(0,0)
-  penup()
+  కలమును_పైకి_ఎత్తు()
   for (i=1; i*step<limit; i=i+1) {
 
-    forward(step)
-    left(90)
+    ముందుకు_జరుగు(step)
+    ఎడమ_వైపు_తిరుగు(90)
     if (i%5 == 0) {
-      forward(tickLen)
-      pendown()
-      backward (tickLen*2)
-      penup()
-      forward(tickLen)
-      right(90)
+      ముందుకు_జరుగు(tickLen)
+      కలమును_కింద_పెట్టు()
+      వెనుకకు_జరుగు(tickLen*2)
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు(tickLen)
+      కుడి_వైపు_తిరుగు(90)
     } else {
-      forward(tickLen/2)
-      pendown()
-      backward (tickLen)
-      penup()
-      forward(tickLen/2)
-      right(90)
+      ముందుకు_జరుగు(tickLen/2)
+      కలమును_కింద_పెట్టు()
+      వెనుకకు_జరుగు(tickLen)
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు(tickLen/2)
+      కుడి_వైపు_తిరుగు(90)
     }
   }
 }

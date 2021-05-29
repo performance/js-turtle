@@ -6,25 +6,25 @@ lSide = 2* sSide
 function vRect( sSide, lSide, fColor) {
   beginShape()
   for (var i=0; i<2; i++) {
-    forward( sSide)
-    right(90)
-    forward( lSide)
-    right(90)
+    ముందుకు_జరుగు( sSide)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు( lSide)
+    కుడి_వైపు_తిరుగు(90)
   }
   fillShape( fColor)
-  forward( sSide)
+  ముందుకు_జరుగు( sSide)
 }
 
 function hRect( sSide, lSide, fColor) {
   beginShape()
   for (var i=0; i<2; i++) {
-    forward( lSide)
-    right(90)
-    forward( sSide)
-    right(90)
+    ముందుకు_జరుగు( lSide)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు( sSide)
+    కుడి_వైపు_తిరుగు(90)
   }
   fillShape( fColor)
-  forward( lSide)
+  ముందుకు_జరుగు( lSide)
 }
 
 function demo() {
@@ -33,24 +33,24 @@ function demo() {
   yB = maxY()
   xB = minX()
   wrap(false)
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
   color("white")
 
   s = 50
   while( turtle.pos.y > minY()) {
     goto (xB, yB)
     while( turtle.pos.x < maxX()) {
-      pendown()
+      కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
-      penup()
+      కలమును_పైకి_ఎత్తు()
     }
     yB = yB - sSide
 
     goto (xB - lSide/2, yB)
     while( turtle.pos.x < maxX()) {
-      pendown()
+      కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
-      penup()
+      కలమును_పైకి_ఎత్తు()
     }
     yB = yB - sSide
   }

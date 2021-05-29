@@ -4,25 +4,25 @@
 function drawRadials(side) {
   for (var i=0; i<16; i++) {
     goto(0,0)
-    angle(i/16 * 360)
-    forward( size)
+    కోణము(i/16 * 360)
+    ముందుకు_జరుగు( size)
   }
 }
 
 function spikey ( points, revs, radius, x, y, head) {
-  penup()
+  కలమును_పైకి_ఎత్తు()
   goto(x, y)
   setheading(head)
-  forward(radius)
+  ముందుకు_జరుగు(radius)
   var turnAngle = 360 * revs/points
   var angleA = ( 180 - turnAngle)/2
   var stroke = 2 * radius * Math.cos( degToRad( angleA))
-  right( 180 - angleA)
-  pendown()
+  కుడి_వైపు_తిరుగు( 180 - angleA)
+  కలమును_కింద_పెట్టు()
 
   for( var i = 0; i < points; i = i + 1) { //>
-    forward( stroke)
-    right( turnAngle)
+    ముందుకు_జరుగు( stroke)
+    కుడి_వైపు_తిరుగు( turnAngle)
   }
 }
 
@@ -51,5 +51,5 @@ function demo() {
   drawRadials( size)
   goto(0,0)
   circle( inr)
-  hideTurtle()
+  తాబేలును_దాచు()
 }

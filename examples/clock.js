@@ -16,38 +16,38 @@ function ticks(x, y, radius) {
       } else {
          width(3/130* size);
       }
-      penup();
+      కలమును_పైకి_ఎత్తు();
       goto(0,0);
-      angle(theta);
-      forward(gap);
-      pendown();
-      forward(tickLen);
+      కోణము(theta);
+      ముందుకు_జరుగు(gap);
+      కలమును_కింద_పెట్టు();
+      ముందుకు_జరుగు(tickLen);
    }
 }
 
 
 // draw the hour numbers on the clock face
 function numbers(x, y, radius) {
-   penup();
+   కలమును_పైకి_ఎత్తు();
    fontSize = 20/130 * size
    setFont(fontSize+"px sans-serif");
    color("black");
    for (var hour = 1; hour <= 12; hour++) {
       goto(x,y);
-      angle(hour * 30);
-      forward(radius); // to center of digit
-      angle(180);
-      forward(10/130 * size); // vertical correction to baseline
-      right(90);
+      కోణము(hour * 30);
+      ముందుకు_జరుగు(radius); // to center of digit
+      కోణము(180);
+      ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline
+      కుడి_వైపు_తిరుగు(90);
       if (hour < 10) {
-        forward(6/130 * size); // horizontal correction to lower left corner
+        ముందుకు_జరుగు(6/130 * size); // horizontal correction to lower left corner
       } else {
-        forward (10/130 * size)
+        ముందుకు_జరుగు(10/130 * size)
       }
-      right(180);
+      కుడి_వైపు_తిరుగు(180);
       write(hour);
    }
-   pendown();
+   కలమును_కింద_పెట్టు();
 }
 
 // draw one of the clock hands
@@ -55,11 +55,11 @@ function hand (theta, w, length, col) {
    var stepSize = 5;
    var widthDelta = w / (length / stepSize);
    goto(0, 0);
-   angle(theta);
+   కోణము(theta);
    color(col);
    for (var step = 0; step < length; step = step + stepSize) {
       width(w);
-      forward(stepSize);
+      ముందుకు_జరుగు(stepSize);
       w = w - widthDelta;
    }
 }
@@ -93,7 +93,7 @@ function clock() {
 }
 
 function demo() {
-   hideTurtle();
+   తాబేలును_దాచు();
    // refresh the clock every second
    animate(clock,1000);
 }

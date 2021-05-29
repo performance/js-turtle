@@ -4,32 +4,32 @@
 
 function paddle (side) {
   side2 = side + side
-  forward( side2)
-  right( 90)
-  forward( side)
-  left( 90)
-  forward( side2)
-  left( 90)
-  forward( side2)
-  left( 90)
-  forward( side2)
-  left( 90)
-  forward( side)
-  penup()
-  right( 90)
-  forward( side2)
-  right( 180)
-  pendown()
+  ముందుకు_జరుగు( side2)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side2)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side2)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side2)
+  ఎడమ_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side)
+  కలమును_పైకి_ఎత్తు()
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( side2)
+  కుడి_వైపు_తిరుగు( 180)
+  కలమును_కింద_పెట్టు()
 }
 
 
 function cwGroup( side) {
   for( var i=0; i<4; i++) {
     paddle( side)
-    penup()
-    forward( side)
-    right( 90)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 90)
+    కలమును_కింద_పెట్టు()
   }
 }
 
@@ -37,10 +37,10 @@ function cwGroup( side) {
 function ccwGroup( side) {
   for( var i=0; i<4; i++) {
     paddle( side)
-    penup()
-    forward( side)
-    left( 90)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 90)
+    కలమును_కింద_పెట్టు()
   }
 }
 

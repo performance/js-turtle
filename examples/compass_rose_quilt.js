@@ -48,15 +48,15 @@ function indexColor(index, colors) {
 
 
 function triangle (side){
-  forward (side)
+  ముందుకు_జరుగు(side)
   a = 45
   b = (180-a)/2
-  right (180 - b)
-  //forward (.748* side)
-  forward (side * 2 * Math.sin(a/2/360*6.28))
-  right (180 - b)
-  forward (side)
-  right (180-a)
+  కుడి_వైపు_తిరుగు(180 - b)
+  //ముందుకు_జరుగు(.748* side)
+  ముందుకు_జరుగు(side * 2 * Math.sin(a/2/360*6.28))
+  కుడి_వైపు_తిరుగు(180 - b)
+  ముందుకు_జరుగు(side)
+  కుడి_వైపు_తిరుగు(180-a)
 }
 
 
@@ -72,46 +72,46 @@ function splitTri(outerSide, num, foreColor, triSide) {
         beginShape()
         triangle (innerSide)
         fillShape(foreColor)
-        penup()
-        forward(innerSide)
-        pendown()
+        కలమును_పైకి_ఎత్తు()
+        ముందుకు_జరుగు(innerSide)
+        కలమును_కింద_పెట్టు()
     }
-    penup()
-    backward( j * innerSide)
-    right(45)
-    forward( innerSide)
-    left(45)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    వెనుకకు_జరుగు( j * innerSide)
+    కుడి_వైపు_తిరుగు(45)
+    ముందుకు_జరుగు( innerSide)
+    ఎడమ_వైపు_తిరుగు(45)
+    కలమును_కింద_పెట్టు()
   }
-  penup()
-  right(45)
-  backward( innerSide * num)
-  left(45)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  కుడి_వైపు_తిరుగు(45)
+  వెనుకకు_జరుగు( innerSide * num)
+  ఎడమ_వైపు_తిరుగు(45)
+  కలమును_కింద_పెట్టు()
 }
 
 
 function flipSplitTri( outerSide, num, foreColor, triSide) {
-  penup()
-  forward( outerSide)
-  right( 45)
-  forward( outerSide)
-  right( 180-45)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  ముందుకు_జరుగు( outerSide)
+  కుడి_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( outerSide)
+  కుడి_వైపు_తిరుగు( 180-45)
+  కలమును_కింద_పెట్టు()
   splitTri( outerSide, num, foreColor, triSide)
-  penup()
-  right( 45)
-  forward( outerSide)
-  left( 45)
-  forward( outerSide)
-  left( 180)
-  pendown()
+  కలమును_పైకి_ఎత్తు()
+  కుడి_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( outerSide)
+  ఎడమ_వైపు_తిరుగు( 45)
+  ముందుకు_జరుగు( outerSide)
+  ఎడమ_వైపు_తిరుగు( 180)
+  కలమును_కింద_పెట్టు()
 }
 
 
 function labelPoints(size) {
-  penup()
-  angle( 0)
+  కలమును_పైకి_ఎత్తు()
+  కోణము( 0)
   boxedCompass=["N", "NxE", "NNE", "NExN", "NE", "NExE", "ENE", "ExN", "E", "ExS", "ESE", "SExE", "SE", "SExS", "SSE", "SxE", "S", "SxW", "SSW", "SWxS", "SW", "SWxW", "WSW", "WxS", "W", "WxN", "WNW", "NWxW", "NW", "NWxN", "NNW", "NxW"]
 
   // fill in the compass background
@@ -122,30 +122,30 @@ function labelPoints(size) {
 
   for (i=0; i<32; i++) {
   
-    forward (textRadius)
-    right(90)
+    ముందుకు_జరుగు(textRadius)
+    కుడి_వైపు_తిరుగు(90)
     fontSize = i % 4
     if (fontSize == 1 || fontSize == 3) {
       pointSize = size *.04
       textLen = boxedCompass[i].length * pointSize/2
-      backward (textLen)
+      వెనుకకు_జరుగు(textLen)
       setfont("normal " + pointSize + "pt Helvetica")
     } else if (fontSize == 2) {
       pointSize = size *.04
       textLen = boxedCompass[i].length * pointSize/2
-      backward (textLen)
+      వెనుకకు_జరుగు(textLen)
       setfont("bold " + pointSize + "pt Helvetica")
     } else {
       pointSize = size *.06
       textLen = boxedCompass[i].length * pointSize/2
-      backward (textLen)
+      వెనుకకు_జరుగు(textLen)
       setfont("bold " + pointSize + "pt Helvetica")
     }
     write(boxedCompass[i])
-    forward (textLen)
-    left(90)
-    backward (textRadius)
-    right(360/32)
+    ముందుకు_జరుగు(textLen)
+    ఎడమ_వైపు_తిరుగు(90)
+    వెనుకకు_జరుగు(textRadius)
+    కుడి_వైపు_తిరుగు(360/32)
   }
 }
 
@@ -155,22 +155,22 @@ function demo () {
   size = .9 * Math.min( maxX(), maxY()) //120
 console.log("size "+ size)
   wrap(false)
-  hideTurtle() // don"t want it to show,  do this early
+  తాబేలును_దాచు() // don"t want it to show,  do this early
   redrawOnMove(false) // don"t redraw image each move
 
   // fill in the background
   background( backgroundColor)
 /*
   goto( minX()+1, maxY()-1)
-  right( 90)
+  కుడి_వైపు_తిరుగు( 90)
   beginShape()
-  forward( 2 * maxX()-2)
-  right( 90)
-  forward( 2 * maxY()-2)
-  right( 90)
-  forward( 2 * maxX()-2)
-  right( 90)
-  forward( 2 * maxY()-2)
+  ముందుకు_జరుగు( 2 * maxX()-2)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( 2 * maxY()-2)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( 2 * maxX()-2)
+  కుడి_వైపు_తిరుగు( 90)
+  ముందుకు_జరుగు( 2 * maxY()-2)
   fillShape( backgroundColor)
 */
 
@@ -184,39 +184,39 @@ console.log("size "+ size)
 
   //fill in the eight compass major points
   goto(0,0)
-  angle(0)
-  left(22.5)
+  కోణము(0)
+  ఎడమ_వైపు_తిరుగు(22.5)
   side = size * .47
   for (i=0; i<8; i++) {
     splitTri (side, mainDivisions, indexColor( i, inner8Colors))
     flipSplitTri( side, mainDivisions, indexColor( i, outer8Colors))
-    right(45)
+    కుడి_వైపు_తిరుగు(45)
   }
 
   //ornament the center
   for (i=0; i<8; i++) {
     splitTri (side/mainDivisions, subDivisions8, "yellow")
-    right(45)
+    కుడి_వైపు_తిరుగు(45)
   }
 
  //place the sixteenth points
-  right(22.5)
+  కుడి_వైపు_తిరుగు(22.5)
   for (i=0; i<8; i++) {
     flipSplitTri (side, 1, background16Color,
         side * mainDivisions16/mainDivisions)
     flipSplitTri (side, subDivisions16, foreground16Color,
         side * mainDivisions16/mainDivisions)
-    right(45)
+    కుడి_వైపు_తిరుగు(45)
   }
 
    //place the thirty-second points
-  right(11.25)
+  కుడి_వైపు_తిరుగు(11.25)
   for (i=0; i<16; i++) {
     flipSplitTri (side, 1, background32Color,
         side * mainDivisions32/mainDivisions)
     flipSplitTri (side, subDivisions32, foreground32Color,
         side * mainDivisions32/mainDivisions)
-    right(22.5)
+    కుడి_వైపు_తిరుగు(22.5)
   }
 
   labelPoints( size)

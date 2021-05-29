@@ -19,10 +19,10 @@ function tri( side, pointAngle, fill) {
     beginShape()
   }
   for (var i=0; i<3; i++) {
-    forward( side)
-    left(60 - pointAngle)
-    forward( side)
-    right( 180 - pointAngle)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(60 - pointAngle)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - pointAngle)
   }
   if (fill) {
     fillShape(fColor)
@@ -32,39 +32,39 @@ function tri( side, pointAngle, fill) {
 
 function jeresh (sid, pAngle, fill) {
   for (var i=0;i<6;i++) {
-    pendown()
+    కలమును_కింద_పెట్టు()
     tri( sid, pAngle, fill)
 
     var tx = turtle.pos.x
     var ty = turtle.pos.y
-    var tHeading = turtle.angle
-    penup()
-    forward( sid)
-    left( 60 - pAngle)
-    forward( sid)
-    right( 180 - pAngle)
-    forward( sid)
-    left( 60)
+    var tHeading = turtle.కోణము
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( sid)
+    ఎడమ_వైపు_తిరుగు( 60 - pAngle)
+    ముందుకు_జరుగు( sid)
+    కుడి_వైపు_తిరుగు( 180 - pAngle)
+    ముందుకు_జరుగు( sid)
+    ఎడమ_వైపు_తిరుగు( 60)
 
     for (var j=0; j<3; j++) {
-      pendown()
+      కలమును_కింద_పెట్టు()
       tri(sid, pAngle, fill)
-      penup()
-      forward(sid)
-      left(60)
+      కలమును_పైకి_ఎత్తు()
+      ముందుకు_జరుగు(sid)
+      ఎడమ_వైపు_తిరుగు(60)
     }
     goto(tx,ty)
 
-    turtle.angle=tHeading
-    penup()
-    forward( sid)
-    left(60)
+    turtle.కోణము=tHeading
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( sid)
+    ఎడమ_వైపు_తిరుగు(60)
   }
 }
 
 
 function demo() {
-  /* can vary point angle.
+  /* can vary point కోణము.
   0 and 120 is a hex tesselation
   60 and 180 are triangles
   90
@@ -72,7 +72,7 @@ function demo() {
   something is not quite right
   */
   reset()
-  penup()
+  కలమును_పైకి_ఎత్తు()
   var pointAngle = 30
   var side = 60
   side = .2* Math.min( maxX(), maxY())
@@ -86,5 +86,5 @@ function demo() {
   width( 3)
   jeresh( side, pointAngle, false)
 
-  hideTurtle()
+  తాబేలును_దాచు()
 }

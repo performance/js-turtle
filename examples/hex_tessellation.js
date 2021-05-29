@@ -1,23 +1,23 @@
 // Hexagon Tessellation -- tile a surface with hexagons
 
 function hexagon (side) {
-  penup();
-  forward(side);
-  right(120);
-  pendown();
+  కలమును_పైకి_ఎత్తు();
+  ముందుకు_జరుగు(side);
+  కుడి_వైపు_తిరుగు(120);
+  కలమును_కింద_పెట్టు();
   repeat (6, function () {
-    forward(side);
-    right(60);
+    ముందుకు_జరుగు(side);
+    కుడి_వైపు_తిరుగు(60);
   })
 }
 
 function repeatToRight (side) {
   while (turtle.pos.x < maxX()) {
     hexagon(side);
-    penup();
-    forward(side * 2);
-    left(120);
-    pendown();
+    కలమును_పైకి_ఎత్తు();
+    ముందుకు_జరుగు(side * 2);
+    ఎడమ_వైపు_తిరుగు(120);
+    కలమును_కింద_పెట్టు();
   }
 }
 
@@ -25,10 +25,10 @@ function repeatToLeft(side) {
   while (turtle.pos.x > minX())
    {
     hexagon(side);
-    penup();
-    forward(side * 2);
-    left(120);
-    pendown();
+    కలమును_పైకి_ఎత్తు();
+    ముందుకు_జరుగు(side * 2);
+    ఎడమ_వైపు_తిరుగు(120);
+    కలమును_కింద_పెట్టు();
   }
 }
 
@@ -46,23 +46,23 @@ function demo() {
     repeatToRight(side); // draw a row of hexagons
   
     //advance to next row on right side
-    penup();
-    left(120);
-    forward(side);
-    left(60);
-    forward(side)
-    pendown();
+    కలమును_పైకి_ఎత్తు();
+    ఎడమ_వైపు_తిరుగు(120);
+    ముందుకు_జరుగు(side);
+    ఎడమ_వైపు_తిరుగు(60);
+    ముందుకు_జరుగు(side)
+    కలమును_కింద_పెట్టు();
   
     repeatToLeft (side);  // draw a row of hexagons
   
     //advance on next row on left side
-    penup();
-    left(60);
-    forward(side);
-    right(60);
-    forward(side);
-    right(180);
-    pendown();
+    కలమును_పైకి_ఎత్తు();
+    ఎడమ_వైపు_తిరుగు(60);
+    ముందుకు_జరుగు(side);
+    కుడి_వైపు_తిరుగు(60);
+    ముందుకు_జరుగు(side);
+    కుడి_వైపు_తిరుగు(180);
+    కలమును_కింద_పెట్టు();
     draw();
   }
 }

@@ -20,7 +20,7 @@ function demo () {
     //y1 = Math.floor( y2)
     x1 = x2
     y1 = y2
-    angle (360 * dir / 2 / Math.PI)
-    forward (len)
+    కోణము (360 * dir / 2 / Math.PI)
+    ముందుకు_జరుగు(len)
   }
 }

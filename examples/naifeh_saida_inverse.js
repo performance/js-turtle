@@ -3,40 +3,40 @@
 
 
 function antilayer (side, innerSide, offset) {
-  left( offset)
+  ఎడమ_వైపు_తిరుగు( offset)
   for (var i=0; i<8; i++){
-    penup()
-    forward( side)
-    pendown()
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    కలమును_కింద_పెట్టు()
   
     beginShape()
-    left(45 + 22.5)
-    forward(innerSide)
-    left(90)
-    forward(innerSide)
-    left(180)
-    forward(innerSide)
-    right(90)
-    forward(innerSide)
-    left(180-22.5)
+    ఎడమ_వైపు_తిరుగు(45 + 22.5)
+    ముందుకు_జరుగు(innerSide)
+    ఎడమ_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(innerSide)
+    ఎడమ_వైపు_తిరుగు(180)
+    ముందుకు_జరుగు(innerSide)
+    కుడి_వైపు_తిరుగు(90)
+    ముందుకు_జరుగు(innerSide)
+    ఎడమ_వైపు_తిరుగు(180-22.5)
 
-    forward (side)
-    left(135)
-    forward( side)
-    left(45)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు(135)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు(45)
     fillShape("black")
-    penup()
-    forward( side)
-    pendown()
-    left(180)
+    కలమును_పైకి_ఎత్తు()
+    ముందుకు_జరుగు( side)
+    కలమును_కింద_పెట్టు()
+    ఎడమ_వైపు_తిరుగు(180)
   }
-  right(offset)
+  కుడి_వైపు_తిరుగు(offset)
 }
 
 function demo() {
   reset()
   wrap(false)
-  hideTurtle()
+  తాబేలును_దాచు()
   side = .023 * Math.min( maxX(), maxY())
 
   factor = Math.sqrt( 2+ Math.sqrt(2))

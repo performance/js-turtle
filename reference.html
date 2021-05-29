@@ -64,87 +64,87 @@ also roll in the tutorial stuff
  <div id="reference">
   <ul>
     <li>
-      forward(<em>distance</em>) | fd(<em>distance</em>)
+      ముందుకు_జరుగు(<em>distance</em>) | ముందుకు_జరుగు(<em>distance</em>)
       <p>
         Move the turtle forward <em>distance</em> pixels.
       </p>
       <p>
-        Example: <code>forward (10)</code>
+        Example: <code>ముందుకు_జరుగు(10)</code>
       </p>
     </li>
     <li>
-      backward(<em>distance</em>) | back(<em>distance</em>) | bk(<em>distance</em>)
+      వెనుకకు_జరుగు(<em>distance</em>) | back(<em>distance</em>) | bk(<em>distance</em>)
       <p>
         Move the turtle backward <em>distance</em> pixels, but leave
         it pointing forward.
       </p>
       <p>
-        Example: <code>backward (10)</code>
+        Example: <code>వెనుకకు_జరుగు(10)</code>
       </p>
     </li>
     <li>
-      right(<em>angle</em>) | rt(<em>angle</em>) | turn(<em>angle</em>)
+      కుడి_వైపు_తిరుగు(<em>కోణము</em>) | rt(<em>కోణము</em>) | turn(<em>కోణము</em>)
       <p>
-        Turn the turtle to the right <em>angle</em> degrees.
+        Turn the turtle to the right <em>కోణము</em> degrees.
       </p>
       <p>
-        Example: <code>right (90)</code>
-      </p>
-    </li>
-    <li>
-      left(<em>angle</em>)
-      <p>
-        Turn the turtle to the left <em>angle</em> degrees.
-      </p>
-      <p>
-        Example: <code>left (90)</code>
+        Example: <code>కుడి_వైపు_తిరుగు(90)</code>
       </p>
     </li>
     <li>
-      penup() | up() | pu()
+      ఎడమ_వైపు_తిరుగు(<em>కోణము</em>)
+      <p>
+        Turn the turtle to the left <em>కోణము</em> degrees.
+      </p>
+      <p>
+        Example: <code>ఎడమ_వైపు_తిరుగు(90)</code>
+      </p>
+    </li>
+    <li>
+      కలమును_పైకి_ఎత్తు() | కలమును_పైకి_ఎత్తు() | కలమును_పైకి_ఎత్తు()
       <p>
          Lift the pen in the turtle so that it does not leave a mark as
          it moves.
       </p>
       <p>
-         Example: <code>penup()</code>
+         Example: <code>కలమును_పైకి_ఎత్తు()</code>
       </p>
     </li>
     <li>
-      pendown() | down() | pd()
+      కలమును_కింద_పెట్టు() | down() | pd()
       <p>
         Lower the pen in the turtle so that it leaves a mark as
         it moves.
       </p>
       <p>
-        Example: <code>pendown()</code>
+        Example: <code>కలమును_కింద_పెట్టు()</code>
       </p>
     </li>
     <li>
-      hideturtle() | ht()
+      తాబేలును_దాచు() | ht()
       <p>
         Hide the turtle. It can still draw, but it isn't shown.
 	Hiding the turtle is useful in complex drawing as there
 	is significant speed up in not drawing the turtle.
       </p>
       <p>
-        Example: <code>hideTurtle()</code>
+        Example: <code>తాబేలును_దాచు()</code>
       </p>
     </li>
     <li>
-      showturtle() | st()
+      తాబేలును_చూపు() | st()
       <p>
         Show the turtle.
       </p>
       <p>
-        Example: <code>showTurtle()</code>
+        Example: <code>తాబేలును_చూపు()</code>
       </p>
     </li>
     <li>
       home()
       <p>
         Move the turtle to its home in the center
-        (x=0, y=0) and pointing toward the top (angle=0).
+        (x=0, y=0) and pointing toward the top (కోణము=0).
 	Leave the graphics as they are.
       </p>
       <p>
@@ -164,7 +164,7 @@ also roll in the tutorial stuff
       reset()
       <p>
         Clear the graphics area and move the turtle to its home in the center
-        (x=0, y=0) and pointing toward the top (angle=0).
+        (x=0, y=0) and pointing toward the top (కోణము=0).
       </p>
       <p>
         Example: <code>reset()</code>
@@ -206,15 +206,15 @@ also roll in the tutorial stuff
       </p>
     </li>
     <li>
-      angle(<em>angle</em>) | setheading(<em>angle</em>) | seth(<em>angle</em>)
+      కోణము(<em>కోణము</em>) | setheading(<em>కోణము</em>) | seth(<em>కోణము</em>)
       <p>
-        Turn the turtle to to the absolute <em>angle</em> relative to top
+        Turn the turtle to to the absolute <em>కోణము</em> relative to top
         of the graphic area. <em>0</em> is the top, <em>0</em> is toward the top,
         <em>90</em> is toward the right, <em>180</em> is toward the bottom, and
         <em>270</em> <em>-90</em> is toward the left.
       </p>
       <p>
-        Example: <code>angle (90)</code>
+        Example: <code>కోణము (90)</code>
       </p>
     </li>
     <li>
@@ -430,10 +430,10 @@ also roll in the tutorial stuff
         <em>n</em> times.
       </p>
       <p>
-        Example: <code>repeat (4, function () {forward(10);right(90)})</code>
+        Example: <code>repeat (4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
       </p>
       <p>
-        Example: <code>function el () {forward(10);right(90)}; repeat (4, el)</code>
+        Example: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; repeat (4, el)</code>
       </p>
     </li>
     <li>
@@ -455,13 +455,13 @@ also roll in the tutorial stuff
         Evalutes <em>action</em> every <em>ms</em> milliseconds.
       </p>
       <p>
-        Example: <code>animate ("forward(10)",100)</code>
+        Example: <code>animate ("ముందుకు_జరుగు(10)",100)</code>
       </p>
       <p>
-        Example: <code>animate ("forward(100);right(90);",100)</code>
+        Example: <code>animate ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
       </p>
       <p>
-        Example: <code>function el () {forward(100);right(90)}; animate (el,100)</code>
+        Example: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; animate (el,100)</code>
       </p>
     </li>
     <li>
@@ -470,13 +470,13 @@ also roll in the tutorial stuff
         Evalutes <em>action</em> after a delay of <em>ms</em> milliseconds.
       </p>
       <p>
-        Example: <code>delay ("forward(10)",1000)</code>
+        Example: <code>delay ("ముందుకు_జరుగు(10)",1000)</code>
       </p>
       <p>
-        Example: <code>delay ("forward(100);right(90);",1000)</code>
+        Example: <code>delay ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",1000)</code>
       </p>
       <p>
-        Example: <code>function el() {forward(100);right(90); delay (el,100)};el()</code>
+        Example: <code>function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
       </p>
     </li>
 	 <!-- this can be done just by hiding the turtle

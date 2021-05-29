@@ -19,10 +19,10 @@ systems being used. These are:
     * arcs are referenced with 0 at 3 o'clock going clockwise
   - cartesian coodinates
     * origin is at center with positive up
-    * 0 angle is at 3 o'clock going counterclockwise
+    * 0 కోణము is at 3 o'clock going counterclockwise
   - the turtle graphic space.
     * Origin at center to mimic cartesian coordinates
-    * heading is referenced with 0 angle at 12 o'clock going clockwise
+    * heading is referenced with 0 కోణము at 12 o'clock going clockwise
 
 Canvases:
 
@@ -69,7 +69,7 @@ function Pos (x,y) {
 
 function Turtle () {
   this.pos = new Pos(0,0)
-  this.angle = 0
+  this.కోణము = 0
   this.penDown = true
   this.width = 1
   this.visible = true // controls turtle visibility
@@ -82,7 +82,7 @@ function Turtle () {
 
 // initialize the state of the turtle
 var turtle = new Turtle();
-console.log("Tangle:" + turtle.angle + "Tfont: "+ turtle.font )
+console.log("Tangle:" + turtle.కోణము + "Tfont: "+ turtle.font )
 
 /*******************************************************************************
  * initialize -- initialize the turtle graphics system
@@ -94,7 +94,7 @@ console.log("Tangle:" + turtle.angle + "Tfont: "+ turtle.font )
 function initialize() {
   turtle.pos.x = 0
   turtle.pos.y = 0
-  turtle.angle = 0
+  turtle.కోణము = 0
   turtle.penDown = true
   turtle.width = 1
   turtle.visible = true
@@ -108,7 +108,7 @@ function initialize() {
                  x: 0,
                  y: 0
               },
-              angle: 0, //12 o'clock
+              కోణము: 0, //12 o'clock
               penDown: true,
               width: 1,
               visible: true, // controls turtle visibility
@@ -327,7 +327,7 @@ function draw() {
       // move the origin to the turtle center
       turtleContext.translate(x, y);
       // rotate about the center of the turtle
-      turtleContext.rotate(-turtle.angle);
+      turtleContext.rotate(-turtle.కోణము);
       // move the turtle back to its position
       turtleContext.translate(-x, -y);
       // draw the turtle icon
@@ -527,16 +527,16 @@ fillShape = fillshape;
 
 /*******************************************************************************
  * forward -- move the turtle forward, allowing for possible wrap-around
- *
+ * ముందుకు_జరుగు 
  * arguments:
- *   distance: number of pixels to move forward
+ *   distance: number of pixels to move ముందుకు_జరుగు
  *
  * returns: None
  ******************************************************************************/
-function forward(distance) {
+function ముందుకు_జరుగు(distance) {
    // define some local variables and functions
-   var cosAngle = Math.cos(turtle.angle);
-   var sinAngle = Math.sin(turtle.angle);
+   var cosAngle = Math.cos(turtle.కోణము);
+   var sinAngle = Math.sin(turtle.కోణము);
    var entryX;
    var entryY;
    var newX;
@@ -637,11 +637,11 @@ function forward(distance) {
    }
 }
 
-fd = forward;
+fd = ముందుకు_జరుగు;
 
 
 /*******************************************************************************
- * backward -- move the turtle backward, allowing for possible wrap-around
+ * వెనుకకు_జరుగు -- move the turtle backward, allowing for possible wrap-around
  *
  * arguments:
  *   distance: number of pixels to move backward
@@ -650,49 +650,49 @@ fd = forward;
  *
  * returns: None
  ******************************************************************************/
-function backward (distance) {
-  right (180);
-  forward (distance);
-  right (180);
+function వెనుకకు_జరుగు(distance) {
+  కుడి_వైపు_తిరుగు(180);
+  ముందుకు_జరుగు(distance);
+  కుడి_వైపు_తిరుగు(180);
 }
 
-bk = backward;
-back = backward;
+bk = వెనుకకు_జరుగు;
+back = వెనుకకు_జరుగు;
 
 
 /*******************************************************************************
- * right -- turn the turtle right a number of degrees
- *
+ * కుడి_వైపు_తిరుగు -- turn the turtle right a number of degrees
+ * కుడి_వైపు_తిరుగు 
  * arguments:
- *   angle: angle in degrees to turn
+ *   కోణము: కోణము in degrees to turn
  *
  * returns: None
  ******************************************************************************/
-function right(angle) {
-   turtle.angle += degToRad(angle);
+function కుడి_వైపు_తిరుగు(కోణము) {
+   turtle.కోణము += degToRad(కోణము);
    drawIf();
 }
 
-turn = right;
-rt = right;
+turn = కుడి_వైపు_తిరుగు;
+rt = కుడి_వైపు_తిరుగు;
 
 
 /*******************************************************************************
- * left -- turn the turtle left a number of degrees
+ * ఎడమ_వైపు_తిరుగు -- turn the turtle left a number of degrees
  *
  * arguments:
- *   angle: angle in degrees to turn
+ *   కోణము: కోణము in degrees to turn
  *
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function left(angle) {
-   turtle.angle -= degToRad(angle);
+function ఎడమ_వైపు_తిరుగు(కోణము) {
+   turtle.కోణము -= degToRad(కోణము);
    drawIf();
 }
 
-lt = left;
+lt = ఎడమ_వైపు_తిరుగు;
 
 
 
@@ -710,12 +710,12 @@ function curveleft (radius, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
-  var startAngle = turtle.angle; // in radians from 12 o'clock .. heading is same as start
+  var startAngle = turtle.కోణము; // in radians from 12 o'clock .. heading is same as start
   var counterclockwise = true;
-  var centerX = turtle.pos.x - radius * Math.cos (turtle.angle); // left of turtle
-  var centerY = turtle.pos.y + radius * Math.sin (turtle.angle);
+  var centerX = turtle.pos.x - radius * Math.cos (turtle.కోణము); // left of turtle
+  var centerY = turtle.pos.y + radius * Math.sin (turtle.కోణము);
   stopAngle = constrain( (startAngle - degToRad(extent)), 0, 2*Math.PI); // in radians CCW
-  turtle.angle = stopAngle;
+  turtle.కోణము = stopAngle;
   turtle.pos.x = centerX + radius * Math.cos(stopAngle);
   turtle.pos.y = centerY - radius * Math.sin(stopAngle);
 
@@ -766,12 +766,12 @@ function curveright (radius, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
-  var startAngle = Math.PI + turtle.angle; // in radians .. heading is same as start
+  var startAngle = Math.PI + turtle.కోణము; // in radians .. heading is same as start
   var counterclockwise = false;
-  var centerX = turtle.pos.x + radius * Math.cos (turtle.angle); // right of turtle
-  var centerY = turtle.pos.y - radius * Math.sin (turtle.angle);
+  var centerX = turtle.pos.x + radius * Math.cos (turtle.కోణము); // right of turtle
+  var centerY = turtle.pos.y - radius * Math.sin (turtle.కోణము);
   stopAngle = constrain( startAngle + degToRad(extent), 0, 2*Math.PI); // in radians CW
-  turtle.angle = stopAngle + Math.PI;
+  turtle.కోణము = stopAngle + Math.PI;
   turtle.pos.x = centerX + radius * Math.cos(stopAngle);
   turtle.pos.y = centerY - radius * Math.sin(stopAngle);
 
@@ -809,7 +809,7 @@ function circle(radius, extent, CW) {
   if (CW === undefined) {
     CW = true;
   }
-  startAngle = turtle.angle - Math.PI/2; // translate turtle to normal canvas coordinate
+  startAngle = turtle.కోణము - Math.PI/2; // translate turtle to normal canvas coordinate
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
@@ -853,10 +853,10 @@ dx and dy are the center of the arc
 so this translates "circle (radius, extent, CW)" roughly to:
 
 need to compute path start, path end and circle center
-angle start = turtle.heading
+కోణము start = turtle.heading
 circle center = turtle.pos
-path start = turtle.pos.x + radius * Math.cos( turtle.angle), turtle.pos.y + radius * Math.sin( turtle.angle)
-path end = turtle.pos.x + radius * Math.cos( turtle.angle + extent), turtle.pos.y + radius * Math.sin( turtle.angle + extent)
+path start = turtle.pos.x + radius * Math.cos( turtle.కోణము), turtle.pos.y + radius * Math.sin( turtle.కోణము)
+path end = turtle.pos.x + radius * Math.cos( turtle.కోణము + extent), turtle.pos.y + radius * Math.sin( turtle.కోణము + extent)
 <path ... d="M <pathStartX> <pathStartY a <radius> <radius> 0 1 0 circleCenterX circleCenterY l pathEndX pathEndY
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
@@ -894,51 +894,51 @@ function dot(size) {
 
 
 /*******************************************************************************
- * penup -- lift the turtle pen up (set marking state to false)
- *
+ * కలమును_పైకి_ఎత్తు -- lift the turtle pen up (set marking state to false)
+ * కలమును_పైకి_ఎత్తు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function penup() {
+function కలమును_పైకి_ఎత్తు() {
   turtle.penDown = false;
 }
 
-pu = penup;
-up = penup;
-penUp = penup;
+pu = కలమును_పైకి_ఎత్తు;
+up = కలమును_పైకి_ఎత్తు;
+penUp = కలమును_పైకి_ఎత్తు;
 
 
 /*******************************************************************************
- * pendown -- drop the turtle pen (set marking state to true)
- *
+ * కలమును_కింద_పెట్టు -- drop the turtle pen (set marking state to true)
+ * కలమును_కింద_పెట్టు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function pendown() {
+function కలమును_కింద_పెట్టు() {
   turtle.penDown = true;
 }
 
-pd = pendown;
-down = pendown;
-penDown = pendown;
+pd = కలమును_కింద_పెట్టు;
+down = కలమును_కింద_పెట్టు;
+penDown = కలమును_కింద_పెట్టు;
 
 
 /*******************************************************************************
- * hideturtle -- do not draw the turtle
- *
+ * తాబేలును_దాచు -- do not draw the turtle
+ * తాబేలును_దాచు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function hideturtle() {
+function తాబేలును_దాచు() {
    turtle.visible = false;
    drawIf();
 }
 
-ht = hideturtle;
-hideTurtle = hideturtle;
+ht = తాబేలును_దాచు;
+hideTurtle = తాబేలును_దాచు;
 
 
 /*******************************************************************************
@@ -948,13 +948,13 @@ hideTurtle = hideturtle;
  *
  * returns: None
  ******************************************************************************/
-function showturtle() {
+function తాబేలును_చూపు() {
    turtle.visible = true;
    drawIf();
 }
 
-st = showturtle;
-showTurtle = showturtle;
+st = తాబేలును_చూపు;
+showTurtle = తాబేలును_చూపు;
 
 
 /*******************************************************************************
@@ -1012,21 +1012,21 @@ setY = sety;
 
 
 /*******************************************************************************
- * angle -- set the angle of the turtle in degrees
+ * కోణము -- set the కోణము of the turtle in degrees
  *
  * arguments:
- *   angle: (int) angle in degrees clockwise from the top center.
+ *   కోణము: (int) కోణము in degrees clockwise from the top center.
  *
  * returns: None
  ******************************************************************************/
-function angle(ang) {
-   turtle.angle = degToRad(ang);
+function కోణము(ang) {
+   turtle.కోణము = degToRad(ang);
    drawIf();
 }
 
-setheading = angle;
-setHeading = angle;
-seth = angle;
+setheading = కోణము;
+setHeading = కోణము;
+seth = కోణము;
 
 
 /*******************************************************************************
@@ -1071,7 +1071,7 @@ function write(msg) {
    centerCoords(imageContext);
    imageContext.translate(turtle.pos.x, turtle.pos.y);
    imageContext.transform(1, 0, 0, -1, 0, 0);
-   imageContext.rotate(turtle.angle - Math.PI/2);
+   imageContext.rotate(turtle.కోణము - Math.PI/2);
    imageContext.textAlign = "left";
    imageContext.textBaseline = "bottom";
    imageContext.fillStyle = turtle.color;
@@ -1207,7 +1207,7 @@ colour = color;
  *
  * arguments:
  *   font: string defining the font characteristics (style, variant, weight, size,
- *         and font-family for subsequent writes.
+ *         and font-family for fi ads a subsequent writes.
  *         Example: setfont("italic small-caps bold 12px courier")
  *
  * returns: None
@@ -1362,7 +1362,7 @@ function radToDeg(rad) {
 
 
 /*******************************************************************************
- * constrain -- constrain an angle to between high and low limits
+ * constrain -- constrain an కోణము to between high and low limits
  *
  * arguments: None
  *   n: (int or float) number which may be contrained
@@ -1392,7 +1392,7 @@ function saveTurtleState(tState) {
   //what about the font
   tState.pos.x = turtle.pos.x
   tState.pos.y = turtle.pos.y
-  tState.angle = turtle.angle
+  tState.కోణము = turtle.కోణము
   tState.penDown = turtle.penDown
   tState.width = turtle.width
   tState.visible = turtle.visible
@@ -1411,7 +1411,7 @@ function restoreTurtleState(tState) {
   //what about the font
   turtle.pos.x = tState.pos.x
   turtle.pos.y = tState.pos.y
-  turtle.angle = tState.angle
+  turtle.కోణము = tState.కోణము
   turtle.penDown = tState.penDown
   turtle.width = tState.width
   turtle.visible = tState.visible
@@ -1432,7 +1432,7 @@ function restoreTurtleState(tState) {
 function logTurtle( where) {
   // t is an object defining the state of a turtle
   if (where === undefined) where = "???"
-  console.log (where + " x:" + turtle.pos.x + " y:" + turtle.pos.y + " angle:" + turtle.angle + " color:" + turtle.color)
+  console.log (where + " x:" + turtle.pos.x + " y:" + turtle.pos.y + " కోణము:" + turtle.కోణము + " color:" + turtle.color)
   console.log ("  penDown:" + turtle.penDown + " width:" + turtle.width + " visible:" + turtle.visible)
   console.log ("  redraw:" + turtle.redraw + " shape:" + turtle.shape + " wrap:" + turtle.wrap)
   console.log ("  font:" + turtle.font)

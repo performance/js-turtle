@@ -26,7 +26,7 @@
 // this means that
 // side0 = side4 = side3 = side2 = side1... equalateral
 
-ang0 = 360/6 //point angle
+ang0 = 360/6 //point కోణము
 ang1 = 160
 ang2 = 80
 ang3 = 100
@@ -115,17 +115,17 @@ function pentagon(side, fColor) {
   // direction of the point
   // invariant
   beginShape()
-  left( ang0/2)
-  forward( side)
-  right( 180 - ang1)
-  forward( side)
-  right( 180 - ang2)
-  forward( side)
-  right( 180 - ang3)
-  forward( side)
-  right( 180 - ang4)
-  forward( side)
-  right( 180 - ang0/2)
+  ఎడమ_వైపు_తిరుగు( ang0/2)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - ang1)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - ang2)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - ang3)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - ang4)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - ang0/2)
   fillShape( fColor)
 }
 
@@ -136,14 +136,14 @@ function p(pNum, ccw, side, fColor) {
     r = 1
   }
   beginShape()
-  left( angles[pNum]/2)
+  ఎడమ_వైపు_తిరుగు( angles[pNum]/2)
   for (var i=1; i<5; i++) {
-    forward( side)
+    ముందుకు_జరుగు( side)
     //write( angles[(i+pNum)%5])
-    right( 180 - angles[(5+r*i+pNum)%5])  
+    కుడి_వైపు_తిరుగు( 180 - angles[(5+r*i+pNum)%5])  
   }
-  forward( side)
-  right( 180 - angles[pNum]/2)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - angles[pNum]/2)
   fillShape( fColor)
 }
 
@@ -151,217 +151,217 @@ function hirchhorn(side) {
   for (var i=0; i<6; i++) {
     //pentagon( s, fColors[colorlayer])
     p( 0, CW, side, fColors[colorlayer])
-    left( 60)
+    ఎడమ_వైపు_తిరుగు( 60)
   }
   colorlayer++
 
-  left(30)
+  ఎడమ_వైపు_తిరుగు(30)
   for (var i=0; i<6; i++) {
-    forward( side)
-    left( 10)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 10)
     //pentagon( s, fColors[colorlayer])
     p( 0, CW, side, fColors[colorlayer])
-    right( 10)
-    backward( side)
-    left( 60)
+    కుడి_వైపు_తిరుగు( 10)
+    వెనుకకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 60)
   }
   colorlayer++
 
   for (var i=0; i<6; i++) {
-    forward( side)
-    right( 180 - ang1)
-    forward( side)
-    left( 180 - ang4 - ang4/2 )
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang1)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang4 - ang4/2 )
 
     p ( 4, 0, side, fColors[colorlayer])
-    right( 180 - ang4 - ang4/2 )
-    backward( side)
-    left( 180 - ang1)
-    backward(side)
-    left( 60)
+    కుడి_వైపు_తిరుగు( 180 - ang4 - ang4/2 )
+    వెనుకకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang1)
+    వెనుకకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 60)
   }
   colorlayer++
   
-  forward( side)
-  right( 180 - ang1)
-  forward( side)
-  left( 180 - ang4)
-  forward( side)
-  left( 180 - ang3 - ang0/2)
+  ముందుకు_జరుగు( side)
+  కుడి_వైపు_తిరుగు( 180 - ang1)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 180 - ang4)
+  ముందుకు_జరుగు( side)
+  ఎడమ_వైపు_తిరుగు( 180 - ang3 - ang0/2)
   
   cl = colorlayer
   for( var i=0; i<18; i++) {
     colorlayer = cl
     p( 0, CCW, side, fColors[colorlayer])
     colorlayer++
-    right( ang0/2)
-    forward( side)
-    left( 180 - ang1 - ang3/2)
+    కుడి_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang1 - ang3/2)
     p( 3, CCW, side, fColors[colorlayer])
     colorlayer++
-    right( ang3/2)
+    కుడి_వైపు_తిరుగు( ang3/2)
 
-    forward(side)
-    left( 180- ang4 - ang0/2)
+    ముందుకు_జరుగు(side)
+    ఎడమ_వైపు_తిరుగు( 180- ang4 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    left( 180 - ang0)
-    forward( side)
-    right( 180 - ang0/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])//purple
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    right( 180- ang1)
-    forward( side)
-    right( 180 - ang2 - ang2/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180- ang1)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang2 - ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( 180 - ang3)
-    forward( side)
-    left( 180 - ang4 - ang0/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang3)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang4 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    left( 180 - ang0)
-    forward( side)
-    right( 180 - ang0/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    left( 180 - ang0)
-    forward( side)
-    right( 180 - ang0/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    right( 180 - ang1)
-    forward( side)
-    right( 180 - ang2 - ang2/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang1)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang2 - ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2)
-    forward( side)
-    left( 180 - ang4 - ang0/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang4 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    left( 180 - ang0)
-    forward( side)
-    right( 180 - ang0/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    left( 180 - ang0)
-    forward( side)
-    right( 180 - ang0/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    left( 180 - ang0)
-    forward( side)
-    right( 180 - ang0/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0/2)
     p( 0, CW, side, fColors[colorlayer])
     colorlayer++
 
-    left( ang0/2)
-    forward( side)
-    right( 180 - ang1)
-    forward( side)
-    right( 180 - ang2 - ang2/2)
+    ఎడమ_వైపు_తిరుగు( ang0/2)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang1)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang2 - ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
-    right( ang2/2)
-    forward( side)
-    left( ang2/2)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    ఎడమ_వైపు_తిరుగు( ang2/2)
     p( 2, CCW, side, fColors[colorlayer])
     colorlayer++
 
     // and back again
-    right( ang2/2)
-    forward( side)
-    right( 180 - ang3)
+    కుడి_వైపు_తిరుగు( ang2/2)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang3)
 
-    forward( side)
-    right( 180 - ang4)
-    forward( side)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang4)
+    ముందుకు_జరుగు( side)
 
-    right( 180 - ang0 - ang4)
-    forward( side)
-    right( 180 - ang3 - ang3)
-    forward( side)
-    right( 180 - ang4)
-    forward( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0 - ang4)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang3 - ang3)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang4)
+    ముందుకు_జరుగు( side)
 
-    right( 180 - ang0 - ang4)
-    forward( side)
-    right( 180 - ang3 - ang3)
-    forward( side)
-    right( 180 - ang4)
-    forward( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0 - ang4)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang3 - ang3)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang4)
+    ముందుకు_జరుగు( side)
 
-    right( 180 - ang0 - ang4)
-    forward( side)
+    కుడి_వైపు_తిరుగు( 180 - ang0 - ang4)
+    ముందుకు_జరుగు( side)
 
-    right( 180 - ang3 - ang1)
-    forward( side)
+    కుడి_వైపు_తిరుగు( 180 - ang3 - ang1)
+    ముందుకు_జరుగు( side)
 
-    right( 180 - ang0)
-    forward( side)
-    right( 180 - ang4 - ang0/2)
+    కుడి_వైపు_తిరుగు( 180 - ang0)
+    ముందుకు_జరుగు( side)
+    కుడి_వైపు_తిరుగు( 180 - ang4 - ang0/2)
 
   }
   

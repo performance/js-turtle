@@ -19,7 +19,7 @@ function explain( text) {
   var cHeight = 2* maxY();
   var lineNumber = 0;
   goto(-.90 * cWidth + maxX(), .9 * cHeight - maxY());
-  angle(90);
+  కోణము(90);
   setfont("bold 20px arial,sans-serif");
 
   var lines = text.split("@");
@@ -29,7 +29,7 @@ function explain( text) {
     write (lines[i]);
     lineNumber = lineNumber + 1;
   }
-  hideTurtle();
+  తాబేలును_దాచు();
 }
 
 function textDemo () {
