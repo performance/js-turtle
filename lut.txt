@@ -1,0 +1,51 @@
+function Pos (x,y) { // స్థానము
+function Turtle () { // తాబేలు
+function initialize() { // 
+function drawIf() {
+function draw() {
+function centerCoords (context) {
+function clear() {
+function clearContext(context) {
+function reset() {
+function home() {
+function stopAnimation() {
+function redrawOnMove(bool) {
+function wrap(bool) {
+function beginshape() {
+function fillshape( styl) {
+function forward(distance) {
+function backward (distance) {
+function right(angle) {
+function left(angle) {
+function curveleft (radius, extent) {
+function curveright (radius, extent) {
+function circle(radius, extent, CW) {
+function dot(size) {
+function penup() {
+function pendown() {
+function hideturtle() {
+function showturtle() {
+function goto(x,y) {
+function setx(x) {
+function sety(y) {
+function angle(ang) {
+function background(styl) {
+function write(msg) {
+function random(low, high) {
+function repeat(n, action) {
+function sleep(ms) {
+function width(w) {
+function color (col) {
+function setfont(font) {
+function maxX () {
+function minX () {
+function maxY () {
+function minY () {
+function animate(f, ms) {
+function delay(f, ms) {
+function degToRad(deg) {
+function radToDeg(rad) {
+function constrain(n, low, high) {
+function saveTurtleState(tState) {
+function restoreTurtleState(tState) {
+function logTurtle( where) {

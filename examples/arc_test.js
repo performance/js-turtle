@@ -2,7 +2,7 @@
 // this draws five figures
 
 function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir) {
-  goto(x,y);
+  స్థితి_మార్చు(x,y);
   penup();
   angle(armAngle);
   forward(startRadius);
@@ -39,11 +39,11 @@ function roundedOctogonL (side, radius) {
 
 
 function circleEyeR (x, y, n, outerRadius) {
-  goto (x, y);
+  స్థితి_మార్చు (x, y);
   circle (outerRadius); //outer circle
 
   for (var i=0; i<n; i++) {
-    goto (x, y);
+    స్థితి_మార్చు (x, y);
     angle (i/n * 360);
     penup();
     forward (outerRadius);
@@ -55,11 +55,11 @@ function circleEyeR (x, y, n, outerRadius) {
 }
 
 function circleEyeL (x, y, n, outerRadius) {
-  goto (x, y);
+  స్థితి_మార్చు (x, y);
   circle (outerRadius); //outer circle
 
   for (var i=0; i<n; i++) {
-    goto (x, y);
+    స్థితి_మార్చు (x, y);
     angle (i/n * 360);
     penup();
     forward (outerRadius);
@@ -107,10 +107,10 @@ function demo () {
   }
   
 
-  goto(h2, v1);
+  స్థితి_మార్చు(h2, v1);
   circle(60/60 * tSize);
 
-  goto( h1, v2)
+  స్థితి_మార్చు( h1, v2)
   angle(0)
   oRadius = cellSize/2 * .9
   cRadius = .3 * oRadius
@@ -124,7 +124,7 @@ function demo () {
   backward(side/2)
   roundedOctogon( side, cRadius)
 
-  goto( h1, v2)
+  స్థితి_మార్చు( h1, v2)
   angle(0)
   oRadius = cellSize/2 * .8
   cRadius = .3 * oRadius
@@ -138,7 +138,7 @@ function demo () {
   backward(side/2)
   roundedOctogon( side, cRadius)
 
-  goto( h1, v2)
+  స్థితి_మార్చు( h1, v2)
   angle(22.5)
   oRadius = cellSize/2 * .7
   cRadius = .3 * oRadius
@@ -152,7 +152,7 @@ function demo () {
   backward(side/2)
   roundedOctogon( side, cRadius)
 
-  goto( h1, v2)
+  స్థితి_మార్చు( h1, v2)
   angle(22.5)
   oRadius = cellSize/2 * .6
   cRadius = .3 * oRadius

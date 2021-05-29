@@ -958,24 +958,25 @@ showTurtle = showturtle;
 
 
 /*******************************************************************************
- * goto -- move the turtle to an x,y position without leaving a mark
- *
+ * స్థితి_మార్చు -- move the turtle to an x,y position without leaving a mark
+ * స్థితి_మార్చు
  * arguments:
  *   x: x coordinate
  *   y: y coordinate
  *
  * returns: None
  ******************************************************************************/
-function goto(x,y) {
+function స్థితి_మార్చు(x,y) {
    turtle.pos.x = x;
    turtle.pos.y = y;
    drawIf();
 }
 
-setposition = goto;
-setpos = goto;
-setPosition = goto;
-setPos = goto;
+setposition = స్థితి_మార్చు;
+setpos = స్థితి_మార్చు;
+setPosition = స్థితి_మార్చు;
+setPos = స్థితి_మార్చు;
+goto = స్థితి_మార్చు;
 
 
 /*******************************************************************************
