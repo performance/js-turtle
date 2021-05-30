@@ -17,7 +17,7 @@ function square (side) {
 
 function demo() {
    ఆది_స్థితి();
-   తాబేలును_దాచు();
+   కుంచికను_దాచు();
    రంగు( నీలము );
    var side = 100;
    while (side > 0) {

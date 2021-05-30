@@ -30,16 +30,16 @@ function hRect( sSide, lSide, fColor) {
 function demo() {
   ఆది_స్థితి()
   count = 0
-  yB = maxY() + sSide
-  xB = minX()
+  yB = గరిష్ఠY() + sSide
+  xB = కనిష్ఠX()
   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
   రంగు( తెలుపు )
 
   s = 50
-  while( turtle.pos.y > minY()) {
+  while( turtle.pos.y > కనిష్ఠY()) {
     goto (xB, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
@@ -49,7 +49,7 @@ function demo() {
     yB = yB - sSide
 
     goto (xB - lSide/2, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
@@ -59,7 +59,7 @@ function demo() {
     yB = yB - sSide
 
     goto (xB - lSide, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
@@ -69,7 +69,7 @@ function demo() {
     yB = yB - sSide
 
     goto (xB - 3/2 * lSide, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")

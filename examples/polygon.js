@@ -11,12 +11,12 @@ function polygon(sides,side) {
 // draw a random polygon
 function demo() {
    ఆది_స్థితి();
-   side = maxY()
-   if (maxX() < side) {
-     side = maxX()
+   side = గరిష్ఠY()
+   if (గరిష్ఠX() < side) {
+     side = గరిష్ఠX()
    }
    side = .4 *side
    goto(-.4 * side, -.5 * side)
-   తాబేలును_దాచు();
+   కుంచికను_దాచు();
    polygon( random( 3,10), side);
 }

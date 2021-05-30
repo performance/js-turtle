@@ -13,17 +13,17 @@ function drawTile (h,w, tc, x, y) {
 }
 
 function cafeTiles (h, w, gw, gc, off) {
-  maxRow = 2*maxY()/h
-  maxCol = 2*maxX()/w
+  maxRow = 2*గరిష్ఠY()/h
+  maxCol = 2*గరిష్ఠX()/w
   వెడల్పు(gw)
   రంగు(gc)
-  setHeading(0)
+  దిశ_మార్చు(0)
   for (var row=0; row<maxRow; row=row+1) {
     for (var col=0; col<maxCol; col=col+1) {
       if (col%2) {
-        drawTile( h, w, "white", minX()+col*(w+gw/2)+(row%2*w*off), minY()+ row*(h+gw/2))
+        drawTile( h, w, "white", కనిష్ఠX()+col*(w+gw/2)+(row%2*w*off), కనిష్ఠY()+ row*(h+gw/2))
       } else {
-        drawTile( h, w, "black", minX()+col*(w+gw/2)+(row%2*w*off), minY()+ row*(h+gw/2))
+        drawTile( h, w, "నలుపు", కనిష్ఠX()+col*(w+gw/2)+(row%2*w*off), కనిష్ఠY()+ row*(h+gw/2))
       }
     }
   }
@@ -33,8 +33,8 @@ function cafeTiles (h, w, gw, gc, off) {
 
 function demo () {
   ఆది_స్థితి();
-  size = Math.min( maxX(), maxY()) * .9
-  తాబేలును_దాచు();
+  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
+  కుంచికను_దాచు();
 
   var tileHeight = 50
   var tileWidth = 50

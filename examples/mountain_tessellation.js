@@ -68,17 +68,17 @@ function demo() {
   ఆది_స్థితి()
   wrap(false)
   side = 20
-  rowx = minX() - side // - 5.5 * side
-  rowy = minY()// +2*side
+  rowx = కనిష్ఠX() - side // - 5.5 * side
+  rowy = కనిష్ఠY()// +2*side
   కుడి_వైపు_తిరుగు(90)
   mx = rowx
   my = rowy
 
-console.log("xy<: " + minX() + " " + minY())
+console.log("xy<: " + కనిష్ఠX() + " " + కనిష్ఠY())
   // row until run off bottom or off right side
   // column when end is off screen
 
-  // while ( x<maxX() && y>minY()) {
+  // while ( x<గరిష్ఠX() && y>కనిష్ఠY()) {
   var done = false
   var i = 0
   var sqrt3 = Math.sqrt(3)
@@ -92,22 +92,22 @@ console.log("xy: " + i + " " + mx + " " + my)
     mx = mx + 4.5 * side
     my = my -sqrt3/2 * side
 
-    if (mx > maxX() || my < (minY() - 1.5 * sqrt3 * side)) {
+    if (mx > గరిష్ఠX() || my < (కనిష్ఠY() - 1.5 * sqrt3 * side)) {
       console.log( "New row")
-      if (my > maxY()) {
+      if (my > గరిష్ఠY()) {
         done = true
       }
       // move up one row
       rowx = rowx + 0.5 * side
       rowy = rowy + 1.5 * sqrt3 * side
-      if (rowy > maxY() + sqrt3 * side) {
-        while (rowy> maxY() + sqrt3 * side) {
+      if (rowy > గరిష్ఠY() + sqrt3 * side) {
+        while (rowy> గరిష్ఠY() + sqrt3 * side) {
           // step forward one more unit
            console.log( "Stepping forward one")
            rowx = rowx + 4.5 * side
            rowy = rowy - sqrt3/2 * side
         }
-      } else if (rowx > minX() - 1 * side) {
+      } else if (rowx > కనిష్ఠX() - 1 * side) {
          console.log( "Backing up one")
          // back up one more unit
          rowx = rowx - 4.5 * side
@@ -120,7 +120,7 @@ console.log("xy: " + i + " " + mx + " " + my)
     if (i> 75) {
       done = true
     }
-    if ( mx>maxX() + 500  && my>maxY()) {
+    if ( mx>గరిష్ఠX() + 500  && my>గరిష్ఠY()) {
       done = true
     }
     i++

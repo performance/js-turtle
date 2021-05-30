@@ -226,7 +226,7 @@ separate selector from the example selector].
 *  [ ] can a pause button be implemented? -- just an asyncronous event
 *  [ ] resume uses the play/run button. If pause in progress, resume, else play from start
 
-*  [ ] ఆది_స్థితి() sets stokeStyle to "black". is that complete?
+*  [ ] ఆది_స్థితి() sets stokeStyle to "నలుపు". is that complete?
    [ ] see also other references...
 
 * [ ] decahedron graph does not auto start while animation in progress

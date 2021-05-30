@@ -113,11 +113,11 @@ function displayBinaryDots(hSpacing, vSpacing) {
 function displayTime() {
   చెరిపి_వేయి()
   కోణము(180)
-  spacing = Math.min(maxX(), maxY()) *1.8/6
+  spacing = Math.min(గరిష్ఠX(), గరిష్ఠY()) *1.8/6
   hSpacing = spacing
   vSpacing = spacing
   వెడల్పు(spacing/10)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   getBinaryTime()
   displayBinaryDots(hSpacing, vSpacing)
 }

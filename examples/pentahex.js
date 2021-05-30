@@ -105,9 +105,9 @@ function drawAll() {
 function demo() {
   ఆది_స్థితి()
   wrap(false)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 
-  side =   Math.min( 2*maxX()/ 12/ 1.5, 2*maxY()/ 16/ Math.sqrt(3))
+  side =   Math.min( 2*గరిష్ఠX()/ 12/ 1.5, 2*గరిష్ఠY()/ 16/ Math.sqrt(3))
   //side = 20
 
   baseX = -5 * 1.5 * side

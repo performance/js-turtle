@@ -22,7 +22,7 @@ function divideCenter(radii, వ్యాసార్థము) {
     var step = 0
     while (step < radii) { // step off side
       ముందుకు_జరుగు(వ్యాసార్థము);
-      circle(వ్యాసార్థము);
+      వృత్తము(వ్యాసార్థము);
       step = step + 1
     };
     side = side + 1;
@@ -41,7 +41,7 @@ function tier () {
 
 function demo() {
   చెరిపి_వేయి();
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   home();
   కలమును_పైకి_ఎత్తు();
   wrap(false);

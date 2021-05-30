@@ -12,19 +12,19 @@ function drawDot () {
 }
 
 function drawRowOfDots () {
-  setpos(minX() + 20,0)
+  setpos(కనిష్ఠX() + 20,0)
   repeat (32, drawDot)
 }
 
 function colorChangingDots () {
   ఆది_స్థితి()
   wrap(false)
-  setpos(minX(),0)
+  setpos(కనిష్ఠX(),0)
   కోణము(90)
   కలమును_కింద_పెట్టు()
-  రంగు("black")
+  రంగు("నలుపు")
   వెడల్పు(80)
-  ముందుకు_జరుగు(maxX() + maxX()) //draw black band
+  ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX()) //draw black band
   కలమును_పైకి_ఎత్తు()
   వెడల్పు(1)
   animate( drawRowOfDots, 500)

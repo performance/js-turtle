@@ -66,11 +66,11 @@ fColors = [
            "బూడిద",
            "బూడిద",
            "బూడిద",
-           "black",
-           "black",
-           "black",
-           "black",
-           "black",
+           "నలుపు",
+           "నలుపు",
+           "నలుపు",
+           "నలుపు",
+           "నలుపు",
            ]
 /*
 fColors = [
@@ -102,11 +102,11 @@ fColors = [
            "బూడిద",
            "బూడిద",
            "బూడిద",
-           "black",
-           "black",
-           "black",
-           "black",
-           "black",
+           "నలుపు",
+           "నలుపు",
+           "నలుపు",
+           "నలుపు",
+           "నలుపు",
            ]
 */
 colorlayer = 0
@@ -370,6 +370,6 @@ function hirchhorn(side) {
 function demo() {
   ఆది_స్థితి()
   wrap(false)
-  size = .07* Math.min(maxX(), maxY())
+  size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())
   hirchhorn(size)
 }

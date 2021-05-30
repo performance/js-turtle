@@ -15,13 +15,13 @@ function squiggle(steps,కోణము) {
 
 function drawRandomSquiggle() {
   రంగు(random(16));
-  goto(random(minX(), maxX()), random(minY(), maxY()));
+  goto(random(కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()));
   కోణము(random(0,360));
   squiggle(random(100,1000), random(5,90));
 }
 
 function demo() {
   ఆది_స్థితి()
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   drawRandomSquiggle();
 }

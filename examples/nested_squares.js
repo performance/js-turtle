@@ -13,7 +13,7 @@ function square(side) {
 function nestedSquares(count) {
   చెరిపి_వేయి();
   goto(0,0);
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   for (s=1; s<count*4; s=s+4) {
     కలమును_పైకి_ఎత్తు();
     // move down and back 2 spaces
@@ -30,9 +30,9 @@ function nestedSquares(count) {
 
 function demo1() {
   ఆది_స్థితి()
-  size = 2* maxY()
-  if (2* maxX() < size) {
-    size = 2*maxX()
+  size = 2* గరిష్ఠY()
+  if (2* గరిష్ఠX() < size) {
+    size = 2*గరిష్ఠX()
   }
   number = .9 * size /4  // 4 is the difference in square size
   function nest25 () {
@@ -45,9 +45,9 @@ function demo1() {
 function demo() {
   // animate with function needing a parameter passed
   ఆది_స్థితి()
-  size = 2* maxY()
-  if (2* maxX() < size) {
-    size = 2*maxX()
+  size = 2* గరిష్ఠY()
+  if (2* గరిష్ఠX() < size) {
+    size = 2*గరిష్ఠX()
   }
   number = .9 * size /4  // 4 is the difference in square size
   animate( function () { nestedSquares(number)} ,200);

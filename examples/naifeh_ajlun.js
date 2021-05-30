@@ -31,7 +31,7 @@ function demo() {
   rows = 4
   columns = 5
 
-  side = 1.7 * Math.min(maxX()/(columns*3+1), maxY()/(rows*3+1))
+  side = 1.7 * Math.min(గరిష్ఠX()/(columns*3+1), గరిష్ఠY()/(rows*3+1))
 console.log ("side:"+side)
 
   // sides and angles of the quadrangle
@@ -66,6 +66,6 @@ console.log ("side:"+side)
     ముందుకు_జరుగు( shortSide + longSide)
     ఎడమ_వైపు_తిరుగు( 180)
     కలమును_కింద_పెట్టు()
-    తాబేలును_దాచు()
+    కుంచికను_దాచు()
   }
 }

@@ -10,13 +10,13 @@ function polygon(sides,side) {
 
 // draw a set of nested hexagons
 function demo() {
-   size = maxY()
-   if (maxX() < size) {
-     size = maxX()
+   size = గరిష్ఠY()
+   if (గరిష్ఠX() < size) {
+     size = గరిష్ఠX()
    }
    steps = size/10 // 10 is the step size
    ఆది_స్థితి();
-   తాబేలును_దాచు();
+   కుంచికను_దాచు();
    for(step=1; step < steps; step=step+1) {
       రంగు(random(16));
       polygon(6,step*10);

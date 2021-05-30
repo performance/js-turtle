@@ -68,7 +68,7 @@ function mizenSimple() {
   goto(-5*side, 3.5*side)
   వెడల్పు(1)
   కోణము(0)
-  mizen( side, "black", "red")
+  mizen( side, "నలుపు", "red")
 
   // do again to make lines stand out
   goto(-5*side, 3.5*side)
@@ -81,7 +81,7 @@ function demo() {
   ఆది_స్థితి()
   wrap(false)
   side = 40 // 1/2 basic face of hexagon, width...
-  side = .15 * Math.min( maxX(), maxY())
+  side = .15 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   mizenSimple()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

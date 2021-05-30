@@ -20,18 +20,18 @@ distances are known. This math is a bit tough.
 function demo() {
 	ఆది_స్థితి()
 	wrap(false)
-	తాబేలును_దాచు()
+	కుంచికను_దాచు()
 	size=200
 	step = 4
 	n = 2* size/step
 	goto(0,0)
-	circle( size)
+	వృత్తము( size)
 	goto(size,0)
 	for( var i=0; i< n; i=i+step){
-		arc(i * step, 180, false)
+		చాపము(i * step, 180, false)
 	}
 	goto(-size,0)
 	for( var i=0; i< n; i=i+step){
-		arc(i * step, 180, true)
+		చాపము(i * step, 180, true)
 	}
 }

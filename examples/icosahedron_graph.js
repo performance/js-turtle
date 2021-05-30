@@ -14,7 +14,7 @@ function pent(side) {
   var angle5 = 31
   var side5 = 1.27 * side
   for (var i=0; i<5; i++) {
-    రంగు("black")
+    రంగు("నలుపు")
     ముందుకు_జరుగు(side)
       ఎడమ_వైపు_తిరుగు(angle2)
 
@@ -24,7 +24,7 @@ function pent(side) {
       వెనుకకు_జరుగు(side3)
       ఎడమ_వైపు_తిరుగు(angle3)
 
-      రంగు("black")
+      రంగు("నలుపు")
       ముందుకు_జరుగు(side2)
 
       రంగు( నీలము )
@@ -52,21 +52,21 @@ function pent(side) {
       వెనుకకు_జరుగు(side3)
       ఎడమ_వైపు_తిరుగు(180-angle3)
 
-      రంగు("black")
+      రంగు("నలుపు")
       వెనుకకు_జరుగు(side2)
       కుడి_వైపు_తిరుగు(angle2)
 
     వెనుకకు_జరుగు(side)
     turn(72)
   }
-  circle(2.13*side)
+  వృత్తము(2.13*side)
 }
 
 function demo() {
   ఆది_స్థితి()
-  size = .4 * Math.min( maxX(), maxY())
+  size = .4 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   //goto (-50,-22)
   //కుడి_వైపు_తిరుగు(17)
   pent(size)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

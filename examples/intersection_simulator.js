@@ -183,45 +183,45 @@ testRates();
 //** Drawing functions **
 function drawEWstreet() {
   wrap(false);
-  setpos(minX(),0);
+  setpos(కనిష్ఠX(),0);
   కోణము(90);
   కలమును_కింద_పెట్టు();
-  రంగు("black");
+  రంగు("నలుపు");
   వెడల్పు(roadWidth);
-  ముందుకు_జరుగు(maxX() + maxX());
+  ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX());
 }
 
 function drawNSstreet() {
-  setpos(0,maxY());
+  setpos(0,గరిష్ఠY());
   కోణము(180);
   కలమును_కింద_పెట్టు();
-  రంగు("black");
+  రంగు("నలుపు");
   వెడల్పు(roadWidth);
-  ముందుకు_జరుగు(maxY() + maxY());
+  ముందుకు_జరుగు(గరిష్ఠY() + గరిష్ఠY());
 }
 
 function drawEWstripe() {
-  setpos(minX(),0);
+  setpos(కనిష్ఠX(),0);
   కోణము(90);
   రంగు( పసుపు );
   వెడల్పు(1);
-  ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);
+  ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);
   కలమును_పైకి_ఎత్తు();
   ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);
   కలమును_కింద_పెట్టు();
-  ముందుకు_జరుగు(maxX() - roadWidth / 2 - crossWalkWidth);
+  ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);
 }
 
 function drawNSstripe() {
-  setpos(0,maxY());
+  setpos(0,గరిష్ఠY());
   కోణము(180);
   రంగు( పసుపు );
   వెడల్పు(1);
-  ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);
+  ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);
   కలమును_పైకి_ఎత్తు();
   ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);
   కలమును_కింద_పెట్టు();
-  ముందుకు_జరుగు(maxY() - roadWidth / 2 - crossWalkWidth);
+  ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);
 }
 
 function drawCrossWalk(x, y, dir) {
@@ -258,7 +258,7 @@ function drawCrossWalk(x, y, dir) {
 }
 
 function drawTurnArrow(x, y, dir) {
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   goto (x,y);
   కోణము (dir);
   కలమును_కింద_పెట్టు();
@@ -309,7 +309,7 @@ function setLightColor(lightColor, stateColor) {
 }
 
 function drawArrow() { // assume pointing up, color set and pen up
-  var penWidth = turtle.width;
+  var penWidth = turtle.వెడల్పు;
   var arrowSize = 8;
   var vertOffset = 5;
   వెనుకకు_జరుగు(vertOffset);
@@ -436,13 +436,13 @@ function printQueues () {
 
 
 function writeQueues () {
-  writeQueueSizes(55,  -maxY()+5,  0, "N",
+  writeQueueSizes(55,  -గరిష్ఠY()+5,  0, "N",
     nbTurn.queue.length, nbMain.queue.length, nbWalk.queue.length);
-  writeQueueSizes(-68,  maxY()-20, 0, "S",
+  writeQueueSizes(-68,  గరిష్ఠY()-20, 0, "S",
     sbTurn.queue.length, sbMain.queue.length, sbWalk.queue.length);
-  writeQueueSizes(-maxX()+5, -55, 90, "E",
+  writeQueueSizes(-గరిష్ఠX()+5, -55, 90, "E",
     ebTurn.queue.length, ebMain.queue.length, ebWalk.queue.length);
-  writeQueueSizes( maxX()-20, 68, 90, "W",
+  writeQueueSizes( గరిష్ఠX()-20, 68, 90, "W",
     wbTurn.queue.length, wbMain.queue.length, wbWalk.queue.length);
 }
 
@@ -459,16 +459,16 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
   కోణము(orientation)
 /*
   if (dir === "N") {
-    setpos(55,-maxY()+5);
+    setpos(55,-గరిష్ఠY()+5);
     కోణము(0);
   } else if (dir === "S") {
-    setpos(-68,maxY()-20);
+    setpos(-68,గరిష్ఠY()-20);
     కోణము(0);
   } else if (dir === "E") {
-    setpos(-maxX()+5, -55);
+    setpos(-గరిష్ఠX()+5, -55);
     కోణము(90);
   } else if (dir === "W") {
-    setpos(maxX()-20, 68);
+    setpos(గరిష్ఠX()-20, 68);
     కోణము(90);
   } else {
     setpos(-200,200);
@@ -476,7 +476,7 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
   }
 */
   వెడల్పు(1);
-  రంగు("black");
+  రంగు("నలుపు");
   if (dir === "S" || dir === "W") { // South and West are in opposite order
     write(walk);
   } else {

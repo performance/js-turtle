@@ -12,7 +12,7 @@ function hexagon (side) {
 }
 
 function repeatToRight (side) {
-  while (turtle.pos.x < maxX()) {
+  while (turtle.pos.x < గరిష్ఠX()) {
     hexagon(side);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(side * 2);
@@ -22,7 +22,7 @@ function repeatToRight (side) {
 }
 
 function repeatToLeft(side) {
-  while (turtle.pos.x > minX())
+  while (turtle.pos.x > కనిష్ఠX())
    {
     hexagon(side);
     కలమును_పైకి_ఎత్తు();
@@ -40,9 +40,9 @@ function demo() {
   ఆది_స్థితి();
   wrap(false);
   వెడల్పు(1);
-  goto(minX()-1, maxY()-1);
+  goto(కనిష్ఠX()-1, గరిష్ఠY()-1);
   
-  while (turtle.pos.y > minY()) {
+  while (turtle.pos.y > కనిష్ఠY()) {
     repeatToRight(side); // draw a row of hexagons
   
     //advance to next row on right side

@@ -15,21 +15,21 @@ var frameDelay = 0
 function explain( text) {
   // lines within the text string are separated with an at "@" character.
   ఆది_స్థితి();
-  var cWidth = 2* maxX();
-  var cHeight = 2* maxY();
+  var cWidth = 2* గరిష్ఠX();
+  var cHeight = 2* గరిష్ఠY();
   var lineNumber = 0;
-  goto(-.90 * cWidth + maxX(), .9 * cHeight - maxY());
+  goto(-.90 * cWidth + గరిష్ఠX(), .9 * cHeight - గరిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("bold 20px arial,sans-serif");
 
   var lines = text.split("@");
   for (var i=0; i<lines.length; i++) {
     console.log( lines[i])
-    goto (-.90 * cWidth + maxX(), maxY() -(i+1) * .1 * cHeight)
+    goto (-.90 * cWidth + గరిష్ఠX(), గరిష్ఠY() -(i+1) * .1 * cHeight)
     write (lines[i]);
     lineNumber = lineNumber + 1;
   }
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
 }
 
 function textDemo () {

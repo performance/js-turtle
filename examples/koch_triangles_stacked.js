@@ -32,8 +32,8 @@ function kochSnowflake (length, order) {
 
 function demo() {
   ఆది_స్థితి()
-  size = .045* Math.min(maxX(), maxY())
-  తాబేలును_దాచు();
+  size = .045* Math.min(గరిష్ఠX(), గరిష్ఠY())
+  కుంచికను_దాచు();
   for (var i=0; i<6; i++) {
     kochSnowflake( size*(i+1)*(i+1), i)
   }

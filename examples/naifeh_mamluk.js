@@ -41,7 +41,7 @@ function demo() {
   wrap( false)
   కుడి_వైపు_తిరుగు(90)
   side = 40
-  side = .25 * Math.min( maxX(), maxY())
+  side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   goto (-.5* side, side)
 
   //derived distances
@@ -68,5 +68,5 @@ function demo() {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 60)
   }
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

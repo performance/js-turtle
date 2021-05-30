@@ -31,7 +31,7 @@ function numbers(x, y, వ్యాసార్థము) {
    కలమును_పైకి_ఎత్తు();
    fontSize = 20/130 * size
    అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");
-   రంగు("black");
+   రంగు("నలుపు");
    for (var hour = 1; hour <= 12; hour++) {
       goto(x,y);
       కోణము(hour * 30);
@@ -81,19 +81,19 @@ function hands(hours, minutes, seconds) {
 // refresh the entire clock
 function clock() {
    చెరిపి_వేయి();
-   size = .9 *  Math.min( maxX(), maxY())
+   size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())
   numbers(0, 0, 110/130 * size);
    రంగు("lightgreen");
    goto (0,0);
    వెడల్పు(1/130* size)
-   circle(130/130 * size );
+   వృత్తము(130/130 * size );
    ticks(0, 0, 130/130 * size );
    var d = new Date();
    hands(d.getHours(), d.getMinutes(), d.getSeconds());
 }
 
 function demo() {
-   తాబేలును_దాచు();
+   కుంచికను_దాచు();
    // refresh the clock every second
    animate(clock,1000);
 }

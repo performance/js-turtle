@@ -162,7 +162,7 @@ var direction = +1;
 function moveBody () {
   చెరిపి_వేయి();
   height = 40;
-  height = 1.5 * Math.min( maxX(), maxY())
+  height = 1.5 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   headDiameter = .25 * height;
   torsoLength = .3 * height;
   neckLength = .5 * torsoLength;
@@ -182,7 +182,7 @@ function moveBody () {
 
 function demo () {
   ఆది_స్థితి();
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   n = 0;
   direction = +1;
   moveBody();

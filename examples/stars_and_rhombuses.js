@@ -19,14 +19,14 @@ function quadRhom( side) {
 function demo() {
   ఆది_స్థితి()
   wrap( false)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   ang = 60
   side = 20
   xoffset = 0
   chord = 2* side * Math.cos(degToRad(ang/2))
 
-  for (var fy=maxY(); fy>minY(); fy=fy - chord) {   
-    for (var fx=minX(); fx<maxX(); fx=fx + 2*chord) {
+  for (var fy=గరిష్ఠY(); fy>కనిష్ఠY(); fy=fy - chord) {   
+    for (var fx=కనిష్ఠX(); fx<గరిష్ఠX(); fx=fx + 2*chord) {
       goto( fx+xoffset, fy)
       కోణము( 90 - ang/2)
       quadRhom( side)

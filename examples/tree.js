@@ -48,8 +48,8 @@ function drawRTree(depth, branches) {
 
 function demo() {
   ఆది_స్థితి();
-  తాబేలును_దాచు();
-  scale = .01 * Math.min( maxX(), maxY())
+  కుంచికను_దాచు();
+  scale = .01 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   కలమును_పైకి_ఎత్తు();
   వెనుకకు_జరుగు(scale * 70);
   కలమును_కింద_పెట్టు();

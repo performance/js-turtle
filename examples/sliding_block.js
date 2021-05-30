@@ -74,7 +74,7 @@ blocks = [ {h:1, v:2, x:0, y:0},
            {h:1, v:1, x:3, y:4} ]
 
 function init () {
-  side = .9 * 2* Math.min(maxX()/4, maxY()/5)
+  side = .9 * 2* Math.min(గరిష్ఠX()/4, గరిష్ఠY()/5)
   baseX = -2 * side
   baseY = 2.5 * side
   count = 0
@@ -83,10 +83,10 @@ function init () {
 function drawBlock( h, v, x, y, n) {
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)
   // draw a block
-  రంగు("black")
+  రంగు("నలుపు")
   beginShape()
   goto (baseX + x * side, baseY - y * side)
-  setHeading(90)
+  దిశ_మార్చు(90)
   ముందుకు_జరుగు( h * side)
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( v * side)
@@ -696,24 +696,24 @@ function caption (message) {
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
   var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.color
-  var savedWidth = turtle.width
+  var savedColor = turtle.రంగు
+  var savedWidth = turtle.వెడల్పు
 
-  goto (minX()+10, minY()+10)
-  setheading( 90)
+  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  దిశ_మార్చు( 90)
 
   // erase what will be in the path
   అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
   రంగు( తెలుపు )
   వెడల్పు(22)
-  ముందుకు_జరుగు(maxY() * 2 - 12)
-  goto (minX()+10, minY()+5)
-  రంగు("black")
+  ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
+  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  రంగు("నలుపు")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
-  setheading( savedHeading)
+  దిశ_మార్చు( savedHeading)
   రంగు( savedColor)
   వెడల్పు(savedWidth)
 }

@@ -32,19 +32,19 @@ function demo() {
   count = 0
   rowOffset = s/3 // offset between rows
   wrap(false)
-  goto (minX(), maxY())
+  goto (కనిష్ఠX(), గరిష్ఠY())
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while (turtle.pos.y > minY()) {
-  while (turtle.pos.x < maxX()) {
+  while (turtle.pos.y > కనిష్ఠY()) {
+  while (turtle.pos.x < గరిష్ఠX()) {
     triDown(s, nextColor())
     ముందుకు_జరుగు(s)
   }
   కుడి_వైపు_తిరుగు(120)
   ముందుకు_జరుగు( s)
   కుడి_వైపు_తిరుగు(60)
-  while (turtle.pos.x > minX()) {
+  while (turtle.pos.x > కనిష్ఠX()) {
     triDown(s, nextColor())
     ముందుకు_జరుగు(s)
   }

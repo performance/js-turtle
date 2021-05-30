@@ -45,10 +45,10 @@ function stickMan (height) {
 
 function demo () {
   ఆది_స్థితి();
-  తాబేలును_దాచు();
-  number = 0.0005 *  maxX() * maxY() // uniform density no matter size
+  కుంచికను_దాచు();
+  number = 0.0005 *  గరిష్ఠX() * గరిష్ఠY() // uniform density no matter size
   for (i=0; i<number; i++) {
-    goto (random( minX()+20, maxX()-20),random( minY()+20, maxY()-20));
+    goto (random( కనిష్ఠX()+20, గరిష్ఠX()-20),random( కనిష్ఠY()+20, గరిష్ఠY()-20));
     రంగు(random(16));
     stickMan(random (30,60));
   }

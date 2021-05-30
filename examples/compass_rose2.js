@@ -78,8 +78,8 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
 
 function demo () {
   ఆది_స్థితి();
-  size = Math.min( maxX(), maxY()) * .9
-  తాబేలును_దాచు();
+  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
+  కుంచికను_దాచు();
   //రంగు( random(16));
   compassRose( 0, 0, 16, size, .2*size);
 }

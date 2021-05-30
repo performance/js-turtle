@@ -241,8 +241,8 @@ class Tile {
     if (this.posIndex != undefined && this.posIndex < this.possibles.length) {
       var tile = this.possibles[this.posIndex]
       console.log("plot", this.tx, this.ty, this.posIndex, tile)
-      drawTile (minX()+margin + this.tx * side * 1,
-                maxY()-margin - this.ty * side * 1,
+      drawTile (కనిష్ఠX()+margin + this.tx * side * 1,
+                గరిష్ఠY()-margin - this.ty * side * 1,
                 tile)
     } else {
       console.log( "***Plot Error")
@@ -253,8 +253,8 @@ class Tile {
   plotBlank() {
     console.log("plotblank", this.tx, this.ty)
     రంగు( "white")
-    goto( minX()+margin + this.tx * side * 1,
-          maxY()-margin - this.ty * side * 1)
+    goto( కనిష్ఠX()+margin + this.tx * side * 1,
+          గరిష్ఠY()-margin - this.ty * side * 1)
     కోణము(90)
     beginShape()
     ముందుకు_జరుగు( side)
@@ -266,13 +266,13 @@ class Tile {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
     fillShape("lightblue")
-    రంగు("black")
+    రంగు("నలుపు")
   }
 }
 
 
 function delayedBuild () {
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   if (currentTile.findPossibles()) { // currentTile may change here
     currentTile.plot()
     if( (currentTile.tx != hNumber-1) ||
@@ -288,11 +288,11 @@ function delayedBuild () {
 
 function demo () {
   ఆది_స్థితి()
-  //తాబేలును_దాచు()
+  //కుంచికను_దాచు()
   tiles = []
   // build a logical array of tiles
-  hNumber = Math.floor((maxX()*2 - margin * 2) / side)
-  vNumber = Math.floor((maxY()*2 - margin * 2) / side)
+  hNumber = Math.floor((గరిష్ఠX()*2 - margin * 2) / side)
+  vNumber = Math.floor((గరిష్ఠY()*2 - margin * 2) / side)
   //hNumber = 8
   //vNumber = 8
   var prev = undefined

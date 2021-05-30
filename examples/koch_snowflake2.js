@@ -123,12 +123,12 @@ function kochLine (length, order) {
 
 function demo () {
   ఆది_స్థితి();
-  size = Math.min( maxX(), maxY()) * .6
-  తాబేలును_దాచు();
+  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .6
+  కుంచికను_దాచు();
   starOfDavid( size)
   ముందుకు_జరుగు(size)
   ఎడమ_వైపు_తిరుగు(180)
-  //తాబేలును_చూపు()
+  //కుంచికను_చూపు()
   kochSnowFlake(3*size, 2)
   kochSnowFlake(3*size, 3)
 }

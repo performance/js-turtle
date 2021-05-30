@@ -2,9 +2,9 @@
 
 function starburst () {
   var steps = 1000
-  var len = maxX()
-  if (len < maxY()) {
-    len = maxY()
+  var len = గరిష్ఠX()
+  if (len < గరిష్ఠY()) {
+    len = గరిష్ఠY()
   }
   len = 1.5 * len
   var i = 0

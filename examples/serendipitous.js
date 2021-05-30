@@ -2,8 +2,8 @@
 // from Byte magazine Aug 1977
 function demo () {
   ఆది_స్థితి()
-  x1 = random(minX(),maxX())
-  y1 = random(minY(),maxY())
+  x1 = random(కనిష్ఠX(),గరిష్ఠX())
+  y1 = random(కనిష్ఠY(),గరిష్ఠY())
   i = 0
   రంగు( నీలము )
   while (i < 100) {

@@ -82,14 +82,14 @@ function demo() {
   angleC = 120
   angleD = 90
   angleE = 120
-  goto (minX(), maxY())
-  goto (minX(),maxY())
-  bigX = minX() + 2*size
-  bigY = maxY()
-  setHeading (44)
-  while (turtle.pos.x < maxX()) {
+  goto (కనిష్ఠX(), గరిష్ఠY())
+  goto (కనిష్ఠX(),గరిష్ఠY())
+  bigX = కనిష్ఠX() + 2*size
+  bigY = గరిష్ఠY()
+  దిశ_మార్చు(44)
+  while (turtle.pos.x < గరిష్ఠX()) {
     goto (bigX, bigY)
-    while (turtle.pos.y > minY()-8*size) {
+    while (turtle.pos.y > కనిష్ఠY()-8*size) {
       కలమును_పైకి_ఎత్తు()
       ఎడమ_వైపు_తిరుగు( angleA)
       ముందుకు_జరుగు( sidee)

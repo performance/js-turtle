@@ -6,8 +6,8 @@ function demo() {
   side = 30
   side2 = side + side
   offset = true
-  for (var i=minY(); i<maxY(); i = i + side) {
-    goto(minX(),i)
+  for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + side) {
+    goto(కనిష్ఠX(),i)
     కోణము(90)
     if (offset) {
       కలమును_పైకి_ఎత్తు()
@@ -15,7 +15,7 @@ function demo() {
       కలమును_కింద_పెట్టు()
     }
     offset = !offset
-    for (var j=minX(); j<maxX(); j = j + 3*side) {
+    for (var j=కనిష్ఠX(); j<గరిష్ఠX(); j = j + 3*side) {
       ముందుకు_జరుగు( side2)
       కలమును_పైకి_ఎత్తు()
       ముందుకు_జరుగు( side)
@@ -24,14 +24,14 @@ function demo() {
   }
 
   offset = true
-  for (var i=minX(); i<maxX(); i = i + side) {
-    goto(i, minY())
+  for (var i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + side) {
+    goto(i, కనిష్ఠY())
     కోణము(0)
     if (offset) {
       ముందుకు_జరుగు( side)
     }
     offset = !offset
-    for (var j=maxY(); j>minY(); j = j - 3*side) {
+    for (var j=గరిష్ఠY(); j>కనిష్ఠY(); j = j - 3*side) {
       కలమును_పైకి_ఎత్తు()
       ముందుకు_జరుగు( side)
       కలమును_కింద_పెట్టు()

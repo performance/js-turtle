@@ -137,7 +137,7 @@ So let's give it a try:
 
 function demo () {
   ఆది_స్థితి()
-  రంగు("black")
+  రంగు("నలుపు")
   beginShape()
   spikey(5, 2, 50)
   fillShape("red")
@@ -295,13 +295,13 @@ number of radian in a circle (2 pi).
 This also uses the
 <code>goto()</code> function to move the turtle to an x, y position on the
 canvas Cartesian coordinate system. It also uses the
-<code>setheading()</code> function to orient the spikey. Although the
+<code>దిశ_మార్చు()</code> function to orient the spikey. Although the
 spikey will be drawn with a point straight up, it could be set to any కోణము.
 </p>
 <code class="tryme">function spikey ( points, revs, వ్యాసార్థము, x, y) {
   కలమును_పైకి_ఎత్తు()
   goto(x, y)
-  setheading(0)
+  దిశ_మార్చు(0)
   ముందుకు_జరుగు(వ్యాసార్థము)
   var turnAngle = 360 * revs/points
   var angleA = ( 180 - turnAngle)/2
@@ -317,7 +317,7 @@ spikey will be drawn with a point straight up, it could be set to any కోణ�
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   for (rad = 40; rad <=100; rad = rad + 10) {
     spikey( 5, 2, rad, -10, 10)
   }
@@ -401,7 +401,7 @@ the user of the function having to call it twice.
 </p>
 <code class="tryme">function spikey ( args ) {
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -421,7 +421,7 @@ the user of the function having to call it twice.
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   spikey({ points:5,
            revs:2,
            వ్యాసార్థము:15,
@@ -503,7 +503,7 @@ The following is a code segment to handle default values
   if (args.y === undefined) args.y = 0
   if (args.వ్యాసార్థము === undefined) args.వ్యాసార్థము = 10 // shouldn't default
   if (args.heading === undefined) args.heading = 0
-  if (args.color === undefined) args.color = "black"
+  if (args.color === undefined) args.color = "నలుపు"
   if (args.fill === undefined) args.fill = "white"
   if (args.width === undefined) args.width = 1
   if (args.revs === undefined) args.revs = 1 // garden variety polygon
@@ -520,7 +520,7 @@ Let's start with simply twisting a simple star.
 </p>
 <code class="tryme">function spikey ( args ) {
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -545,7 +545,7 @@ var twistAngle
 
 function twistStar() {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   spikey({
     points:5,
     revs:2,
@@ -564,7 +564,7 @@ function twistStar() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   twistAngle = 0
   twistStar()
 }
@@ -603,7 +603,7 @@ var frameDelay = 30    // milliseconds between frames
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -632,7 +632,7 @@ function twistStar() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   twistStar()
 }
 </code>
@@ -663,7 +663,7 @@ var frameDelay = 30    // milliseconds between frames
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -693,7 +693,7 @@ function moveStar() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   moveStar()
 }
@@ -721,7 +721,7 @@ var frameDelay = 30    // milliseconds between frames
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -750,7 +750,7 @@ function growStar() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   growStar()
 }
@@ -781,7 +781,7 @@ var frameDelay = 30    // milliseconds between frames
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -813,7 +813,7 @@ function changeStar() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   changeStar()
 }
@@ -848,7 +848,7 @@ var star2 = {
               x:-100,
               y:0,
               heading:0,
-              color:"black",
+              color:"నలుపు",
               width:3,
               fill:"blue",
               dx: 4,
@@ -863,7 +863,7 @@ var frameDelay = 30    // milliseconds between frames
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -903,7 +903,7 @@ function changeStars() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   changeStars()
 }
@@ -948,7 +948,7 @@ var star2 = {
               x:-100,
               y:0,
               heading:0,
-              color:"black",
+              color:"నలుపు",
               width:3,
               fill:"blue",
               dx: 4,
@@ -967,7 +967,7 @@ var frameDelay = 30    // milliseconds between frames
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -1015,7 +1015,7 @@ function changeStar() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   changeStar()
 }
@@ -1069,7 +1069,7 @@ function generatePolys () {
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -1109,7 +1109,7 @@ function changeStars() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   generatePolys()
   changeStars()
@@ -1163,7 +1163,7 @@ function generatePolys (count) {
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -1204,7 +1204,7 @@ function changeStars() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
   changeStars()
@@ -1221,10 +1221,10 @@ over time.
 One way to correct the problem is to delete elements from the polys array when
 that element is off the canvas.
 The edges of the canvas are given by the Turtle Graphics functions
-<code>minX()</code>,
-<code>maxX()</code>,
-<code>minY()</code>, and
-<code>maxY()</code>.
+<code>కనిష్ఠX()</code>,
+<code>గరిష్ఠX()</code>,
+<code>కనిష్ఠY()</code>, and
+<code>గరిష్ఠY()</code>.
 But remember its not just when the center of the star passes by the edge.
 but the extremities of the star. All of the arms of the star are within
 the వ్యాసార్థము of the star, so that needs to be added to the dimension of the canvas.
@@ -1275,7 +1275,7 @@ function generatePolys (count) {
 
 function spikey ( args ) { // the simpler version for brevity
   goto( args.x, args.y)
-  setheading( args.heading)
+  దిశ_మార్చు( args.heading)
   ముందుకు_జరుగు( args.వ్యాసార్థము)
   var turnAngle = 360 * args.revs/args.points
   var angleA = (180 - turnAngle)/2
@@ -1296,10 +1296,10 @@ function spikey ( args ) { // the simpler version for brevity
 
 function killPolys() {
   for (i=polys.length-2; i >= 0; i = i - 1) { //>
-    if (polys[i].x -polys[i].వ్యాసార్థము > maxX() ||
-        polys[i].x + polys[i].వ్యాసార్థము < minX() ||
-        polys[i].y - polys[i].వ్యాసార్థము > maxY() ||
-        polys[i].x + polys[i].వ్యాసార్థము < minX()) {
+    if (polys[i].x -polys[i].వ్యాసార్థము > గరిష్ఠX() ||
+        polys[i].x + polys[i].వ్యాసార్థము < కనిష్ఠX() ||
+        polys[i].y - polys[i].వ్యాసార్థము > గరిష్ఠY() ||
+        polys[i].x + polys[i].వ్యాసార్థము < కనిష్ఠX()) {
       console.log("killing " + i + " " +
                                 polys[i].x + " " +
                                 polys[i].y + " " +
@@ -1332,7 +1332,7 @@ function changeStars() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
   changeStars()
@@ -1409,7 +1409,7 @@ function Spikey ( ) {
   this.points = 5
   this.revs = 2
   this.వ్యాసార్థము = 10
-  this.color = "black"
+  this.color = "నలుపు"
   this.fill = "white"
   this.width = 1
   this.heading = 0
@@ -1448,7 +1448,7 @@ Spikey.prototype.accelerate = function () {
 
 Spikey.prototype.draw = function () { // the simpler version for brevity
   goto( this.x, this.y)
-  setheading( this.heading)
+  దిశ_మార్చు( this.heading)
   ముందుకు_జరుగు( this.వ్యాసార్థము)
   var turnAngle = 360 * this.revs/this.points
   var angleA = (180 - turnAngle)/2
@@ -1508,10 +1508,10 @@ function generatePolys (count) {
 
 function killPolys() {
   for (i=polys.length-2; i >= 0; i = i - 1) { //>
-    if (polys[i].x -polys[i].వ్యాసార్థము > maxX() ||
-        polys[i].x + polys[i].వ్యాసార్థము < minX() ||
-        polys[i].y - polys[i].వ్యాసార్థము > maxY() ||
-        polys[i].x + polys[i].వ్యాసార్థము < minX()) {
+    if (polys[i].x -polys[i].వ్యాసార్థము > గరిష్ఠX() ||
+        polys[i].x + polys[i].వ్యాసార్థము < కనిష్ఠX() ||
+        polys[i].y - polys[i].వ్యాసార్థము > గరిష్ఠY() ||
+        polys[i].x + polys[i].వ్యాసార్థము < కనిష్ఠX()) {
       console.log("killing " + i + " " +
                                 polys[i].x + " " +
                                 polys[i].y + " " +
@@ -1540,7 +1540,7 @@ function changeStars() {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   wrap(false) // fix edge condition
   generatePolys(10)
   changeStars()

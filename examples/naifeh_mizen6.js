@@ -85,13 +85,13 @@ function mizen6(side) {
     కుడి_వైపు_తిరుగు(90)
     కలమును_కింద_పెట్టు()
   }
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }
 
 
 function demo() {
   ఆది_స్థితి()
-  side = .08 * Math.min( maxX(), maxY())
+  side = .08 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   //center canvas more or less
   goto (-8*side, 9*side)
   mizen6( side)

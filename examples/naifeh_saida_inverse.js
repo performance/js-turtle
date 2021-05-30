@@ -24,7 +24,7 @@ function antilayer (side, innerSide, offset) {
     ఎడమ_వైపు_తిరుగు(135)
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు(45)
-    fillShape("black")
+    fillShape("నలుపు")
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( side)
     కలమును_కింద_పెట్టు()
@@ -36,8 +36,8 @@ function antilayer (side, innerSide, offset) {
 function demo() {
   ఆది_స్థితి()
   wrap(false)
-  తాబేలును_దాచు()
-  side = .023 * Math.min( maxX(), maxY())
+  కుంచికను_దాచు()
+  side = .023 * Math.min( గరిష్ఠX(), గరిష్ఠY())
 
   factor = Math.sqrt( 2+ Math.sqrt(2))
   //side = 10

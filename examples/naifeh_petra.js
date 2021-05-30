@@ -115,7 +115,7 @@ function slashes(count, fColor) {
 function demo() {
   ఆది_స్థితి()
   fColor = "blue"
-  size = .17 * Math.min( maxX(), maxY())
+  size = .17 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   రంగు( తెలుపు )
   //వెడల్పు(.1* size)
 
@@ -128,7 +128,7 @@ function demo() {
     కోణము(-60)
     goto (-5.5*size, -1*size)
   }
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 
   dashBackslashes(4, 0, fColor)
 

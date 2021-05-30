@@ -16,7 +16,7 @@ var interdigitSpacing
 var segWidth
 var segAngle = 10 // degrees
 var segOnColor = "red"
-var segOffColor = "black"
+var segOffColor = "నలుపు"
 
 
 //*** CONSTANTS ***
@@ -115,12 +115,12 @@ function display7segment(digit) {
 
 function displaySegTime() {
   // black out background
-  goto (minX(),0)
+  goto (కనిష్ఠX(),0)
   కోణము (90)
   రంగు(black)
-  వెడల్పు(2*maxY())
+  వెడల్పు(2*గరిష్ఠY())
   కలమును_కింద_పెట్టు()
-  ముందుకు_జరుగు(2*maxX())
+  ముందుకు_జరుగు(2*గరిష్ఠX())
 101010
   // draw the 6 digits of time
   goto (-horizontalElements/2*segSize, segSize)
@@ -143,11 +143,11 @@ function displaySegTime() {
 
 function displayTime() {
   horizontalElements = 6 + 3*.4 + 2*1.24
-  segSize = Math.min (maxY(), 2* maxX()/horizontalElements) * .9
+  segSize = Math.min (గరిష్ఠY(), 2* గరిష్ఠX()/horizontalElements) * .9
   digitSpacing = 1.4 * segSize
   interdigitSpacing = 2.24 * segSize
   segWidth = segSize/6
-  తాబేలును_దాచు() 
+  కుంచికను_దాచు() 
   getTime()
   displaySegTime()
 }

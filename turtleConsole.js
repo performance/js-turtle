@@ -719,7 +719,7 @@ function showError(e) {
     //turtleState = turtle;
     //logTurtle("sEtop")
     height=10 // points
-    goto (minX(), minY()+24+height/2 +2);
+    goto (కనిష్ఠX(), కనిష్ఠY()+24+height/2 +2);
     కోణము(90);
     wrap(false);
 
@@ -727,8 +727,8 @@ function showError(e) {
     కలమును_కింద_పెట్టు()
     రంగు( పసుపు )
     వెడల్పు(height+4)
-    ముందుకు_జరుగు(maxY() * 2)
-    goto (minX(), minY()+24)
+    ముందుకు_జరుగు(గరిష్ఠY() * 2)
+    goto (కనిష్ఠX(), కనిష్ఠY()+24)
 
     // write the error message
     రంగు( ఎరుపు );
@@ -741,13 +741,13 @@ function showError(e) {
         height=10 // points
         రంగు( పసుపు )
         వెడల్పు(height+4)
-        goto (minX(), minY()+5+height/2 +2)
-        ముందుకు_జరుగు(maxY() * 2)
+        goto (కనిష్ఠX(), కనిష్ఠY()+5+height/2 +2)
+        ముందుకు_జరుగు(గరిష్ఠY() * 2)
 
         // write the file message
         రంగు( నీలము );
         అక్షరరూపము_స్థాపించు (height + "pt bold Helvetica, sans-serif")
-        goto (minX(), minY()+5)
+        goto (కనిష్ఠX(), కనిష్ఠY()+5)
         write(e.fileName.substr(-40) + " line: " + e.lineNumber);
         console.log("Error: " + e.fileName.substr(-40) + " line: " + e.lineNumber);
   }

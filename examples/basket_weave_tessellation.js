@@ -45,15 +45,15 @@ function square ( side, fColor) {
 function demo() {
   ఆది_స్థితి()
   count = 0
-  yB = maxY() + small
-  xB = minX()
+  yB = గరిష్ఠY() + small
+  xB = కనిష్ఠX()
   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while( turtle.pos.y > minY()) {
+  while( turtle.pos.y > కనిష్ఠY()) {
     goto (xB, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       square(small, "yellow")
       కలమును_పైకి_ఎత్తు()
@@ -65,7 +65,7 @@ function demo() {
     yB = yB - small
 
     goto (xB, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()
@@ -74,7 +74,7 @@ function demo() {
     yB = yB - sSide
 
     goto (xB, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       square(small, "yellow")
       vRect(sSide, lSide, "lightblue")
@@ -86,7 +86,7 @@ function demo() {
     yB = yB - small
 
     goto (xB- lSide +small, yB)
-    while( turtle.pos.x < maxX()) {
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()

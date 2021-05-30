@@ -20,9 +20,9 @@ function star (side, sColor) {
 function demo () {
   ఆది_స్థితి()
   for (i=1; i< 150; i=i+1) {
-    goto (random(minX(),maxX()), random( minY(),maxY()))
+    goto (random(కనిష్ఠX(),గరిష్ఠX()), random( కనిష్ఠY(),గరిష్ఠY()))
     ఎడమ_వైపు_తిరుగు(random(359))
     star (random(2,15), random(15))
   }
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

@@ -117,7 +117,7 @@ function restorePos4() {
 
 function demo() {
   ఆది_స్థితి()
-  side = .13* Math.min(maxX(), maxY())
+  side = .13* Math.min(గరిష్ఠX(), గరిష్ఠY())
   goto (1.8*side,0)
   కుడి_వైపు_తిరుగు(80)
   penta (side, "green")

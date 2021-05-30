@@ -86,8 +86,8 @@ function restorePos2() {
 
 function demo() {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
-  side = .23 * Math.min(maxX(), maxY())
+  కుంచికను_దాచు()
+  side = .23 * Math.min(గరిష్ఠX(), గరిష్ఠY())
   goto (-.6* side, -.5* side)
   కుడి_వైపు_తిరుగు(18)
   penta (side, "green")

@@ -2,15 +2,15 @@
 
 //** Globals **
 
-var maxX =  imageContext.canvas.width/2;
-var maxY =  imageContext.canvas.height/2;
-var minX =  -maxX;
-var minY =  -maxY;
+var గరిష్ఠ_X =  imageContext.canvas.width/2;
+var గరిష్ఠ_Y =  imageContext.canvas.height/2;
+var కనిష్ఠ_X =  -గరిష్ఠ_X;
+var కనిష్ఠ_Y =  -గరిష్ఠ_Y;
 var maxVelocity = 12;
 
 
 function plotOne() {
-  goto(random(minX, maxX), random(minY, maxY));
+  goto(random(కనిష్ఠ_X, గరిష్ఠ_X), random(కనిష్ఠ_Y, గరిష్ఠ_Y));
   రంగు(random(16));
   కోణము(random(0, 180));
   వెడల్పు(random(1, 20));

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Turtle Graphics</title>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="turtle.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+</head>
+<!--body onresize="resizeColumns();"> -->
+
+<body id="body">
+  <a href="javascript:void(0)" id="dragbarleft"></a>
+  <a href="javascript:void(0)" id="dragbarright"></a>
+
+  <div id="wrap">
+    <div id="container">
+      <div id="midcolumncontainer">
+        <div id="midcolumn">
+          <div id="canvaswrapper">
+            <canvas id="turtlecanvas"></canvas>
+            <canvas id="imagecanvas"></canvas>
+          </div> <!-- canvaswrapper -->
+          <div id=commandwrapper>
+            <label id="commandLabel" for=#command>Command</label>
+            <input type="text" id="command" />
+            <button id="resetButton">Reset</button>
+
+            <button id="runButton" onclick="commandChanged ("demo()");">Run Demo</button>
+            
+            <button id="stopButton">Stop</button>
+            <span class='help_text' id='stopButton_help_text'>
+              <p>
+                The <strong>Stop</strong> button stops animation.
+              </p>
+            </span>
+            <a id="saveCanvasButton">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 333.668 333.668"
+                style="enable-background:new 0 0 333.668 333.668;" xml:space="preserve">
+                <g>
+                  <path
+                    d="M295.101,298.649H38.561C17.295,298.649,0,281.354,0,260.088V103.703c0-21.266,17.295-38.561,38.561-38.561h52.347
+                l4.582-15.457c1.87-8.458,9.602-14.666,18.696-14.666h105.297c8.837,0,16.658,6.176,18.728,14.743l0.122,0.527l4.177,14.852h52.597
+                c21.266,0,38.561,17.295,38.561,38.561v156.384C333.662,281.354,316.361,298.649,295.101,298.649z M38.561,77.996
+                c-14.178,0-25.707,11.53-25.707,25.707v156.384c0,14.178,11.53,25.707,25.707,25.707h256.54c14.178,0,25.707-11.53,25.707-25.707
+                V103.703c0-14.178-11.53-25.707-25.707-25.707h-62.327l-7.037-25.097c-0.649-2.918-3.278-5.032-6.26-5.032H114.179
+                c-3.027,0-5.598,2.069-6.26,5.039l-7.429,25.09H38.561z M166.841,259.798c-44.981,0-81.576-36.588-81.576-81.563
+                c0-44.981,36.594-81.569,81.576-81.569c44.969,0,81.557,36.594,81.557,81.569C248.397,223.204,211.809,259.798,166.841,259.798z
+                 M166.841,109.513c-37.893,0-68.722,30.823-68.722,68.716s30.83,68.709,68.722,68.709c37.886,0,68.703-30.823,68.703-68.709
+                C235.543,140.336,204.72,109.513,166.841,109.513z M286.804,101.852c-6.555,0-11.858,5.315-11.858,11.858
+                c0,6.549,5.302,11.857,11.858,11.857c6.549,0,11.851-5.309,11.851-11.857C298.649,107.167,293.346,101.852,286.804,101.852z" />
+              </svg>
+            </a>
+            <span class='help_text' id='saveCanvasButton_help_text'>
+              <p>
+                The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser
+                download file with the name TurtleGraphic.png.
+              </p>
+            </span>
+            <button id="saveSVG">
+              Save SVG
+            </button>
+            <span class='help_text' id='saveCanvasButton_help_text'>
+              <p>
+                The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser
+                download file with the name TurtleGraphic.png.
+              </p>
+            </span>
+          </div> <!-- commandwrapper -->
+        </div> <!-- midcolumn -->
+      </div> <!-- midcolumncontainer -->
+      <div id="rightcolumncontainer">
+        <div id="rightcolumn">
+          <div id="examplewrapper">
+
+            <textarea id="codeArea">
+              /* ఇక్కడ మీ ఫంక్షన్ లు వ్రాయ గలరు. ఉదాహరణ కి:    */
+
+              function సమ_చతురస్రము( భుజము ) {
+                repeat(4, function () {
+                  ముందుకు_జరుగు( భుజము );
+                  కుడి_వైపు_తిరుగు(90);
+                });
+              }
+
+              function demo() {
+                కుంచికను_దాచు();
+                రంగు( నీలము );
+                let భుజము = 100;
+                let రంగు_సంఖ్య = 0;
+                while ( భుజము > 0 ) {
+                  సమ_చతురస్రము( భుజము );
+                  కుడి_వైపు_తిరుగు(36);
+                  భుజము = భుజము - 10;
+                  రంగు_సంఖ్య = ( రంగు_సంఖ్య + 1 ) % 16;
+                  రంగు( రంగు_సంఖ్య );
+                }
+              }
+            </textarea> <!-- codeArea -->
+            <div id=codeButtons>
+              <!-- codebuttons -->
+              <input type="file" id="uploadFile" accept=".js,.txt" />
+              <button id="uploadButton">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60.903 60.903"
+                  style="enable-background:new 0 0 60.903 60.903;" xml:space="preserve">
+                  <g>
+                    <path
+                      d="M49.561,16.464H39.45v6h10.111c3.008,0,5.341,1.535,5.341,2.857v26.607c0,1.321-2.333,2.858-5.341,2.858H11.34
+                        c-3.007,0-5.34-1.537-5.34-2.858V25.324c0-1.322,2.333-2.858,5.34-2.858h10.11v-6H11.34C4.981,16.466,0,20.357,0,25.324v26.605
+                        c0,4.968,4.981,8.857,11.34,8.857h38.223c6.357,0,11.34-3.891,11.34-8.857V25.324C60.902,20.355,55.921,16.464,49.561,16.464z" />
+                    <path d="M39.529,29.004c-0.768,0-1.535,0.294-2.121,0.88l-3.756,3.755V20.612v-6V3.117c0-1.656-1.343-3-3-3s-3,1.344-3,3v11.494v6
+                            v13.23l-3.959-3.958c-0.586-0.586-1.354-0.88-2.121-0.88s-1.535,0.294-2.121,0.88c-1.172,1.17-1.172,3.07,0,4.241l8.957,8.957
+                            c0.586,0.586,1.354,0.877,2.12,0.877c0.008,0,0.016,0,0.023,0s0.015,0,0.022,0c0.768,0,1.534-0.291,2.12-0.877l8.957-8.957
+                            c1.172-1.171,1.172-3.071,0-4.241C41.064,29.298,40.298,29.004,39.529,29.004z" />
+                </svg>
+              </button>
+              <span class='left_help_text' id='uploadButton_help_text'>
+                <p>
+                  The <strong>Upload</strong> button opens a dialog to select a file
+                  to load into the code text area.
+                </p>
+              </span>
+              <button id="downloadButton">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 67.671 67.671"
+                  style="enable-background:new 0 0 67.671 67.671;" xml:space="preserve">
+                  <g>
+                    <path
+                      d="M52.946,23.348H42.834v6h10.112c3.007,0,5.34,1.536,5.34,2.858v26.606c0,1.322-2.333,2.858-5.34,2.858H14.724
+		c-3.007,0-5.34-1.536-5.34-2.858V32.207c0-1.322,2.333-2.858,5.34-2.858h10.11v-6h-10.11c-6.359,0-11.34,3.891-11.34,8.858v26.606
+		c0,4.968,4.981,8.858,11.34,8.858h38.223c6.358,0,11.34-3.891,11.34-8.858V32.207C64.286,27.239,59.305,23.348,52.946,23.348z" />
+                    <path d="M24.957,14.955c0.768,0,1.535-0.293,2.121-0.879l3.756-3.756v13.028v6v11.494c0,1.657,1.343,3,3,3s3-1.343,3-3V29.348v-6
+		V10.117l3.959,3.959c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242l-8.957-8.957
+		C35.492,0.291,34.725,0,33.958,0c-0.008,0-0.015,0-0.023,0s-0.015,0-0.023,0c-0.767,0-1.534,0.291-2.12,0.877l-8.957,8.957
+		c-1.172,1.171-1.172,3.071,0,4.242C23.422,14.662,24.189,14.955,24.957,14.955z" />
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg>
+              </button>
+              
+              <input type="text" id="downloadFilename" placeholder="TurtleGraphic" />.js
+              
+              <button id="clearButton">Clear</button>
+              <span class='left_help_text' id='clearButton_help_text'>
+                <p>
+                  The <strong>Clear</strong> button clears the code text area to allow entry of new programs.
+                </p>
+              </span>
+            </div> <!-- codebuttons -->
+          </div> <!-- examplewrapper -->
+        </div> <!-- rightcolumn -->
+      </div> <!-- rightcolumncontainer -->
+    </div> <!-- container-->
+  </div> <!-- wrap-->
+
+
+  <!-- scripts -->
+  {# <script type="text/javascript" src="examples.js"></script> #}
+  <script type="text/javascript" src="turtle.js"></script>
+  <script type="text/javascript" src="turtleConsole.js"></script>
+  <script type="text/javascript" src="FileSaver.min.js"></script>
+  <script src="he.js"></script>
+</body>
+
+</html>

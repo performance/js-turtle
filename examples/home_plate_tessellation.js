@@ -52,12 +52,12 @@ function demo() {
   s = 50
   rowOffset = s/3 // offset between rows
   wrap(false)
-  goto (minX(), maxY())
+  goto (కనిష్ఠX(), గరిష్ఠY())
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while (turtle.pos.y > minY()) {
-  while (turtle.pos.x < maxX()) {
+  while (turtle.pos.y > కనిష్ఠY()) {
+  while (turtle.pos.x < గరిష్ఠX()) {
     pentDown(s, nextColor())
     ముందుకు_జరుగు(s)
   }
@@ -65,7 +65,7 @@ function demo() {
   ముందుకు_జరుగు( 3/2*s)
   కుడి_వైపు_తిరుగు(90)
   వెనుకకు_జరుగు(s/2)
-  while (turtle.pos.x > minX()) {
+  while (turtle.pos.x > కనిష్ఠX()) {
     pentDown(s, nextColor())
     ముందుకు_జరుగు(s)
   }

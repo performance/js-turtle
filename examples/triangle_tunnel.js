@@ -33,9 +33,9 @@ function nestTri () {
 
 function demo () {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 
-  maxSide = 1.8* Math.min( maxX(), maxY())
+  maxSide = 1.8* Math.min( గరిష్ఠX(), గరిష్ఠY())
   tColor = []
   for (var i=0; i<sides; i++) {
     tColor [i] = random (15)

@@ -1,20 +1,20 @@
 // Miura Origami -- fold pattern for the miura origami
 
 function horiz( size){
-  hy = maxY()
-  while (hy > minY()) {
-    goto (minX(), hy)
+  hy = గరిష్ఠY()
+  while (hy > కనిష్ఠY()) {
+    goto (కనిష్ఠX(), hy)
     కోణము(90)
-    ముందుకు_జరుగు( 2*maxX())
+    ముందుకు_జరుగు( 2*గరిష్ఠX())
     hy = hy - size
   } 
 }
 
 function vert( size) {
-  vx = minX()
-  while ( vx < maxX()) {
-    vy = maxY()
-    while (vy > minY()) {
+  vx = కనిష్ఠX()
+  while ( vx < గరిష్ఠX()) {
+    vy = గరిష్ఠY()
+    while (vy > కనిష్ఠY()) {
       goto( vx, vy)
       కోణము( 180 - 6)
       ముందుకు_జరుగు( size * Math.cos( degToRad(6)))

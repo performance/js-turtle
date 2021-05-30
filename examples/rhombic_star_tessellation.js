@@ -69,7 +69,7 @@ function nextColor() {
 function demo() {
   ఆది_స్థితి()
   wrap(false)
-  side = .075 * Math.min(maxX(), maxY())
+  side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())
   cent( side, 12)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

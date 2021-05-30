@@ -77,7 +77,7 @@ function Turtle () {
   this.shape = false //  controls inclusion of segments from a filled shape
   this.wrap = true //    controls wraping at the edge
   this.font = "10pt normal Helvetica, sans-serif"
-  this.రంగు = "black"
+  this.రంగు = "నలుపు"
 };
 
 // initialize the state of the turtle
@@ -102,7 +102,7 @@ function initialize() {
   turtle.shape = false
   turtle.wrap = true
   turtle.font = "10pt normal Helvetica, sans-serif"
-  turtle.రంగు = "black"
+  turtle.రంగు = "నలుపు"
 /*
    turtle = { pos: {
                  x: 0,
@@ -116,7 +116,7 @@ function initialize() {
               shape: false, //  controls inclusion of segments from a filled shape
               wrap: true, //    controls wraping at the edge
               font: "10pt normal Helvetica, sans-serif",
-              రంగు: "black"
+              రంగు: "నలుపు"
             };
 */
   //turtle = Turtle();
@@ -201,13 +201,15 @@ function svgInitialize() {
 //   might be the easiest
 //   then it can Close a path because it just appends
 function svgOpenPath( x, y) {
-   console.log( "sOP:", x, y, svgD)
+   // TODO(DSR) : uncomment this.
+   // console.log( "sOP:", x, y, svgD)
    if (svgPath == "") { // no path open
      svgPath = '<path stroke="' + turtle.రంగు
      svgD =  ' d="M ' + round( x, svgPrecision) + ' ' + round( y, svgPrecision)
      svgLastMove = undefined
    }
-  console.log( "sOP svgD:",svgD)
+  // TODO(DSR) : uncomment this.
+  // console.log( "sOP svgD:",svgD)
 }
 
 
@@ -234,7 +236,8 @@ function updateHighWater( x, y, radx, rady) {
 
 
 function svgAppendPath( rx, ry) {
-  console.log( "sAP:",rx, ry, turtle.penDown, "last:", svgLastMove)
+  // TODO(DSR) : uncomment this.
+  // console.log( "sAP:",rx, ry, turtle.penDown, "last:", svgLastMove)
   updateHighWater( turtle.pos.x, turtle.pos.y)
 
   if (turtle.penDown) { // pen down
@@ -256,7 +259,8 @@ function svgAppendPath( rx, ry) {
       svgLastMove = [rx, ry]
     }
   }
-  console.log( "sAP svgD:",svgD)
+  // TODO(DSR) : uncomment this.
+  // console.log( "sAP svgD:",svgD)
 }
 
 
@@ -375,7 +379,7 @@ function చెరిపి_వేయి() {
    clearContext(imageContext);
    drawIf();
 }
-
+clear = చెరిపి_వేయి;
 
 /*******************************************************************************
  * clearContext -- చెరిపి_వేయి the specified context
@@ -407,7 +411,7 @@ function ఆది_స్థితి() {
    stopAnimation();
    turtle.shape = false;
 }
-
+reset = ఆది_స్థితి;
 
 /*******************************************************************************
  * home -- move the turtle to center facing North
@@ -419,7 +423,7 @@ function ఆది_స్థితి() {
 // move the turtle to the origin and set heading to 0
 function home() {
    setposition (0,0);
-   setheading (0);
+   దిశ_మార్చు(0);
 }
 
 
@@ -503,7 +507,7 @@ function fillshape( styl) {
         //రంగు is assumed to be a 32-bit రంగు value
       //}
     } else if (typeof(styl) != "string") { // col is not a supported type
-      styl = "black";
+      styl = "నలుపు";
     }
 
     //imageContext.save()
@@ -548,10 +552,10 @@ function ముందుకు_జరుగు(distance) {
    var y = turtle.pos.y;
 
    // get the boundaries of the canvas
-   var max_X = imageContext.canvas.width / 2;
-   var min_X = -imageContext.canvas.width / 2;
-   var max_Y = imageContext.canvas.height / 2;
-   var min_Y = -imageContext.canvas.height / 2;
+   var గరిష్ఠ_X = imageContext.canvas.width / 2;
+   var కనిష్ఠ_X = -imageContext.canvas.width / 2;
+   var గరిష్ఠ_Y = imageContext.canvas.height / 2;
+   var కనిష్ఠ_Y = -imageContext.canvas.height / 2;
 
 
    // wrap on the X boundary
@@ -608,17 +612,17 @@ function ముందుకు_జరుగు(distance) {
 
       // if wrap is on, trace a part segment of the path and wrap on boundary if necessary
       if (! turtle.shape && turtle.wrap) {
-         if (newX > max_X) {
-            xWrap(max_X, min_X);
+         if (newX > గరిష్ఠ_X) {
+            xWrap(గరిష్ఠ_X, కనిష్ఠ_X);
          }
-         else if (newX < min_X) {
-            xWrap(min_X, max_X);
+         else if (newX < కనిష్ఠ_X) {
+            xWrap(కనిష్ఠ_X, గరిష్ఠ_X);
          }
-         else if (newY > max_Y) {
-            yWrap(max_Y, min_Y);
+         else if (newY > గరిష్ఠ_Y) {
+            yWrap(గరిష్ఠ_Y, కనిష్ఠ_Y);
          }
-         else if (newY < min_Y) {
-            yWrap(min_Y, max_Y);
+         else if (newY < కనిష్ఠ_Y) {
+            yWrap(కనిష్ఠ_Y, గరిష్ఠ_Y);
          }
          else {
             noWrap(newX, newY);
@@ -638,7 +642,7 @@ function ముందుకు_జరుగు(distance) {
 }
 
 fd = ముందుకు_జరుగు;
-
+forward = ముందుకు_జరుగు;
 
 /*******************************************************************************
  * వెనుకకు_జరుగు -- move the turtle backward, allowing for possible wrap-around
@@ -658,7 +662,7 @@ function వెనుకకు_జరుగు(distance) {
 
 bk = వెనుకకు_జరుగు;
 back = వెనుకకు_జరుగు;
-
+backward = వెనుకకు_జరుగు;
 
 /*******************************************************************************
  * కుడి_వైపు_తిరుగు -- turn the turtle right a number of degrees
@@ -796,16 +800,16 @@ curveRight = curveright;
 
 
 /*******************************************************************************
- * circle -- draw a cirle about the current turtle position
+ * వృత్తము -- draw a cirle about the current turtle position
  *
  * arguments:
- *   వ్యాసార్థము:  వ్యాసార్థము of circle in pixels
- *   extent:  size of arc in degrees (optional, defaults to full circle)
+ *   వ్యాసార్థము:  వ్యాసార్థము of వృత్తము in pixels
+ *   extent:  size of arc in degrees (optional, defaults to full వృత్తము)
  *   CW:      boolean for direction of arc (optional defaults to true or clockwise)
  *
  * returns: None
  ******************************************************************************/
-function circle(వ్యాసార్థము, extent, CW) {
+function వృత్తము(వ్యాసార్థము, extent, CW) {
   if (CW === undefined) {
     CW = true;
   }
@@ -835,6 +839,7 @@ function circle(వ్యాసార్థము, extent, CW) {
   imageContext.restore();
   drawIf();
 }
+circle = వృత్తము;
 /*
 <circle cx="40" cy="40" r="24"
     style="stroke:#006600;
@@ -850,24 +855,24 @@ large-arg-flag
 sweep-flag
 dx and dy are the center of the arc
 
-so this translates "circle (వ్యాసార్థము, extent, CW)" roughly to:
+so this translates "వృత్తము (వ్యాసార్థము, extent, CW)" roughly to:
 
-need to compute path start, path end and circle center
+need to compute path start, path end and వృత్తము center
 కోణము start = turtle.heading
-circle center = turtle.pos
+వృత్తము center = turtle.pos
 path start = turtle.pos.x + వ్యాసార్థము * Math.cos( turtle.కోణము), turtle.pos.y + వ్యాసార్థము * Math.sin( turtle.కోణము)
 path end = turtle.pos.x + వ్యాసార్థము * Math.cos( turtle.కోణము + extent), turtle.pos.y + వ్యాసార్థము * Math.sin( turtle.కోణము + extent)
 <path ... d="M <pathStartX> <pathStartY a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 0 circleCenterX circleCenterY l pathEndX pathEndY
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
 */
-arc = circle;
-
+arc = వృత్తము;
+చాపము = arc;
 /*******************************************************************************
- * dot -- draw a filled circle at the turtle position
+ * dot -- draw a filled వృత్తము at the turtle position
  *
  * arguments:
- *   size:  వ్యాసార్థము of dot in pixels (optional defaults to max of pensize+4, 2*pensize)
+ *   size:  వ్యాసార్థము of dot in pixels (optional defaults to గరిష్ఠ of pensize+4, 2*pensize)
  *
  * returns: None
  ******************************************************************************/
@@ -926,19 +931,19 @@ penDown = కలమును_కింద_పెట్టు;
 
 
 /*******************************************************************************
- * తాబేలును_దాచు -- do not draw the turtle
- * తాబేలును_దాచు 
+ * కుంచికను_దాచు -- do not draw the turtle
+ * కుంచికను_దాచు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function తాబేలును_దాచు() {
+function కుంచికను_దాచు() {
    turtle.visible = false;
    drawIf();
 }
 
-ht = తాబేలును_దాచు;
-hideTurtle = తాబేలును_దాచు;
+ht = కుంచికను_దాచు;
+hideTurtle = కుంచికను_దాచు;
 
 
 /*******************************************************************************
@@ -948,13 +953,13 @@ hideTurtle = తాబేలును_దాచు;
  *
  * returns: None
  ******************************************************************************/
-function తాబేలును_చూపు() {
+function కుంచికను_చూపు() {
    turtle.visible = true;
    drawIf();
 }
 
-st = తాబేలును_చూపు;
-showTurtle = తాబేలును_చూపు;
+st = కుంచికను_చూపు;
+showTurtle = కుంచికను_చూపు;
 
 
 /*******************************************************************************
@@ -1019,15 +1024,15 @@ setY = sety;
  *
  * returns: None
  ******************************************************************************/
-function కోణము(ang) {
-   turtle.కోణము = degToRad(ang);
+function కోణము(కోణము) {
+   turtle.కోణము = degToRad(కోణము);
    drawIf();
 }
 
 setheading = కోణము;
 setHeading = కోణము;
 seth = కోణము;
-
+దిశ_మార్చు = కోణము;
 
 /*******************************************************************************
  * background -- set the background రంగు
@@ -1049,7 +1054,7 @@ function background( styl) {
         //రంగు is assumed to be a 32-bit రంగు value
       //}
     } else if (typeof(styl) != "string") { // col is not a supported type
-      styl = "black";
+      styl = "నలుపు";
     }
     imageContext.fillStyle = styl;
     imageContext.fillRect(0, 0, imageCanvas.width, imageCanvas.height);
@@ -1133,7 +1138,7 @@ function repeat(n, action) {
  ******************************************************************************/
 function sleep(ms) {
   var start = new Date().getTime();
-  var limit = 1000 * 60 * 1; // set maximum time to 1 minute
+  var limit = 1000 * 60 * 1; // set గరిష్ఠ time to 1 minute
   var i = 0;
   for (i = 0; i < limit; i += 1) {
     if ((new Date().getTime() - start) > ms) {
@@ -1165,7 +1170,7 @@ pensize = వెడల్పు;
 penwidth = వెడల్పు;
 penSize = వెడల్పు;
 penWidth = వెడల్పు;
-
+width = వెడల్పు;
 
 /*******************************************************************************
  * రంగు -- set the రంగు of the line and fill using turtle graphic and CSS colors
@@ -1212,11 +1217,12 @@ function రంగు (col) {
       //రంగు is assumed to be a 32-bit రంగు value
     //}
   } else if (typeof(col) != "string") { // col is not a supported type
-    col = "black";
+    col = "నలుపు";
   } 
   else {
     const idx = రంగుల_పేర్లు.indexOf(col);
-    console.log( "col, idx = ", col, idx );
+    // TODO(DSR) : uncomment this.
+    // console.log( "col, idx = ", col, idx );
     if ( idx > 0 ) {
       console.log( " రంగు = ", logoColors[idx] );
       turtle.రంగు = logoColors[idx];
@@ -1248,68 +1254,69 @@ function అక్షరరూపము_స్థాపించు(font) {
 }
 
 setFont = అక్షరరూపము_స్థాపించు;
-అక్షరరూపము_స్థాపించు = అక్షరరూపము_స్థాపించు;
+setfont = అక్షరరూపము_స్థాపించు;
 
 
 /*******************************************************************************
- * maxX -- get the maximum X value
+ * గరిష్ఠX -- get the గరిష్ఠ X value
  *
  * arguments: None
  *
  * returns:
- *   (int) the maximum X value for the current canvas
+ *   (int) the గరిష్ఠ X value for the current canvas
  ******************************************************************************/
-function maxX () {
+function గరిష్ఠX () {
   return (imageContext.canvas.width / 2);
 }
 
-maxx = maxX;
-
+maxx = గరిష్ఠX;
+maxX = గరిష్ఠX;
 
 /*******************************************************************************
- * minX -- get the minimum X value
+ * కనిష్ఠX -- get the కనిష్ఠ X value
  *
  * arguments: None
  *
  * returns:
- *   (int) the minimum X value for the current canvas
+ *   (int) the కనిష్ఠ X value for the current canvas
  ******************************************************************************/
-function minX () {
+function కనిష్ఠX () {
   return (-imageContext.canvas.width / 2);
 }
 
-minx = minX;
-
+minx = కనిష్ఠX;
+minX = కనిష్ఠX;
 
 /*******************************************************************************
- * axY -- get the maximum Y value
+ * గరిష్ఠY -- get the గరిష్ఠ Y value
  *
  * arguments: None
  *
  * returns:
- *   (int) the maximum Y value for the current canvas
+ *   (int) the గరిష్ఠ Y value for the current canvas
  ******************************************************************************/
-function maxY () {
+function గరిష్ఠY () {
   return (imageContext.canvas.height / 2);
 }
 
-maxy = maxY;
+maxy = గరిష్ఠY;
+maxY = గరిష్ఠY;
 
 
 /*******************************************************************************
- * minY -- get the minimum Y value
- *
+ * కనిష్ఠY -- get the కనిష్ఠ Y value
+ * కనిష్ఠY 
  * arguments: None
  *
  * returns:
- *   (int) the minimum Y value for the current canvas
+ *   (int) the కనిష్ఠ Y value for the current canvas
  ******************************************************************************/
-function minY () {
+function కనిష్ఠY () {
   return (-imageContext.canvas.height / 2);
 }
 
-miny = minY;
-
+miny = కనిష్ఠY;
+minY = కనిష్ఠY;
 
 
 ///////ANIMATION SUB-MODULE

@@ -7,7 +7,7 @@
 
 // GLOBALS
 // 
-var sColor = "black"  // stroke color
+var sColor = "నలుపు"  // stroke color
 var sWidth = 3        // stroke width
 var fColor = "white"  // fill color
 var bColor = "green"  // background color
@@ -75,7 +75,7 @@ function demo() {
   కలమును_పైకి_ఎత్తు()
   var pointAngle = 30
   var side = 60
-  side = .2* Math.min( maxX(), maxY())
+  side = .2* Math.min( గరిష్ఠX(), గరిష్ఠY())
   //center a bit
   goto (side, -.3 * side)
 
@@ -86,5 +86,5 @@ function demo() {
   వెడల్పు( 3)
   jeresh( side, pointAngle, false)
 
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

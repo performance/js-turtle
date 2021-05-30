@@ -535,24 +535,24 @@ function caption (message) {
     var savedX = turtle.pos.x
     var savedY = turtle.pos.y
     var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-    var savedColor = turtle.color
-    var savedWidth = turtle.width
+    var savedColor = turtle.రంగు
+    var savedWidth = turtle.వెడల్పు
 
-    goto (minX()+10, minY()+10)
-    setheading( 90)
+    goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+    దిశ_మార్చు( 90)
 
     // erase what will be in the path
     అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
     రంగు( తెలుపు )
     వెడల్పు(22)
-    ముందుకు_జరుగు(maxY() * 2 - 12)
-    goto (minX()+10, minY()+5)
-    రంగు("black")
+    ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
+    goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+    రంగు("నలుపు")
     write( message)
 
     //go back from whence you came
     goto( savedX, savedY)
-    setheading( savedHeading)
+    దిశ_మార్చు( savedHeading)
     రంగు( savedColor)
     వెడల్పు(savedWidth)
 }
@@ -998,7 +998,7 @@ function executeCommand () {
 
 function demo() {
     ఆది_స్థితి()
-    తాబేలును_దాచు()
+    కుంచికను_దాచు()
     commandDue = undefined
     commandSequence = simulatorCommands
     currentCommand = 0

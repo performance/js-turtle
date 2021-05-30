@@ -30,12 +30,12 @@ need routines for
 //*** GLOBALS ***
 
 var levels = 4
-var targetSide = .80 * Math.min( maxY()*2, maxX()) // base of big encompassing triangle
+var targetSide = .80 * Math.min( గరిష్ఠY()*2, గరిష్ఠX()) // base of big encompassing triangle
 var delayedSide = 0		// current side being worked
 
 var mainColor = "tan"
 var subColor = "wheat"
-var dividerColor = "black"
+var dividerColor = "నలుపు"
 var stepsize = 1.5       //spacing between shading lines
 var specialTriangle = 0  // triangle number selected for highlighting (1-5, 0 for none)
 
@@ -75,23 +75,23 @@ function caption (message) {
   var savedX = turtle.pos.x
   var savedY = turtle.pos.y
   var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.color
-  var savedWidth = turtle.width
+  var savedColor = turtle.రంగు
+  var savedWidth = turtle.వెడల్పు
 
-  goto (minX()+10, minY()+10)
-  setheading( 90)
+  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  దిశ_మార్చు( 90)
 
   // erase wha will be in the path
   రంగు( తెలుపు )
   వెడల్పు(10)
-  ముందుకు_జరుగు(maxY() * 2 - 12)
-  goto (minX()+10, minY()+5)
-  రంగు("black")
+  ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
+  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  రంగు("నలుపు")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
-  setheading( savedHeading)
+  దిశ_మార్చు( savedHeading)
   రంగు( savedColor)
   వెడల్పు(savedWidth)
 }
@@ -216,7 +216,7 @@ function startDelayedDivide() {
   level = 0
 
   కలమును_కింద_పెట్టు()
-  రంగు("black")
+  రంగు("నలుపు")
   delayedDivide()
 }
 
@@ -273,7 +273,7 @@ function startDelayedExpansion() {
   కలమును_కింద_పెట్టు()
   రంగు( నీలము )
   shadeTriangle( CCW, tempSide, stepsize)
-  రంగు("black")
+  రంగు("నలుపు")
   delay( delayedExpansion,1000)
 }
 
@@ -324,7 +324,7 @@ basically:
   continue with a delayed expansion
 */
   ఆది_స్థితి()
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   side = targetSide
   wrap(false)
   రంగు(mainColor)

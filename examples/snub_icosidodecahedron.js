@@ -84,8 +84,8 @@ function rightPentagon(side) {
 
 function demo() {
   ఆది_స్థితి()
-  side = .25 * Math.min( maxX(), maxY())
+  side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   goto (-.666 * side, - .333 * side)
   rightPentagon(side) // inner pentagon
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

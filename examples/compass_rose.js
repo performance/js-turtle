@@ -169,9 +169,9 @@ function boxTheCompass(size) {
 function demo () {
   ఆది_స్థితి()
   wrap(false)
-  తాబేలును_దాచు() // do not want it to show, so do this early
+  కుంచికను_దాచు() // do not want it to show, so do this early
   redrawOnMove(false) // do not redraw image each move
-  size = 2* Math.min(maxX(), maxY())
+  size = 2* Math.min(గరిష్ఠX(), గరిష్ఠY())
   side = size/14
   ఎడమ_వైపు_తిరుగు(22.5)
   for (i=0; i<8; i++) {

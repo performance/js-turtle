@@ -46,7 +46,7 @@ function spiral() {
     y = turtle.pos.y
 console.log("x:"+x+" y:"+y)
     // "||" means "or", so the following statement checks for out of bounds
-    if (x>maxX() || x<minX() || y>maxY() ||y<minY()) {
+    if (x>గరిష్ఠX() || x<కనిష్ఠX() || y>గరిష్ఠY() ||y<కనిష్ఠY()) {
 console.log("exiting:")
       break; // exit the loop early
     }

@@ -46,7 +46,7 @@ function ccwGroup( side) {
 
 
 function cwRow( side) {
-  for (var i=minX(); i<maxX(); i = i + 6*side) {
+  for (var i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + 6*side) {
     setx(i)
     cwGroup( side)
   }
@@ -54,7 +54,7 @@ function cwRow( side) {
 
 
 function ccwRow( side) {
-  for (var i=minX() + 4*side; i<maxX(); i = i + 6*side) {
+  for (var i=కనిష్ఠX() + 4*side; i<గరిష్ఠX(); i = i + 6*side) {
                      // offset row 3 sides + 1 for cw/ccw flip
     setx(i)
     ccwGroup( side)
@@ -65,12 +65,12 @@ function ccwRow( side) {
 function demo() {
   wrap(false)
   side = 30
-  for (var i=minY(); i<maxY(); i = i + 6*side) {
+  for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {
     sety(i)
     cwRow( side)
     sety(i + 3*side)
     రంగు( ఎరుపు )
     ccwRow( side)
-    రంగు("black")
+    రంగు("నలుపు")
   }
 }

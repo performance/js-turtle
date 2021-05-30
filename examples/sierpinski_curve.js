@@ -56,15 +56,15 @@ var i = 1; // a global variable used for each iteration of delayed
 function delayed() {
   if (i<7) {
     చెరిపి_వేయి();
-    తాబేలును_దాచు();
+    కుంచికను_దాచు();
     redrawOnMove(true);
-    goto(0,.9*minY());
+    goto(0,.9*కనిష్ఠY());
 
     // move start point so figure stays centered
     కలమును_పైకి_ఎత్తు();
     కోణము(0);
 
-    size = 1.8 * Math.min( maxX(), maxY())
+    size = 1.8 * Math.min( గరిష్ఠX(), గరిష్ఠY())
     var sides = 4 * 2**i -3 // number of sides
     var side = size/sides;
     ఎడమ_వైపు_తిరుగు(90)
@@ -74,7 +74,7 @@ function delayed() {
     కలమును_కింద_పెట్టు();
 
     sierpinski(side, i);
-    goto (minX(),minY());
+    goto (కనిష్ఠX(),కనిష్ఠY());
     కోణము(90);
     అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")
     write ("Sierpinski curve of order "+ i);

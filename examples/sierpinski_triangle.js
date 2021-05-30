@@ -42,15 +42,15 @@ function delayed() {
 
 function sier (order) {
     ఆది_స్థితి()
-    తాబేలును_దాచు()
-    side = 2* Math.min(maxX(),maxY()) -20
+    కుంచికను_దాచు()
+    side = 2* Math.min(గరిష్ఠX(),గరిష్ఠY()) -20
     కలమును_పైకి_ఎత్తు()
     goto(-side/2, -side/2+20)
     కుడి_వైపు_తిరుగు(90)
     కలమును_కింద_పెట్టు()
     sierpinski( order, side)
 
-    goto (0+10- side/2,minY()+10)
+    goto (0+10- side/2,కనిష్ఠY()+10)
     అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
     write ("Sierpinski triangle of order " + order)  
 }

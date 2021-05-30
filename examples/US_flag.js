@@ -75,9 +75,9 @@ function flag() {
   //var yBase = 200
   //var flagHeight = 250 // everything else is proportional to flagHeight
  
-  var flagHeight =  1.8 * Math.min(maxX()/1.9, maxY())
+  var flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())
   var flagWidth = 1.9 * flagHeight
-console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
+console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+flagWidth + "H="+flagHeight)
   var xBase = -flagWidth/2
   var yBase = flagHeight/2 
 
@@ -90,10 +90,10 @@ console.log("X="+2*maxX()+ " Y="+2*maxY() + " W="+flagWidth + "H="+flagHeight)
   //outline flag and field
   ఆది_స్థితి()
   wrap(false)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
   goto (xBase, yBase)
   కోణము (90)
-  రంగు("black")
+  రంగు("నలుపు")
 
   వెడల్పు(1)
   rectangle (flagWidth, flagHeight)

@@ -93,8 +93,8 @@ function kites( count, back) {
 
 function demo() {
   ఆది_స్థితి()
-  తాబేలును_దాచు()
-  side = 2.5 * Math.min( maxX()/9, maxY()/8)
+  కుంచికను_దాచు()
+  side = 2.5 * Math.min( గరిష్ఠX()/9, గరిష్ఠY()/8)
 
   //side = 50 // size of the basic block not the inner square
   ratio = 2 // ratio of long side to short side of the quadragon.

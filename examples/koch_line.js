@@ -20,15 +20,15 @@ function kochLine (length, order) {
 function kochLineDelay() {
 ;
   చెరిపి_వేయి();
-  var side = maxY() - minY();
-  if (side > maxX() - minX()) {
-    side = maxX() - minX()
+  var side = గరిష్ఠY() - కనిష్ఠY();
+  if (side > గరిష్ఠX() - కనిష్ఠX()) {
+    side = గరిష్ఠX() - కనిష్ఠX()
   }
   కోణము(90)
   side = .9 * side
   goto (-side/2, -1/4 * side)
   kochLine (side, i);
-  goto(minX(),minY());
+  goto(కనిష్ఠX(),కనిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("bold 12pt Ariel,san-serif")
   write ("Koch line of order " +i);
@@ -41,7 +41,7 @@ function kochLineDelay() {
 
 function demo() {
   ఆది_స్థితి();
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   steps = 6;
   span = 240;
   i = 0;

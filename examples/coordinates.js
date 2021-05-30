@@ -4,31 +4,31 @@ function lines () {
   చెరిపి_వేయి()
   కలమును_కింద_పెట్టు()
 
-  goto(0,minY())
+  goto(0,కనిష్ఠY())
   కోణము(0)
-  ముందుకు_జరుగు(2*maxY())
+  ముందుకు_జరుగు(2*గరిష్ఠY())
 
-  goto(minX(),0)
+  goto(కనిష్ఠX(),0)
   కోణము(90)
-  ముందుకు_జరుగు(2*maxX())
+  ముందుకు_జరుగు(2*గరిష్ఠX())
 
   //lable the axes
   అక్షరరూపము_స్థాపించు("bold 14px sans-serif");
-  goto (0+10,maxY()-25)
+  goto (0+10,గరిష్ఠY()-25)
   కోణము (90)
-  write (maxY())
+  write (గరిష్ఠY())
 
-  goto (maxX()-5,+10)
+  goto (గరిష్ఠX()-5,+10)
   కోణము (0)
-  write (maxX())
+  write (గరిష్ఠX())
 
-  goto (10,minY()+5)
+  goto (10,కనిష్ఠY()+5)
   కోణము (90)
-  write (minY())
+  write (కనిష్ఠY())
 
-  goto (minX()+25,0+10)
+  goto (కనిష్ఠX()+25,0+10)
   కోణము (0)
-  write (minX())
+  write (కనిష్ఠX())
 }
 
 
@@ -61,8 +61,8 @@ function ticks (dir, limit, step) {
 
 function demo() {
   lines()
-  ticks (0, maxY(), 10)
-  ticks (90, maxX(), 10)
-  ticks (180, -minY(), 10)
-  ticks (270, -minX(), 10)
+  ticks (0, గరిష్ఠY(), 10)
+  ticks (90, గరిష్ఠX(), 10)
+  ticks (180, -కనిష్ఠY(), 10)
+  ticks (270, -కనిష్ఠX(), 10)
 }

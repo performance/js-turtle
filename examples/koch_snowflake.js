@@ -45,12 +45,12 @@ function kochLines () {
 function kochSnowflakeDelay() {
 
   చెరిపి_వేయి();
-  var side = maxY() - minY();
-  if (side > maxX() - minX()) {
-    side = maxX() - minX()
+  var side = గరిష్ఠY() - కనిష్ఠY();
+  if (side > గరిష్ఠX() - కనిష్ఠX()) {
+    side = గరిష్ఠX() - కనిష్ఠX()
   }
   kochSnowflake (.8 * side,i);
-  goto(minX(),minY());
+  goto(కనిష్ఠX(),కనిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("Helvetica,san-serif 12pt")
   write ("Koch snowflake of order " +i);
@@ -62,7 +62,7 @@ function kochSnowflakeDelay() {
 }
 
 function demo() {
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
   i = 0;
   kochSnowflakeDelay();
 }

@@ -973,10 +973,10 @@ can be used. A Cartesian coordinate system is used with x=0, y=0 at
 the center of the canvas. (see example of Cartesian coordinates.)
 The values at the edges of the canvas will vary from machine to
 machine and with the size of the particular window. There are
-functions to retrieve the minimum and maximum X values, <code>minX()</code>
-and <code>maxX()</code> respectively. <code>minX()</code> returns the left
-most x point and <code>maxX()</code> returns the right most x point.
-The <code>minY()</code> and <code>maxY()</code> functions do
+functions to retrieve the minimum and maximum X values, <code>కనిష్ఠX()</code>
+and <code>గరిష్ఠX()</code> respectively. <code>కనిష్ఠX()</code> returns the left
+most x point and <code>గరిష్ఠX()</code> returns the right most x point.
+The <code>కనిష్ఠY()</code> and <code>గరిష్ఠY()</code> functions do
 the same for the Y values. These functions are necessary because the
 screen size is different for different devices and can change at will
 on laptops and desktop machines as the browser window is changed.
@@ -984,8 +984,8 @@ on laptops and desktop machines as the browser window is changed.
 <p>
 We need to pick a random number for a random x and a random y on the
 canvas for the <code>goto()</function></code>.
-<code>random( minX(), maxX())</code> will pick a suitable x value and
-<code>random( minY(), maxY())</code> will pick a suitable y value.
+<code>random( కనిష్ఠX(), గరిష్ఠX())</code> will pick a suitable x value and
+<code>random( కనిష్ఠY(), గరిష్ఠY())</code> will pick a suitable y value.
 This is put altogether in the following code. Note that the x and y parameter
 positions in the definition of the <code>goto()</code> function definition
 determine the order of the arguments when invoking the <code>goto()</code>
@@ -1005,7 +1005,7 @@ function demo(){
   ఆది_స్థితి()
   for (i=0; i&lt;20; i= i + 1) {
     రంగు( random(15))
-    goto (random( minX(), maxX()), random(minY(), maxY()))
+    goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
     square( random( 15,150))
   }
 }
@@ -1042,7 +1042,7 @@ Everything else can be put into a <code>randomSquare()</code> function.
 
 function randomSquare(){
   రంగు( random(15))
-  goto (random( minX(), maxX()), random(minY(), maxY()))
+  goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
   square( random( 15,150))
 }
 
@@ -1061,8 +1061,8 @@ function to the <code>animate()</code> function. Animate executes the
 function at the address passed to it. By dropping the parentheses
 from the <code>demo2()</code> function, the address of the function is used
 rather than to attempt to invoke the function immediately as is done with the
-<code>random()</code>, <code>minX()</code>, <code>minY()</code>,
-<code>maxX()</code>, <code>maxY()</code> functions elsewhere in the code.
+<code>random()</code>, <code>కనిష్ఠX()</code>, <code>కనిష్ఠY()</code>,
+<code>గరిష్ఠX()</code>, <code>గరిష్ఠY()</code> functions elsewhere in the code.
 </p>
 <p>
 The squares can be
@@ -1080,7 +1080,7 @@ mix.
 
 function randomSquare(){
   రంగు( random(15))
-  goto (random( minX(), maxX()), random(minY(), maxY()))
+  goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
   కుడి_వైపు_తిరుగు(random( 5, 30))
   square( random( 15,150))
 }
@@ -1113,7 +1113,7 @@ of the widths. This code looks something like the following.
 
 function randomSquare(){
   రంగు( random(15))
-  goto (random( minX(), maxX()), random(minY(), maxY()))
+  goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
   కుడి_వైపు_తిరుగు(random( 5, 30))
   వెడల్పు( random( 1, 6))
   square( random( 15,150))

@@ -17,9 +17,9 @@ function star (side) {
     
 function demo () {
   ఆది_స్థితి()
-  side =  1.8* Math.min( maxX(), maxY())
+  side =  1.8* Math.min( గరిష్ఠX(), గరిష్ఠY())
   beginShape()
   star ( side)
   fillShape("gold")
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

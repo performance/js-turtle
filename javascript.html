@@ -952,10 +952,10 @@ dog = { breed: "dalmatian",        //object with 4 attributes
        <code>function spiral () {
   wrap(false);
   var i = 1;
-  while ( turtle.pos.x < maxX()
-          && turtle.pos.x > minX()
-          && turtle.pos.y < maxY()
-          && turtle.pos.y > minY()) {
+  while ( turtle.pos.x < గరిష్ఠX()
+          && turtle.pos.x > కనిష్ఠX()
+          && turtle.pos.y < గరిష్ఠY()
+          && turtle.pos.y > కనిష్ఠY()) {
     ముందుకు_జరుగు(i + i);
     కుడి_వైపు_తిరుగు(90 - i);
     i = i + 1;
@@ -1538,9 +1538,9 @@ for (i=0; i<3; i=i+1) {
   }
 }
 
-setpos(minX() + 20, minY() + 20); // go toward bottom left of canvas
+setpos(కనిష్ఠX() + 20, కనిష్ఠY() + 20); // go toward bottom left of canvas
 కోణము(90);
-kochForward(maxX() + maxX() - 40); // draw a Koch line most of the width of the canvas
+kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch line most of the width of the canvas
 </code>
        <p>
          Hint: you can change the value in the conditional (the 20) to other values

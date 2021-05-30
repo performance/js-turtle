@@ -34,15 +34,15 @@ function demo() {
   ఆది_స్థితి()
   count = 0
   rowCount = 0
-  column = minX()
-  row = maxY()
+  column = కనిష్ఠX()
+  row = గరిష్ఠY()
   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while( turtle.pos.y > minY()) {
-    goto(minX()+offsets[ rowCount % offsets.length]*s, maxY()-rowCount*s/2+s/2)
-    while( turtle.pos.x < maxX()) {
+  while( turtle.pos.y > కనిష్ఠY()) {
+    goto(కనిష్ఠX()+offsets[ rowCount % offsets.length]*s, గరిష్ఠY()-rowCount*s/2+s/2)
+    while( turtle.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       squ(s, nextColor())
       కలమును_పైకి_ఎత్తు()

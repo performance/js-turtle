@@ -33,7 +33,7 @@ function demo() {
   ఆది_స్థితి()
   wrap(false)
   side = 14
-  side = .033 * Math.min( maxX(), maxY())
+  side = .033 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   factor = Math.sqrt(2 + Math.sqrt( 2))
   //    side, వ్యాసార్థము, offsetAngle
   layer(      side, 0)
@@ -45,5 +45,5 @@ function demo() {
   layer( side,   22.5)
   side = side * factor
   layer( side,   0)
-  తాబేలును_దాచు()
+  కుంచికను_దాచు()
 }

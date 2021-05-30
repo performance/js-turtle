@@ -8,7 +8,7 @@ function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent
   ముందుకు_జరుగు(startRadius);
   కుడి_వైపు_తిరుగు(tangentAngle);
   కలమును_కింద_పెట్టు();
-  circle(arcRadius,extent, dir);
+  వృత్తము(arcRadius,extent, dir);
 }
 
 
@@ -74,7 +74,7 @@ function circleEyeL (x, y, n, outerRadius) {
 function demo () {
   var CW = true;
   var CCW = false;
-  var size = 2 * Math.min(maxX(), maxY())
+  var size = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())
   var cellSize = size/3
 
   //divide area into 6 cells: 2 vertical, 3 horizontal
@@ -86,7 +86,7 @@ function demo () {
   h3 = +2/6 * size
 
   ఆది_స్థితి();
-  తాబేలును_దాచు();
+  కుంచికను_దాచు();
 
   tSize = cellSize/2 * .90
 // turbine(x,y, వ్యాసార్థము, pedals, dir) {
@@ -108,7 +108,7 @@ function demo () {
   
 
   స్థితి_మార్చు(h2, v1);
-  circle(60/60 * tSize);
+  వృత్తము(60/60 * tSize);
 
   స్థితి_మార్చు( h1, v2)
   కోణము(0)

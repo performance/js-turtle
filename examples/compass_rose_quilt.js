@@ -17,16 +17,16 @@ subDivisions32 = 3
 //color of background
 backgroundColor = "blue"
 //color of compass background
-compassBackgroundColor = "black"
+compassBackgroundColor = "నలుపు"
 //color of text
 compassTextColor = "white"
 //color of inner direction background
-inner8BackgroundColor = "black"
+inner8BackgroundColor = "నలుపు"
 //color of inward direction (array)
 inner8Colors = ["gold", "salmon"]
 
 //color of outer direction background
-outer8BackgroundColor = "black"
+outer8BackgroundColor = "నలుపు"
 //color of outer direction (array)
 outer8Colors = ["yellow", "red"]
 
@@ -36,7 +36,7 @@ background16Color = "gold"
 //foreground color of 16ths
 foreground16Color = "salmon"
 //background color of 32nds
-background32Color = "black"
+background32Color = "నలుపు"
 //foreground color of 32nds
 foreground32Color = "yellow"
 
@@ -152,25 +152,25 @@ function labelPoints(size) {
 
 function demo () {
   ఆది_స్థితి()
-  size = .9 * Math.min( maxX(), maxY()) //120
+  size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120
 console.log("size "+ size)
   wrap(false)
-  తాబేలును_దాచు() // don"t want it to show,  do this early
+  కుంచికను_దాచు() // don"t want it to show,  do this early
   redrawOnMove(false) // don"t redraw image each move
 
   // fill in the background
   background( backgroundColor)
 /*
-  goto( minX()+1, maxY()-1)
+  goto( కనిష్ఠX()+1, గరిష్ఠY()-1)
   కుడి_వైపు_తిరుగు( 90)
   beginShape()
-  ముందుకు_జరుగు( 2 * maxX()-2)
+  ముందుకు_జరుగు( 2 * గరిష్ఠX()-2)
   కుడి_వైపు_తిరుగు( 90)
-  ముందుకు_జరుగు( 2 * maxY()-2)
+  ముందుకు_జరుగు( 2 * గరిష్ఠY()-2)
   కుడి_వైపు_తిరుగు( 90)
-  ముందుకు_జరుగు( 2 * maxX()-2)
+  ముందుకు_జరుగు( 2 * గరిష్ఠX()-2)
   కుడి_వైపు_తిరుగు( 90)
-  ముందుకు_జరుగు( 2 * maxY()-2)
+  ముందుకు_జరుగు( 2 * గరిష్ఠY()-2)
   fillShape( backgroundColor)
 */
 
