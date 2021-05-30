@@ -1106,22 +1106,27 @@ function random(low, high) {
 
 
 /*******************************************************************************
- * repeat -- repeat an action n times
+ * ఆవర్తించు -- repeat an action n times
  *
  * arguments:
- *   n: number of times to repeat the action
- *   action: a reference to a function
+ *   ఎన్ని_సార్లు_చేయాలి: number of times to repeat the action
+ *   క్రియ: a reference to a function
  *
  * returns: None
  ******************************************************************************/
-function repeat(n, action) {
-   var count = 1;
-   for (count = 1; count <= n; count += 1) {
-      action();
+function ఆవర్తించు(ఎన్ని_సార్లు_చేయాలి, క్రియ) {
+   let ఎన్ని_సార్లు_చేసింది = 0;
+   for (ఎన్ని_సార్లు_చేసింది = 0; ఎన్ని_సార్లు_చేసింది < ఎన్ని_సార్లు_చేయాలి; ఎన్ని_సార్లు_చేసింది += 1) {
+      క్రియ();
       if (errorFound)
         break;
    }
 }
+repeat = ఆవర్తించు;
+
+యావత్_పరిక్రమ = (సంసక్త, కార్యము) => {
+  while( సంసక్త() ) కార్యము()
+};
 
 
 /*******************************************************************************
@@ -1213,6 +1218,7 @@ function రంగు (col) {
   if (typeof(col) === "number") {
     if (col < 16) { // assume standard logo turtle రంగు
       col = logoColors [col];
+      console.log( "col, logoColors [col] = ", col, logoColors [col] );
     } //else {
       //రంగు is assumed to be a 32-bit రంగు value
     //}
@@ -1225,13 +1231,11 @@ function రంగు (col) {
     // console.log( "col, idx = ", col, idx );
     if ( idx > 0 ) {
       console.log( " రంగు = ", logoColors[idx] );
-      turtle.రంగు = logoColors[idx];
-      imageContext.strokeStyle = logoColors[idx];
-    } else {
-      turtle.రంగు = col;
-      imageContext.strokeStyle = col;
-    }
+      col = logoColors[idx];
+    }  
   }
+  turtle.రంగు = col;
+  imageContext.strokeStyle = col;
 }
 
 colour = రంగు;
@@ -1328,7 +1332,7 @@ var timeouts = []; //array of time out IDs started with the delay function
 
 
 /*******************************************************************************
- * animate -- repeat an action every ms millisecond to animate drawing
+ * ఆడించు -- repeat an action every ms millisecond to animate drawing
  *
  * arguments:
  *   f: a reference to a function
@@ -1336,7 +1340,7 @@ var timeouts = []; //array of time out IDs started with the delay function
  *
  * returns: None
  ******************************************************************************/
-function animate(f, ms) {
+function ఆడించు(f, ms) {
    intervals.push (setInterval( function (){
       f()
       if (errorFound)
@@ -1344,6 +1348,8 @@ function animate(f, ms) {
    }, ms));
    document.getElementById("stopButton").hidden=false;
 }
+
+animate = ఆడించు;
 
 /*******************************************************************************
  * delay -- delay an action for ms milliseconds to animate drawing
@@ -1400,9 +1406,9 @@ function radToDeg(rad) {
 
 
 /*******************************************************************************
- * constrain -- constrain an కోణము to between high and low limits
+ * గాడిలో_పెట్టు -- constrain an కోణము to between high and low limits
  *
- * arguments: None
+ * arguments: 
  *   n: (int or float) number which may be contrained
  *   low: (int or float) lowest possible return value
  *   high: (int or float) highest possible return value
@@ -1410,7 +1416,7 @@ function radToDeg(rad) {
  * returns:
  *   (int or float) constrained value
  ******************************************************************************/
-function constrain(n, low, high) {
+function గాడిలో_పెట్టు(n, low, high) {
   var modulo = high - low;
   while (n < low) {
     n = n + modulo;
@@ -1420,7 +1426,7 @@ function constrain(n, low, high) {
   }
   return n;
 }
-
+constrain = గాడిలో_పెట్టు;
 
 var turtleState = new Turtle();
 
