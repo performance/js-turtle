@@ -69,8 +69,8 @@ function demo() {
     sety(i)
     cwRow( side)
     sety(i + 3*side)
-    రంగు( ఎరుపు )
+    రంగు_మార్చు( ఎరుపు )
     ccwRow( side)
-    రంగు("నలుపు")
+    రంగు_మార్చు("నలుపు")
   }
 }

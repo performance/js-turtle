@@ -44,7 +44,7 @@ function rain (drops, n) {
          d.velocityX = -d.velocityX;
       }
       // paint the drop
-      రంగు("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");
+      రంగు_మార్చు("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");
       వెడల్పు(d.width);
       goto(d.x, d.y);
       ముందుకు_జరుగు(d.size);

@@ -83,7 +83,7 @@ function init () {
 function drawBlock( h, v, x, y, n) {
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)
   // draw a block
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   beginShape()
   goto (baseX + x * side, baseY - y * side)
   దిశ_మార్చు(90)
@@ -704,17 +704,17 @@ function caption (message) {
 
   // erase what will be in the path
   అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   వెడల్పు(22)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
   goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   దిశ_మార్చు( savedHeading)
-  రంగు( savedColor)
+  రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
 }
 

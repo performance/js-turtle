@@ -22,18 +22,18 @@ function caption (message) {
   దిశ_మార్చు( 90)
 
   // erase wha will be in the path
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
   goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   దిశ_మార్చు( savedHeading)
-  రంగు( savedColor)
+  రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
 }
 

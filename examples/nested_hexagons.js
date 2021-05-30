@@ -18,7 +18,7 @@ function demo() {
    ఆది_స్థితి();
    కుంచికను_దాచు();
    for(step=1; step < steps; step=step+1) {
-      రంగు(random(16));
+      రంగు_మార్చు(random(16));
       polygon(6,step*10);
       కలమును_పైకి_ఎత్తు();
       ఎడమ_వైపు_తిరుగు(120)

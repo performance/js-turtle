@@ -93,14 +93,14 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   కుంచికను_దాచు()
   goto (xBase, yBase)
   కోణము (90)
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
 
   వెడల్పు(1)
   rectangle (flagWidth, flagHeight)
   rectangle (fieldWidth, fieldHeight)
 
   //  draw stripes
-  రంగు( ఎరుపు );
+  రంగు_మార్చు( ఎరుపు );
   వెడల్పు(stripeWidth);
   goto (xBase+flagWidth, yBase-stripeWidth/2)
   కోణము (-90)
@@ -108,7 +108,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   stripes (flagWidth, 2*stripeWidth, 3)
 
   //draw field
-  రంగు( నీలము )
+  రంగు_మార్చు( నీలము )
   goto (xBase+fieldWidth, yBase-stripeWidth/2)
   కోణము (-90)
   stripes (fieldWidth, stripeWidth, 7)
@@ -116,7 +116,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   //draw field of stars
   కోణము(0)
   వెడల్పు(2)
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   కలమును_కింద_పెట్టు()
 
   var row = 0

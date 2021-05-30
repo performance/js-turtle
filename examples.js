@@ -317,7 +317,7 @@ function rain (drops, n) {\n\
          d.velocityX = -d.velocityX;\n\
       }\n\
       // paint the drop\n\
-      రంగు("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");\n\
+      రంగు_మార్చు("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");\n\
       వెడల్పు(d.width);\n\
       స్థితి_మార్చు(d.x, d.y);\n\
       ముందుకు_జరుగు(d.size);\n\
@@ -375,7 +375,7 @@ function demo() {\n\
   xB = కనిష్ఠX()\n\
   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > కనిష్ఠY()) {\n\
@@ -416,7 +416,7 @@ function cafeTiles (h, w, gw, gc, off) {\n\
   maxRow = 2*గరిష్ఠY()/h\n\
   maxCol = 2*గరిష్ఠX()/w\n\
   వెడల్పు(gw)\n\
-  రంగు(gc)\n\
+  రంగు_మార్చు(gc)\n\
   దిశ_మార్చు(0)\n\
   for (var row=0; row<maxRow; row=row+1) {\n\
     for (var col=0; col<maxCol; col=col+1) {\n\
@@ -470,7 +470,7 @@ function demo () {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
-  రంగు( random(16));\n\
+  రంగు_మార్చు( random(16));\n\
   circleEye( 0, 0, 32, size, .2*size);\n\
 }\n\
 '
@@ -497,7 +497,7 @@ function demo () {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
-  రంగు( random(16));\n\
+  రంగు_మార్చు( random(16));\n\
   circleEye( 0, 0, 16, size);\n\
 }\n\
 '
@@ -572,9 +572,9 @@ function getBinaryTime() {\n\
 \n\
 function drawDot (digit, onColor, offColor, step) {\n\
   if (digit == 1) {\n\
-    రంగు( onColor)\n\
+    రంగు_మార్చు( onColor)\n\
   } else {\n\
-    రంగు( offColor)\n\
+    రంగు_మార్చు( offColor)\n\
   }\n\
   dot ()\n\
   ముందుకు_జరుగు(step)\n\
@@ -711,9 +711,9 @@ function getTime() {\n\
 \n\
 function segColor (bit) {\n\
   if (bit == "1") {\n\
-    రంగు( segOnColor)\n\
+    రంగు_మార్చు( segOnColor)\n\
   } else {\n\
-    రంగు( segOffColor)\n\
+    రంగు_మార్చు( segOffColor)\n\
   }10\n\
 }\n\
 \n\
@@ -749,7 +749,7 @@ function displaySegTime() {\n\
   // black out background\n\
   స్థితి_మార్చు(కనిష్ఠX(),0)\n\
   కోణము (90)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   వెడల్పు(2*గరిష్ఠY())\n\
   కలమును_కింద_పెట్టు()\n\
   ముందుకు_జరుగు(2*గరిష్ఠX())\n\
@@ -797,7 +797,7 @@ var size;\n\
 function ticks(x, y, వ్యాసార్థము) {\n\
    var tickLen = 7;\n\
    var gap = వ్యాసార్థము - tickLen;\n\
-   రంగు( నీలము );\n\
+   రంగు_మార్చు( నీలము );\n\
    వెడల్పు(1);\n\
    for (var theta = 0; theta < 360; theta = theta + 6) {\n\
       // Thicken hour marks\n\
@@ -821,7 +821,7 @@ function numbers(x, y, వ్యాసార్థము) {\n\
    కలమును_పైకి_ఎత్తు();\n\
    fontSize = 20/130 * size\n\
    అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");\n\
-   రంగు("నలుపు");\n\
+   రంగు_మార్చు("నలుపు");\n\
    for (var hour = 1; hour <= 12; hour++) {\n\
       స్థితి_మార్చు(x,y);\n\
       కోణము(hour * 30);\n\
@@ -846,7 +846,7 @@ function hand (theta, w, length, col) {\n\
    var widthDelta = w / (length / stepSize);\n\
    స్థితి_మార్చు(0, 0);\n\
    కోణము(theta);\n\
-   రంగు(col);\n\
+   రంగు_మార్చు(col);\n\
    for (var step = 0; step < length; step = step + stepSize) {\n\
       వెడల్పు(w);\n\
       ముందుకు_జరుగు(stepSize);\n\
@@ -873,7 +873,7 @@ function clock() {\n\
    చెరిపి_వేయి();\n\
    size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   numbers(0, 0, 110/130 * size);\n\
-   రంగు("lightgreen");\n\
+   రంగు_మార్చు("lightgreen");\n\
    స్థితి_మార్చు(0,0);\n\
    వెడల్పు(1/130* size)\n\
    వృత్తము(130/130 * size );\n\
@@ -1481,7 +1481,7 @@ controller.\n\
 */\n\
 \n\
 function drawDot () {\n\
-    రంగు(random(16))\n\
+    రంగు_మార్చు(random(16))\n\
     dot()\n\
     ముందుకు_జరుగు(15)\n\
 }\n\
@@ -1497,7 +1497,7 @@ function colorChangingDots () {\n\
   setpos(కనిష్ఠX(),0)\n\
   కోణము(90)\n\
   కలమును_కింద_పెట్టు()\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   వెడల్పు(80)\n\
   ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX()) //draw black band\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -1590,7 +1590,7 @@ function demo () {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
-  //రంగు( random(16));\n\
+  //రంగు_మార్చు( random(16));\n\
   compassRose( 0, 0, 16, size, .2*size);\n\
 }\n\
 '
@@ -1920,7 +1920,7 @@ function labelPoints(size) {\n\
 \n\
   //textRadius = side*5.7\n\
   textRadius = size*.88\n\
-  రంగు( compassTextColor)\n\
+  రంగు_మార్చు( compassTextColor)\n\
 \n\
   for (i=0; i<32; i++) {\n\
   \n\
@@ -1978,7 +1978,7 @@ console.log("size "+ size)\n\
 \n\
   //fill in the compass background\n\
   స్థితి_మార్చు(0,0)\n\
-  రంగు( compassBackgroundColor)\n\
+  రంగు_మార్చు( compassBackgroundColor)\n\
   beginShape()\n\
   circle (size)\n\
   fillShape( compassBackgroundColor)\n\
@@ -2169,17 +2169,17 @@ function caption (message) {\n\
   దిశ_మార్చు( 90)\n\
 \n\
   // erase what will be in the path\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -2340,11 +2340,11 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
   } else {\n\
     if (triangle == 3) {\n\
     //if (triangle == specialTriangle) {\n\
-      రంగు( highlight)\n\
+      రంగు_మార్చు( highlight)\n\
       console.log("shading " + highlight)\n\
       shadeTriangle (dir, side, stepsize)\n\
     } else {\n\
-      రంగు( background)\n\
+      రంగు_మార్చు( background)\n\
       shadeTriangle (dir, side, stepsize)\n\
     }\n\
   }\n\
@@ -2355,7 +2355,7 @@ function delayedDivide() {\n\
   level = level + 1\n\
   if (level <= targetLevel) {\n\
     recursiveDivideBlocks( CCW, side, level, 0, mainColor, subColor)\n\
-    రంగు(dividerColor)\n\
+    రంగు_మార్చు(dividerColor)\n\
     recursiveDivide( CCW, side, level, 0)\n\
     drawTriangle( CCW, side)\n\
     caption( "Fractal divide, generation " + level)\n\
@@ -2493,17 +2493,17 @@ function caption (message) {\n\
   దిశ_మార్చు( 90)\n\
 \n\
   // erase wha will be in the path\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -2614,7 +2614,7 @@ function moveToExpandOrigin (side) {\n\
 function startDelayedDivide() {\n\
   // move to the origin of the big triangle\n\
   ఆది_స్థితి()\n\
-  రంగు(mainColor)\n\
+  రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
 \n\
   side = targetSide\n\
@@ -2627,7 +2627,7 @@ function startDelayedDivide() {\n\
   level = 0\n\
 \n\
   కలమును_కింద_పెట్టు()\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   delayedDivide()\n\
 }\n\
 \n\
@@ -2649,7 +2649,7 @@ function startDelayedExpansion() {\n\
   //move to the origin of the big triangle\n\
   reset ()\n\
   wrap( false)\n\
-  రంగు(mainColor)\n\
+  రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
 \n\
   var tempSide = targetSide\n\
@@ -2682,9 +2682,9 @@ function startDelayedExpansion() {\n\
   }\n\
 \n\
   కలమును_కింద_పెట్టు()\n\
-  రంగు( నీలము )\n\
+  రంగు_మార్చు( నీలము )\n\
   shadeTriangle( CCW, tempSide, stepsize)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   delay( delayedExpansion,1000)\n\
 }\n\
 \n\
@@ -2738,7 +2738,7 @@ basically:\n\
   కుంచికను_దాచు()\n\
   side = targetSide\n\
   wrap(false)\n\
-  రంగు(mainColor)\n\
+  రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(side/2)\n\
   కుడి_వైపు_తిరుగు(90)\n\
@@ -2956,11 +2956,11 @@ function caption (message) {\n\
   దిశ_మార్చు( 90)\n\
 \n\
   // erase what will be in the path\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
 \n\
   అక్షరరూపము_స్థాపించు( "bold 12px Helvitica,sans-serif")\n\
   write( message)\n\
@@ -2968,7 +2968,7 @@ function caption (message) {\n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -3044,7 +3044,7 @@ function square (side) {\n\
 function demo() {\n\
    ఆది_స్థితి();\n\
    కుంచికను_దాచు();\n\
-   రంగు( నీలము );\n\
+   రంగు_మార్చు( నీలము );\n\
    var side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
@@ -3599,17 +3599,17 @@ function caption (message) {\n\
 \n\
     // erase what will be in the path\n\
     అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
-    రంగు( తెలుపు )\n\
+    రంగు_మార్చు( తెలుపు )\n\
     వెడల్పు(22)\n\
     ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
     స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-    రంగు("నలుపు")\n\
+    రంగు_మార్చు("నలుపు")\n\
     write( message)\n\
 \n\
     //go back from whence you came\n\
     స్థితి_మార్చు( savedX, savedY)\n\
     దిశ_మార్చు( savedHeading)\n\
-    రంగు( savedColor)\n\
+    రంగు_మార్చు( savedColor)\n\
     వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -4032,7 +4032,7 @@ console.log("dE1:",eyeOpening, browType, irisType, pupilType, ix, iy, baseCaptio
                  offset = eyeGap\n\
              }\n\
              స్థితి_మార్చు( columnMid - (c + offset)* columnSize, rowMid - r * rowSize)\n\
-             రంగు( coloredGrid [r * columns + c])\n\
+             రంగు_మార్చు( coloredGrid [r * columns + c])\n\
              dot( dotSize)\n\
         }\n\
     }\n\
@@ -4139,18 +4139,18 @@ function caption (message) {\n\
   దిశ_మార్చు( 90)\n\
 \n\
   // erase what will be in the path\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   అక్షరరూపము_స్థాపించు( "bold 12px Helvitica,sans-serif")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -4236,7 +4236,7 @@ var maxVelocity = 12;\n\
 \n\
 function plotOne() {\n\
   స్థితి_మార్చు(random(కనిష్ఠ_X, గరిష్ఠ_X), random(కనిష్ఠ_Y, గరిష్ఠ_Y));\n\
-  రంగు(random(16));\n\
+  రంగు_మార్చు(random(16));\n\
   కోణము(random(0, 180));\n\
   వెడల్పు(random(1, 20));\n\
   ముందుకు_జరుగు(random(10, 30));\n\
@@ -4267,7 +4267,7 @@ to make solid:\n\
 \n\
 function oheart(size)\n\
 {\n\
-  రంగు( ఎరుపు )\n\
+  రంగు_మార్చు( ఎరుపు )\n\
   వెడల్పు(4)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(.707*size)\n\
@@ -4298,7 +4298,7 @@ function oheart(size)\n\
 \n\
 function fheart(size, fcolor)\n\
 {\n\
-  రంగు(fcolor)\n\
+  రంగు_మార్చు(fcolor)\n\
   వెనుకకు_జరుగు(.707*size)\n\
   ఎడమ_వైపు_తిరుగు(45)\n\
   ముందుకు_జరుగు(size)\n\
@@ -4329,7 +4329,7 @@ function fheart(size, fcolor)\n\
 \n\
 function heart(size)\n\
 {\n\
-  రంగు( ఎరుపు )\n\
+  రంగు_మార్చు( ఎరుపు )\n\
   వెడల్పు(4)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(.707*size)\n\
@@ -4418,7 +4418,7 @@ function demo() {\n\
   xB = కనిష్ఠX()\n\
   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
 \n\
   s = 50\n\
   while( turtle.pos.y > కనిష్ఠY()) {\n\
@@ -5146,18 +5146,18 @@ function caption (message) {\n\
   దిశ_మార్చు( 90)\n\
 \n\
   // erase wha will be in the path\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(10)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -5719,20 +5719,20 @@ function pent(side) {\n\
   var angle5 = 31\n\
   var side5 = 1.27 * side\n\
   for (var i=0; i<5; i++) {\n\
-    రంగు("నలుపు")\n\
+    రంగు_మార్చు("నలుపు")\n\
     ముందుకు_జరుగు(side)\n\
       ఎడమ_వైపు_తిరుగు(angle2)\n\
 \n\
-      రంగు( ఎరుపు )\n\
+      రంగు_మార్చు( ఎరుపు )\n\
       కుడి_వైపు_తిరుగు(angle3)\n\
       ముందుకు_జరుగు(side3)\n\
       వెనుకకు_జరుగు(side3)\n\
       ఎడమ_వైపు_తిరుగు(angle3)\n\
 \n\
-      రంగు("నలుపు")\n\
+      రంగు_మార్చు("నలుపు")\n\
       ముందుకు_జరుగు(side2)\n\
 \n\
-      రంగు( నీలము )\n\
+      రంగు_మార్చు( నీలము )\n\
       కుడి_వైపు_తిరుగు(180-angle3)\n\
       ముందుకు_జరుగు(side3)\n\
 \n\
@@ -5757,7 +5757,7 @@ function pent(side) {\n\
       వెనుకకు_జరుగు(side3)\n\
       ఎడమ_వైపు_తిరుగు(180-angle3)\n\
 \n\
-      రంగు("నలుపు")\n\
+      రంగు_మార్చు("నలుపు")\n\
       వెనుకకు_జరుగు(side2)\n\
       కుడి_వైపు_తిరుగు(angle2)\n\
 \n\
@@ -5965,7 +5965,7 @@ function drawEWstreet() {\n\
   setpos(కనిష్ఠX(),0);\n\
   కోణము(90);\n\
   కలమును_కింద_పెట్టు();\n\
-  రంగు("నలుపు");\n\
+  రంగు_మార్చు("నలుపు");\n\
   వెడల్పు(roadWidth);\n\
   ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX());\n\
 }\n\
@@ -5974,7 +5974,7 @@ function drawNSstreet() {\n\
   setpos(0,గరిష్ఠY());\n\
   కోణము(180);\n\
   కలమును_కింద_పెట్టు();\n\
-  రంగు("నలుపు");\n\
+  రంగు_మార్చు("నలుపు");\n\
   వెడల్పు(roadWidth);\n\
   ముందుకు_జరుగు(గరిష్ఠY() + గరిష్ఠY());\n\
 }\n\
@@ -5982,7 +5982,7 @@ function drawNSstreet() {\n\
 function drawEWstripe() {\n\
   setpos(కనిష్ఠX(),0);\n\
   కోణము(90);\n\
-  రంగు( పసుపు );\n\
+  రంగు_మార్చు( పసుపు );\n\
   వెడల్పు(1);\n\
   ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -5994,7 +5994,7 @@ function drawEWstripe() {\n\
 function drawNSstripe() {\n\
   setpos(0,గరిష్ఠY());\n\
   కోణము(180);\n\
-  రంగు( పసుపు );\n\
+  రంగు_మార్చు( పసుపు );\n\
   వెడల్పు(1);\n\
   ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -6009,7 +6009,7 @@ function drawCrossWalk(x, y, dir) {\n\
   // dir is direction across road\n\
     \n\
   // draw inner cross walk line\n\
-  రంగు( తెలుపు );\n\
+  రంగు_మార్చు( తెలుపు );\n\
   setposition(x, y);\n\
   కోణము(dir);\n\
   వెడల్పు(1);\n\
@@ -6041,7 +6041,7 @@ function drawTurnArrow(x, y, dir) {\n\
   స్థితి_మార్చు(x,y);\n\
   కోణము (dir);\n\
   కలమును_కింద_పెట్టు();\n\
-  రంగు( తెలుపు );\n\
+  రంగు_మార్చు( తెలుపు );\n\
   వెడల్పు(5);\n\
   ముందుకు_జరుగు(5);\n\
   curveLeft(5,90);\n\
@@ -6081,9 +6081,9 @@ function drawStreets() {\n\
 function setLightColor(lightColor, stateColor) {\n\
   var signalBackground = "lightgray"; // color of an "off" signal light\n\
   if (lightColor === stateColor) {\n\
-    రంగు(lightColor);\n\
+    రంగు_మార్చు(lightColor);\n\
   } else {\n\
-    రంగు(signalBackground);\n\
+    రంగు_మార్చు(signalBackground);\n\
   }\n\
 }\n\
 \n\
@@ -6157,7 +6157,7 @@ function drawWalkSignal(state) {\n\
   కుడి_వైపు_తిరుగు(90);\n\
   setLightColor("red", state);\n\
   if (state === "yellow") {\n\
-    రంగు( పసుపు )\n\
+    రంగు_మార్చు( పసుపు )\n\
   }\n\
   కుడి_వైపు_తిరుగు(90);\n\
   ముందుకు_జరుగు(8);\n\
@@ -6255,7 +6255,7 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {\n\
   }\n\
 */\n\
   వెడల్పు(1);\n\
-  రంగు("నలుపు");\n\
+  రంగు_మార్చు("నలుపు");\n\
   if (dir === "S" || dir === "W") { // South and West are in opposite order\n\
     write(walk);\n\
   } else {\n\
@@ -6306,7 +6306,7 @@ function drawQueue(x, y, dir, queue, len) {\n\
   వెడల్పు(10);\n\
   for (var i=0; i<queue.length; i++) {\n\
     కలమును_కింద_పెట్టు();\n\
-    రంగు(queue[i].color);\n\
+    రంగు_మార్చు(queue[i].color);\n\
     ముందుకు_జరుగు(len); \n\
     కలమును_పైకి_ఎత్తు();\n\
     ముందుకు_జరుగు(4);\n\
@@ -7516,9 +7516,9 @@ function drawGrid( grid) {\n\
        //write( r + " " + c)\n\
        స్థితి_మార్చు( c * columnSize - columnMid, r * rowSize - rowMid)\n\
        if (grid [r][c]) {\n\
-         రంగు( "red")\n\
+         రంగు_మార్చు( "red")\n\
        } else {\n\
-         రంగు( "lightpink")\n\
+         రంగు_మార్చు( "lightpink")\n\
        }\n\
        dot( dotSize)\n\
     }\n\
@@ -7531,9 +7531,9 @@ function drawGrid2( grid, baseCaption) {\n\
     for ( c=0; c < columns; c++) {\n\
        స్థితి_మార్చు( columnMid - c * columnSize , rowMid - r * rowSize)\n\
        if (grid [r * columns + c]) {\n\
-         రంగు( "red")\n\
+         రంగు_మార్చు( "red")\n\
        } else {\n\
-         రంగు( "lightgray")\n\
+         రంగు_మార్చు( "lightgray")\n\
        }\n\
        dot( dotSize)\n\
     }\n\
@@ -7743,17 +7743,17 @@ function caption (message) {\n\
 \n\
   // erase what will be in the path\n\
   అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(22)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -8672,7 +8672,7 @@ function demo() {\n\
   స్థితి_మార్చు(side, -.3 * side)\n\
 \n\
   background(bColor)\n\
-  రంగు( sColor)\n\
+  రంగు_మార్చు( sColor)\n\
   వెడల్పు( 1)\n\
   jeresh( side, pointAngle, true)\n\
   వెడల్పు( 3)\n\
@@ -8787,7 +8787,7 @@ function v (side, fColor) {\n\
 function mizen( side, lColor, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // ends up rotated 120 CW at same point\n\
-  రంగు(lColor)\n\
+  రంగు_మార్చు(lColor)\n\
   కుడి_వైపు_తిరుగు(120)\n\
   for (var i=0; i<6; i++) {\n\
     కలమును_కింద_పెట్టు()\n\
@@ -8886,7 +8886,7 @@ function v (side, fColor) {\n\
 \n\
 \n\
 function mizen( side, lColor, fColor) {\n\
-  రంగు(lColor)\n\
+  రంగు_మార్చు(lColor)\n\
   కుడి_వైపు_తిరుగు(120)\n\
   for (var i=0; i<6; i++) {\n\
     v( side, fColor)\n\
@@ -9063,7 +9063,7 @@ function demo() {\n\
   ఆది_స్థితి()\n\
   fColor = "blue"\n\
   size = .17 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   //వెడల్పు(.1* size)\n\
 \n\
   //center canvas more or less\n\
@@ -9252,7 +9252,7 @@ function demo() {\n\
    ఆది_స్థితి();\n\
    కుంచికను_దాచు();\n\
    for(step=1; step < steps; step=step+1) {\n\
-      రంగు(random(16));\n\
+      రంగు_మార్చు(random(16));\n\
       polygon(6,step*10);\n\
       కలమును_పైకి_ఎత్తు();\n\
       ఎడమ_వైపు_తిరుగు(120)\n\
@@ -9288,7 +9288,7 @@ function nestedSquares(count) {\n\
     ముందుకు_జరుగు(2);\n\
     ఎడమ_వైపు_తిరుగు(180);\n\
     కలమును_కింద_పెట్టు();\n\
-    రంగు(random(16));\n\
+    రంగు_మార్చు(random(16));\n\
     square (s);\n\
   }\n\
 }\n\
@@ -9564,7 +9564,7 @@ function demo () {\n\
   number = 0.0005 *  గరిష్ఠX() * గరిష్ఠY() // uniform density no matter size\n\
   for (i=0; i<number; i++) {\n\
     స్థితి_మార్చు(random( కనిష్ఠX()+20, గరిష్ఠX()-20),random( కనిష్ఠY()+20, గరిష్ఠY()-20));\n\
-    రంగు(random(16));\n\
+    రంగు_మార్చు(random(16));\n\
     stickMan(random (30,60));\n\
   }\n\
 }\n\
@@ -9765,7 +9765,7 @@ function demo () {\n\
   x1 = random(కనిష్ఠX(),గరిష్ఠX())\n\
   y1 = random(కనిష్ఠY(),గరిష్ఠY())\n\
   i = 0\n\
-  రంగు( నీలము )\n\
+  రంగు_మార్చు( నీలము )\n\
   while (i < 100) {\n\
     i++\n\
     //write (x + " " + y)\n\
@@ -10165,7 +10165,7 @@ function init () {\n\
 function drawBlock( h, v, x, y, n) {\n\
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)\n\
   // draw a block\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   beginShape()\n\
   స్థితి_మార్చు(baseX + x * side, baseY - y * side)\n\
   దిశ_మార్చు(90)\n\
@@ -10786,17 +10786,17 @@ function caption (message) {\n\
 \n\
   // erase what will be in the path\n\
   అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   వెడల్పు(22)\n\
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)\n\
   స్థితి_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
   write( message)\n\
 \n\
   //go back from whence you came\n\
   స్థితి_మార్చు( savedX, savedY)\n\
   దిశ_మార్చు( savedHeading)\n\
-  రంగు( savedColor)\n\
+  రంగు_మార్చు( savedColor)\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
@@ -11106,7 +11106,7 @@ function square (side) {\n\
 function spinningSquare2() {\n\
    ఆది_స్థితి();\n\
    కుంచికను_దాచు();\n\
-   రంగు( నీలము );\n\
+   రంగు_మార్చు( నీలము );\n\
    var side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
@@ -11124,7 +11124,7 @@ function spinningSquare() {\n\
   }\n\
   stepSize = .5 * stepSize/steps\n\
   //var stepSize = 200/steps\n\
-  రంగు( నీలము );\n\
+  రంగు_మార్చు( నీలము );\n\
   for (var i=0; i<steps; i=i+1) {\n\
     square(stepSize*i);\n\
     కుడి_వైపు_తిరుగు(360/steps)\n\
@@ -11307,9 +11307,9 @@ function demo() {\n\
     sety(i)\n\
     cwRow( side)\n\
     sety(i + 3*side)\n\
-    రంగు( ఎరుపు )\n\
+    రంగు_మార్చు( ఎరుపు )\n\
     ccwRow( side)\n\
-    రంగు("నలుపు")\n\
+    రంగు_మార్చు("నలుపు")\n\
   }\n\
 }\n\
 '
@@ -11389,7 +11389,7 @@ function squiggle(steps,కోణము) {\n\
 }\n\
 \n\
 function drawRandomSquiggle() {\n\
-  రంగు(random(16));\n\
+  రంగు_మార్చు(random(16));\n\
   స్థితి_మార్చు(random(కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()));\n\
   కోణము(random(0,360));\n\
   squiggle(random(100,1000), random(5,90));\n\
@@ -11451,10 +11451,10 @@ function starburst () {\n\
   while ( i < steps) {\n\
     స్థితి_మార్చు( 0,0)\n\
     కోణము( 360/steps*i)\n\
-    రంగు( random (16))\n\
-    //రంగు("hsl("+ 360 * i/steps + ", 100%, 50%)") // color wheel\n\
-    //రంగు(i%16)\n\
-    //రంగు(Math.floor(16 * i/steps)) // logo colors\n\
+    రంగు_మార్చు( random (16))\n\
+    //రంగు_మార్చు("hsl("+ 360 * i/steps + ", 100%, 50%)") // color wheel\n\
+    //రంగు_మార్చు(i%16)\n\
+    //రంగు_మార్చు(Math.floor(16 * i/steps)) // logo colors\n\
     ముందుకు_జరుగు(len)\n\
     i = i + 1\n\
   }\n\
@@ -11548,7 +11548,7 @@ function drawTree(depth, branches) {\n\
   var tilt = 0;		//tilt is కోణము of the cluster\n\
   var ratio = 7;	//ratio is branch depth to length ratio\n\
   if (depth>0) { \n\
-   రంగు( random( 16));\n\
+   రంగు_మార్చు( random( 16));\n\
    కలమును_కింద_పెట్టు();\n\
    వెడల్పు(depth + random(0,2));\n\
    ముందుకు_జరుగు(scale* ratio * depth);\n\
@@ -11569,7 +11569,7 @@ function drawRTree(depth, branches) {\n\
   var tilt = random(-15,15);	// tilt is కోణము of the cluster\n\
   var ratio = random (5,9);	// ratio is branch depth to length ratio\n\
   if (depth>0) { \n\
-   రంగు( random( 16));\n\
+   రంగు_మార్చు( random( 16));\n\
    కలమును_కింద_పెట్టు();\n\
    వెడల్పు(depth + random(0,2));\n\
    ముందుకు_జరుగు(scale * ratio * depth);\n\
@@ -11678,7 +11678,7 @@ function nestTri () {\n\
   tColor.push(random (15));\n\
   tColor.shift();\n\
   for (var i=0; i<sides; i++) {\n\
-    రంగు(tColor[i]);\n\
+    రంగు_మార్చు(tColor[i]);\n\
     triangle (i*15);\n\
   }\n\
 }\n\
@@ -11851,14 +11851,14 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   కుంచికను_దాచు()\n\
   స్థితి_మార్చు(xBase, yBase)\n\
   కోణము (90)\n\
-  రంగు("నలుపు")\n\
+  రంగు_మార్చు("నలుపు")\n\
 \n\
   వెడల్పు(1)\n\
   rectangle (flagWidth, flagHeight)\n\
   rectangle (fieldWidth, fieldHeight)\n\
 \n\
   //  draw stripes\n\
-  రంగు( ఎరుపు );\n\
+  రంగు_మార్చు( ఎరుపు );\n\
   వెడల్పు(stripeWidth);\n\
   స్థితి_మార్చు(xBase+flagWidth, yBase-stripeWidth/2)\n\
   కోణము (-90)\n\
@@ -11866,7 +11866,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   stripes (flagWidth, 2*stripeWidth, 3)\n\
 \n\
   //draw field\n\
-  రంగు( నీలము )\n\
+  రంగు_మార్చు( నీలము )\n\
   స్థితి_మార్చు(xBase+fieldWidth, yBase-stripeWidth/2)\n\
   కోణము (-90)\n\
   stripes (fieldWidth, stripeWidth, 7)\n\
@@ -11874,7 +11874,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   //draw field of stars\n\
   కోణము(0)\n\
   వెడల్పు(2)\n\
-  రంగు( తెలుపు )\n\
+  రంగు_మార్చు( తెలుపు )\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
   var row = 0\n\
@@ -12147,7 +12147,7 @@ class Tile {\n\
 \n\
   plotBlank() {\n\
     console.log("plotblank", this.tx, this.ty)\n\
-    రంగు( "white")\n\
+    రంగు_మార్చు( "white")\n\
     స్థితి_మార్చు( కనిష్ఠX()+margin + this.tx * side * 1,\n\
           గరిష్ఠY()-margin - this.ty * side * 1)\n\
     కోణము(90)\n\
@@ -12161,7 +12161,7 @@ class Tile {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 90)\n\
     fillShape("lightblue")\n\
-    రంగు("నలుపు")\n\
+    రంగు_మార్చు("నలుపు")\n\
   }\n\
 }\n\
 \n\

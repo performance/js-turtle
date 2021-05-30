@@ -28,7 +28,7 @@ function v (side, fColor) {
 
 
 function mizen( side, lColor, fColor) {
-  రంగు(lColor)
+  రంగు_మార్చు(lColor)
   కుడి_వైపు_తిరుగు(120)
   for (var i=0; i<6; i++) {
     v( side, fColor)

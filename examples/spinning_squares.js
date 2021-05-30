@@ -12,7 +12,7 @@ function square (side) {
 function spinningSquare2() {
    ఆది_స్థితి();
    కుంచికను_దాచు();
-   రంగు( నీలము );
+   రంగు_మార్చు( నీలము );
    var side = 100;
    while (side > 0) {
       square(side);
@@ -30,7 +30,7 @@ function spinningSquare() {
   }
   stepSize = .5 * stepSize/steps
   //var stepSize = 200/steps
-  రంగు( నీలము );
+  రంగు_మార్చు( నీలము );
   for (var i=0; i<steps; i=i+1) {
     square(stepSize*i);
     కుడి_వైపు_తిరుగు(360/steps)

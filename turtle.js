@@ -1213,7 +1213,7 @@ logoColors = ["black", "blue", "lime", "cyan", "red", "magenta", "yellow", "whit
 /*
  * returns: None
  ******************************************************************************/
-function రంగు (col) {
+function రంగు_మార్చు( col ) {
   svgClosePath();
   if (typeof(col) === "number") {
     if (col < 16) { // assume standard logo turtle రంగు
@@ -1238,8 +1238,11 @@ function రంగు (col) {
   imageContext.strokeStyle = col;
 }
 
-colour = రంగు;
-color = రంగు;
+colour = రంగు_మార్చు;
+color = రంగు_మార్చు;
+changeColor = రంగు_మార్చు;
+setColor = రంగు_మార్చు;
+setcolor = రంగు_మార్చు;
 
 
 /*******************************************************************************

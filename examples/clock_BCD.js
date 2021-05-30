@@ -68,9 +68,9 @@ function getBinaryTime() {
 
 function drawDot (digit, onColor, offColor, step) {
   if (digit == 1) {
-    రంగు( onColor)
+    రంగు_మార్చు( onColor)
   } else {
-    రంగు( offColor)
+    రంగు_మార్చు( offColor)
   }
   dot ()
   ముందుకు_జరుగు(step)

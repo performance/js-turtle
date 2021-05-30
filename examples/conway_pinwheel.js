@@ -82,17 +82,17 @@ function caption (message) {
   దిశ_మార్చు( 90)
 
   // erase wha will be in the path
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
   goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   దిశ_మార్చు( savedHeading)
-  రంగు( savedColor)
+  రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
 }
 
@@ -203,7 +203,7 @@ function moveToExpandOrigin (side) {
 function startDelayedDivide() {
   // move to the origin of the big triangle
   ఆది_స్థితి()
-  రంగు(mainColor)
+  రంగు_మార్చు(mainColor)
   కలమును_పైకి_ఎత్తు()
 
   side = targetSide
@@ -216,7 +216,7 @@ function startDelayedDivide() {
   level = 0
 
   కలమును_కింద_పెట్టు()
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   delayedDivide()
 }
 
@@ -238,7 +238,7 @@ function startDelayedExpansion() {
   //move to the origin of the big triangle
   reset ()
   wrap( false)
-  రంగు(mainColor)
+  రంగు_మార్చు(mainColor)
   కలమును_పైకి_ఎత్తు()
 
   var tempSide = targetSide
@@ -271,9 +271,9 @@ function startDelayedExpansion() {
   }
 
   కలమును_కింద_పెట్టు()
-  రంగు( నీలము )
+  రంగు_మార్చు( నీలము )
   shadeTriangle( CCW, tempSide, stepsize)
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   delay( delayedExpansion,1000)
 }
 
@@ -327,7 +327,7 @@ basically:
   కుంచికను_దాచు()
   side = targetSide
   wrap(false)
-  రంగు(mainColor)
+  రంగు_మార్చు(mainColor)
   కలమును_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(side/2)
   కుడి_వైపు_తిరుగు(90)

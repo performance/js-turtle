@@ -11,7 +11,7 @@ var maxVelocity = 12;
 
 function plotOne() {
   goto(random(కనిష్ఠ_X, గరిష్ఠ_X), random(కనిష్ఠ_Y, గరిష్ఠ_Y));
-  రంగు(random(16));
+  రంగు_మార్చు(random(16));
   కోణము(random(0, 180));
   వెడల్పు(random(1, 20));
   ముందుకు_జరుగు(random(10, 30));

@@ -118,7 +118,7 @@ function labelPoints(size) {
 
   //textRadius = side*5.7
   textRadius = size*.88
-  రంగు( compassTextColor)
+  రంగు_మార్చు( compassTextColor)
 
   for (i=0; i<32; i++) {
   
@@ -176,7 +176,7 @@ console.log("size "+ size)
 
   //fill in the compass background
   goto(0,0)
-  రంగు( compassBackgroundColor)
+  రంగు_మార్చు( compassBackgroundColor)
   beginShape()
   circle (size)
   fillShape( compassBackgroundColor)

@@ -49,7 +49,7 @@ function demo () {
   number = 0.0005 *  గరిష్ఠX() * గరిష్ఠY() // uniform density no matter size
   for (i=0; i<number; i++) {
     goto (random( కనిష్ఠX()+20, గరిష్ఠX()-20),random( కనిష్ఠY()+20, గరిష్ఠY()-20));
-    రంగు(random(16));
+    రంగు_మార్చు(random(16));
     stickMan(random (30,60));
   }
 }

@@ -252,7 +252,7 @@ class Tile {
 
   plotBlank() {
     console.log("plotblank", this.tx, this.ty)
-    రంగు( "white")
+    రంగు_మార్చు( "white")
     goto( కనిష్ఠX()+margin + this.tx * side * 1,
           గరిష్ఠY()-margin - this.ty * side * 1)
     కోణము(90)
@@ -266,7 +266,7 @@ class Tile {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
     fillShape("lightblue")
-    రంగు("నలుపు")
+    రంగు_మార్చు("నలుపు")
   }
 }
 

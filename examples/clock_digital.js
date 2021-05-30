@@ -79,9 +79,9 @@ function getTime() {
 
 function segColor (bit) {
   if (bit == "1") {
-    రంగు( segOnColor)
+    రంగు_మార్చు( segOnColor)
   } else {
-    రంగు( segOffColor)
+    రంగు_మార్చు( segOffColor)
   }10
 }
 
@@ -117,7 +117,7 @@ function displaySegTime() {
   // black out background
   goto (కనిష్ఠX(),0)
   కోణము (90)
-  రంగు(black)
+  రంగు_మార్చు(black)
   వెడల్పు(2*గరిష్ఠY())
   కలమును_కింద_పెట్టు()
   ముందుకు_జరుగు(2*గరిష్ఠX())

@@ -22,6 +22,6 @@ function demo () {
   ఆది_స్థితి();
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
   కుంచికను_దాచు();
-  రంగు( random(16));
+  రంగు_మార్చు( random(16));
   circleEye( 0, 0, 32, size, .2*size);
 }

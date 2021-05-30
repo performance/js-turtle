@@ -70,7 +70,7 @@ All of these require the following be done:
 <p>
 In the tutorial you learned how to change the color and width of the stroke.
 We will review that and add a fill function to fill a shape with a color.
-To change the color of the turtle's pen use use the <code>రంగు()</code>
+To change the color of the turtle's pen use use the <code>రంగు_మార్చు()</code>
 function with a color as in the following example:
 </p>
 <code class="tryme">function spikey (n, revs, size) {
@@ -85,7 +85,7 @@ function with a color as in the following example:
 
 function demo() {
   ఆది_స్థితి() // just చెరిపి_వేయి the screen and home the turtle
-  రంగు( ఎరుపు )
+  రంగు_మార్చు( ఎరుపు )
   spikey(5, 2, 50)
 }
 </code>
@@ -106,7 +106,7 @@ size of smallest piece of the display, a dot or maybe a period.
 
 function demo () {
   ఆది_స్థితి()
-  రంగు( నీలము )
+  రంగు_మార్చు( నీలము )
   వెడల్పు(5)
   spikey(5, 2, 50)
 }
@@ -137,7 +137,7 @@ So let's give it a try:
 
 function demo () {
   ఆది_స్థితి()
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   beginShape()
   spikey(5, 2, 50)
   fillShape("red")
@@ -167,12 +167,12 @@ it, you need to re-stroke the graphic to get it on top of the fill.
 function demo () {
   ఆది_స్థితి()
   వెడల్పు(1)
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   beginShape()
   spikey(5, 2, 50)
   fillShape("blue")
   వెడల్పు(2)
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   spikey(5, 2, 50)
 }
 </code>
@@ -409,7 +409,7 @@ the user of the function having to call it twice.
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -528,7 +528,7 @@ Let's start with simply twisting a simple star.
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -611,7 +611,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -671,7 +671,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -729,7 +729,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -789,7 +789,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -871,7 +871,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -975,7 +975,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -1077,7 +1077,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -1171,7 +1171,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -1283,7 +1283,7 @@ function spikey ( args ) { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( args.color)
+  రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
   beginShape()
   for( var i = 0; i < args.points; i = i + 1) { //>
@@ -1456,7 +1456,7 @@ Spikey.prototype.draw = function () { // the simpler version for brevity
   కుడి_వైపు_తిరుగు(180-angleA)
   కలమును_కింద_పెట్టు()
 
-  రంగు( this.color)
+  రంగు_మార్చు( this.color)
   వెడల్పు( this.width)
   beginShape()
   for( var i = 0; i < this.points; i = i + 1) { //>

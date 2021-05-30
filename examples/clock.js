@@ -7,7 +7,7 @@ var size;
 function ticks(x, y, వ్యాసార్థము) {
    var tickLen = 7;
    var gap = వ్యాసార్థము - tickLen;
-   రంగు( నీలము );
+   రంగు_మార్చు( నీలము );
    వెడల్పు(1);
    for (var theta = 0; theta < 360; theta = theta + 6) {
       // Thicken hour marks
@@ -31,7 +31,7 @@ function numbers(x, y, వ్యాసార్థము) {
    కలమును_పైకి_ఎత్తు();
    fontSize = 20/130 * size
    అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");
-   రంగు("నలుపు");
+   రంగు_మార్చు("నలుపు");
    for (var hour = 1; hour <= 12; hour++) {
       goto(x,y);
       కోణము(hour * 30);
@@ -56,7 +56,7 @@ function hand (theta, w, length, col) {
    var widthDelta = w / (length / stepSize);
    goto(0, 0);
    కోణము(theta);
-   రంగు(col);
+   రంగు_మార్చు(col);
    for (var step = 0; step < length; step = step + stepSize) {
       వెడల్పు(w);
       ముందుకు_జరుగు(stepSize);
@@ -83,7 +83,7 @@ function clock() {
    చెరిపి_వేయి();
    size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())
   numbers(0, 0, 110/130 * size);
-   రంగు("lightgreen");
+   రంగు_మార్చు("lightgreen");
    goto (0,0);
    వెడల్పు(1/130* size)
    వృత్తము(130/130 * size );

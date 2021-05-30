@@ -37,9 +37,9 @@ function drawGrid( grid) {
        //write( r + " " + c)
        goto ( c * columnSize - columnMid, r * rowSize - rowMid)
        if (grid [r][c]) {
-         రంగు( "red")
+         రంగు_మార్చు( "red")
        } else {
-         రంగు( "lightpink")
+         రంగు_మార్చు( "lightpink")
        }
        dot( dotSize)
     }
@@ -52,9 +52,9 @@ function drawGrid2( grid, baseCaption) {
     for ( c=0; c < columns; c++) {
        goto ( columnMid - c * columnSize , rowMid - r * rowSize)
        if (grid [r * columns + c]) {
-         రంగు( "red")
+         రంగు_మార్చు( "red")
        } else {
-         రంగు( "lightgray")
+         రంగు_మార్చు( "lightgray")
        }
        dot( dotSize)
     }
@@ -264,17 +264,17 @@ function caption (message) {
 
   // erase what will be in the path
   అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
-  రంగు( తెలుపు )
+  రంగు_మార్చు( తెలుపు )
   వెడల్పు(22)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
   goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
-  రంగు("నలుపు")
+  రంగు_మార్చు("నలుపు")
   write( message)
 
   //go back from whence you came
   goto( savedX, savedY)
   దిశ_మార్చు( savedHeading)
-  రంగు( savedColor)
+  రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
 }
 

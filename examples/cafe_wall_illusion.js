@@ -16,7 +16,7 @@ function cafeTiles (h, w, gw, gc, off) {
   maxRow = 2*గరిష్ఠY()/h
   maxCol = 2*గరిష్ఠX()/w
   వెడల్పు(gw)
-  రంగు(gc)
+  రంగు_మార్చు(gc)
   దిశ_మార్చు(0)
   for (var row=0; row<maxRow; row=row+1) {
     for (var col=0; col<maxCol; col=col+1) {

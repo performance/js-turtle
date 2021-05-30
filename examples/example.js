@@ -18,7 +18,7 @@ function square (side) {
 function demo() {
    ఆది_స్థితి();
    కుంచికను_దాచు();
-   రంగు( నీలము );
+   రంగు_మార్చు( నీలము );
    var side = 100;
    while (side > 0) {
       square(side);

@@ -80,7 +80,7 @@ function demo() {
   goto (side, -.3 * side)
 
   background(bColor)
-  రంగు( sColor)
+  రంగు_మార్చు( sColor)
   వెడల్పు( 1)
   jeresh( side, pointAngle, true)
   వెడల్పు( 3)

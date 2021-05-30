@@ -186,7 +186,7 @@ function drawEWstreet() {
   setpos(కనిష్ఠX(),0);
   కోణము(90);
   కలమును_కింద_పెట్టు();
-  రంగు("నలుపు");
+  రంగు_మార్చు("నలుపు");
   వెడల్పు(roadWidth);
   ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX());
 }
@@ -195,7 +195,7 @@ function drawNSstreet() {
   setpos(0,గరిష్ఠY());
   కోణము(180);
   కలమును_కింద_పెట్టు();
-  రంగు("నలుపు");
+  రంగు_మార్చు("నలుపు");
   వెడల్పు(roadWidth);
   ముందుకు_జరుగు(గరిష్ఠY() + గరిష్ఠY());
 }
@@ -203,7 +203,7 @@ function drawNSstreet() {
 function drawEWstripe() {
   setpos(కనిష్ఠX(),0);
   కోణము(90);
-  రంగు( పసుపు );
+  రంగు_మార్చు( పసుపు );
   వెడల్పు(1);
   ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);
   కలమును_పైకి_ఎత్తు();
@@ -215,7 +215,7 @@ function drawEWstripe() {
 function drawNSstripe() {
   setpos(0,గరిష్ఠY());
   కోణము(180);
-  రంగు( పసుపు );
+  రంగు_మార్చు( పసుపు );
   వెడల్పు(1);
   ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);
   కలమును_పైకి_ఎత్తు();
@@ -230,7 +230,7 @@ function drawCrossWalk(x, y, dir) {
   // dir is direction across road
     
   // draw inner cross walk line
-  రంగు( తెలుపు );
+  రంగు_మార్చు( తెలుపు );
   setposition(x, y);
   కోణము(dir);
   వెడల్పు(1);
@@ -262,7 +262,7 @@ function drawTurnArrow(x, y, dir) {
   goto (x,y);
   కోణము (dir);
   కలమును_కింద_పెట్టు();
-  రంగు( తెలుపు );
+  రంగు_మార్చు( తెలుపు );
   వెడల్పు(5);
   ముందుకు_జరుగు(5);
   curveLeft(5,90);
@@ -302,9 +302,9 @@ function drawStreets() {
 function setLightColor(lightColor, stateColor) {
   var signalBackground = "lightgray"; // color of an "off" signal light
   if (lightColor === stateColor) {
-    రంగు(lightColor);
+    రంగు_మార్చు(lightColor);
   } else {
-    రంగు(signalBackground);
+    రంగు_మార్చు(signalBackground);
   }
 }
 
@@ -378,7 +378,7 @@ function drawWalkSignal(state) {
   కుడి_వైపు_తిరుగు(90);
   setLightColor("red", state);
   if (state === "yellow") {
-    రంగు( పసుపు )
+    రంగు_మార్చు( పసుపు )
   }
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(8);
@@ -476,7 +476,7 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
   }
 */
   వెడల్పు(1);
-  రంగు("నలుపు");
+  రంగు_మార్చు("నలుపు");
   if (dir === "S" || dir === "W") { // South and West are in opposite order
     write(walk);
   } else {
@@ -527,7 +527,7 @@ function drawQueue(x, y, dir, queue, len) {
   వెడల్పు(10);
   for (var i=0; i<queue.length; i++) {
     కలమును_కింద_పెట్టు();
-    రంగు(queue[i].color);
+    రంగు_మార్చు(queue[i].color);
     ముందుకు_జరుగు(len); 
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(4);
