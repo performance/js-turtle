@@ -4,7 +4,7 @@ colors = ["red", "white", "blue", "yellow", "green"]
 numColors = colors.length
 
 function rh(side, fillColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( side)
@@ -13,7 +13,7 @@ function rh(side, fillColor) {
   ఎడమ_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 180-45)
-  fillShape(fillColor)
+  ఆకారాము_ముగించు(fillColor)
 }
 
 function sideBySide( count, side, fillColor) {
@@ -68,7 +68,7 @@ function nextColor() {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())
   cent( side, 12)
   కుంచికను_దాచు()

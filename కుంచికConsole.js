@@ -1,5 +1,5 @@
 /************************************************************************
- *  turtleConsole -- javascript for the turtle graphic language console
+ *  కుంచికConsole -- javascript for the కుంచిక graphic language console
  *
  *  Copyright (c) 2015-2019 Kirk Carlson
  *  MIT license
@@ -233,8 +233,8 @@ function fixDragButton() {
     /* center attribute setting */
     imagecanvas.width = canvasWidth;
     imagecanvas.height = canvasHeight;
-    turtlecanvas.width = canvasWidth;
-    turtlecanvas.height = canvasHeight;
+    కుంచికcanvas.width = canvasWidth;
+    కుంచికcanvas.height = canvasHeight;
     document.getElementById("canvaswrapper").style.height = canvasHeight +8+ "px";
     //console.log("midWidth:", midWidth, midLeftPadding, midRightPadding);
 
@@ -389,7 +389,7 @@ function getStyleValue(elmnt,style) {
  *************************************************************************/
 function stopClicked() {
     //console.log("stop clicked")
-    stopAnimation()
+    ఆట_ఆపు()
 }
 
 
@@ -531,7 +531,7 @@ function saveCanvasClicked(e) {
             [codeArea.value || codeArea.placeholder]
             , {type: "text/plain;charset=" + document.characterSet}
         )
-        , "turtleGraphic.png"
+        , "కుంచికGraphic.png"
     );
     return false;
 }
@@ -646,7 +646,7 @@ kirk
  *   None
  *************************************************************************/
 function examplesChanged () {
-    stopAnimation()
+    ఆట_ఆపు()
     var codeArea = document.getElementById('codeArea')
     var examples = document.getElementById('examples')
     try {
@@ -672,7 +672,7 @@ function commandChanged () {
     var commandText = document.getElementById("command").value;
     var codeAreaText = document.getElementById('codeArea').value;
     errorFound = false
-    stopAnimation()
+    ఆట_ఆపు()
     try {
 
         // execute any code in the codeArea box
@@ -714,26 +714,26 @@ function commandChanged () {
  *************************************************************************/
 function showError(e) {
     //logTurtle("sEtop")
-    saveTurtleState(turtleState)
+    saveTurtleState(కుంచికState)
     imageContext.save();
-    //turtleState = turtle;
+    //కుంచికState = కుంచిక;
     //logTurtle("sEtop")
     height=10 // points
-    goto (కనిష్ఠX(), కనిష్ఠY()+24+height/2 +2);
+    స్థానము_మార్చు(కనిష్ఠX(), కనిష్ఠY()+24+height/2 +2);
     కోణము(90);
-    wrap(false);
+     చుట్టు(false);
 
     // చెరిపి_వేయి the line for the error message
     కలమును_కింద_పెట్టు()
     రంగు_మార్చు( పసుపు )
     వెడల్పు(height+4)
     ముందుకు_జరుగు(గరిష్ఠY() * 2)
-    goto (కనిష్ఠX(), కనిష్ఠY()+24)
+    స్థానము_మార్చు(కనిష్ఠX(), కనిష్ఠY()+24)
 
     // write the error message
     రంగు_మార్చు( ఎరుపు );
     అక్షరరూపము_స్థాపించు (height + "pt bold Helvetica, sans-serif")
-    write(e.name + ": " + e.message);
+    వ్రాయి(e.name + ": " + e.message);
     console.log(e.name + ": " + e.message);
     if (e.filename !== undefined) {
 
@@ -741,20 +741,20 @@ function showError(e) {
         height=10 // points
         రంగు_మార్చు( పసుపు )
         వెడల్పు(height+4)
-        goto (కనిష్ఠX(), కనిష్ఠY()+5+height/2 +2)
+        స్థానము_మార్చు(కనిష్ఠX(), కనిష్ఠY()+5+height/2 +2)
         ముందుకు_జరుగు(గరిష్ఠY() * 2)
 
         // write the file message
         రంగు_మార్చు( నీలము );
         అక్షరరూపము_స్థాపించు (height + "pt bold Helvetica, sans-serif")
-        goto (కనిష్ఠX(), కనిష్ఠY()+5)
-        write(e.fileName.substr(-40) + " line: " + e.lineNumber);
+        స్థానము_మార్చు(కనిష్ఠX(), కనిష్ఠY()+5)
+        వ్రాయి(e.fileName.substr(-40) + " line: " + e.lineNumber);
         console.log("Error: " + e.fileName.substr(-40) + " line: " + e.lineNumber);
   }
-  draw()
-  restoreTurtleState(turtleState)
+  చిత్రీకరించు()
+  restoreTurtleState(కుంచికState)
   imageContext.restore();
-  draw()
+  చిత్రీకరించు()
   //logTurtle("sEbot")
 }
 
@@ -827,7 +827,7 @@ mouseOverElementIds = [ // list of elements with help text
                        "resetButton",
                        "runButton",
                        "stopButton",
-                       "turtlecanvas",
+                       "కుంచికcanvas",
                        "uploadButton"
                        ];
 

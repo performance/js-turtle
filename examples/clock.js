@@ -17,7 +17,7 @@ function ticks(x, y, వ్యాసార్థము) {
          వెడల్పు(3/130* size);
       }
       కలమును_పైకి_ఎత్తు();
-      goto(0,0);
+      స్థానము_మార్చు(0,0);
       కోణము(theta);
       ముందుకు_జరుగు(gap);
       కలమును_కింద_పెట్టు();
@@ -33,7 +33,7 @@ function numbers(x, y, వ్యాసార్థము) {
    అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");
    రంగు_మార్చు("నలుపు");
    for (var hour = 1; hour <= 12; hour++) {
-      goto(x,y);
+      స్థానము_మార్చు(x,y);
       కోణము(hour * 30);
       ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit
       కోణము(180);
@@ -45,7 +45,7 @@ function numbers(x, y, వ్యాసార్థము) {
         ముందుకు_జరుగు(10/130 * size)
       }
       కుడి_వైపు_తిరుగు(180);
-      write(hour);
+      వ్రాయి(hour);
    }
    కలమును_కింద_పెట్టు();
 }
@@ -54,7 +54,7 @@ function numbers(x, y, వ్యాసార్థము) {
 function hand (theta, w, length, col) {
    var stepSize = 5;
    var widthDelta = w / (length / stepSize);
-   goto(0, 0);
+   స్థానము_మార్చు(0, 0);
    కోణము(theta);
    రంగు_మార్చు(col);
    for (var step = 0; step < length; step = step + stepSize) {
@@ -84,7 +84,7 @@ function clock() {
    size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())
   numbers(0, 0, 110/130 * size);
    రంగు_మార్చు("lightgreen");
-   goto (0,0);
+   స్థానము_మార్చు(0,0);
    వెడల్పు(1/130* size)
    వృత్తము(130/130 * size );
    ticks(0, 0, 130/130 * size );
@@ -95,5 +95,5 @@ function clock() {
 function demo() {
    కుంచికను_దాచు();
    // refresh the clock every second
-   animate(clock,1000);
+   ఆడించు(clock,1000);
 }

@@ -7,7 +7,7 @@ var sides = 80;
 
 function triangle (side) {
   if (side < maxSide) {
-    home()
+    కేంద్రకమునకు_వెళ్ళు()
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(side/2);
     కుడి_వైపు_తిరుగు(150);
@@ -40,6 +40,6 @@ function demo () {
   for (var i=0; i<sides; i++) {
     tColor [i] = random (15)
   }
-  animate (nestTri,1);
+  ఆడించు(nestTri,1);
 }
 

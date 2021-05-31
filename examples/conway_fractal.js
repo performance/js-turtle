@@ -72,25 +72,25 @@ function drawTriangle (dir, side) {
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = turtle.pos.x
-  var savedY = turtle.pos.y
-  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.రంగు
-  var savedWidth = turtle.వెడల్పు
+  var savedX = కుంచిక.pos.x
+  var savedY = కుంచిక.pos.y
+  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  var savedColor = కుంచిక.రంగు
+  var savedWidth = కుంచిక.వెడల్పు
 
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
 
   // erase what will be in the path
   రంగు_మార్చు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
   రంగు_మార్చు("నలుపు")
-  write( message)
+  వ్రాయి( message)
 
   //go back from whence you came
-  goto( savedX, savedY)
+  స్థానము_మార్చు( savedX, savedY)
   దిశ_మార్చు( savedHeading)
   రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
@@ -99,8 +99,8 @@ function caption (message) {
 
 function shadeTriangle( dir, side, stepsize) {
   console.log( "sT: " + dir + " " + side + " " + stepsize)
-  var x = turtle.pos.x
-  var y = turtle.pos.y
+  var x = కుంచిక.pos.x
+  var y = కుంచిక.pos.y
   var steps = Math.floor( side/stepsize)
 
   for (var i=0; i< steps; i++) {
@@ -117,7 +117,7 @@ function shadeTriangle( dir, side, stepsize) {
   dturn( !dir, 90)
   ముందుకు_జరుగు( side)
   dturn( dir, 90)
-  //goto(x,y) // cancel cumulative error
+  //స్థానము_మార్చు(x,y) // cancel cumulative error
   కలమును_కింద_పెట్టు()
 }
 
@@ -125,8 +125,8 @@ function recursiveDivide( dir, side, level, triangle) {
   //console.log("rD: " + level + " " + triangle)
   if (level > 0) {
     side = 0. + side/root5
-    var x = turtle.pos.x
-    var y = turtle.pos.y
+    var x = కుంచిక.pos.x
+    var y = కుంచిక.pos.y
     
     //draw the first line to point A
     dturn( dir, angleb)
@@ -179,7 +179,7 @@ i    //sub triangle 4
     ముందుకు_జరుగు( side)
     కలమును_కింద_పెట్టు()
     dturn( dir, 180-angleb)
-    //goto (x,y) //cancel cumulative error
+    //స్థానము_మార్చు(x,y) //cancel cumulative error
 //  } else {
     //if (triangle == 3) {
 //    if (triangle == specialTriangle) {
@@ -192,8 +192,8 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
   //console.log( "rDB: " + level + " " + triangle + " " + background + " " + highlight)
   if (level > 0) {
     side = side/root5
-    var x = turtle.pos.x
-    var y = turtle.pos.y
+    var x = కుంచిక.pos.x
+    var y = కుంచిక.pos.y
 
     //move to point A
     కలమును_పైకి_ఎత్తు()
@@ -249,7 +249,7 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
     ముందుకు_జరుగు(side)
 
     dturn( dir, 180-angleb)
-    goto (x,y) //cancel cumulative error
+    స్థానము_మార్చు(x,y) //cancel cumulative error
   } else {
     if (triangle == 3) {
     //if (triangle == specialTriangle) {
@@ -272,7 +272,7 @@ function delayedDivide() {
     recursiveDivide( CCW, side, level, 0)
     drawTriangle( CCW, side)
     caption( "Fractal divide, generation " + level)
-    delay( delayedDivide, 3000)
+    విలంబించు( delayedDivide, 3000)
   }
 }
 
@@ -282,7 +282,7 @@ function delayedDivide() {
 function demo() {
   // initialize
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   కుంచికను_దాచు()
   కలమును_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(side/4)
@@ -294,7 +294,7 @@ function demo() {
   ఎడమ_వైపు_తిరుగు( anglea)
   ముందుకు_జరుగు( side+50)
   కుడి_వైపు_తిరుగు( anglea)
-  write( "√5")
+  వ్రాయి( "√5")
   ఎడమ_వైపు_తిరుగు( anglea)
   వెనుకకు_జరుగు( side+50)
   కుడి_వైపు_తిరుగు( anglea)
@@ -302,12 +302,12 @@ function demo() {
   ముందుకు_జరుగు(20)
   ఎడమ_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( side)
-  write (2)
+  వ్రాయి(2)
   వెనుకకు_జరుగు( side+20)
   ఎడమ_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( side/2 + 20)
   కుడి_వైపు_తిరుగు( 90)
-  write( 1)
+  వ్రాయి( 1)
   ముందుకు_జరుగు( 20)
   కుడి_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(side/2)
@@ -318,5 +318,5 @@ function demo() {
 
   level = 0
 
-  delay( delayedDivide, 3000)
+  విలంబించు( delayedDivide, 3000)
 }

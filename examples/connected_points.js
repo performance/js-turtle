@@ -3,7 +3,7 @@
 //draw the radials
 function drawRadials(side) {
   for (var i=0; i<16; i++) {
-    goto(0,0)
+    స్థానము_మార్చు(0,0)
     కోణము(i/16 * 360)
     ముందుకు_జరుగు( size)
   }
@@ -11,7 +11,7 @@ function drawRadials(side) {
 
 function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
   కలమును_పైకి_ఎత్తు()
-  goto(x, y)
+  స్థానము_మార్చు(x, y)
   దిశ_మార్చు(head)
   ముందుకు_జరుగు(వ్యాసార్థము)
   var turnAngle = 360 * revs/points
@@ -30,7 +30,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())
   //size=200
   inr = .33* size
@@ -49,7 +49,7 @@ function demo() {
   spikey( 8, 1, inr, 0, 0, 0)
   వెడల్పు(1)
   drawRadials( size)
-  goto(0,0)
+  స్థానము_మార్చు(0,0)
   వృత్తము( inr)
   కుంచికను_దాచు()
 }

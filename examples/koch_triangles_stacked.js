@@ -20,7 +20,7 @@ function kochLine (length, order) {
 
 function kochSnowflake (length, order) {
   కోణము (30);
-  goto (-length/2,-.3 * length);
+  స్థానము_మార్చు(-length/2,-.3 * length);
   kochLine (length, order);
   కుడి_వైపు_తిరుగు(120);
   kochLine (length, order);

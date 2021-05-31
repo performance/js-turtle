@@ -19,7 +19,7 @@ function kochLine (length, order) {
 
 function kochSnowflake (length, order) {
   కోణము (30);
-  goto (-length/2,-.3 * length);
+  స్థానము_మార్చు(-length/2,-.3 * length);
   kochLine (length, order);
   కుడి_వైపు_తిరుగు(120);
   kochLine (length, order);
@@ -37,12 +37,12 @@ var i = 0;
 
 function kochLines () {
   for (i=0; i<steps; i++) {
-    goto (span/2 - i*span/steps, - span/2);
+    స్థానము_మార్చు(span/2 - i*span/steps, - span/2);
     kochLine (span,i);
   }
 }
 
-function kochSnowflakeDelay() {
+function kochSnowflakeవిలంబించు() {
 
   చెరిపి_వేయి();
   var side = గరిష్ఠY() - కనిష్ఠY();
@@ -50,11 +50,11 @@ function kochSnowflakeDelay() {
     side = గరిష్ఠX() - కనిష్ఠX()
   }
   kochSnowflake (.8 * side,i);
-  goto(కనిష్ఠX(),కనిష్ఠY());
+  స్థానము_మార్చు(కనిష్ఠX(),కనిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("Helvetica,san-serif 12pt")
-  write ("Koch snowflake of order " +i);
-  draw();
+  వ్రాయి("Koch snowflake of order " +i);
+  చిత్రీకరించు();
   i = i + 1;
   if (i < steps) {
     delay (kochSnowflakeDelay, 2000);
@@ -64,5 +64,5 @@ function kochSnowflakeDelay() {
 function demo() {
   కుంచికను_దాచు();
   i = 0;
-  kochSnowflakeDelay();
+  kochSnowflakeవిలంబించు();
 }

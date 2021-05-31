@@ -1,10 +1,10 @@
-all: turtle.html gifs
+all: కుంచిక.html gifs
 
 
 # use the headers from index.html to update headers in other files
-# turtle.html does not have the header
+# కుంచిక.html does not have the header
 # overview.html is linked to index.html (the default file loaded)
-turtleHeaderDummy : about.html \
+కుంచికHeaderDummy : about.html \
                     animation.html \
                     examples.html \
                     guide.html \
@@ -13,12 +13,12 @@ turtleHeaderDummy : about.html \
                     reference.html \
                     tutorial.html
 	/bin/bash bin/syncHeader.sh $?;\
-	touch turtleHeaderDummy
+	touch కుంచికHeaderDummy
 
 
 # see if links in files are OK
 linkTestDummy :  bin/checkLinks.sh \
-                 turtleHeaderDummy
+                 కుంచికHeaderDummy
 	/bin/bash bin/checkLinks.sh;\
 	touch linkTestDummy
 
@@ -29,9 +29,9 @@ examples.js :   examples/*.js\
 	/bin/bash bin/buildJsStrings.sh examples
 
 
-# update the turtle.html if the examples strings has changed
-turtle.html :   linkTestDummy \
-                turtleHeaderDummy \
+# update the కుంచిక.html if the examples strings has changed
+కుంచిక.html :   linkTestDummy \
+                కుంచికHeaderDummy \
                 examples.js \
                 bin/modifyHTML.sh
 	/bin/bash bin/modifyHTML.sh examples

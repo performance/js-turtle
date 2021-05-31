@@ -157,7 +157,7 @@ function boxTheCompass(size) {
       వెనుకకు_జరుగు(textLen)
       అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")
     }
-    write(boxedCompass[i])
+    వ్రాయి(boxedCompass[i])
     ముందుకు_జరుగు(textLen)
     ఎడమ_వైపు_తిరుగు(90)
     వెనుకకు_జరుగు(textRadius)
@@ -168,9 +168,9 @@ function boxTheCompass(size) {
 
 function demo () {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   కుంచికను_దాచు() // do not want it to show, so do this early
-  redrawOnMove(false) // do not redraw image each move
+  కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // do not redraw image each move
   size = 2* Math.min(గరిష్ఠX(), గరిష్ఠY())
   side = size/14
   ఎడమ_వైపు_తిరుగు(22.5)
@@ -196,8 +196,8 @@ function demo () {
   }
 
   boxTheCompass(size)
-  //redrawOnMove(true)
-  draw() // just to render the final product
+  //కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)
+  చిత్రీకరించు() // just to render the final product
 }
 
 demo()

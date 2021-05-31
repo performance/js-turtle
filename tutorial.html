@@ -13,7 +13,7 @@
     <meta name="LinksUpToDate" content="false"/>
     <meta name="ScaleCrop" content="false"/>
     <meta name="ShareDoc" content="false"/>
-    <link type="text/css" rel="stylesheet" href="./turtleweb.css"/>
+    <link type="text/css" rel="stylesheet" href="./కుంచికweb.css"/>
     <link type="text/css" rel="stylesheet" href="./tutorial.css"/>
     <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
 <!--
@@ -28,7 +28,7 @@
 <ul>
   <li><a href="overview.html" title="Overview of Turtle Graphics">Intro</a></li>
   <li><a href="guide.html" title="User Guide for Turtle Graphics Integrated Development Environment">Guide</a></li>
-  <li><a href="turtle.html" title="Integrated Development Environment for Turtle Graphics">IDE</a></li>
+  <li><a href="కుంచిక.html" title="Integrated Development Environment for Turtle Graphics">IDE</a></li>
   <li><a href="javascript.html" title="Tutorial for Simple JavaScript">JavaScript</a></li>
   <li><a class="active" href="tutorial.html" title="Tutorial for Basic Turtle Graphics">Tutorial</a></li>
   <li><a href="animation.html" title="Tutorial for Animation with Turtle Graphics">Animation</a></li>
@@ -60,9 +60,9 @@ a request is sent back to the server.
 <p>
 Learning JavaScript programming in a graphics environment is an easy way to get
 introduced to JavaScript. The JavaScript Turtle Graphics page at
-<a href="http://turtlegraphics.fun">http://turtlegraphics.fun</a> is written in
+<a href="http://కుంచికgraphics.fun">http://కుంచికgraphics.fun</a> is written in
 JavaScript and it provides an environment for exploring JavaScript and its use
-of graphics using traditional turtle graphics functions.
+of graphics using traditional కుంచిక graphics functions.
 </p>
 <p>
 This tutorial assumes that you have some basic knowledge.
@@ -91,7 +91,7 @@ its syntax and the operation of the new language. Typically this is a
 &quot;Hello World&quot; program. For this environment such a program would
 be as follows:
 </p>
-<code class="tryme">write (&quot;Hello World&quot;)
+<code class="tryme">వ్రాయి(&quot;Hello World&quot;)
 </code>
 
 <p>
@@ -100,12 +100,12 @@ Click on the <span class="button">Run Demo</span> button.
 <p>
 What happened? You
 should see Hello World printed on the canvas, but printed sideways.
-Text is written along the direction that the turtle is pointing without
-moving the turtle.
+Text is written along the direction that the కుంచిక is pointing without
+moving the కుంచిక.
 </p>
 </section>
 <p>
-<code>write()</code> is a
+<code>వ్రాయి()</code> is a
 A <strong>function</strong> perform a desired action and are composed of
 instructions and possibly other functions. Functions allow a programmer to
 use them without having to worry about all of the underlying
@@ -134,7 +134,7 @@ JavaScript are followed by open and close parentheses. This is
 the syntax that tells JavaScript that the preceding
 name is a function. If there is nothing between the parentheses, the function
 takes no <strong>parameters</strong>.
-The function <code>write(<em>string</em>)</code> does take a single parameter,
+The function <code>వ్రాయి(<em>string</em>)</code> does take a single parameter,
 a string that you want to put on the canvas, and that is put between the parentheses.
 Functions can take a number of parameters depending on the function. Any
 number of parameters is allowed, although it gets hard to remember the purpose
@@ -159,11 +159,11 @@ the Australian version of “Hello World.”
     <img src="images/hello_world.png" alt="">
 <p>
 The program as it is,
-isn't quite right. The <code>write()</code> function displays a text
-string in the direction that the turtle is moving without moving the
-turtle. We want the text to go horizontally to make it easier to read.
+isn't quite right. The <code>వ్రాయి()</code> function displays a text
+string in the direction that the కుంచిక is moving without moving the
+కుంచిక. We want the text to go horizontally to make it easier to read.
 We need to rotate the text 90° in a clockwise direction. We can do that
-by turning the turtle before invoking the <code>write()</code> function,
+by turning the కుంచిక before invoking the <code>వ్రాయి()</code> function,
 by invoking a <code>కుడి_వైపు_తిరుగు(90)</code> function to ask it to turn 90 degrees
 to its right.
 Because this programming has more than one line,
@@ -172,7 +172,7 @@ changes to it as necessary. The resulting program for the
 coding area is:
 </p>
 <code class="tryme">కుడి_వైపు_తిరుగు(90)
-write (&quot;Hello World&quot;)
+వ్రాయి(&quot;Hello World&quot;)
 </code>
 
 <p>
@@ -194,7 +194,7 @@ completely different than its normal usage). As you learn programming you
 will probably encounter more examples of escaping or escape mechanisms.
 </p>
 <code class="tryme">కుడి_వైపు_తిరుగు(90)
-write ("That's fun! Don't forget to try this at \"home.\"")
+వ్రాయి("That's fun! Don't forget to try this at \"home.\"")
 </code>
 <p>
 Part of JavaScript's
@@ -207,7 +207,7 @@ JavaScript must end in a semi-colon ';' as in:
 </p>
 
 <code class="tryme">కుడి_వైపు_తిరుగు( 90);
-write ( &quot;Hello World&quot;);
+వ్రాయి( &quot;Hello World&quot;);
 </code>
 
 <p>
@@ -235,7 +235,7 @@ it is a syntax error.
 </p>
 
 <p>
-So both <code>కుడి_వైపు_తిరుగు()</code> and <code>write()</code>,
+So both <code>కుడి_వైపు_తిరుగు()</code> and <code>వ్రాయి()</code>,
 are functions. These hide the details of their implementation for
 their user. JavaScript allows its users to define their own
 functions. We can define a 'Hello World' function, ‘hi()’  as:
@@ -243,7 +243,7 @@ functions. We can define a 'Hello World' function, ‘hi()’  as:
 
 <code class="tryme">function hi () {
   కుడి_వైపు_తిరుగు( 90);
-  write ( &quot;Hello World&quot;);
+  వ్రాయి( &quot;Hello World&quot;);
 }
 </code>
 
@@ -277,7 +277,7 @@ So let's adds a <code>demo()</code> function to the program:
 
 <code class="tryme">function hi () {
   కుడి_వైపు_తిరుగు( 90);
-  write ( &quot;Hello World&quot;);
+  వ్రాయి( &quot;Hello World&quot;);
 }
 
 function demo () {
@@ -297,7 +297,7 @@ function in the <code>demo()</code> function.
 </p>
 <code class="tryme">function hi () {
   కుడి_వైపు_తిరుగు( 90);
-  write ( &quot;Hello World&quot;);
+  వ్రాయి( &quot;Hello World&quot;);
 }
 
 function demo () {
@@ -307,7 +307,7 @@ function demo () {
 
 <p>
 Now when you press the
-<span class="button">Run Demo</span> button, the turtle should print
+<span class="button">Run Demo</span> button, the కుంచిక should print
 &quot;Hello World&quot; on the canvas.
 </p>
 </section>
@@ -325,7 +325,7 @@ writing to the canvas.
 </p>
 <code class="tryme">function hi () {
   కుడి_వైపు_తిరుగు( 90);
-  write ( &quot;Hello World&quot;);
+  వ్రాయి( &quot;Hello World&quot;);
 }
 
 function demo () {
@@ -440,7 +440,7 @@ function demo () {
 <p>
 Great! Now looking at the function
 square1(), there is a lot of repetition. There are a couple of ways to
-do this. Using the Turtle Graphics function <code>repeat()</code>, the
+do this. Using the Turtle Graphics function <code>ఆవర్తించు()</code>, the
 code would look something like:
 </p>
 <code class="tryme">// square with repeat
@@ -450,7 +450,7 @@ function el () {
 }
 
 function square () {
-  repeat (4, el)
+  ఆవర్తించు(4, el)
 }
 
 function demo () {
@@ -462,10 +462,10 @@ function demo () {
 <aside>
 <p>
 There is a method can get rid of the standalone <code>el()</code> function
-when using the <code>repeat()</code> function. The code is shown below.
+when using the <code>ఆవర్తించు()</code> function. The code is shown below.
 </p>
 <code class="tryme">function square() {
-  repeat( 4, function() {
+  ఆవర్తించు( 4, function() {
     ముందుకు_జరుగు( 100)
     కుడి_వైపు_తిరుగు( 90)}
   )
@@ -486,7 +486,7 @@ this repeat statement and cannot be invoked by other code.
 </aside>
 <p>
 But the repeat function is messy and not really the JavaScript way of doing
-things. Let's not use the <code>repeat()</code> function and use a with a
+things. Let's not use the <code>ఆవర్తించు()</code> function and use a with a
 <code>while</code> statement instead. The simplest JavaScript program using
 a <code>while</code> statement is something like:
 </p>
@@ -583,7 +583,7 @@ So what happens when this is run.
 <p>
 This is all hard to see, so let's make it more visible. Let's print the
 value of <span class="var">i</span> inside of the loop. Since the
-<code>write()</code> function doesn't move the turtle, we need to do that
+<code>వ్రాయి()</code> function doesn't move the కుంచిక, we need to do that
 as well by drawing the now familiar square. By the way, printing a variable
 during execution is a common tool used by programmers to see what is happening
 inside of a program to help debug the program.
@@ -595,7 +595,7 @@ turn the corner, and increment the number of sides.
 <code class="tryme">function square() {
   var i = 0
   while ( i &lt; 4) {
-    write (i)
+    వ్రాయి(i)
     ముందుకు_జరుగు(100)
     కుడి_వైపు_తిరుగు(90)
     i = i + 1
@@ -952,7 +952,7 @@ about having the program make up values and use them on the fly.
 Let’s try to place
 random-colored, random-sized squares at random places on the canvas.
 It sounds like we need a random number generating function. The
-<code>random()</code> function
+<code>యాదృచఛిక_సంఖ్య()</code> function
 fills the need. This has two forms: one with one number and one with
 two numbers. The single number form generates an integer
 between 0 and the value supplied. The two number form generates
@@ -961,14 +961,14 @@ an integer between the two numbers.
     <img src="images/random_squares.png" alt="">
 <p>
 We used the <code>రంగు_మార్చు()</code> function in the last exercise.  It works on
-a number between 0 and 15, so <code>random( 15)</code> will work for a random
+a number between 0 and 15, so <code>యాదృచఛిక_సంఖ్య( 15)</code> will work for a random
 రంగు_మార్చు(as long has you are happy with crayon colors).
 </p>
 
   <img src="./images/coordinates.png">
 <p>
 To position the start
-of the square anywhere on the canvas, the <code>goto(x,y)</code> function
+of the square anywhere on the canvas, the <code>స్థానము_మార్చు(x,y)</code> function
 can be used. A Cartesian coordinate system is used with x=0, y=0 at
 the center of the canvas. (see example of Cartesian coordinates.)
 The values at the edges of the canvas will vary from machine to
@@ -983,12 +983,12 @@ on laptops and desktop machines as the browser window is changed.
 </p>
 <p>
 We need to pick a random number for a random x and a random y on the
-canvas for the <code>goto()</function></code>.
-<code>random( కనిష్ఠX(), గరిష్ఠX())</code> will pick a suitable x value and
-<code>random( కనిష్ఠY(), గరిష్ఠY())</code> will pick a suitable y value.
+canvas for the <code>స్థానము_మార్చు()</function></code>.
+<code>యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX())</code> will pick a suitable x value and
+<code>యాదృచఛిక_సంఖ్య( కనిష్ఠY(), గరిష్ఠY())</code> will pick a suitable y value.
 This is put altogether in the following code. Note that the x and y parameter
-positions in the definition of the <code>goto()</code> function definition
-determine the order of the arguments when invoking the <code>goto()</code>
+positions in the definition of the <code>స్థానము_మార్చు()</code> function definition
+determine the order of the arguments when invoking the <code>స్థానము_మార్చు()</code>
 function.
 </p>
 <code class="tryme">function square(side) {
@@ -1004,9 +1004,9 @@ function demo(){
   var i
   ఆది_స్థితి()
   for (i=0; i&lt;20; i= i + 1) {
-    రంగు_మార్చు( random(15))
-    goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
-    square( random( 15,150))
+    రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
+    స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+    square( యాదృచఛిక_సంఖ్య( 15,150))
   }
 }
 </code>
@@ -1015,7 +1015,7 @@ function demo(){
 <section>
 <h2>Simple Animated Build</h2>
 <p>
-Simple animations can be done with the <code>animate()</code>
+Simple animations can be done with the <code>ఆడించు()</code>
 function. The function just repeats calls to the function named in its first
 argument after a delay of the number of milliseconds (1/1000 second) specified
 by the second argument. By not clearing or resetting the canvas between calls,
@@ -1027,8 +1027,8 @@ Let's use the same basic program that we used in the last exercise.
 We need to break the <code>demo()</code> function into two parts, because
 animate needs to call a function that draws something on the canvas.
 The iteration is no longer needed, because that is effectively done by
-the <code>animate()</code> function. The <code>ఆది_స్థితి()</code> should only be
-done in the demo function as well as the <code>animate()</code> function.
+the <code>ఆడించు()</code> function. The <code>ఆది_స్థితి()</code> should only be
+done in the demo function as well as the <code>ఆడించు()</code> function.
 Everything else can be put into a <code>randomSquare()</code> function.
 </p>
 <code class="tryme">function square(side) {
@@ -1041,14 +1041,14 @@ Everything else can be put into a <code>randomSquare()</code> function.
 }
 
 function randomSquare(){
-  రంగు_మార్చు( random(15))
-  goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
-  square( random( 15,150))
+  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
+  స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+  square( యాదృచఛిక_సంఖ్య( 15,150))
 }
 
 function demo(){
   ఆది_స్థితి()
-  animate( randomSquare, 100) // pass address of function,
+  ఆడించు( randomSquare, 100) // pass address of function,
                               // not results of the function
 }
 </code>
@@ -1057,16 +1057,16 @@ function demo(){
 A funny thing is
 happening with the reference of <code>randomSquare</code> in the <code>demo()</code>
 function above. This is passing the address of the <code>randomSquare()</code>
-function to the <code>animate()</code> function. Animate executes the
+function to the <code>ఆడించు()</code> function. Animate executes the
 function at the address passed to it. By dropping the parentheses
 from the <code>demo2()</code> function, the address of the function is used
 rather than to attempt to invoke the function immediately as is done with the
-<code>random()</code>, <code>కనిష్ఠX()</code>, <code>కనిష్ఠY()</code>,
+<code>యాదృచఛిక_సంఖ్య()</code>, <code>కనిష్ఠX()</code>, <code>కనిష్ఠY()</code>,
 <code>గరిష్ఠX()</code>, <code>గరిష్ఠY()</code> functions elsewhere in the code.
 </p>
 <p>
 The squares can be
-rotated as well by throwing in a turn (random(something)) into the
+rotated as well by throwing in a turn (యాదృచఛిక_సంఖ్య(something)) into the
 mix.
 </p>
 <code class="tryme">function square(side) {
@@ -1079,15 +1079,15 @@ mix.
 }
 
 function randomSquare(){
-  రంగు_మార్చు( random(15))
-  goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
-  కుడి_వైపు_తిరుగు(random( 5, 30))
-  square( random( 15,150))
+  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
+  స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+  కుడి_వైపు_తిరుగు(యాదృచఛిక_సంఖ్య( 5, 30))
+  square( యాదృచఛిక_సంఖ్య( 15,150))
 }
 
 function demo(){
   ఆది_స్థితి()
-  animate( randomSquare, 100) // pass address of function,
+  ఆడించు( randomSquare, 100) // pass address of function,
                               // not results of the function
 }
 </code>
@@ -1098,7 +1098,7 @@ function demo(){
 <p>
 The line widths of squares can also be varied by throwing in <code>width</code>
 function. So in keeping with the randomness theme, why not make the lines a
-random width with <code>వెడల్పు(random(</code>something<code>))</code> into the mix.
+random width with <code>వెడల్పు(యాదృచఛిక_సంఖ్య(</code>something<code>))</code> into the mix.
 You may not want lines that are too thin (zero?) or too wide, so limit the range
 of the widths. This code looks something like the following.
 </p>
@@ -1112,16 +1112,16 @@ of the widths. This code looks something like the following.
 }
 
 function randomSquare(){
-  రంగు_మార్చు( random(15))
-  goto (random( కనిష్ఠX(), గరిష్ఠX()), random(కనిష్ఠY(), గరిష్ఠY()))
-  కుడి_వైపు_తిరుగు(random( 5, 30))
-  వెడల్పు( random( 1, 6))
-  square( random( 15,150))
+  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
+  స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+  కుడి_వైపు_తిరుగు(యాదృచఛిక_సంఖ్య( 5, 30))
+  వెడల్పు( యాదృచఛిక_సంఖ్య( 1, 6))
+  square( యాదృచఛిక_సంఖ్య( 15,150))
 }
 
 function demo(){
   ఆది_స్థితి()
-  animate( randomSquare, 100) // pass address of function,
+  ఆడించు( randomSquare, 100) // pass address of function,
                               // not results of the function
 }
 </code>
@@ -1177,7 +1177,7 @@ sides and the number of sides required.
 <code class="tryme">function polygon (size, n) {
   var i = 0
   while (i < n) {
-    write (i)
+    వ్రాయి(i)
     ముందుకు_జరుగు(size)
     కుడి_వైపు_తిరుగు(360/n)
     i = i + 1
@@ -1198,8 +1198,8 @@ What about a five-pointed star? It has a lot of similarities as the polygon.
 Both end up in the same place and same direction as the start.
 Both have five corners and the corners are in the same place.
 One difference is a spikey is concave between points, where a polygon is flat.
-Another difference is that in drawing a polygon, the turtle only goes around the
-center point once. When drawing a star, the turtle would have to go around twice.
+Another difference is that in drawing a polygon, the కుంచిక only goes around the
+center point once. When drawing a star, the కుంచిక would have to go around twice.
 </li>
 <li>
   In a polygon, how many times to you go around the center point.
@@ -1226,7 +1226,7 @@ When you draw the star free hand, you go around
 the center point twice and you make 5 turns. You can use that to
 determine the కోణము. Twice around the center is twice 360° or 720°.
 Dividing this by the number of points, 5, yields 144°. Remember this is the
-turning కోణము for the turtle. The inside కోణము is 180° minus the turning
+turning కోణము for the కుంచిక. The inside కోణము is 180° minus the turning
 కోణము or 36°.
 </p>
 
@@ -1252,7 +1252,7 @@ narrower.
 <code class="tryme floatleft">function spikey (size,n,revs) {
   var i = 0
   while (i < n) {
-    write (i)
+    వ్రాయి(i)
     ముందుకు_జరుగు(size)
     కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
@@ -1276,7 +1276,7 @@ function demo () {
 <code class="tryme floatleft">function spikey (size,n,revs) {
   var i = 0
   while (i < n) {
-    write (i)
+    వ్రాయి(i)
     ముందుకు_జరుగు(size)
     కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
@@ -1300,7 +1300,7 @@ function demo () {
 <code class="tryme floatleft">function spikey (size,n,revs) {
   var i = 0
   while (i < n) {
-    write (i)
+    వ్రాయి(i)
     ముందుకు_జరుగు(size)
     కుడి_వైపు_తిరుగు(revs*360/n)
     i = i + 1
@@ -1344,17 +1344,17 @@ next coding adventure.
 <li>
     Set up a demo of finding pi with a
     random number generator. Hint: use a square that is 1 unit  by 1
-    unit and a quarter of a circle with a వ్యాసార్థము of 1 unit. Remember
+    unit and a quarter of a వృత్తము with a వ్యాసార్థము of 1 unit. Remember
     the Pythagorean theorem.
 </li>
 <li>
     Play with random colors.
-    Hint: <code>రంగు_మార్చు(random(15))</code> or even more colors if
+    Hint: <code>రంగు_మార్చు(యాదృచఛిక_సంఖ్య(15))</code> or even more colors if
     you use individual red, green and blue color codes like
     <code>రంగు_మార్చు("rgb(" + </code>
-    <code>random(255) + "," + </code>
-    <code>random(255) + "," + </code>
-    <code>random(255) + ")" )</code>.
+    <code>యాదృచఛిక_సంఖ్య(255) + "," + </code>
+    <code>యాదృచఛిక_సంఖ్య(255) + "," + </code>
+    <code>యాదృచఛిక_సంఖ్య(255) + ")" )</code>.
 </li>
 <li>
     Play with color around a color wheel to change colors more subtly.

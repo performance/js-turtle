@@ -7,21 +7,21 @@ colors = ["red", "blue", "yellow", "green"]
 offsets = [0, -1, -2, -.5, -1.5]
 
 function squ( side, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
 }
 
 function squLeft( side, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
 }
 
 function nextColor() {
@@ -36,13 +36,13 @@ function demo() {
   rowCount = 0
   column = కనిష్ఠX()
   row = గరిష్ఠY()
-  wrap(false)
+   చుట్టు(false)
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while( turtle.pos.y > కనిష్ఠY()) {
-    goto(కనిష్ఠX()+offsets[ rowCount % offsets.length]*s, గరిష్ఠY()-rowCount*s/2+s/2)
-    while( turtle.pos.x < గరిష్ఠX()) {
+  while( కుంచిక.pos.y > కనిష్ఠY()) {
+    స్థానము_మార్చు(కనిష్ఠX()+offsets[ rowCount % offsets.length]*s, గరిష్ఠY()-rowCount*s/2+s/2)
+    while( కుంచిక.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       squ(s, nextColor())
       కలమును_పైకి_ఎత్తు()

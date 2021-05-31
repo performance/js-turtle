@@ -1,5 +1,5 @@
 /************************************************************************
-*  turtle.js -- javascript for the turtle graphic language extensions
+*  కుంచిక.js -- javascript for the కుంచిక graphic language extensions
 *
 *  Copyright (c) 2015-2019 Kirk Carlson
 *  MIT license
@@ -10,7 +10,7 @@
 /*************************************************************************************
 Coordinate systems...
 
-Drawing a circle became a pain because of the number of different coordinate
+Drawing a వృత్తము became a pain because of the number of different coordinate
 systems being used. These are:
   - the javascript canvas.
     * origin is at the top left
@@ -20,23 +20,23 @@ systems being used. These are:
   - cartesian coodinates
     * origin is at center with positive up
     * 0 కోణము is at 3 o'clock going counterclockwise
-  - the turtle graphic space.
+  - the కుంచిక graphic space.
     * Origin at center to mimic cartesian coordinates
     * heading is referenced with 0 కోణము at 12 o'clock going clockwise
 
 Canvases:
 
 Two canvases are used:
-  imageCanvas to hold the image drawn by the turtle
-  turtleCanvas to hold the image of the turtle AND the image drawn by the turtle
-The imageCanvas is not visable, only the turtleCanvas is visible.
-#### the above should change, there should be two layers, the turtle and the image.
-#### if the turtle is not visible, that layer is invisible and not updated.
+  imageCanvas to hold the image drawn by the కుంచిక
+  కుంచికCanvas to hold the image of the కుంచిక AND the image drawn by the కుంచిక
+The imageCanvas is not visable, only the కుంచికCanvas is visible.
+#### the above should change, there should be two layers, the కుంచిక and the image.
+#### if the కుంచిక is not visible, that layer is invisible and not updated.
 #### this is a major change, so commit it out
-The "redraw" boolean function controls whether the turtle is drawn after each move.
+The "redraw" boolean function controls whether the కుంచిక is drawn after each move.
 ##### this includes an image copy, which is the expensive operation, use layers instead!
 
-"wrap" only works for straight lines, not curves, circles, or dots.
+"wrap" only works for straight lines, not curves,  వృత్తములు, or నిండు_వృత్తములు.
 
 This is an experimental version that allows export of svg graphic in addition to
 the png for the canvas. Turtle moves are accumulated and then exported enmass.
@@ -51,11 +51,11 @@ var imageContext = imageCanvas.getContext("2d");
 imageContext.textAlign = "center";
 imageContext.textBaseline = "middle";
 
-var turtleCanvas = document.getElementById("turtlecanvas");
-var turtleContext = turtleCanvas.getContext("2d");
+var కుంచికCanvas = document.getElementById("కుంచికcanvas");
+var కుంచికContext = కుంచికCanvas.getContext("2d");
 
-// the turtle takes precedence when compositing
-turtleContext.globalCompositeOperation = "destination-over";
+// the కుంచిక takes precedence when compositing
+కుంచికContext.globalCompositeOperation = "destination-over";
 
 
 
@@ -72,57 +72,57 @@ function Turtle () {
   this.కోణము = 0
   this.penDown = true
   this.వెడల్పు = 1
-  this.visible = true // controls turtle visibility
-  this.redraw = true //  controls redrawing turtle every move
-  this.shape = false //  controls inclusion of segments from a filled shape
+  this.visible = true // controls కుంచిక visibility
+  this.redraw = true //  controls redrawing కుంచిక every move
+  this.ఆకారాము = false //  controls inclusion of segments from a filled shape
   this.wrap = true //    controls wraping at the edge
   this.font = "10pt normal Helvetica, sans-serif"
   this.రంగు = "నలుపు"
 };
 
-// initialize the state of the turtle
-var turtle = new Turtle();
-console.log("Tangle:" + turtle.కోణము + "Tfont: "+ turtle.font )
+// initialize the state of the కుంచిక
+var కుంచిక = new Turtle();
+console.log("Tangle:" + కుంచిక.కోణము + "Tfont: "+ కుంచిక.font )
 
 /*******************************************************************************
- * initialize -- initialize the turtle graphics system
+ * initialize -- initialize the కుంచిక graphics system
  *
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
 function initialize() {
-  turtle.pos.x = 0
-  turtle.pos.y = 0
-  turtle.కోణము = 0
-  turtle.penDown = true
-  turtle.వెడల్పు = 1
-  turtle.visible = true
-  turtle.redraw = true
-  turtle.shape = false
-  turtle.wrap = true
-  turtle.font = "10pt normal Helvetica, sans-serif"
-  turtle.రంగు = "నలుపు"
+  కుంచిక.pos.x = 0
+  కుంచిక.pos.y = 0
+  కుంచిక.కోణము = 0
+  కుంచిక.penDown = true
+  కుంచిక.వెడల్పు = 1
+  కుంచిక.visible = true
+  కుంచిక.redraw = true
+  కుంచిక.ఆకారాము = false
+  కుంచిక.wrap = true
+  కుంచిక.font = "10pt normal Helvetica, sans-serif"
+  కుంచిక.రంగు = "నలుపు"
 /*
-   turtle = { pos: {
+   కుంచిక = { pos: {
                  x: 0,
                  y: 0
               },
               కోణము: 0, //12 o'clock
               penDown: true,
               వెడల్పు: 1,
-              visible: true, // controls turtle visibility
-              redraw: true, //  controls redrawing turtle every move
+              visible: true, // controls కుంచిక visibility
+              redraw: true, //  controls redrawing కుంచిక every move
               shape: false, //  controls inclusion of segments from a filled shape
               wrap: true, //    controls wraping at the edge
               font: "10pt normal Helvetica, sans-serif",
               రంగు: "నలుపు"
             };
 */
-  //turtle = Turtle();
-  imageContext.font = turtle.font;
-  imageContext.lineWidth = turtle.వెడల్పు;
-  imageContext.strokeStyle = turtle.రంగు;
+  //కుంచిక = Turtle();
+  imageContext.font = కుంచిక.font;
+  imageContext.lineWidth = కుంచిక.వెడల్పు;
+  imageContext.strokeStyle = కుంచిక.రంగు;
   imageContext.globalAlpha = 1;
 
   svgInitialize()
@@ -170,10 +170,10 @@ function svgInitialize() {
 
 /*  ***SAMPLE SVG***
 
-<svg id="turtle-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="300">
-  <path id="turtle-path-0" stroke="black" d="M 250 250 M 100 100 l 0 50 l -50 0 l 0 -50 l 50 0 " fill="none" vector-effect="non-scaling-stroke" />
-  //<path id="turtle-path-1" stroke="blue" d="M 250 250 M 200 200 l 0 50 l -50 0" fill="none" vector-effect="non-scaling-stroke" />
-  //<path id="turtle-path-2" stroke="red" d="M150 250 l0 -50 l50 0" fill="none" vector-effect="non-scaling-stroke" />
+<svg id="కుంచిక-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="300">
+  <path id="కుంచిక-path-0" stroke="black" d="M 250 250 M 100 100 l 0 50 l -50 0 l 0 -50 l 50 0 " fill="none" vector-effect="non-scaling-stroke" />
+  //<path id="కుంచిక-path-1" stroke="blue" d="M 250 250 M 200 200 l 0 50 l -50 0" fill="none" vector-effect="non-scaling-stroke" />
+  //<path id="కుంచిక-path-2" stroke="red" d="M150 250 l0 -50 l50 0" fill="none" vector-effect="non-scaling-stroke" />
   <path stroke="blue" d="M 250 250 M 200 200 l 0 50 l -50 0" fill="none" vector-effect="non-scaling-stroke" />
   <path stroke="red" d="M150 250 l0 -50" fill="none" vector-effect="non-scaling-stroke" />
   <path stroke="red" stroke-width="3" d="M150 200 l50 0" fill="none" vector-effect="non-scaling-stroke" />
@@ -204,7 +204,7 @@ function svgOpenPath( x, y) {
    // TODO(DSR) : uncomment this.
    // console.log( "sOP:", x, y, svgD)
    if (svgPath == "") { // no path open
-     svgPath = '<path stroke="' + turtle.రంగు
+     svgPath = '<path stroke="' + కుంచిక.రంగు
      svgD =  ' d="M ' + round( x, svgPrecision) + ' ' + round( y, svgPrecision)
      svgLastMove = undefined
    }
@@ -215,10 +215,10 @@ function svgOpenPath( x, y) {
 
 function updateHighWater( x, y, radx, rady) {
   if (radx === undefined) {
-    radx = turtle.వెడల్పు
+    radx = కుంచిక.వెడల్పు
   }
   if (rady === undefined) {
-    rady = turtle.వెడల్పు
+    rady = కుంచిక.వెడల్పు
   }
   if (x + radx> svgXHighWater) {
     svgXHighWater = x + radx
@@ -237,14 +237,14 @@ function updateHighWater( x, y, radx, rady) {
 
 function svgAppendPath( rx, ry) {
   // TODO(DSR) : uncomment this.
-  // console.log( "sAP:",rx, ry, turtle.penDown, "last:", svgLastMove)
-  updateHighWater( turtle.pos.x, turtle.pos.y)
+  // console.log( "sAP:",rx, ry, కుంచిక.penDown, "last:", svgLastMove)
+  updateHighWater( కుంచిక.pos.x, కుంచిక.pos.y)
 
-  if (turtle.penDown) { // pen down
+  if (కుంచిక.penDown) { // pen down
     if (svgPath === "") { // path not open, putting off as long as possible
-      svgOpenPath( turtle.pos.x - rx, turtle.pos.y - ry); // position of where turtle started line segment
+      svgOpenPath( కుంచిక.pos.x - rx, కుంచిక.pos.y - ry); // position of where కుంచిక started line segment
       svgLastMove = undefined; // since the open was absolute, don't need lead in
-      updateHighWater( turtle.pos.x - rx, turtle.pos.y - ry)
+      updateHighWater( కుంచిక.pos.x - rx, కుంచిక.pos.y - ry)
     }
     if (svgLastMove !== undefined) { // move the accumulated movement
       svgD = svgD + " m " + round( svgLastMove[0], svgPrecision) + " " + round( svgLastMove[1], svgPrecision)
@@ -283,7 +283,7 @@ function svgClose() {
 //really want to set the size of the blob here and provide a transform
 // so svgBlog = preamble + svgBlob + '</svg'
   svgClosePath();
-  var svgOpenBlob = '<svg id="turtle-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + round( svgXHighWater - svgXLowWater, svgPrecision) + '"'
+  var svgOpenBlob = '<svg id="కుంచిక-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + round( svgXHighWater - svgXLowWater, svgPrecision) + '"'
   svgOpenBlob = svgOpenBlob + ' height="' + round( svgYHighWater - svgYLowWater, svgPrecision) + '">\n'
   if (svgBackground !== "") {
     svgOpenBlob = svgOpenBlob + '<rect width="100%" height="100%" fill="' + svgBackground + '"/>\n';
@@ -296,7 +296,7 @@ function svgClose() {
 
 
 /*******************************************************************************
- * drawIf -- draw the turtle and the current image if redraw is true
+ * drawIf -- draw the కుంచిక and the current image if redraw is true
  *           Complicated drawings render faster if redraw is false
  *
  * arguments: None
@@ -304,50 +304,50 @@ function svgClose() {
  * returns: None
  ******************************************************************************/
 function drawIf() {
-   if (turtle.redraw) {
-      draw();
+   if (కుంచిక.redraw) {
+      చిత్రీకరించు();
    }
 }
 
 
 /*******************************************************************************
- * draw -- draw the turtle and the current image
+ * draw -- draw the కుంచిక and the current image
  *
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function draw() {
-   clearContext(turtleContext);
-   // draw the turtle, if it is visible
-   if (turtle.visible) {
-      var x = turtle.pos.x;
-      var y = turtle.pos.y;
+function చిత్రీకరించు() {
+   clearContext(కుంచికContext);
+   // draw the కుంచిక, if it is visible
+   if (కుంచిక.visible) {
+      var x = కుంచిక.pos.x;
+      var y = కుంచిక.pos.y;
       var w = 10;
       var h = 15;
-      turtleContext.save();
+      కుంచికContext.save();
       // use canvas centered coordinates facing upwards
-      centerCoords(turtleContext);
-      // move the origin to the turtle center
-      turtleContext.translate(x, y);
-      // rotate about the center of the turtle
-      turtleContext.rotate(-turtle.కోణము);
-      // move the turtle back to its position
-      turtleContext.translate(-x, -y);
-      // draw the turtle icon
-      turtleContext.beginPath();
-      turtleContext.moveTo(x - w/2, y);
-      turtleContext.lineTo(x + w/2, y);
-      turtleContext.lineTo(x, y + h);
-      turtleContext.closePath();
-      turtleContext.fillStyle = "green";
-      turtleContext.fill();
-      turtleContext.restore();
+      centerCoords(కుంచికContext);
+      // move the origin to the కుంచిక center
+      కుంచికContext.translate(x, y);
+      // rotate about the center of the కుంచిక
+      కుంచికContext.rotate(-కుంచిక.కోణము);
+      // move the కుంచిక back to its position
+      కుంచికContext.translate(-x, -y);
+      // draw the కుంచిక icon
+      కుంచికContext.beginPath();
+      కుంచికContext.moveTo(x - w/2, y);
+      కుంచికContext.lineTo(x + w/2, y);
+      కుంచికContext.lineTo(x, y + h);
+      కుంచికContext.closePath();
+      కుంచికContext.fillStyle = "green";
+      కుంచికContext.fill();
+      కుంచికContext.restore();
    }
    // now draw the background
-   turtleContext.drawImage(imageCanvas, 0, 0, turtleContext.canvas.width,
-       turtleContext.canvas.height, 0, 0, turtleContext.canvas.width,
-       turtleContext.canvas.height);
+   కుంచికContext.drawImage(imageCanvas, 0, 0, కుంచికContext.canvas.width,
+       కుంచికContext.canvas.height, 0, 0, కుంచికContext.canvas.width,
+       కుంచికContext.canvas.height);
 }
 
 
@@ -369,7 +369,7 @@ function centerCoords (context) {
 
 
 /*******************************************************************************
- * చెరిపి_వేయి -- చెరిపి_వేయి the display, don't move the turtle
+ * చెరిపి_వేయి -- చెరిపి_వేయి the display, don't move the కుంచిక
  *
  * arguments: None
  *
@@ -397,7 +397,7 @@ function clearContext(context) {
 
 
 /*******************************************************************************
- * ఆది_స్థితి -- reset the turtle graphics and move turtle to center facing North
+ * ఆది_స్థితి -- reset the కుంచిక graphics and move కుంచిక to center facing North
  * ఆది_స్థితి 
  * arguments: None
  *
@@ -407,34 +407,37 @@ function ఆది_స్థితి() {
    //console.log(document.getElementById("stopButton").onClick)
    initialize();
    చెరిపి_వేయి();
-   draw();
-   stopAnimation();
-   turtle.shape = false;
+   చిత్రీకరించు();
+   ఆట_ఆపు();
+   కుంచిక.ఆకారాము = false;
 }
 reset = ఆది_స్థితి;
 
 /*******************************************************************************
- * home -- move the turtle to center facing North
+ * కేంద్రకమునకు_వెళ్ళు -- move the కుంచిక to center facing North
  *
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-// move the turtle to the origin and set heading to 0
-function home() {
-   setposition (0,0);
+// move the కుంచిక to the origin and set heading to 0
+function కేంద్రకమునకు_వెళ్ళు() {
+  స్థానము_మార్చు(0,0);
    దిశ_మార్చు(0);
 }
+home = కేంద్రకమునకు_వెళ్ళు;
+go_home = కేంద్రకమునకు_వెళ్ళు;
+goHome = కేంద్రకమునకు_వెళ్ళు;
 
 
 /*******************************************************************************
- * stopAnimation -- stop all animations in progress
- *
+ * ఆట_ఆపు -- stop all animations in progress
+ * ఆట_ఆపు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function stopAnimation() {
+function ఆట_ఆపు() {
   while (intervals.length > 0) {
     clearInterval(intervals.pop());
   }
@@ -443,65 +446,67 @@ function stopAnimation() {
   }
   document.getElementById("stopButton").hidden = true;
 }
-
+stopAnimation = ఆట_ఆపు;
 
 /*******************************************************************************
- * redrawOnMove -- set the state of the redraw flag
- *
+ * కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు -- set the state of the redraw flag
+ *  కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు 
  * arguments:
  *   bool: desired state of redraw flag
  *
  * returns: None
  ******************************************************************************/
 // turn on/off redrawing
-function redrawOnMove(bool) {
-   turtle.redraw = bool;
+function కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(bool) {
+   కుంచిక.redraw = bool;
 }
+కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు = కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు;
 
 
 /*******************************************************************************
- * wrap -- set the desired state of the boundary wrapping function
- *
+ * చుట్టు -- set the desired state of the boundary wrapping function
+ * చుట్టు 
  * arguments:
  *   bool: desired state of boundary wrapping function
  *
  * returns: None
  ******************************************************************************/
-function wrap(bool) {
-   turtle.wrap = bool;
+function చుట్టు(bool) {
+   కుంచిక.చుట్టు = bool;
 }
+wrap = చుట్టు;
 
 
 /*******************************************************************************
- * beginshape -- mark the beginning of a filled shape
- *
+ * ఆకారాము_ప్రారంభించు -- mark the beginning of a filled shape
+ * ఆకారాము_ప్రారంభించు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function beginshape() {
-  turtle.shape = true;
+function ఆకారాము_ప్రారంభించు() {
+  కుంచిక.ఆకారాము = true;
   imageContext.beginPath();
 }
 
-beginShape = beginshape;
+beginShape = ఆకారాము_ప్రారంభించు;
 
 
 /*******************************************************************************
- * fillshape -- fill shape
- *
+ * ఆకారాము_ముగించు -- fill shape
+ *  ఆకారాము_ముగించు  
  * arguments:
- *   styl: fill style (రంగు, gradient, or pattern), defaulting to turtle రంగు
+ *   styl: fill style (రంగు, gradient, or pattern), defaulting to కుంచిక రంగు
  *
  * returns: None
  ******************************************************************************/
-function fillshape( styl) {
-  if (turtle.shape) {
+function ఆకారాము_ముగించు( styl) {
+  if (కుంచిక.ఆకారాము) {
     if (styl == undefined) {
-       styl = turtle.రంగు;
+       styl = కుంచిక.రంగు;
     }
     if (typeof(styl) === "number") {
-      if (styl < 16) { // assume standard logo turtle రంగు
+      if (styl < 16) { // assume standard logo కుంచిక రంగు
         styl = logoColors [styl];
       } //else {
         //రంగు is assumed to be a 32-bit రంగు value
@@ -513,24 +518,24 @@ function fillshape( styl) {
     //imageContext.save()
     imageContext.closePath();
     imageContext.fillStyle=styl;
-    imageContext.strokeStyle=turtle.రంగు; //stroke and fill can be different
-    if (turtle.penDown) {
+    imageContext.strokeStyle=కుంచిక.రంగు; //stroke and fill can be different
+    if (కుంచిక.penDown) {
       imageContext.stroke();
       imageContext.fill();
     }
     //imageContext.restore();
     drawIf();
   }
-  turtle.shape = false;
+  కుంచిక.ఆకారాము = false;
 }
 
-fillShape = fillshape;
+fillShape = ఆకారాము_ముగించు;
 
 
 //////Movement Functions
 
 /*******************************************************************************
- * forward -- move the turtle forward, allowing for possible wrap-around
+ * forward -- move the కుంచిక forward, allowing for possible wrap-around
  * ముందుకు_జరుగు 
  * arguments:
  *   distance: number of pixels to move ముందుకు_జరుగు
@@ -539,17 +544,17 @@ fillShape = fillshape;
  ******************************************************************************/
 function ముందుకు_జరుగు(distance) {
    // define some local variables and functions
-   var cosAngle = Math.cos(turtle.కోణము);
-   var sinAngle = Math.sin(turtle.కోణము);
+   var cosAngle = Math.cos(కుంచిక.కోణము);
+   var sinAngle = Math.sin(కుంచిక.కోణము);
    var entryX;
    var entryY;
    var newX;
    var newY;
    var distance;
-   var entryX = turtle.pos.x;
-   var entryY = turtle.pos.y;
-   var x = turtle.pos.x;
-   var y = turtle.pos.y;
+   var entryX = కుంచిక.pos.x;
+   var entryY = కుంచిక.pos.y;
+   var x = కుంచిక.pos.x;
+   var y = కుంచిక.pos.y;
 
    // get the boundaries of the canvas
    var గరిష్ఠ_X = imageContext.canvas.width / 2;
@@ -566,8 +571,8 @@ function ముందుకు_జరుగు(distance) {
       distance -= distanceToEdge;
       x = otherBound;
       y = edgeY;
-      turtle.pos.x = x;
-      turtle.pos.y = y;
+      కుంచిక.pos.x = x;
+      కుంచిక.pos.y = y;
       svgAppendPath( x - entryX, y - entryY)
    }
 
@@ -579,16 +584,16 @@ function ముందుకు_జరుగు(distance) {
       distance -= distanceToEdge;
       x = edgeX;
       y = otherBound;
-      turtle.pos.x = x;
-      turtle.pos.y = y;
+      కుంచిక.pos.x = x;
+      కుంచిక.pos.y = y;
       svgAppendPath( x - entryX, y - entryY)
    }
 
-   // don't wrap the turtle on any boundary
+   // don't wrap the కుంచిక on any boundary
    function noWrap(x, y) {
       imageContext.lineTo(x, y);
-      turtle.pos.x = x;
-      turtle.pos.y = y;
+      కుంచిక.pos.x = x;
+      కుంచిక.pos.y = y;
       distance = 0;
       svgAppendPath( x - entryX, y - entryY)
    }
@@ -596,22 +601,22 @@ function ముందుకు_జరుగు(distance) {
 
    imageContext.save();
    centerCoords(imageContext);
-   if (! turtle.shape) {
+   if (! కుంచిక.ఆకారాము) {
       imageContext.beginPath();
    }
 
    // trace out the forward steps
    while (distance > 0) {
-      // move the to current location of the turtle
-      if (! turtle.shape) {
+      // move the to current location of the కుంచిక
+      if (! కుంచిక.ఆకారాము) {
         imageContext.moveTo(x, y);
       }
-      // calculate the new location of the turtle after doing the forward movement
+      // calculate the new location of the కుంచిక after doing the forward movement
       newX = x + sinAngle * distance;
       newY = y + cosAngle * distance;
 
       // if wrap is on, trace a part segment of the path and wrap on boundary if necessary
-      if (! turtle.shape && turtle.wrap) {
+      if (! కుంచిక.ఆకారాము && కుంచిక.wrap) {
          if (newX > గరిష్ఠ_X) {
             xWrap(గరిష్ఠ_X, కనిష్ఠ_X);
          }
@@ -632,11 +637,11 @@ function ముందుకు_జరుగు(distance) {
       }
    }
    // draw only if the pen is currently down.
-   if (! turtle.shape && turtle.penDown) {
+   if (! కుంచిక.ఆకారాము && కుంచిక.penDown) {
       imageContext.stroke();
    }
    imageContext.restore();
-   if (! turtle.shape) {
+   if (! కుంచిక.ఆకారాము) {
       drawIf();
    }
 }
@@ -645,7 +650,7 @@ fd = ముందుకు_జరుగు;
 forward = ముందుకు_జరుగు;
 
 /*******************************************************************************
- * వెనుకకు_జరుగు -- move the turtle backward, allowing for possible wrap-around
+ * వెనుకకు_జరుగు -- move the కుంచిక backward, allowing for possible wrap-around
  *
  * arguments:
  *   distance: number of pixels to move backward
@@ -665,7 +670,7 @@ back = వెనుకకు_జరుగు;
 backward = వెనుకకు_జరుగు;
 
 /*******************************************************************************
- * కుడి_వైపు_తిరుగు -- turn the turtle right a number of degrees
+ * కుడి_వైపు_తిరుగు -- turn the కుంచిక right a number of degrees
  * కుడి_వైపు_తిరుగు 
  * arguments:
  *   కోణము: కోణము in degrees to turn
@@ -673,7 +678,7 @@ backward = వెనుకకు_జరుగు;
  * returns: None
  ******************************************************************************/
 function కుడి_వైపు_తిరుగు(కోణము) {
-   turtle.కోణము += degToRad(కోణము);
+   కుంచిక.కోణము += degToRad(కోణము);
    drawIf();
 }
 
@@ -682,7 +687,7 @@ rt = కుడి_వైపు_తిరుగు;
 
 
 /*******************************************************************************
- * ఎడమ_వైపు_తిరుగు -- turn the turtle left a number of degrees
+ * ఎడమ_వైపు_తిరుగు -- turn the కుంచిక left a number of degrees
  *
  * arguments:
  *   కోణము: కోణము in degrees to turn
@@ -692,7 +697,7 @@ rt = కుడి_వైపు_తిరుగు;
  * returns: None
  ******************************************************************************/
 function ఎడమ_వైపు_తిరుగు(కోణము) {
-   turtle.కోణము -= degToRad(కోణము);
+   కుంచిక.కోణము -= degToRad(కోణము);
    drawIf();
 }
 
@@ -702,26 +707,26 @@ lt = ఎడమ_వైపు_తిరుగు;
 
 
 /*******************************************************************************
- * curveleft -- move the turtle forward along a path curving to the left
- *
+ * ఎడమవైపు_చాపాము -- move the కుంచిక forward along a path curving to the left
+ * ఎడమవైపు_చాపాము 
  * arguments:
  *   వ్యాసార్థము: వ్యాసార్థము of the curve
  *   extent: number of degrees in the curve
  *
  * returns: None
  ******************************************************************************/
-function curveleft (వ్యాసార్థము, extent) {
+function ఎడమవైపు_చాపాము (వ్యాసార్థము, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
-  var startAngle = turtle.కోణము; // in radians from 12 o'clock .. heading is same as start
+  var startAngle = కుంచిక.కోణము; // in radians from 12 o'clock .. heading is same as start
   var counterclockwise = true;
-  var centerX = turtle.pos.x - వ్యాసార్థము * Math.cos (turtle.కోణము); // left of turtle
-  var centerY = turtle.pos.y + వ్యాసార్థము * Math.sin (turtle.కోణము);
+  var centerX = కుంచిక.pos.x - వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // left of కుంచిక
+  var centerY = కుంచిక.pos.y + వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
   stopAngle = constrain( (startAngle - degToRad(extent)), 0, 2*Math.PI); // in radians CCW
-  turtle.కోణము = stopAngle;
-  turtle.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
-  turtle.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
+  కుంచిక.కోణము = stopAngle;
+  కుంచిక.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
+  కుంచిక.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
 
   // correct for flipping of x values, this changes rotation and angles
   counterclockwise = !counterclockwise;
@@ -733,7 +738,7 @@ function curveleft (వ్యాసార్థము, extent) {
   imageContext.beginPath();
   imageContext.arc (centerX, centerY, వ్యాసార్థము, startAngle, stopAngle, counterclockwise);
   // draw it
-  if (turtle.penDown) {
+  if (కుంచిక.penDown) {
     imageContext.stroke();
   }
   imageContext.restore();
@@ -748,59 +753,61 @@ large-arg-flag
 sweep-flag
 dx and dy are the center of the arc
 
-so this translates "curveleft (వ్యాసార్థము, extent)" roughly to:
+so this translates "ఎడమవైపు_చాపాము (వ్యాసార్థము, extent)" roughly to:
 
-<path ... d="... a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 <turtle.pos.x> + <వ్యాసార్థము> * sin(<turtle.heading>) <turtle.pos.x> + <వ్యాసార్థము> * cos(<turtle.heading>)
+<path ... d="... a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 <కుంచిక.pos.x> + <వ్యాసార్థము> * sin(<కుంచిక.heading>) <కుంచిక.pos.x> + <వ్యాసార్థము> * cos(<కుంచిక.heading>)
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
 */
-curveLeft = curveleft;
+curveLeft = ఎడమవైపు_చాపాము;
+curveleft = ఎడమవైపు_చాపాము;
 
 
 /*******************************************************************************
- * curveright -- move the turtle forward along a path curving to the right
- *
+ * కుడివైపు_చాపాము -- move the కుంచిక forward along a path curving to the right
+ * కుడివైపు_చాపాము 
  * arguments:
  *   వ్యాసార్థము: వ్యాసార్థము of the curve
  *   extent: number of degrees in the curve
  *
  * returns: None
  ******************************************************************************/
-function curveright (వ్యాసార్థము, extent) {
+function కుడివైపు_చాపాము(వ్యాసార్థము, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
-  var startAngle = Math.PI + turtle.కోణము; // in radians .. heading is same as start
+  var startAngle = Math.PI + కుంచిక.కోణము; // in radians .. heading is same as start
   var counterclockwise = false;
-  var centerX = turtle.pos.x + వ్యాసార్థము * Math.cos (turtle.కోణము); // right of turtle
-  var centerY = turtle.pos.y - వ్యాసార్థము * Math.sin (turtle.కోణము);
+  var centerX = కుంచిక.pos.x + వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // right of కుంచిక
+  var centerY = కుంచిక.pos.y - వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
   stopAngle = constrain( startAngle + degToRad(extent), 0, 2*Math.PI); // in radians CW
-  turtle.కోణము = stopAngle + Math.PI;
-  turtle.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
-  turtle.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
+  కుంచిక.కోణము = stopAngle + Math.PI;
+  కుంచిక.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
+  కుంచిక.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
 
   // correct for flipping of x values, this changes rotation and angles
   counterclockwise = !counterclockwise;
   startAngle = -startAngle;
   stopAngle = -stopAngle;
-    //write(startAngle + "  " + stopAngle + "  " + startAngle+degToRad(extent))
+    //వ్రాయి(startAngle + "  " + stopAngle + "  " + startAngle+degToRad(extent))
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
   imageContext.arc (centerX, centerY, వ్యాసార్థము, startAngle, stopAngle, counterclockwise);
   // draw it
-  if (turtle.penDown) {
+  if (కుంచిక.penDown) {
     imageContext.stroke();
   }
   imageContext.restore();
   drawIf();
 }
 
-curveRight = curveright;
+curveRight = కుడివైపు_చాపాము;
+curveright = కుడివైపు_చాపాము; 
 
 
 /*******************************************************************************
- * వృత్తము -- draw a cirle about the current turtle position
+ * వృత్తము -- draw a cirle about the current కుంచిక position
  *
  * arguments:
  *   వ్యాసార్థము:  వ్యాసార్థము of వృత్తము in pixels
@@ -813,25 +820,25 @@ function వృత్తము(వ్యాసార్థము, extent, CW) {
   if (CW === undefined) {
     CW = true;
   }
-  startAngle = turtle.కోణము - Math.PI/2; // translate turtle to normal canvas coordinate
+  startAngle = కుంచిక.కోణము - Math.PI/2; // translate కుంచిక to normal canvas coordinate
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
-  imageContext.strokeStyle=turtle.రంగు;
-  //imageContext.fillStyle=turtle.రంగు;
+  imageContext.strokeStyle=కుంచిక.రంగు;
+  //imageContext.fillStyle=కుంచిక.రంగు;
   // negate angles and CW due to context translation
   if (extent === undefined) {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, 0, 2*Math.PI);
+    imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, వ్యాసార్థము, 0, 2*Math.PI);
     svgClosePath()
-    svgBlob = svgBlob + '<circle cx="' + round( turtle.pos.x, svgPrecision) + '" cy="' + round( turtle.pos.y, svgPrecision)
+    svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.pos.x, svgPrecision) + '" cy="' + round( కుంచిక.pos.y, svgPrecision)
               + '" r="' + round( వ్యాసార్థము, svgPrecision) + '"'
-              + ' style="stroke:' + turtle.రంగు + '; stroke-width:' + turtle.వెడల్పు + '; fill:none"/>\n'; 
-    updateHighWater( turtle.pos.x, turtle.pos.y,  వ్యాసార్థము + turtle.వెడల్పు, వ్యాసార్థము + turtle.వెడల్పు)
+              + ' style="stroke:' + కుంచిక.రంగు + '; stroke-width:' + కుంచిక.వెడల్పు + '; fill:none"/>\n'; 
+    updateHighWater( కుంచిక.pos.x, కుంచిక.pos.y,  వ్యాసార్థము + కుంచిక.వెడల్పు, వ్యాసార్థము + కుంచిక.వెడల్పు)
    
   } else if (CW) {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, -startAngle, -(startAngle+degToRad(extent)), CW);
+    imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, వ్యాసార్థము, -startAngle, -(startAngle+degToRad(extent)), CW);
   } else {
-    imageContext.arc (turtle.pos.x, turtle.pos.y, వ్యాసార్థము, -startAngle, -(startAngle-degToRad(extent)), CW);
+    imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, వ్యాసార్థము, -startAngle, -(startAngle-degToRad(extent)), CW);
   }
   // draw it regardless of pen up or down
   imageContext.stroke();
@@ -839,9 +846,9 @@ function వృత్తము(వ్యాసార్థము, extent, CW) {
   imageContext.restore();
   drawIf();
 }
-circle = వృత్తము;
+వృత్తము = వృత్తము;
 /*
-<circle cx="40" cy="40" r="24"
+<వృత్తము cx="40" cy="40" r="24"
     style="stroke:#006600;
            stroke-width: 3;
            stroke-dasharray: 10 5;
@@ -858,10 +865,10 @@ dx and dy are the center of the arc
 so this translates "వృత్తము (వ్యాసార్థము, extent, CW)" roughly to:
 
 need to compute path start, path end and వృత్తము center
-కోణము start = turtle.heading
-వృత్తము center = turtle.pos
-path start = turtle.pos.x + వ్యాసార్థము * Math.cos( turtle.కోణము), turtle.pos.y + వ్యాసార్థము * Math.sin( turtle.కోణము)
-path end = turtle.pos.x + వ్యాసార్థము * Math.cos( turtle.కోణము + extent), turtle.pos.y + వ్యాసార్థము * Math.sin( turtle.కోణము + extent)
+కోణము start = కుంచిక.heading
+వృత్తము center = కుంచిక.pos
+path start = కుంచిక.pos.x + వ్యాసార్థము * Math.cos( కుంచిక.కోణము), కుంచిక.pos.y + వ్యాసార్థము * Math.sin( కుంచిక.కోణము)
+path end = కుంచిక.pos.x + వ్యాసార్థము * Math.cos( కుంచిక.కోణము + extent), కుంచిక.pos.y + వ్యాసార్థము * Math.sin( కుంచిక.కోణము + extent)
 <path ... d="M <pathStartX> <pathStartY a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 0 circleCenterX circleCenterY l pathEndX pathEndY
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
@@ -869,44 +876,47 @@ arc end is determined from the center of the arc through extent degrees
 arc = వృత్తము;
 చాపము = arc;
 /*******************************************************************************
- * dot -- draw a filled వృత్తము at the turtle position
- *
+ * నిండు_వృత్తము -- draw a filled వృత్తము at the కుంచిక position
+ * నిండు_వృత్తము 
  * arguments:
- *   size:  వ్యాసార్థము of dot in pixels (optional defaults to గరిష్ఠ of pensize+4, 2*pensize)
+ *   size:  వ్యాసార్థము of నిండు_వృత్తము in pixels (optional defaults to గరిష్ఠ of pensize+4, 2*pensize)
  *
  * returns: None
  ******************************************************************************/
-function dot(size) {
+function నిండు_వృత్తము(size) {
   if (size == undefined) {
-    size = Math.max(turtle.వెడల్పు+4, turtle.వెడల్పు*2);
+    size = Math.max(కుంచిక.వెడల్పు+4, కుంచిక.వెడల్పు*2);
   }
   imageContext.save();
   centerCoords(imageContext);
   imageContext.beginPath();
-  imageContext.fillStyle=turtle.రంగు;
-  imageContext.strokeStyle=turtle.రంగు;
-  imageContext.arc (turtle.pos.x, turtle.pos.y, size, 0, 2*Math.PI);
+  imageContext.fillStyle=కుంచిక.రంగు;
+  imageContext.strokeStyle=కుంచిక.రంగు;
+  imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, size, 0, 2*Math.PI);
   // draw it regardless of pen up or down
   imageContext.stroke();
   imageContext.fill();
   imageContext.restore();
   svgClosePath()
-  svgBlob = svgBlob + '<circle cx="' + round( turtle.pos.x, svgPrecision) + '" cy="' + round( turtle.pos.y, svgPrecision)
+  svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.pos.x, svgPrecision) + '" cy="' + round( కుంచిక.pos.y, svgPrecision)
             + '" r="' + round( size, svgPrecision) + '"'
-            + ' style="stroke:' + turtle.రంగు + '; stroke-width:' + turtle.వెడల్పు + '; fill:' + turtle.రంగు + '"/>\n';
+            + ' style="stroke:' + కుంచిక.రంగు + '; stroke-width:' + కుంచిక.వెడల్పు + '; fill:' + కుంచిక.రంగు + '"/>\n';
   drawIf();
 }
+dot = నిండు_వృత్తము;
+బిందువు = నిండు_వృత్తము;
 
+//కేంద్రకమునకు_వెళ్ళు
 
 /*******************************************************************************
- * కలమును_పైకి_ఎత్తు -- lift the turtle pen up (set marking state to false)
+ * కలమును_పైకి_ఎత్తు -- lift the కుంచిక pen up (set marking state to false)
  * కలమును_పైకి_ఎత్తు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
 function కలమును_పైకి_ఎత్తు() {
-  turtle.penDown = false;
+  కుంచిక.penDown = false;
 }
 
 pu = కలమును_పైకి_ఎత్తు;
@@ -915,14 +925,14 @@ penUp = కలమును_పైకి_ఎత్తు;
 
 
 /*******************************************************************************
- * కలమును_కింద_పెట్టు -- drop the turtle pen (set marking state to true)
+ * కలమును_కింద_పెట్టు -- drop the కుంచిక pen (set marking state to true)
  * కలమును_కింద_పెట్టు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
 function కలమును_కింద_పెట్టు() {
-  turtle.penDown = true;
+  కుంచిక.penDown = true;
 }
 
 pd = కలమును_కింద_పెట్టు;
@@ -931,14 +941,14 @@ penDown = కలమును_కింద_పెట్టు;
 
 
 /*******************************************************************************
- * కుంచికను_దాచు -- do not draw the turtle
+ * కుంచికను_దాచు -- do not draw the కుంచిక
  * కుంచికను_దాచు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
 function కుంచికను_దాచు() {
-   turtle.visible = false;
+   కుంచిక.visible = false;
    drawIf();
 }
 
@@ -947,14 +957,14 @@ hideTurtle = కుంచికను_దాచు;
 
 
 /*******************************************************************************
- * show turtle -- draw the turtle
+ * show కుంచిక -- draw the కుంచిక
  *
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
 function కుంచికను_చూపు() {
-   turtle.visible = true;
+   కుంచిక.visible = true;
    drawIf();
 }
 
@@ -963,61 +973,63 @@ showTurtle = కుంచికను_చూపు;
 
 
 /*******************************************************************************
- * స్థితి_మార్చు -- move the turtle to an x,y position without leaving a mark
- * స్థితి_మార్చు
+ * స్థానము_మార్చు -- move the కుంచిక to an x,y position without leaving a mark
+ * స్థానము_మార్చు 
  * arguments:
  *   x: x coordinate
  *   y: y coordinate
  *
  * returns: None
  ******************************************************************************/
-function స్థితి_మార్చు(x,y) {
-   turtle.pos.x = x;
-   turtle.pos.y = y;
+function స్థానము_మార్చు(x,y) {
+   కుంచిక.pos.x = x;
+   కుంచిక.pos.y = y;
    drawIf();
 }
 
-setposition = స్థితి_మార్చు;
-setpos = స్థితి_మార్చు;
-setPosition = స్థితి_మార్చు;
-setPos = స్థితి_మార్చు;
-goto = స్థితి_మార్చు;
+setposition = స్థానము_మార్చు;
+setpos = స్థానము_మార్చు;
+setPosition = స్థానము_మార్చు;
+setPos = స్థానము_మార్చు;
+goto = స్థానము_మార్చు;
 
 
 /*******************************************************************************
- * setx -- change the turtle x-coordinate without leaving a mark
+ * xనియోగించు -- change the కుంచిక x-coordinate without leaving a mark
  *
  * arguments:
  *   x: x coordinate
  *
  * returns: None
  ******************************************************************************/
-function setx(x) {
-   turtle.pos.x = x;
+function xనియోగించు(x) {
+   కుంచిక.pos.x = x;
    drawIf();
 }
 
-setX = setx;
+setX = xనియోగించు;
+setx = xనియోగించు;
 
 
 /*******************************************************************************
- * sety -- change the turtle y-coordinate without leaving a mark
- *
+ * yనియోగించు -- change the కుంచిక y-coordinate without leaving a mark
+ * yనియోగించు
  * arguments:
  *   y: y coordinate
  *
  * returns: None
  ******************************************************************************/
-function sety(y) {
-   turtle.pos.y = y;
+function yనియోగించు(y) {
+   కుంచిక.pos.y = y;
    drawIf();
 }
 
-setY = sety;
+yనియోగించు = yనియోగించు;
+yనియోగించు = yనియోగించు;
 
 
 /*******************************************************************************
- * కోణము -- set the కోణము of the turtle in degrees
+ * కోణము -- set the కోణము of the కుంచిక in degrees
  *
  * arguments:
  *   కోణము: (int) కోణము in degrees clockwise from the top center.
@@ -1025,7 +1037,7 @@ setY = sety;
  * returns: None
  ******************************************************************************/
 function కోణము(కోణము) {
-   turtle.కోణము = degToRad(కోణము);
+   కుంచిక.కోణము = degToRad(కోణము);
    drawIf();
 }
 
@@ -1038,17 +1050,17 @@ seth = కోణము;
  * background -- set the background రంగు
  *
  * arguments:
- *   styl: fill style (రంగు, gradient, or pattern), defaulting to turtle రంగు
+ *   styl: fill style (రంగు, gradient, or pattern), defaulting to కుంచిక రంగు
  *
  * returns: None
  ******************************************************************************/
 
 function background( styl) {
     if (styl == undefined) {
-       styl = turtle.రంగు;
+       styl = కుంచిక.రంగు;
     }
     if (typeof(styl) === "number") {
-      if (styl < 16) { // assume standard logo turtle రంగు
+      if (styl < 16) { // assume standard logo కుంచిక రంగు
         styl = logoColors [styl];
       } //else {
         //రంగు is assumed to be a 32-bit రంగు value
@@ -1064,46 +1076,46 @@ function background( styl) {
 
 
 /*******************************************************************************
- * write -- print some text along path of turtle, turtle does not move
- *
+ * write -- print some text along path of కుంచిక, కుంచిక does not move
+ * వ్రాయి 
  * arguments:
  *   msg: text to be printed
  *
  * returns: None
  ******************************************************************************/
-function write(msg) {
+function వ్రాయి(msg) {
    imageContext.save();
    centerCoords(imageContext);
-   imageContext.translate(turtle.pos.x, turtle.pos.y);
+   imageContext.translate(కుంచిక.pos.x, కుంచిక.pos.y);
    imageContext.transform(1, 0, 0, -1, 0, 0);
-   imageContext.rotate(turtle.కోణము - Math.PI/2);
+   imageContext.rotate(కుంచిక.కోణము - Math.PI/2);
    imageContext.textAlign = "left";
    imageContext.textBaseline = "bottom";
-   imageContext.fillStyle = turtle.రంగు;
+   imageContext.fillStyle = కుంచిక.రంగు;
    imageContext.fillText(msg, 0, 0);
    imageContext.restore();
    drawIf();
 }
-
+write = వ్రాయి;
 
 /*******************************************************************************
- * random -- generate a random integer between low (or 0 if unspecified) and high
- *
+ * యాదృచఛిక_సంఖ్య -- generate a యాదృచఛిక_సంఖ్య integer between low (or 0 if unspecified) and high
+ * యాదృచఛిక_సంఖ్య 
  * arguments:
- *   low: low limit of the random number (0, if only one parameter is used)
- *   high: high limit of the random number
+ *   low: low limit of the యాదృచఛిక_సంఖ్య number (0, if only one parameter is used)
+ *   high: high limit of the యాదృచఛిక_సంఖ్య number
  *
  * returns:
- *   (int) generated random number
+ *   (int) generated యాదృచఛిక_సంఖ్య number
  ******************************************************************************/
-function random(low, high) {
+function యాదృచఛిక_సంఖ్య(low, high) {
    if (high == undefined) {
      return Math.floor( (low + 1) * Math.random ());
    } else {
      return Math.floor(Math.random() * (high - low + 1) + low);
    }
 }
-
+random = యాదృచఛిక_సంఖ్య;
 
 /*******************************************************************************
  * ఆవర్తించు -- repeat an action n times
@@ -1167,7 +1179,7 @@ pause = sleep;
  * returns: None
  ******************************************************************************/
 function వెడల్పు(w) {
-   turtle.వెడల్పు = w;
+   కుంచిక.వెడల్పు = w;
    imageContext.lineWidth = w;
 }
 
@@ -1178,7 +1190,7 @@ penWidth = వెడల్పు;
 width = వెడల్పు;
 
 /*******************************************************************************
- * రంగు -- set the రంగు of the line and fill using turtle graphic and CSS colors
+ * రంగు -- set the రంగు of the line and fill using కుంచిక graphic and CSS colors
  *
  * arguments:
  *   col: రంగు in one of several formats:
@@ -1216,9 +1228,9 @@ logoColors = ["black", "blue", "lime", "cyan", "red", "magenta", "yellow", "whit
 function రంగు_మార్చు( col ) {
   svgClosePath();
   if (typeof(col) === "number") {
-    if (col < 16) { // assume standard logo turtle రంగు
+    if (col < 16) { // assume standard logo కుంచిక రంగు
       col = logoColors [col];
-      console.log( "col, logoColors [col] = ", col, logoColors [col] );
+      // console.log( "col, logoColors [col] = ", col, logoColors [col] );
     } //else {
       //రంగు is assumed to be a 32-bit రంగు value
     //}
@@ -1230,11 +1242,11 @@ function రంగు_మార్చు( col ) {
     // TODO(DSR) : uncomment this.
     // console.log( "col, idx = ", col, idx );
     if ( idx > 0 ) {
-      console.log( " రంగు = ", logoColors[idx] );
+      // console.log( " రంగు = ", logoColors[idx] );
       col = logoColors[idx];
     }  
   }
-  turtle.రంగు = col;
+  కుంచిక.రంగు = col;
   imageContext.strokeStyle = col;
 }
 
@@ -1256,7 +1268,7 @@ setcolor = రంగు_మార్చు;
  * returns: None
  ******************************************************************************/
 function అక్షరరూపము_స్థాపించు(font) {
-   turtle.font = font;
+   కుంచిక.font = font;
    imageContext.font = font;
 }
 
@@ -1356,14 +1368,14 @@ animate = ఆడించు;
 
 /*******************************************************************************
  * delay -- delay an action for ms milliseconds to animate drawing
- *
+ * విలంబించు 
  * arguments:
  *   f: a reference to a function
  *   ms: number of milliseconds of delay before executing function f
  *
  * returns: None
  ******************************************************************************/
-function delay(f, ms) {
+function విలంబించు(f, ms) {
    timeouts.push (setTimeout(function () {
        timeouts.pop(); // pop the current timer
        if (timeouts.length == 0) {
@@ -1375,7 +1387,7 @@ function delay(f, ms) {
      }, ms));
    document.getElementById("stopButton").hidden=false;
 }
-
+delay = విలంబించు;
 
 ///////SUPPORT FUNCTIONS
 
@@ -1431,58 +1443,58 @@ function గాడిలో_పెట్టు(n, low, high) {
 }
 constrain = గాడిలో_పెట్టు;
 
-var turtleState = new Turtle();
+var కుంచికState = new Turtle();
 
 function saveTurtleState(tState) {
-  // tState is an object defining the state of a turtle
-  // turtle is an object defining the current state of the turtle
+  // tState is an object defining the state of a కుంచిక
+  // కుంచిక is an object defining the current state of the కుంచిక
   //what about the font
-  tState.pos.x = turtle.pos.x
-  tState.pos.y = turtle.pos.y
-  tState.కోణము = turtle.కోణము
-  tState.penDown = turtle.penDown
-  tState.వెడల్పు = turtle.వెడల్పు
-  tState.visible = turtle.visible
-  tState.redraw = turtle.redraw
-  tState.shape = turtle.shape
-  tState.wrap = turtle.wrap
-  tState.font = turtle.font
-  tState.రంగు = turtle.రంగు
+  tState.pos.x = కుంచిక.pos.x
+  tState.pos.y = కుంచిక.pos.y
+  tState.కోణము = కుంచిక.కోణము
+  tState.penDown = కుంచిక.penDown
+  tState.వెడల్పు = కుంచిక.వెడల్పు
+  tState.visible = కుంచిక.visible
+  tState.redraw = కుంచిక.redraw
+  tState.ఆకారాము = కుంచిక.ఆకారాము
+  tState.wrap = కుంచిక.wrap
+  tState.font = కుంచిక.font
+  tState.రంగు = కుంచిక.రంగు
   console.log("sTS font: "+ tState.font + " రంగు:" + tState.రంగు)
 }
 
 
 function restoreTurtleState(tState) {
-  // tState is an object defining the state of a turtle
-  // turtle is an object defining the current state of the turtle
+  // tState is an object defining the state of a కుంచిక
+  // కుంచిక is an object defining the current state of the కుంచిక
   //what about the font
-  turtle.pos.x = tState.pos.x
-  turtle.pos.y = tState.pos.y
-  turtle.కోణము = tState.కోణము
-  turtle.penDown = tState.penDown
-  turtle.వెడల్పు = tState.వెడల్పు
-  turtle.visible = tState.visible
-  turtle.redraw = tState.redraw
-  turtle.shape = tState.shape
-  turtle.wrap = tState.wrap
-  turtle.font = tState.font
-  turtle.రంగు = tState.రంగు
+  కుంచిక.pos.x = tState.pos.x
+  కుంచిక.pos.y = tState.pos.y
+  కుంచిక.కోణము = tState.కోణము
+  కుంచిక.penDown = tState.penDown
+  కుంచిక.వెడల్పు = tState.వెడల్పు
+  కుంచిక.visible = tState.visible
+  కుంచిక.redraw = tState.redraw
+  కుంచిక.ఆకారాము = tState.ఆకారాము
+  కుంచిక.wrap = tState.wrap
+  కుంచిక.font = tState.font
+  కుంచిక.రంగు = tState.రంగు
 
   imageContext.font = tState.font;
   imageContext.lineWidth = tState.వెడల్పు;
   imageContext.strokeStyle = tState.రంగు;
-  console.log("rTS font: "+ turtle.font + " రంగు:" + turtle.రంగు)
+  console.log("rTS font: "+ కుంచిక.font + " రంగు:" + కుంచిక.రంగు)
   console.log("rTS font: "+ imageContext.font + " రంగు:" + imageContext.strokeStyle)
 }
 
 
 function logTurtle( where) {
-  // t is an object defining the state of a turtle
+  // t is an object defining the state of a కుంచిక
   if (where === undefined) where = "???"
-  console.log (where + " x:" + turtle.pos.x + " y:" + turtle.pos.y + " కోణము:" + turtle.కోణము + " రంగు:" + turtle.రంగు)
-  console.log ("  penDown:" + turtle.penDown + " వెడల్పు:" + turtle.వెడల్పు + " visible:" + turtle.visible)
-  console.log ("  redraw:" + turtle.redraw + " shape:" + turtle.shape + " wrap:" + turtle.wrap)
-  console.log ("  font:" + turtle.font)
+  console.log (where + " x:" + కుంచిక.pos.x + " y:" + కుంచిక.pos.y + " కోణము:" + కుంచిక.కోణము + " రంగు:" + కుంచిక.రంగు)
+  console.log ("  penDown:" + కుంచిక.penDown + " వెడల్పు:" + కుంచిక.వెడల్పు + " visible:" + కుంచిక.visible)
+  console.log ("  redraw:" + కుంచిక.redraw + " shape:" + కుంచిక.ఆకారాము + " wrap:" + కుంచిక.wrap)
+  console.log ("  font:" + కుంచిక.font)
 }
 
 

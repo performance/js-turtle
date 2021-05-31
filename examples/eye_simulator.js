@@ -532,13 +532,13 @@ function loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {
 
 function caption (message) {
     // save your current position, heading, etc.
-    var savedX = turtle.pos.x
-    var savedY = turtle.pos.y
-    var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-    var savedColor = turtle.రంగు
-    var savedWidth = turtle.వెడల్పు
+    var savedX = కుంచిక.pos.x
+    var savedY = కుంచిక.pos.y
+    var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+    var savedColor = కుంచిక.రంగు
+    var savedWidth = కుంచిక.వెడల్పు
 
-    goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+    స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
     దిశ_మార్చు( 90)
 
     // erase what will be in the path
@@ -546,12 +546,12 @@ function caption (message) {
     రంగు_మార్చు( తెలుపు )
     వెడల్పు(22)
     ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-    goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+    స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
     రంగు_మార్చు("నలుపు")
-    write( message)
+    వ్రాయి( message)
 
     //go back from whence you came
-    goto( savedX, savedY)
+    స్థానము_మార్చు( savedX, savedY)
     దిశ_మార్చు( savedHeading)
     రంగు_మార్చు( savedColor)
     వెడల్పు(savedWidth)
@@ -975,9 +975,9 @@ console.log("dE1:",eyeOpening, browType, irisType, pupilType, ix, iy, baseCaptio
              if ( c >= columns/2) {
                  offset = eyeGap
              }
-             goto ( columnMid - (c + offset)* columnSize, rowMid - r * rowSize)
+             స్థానము_మార్చు( columnMid - (c + offset)* columnSize, rowMid - r * rowSize)
              రంగు_మార్చు( coloredGrid [r * columns + c])
-             dot( dotSize)
+             నిండు_వృత్తము( dotSize)
         }
     }
     caption( baseCaption)
@@ -991,7 +991,7 @@ function executeCommand () {
     //while ( !commandCheck ( currentTime)) {}
     commandCheck ( currentTime)
 
-    delay( executeCommand, 10) // there can be multiple timers running
+    విలంబించు( executeCommand, 10) // there can be multiple timers running
                                // so this delay should be fairly short
 }
 
@@ -1003,5 +1003,5 @@ function demo() {
     commandSequence = simulatorCommands
     currentCommand = 0
     subCommand = 0
-    delay( executeCommand, 10)
+    విలంబించు( executeCommand, 10)
 }

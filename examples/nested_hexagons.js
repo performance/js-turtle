@@ -2,7 +2,7 @@
 
 // draw a polygon of n sides of length m
 function polygon(sides,side) {
-  repeat(sides, function () {
+  ఆవర్తించు(sides, function () {
     ముందుకు_జరుగు(side);
     కుడి_వైపు_తిరుగు(360/sides);
   });
@@ -18,7 +18,7 @@ function demo() {
    ఆది_స్థితి();
    కుంచికను_దాచు();
    for(step=1; step < steps; step=step+1) {
-      రంగు_మార్చు(random(16));
+      రంగు_మార్చు(యాదృచఛిక_సంఖ్య(16));
       polygon(6,step*10);
       కలమును_పైకి_ఎత్తు();
       ఎడమ_వైపు_తిరుగు(120)

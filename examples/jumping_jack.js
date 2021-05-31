@@ -5,7 +5,7 @@ This example shows a couple of concepts.
 One is the use of variables. The stick man is created based on proprotions of its
 height. Changing the height variable changes the size of the other body parts.
 
-Drawing of the body parts is done so that the turtle is returned to its starting point.
+Drawing of the body parts is done so that the కుంచిక is returned to its starting point.
 This allows the body parts to be drawn in any order or for the center of the stick man
 to be moved. Each body part is draw with a function (also called a sub-routine) to
 make the problem easier to understand.
@@ -47,7 +47,7 @@ n = 0 or n = 4; So when n is zero, n should be increased by one to get to 1. Whe
 4, n should be decreased by one (add a negative one) to get to 3. Using a direction
 variable allows the moveBody() function to remember what direction it is moving.
 
-Successive calls to moveBody() are controlled by the delay() function. This function is set
+Successive calls to moveBody() are controlled by the విలంబించు() function. This function is set
 to repeat in 100 ms. You could change the time to make it faster or slower.
 
 */
@@ -65,16 +65,16 @@ var legLength;
 /*
   The body parts are drawn with the following asumptions
   - the center of figure is the center of torso
-  - the turtle is returned to the center of the figure
-  - the turtle is pointed up 
-  - the pen of the turtle is up
+  - the కుంచిక is returned to the center of the figure
+  - the కుంచిక is pointed up 
+  - the pen of the కుంచిక is up
 */
 
 
 function drawHead() {
   ముందుకు_జరుగు(torsoLength/2 + neckLength + headDiameter/2); 
   కలమును_కింద_పెట్టు();
-  circle (headDiameter/2); //draw head
+  వృత్తము(headDiameter/2); //draw head
   కలమును_పైకి_ఎత్తు();
   కుడి_వైపు_తిరుగు(180);
   ముందుకు_జరుగు(torsoLength/2 + neckLength + headDiameter/2); 
@@ -176,7 +176,7 @@ function moveBody () {
   if (n>=4 || n<=0) {
     direction = -direction;
   }
-  delay(moveBody,100);
+  విలంబించు(moveBody,100);
 }
 
 

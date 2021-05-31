@@ -20,27 +20,27 @@ var root2 = Math.sqrt(2)
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = turtle.pos.x
-  var savedY = turtle.pos.y
-  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.రంగు
-  var savedWidth = turtle.వెడల్పు
+  var savedX = కుంచిక.pos.x
+  var savedY = కుంచిక.pos.y
+  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  var savedColor = కుంచిక.రంగు
+  var savedWidth = కుంచిక.వెడల్పు
 
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
 
   // erase what will be in the path
   రంగు_మార్చు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
   రంగు_మార్చు("నలుపు")
 
   అక్షరరూపము_స్థాపించు( "bold 12px Helvitica,sans-serif")
-  write( message)
+  వ్రాయి( message)
 
   //go back from whence you came
-  goto( savedX, savedY)
+  స్థానము_మార్చు( savedX, savedY)
   దిశ_మార్చు( savedHeading)
   రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
@@ -76,7 +76,7 @@ function Y (side, gen) {
 function delayedDragon () {
   ఆది_స్థితి()
   కుంచికను_దాచు()
-  goto (-side * .4, +side *.2)
+  స్థానము_మార్చు(-side * .4, +side *.2)
   దిశ_మార్చు(90+ gen * 45)
   కలమును_కింద_పెట్టు()
   X (side, gen)
@@ -87,7 +87,7 @@ function delayedDragon () {
   } else {
     gen = 0
   }
-  delay( delayedDragon, 3000)
+  విలంబించు( delayedDragon, 3000)
 }  
     
 

@@ -17,7 +17,7 @@ function kochLine (length, order) {
 }
 
 
-function kochLineDelay() {
+function kochLineవిలంబించు() {
 ;
   చెరిపి_వేయి();
   var side = గరిష్ఠY() - కనిష్ఠY();
@@ -26,13 +26,13 @@ function kochLineDelay() {
   }
   కోణము(90)
   side = .9 * side
-  goto (-side/2, -1/4 * side)
+  స్థానము_మార్చు(-side/2, -1/4 * side)
   kochLine (side, i);
-  goto(కనిష్ఠX(),కనిష్ఠY());
+  స్థానము_మార్చు(కనిష్ఠX(),కనిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("bold 12pt Ariel,san-serif")
-  write ("Koch line of order " +i);
-  draw();
+  వ్రాయి("Koch line of order " +i);
+  చిత్రీకరించు();
   i = i + 1;
   if (i < steps) {
     delay (kochLineDelay, 2000);
@@ -46,5 +46,5 @@ function demo() {
   span = 240;
   i = 0;
 
-  kochLineDelay();
+  kochLineవిలంబించు();
 }

@@ -12,26 +12,26 @@ var gen = 0
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = turtle.pos.x
-  var savedY = turtle.pos.y
-  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.రంగు
-  var savedWidth = turtle.వెడల్పు
+  var savedX = కుంచిక.pos.x
+  var savedY = కుంచిక.pos.y
+  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  var savedColor = కుంచిక.రంగు
+  var savedWidth = కుంచిక.వెడల్పు
 
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
 
   // erase wha will be in the path
   రంగు_మార్చు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
   రంగు_మార్చు("నలుపు")
   అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")
-  write( message)
+  వ్రాయి( message)
 
   //go back from whence you came
-  goto( savedX, savedY)
+  స్థానము_మార్చు( savedX, savedY)
   దిశ_మార్చు( savedHeading)
   రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
@@ -63,7 +63,7 @@ function A (side,gen) {
   }
 }
 //  B → + A F − B F B − F A +
-//Here, "F" means "draw forward", "−" means "turn left 90°", "+" means "turn right 90°" (see turtle graphics), and "A" and "B" are ignored during drawing.
+//Here, "F" means "draw forward", "−" means "turn left 90°", "+" means "turn right 90°" (see కుంచిక graphics), and "A" and "B" are ignored during drawing.
 
 function B (side,gen) {
   if (gen === 0) {
@@ -93,7 +93,7 @@ function B (side,gen) {
 
 function delayedHilbert () {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
 
   // targeting 80% of window
   size = .80 * Math.min( గరిష్ఠX(),గరిష్ఠY())*2
@@ -107,7 +107,7 @@ function delayedHilbert () {
   for (i=1; i<=gen; i++)
     overallSides = 2*overallSides + 1
   side = size/overallSides
-  goto( overallSides/2*side,-overallSides/2*side)
+  స్థానము_మార్చు( overallSides/2*side,-overallSides/2*side)
   A (side, gen)
   caption( "Hilbert curve, generation " + gen)
 
@@ -116,7 +116,7 @@ function delayedHilbert () {
   } else {
     gen = 0
   }
-  delay( delayedHilbert, 3000)
+  విలంబించు( delayedHilbert, 3000)
 }
 
 

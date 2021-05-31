@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################
-# script to add examples as options to select in turtle.html file
+# script to add examples as options to select in కుంచిక.html file
 #
 # usage:
 #   modifyHTML.sh directory
@@ -22,14 +22,14 @@ for FILE_NAME in `ls $DIRECTORY` ; do
 	echo "$FILE_NAME" | sed -Ee "s/(.*)\.js/          <option value=\"\1\"><\/option>/" -e "s/></>$OPTION_NAME</" >>tmp
 done
 
-# add the new options to the turtle.html file
-BACKUP_FILE=backups/turtle.html.`date "+%Y-%m-%d.%H.%M.%S"`
-cp -f turtle.html $BACKUP_FILE
+# add the new options to the కుంచిక.html file
+BACKUP_FILE=backups/కుంచిక.html.`date "+%Y-%m-%d.%H.%M.%S"`
+cp -f కుంచిక.html $BACKUP_FILE
 (
 	sed -n -e "1,/<select id=examples>/p" <$BACKUP_FILE
 	cat tmp
 	sed -n -e "/<\/select>/,\$p" <$BACKUP_FILE
-) > turtle.html
+) > కుంచిక.html
 
 # clean up
 rm -f tmp 

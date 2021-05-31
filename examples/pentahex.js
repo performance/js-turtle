@@ -41,28 +41,28 @@ function shape( bx, by, axis, turns, fillColor ) {
   // draw a shape at board position bx, by, with the piece oriented
   // on one of six axises. The shape consists of an array of turns.
   కలమును_పైకి_ఎత్తు()
-  goto( baseX, baseY)
+  స్థానము_మార్చు( baseX, baseY)
   కోణము(0)
   ముందుకు_జరుగు( 2* by * side * Math.cos(degToRad(30)))
   కుడి_వైపు_తిరుగు(60)
   ముందుకు_జరుగు( 2* bx * side * Math.cos(degToRad(30)))
   కలమును_పైకి_ఎత్తు()
-  dot()  //center of start cell
+  నిండు_వృత్తము()  //center of start cell
   కోణము(60 * axis )
   ఎడమ_వైపు_తిరుగు( 180 - 30)
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు(120) 
   కలమును_కింద_పెట్టు()
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (j=0; j< turns.length; j++) {
     turns[j]()
   }
-  fillShape( fillColor)
+  ఆకారాము_ముగించు( fillColor)
   కలమును_పైకి_ఎత్తు()
 
   ఎడమ_వైపు_తిరుగు( 60)
   ముందుకు_జరుగు(side)
-  dot()
+  నిండు_వృత్తము()
   వెనుకకు_జరుగు(side)
   కుడి_వైపు_తిరుగు( 60)
 
@@ -104,7 +104,7 @@ function drawAll() {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   కుంచికను_దాచు()
 
   side =   Math.min( 2*గరిష్ఠX()/ 12/ 1.5, 2*గరిష్ఠY()/ 16/ Math.sqrt(3))

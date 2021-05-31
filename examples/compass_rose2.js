@@ -1,15 +1,15 @@
 // Compass Rose 2 -- draws compass rose.
 
 function compassRose (x, y, n, outerRadius, innerRadius) {
-  goto (x, y);
-  circle (outerRadius); //outer circle
-  circle (innerRadius);
+  స్థానము_మార్చు(x, y);
+  వృత్తము(outerRadius); //outer circle
+  వృత్తము(innerRadius);
 
   angleA= Math.atan((innerRadius* Math.sin(Math.PI/4))/(outerRadius-innerRadius* Math.cos(Math.PI/4))) //radians
   side1= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/4))
   side2= side1/Math.cos(angleA)
   for (i=0; i<4; i++) {
-    goto (x, y);
+    స్థానము_మార్చు(x, y);
     కోణము (i/4 * 360);
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( innerRadius)
@@ -26,7 +26,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   r3= side3/Math.cos(angleA)
   console.log( "side3:"+side3 + " r3: " + r3)
   for (i=0; i<4; i++) {
-    goto (x, y);
+    స్థానము_మార్చు(x, y);
     కోణము (45 + i/4 * 360);
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( innerRadius)
@@ -45,7 +45,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   r4= side4/Math.cos(angleA)
   console.log( "side4:"+side4 + " r4: " + r4)
   for (i=0; i<8; i++) {
-    goto (x, y);
+    స్థానము_మార్చు(x, y);
     కోణము (22.5 + i/8 * 360);
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు(outerRadius);
@@ -60,7 +60,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   r5 = .1 * outerRadius
   base = 2* r5* Math.sin(angleA)
   for (i=0; i<16; i++) {
-    goto (x, y);
+    స్థానము_మార్చు(x, y);
     కోణము (11.25 + i/16 * 360);
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు(outerRadius);
@@ -80,6 +80,6 @@ function demo () {
   ఆది_స్థితి();
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
   కుంచికను_దాచు();
-  //రంగు_మార్చు( random(16));
+  //రంగు_మార్చు( యాదృచఛిక_సంఖ్య(16));
   compassRose( 0, 0, 16, size, .2*size);
 }

@@ -83,19 +83,19 @@ var vHumber; // number of tiles vertically
 
 function drawTriangle (fill) {
   // draw triangle in place
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు( side)
   కుడి_వైపు_తిరుగు( 135)
   ముందుకు_జరుగు( side/Math.sqrt(2))
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( side/Math.sqrt(2))
-  fillShape( fill)
+  ఆకారాము_ముగించు( fill)
   కుడి_వైపు_తిరుగు( 135)
 }
 
 
 function drawTile (x, y, tile) {
-  goto(x,y)
+  స్థానము_మార్చు(x,y)
   కోణము(90)
   drawTriangle( COLORS[ TILES[tile][N]])
   ముందుకు_జరుగు( side)
@@ -253,10 +253,10 @@ class Tile {
   plotBlank() {
     console.log("plotblank", this.tx, this.ty)
     రంగు_మార్చు( "white")
-    goto( కనిష్ఠX()+margin + this.tx * side * 1,
+    స్థానము_మార్చు( కనిష్ఠX()+margin + this.tx * side * 1,
           గరిష్ఠY()-margin - this.ty * side * 1)
     కోణము(90)
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
     ముందుకు_జరుగు( side)
@@ -265,7 +265,7 @@ class Tile {
     కుడి_వైపు_తిరుగు( 90)
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
-    fillShape("lightblue")
+    ఆకారాము_ముగించు("lightblue")
     రంగు_మార్చు("నలుపు")
   }
 }
@@ -278,7 +278,7 @@ function delayedBuild () {
     if( (currentTile.tx != hNumber-1) ||
         (currentTile.ty != vNumber-1)) {
       currentTile = currentTile.next
-      delay( delayedBuild, 0)
+      విలంబించు( delayedBuild, 0)
     }
   }
 }
@@ -298,7 +298,7 @@ function demo () {
   var prev = undefined
   for (var r=0; r< vNumber; r++) {
     tiles.push([]) //append row  
-    //write (tiles[0]) 
+    //వ్రాయి(tiles[0]) 
     for (var c=0; c< hNumber; c++) {
       var tile = new Tile (c, r, prev)
       tiles[r].push(tile) //append tile

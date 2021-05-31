@@ -3,7 +3,7 @@
 <head>
    <title>Turtle Graphics</title>
    <meta charset="utf-8">
-   <link type="text/css" rel="stylesheet" href="turtle.css" />
+   <link type="text/css" rel="stylesheet" href="కుంచిక.css" />
    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
 </head>
 <!--body onresize="resizeColumns();"> -->
@@ -46,7 +46,7 @@ also roll in the tutorial stuff
          <li>
            ముందుకు_జరుగు(<em>distance</em>)
            <p>
-             Move the turtle forward <em>distance</em> pixels.
+             Move the కుంచిక forward <em>distance</em> pixels.
            </p>
            <p>
              Example: <code>ముందుకు_జరుగు(10)</code>
@@ -55,7 +55,7 @@ also roll in the tutorial stuff
          <li>
            వెనుకకు_జరుగు(<em>distance</em>) | back(<em>distance</em>) | bk(<em>distance</em>)
            <p>
-             Move the turtle backward <em>distance</em> pixels, but leave
+             Move the కుంచిక backward <em>distance</em> pixels, but leave
              it pointing forward.
            </p>
            <p>
@@ -65,7 +65,7 @@ also roll in the tutorial stuff
          <li>
            కుడి_వైపు_తిరుగు(<em>కోణము</em>) | rt(<em>కోణము</em>) | turn(<em>కోణము</em>)
            <p>
-             Turn the turtle to the right <em>కోణము</em> degrees.
+             Turn the కుంచిక to the right <em>కోణము</em> degrees.
            </p>
            <p>
              Example: <code>కుడి_వైపు_తిరుగు(90)</code>
@@ -74,7 +74,7 @@ also roll in the tutorial stuff
          <li>
            ఎడమ_వైపు_తిరుగు(<em>కోణము</em>)
            <p>
-             Turn the turtle to the left <em>కోణము</em> degrees.
+             Turn the కుంచిక to the left <em>కోణము</em> degrees.
            </p>
            <p>
              Example: <code>ఎడమ_వైపు_తిరుగు(90)</code>
@@ -83,7 +83,7 @@ also roll in the tutorial stuff
          <li>
            కలమును_పైకి_ఎత్తు()
            <p>
-              Lift the pen in the turtle so that it does not leave a mark as
+              Lift the pen in the కుంచిక so that it does not leave a mark as
               it moves.
            </p>
            <p>
@@ -93,7 +93,7 @@ also roll in the tutorial stuff
          <li>
            కలమును_కింద_పెట్టు() | down() | pd()
            <p>
-             Lower the pen in the turtle so that it leaves a mark as
+             Lower the pen in the కుంచిక so that it leaves a mark as
              it moves.
            </p>
            <p>
@@ -103,7 +103,7 @@ also roll in the tutorial stuff
          <li>
            కుంచికను_దాచు() | ht()
            <p>
-             Hide the turtle. It can still draw, but it isn't shown.
+             Hide the కుంచిక. It can still draw, but it isn't shown.
            </p>
            <p>
              Example: <code>కుంచికను_దాచు()</code>
@@ -112,26 +112,26 @@ also roll in the tutorial stuff
          <li>
            కుంచికను_చూపు() | st()
            <p>
-             Show the turtle.
+             Show the కుంచిక.
            </p>
            <p>
              Example: <code>కుంచికను_చూపు()</code>
            </p>
          </li>
          <li>
-           home()
+           కేంద్రకమునకు_వెళ్ళు()
            <p>
-             Move the turtle to its home in the center
+             Move the కుంచిక to its home in the center
              (x=0, y=0) and pointing toward the top (కోణము=0).
            </p>
            <p>
-             Example: <code>home()</code>
+             Example: <code>కేంద్రకమునకు_వెళ్ళు()</code>
            </p>
          </li>
          <li>
            చెరిపి_వేయి()
            <p>
-             Clear the graphics area, but leave the turtle where it is.
+             Clear the graphics area, but leave the కుంచిక where it is.
            </p>
            <p>
              Example: <code>చెరిపి_వేయి()</code>
@@ -140,7 +140,7 @@ also roll in the tutorial stuff
          <li>
            ఆది_స్థితి()
            <p>
-             Clear the graphics area and move the turtle to its home in the center
+             Clear the graphics area and move the కుంచిక to its home in the center
              (x=0, y=0) and pointing toward the top (కోణము=0).
            </p>
            <p>
@@ -148,43 +148,43 @@ also roll in the tutorial stuff
            </p>
          </li>
          <li>
-           goto(<em>x</em>,<em>y</em>) | setposition(<em>x</em>,<em>y</em>) | setPosition(<em>x</em>,<em>y</em>) | setpos(<em>x</em>,<em>y</em>) | setPos(<em>x</em>,<em>y</em>)
+           స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>)
            <p>
-             Move the turtle to the coordinates <em>x</em> pixels to the
+             Move the కుంచిక to the coordinates <em>x</em> pixels to the
              right of the center of the drawing area (or <em>-x</em> pixels to the
              left of the center) and <em>y</em> pixels above the center of the drawing
              area (or <em>-y</em> to below the center). This does not draw on the way.
            </p>
            <p>
-             Example: <code>goto (20,10)</code>
+             Example: <code>స్థానము_మార్చు(20,10)</code>
            </p>
          </li>
          <li>
-           setx(<em>x</em>) | setX(<em>x</em>)
+           xనియోగించు(<em>x</em>) | xనియోగించు(<em>x</em>)
            <p>
-             Move the turtle horizontally to the coordinates <em>x</em> pixels to the
+             Move the కుంచిక horizontally to the coordinates <em>x</em> pixels to the
              right of the center of the drawing area (or <em>-x</em> pixels to the
              left of the center).
            </p>
            <p>
-             Example: <code>setx (0)</code>
+             Example: <code>xనియోగించు (0)</code>
            </p>
          </li>
          <li>
-           sety(<em>y</em>) | setY(<em>y</em>)
+           yనియోగించు(<em>y</em>) | yనియోగించు(<em>y</em>)
            <p>
-             Move the turtle vertically to the coordinates <em>y</em> pixels above
+             Move the కుంచిక vertically to the coordinates <em>y</em> pixels above
              the center of the drawing area (or <em>-y</em> to below the center).
              This does not draw on the way.
            </p>
            <p>
-             Example: <code>sety (0)</code>
+             Example: <code>yనియోగించు (0)</code>
            </p>
          </li>
          <li>
            కోణము(<em>కోణము</em>) | దిశ_మార్చు(<em>కోణము</em>) | seth(<em>కోణము</em>)
            <p>
-             Turn the turtle to to the absolute <em>కోణము</em> relative to top
+             Turn the కుంచిక to to the absolute <em>కోణము</em> relative to top
              of the graphic area. <em>0</em> is the top, <em>0</em> is toward the top,
              <em>90</em> is toward the right, <em>180</em> is toward the bottom, and
              <em>270</em> <em>-90</em> is toward the left.
@@ -196,7 +196,7 @@ also roll in the tutorial stuff
          <li>
            వెడల్పు(<em>width</em>) | pensize(<em>width</em>) | penSize(<em>width</em>) | వెడల్పు(<em>width</em>) | వెడల్పు(<em>width</em>) | 
            <p>
-             Change the <em>width</em> of the turtle pen (in pixels).
+             Change the <em>width</em> of the కుంచిక pen (in pixels).
            </p>
            <p>
              Example: <code>వెడల్పు(5);</code>
@@ -208,8 +208,8 @@ also roll in the tutorial stuff
 -->
            రంగు_మార్చు(<em>colorcode</em>)
            <p>
-             Change the color of the turtle pen. The <em>colorcode</em> may be a number
-             from 0 to 15 representing the standard turtle graphics colors.
+             Change the color of the కుంచిక pen. The <em>colorcode</em> may be a number
+             from 0 to 15 representing the standard కుంచిక graphics colors.
              <br/>
              <button id="నలుపు">0 నలుపు</button>
              <button id="నీలము">1 నీలము</button>
@@ -294,15 +294,15 @@ also roll in the tutorial stuff
            </p>
          </li>
          <li>
-           write(<em>string</em>)
+           వ్రాయి(<em>string</em>)
            <p>
              Places the text in the <em>string</em>along the projected path of
-             the turtle. The <em>string</em> may be a set of characters enclosed by
+             the కుంచిక. The <em>string</em> may be a set of characters enclosed by
              single or double quotation marks. The <em>string</em> may also be a value
              returned by a function.
            </p>
            <p>
-             Example: <code>write("Hello World")</code>
+             Example: <code>వ్రాయి("Hello World")</code>
            </p>
          </li>
          <li>
@@ -316,39 +316,39 @@ also roll in the tutorial stuff
            </p>
          </li>
          <li>
-           curveright (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | curveRight (<em>వ్యాసార్థము</em>[,<em>extent</em>])
+           కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
            <p>
-             Draw a circular curve from the turtle's postion. The
-             center of the curve is to the right of the turtle at a perpendicular
-             distance of <em>వ్యాసార్థము</em> pixels. The curve is a full circle unless
+             Draw a circular curve from the కుంచిక's postion. The
+             center of the curve is to the right of the కుంచిక at a perpendicular
+             distance of <em>వ్యాసార్థము</em> pixels. The curve is a full వృత్తము unless
              <em>extent</em> is provided to limit the number of degrees of arc.
            </p>
            <p>
-             Example: <code>curveRight(30)</code>
+             Example: <code>కుడివైపు_చాపాము(30)</code>
            </p>
            <p>
-             Example: <code>curveRight(10,45)</code>
+             Example: <code>కుడివైపు_చాపాము(10,45)</code>
            </p>
          </li>
          <li>
-           curveleft (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | curveLeft (<em>వ్యాసార్థము</em>[,<em>extent</em>])
+           ఎడమవైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | ఎడమవైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
            <p>
-             Draw a circular curve from the turtle's postion. The
-             center of the curve is to the left of the turtle at a perpendicular
-             distance of <em>వ్యాసార్థము</em> pixels. The curve is a full circle unless
+             Draw a circular curve from the కుంచిక's postion. The
+             center of the curve is to the left of the కుంచిక at a perpendicular
+             distance of <em>వ్యాసార్థము</em> pixels. The curve is a full వృత్తము unless
              <em>extent</em> is provided to limit the number of degrees of arc.
            </p>
            <p>
-             Example: <code>curveLeft(20)</code>
+             Example: <code>ఎడమవైపు_చాపాము(20)</code>
            </p>
            <p>
-             Example: <code>curveLeft(10,45)</code>
+             Example: <code>ఎడమవైపు_చాపాము(10,45)</code>
            </p>
          </li>
          <li>
-           circle (<em>వ్యాసార్థము</em>[[,(<em>extent</em>],(<em>CCW</em>])
+           వృత్తము(<em>వ్యాసార్థము</em>[[,(<em>extent</em>],(<em>CCW</em>])
            <p>
-             Draw a circle or arc centered on the turtle's postion.  A full circle
+             Draw a వృత్తము or arc centered on the కుంచిక's postion.  A full circle
              is drawn unless <em>extent</em> is provided to limit the number of
              degrees of arc. The arc is drawn clockwise unless a boolean <em>CCW</em>
              is supplied and has a value of <em>false</em>.
@@ -364,101 +364,101 @@ also roll in the tutorial stuff
            </p>
          </li>
          <li>
-           dot ([<em>వ్యాసార్థము</em>])
+           నిండు_వృత్తము([<em>వ్యాసార్థము</em>])
            <p>
 // వ్యాసార్థము in pixels (if none, max of pensize+4, 2*pensize)
-             Draw a filled circle centered on the turtle's postion.
-             The circle is drawn with a వ్యాసార్థము of <em>వ్యాసార్థము</em>) pixels. If
+             Draw a filled వృత్తము centered on the కుంచిక's postion.
+             The వృత్తము is drawn with a వ్యాసార్థము of <em>వ్యాసార్థము</em>) pixels. If
              <em>వ్యాసార్థము</em>) is not specified, it defaults to the larger of
              width plus 4 or twice the pensize). 
            </p>
            <p>
-             Example: <code>dot()</code>
+             Example: <code>నిండు_వృత్తము()</code>
            </p>
            <p>
-             Example: <code>dot(10)</code>
+             Example: <code>నిండు_వృత్తము(10)</code>
            </p>
          </li>
          <li>
-           beginshape() | beginShape()
+           ఆకారాము_ప్రారంభించు() | ఆకారాము_ప్రారంభించు()
            <p>
               Marks the begining of a shape to be filled. The shape consists of a
-              set of line segments (forward, backward, right, left, curveright, curveleft).
+              set of line segments (forward, backward, right, left, కుడివైపు_చాపాము, ఎడమవైపు_చాపాము).
               The set should be continuous and begin and end at the same point.
            </p>
            <p>
-             Example: <code>beginShape()</code>
+             Example: <code>ఆకారాము_ప్రారంభించు()</code>
            </p>
          </li>
          <li>
-           fillShape([styl])
+           ఆకారాము_ముగించు([styl])
            <p>
-              Fills the shape begun with the last beginShape() directive.
+              Fills the shape begun with the last ఆకారాము_ప్రారంభించు() directive.
               The shape is filled with <em>styl</em>, which may be a logo color number,
               a normal HTML color definition (see color above), a gradient or
-              a pattern. This defaults to the turtle color.
+              a pattern. This defaults to the కుంచిక color.
            </p>
            <p>
-             Example: <code>fillShape("blue")</code>
+             Example: <code>ఆకారాము_ముగించు("blue")</code>
            </p>
          </li>
          <li>
-           n = random([<em>low,</em>]<em>high</em>)
+           n = యాదృచఛిక_సంఖ్య([<em>low,</em>]<em>high</em>)
            <p>
              Pick a random number between <em>low</em> and <em>high</em> -1.
              If only one value <em>high</em> is provided, pick a number between 0 and
              <em>high</em> -1.
            </p>
            <p>
-             Example: <code>write(random(1,7)+ " ")</code>
+             Example: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(1,7)+ " ")</code>
            </p>
            <p>
-             Example: <code>write(random(6)+ " ")</code>
+             Example: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(6)+ " ")</code>
            </p>
          </li>
          <li>
-           repeat(<em>n</em>, <em>action</em>)
+           ఆవర్తించు(<em>n</em>, <em>action</em>)
            <p>
              Allows a function <em>action</em> or group of actions to be repeated
              <em>n</em> times.
            </p>
            <p>
-             Example: <code>repeat (4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
+             Example: <code>ఆవర్తించు(4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
            </p>
            <p>
-             Example: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; repeat (4, el)</code>
+             Example: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; ఆవర్తించు(4, el)</code>
            </p>
          </li>
          <li>
-           wrap(<em>bool</em>)
+            చుట్టు(<em>bool</em>)
            <p>
              Turns wrapping on and off at the edges of the graphic area by setting it
              <em>true</em> or <em>false</em> respecitively.
            </p>
            <p>
-             Example: <code>wrap(true)</code>
+             Example: <code> చుట్టు(true)</code>
            </p>
            <p>
-             Example: <code>wrap(false)</code>
+             Example: <code> చుట్టు(false)</code>
            </p>
          </li>
          <li>
-           animate(<em>action</em>,<em>ms</em>)
+           ఆడించు(<em>action</em>,<em>ms</em>)
            <p>
              Evalutes <em>action</em> every <em>ms</em> milliseconds.
            </p>
            <p>
-             Example: <code>animate ("ముందుకు_జరుగు(10)",100)</code>
+             Example: <code>ఆడించు("ముందుకు_జరుగు(10)",100)</code>
            </p>
            <p>
-             Example: <code>animate ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
+             Example: <code>ఆడించు("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
            </p>
            <p>
-             Example: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; animate (el,100)</code>
+             Example: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; ఆడించు(el,100)</code>
            </p>
          </li>
          <li>
-           delay(<em>action</em>,<em>ms</em>)
+           విలంబించు(<em>action</em>,<em>ms</em>)
            <p>
              Evalutes <em>action</em> after a delay of <em>ms</em> milliseconds.
            </p>
@@ -473,27 +473,27 @@ also roll in the tutorial stuff
            </p>
          </li>
          <li>
-           redrawOnMove(<em>bool</em>)
+           కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(<em>bool</em>)
            <p>
              Turn redrawing on or off by specifying the <em>bool</em> as
              <em>true</em> or <em>false</em>.
              <!-- Not sure that this is useful. -->
            </p>
            <p>
-             Example: <code>redrawOnMove(true)</code>
+             Example: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)</code>
            </p>
            <p>
-             Example: <code>redrawOnMove(false)</code>
+             Example: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false)</code>
            </p>
          </li>
          <li>
-           draw()
+           చిత్రీకరించు()
            <p>
-             Draw the turtle and the current image.
+             Draw the కుంచిక and the current image.
              <!-- Not sure that this is useful. -->
            </p>
            <p>
-             Example: <code>draw()</code>
+             Example: <code>చిత్రీకరించు()</code>
            </p>
          </li>
          <li>
@@ -502,7 +502,7 @@ also roll in the tutorial stuff
              Return the minimum value of x in pixels
            </p>
            <p>
-             Example: <code>write(కనిష్ఠX())</code>
+             Example: <code>వ్రాయి(కనిష్ఠX())</code>
            </p>
          </li>
          <li>
@@ -511,16 +511,16 @@ also roll in the tutorial stuff
              Return the maximum value of x in pixels
            </p>
            <p>
-             Example: <code>write(గరిష్ఠX())</code>
+             Example: <code>వ్రాయి(గరిష్ఠX())</code>
            </p>
          </li>
          <li>
-           n = miny() | n = కనిష్ఠY()
+           n = కనిష్ఠY() | n = కనిష్ఠY()
            <p>
              Return the minimum value of Y in pixels
            </p>
            <p>
-             Example: <code>write(కనిష్ఠY())</code>
+             Example: <code>వ్రాయి(కనిష్ఠY())</code>
            </p>
          </li>
          <li>
@@ -529,7 +529,7 @@ also roll in the tutorial stuff
              Return the maximum value of Y in pixels
            </p>
            <p>
-             Example: <code>write(గరిష్ఠY())</code>
+             Example: <code>వ్రాయి(గరిష్ఠY())</code>
            </p>
          </li>
        </ul>
@@ -539,7 +539,7 @@ also roll in the tutorial stuff
       </div> <!-- leftcolumncontainer -->
          <span class='help_text' id='reference_help_text'>
            <p>
-           The language reference lists the available functions for turtle graphics.
+           The language reference lists the available functions for కుంచిక graphics.
            </p>
            <p>
            Parameters are <em>italicized</em> included within parentheses '(' and ')' characters.
@@ -568,16 +568,16 @@ also roll in the tutorial stuff
          </span>
         </h4>
 <!--
-          <canvas2 id="turtlecanvas2" width="300" height="300"></canvas2>
+          <canvas2 id="కుంచికcanvas2" width="300" height="300"></canvas2>
           <canvas2 id="imagecanvas2" width="300" height="300" style="display:none"></canvas2>
 -->
       <div id="canvaswrapper">
-          <canvas id="turtlecanvas"></canvas>
+          <canvas id="కుంచికcanvas"></canvas>
           <canvas id="imagecanvas"></canvas>
-         <span class='help_text' id='turtlecanvas_help_text'>
+         <span class='help_text' id='కుంచికcanvas_help_text'>
            <p>
-           The canvas is where the turtle graphics are drawn.
-           The turtle is the green triangle pointing in its direction of travel.
+           The canvas is where the కుంచిక graphics are drawn.
+           The కుంచిక is the green triangle pointing in its direction of travel.
            </p>
          </span>
       </div> <!-- canvaswrapper -->
@@ -593,7 +593,7 @@ also roll in the tutorial stuff
          <button id="resetButton">Reset</button>
          <span class='help_text' id='resetButton_help_text'>
            <p>
-           The <strong>Reset</strong> button clears the canvas and moves the turtle to its start
+           The <strong>Reset</strong> button clears the canvas and moves the కుంచిక to its start
            position.
            </p>
          </span>
@@ -755,22 +755,25 @@ or write your own functions
 
 For example:    */
 
-function square(side) {
-  repeat(4, function () {
-    ముందుకు_జరుగు(side);
+సమ_చతురస్రము = ( భుజము ) => {
+  ఆవర్తించు(4, () => {
+    ముందుకు_జరుగు( భుజము );
     కుడి_వైపు_తిరుగు(90);
   });
 }
 
-function demo() {
+demo = () => {
   కుంచికను_దాచు();
   రంగు_మార్చు( నీలము );
-  var s = 100;
-  while (s > 0) {
-    square(s);
+  let భుజము = 100;
+  let రంగు_సంఖ్య = 0;
+  యావత్_పరిక్రమ( () => భుజము > 0, ()=> {
+    సమ_చతురస్రము( భుజము );
     కుడి_వైపు_తిరుగు(36);
-    s = s - 10;
-  }
+    భుజము = భుజము - 10;
+    రంగు_సంఖ్య = ( రంగు_సంఖ్య + 1 ) % 16;
+    రంగు_మార్చు( రంగు_సంఖ్య );
+  } );
 }
          </textarea> <!-- codeArea -->
          <span class='left_help_text' id='codeArea_help_text'>
@@ -843,7 +846,7 @@ function demo() {
            The <strong>Save</strong> button downloads the code in the code area to the filename in the download directory designated by the browser.
            </p>
          </span>
-         <input type="text" class="filename" id="code_filename" placeholder="turtleCode"/>.js</label>
+         <input type="text" class="filename" id="code_filename" placeholder="కుంచికCode"/>.js</label>
          <span class='help_text' id='code_filename_help_text'>
            <p>
               The <strong>Save</strong> text area accepts the name of a JavaScript file name to be saved.
@@ -866,8 +869,8 @@ function demo() {
 
 <!-- scripts -->
    <script type="text/javascript" src="examples.js"></script>
-   <script type="text/javascript" src="turtle.js"></script>
-   <script type="text/javascript" src="turtleConsole.js"></script>
+   <script type="text/javascript" src="కుంచిక.js"></script>
+   <script type="text/javascript" src="కుంచికConsole.js"></script>
    <script type="text/javascript" src="FileSaver.min.js"></script>
    <script src="he.js"></script>
 </body>

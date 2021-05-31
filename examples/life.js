@@ -34,14 +34,14 @@ var grid2 = Array( rows * columns)
 function drawGrid( grid) {
   for (r=0; r < rows; r++) {
     for ( c=0; c < columns; c++) {
-       //write( r + " " + c)
-       goto ( c * columnSize - columnMid, r * rowSize - rowMid)
+       //వ్రాయి( r + " " + c)
+       స్థానము_మార్చు( c * columnSize - columnMid, r * rowSize - rowMid)
        if (grid [r][c]) {
          రంగు_మార్చు( "red")
        } else {
          రంగు_మార్చు( "lightpink")
        }
-       dot( dotSize)
+       నిండు_వృత్తము( dotSize)
     }
   }
 }
@@ -50,13 +50,13 @@ function drawGrid( grid) {
 function drawGrid2( grid, baseCaption) {
   for (r=0; r < rows; r++) {
     for ( c=0; c < columns; c++) {
-       goto ( columnMid - c * columnSize , rowMid - r * rowSize)
+       స్థానము_మార్చు( columnMid - c * columnSize , rowMid - r * rowSize)
        if (grid [r * columns + c]) {
          రంగు_మార్చు( "red")
        } else {
          రంగు_మార్చు( "lightgray")
        }
-       dot( dotSize)
+       నిండు_వృత్తము( dotSize)
     }
   }
   caption( baseCaption)
@@ -253,13 +253,13 @@ function endTest (grid) {
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = turtle.pos.x
-  var savedY = turtle.pos.y
-  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.రంగు
-  var savedWidth = turtle.వెడల్పు
+  var savedX = కుంచిక.pos.x
+  var savedY = కుంచిక.pos.y
+  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  var savedColor = కుంచిక.రంగు
+  var savedWidth = కుంచిక.వెడల్పు
 
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
 
   // erase what will be in the path
@@ -267,12 +267,12 @@ function caption (message) {
   రంగు_మార్చు( తెలుపు )
   వెడల్పు(22)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
   రంగు_మార్చు("నలుపు")
-  write( message)
+  వ్రాయి( message)
 
   //go back from whence you came
-  goto( savedX, savedY)
+  స్థానము_మార్చు( savedX, savedY)
   దిశ_మార్చు( savedHeading)
   రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)

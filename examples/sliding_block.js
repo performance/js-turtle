@@ -84,8 +84,8 @@ function drawBlock( h, v, x, y, n) {
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)
   // draw a block
   రంగు_మార్చు("నలుపు")
-  beginShape()
-  goto (baseX + x * side, baseY - y * side)
+  ఆకారాము_ప్రారంభించు()
+  స్థానము_మార్చు(baseX + x * side, baseY - y * side)
   దిశ_మార్చు(90)
   ముందుకు_జరుగు( h * side)
   కుడి_వైపు_తిరుగు( 90)
@@ -95,10 +95,10 @@ function drawBlock( h, v, x, y, n) {
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( v * side)
   కుడి_వైపు_తిరుగు( 90)
-  fillShape("tan")
+  ఆకారాము_ముగించు("tan")
 
-  goto (baseX + (x + .5)*side, baseY -(y+.5) *side)
-  write(n)
+  స్థానము_మార్చు(baseX + (x + .5)*side, baseY -(y+.5) *side)
+  వ్రాయి(n)
 }
 
 
@@ -693,13 +693,13 @@ function demo() {
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = turtle.pos.x
-  var savedY = turtle.pos.y
-  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.రంగు
-  var savedWidth = turtle.వెడల్పు
+  var savedX = కుంచిక.pos.x
+  var savedY = కుంచిక.pos.y
+  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  var savedColor = కుంచిక.రంగు
+  var savedWidth = కుంచిక.వెడల్పు
 
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
 
   // erase what will be in the path
@@ -707,12 +707,12 @@ function caption (message) {
   రంగు_మార్చు( తెలుపు )
   వెడల్పు(22)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
   రంగు_మార్చు("నలుపు")
-  write( message)
+  వ్రాయి( message)
 
   //go back from whence you came
-  goto( savedX, savedY)
+  స్థానము_మార్చు( savedX, savedY)
   దిశ_మార్చు( savedHeading)
   రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
@@ -839,7 +839,7 @@ function moveOne() {
   moveCount = moveCount + 1;
   lastMove = [block, dir]
   if (moveCount < moves.length) {
-    delay( moveOne, delayTime)
+    విలంబించు( moveOne, delayTime)
   }
 }
 
@@ -848,5 +848,5 @@ function demo() {
   init()
   moveCount=0
 
-  delay( moveOne, delayTime)
+  విలంబించు( moveOne, delayTime)
 }

@@ -9,7 +9,7 @@
 
 function quadrangle( ){
   // start at lower left corner of outer square
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు(longSide)
   కుడి_వైపు_తిరుగు( 180 - angleA)
   ముందుకు_జరుగు(longSide)
@@ -22,12 +22,12 @@ function quadrangle( ){
   ముందుకు_జరుగు( longSide + shortSide)
   కుడి_వైపు_తిరుగు(90)
   కలమును_కింద_పెట్టు()
-  fillShape("lightblue")
+  ఆకారాము_ముగించు("lightblue")
 }
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   rows = 4
   columns = 5
 
@@ -42,7 +42,7 @@ console.log ("side:"+side)
   offsetAngle = radToDeg( Math.atan( side/(shortSide + longSide)))
 
   // center this more or less
-  goto(-.5 * columns * (shortSide + longSide) + .4 *side, .5 * (rows-2) * (shortSide + longSide) + .4*side)
+  స్థానము_మార్చు(-.5 * columns * (shortSide + longSide) + .4 *side, .5 * (rows-2) * (shortSide + longSide) + .4*side)
   ఎడమ_వైపు_తిరుగు( offsetAngle)
   for (var k=0; k<rows; k++) {
     for (var j=0; j<columns; j++) { // across row

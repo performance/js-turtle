@@ -2,7 +2,7 @@
 // this draws five figures
 
 function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir) {
-  స్థితి_మార్చు(x,y);
+  స్థానము_మార్చు(x,y);
   కలమును_పైకి_ఎత్తు();
   కోణము(armAngle);
   ముందుకు_జరుగు(startRadius);
@@ -23,50 +23,50 @@ function turbine(x,y, వ్యాసార్థము, pedals, dir) {
 }
 
 function roundedOctogon (side, వ్యాసార్థము) {
-  repeat((8), function () {
+  ఆవర్తించు((8), function () {
     ముందుకు_జరుగు(side);
-    curveright(వ్యాసార్థము,45);
+    కుడివైపు_చాపాము(వ్యాసార్థము,45);
   })
 }
 
 
 function roundedOctogonL (side, వ్యాసార్థము) {
-  repeat((8), function () {
+  ఆవర్తించు((8), function () {
     ముందుకు_జరుగు(side);
-    curveleft(వ్యాసార్థము,45);
+    ఎడమవైపు_చాపాము(వ్యాసార్థము,45);
   })
 }
 
 
 function circleEyeR (x, y, n, outerRadius) {
-  స్థితి_మార్చు (x, y);
-  circle (outerRadius); //outer circle
+  స్థానము_మార్చు(x, y);
+  వృత్తము(outerRadius); //outer circle
 
   for (var i=0; i<n; i++) {
-    స్థితి_మార్చు (x, y);
+    స్థానము_మార్చు(x, y);
     కోణము (i/n * 360);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(outerRadius);
     కుడి_వైపు_తిరుగు(90)
     కలమును_కింద_పెట్టు();
-    write(i)
-    curveRight(outerRadius/2) // one inscribed circle
+    వ్రాయి(i)
+    కుడివైపు_చాపాము(outerRadius/2) // one inscribed circle
   }
 }
 
 function circleEyeL (x, y, n, outerRadius) {
-  స్థితి_మార్చు (x, y);
-  circle (outerRadius); //outer circle
+  స్థానము_మార్చు(x, y);
+  వృత్తము(outerRadius); //outer circle
 
   for (var i=0; i<n; i++) {
-    స్థితి_మార్చు (x, y);
+    స్థానము_మార్చు(x, y);
     కోణము (i/n * 360);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(outerRadius);
     కలమును_కింద_పెట్టు();
     ఎడమ_వైపు_తిరుగు(90)
-    write(i)
-    curveLeft(outerRadius/2); // one inscribed circle
+    వ్రాయి(i)
+    ఎడమవైపు_చాపాము(outerRadius/2); // one inscribed circle
   }
 }
 
@@ -107,10 +107,10 @@ function demo () {
   }
   
 
-  స్థితి_మార్చు(h2, v1);
+  స్థానము_మార్చు(h2, v1);
   వృత్తము(60/60 * tSize);
 
-  స్థితి_మార్చు( h1, v2)
+  స్థానము_మార్చు( h1, v2)
   కోణము(0)
   oRadius = cellSize/2 * .9
   cRadius = .3 * oRadius
@@ -124,7 +124,7 @@ function demo () {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  స్థితి_మార్చు( h1, v2)
+  స్థానము_మార్చు( h1, v2)
   కోణము(0)
   oRadius = cellSize/2 * .8
   cRadius = .3 * oRadius
@@ -138,7 +138,7 @@ function demo () {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  స్థితి_మార్చు( h1, v2)
+  స్థానము_మార్చు( h1, v2)
   కోణము(22.5)
   oRadius = cellSize/2 * .7
   cRadius = .3 * oRadius
@@ -152,7 +152,7 @@ function demo () {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  స్థితి_మార్చు( h1, v2)
+  స్థానము_మార్చు( h1, v2)
   కోణము(22.5)
   oRadius = cellSize/2 * .6
   cRadius = .3 * oRadius

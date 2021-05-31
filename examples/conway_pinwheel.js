@@ -72,25 +72,25 @@ function drawTriangle (dir, side) {
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = turtle.pos.x
-  var savedY = turtle.pos.y
-  var savedHeading = turtle.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = turtle.రంగు
-  var savedWidth = turtle.వెడల్పు
+  var savedX = కుంచిక.pos.x
+  var savedY = కుంచిక.pos.y
+  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  var savedColor = కుంచిక.రంగు
+  var savedWidth = కుంచిక.వెడల్పు
 
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+10)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
 
   // erase wha will be in the path
   రంగు_మార్చు( తెలుపు )
   వెడల్పు(10)
   ముందుకు_జరుగు(గరిష్ఠY() * 2 - 12)
-  goto (కనిష్ఠX()+10, కనిష్ఠY()+5)
+  స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+5)
   రంగు_మార్చు("నలుపు")
-  write( message)
+  వ్రాయి( message)
 
   //go back from whence you came
-  goto( savedX, savedY)
+  స్థానము_మార్చు( savedX, savedY)
   దిశ_మార్చు( savedHeading)
   రంగు_మార్చు( savedColor)
   వెడల్పు(savedWidth)
@@ -100,8 +100,8 @@ function caption (message) {
 
 function shadeTriangle( dir, side, stepsize) {
   console.log( "sT: " + dir + " " + side + " " + stepsize)
-  var x = turtle.pos.x
-  var y = turtle.pos.y
+  var x = కుంచిక.pos.x
+  var y = కుంచిక.pos.y
   var steps = Math.floor( side/stepsize)
 
   for (var i=0; i< steps; i++) {
@@ -118,7 +118,7 @@ function shadeTriangle( dir, side, stepsize) {
   dturn( !dir, 90)
   ముందుకు_జరుగు( side)
   dturn( dir, 90)
-  //goto(x,y) // cancel cumulative error
+  //స్థానము_మార్చు(x,y) // cancel cumulative error
   కలమును_కింద_పెట్టు()
 }
 
@@ -127,8 +127,8 @@ function recursiveDivide( dir, side, level, triangle) {
   //console.log("rD: " + level + " " + triangle)
   if (level > 0) {
     side = 0. + side/root5
-    var x = turtle.pos.x
-    var y = turtle.pos.y
+    var x = కుంచిక.pos.x
+    var y = కుంచిక.pos.y
     
     //draw the first line to point A
     dturn( dir, angleb)
@@ -181,7 +181,7 @@ i    //sub triangle 4
     ముందుకు_జరుగు( side)
     కలమును_కింద_పెట్టు()
     dturn( dir, 180-angleb)
-    //goto (x,y) //cancel cumulative error
+    //స్థానము_మార్చు(x,y) //cancel cumulative error
 //  } else {
 //    if (triangle == 3) {
 //    if (triangle == specialTriangle) {
@@ -228,16 +228,16 @@ function delayedDivide() {
   caption( "Division, generation " + level)
   level = level + 1
   if (level <= iterations) {
-    delay( delayedDivide,1000)
+    విలంబించు( delayedDivide,1000)
   } else {
-    delay( startDelayedExpansion, 3000)
+    విలంబించు( startDelayedExpansion, 3000)
   }
 }
 
 function startDelayedExpansion() {
   //move to the origin of the big triangle
   reset ()
-  wrap( false)
+   చుట్టు( false)
   రంగు_మార్చు(mainColor)
   కలమును_పైకి_ఎత్తు()
 
@@ -274,7 +274,7 @@ function startDelayedExpansion() {
   రంగు_మార్చు( నీలము )
   shadeTriangle( CCW, tempSide, stepsize)
   రంగు_మార్చు("నలుపు")
-  delay( delayedExpansion,1000)
+  విలంబించు( delayedExpansion,1000)
 }
 
 function delayedExpansion() {
@@ -292,10 +292,10 @@ function delayedExpansion() {
 
   depth = depth + 1
   if (depth < iterations) {
-    delay( delayedExpansion,1000)
+    విలంబించు( delayedExpansion,1000)
   } else {
     delayedSide = targetSide
-    delay( startDelayedDivide, 3000)
+    విలంబించు( startDelayedDivide, 3000)
   }
 }
 
@@ -326,7 +326,7 @@ basically:
   ఆది_స్థితి()
   కుంచికను_దాచు()
   side = targetSide
-  wrap(false)
+   చుట్టు(false)
   రంగు_మార్చు(mainColor)
   కలమును_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(side/2)

@@ -115,7 +115,7 @@ function display7segment(digit) {
 
 function displaySegTime() {
   // black out background
-  goto (కనిష్ఠX(),0)
+  స్థానము_మార్చు(కనిష్ఠX(),0)
   కోణము (90)
   రంగు_మార్చు(black)
   వెడల్పు(2*గరిష్ఠY())
@@ -123,7 +123,7 @@ function displaySegTime() {
   ముందుకు_జరుగు(2*గరిష్ఠX())
 101010
   // draw the 6 digits of time
-  goto (-horizontalElements/2*segSize, segSize)
+  స్థానము_మార్చు(-horizontalElements/2*segSize, segSize)
   వెడల్పు(segWidth)
   display7segment(hour10digit)
   ముందుకు_జరుగు(digitSpacing)
@@ -153,4 +153,4 @@ function displayTime() {
 }
 
 //demo = displayTime
-animate(displayTime, 1000)
+ఆడించు(displayTime, 1000)

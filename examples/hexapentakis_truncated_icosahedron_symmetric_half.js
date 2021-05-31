@@ -20,14 +20,14 @@ function penta (side, faceColor) {
   var pentaSide = .8639 * side
 
   for( i=0; i<5; i++) {
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-basePentaAngle)
     ముందుకు_జరుగు( pentaSide)
     కుడి_వైపు_తిరుగు( 180-centralPentaAngle)
     ముందుకు_జరుగు( pentaSide)
     కుడి_వైపు_తిరుగు( 180-basePentaAngle)
-    fillShape(faceColor)
+    ఆకారాము_ముగించు(faceColor)
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-(2*basePentaAngle))
   }
@@ -39,14 +39,14 @@ function hexa (side, faceColor) {
   var hexaSide = 1.022 * side
 
   for( var i=0; i<6; i++) {
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)
     ముందుకు_జరుగు( hexaSide)
     కుడి_వైపు_తిరుగు( 180-centralHexaAngle)
     ముందుకు_జరుగు( hexaSide)
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)
-    fillShape(faceColor)
+    ఆకారాము_ముగించు(faceColor)
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-(2*baseHexaAngle))
   }
@@ -57,15 +57,15 @@ py = 0
 pangle = 0
 
 function savePos () {
-  px = turtle.pos.x
-  py = turtle.pos.y
-  pangle = turtle.కోణము
+  px = కుంచిక.pos.x
+  py = కుంచిక.pos.y
+  pangle = కుంచిక.కోణము
 }
 
 function restorePos() {
-  turtle.pos.x = px
-  turtle.pos.y = py
-  turtle.కోణము = pangle
+  కుంచిక.pos.x = px
+  కుంచిక.pos.y = py
+  కుంచిక.కోణము = pangle
 }
 
 p2x = 0
@@ -73,22 +73,22 @@ p2y = 0
 p2angle = 0
 
 function savePos2 () {
-  p2x = turtle.pos.x
-  p2y = turtle.pos.y
-  p2angle = turtle.కోణము
+  p2x = కుంచిక.pos.x
+  p2y = కుంచిక.pos.y
+  p2angle = కుంచిక.కోణము
 }
 
 function restorePos2() {
-  turtle.pos.x = p2x
-  turtle.pos.y = p2y
-  turtle.కోణము = p2angle
+  కుంచిక.pos.x = p2x
+  కుంచిక.pos.y = p2y
+  కుంచిక.కోణము = p2angle
 }
 
 function demo() {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   side = .23 * Math.min(గరిష్ఠX(), గరిష్ఠY())
-  goto (-.6* side, -.5* side)
+  స్థానము_మార్చు(-.6* side, -.5* side)
   కుడి_వైపు_తిరుగు(18)
   penta (side, "green")
   కుడి_వైపు_తిరుగు( (2*basePentaAngle))

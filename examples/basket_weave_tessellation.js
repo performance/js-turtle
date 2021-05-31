@@ -8,36 +8,36 @@ sSide = 2.5 * small
 lSide = sSide + 2 * small
 
 function vRect( sSide, lSide, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<2; i++) {
     ముందుకు_జరుగు( sSide)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( lSide)
     కుడి_వైపు_తిరుగు(90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
   ముందుకు_జరుగు( sSide)
 }
 
 function hRect( sSide, lSide, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<2; i++) {
     ముందుకు_జరుగు( lSide)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( sSide)
     కుడి_వైపు_తిరుగు(90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
   ముందుకు_జరుగు( lSide)
 }
 
 function square ( side, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు(90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
   ముందుకు_జరుగు( side)
 }
 
@@ -47,13 +47,13 @@ function demo() {
   count = 0
   yB = గరిష్ఠY() + small
   xB = కనిష్ఠX()
-  wrap(false)
+   చుట్టు(false)
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while( turtle.pos.y > కనిష్ఠY()) {
-    goto (xB, yB)
-    while( turtle.pos.x < గరిష్ఠX()) {
+  while( కుంచిక.pos.y > కనిష్ఠY()) {
+    స్థానము_మార్చు(xB, yB)
+    while( కుంచిక.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       square(small, "yellow")
       కలమును_పైకి_ఎత్తు()
@@ -64,8 +64,8 @@ function demo() {
     }
     yB = yB - small
 
-    goto (xB, yB)
-    while( turtle.pos.x < గరిష్ఠX()) {
+    స్థానము_మార్చు(xB, yB)
+    while( కుంచిక.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()
@@ -73,8 +73,8 @@ function demo() {
     }
     yB = yB - sSide
 
-    goto (xB, yB)
-    while( turtle.pos.x < గరిష్ఠX()) {
+    స్థానము_మార్చు(xB, yB)
+    while( కుంచిక.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       square(small, "yellow")
       vRect(sSide, lSide, "lightblue")
@@ -85,8 +85,8 @@ function demo() {
     }
     yB = yB - small
 
-    goto (xB- lSide +small, yB)
-    while( turtle.pos.x < గరిష్ఠX()) {
+    స్థానము_మార్చు(xB- lSide +small, yB)
+    while( కుంచిక.pos.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()

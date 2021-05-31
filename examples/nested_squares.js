@@ -2,7 +2,7 @@
 
 //draw a square
 function square(side) {
-   repeat(4, function () {
+   ఆవర్తించు(4, function () {
       ముందుకు_జరుగు(side);
       కుడి_వైపు_తిరుగు(90);
    });
@@ -12,7 +12,7 @@ function square(side) {
 // draw some nested squares
 function nestedSquares(count) {
   చెరిపి_వేయి();
-  goto(0,0);
+  స్థానము_మార్చు(0,0);
   కుంచికను_దాచు();
   for (s=1; s<count*4; s=s+4) {
     కలమును_పైకి_ఎత్తు();
@@ -23,7 +23,7 @@ function nestedSquares(count) {
     ముందుకు_జరుగు(2);
     ఎడమ_వైపు_తిరుగు(180);
     కలమును_కింద_పెట్టు();
-    రంగు_మార్చు(random(16));
+    రంగు_మార్చు(యాదృచఛిక_సంఖ్య(16));
     square (s);
   }
 }
@@ -39,7 +39,7 @@ function demo1() {
     nestedSquares (size);
   }
   // animate a simple parameterless function
-  animate( nest25, 200);
+  ఆడించు( nest25, 200);
 }
 
 function demo() {
@@ -50,5 +50,5 @@ function demo() {
     size = 2*గరిష్ఠX()
   }
   number = .9 * size /4  // 4 is the difference in square size
-  animate( function () { nestedSquares(number)} ,200);
+  ఆడించు( function () { nestedSquares(number)} ,200);
 }

@@ -11,7 +11,7 @@ function decagon(s, fcolor) {
   //   the cutouts are for an outscribed rectangle
   //   2*side by sqrt(3)*side
 
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు( s)
   ఎడమ_వైపు_తిరుగు( 120)
   ముందుకు_జరుగు( d1)
@@ -33,16 +33,16 @@ function decagon(s, fcolor) {
   కుడి_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(d1)
   ఎడమ_వైపు_తిరుగు(120)
-  fillShape( fcolor)
+  ఆకారాము_ముగించు( fcolor)
 }
 
 function demo() {
   ఆది_స్థితి()
-  wrap( false)
+   చుట్టు( false)
   కుడి_వైపు_తిరుగు(90)
   side = 40
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())
-  goto (-.5* side, side)
+  స్థానము_మార్చు(-.5* side, side)
 
   //derived distances
   d1 = side/2

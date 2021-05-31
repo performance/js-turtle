@@ -16,7 +16,7 @@ var bColor = "green"  // background color
 //
 function tri( side, pointAngle, fill) {
   if (fill) {
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
   }
   for (var i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
@@ -25,7 +25,7 @@ function tri( side, pointAngle, fill) {
     కుడి_వైపు_తిరుగు( 180 - pointAngle)
   }
   if (fill) {
-    fillShape(fColor)
+    ఆకారాము_ముగించు(fColor)
   }
 }
 
@@ -35,9 +35,9 @@ function jeresh (sid, pAngle, fill) {
     కలమును_కింద_పెట్టు()
     tri( sid, pAngle, fill)
 
-    var tx = turtle.pos.x
-    var ty = turtle.pos.y
-    var tHeading = turtle.కోణము
+    var tx = కుంచిక.pos.x
+    var ty = కుంచిక.pos.y
+    var tHeading = కుంచిక.కోణము
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( sid)
     ఎడమ_వైపు_తిరుగు( 60 - pAngle)
@@ -53,9 +53,9 @@ function jeresh (sid, pAngle, fill) {
       ముందుకు_జరుగు(sid)
       ఎడమ_వైపు_తిరుగు(60)
     }
-    goto(tx,ty)
+    స్థానము_మార్చు(tx,ty)
 
-    turtle.కోణము=tHeading
+    కుంచిక.కోణము=tHeading
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( sid)
     ఎడమ_వైపు_తిరుగు(60)
@@ -77,7 +77,7 @@ function demo() {
   var side = 60
   side = .2* Math.min( గరిష్ఠX(), గరిష్ఠY())
   //center a bit
-  goto (side, -.3 * side)
+  స్థానము_మార్చు(side, -.3 * side)
 
   background(bColor)
   రంగు_మార్చు( sColor)

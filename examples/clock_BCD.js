@@ -72,7 +72,7 @@ function drawDot (digit, onColor, offColor, step) {
   } else {
     రంగు_మార్చు( offColor)
   }
-  dot ()
+  నిండు_వృత్తము()
   ముందుకు_జరుగు(step)
 }
 
@@ -90,22 +90,22 @@ function displayBinaryDots(hSpacing, vSpacing) {
   bottom = vSpacing * 1.5
   leftSide = -hSpacing * 2.5
   కలమును_పైకి_ఎత్తు()
-  goto (leftSide + hSpacing *0, bottom)
+  స్థానము_మార్చు(leftSide + hSpacing *0, bottom)
   drawNumberDots (hour10, hourColor, offColor, vSpacing)
 
-  goto (leftSide + hSpacing *1, bottom)
+  స్థానము_మార్చు(leftSide + hSpacing *1, bottom)
   drawNumberDots (hour1, hourColor, offColor, vSpacing)
 
-  goto (leftSide + hSpacing *2, bottom)
+  స్థానము_మార్చు(leftSide + hSpacing *2, bottom)
   drawNumberDots (min10, minuteColor, offColor, vSpacing)
 
-  goto (leftSide + hSpacing *3, bottom)
+  స్థానము_మార్చు(leftSide + hSpacing *3, bottom)
   drawNumberDots (min1, minuteColor, offColor, vSpacing)
 
-  goto (leftSide + hSpacing *4, bottom)
+  స్థానము_మార్చు(leftSide + hSpacing *4, bottom)
   drawNumberDots (sec10, secondColor, offColor, vSpacing)
 
-  goto (leftSide + hSpacing *5, bottom)
+  స్థానము_మార్చు(leftSide + hSpacing *5, bottom)
  drawNumberDots (sec1, secondColor, offColor, vSpacing)
 }
 
@@ -123,4 +123,4 @@ function displayTime() {
 }
 
 demo = displayTime
-animate(displayTime, 1000)
+ఆడించు(displayTime, 1000)

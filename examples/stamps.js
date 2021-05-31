@@ -16,12 +16,12 @@ function star (side) {
 
 function stamps () {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   var x = కనిష్ఠX()
   while (x <= గరిష్ఠX()) {
     var y = కనిష్ఠY()
     while (y <= గరిష్ఠY()) {
-      goto (x,y)
+      స్థానము_మార్చు(x,y)
       కోణము (0);
       star (25);
       y = y+30

@@ -3,12 +3,12 @@
 
 
 function square (side) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<4; i++){
     ముందుకు_జరుగు(side)
     కుడి_వైపు_తిరుగు(90)
   }
-  fillShape("blue")
+  ఆకారాము_ముగించు("blue")
 }
 
 
@@ -31,7 +31,7 @@ function layer (side, offsetAngle) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   side = 14
   side = .033 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   factor = Math.sqrt(2 + Math.sqrt( 2))

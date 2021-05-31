@@ -5,14 +5,14 @@ function hexagon (side) {
   ముందుకు_జరుగు(side);
   కుడి_వైపు_తిరుగు(120);
   కలమును_కింద_పెట్టు();
-  repeat (6, function () {
+  ఆవర్తించు(6, function () {
     ముందుకు_జరుగు(side);
     కుడి_వైపు_తిరుగు(60);
   })
 }
 
 function repeatToRight (side) {
-  while (turtle.pos.x < గరిష్ఠX()) {
+  while (కుంచిక.pos.x < గరిష్ఠX()) {
     hexagon(side);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(side * 2);
@@ -22,7 +22,7 @@ function repeatToRight (side) {
 }
 
 function repeatToLeft(side) {
-  while (turtle.pos.x > కనిష్ఠX())
+  while (కుంచిక.pos.x > కనిష్ఠX())
    {
     hexagon(side);
     కలమును_పైకి_ఎత్తు();
@@ -38,11 +38,11 @@ function demo() {
   
   
   ఆది_స్థితి();
-  wrap(false);
+   చుట్టు(false);
   వెడల్పు(1);
-  goto(కనిష్ఠX()-1, గరిష్ఠY()-1);
+  స్థానము_మార్చు(కనిష్ఠX()-1, గరిష్ఠY()-1);
   
-  while (turtle.pos.y > కనిష్ఠY()) {
+  while (కుంచిక.pos.y > కనిష్ఠY()) {
     repeatToRight(side); // draw a row of hexagons
   
     //advance to next row on right side
@@ -63,6 +63,6 @@ function demo() {
     ముందుకు_జరుగు(side);
     కుడి_వైపు_తిరుగు(180);
     కలమును_కింద_పెట్టు();
-    draw();
+    చిత్రీకరించు();
   }
 }

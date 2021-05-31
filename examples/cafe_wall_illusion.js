@@ -1,15 +1,15 @@
 // Cafe Wall Illusion -- draws cafe tiles. see Wikipedia.
 
 function drawTile (h,w, tc, x, y) {
-  goto(x,y)
-  beginShape()
+  స్థానము_మార్చు(x,y)
+  ఆకారాము_ప్రారంభించు()
   for( var i=0; i<2; i=i+1) {
     ముందుకు_జరుగు(h)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు(w)
     కుడి_వైపు_తిరుగు(90)
   }
-  fillShape( tc)
+  ఆకారాము_ముగించు( tc)
 }
 
 function cafeTiles (h, w, gw, gc, off) {

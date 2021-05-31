@@ -2,14 +2,14 @@
 // a recursive function is one that calls itself
 function sierpinski (order, side) {
     if (order == 0) {
-        beginShape()
+        ఆకారాము_ప్రారంభించు()
         ముందుకు_జరుగు(side)
         ఎడమ_వైపు_తిరుగు(120)
         ముందుకు_జరుగు(side)
         ఎడమ_వైపు_తిరుగు(120)
         ముందుకు_జరుగు(side)
         ఎడమ_వైపు_తిరుగు(120)
-        fillShape("red")
+        ఆకారాము_ముగించు("red")
     } else {
         కలమును_పైకి_ఎత్తు()
         ముందుకు_జరుగు(side/2)
@@ -35,7 +35,7 @@ function delayed() {
     if (i < 7) {
         sier( i)
         i = i+1
-        delay( delayed, 2000)
+        విలంబించు( delayed, 2000)
     }
 }
 
@@ -45,14 +45,14 @@ function sier (order) {
     కుంచికను_దాచు()
     side = 2* Math.min(గరిష్ఠX(),గరిష్ఠY()) -20
     కలమును_పైకి_ఎత్తు()
-    goto(-side/2, -side/2+20)
+    స్థానము_మార్చు(-side/2, -side/2+20)
     కుడి_వైపు_తిరుగు(90)
     కలమును_కింద_పెట్టు()
     sierpinski( order, side)
 
-    goto (0+10- side/2,కనిష్ఠY()+10)
+    స్థానము_మార్చు(0+10- side/2,కనిష్ఠY()+10)
     అక్షరరూపము_స్థాపించు("bold 16px helvitica,sans-serif")
-    write ("Sierpinski triangle of order " + order)  
+    వ్రాయి("Sierpinski triangle of order " + order)  
 }
 
 var i ; //global iteration variable

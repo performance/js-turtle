@@ -6,7 +6,7 @@ function v (side, fColor) {
   // assume pointing up at upper left corner
   // invariant
   if (fColor != "") {
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
   }
   ఎడమ_వైపు_తిరుగు( 30)
   ముందుకు_జరుగు( 3*side)
@@ -22,7 +22,7 @@ function v (side, fColor) {
   ముందుకు_జరుగు( 3*side)
   కుడి_వైపు_తిరుగు(150)
   if (fColor != "") {
-    fillShape(fColor)
+    ఆకారాము_ముగించు(fColor)
   }
 }
 
@@ -65,13 +65,13 @@ function mizenSimple() {
   background ("tan")
 
   //center canvas more or less
-  goto(-5*side, 3.5*side)
+  స్థానము_మార్చు(-5*side, 3.5*side)
   వెడల్పు(1)
   కోణము(0)
   mizen( side, "నలుపు", "red")
 
   // do again to make lines stand out
-  goto(-5*side, 3.5*side)
+  స్థానము_మార్చు(-5*side, 3.5*side)
   వెడల్పు(3)
   కోణము(0)
   mizen( side, "white", "")
@@ -79,7 +79,7 @@ function mizenSimple() {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   side = 40 // 1/2 basic face of hexagon, width...
   side = .15 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   mizenSimple()

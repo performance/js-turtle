@@ -57,8 +57,8 @@ function delayed() {
   if (i<7) {
     చెరిపి_వేయి();
     కుంచికను_దాచు();
-    redrawOnMove(true);
-    goto(0,.9*కనిష్ఠY());
+    కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true);
+    స్థానము_మార్చు(0,.9*కనిష్ఠY());
 
     // move start point so figure stays centered
     కలమును_పైకి_ఎత్తు();
@@ -74,13 +74,13 @@ function delayed() {
     కలమును_కింద_పెట్టు();
 
     sierpinski(side, i);
-    goto (కనిష్ఠX(),కనిష్ఠY());
+    స్థానము_మార్చు(కనిష్ఠX(),కనిష్ఠY());
     కోణము(90);
     అక్షరరూపము_స్థాపించు("bold 12pt Ariel,sans-serif")
-    write ("Sierpinski curve of order "+ i);
-    draw();
+    వ్రాయి("Sierpinski curve of order "+ i);
+    చిత్రీకరించు();
     i = i + 1;
-    delay(delayed,3000)
+    విలంబించు(delayed,3000)
   }
 }
 

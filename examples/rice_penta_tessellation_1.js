@@ -10,7 +10,7 @@ c7 = "yellow"
 c8 = "నారింజ"
 
 function pr(fill) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు(sidea)
   ఎడమ_వైపు_తిరుగు(180-angleB)
   ముందుకు_జరుగు(sideb)
@@ -21,11 +21,11 @@ function pr(fill) {
   ఎడమ_వైపు_తిరుగు(180-angleE)
   ముందుకు_జరుగు(sidee)
   ఎడమ_వైపు_తిరుగు(180-angleA)
-  fillShape(fill)
+  ఆకారాము_ముగించు(fill)
 }
 
 function pl(fill) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు(sidea)
   కుడి_వైపు_తిరుగు(180-angleB)
   ముందుకు_జరుగు(sideb)
@@ -36,7 +36,7 @@ function pl(fill) {
   కుడి_వైపు_తిరుగు(180-angleE)
   ముందుకు_జరుగు(sidee)
   కుడి_వైపు_తిరుగు(180-angleA)
-  fillShape(fill)
+  ఆకారాము_ముగించు(fill)
 }
 
 
@@ -69,7 +69,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit
 
 function demo() {
   ఆది_స్థితి()
-  wrap( false)
+   చుట్టు( false)
   size = 10
 
   sidea = size
@@ -82,14 +82,14 @@ function demo() {
   angleC = 120
   angleD = 90
   angleE = 120
-  goto (కనిష్ఠX(), గరిష్ఠY())
-  goto (కనిష్ఠX(),గరిష్ఠY())
+  స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())
+  స్థానము_మార్చు(కనిష్ఠX(),గరిష్ఠY())
   bigX = కనిష్ఠX() + 2*size
   bigY = గరిష్ఠY()
   దిశ_మార్చు(44)
-  while (turtle.pos.x < గరిష్ఠX()) {
-    goto (bigX, bigY)
-    while (turtle.pos.y > కనిష్ఠY()-8*size) {
+  while (కుంచిక.pos.x < గరిష్ఠX()) {
+    స్థానము_మార్చు(bigX, bigY)
+    while (కుంచిక.pos.y > కనిష్ఠY()-8*size) {
       కలమును_పైకి_ఎత్తు()
       ఎడమ_వైపు_తిరుగు( angleA)
       ముందుకు_జరుగు( sidee)

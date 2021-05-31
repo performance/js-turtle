@@ -18,7 +18,7 @@ var writeJSON = function(fileName, data) {
 		'json': true,
 		'compact': false
 	});
-	fs.write(fileName, contents + '\n', 'w');
+	fs.వ్రాయి(fileName, contents + '\n', 'w');
 	console.log(fileName + ' created successfully.');
 };
 

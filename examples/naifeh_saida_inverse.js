@@ -9,7 +9,7 @@ function antilayer (side, innerSide, offset) {
     ముందుకు_జరుగు( side)
     కలమును_కింద_పెట్టు()
   
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
     ఎడమ_వైపు_తిరుగు(45 + 22.5)
     ముందుకు_జరుగు(innerSide)
     ఎడమ_వైపు_తిరుగు(90)
@@ -24,7 +24,7 @@ function antilayer (side, innerSide, offset) {
     ఎడమ_వైపు_తిరుగు(135)
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు(45)
-    fillShape("నలుపు")
+    ఆకారాము_ముగించు("నలుపు")
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( side)
     కలమును_కింద_పెట్టు()
@@ -35,7 +35,7 @@ function antilayer (side, innerSide, offset) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   కుంచికను_దాచు()
   side = .023 * Math.min( గరిష్ఠX(), గరిష్ఠY())
 

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i=0; i< trymeElements.length; i++) {
         trymeElements[i].onclick = function () {
             var textBlock = encodeURIComponent(this.innerHTML);
-            window.open("turtle.html?codeblock=" + textBlock);
+            window.open("కుంచిక.html?codeblock=" + textBlock);
         }
     }
 }, false);

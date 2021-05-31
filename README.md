@@ -18,12 +18,12 @@ Turtle Graphics code, but the documentation and lessons as well. You can visit t
 * ***.html** are the .html files.
 * **examples.js** is a tool created JavaScript file to hold the example source code as strings.
 * **Makefile** is unified to make all of the tool created files for the website.
-* turtle.css holds the styles for the IDE.
-* turtle.html is the IDE.
-* turtle.js is the library of Turtle Graphics functions.
-* turtleConsole.js provides the functionality for the IDE.
-* turtleweb.css holds the styles for the web pages.
+* కుంచిక.css holds the styles for the IDE.
+* కుంచిక.html is the IDE.
+* కుంచిక.js is the library of Turtle Graphics functions.
+* కుంచికConsole.js provides the functionality for the IDE.
+* కుంచికweb.css holds the styles for the web pages.
 
 
-While this repository focuses on teaching JavaScript and Turtle Graphics, one could use the turtle
-graphics library, turtle.js, in other applications.
+While this repository focuses on teaching JavaScript and Turtle Graphics, one could use the కుంచిక
+graphics library, కుంచిక.js, in other applications.

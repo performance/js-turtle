@@ -114,7 +114,7 @@ colorlayer = 0
 function pentagon(side, fColor) {
   // direction of the point
   // invariant
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ఎడమ_వైపు_తిరుగు( ang0/2)
   ముందుకు_జరుగు( side)
   కుడి_వైపు_తిరుగు( 180 - ang1)
@@ -126,7 +126,7 @@ function pentagon(side, fColor) {
   కుడి_వైపు_తిరుగు( 180 - ang4)
   ముందుకు_జరుగు( side)
   కుడి_వైపు_తిరుగు( 180 - ang0/2)
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
 }
 
 function p(pNum, ccw, side, fColor) {
@@ -135,16 +135,16 @@ function p(pNum, ccw, side, fColor) {
   } else {
     r = 1
   }
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ఎడమ_వైపు_తిరుగు( angles[pNum]/2)
   for (var i=1; i<5; i++) {
     ముందుకు_జరుగు( side)
-    //write( angles[(i+pNum)%5])
+    //వ్రాయి( angles[(i+pNum)%5])
     కుడి_వైపు_తిరుగు( 180 - angles[(5+r*i+pNum)%5])  
   }
   ముందుకు_జరుగు( side)
   కుడి_వైపు_తిరుగు( 180 - angles[pNum]/2)
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
 }
 
 function hirchhorn(side) {
@@ -369,7 +369,7 @@ function hirchhorn(side) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())
   hirchhorn(size)
 }

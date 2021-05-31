@@ -7,10 +7,10 @@
 # filetype
 #/ start with # is anchor local to the particular file
 #/ start with http: or https: is an internet URL
-# need to do something with turtle.html?example=something links ... i don't know if an error is returned
+# need to do something with కుంచిక.html?example=something links ... i don't know if an error is returned
 #   since this is internal, we can test these individually,
 #      ?code=   this can be any valid code, hard to test, should only be used dynamically
-#      ?example=   check that valid example identifiers have been used, i.e., list in turtle.html   ** existing code=
+#      ?example=   check that valid example identifiers have been used, i.e., list in కుంచిక.html   ** existing code=
 #      ?command=   check that valid Turtle Graphics commands have been used
 #          ... most/all of these links are dynamically set up, so we won't see them
 # handle mailto:
@@ -31,7 +31,7 @@ fi
 FILES=`ls *html`
 #FILES=nerd.html
 #FILES=about.html
-#FILES=turtle.html
+#FILES=కుంచిక.html
 FILES=examples.html
 for FILE in $FILES
 do
@@ -70,10 +70,10 @@ do
 			if [ $? -ne 0 ]; then
 				echo "***Bad link to \"$REF\"."
 			fi
-		elif [[ $REF == *turtle.html?example=* ]]; then
-			EXAMPLE=`echo $REF | sed -Ee 's/.*turtle\.html\?example=(.*)/\1/'`
+		elif [[ $REF == *కుంచిక.html?example=* ]]; then
+			EXAMPLE=`echo $REF | sed -Ee 's/.*కుంచిక\.html\?example=(.*)/\1/'`
 			echo "   Looking for example $EXAMPLE"
-			grep '<option value="'$EXAMPLE'">' turtle.html
+			grep '<option value="'$EXAMPLE'">' కుంచిక.html
 			if [ $? -ne 0 ]; then
 				echo "***Bad example link: \"$EXAMPLE\"."
 				if [ -f "examples/$EXAMPLE.js" ]; then

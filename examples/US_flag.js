@@ -6,13 +6,13 @@ function star (size) {
   turn (180-18)
   కలమును_కింద_పెట్టు()
   var i=0
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   while (i<5){
     ముందుకు_జరుగు(size)
     కుడి_వైపు_తిరుగు(180-36)
     i = i + 1
   }
-  fillShape("white")
+  ఆకారాము_ముగించు("white")
   turn (180+18)
   వెనుకకు_జరుగు(.54*size)
 }
@@ -89,9 +89,9 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   starSize = .05 *flagHeight // star size
   //outline flag and field
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   కుంచికను_దాచు()
-  goto (xBase, yBase)
+  స్థానము_మార్చు(xBase, yBase)
   కోణము (90)
   రంగు_మార్చు("నలుపు")
 
@@ -102,14 +102,14 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   //  draw stripes
   రంగు_మార్చు( ఎరుపు );
   వెడల్పు(stripeWidth);
-  goto (xBase+flagWidth, yBase-stripeWidth/2)
+  స్థానము_మార్చు(xBase+flagWidth, yBase-stripeWidth/2)
   కోణము (-90)
   stripes (flagWidth-fieldWidth, 2*stripeWidth, 4)
   stripes (flagWidth, 2*stripeWidth, 3)
 
   //draw field
   రంగు_మార్చు( నీలము )
-  goto (xBase+fieldWidth, yBase-stripeWidth/2)
+  స్థానము_మార్చు(xBase+fieldWidth, yBase-stripeWidth/2)
   కోణము (-90)
   stripes (fieldWidth, stripeWidth, 7)
 
@@ -122,10 +122,10 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   var row = 0
   while (row<9) {
    if (row % 2 == 0) {
-      goto (xBase + xSeparation, yBase - (row +1) * ySeparation)
+      స్థానము_మార్చు(xBase + xSeparation, yBase - (row +1) * ySeparation)
       starLine(6, starSize, xSeparation*2)
     } else {
-      goto (xBase + 2* xSeparation, yBase - (row +1) * ySeparation)
+      స్థానము_మార్చు(xBase + 2* xSeparation, yBase - (row +1) * ySeparation)
       starLine(5, starSize, xSeparation * 2)
     }
     row = row + 1;

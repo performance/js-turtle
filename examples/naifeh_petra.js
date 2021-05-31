@@ -12,7 +12,7 @@ This does not support using a wider pen width.
 function backslash (fColor) {
   // assume pointing up at upper left corner
   // invariant
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   కుడి_వైపు_తిరుగు( 150)
   ముందుకు_జరుగు( 2*size)
   ఎడమ_వైపు_తిరుగు( 120)
@@ -22,13 +22,13 @@ function backslash (fColor) {
   ఎడమ_వైపు_తిరుగు( 120)
   ముందుకు_జరుగు( size)
   కుడి_వైపు_తిరుగు( 150)
-  fillShape(fColor)
+  ఆకారాము_ముగించు(fColor)
 }
 
 function slash (fColor) {
   // assume pointing up at upper left corner
   // invariant
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ఎడమ_వైపు_తిరుగు( 150)
   ముందుకు_జరుగు( 2*size)
   ఎడమ_వైపు_తిరుగు( 120)
@@ -38,13 +38,13 @@ function slash (fColor) {
   ఎడమ_వైపు_తిరుగు( 120)
   ముందుకు_జరుగు( size)
   కుడి_వైపు_తిరుగు( 90)
-  fillShape(fColor)
+  ఆకారాము_ముగించు(fColor)
 }
 
 function dash () {
   // assume pointing up at upper left corner
   // invariant
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   కుడి_వైపు_తిరుగు( 150)
   ముందుకు_జరుగు( size)
   ఎడమ_వైపు_తిరుగు( 60)
@@ -54,7 +54,7 @@ function dash () {
   ఎడమ_వైపు_తిరుగు( 60)
   ముందుకు_జరుగు( 2*size)
   కుడి_వైపు_తిరుగు( 90)
-  fillShape(fColor)
+  ఆకారాము_ముగించు(fColor)
 }
 
 function dashBackslashes(count, mode, fColor) {
@@ -123,10 +123,10 @@ function demo() {
   pointUp = false
   if (pointUp) {
     కోణము(90)
-    goto (4*size, 3.5*size)
+    స్థానము_మార్చు(4*size, 3.5*size)
   } else {
     కోణము(-60)
-    goto (-5.5*size, -1*size)
+    స్థానము_మార్చు(-5.5*size, -1*size)
   }
   కుంచికను_దాచు()
 

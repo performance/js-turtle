@@ -6,20 +6,20 @@ controller.
 */
 
 function drawDot () {
-    రంగు_మార్చు(random(16))
-    dot()
+    రంగు_మార్చు(యాదృచఛిక_సంఖ్య(16))
+    నిండు_వృత్తము()
     ముందుకు_జరుగు(15)
 }
 
 function drawRowOfDots () {
-  setpos(కనిష్ఠX() + 20,0)
-  repeat (32, drawDot)
+  స్థానము_మార్చు(కనిష్ఠX() + 20,0)
+  ఆవర్తించు(32, drawDot)
 }
 
 function colorChangingDots () {
   ఆది_స్థితి()
-  wrap(false)
-  setpos(కనిష్ఠX(),0)
+   చుట్టు(false)
+  స్థానము_మార్చు(కనిష్ఠX(),0)
   కోణము(90)
   కలమును_కింద_పెట్టు()
   రంగు_మార్చు("నలుపు")
@@ -27,7 +27,7 @@ function colorChangingDots () {
   ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX()) //draw black band
   కలమును_పైకి_ఎత్తు()
   వెడల్పు(1)
-  animate( drawRowOfDots, 500)
+  ఆడించు( drawRowOfDots, 500)
 }
 
 demo = colorChangingDots;

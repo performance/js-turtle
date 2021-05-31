@@ -18,8 +18,8 @@ function leftTriangle(side) {
 }
 
 function leftTab( side) {
-  var x = turtle.pos.x
-  var y = turtle.pos.y
+  var x = కుంచిక.pos.x
+  var y = కుంచిక.pos.y
   ఎడమ_వైపు_తిరుగు( 180 - 45)
   ముందుకు_జరుగు( side * .2)
   ఎడమ_వైపు_తిరుగు( 45)
@@ -28,7 +28,7 @@ function leftTab( side) {
   ముందుకు_జరుగు( side * .2)
   ఎడమ_వైపు_తిరుగు( 180 - 45)
   ముందుకు_జరుగు( side)
-  goto( x, y)
+  స్థానము_మార్చు( x, y)
 }
 
 
@@ -55,9 +55,9 @@ function leftPentagon(side) {
     if (i == 3) {
       rightTriangle(side, "1")
       కుడి_వైపు_తిరుగు(60)
-      //beginShape()
+      //ఆకారాము_ప్రారంభించు()
       rightTriangle(side, "1,2")
-      //fillShape("red")
+      //ఆకారాము_ముగించు("red")
       ఎడమ_వైపు_తిరుగు(60)
     }
   }
@@ -85,7 +85,7 @@ function rightPentagon(side) {
 function demo() {
   ఆది_స్థితి()
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())
-  goto (-.666 * side, - .333 * side)
+  స్థానము_మార్చు(-.666 * side, - .333 * side)
   rightPentagon(side) // inner pentagon
   కుంచికను_దాచు()
 }

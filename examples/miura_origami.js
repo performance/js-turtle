@@ -3,7 +3,7 @@
 function horiz( size){
   hy = గరిష్ఠY()
   while (hy > కనిష్ఠY()) {
-    goto (కనిష్ఠX(), hy)
+    స్థానము_మార్చు(కనిష్ఠX(), hy)
     కోణము(90)
     ముందుకు_జరుగు( 2*గరిష్ఠX())
     hy = hy - size
@@ -15,7 +15,7 @@ function vert( size) {
   while ( vx < గరిష్ఠX()) {
     vy = గరిష్ఠY()
     while (vy > కనిష్ఠY()) {
-      goto( vx, vy)
+      స్థానము_మార్చు( vx, vy)
       కోణము( 180 - 6)
       ముందుకు_జరుగు( size * Math.cos( degToRad(6)))
       కుడి_వైపు_తిరుగు( 12)
@@ -30,7 +30,7 @@ function vert( size) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap( false)
+   చుట్టు( false)
   size = 100
   horiz( size)
   vert( size)

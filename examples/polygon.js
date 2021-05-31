@@ -2,7 +2,7 @@
 
 // draw a polygon with n sides of length m
 function polygon(sides,side) {
-  repeat(sides, function () {
+  ఆవర్తించు(sides, function () {
     ముందుకు_జరుగు(side);
     కుడి_వైపు_తిరుగు(360/sides);
   });
@@ -16,7 +16,7 @@ function demo() {
      side = గరిష్ఠX()
    }
    side = .4 *side
-   goto(-.4 * side, -.5 * side)
+   స్థానము_మార్చు(-.4 * side, -.5 * side)
    కుంచికను_దాచు();
-   polygon( random( 3,10), side);
+   polygon( యాదృచఛిక_సంఖ్య( 3,10), side);
 }

@@ -1,5 +1,5 @@
 /**************************************************************************
- * turtle.css -- CSS for the turtle console
+ * కుంచిక.css -- CSS for the కుంచిక console
  *
  * copyright(c) 2016-2019 Kirk Carlson
  * MIT license
@@ -188,7 +188,7 @@ label {
   border: mediumblue 3px solid;
 }
 
-#turtlecanvas {
+#కుంచికcanvas {
   background:#fff;
   border: 2px solid lightgray;
 }

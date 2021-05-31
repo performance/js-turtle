@@ -1,6 +1,6 @@
 #Project Information
 ##History
-This project was forked from bjpop/js-turtle. This project had the basic turtle
+This project was forked from bjpop/js-కుంచిక. This project had the basic కుంచిక
 functions, **animate** function, the immediate execution of the **command**
 line, and the editable **definitions** area. This was a substantial portion of
 this project, and overall had brilliant ideas.
@@ -8,12 +8,12 @@ this project, and overall had brilliant ideas.
 ##File Structure
 This project consists of several files which are used for a single HTML page.
 
-- **turtle.html** is the basic HTML page. It includes the platform layout and the content of the language reference.
-- **turtle.css** controls the formatting and styling of the page.
-- **turtle.js** contains the Javascript code for the Logo Turtle Javascript
-  functions. This code could be included in other projects that want turtle
+- **కుంచిక.html** is the basic HTML page. It includes the platform layout and the content of the language reference.
+- **కుంచిక.css** controls the formatting and styling of the page.
+- **కుంచిక.js** contains the Javascript code for the Logo Turtle Javascript
+  functions. This code could be included in other projects that want కుంచిక
 graphics without the console functions.
-- **turtleConsole.js** contains the Javascript code for the platform controls
+- **కుంచికConsole.js** contains the Javascript code for the platform controls
   (e.g., language reference
 clickons, **Command** box, **RESET** button, **RUN DEMO** button, **STOP** button)
 - **examples** is a directory the contains example code in both a native form
@@ -51,9 +51,9 @@ allows the updating to be performed with a simple **make** command.
 New example files require:
 - inclusion within the **Makefile** so that they are updated with the **make** command.
 - inclusion of the Javascript string files (e.g., &lt;script
-  src=example.str.js>&lt;/script>) within the **turtle.html** so that the
+  src=example.str.js>&lt;/script>) within the **కుంచిక.html** so that the
 strings are accessible to Javascript.
-- inclusion of the &lt;option> in the **Examples** select within **turtleConsole.js** file.
+- inclusion of the &lt;option> in the **Examples** select within **కుంచికConsole.js** file.
 ##Initial Enhancements
 
 The following are the initial enhancements to the forked project:
@@ -63,17 +63,17 @@ The following are the initial enhancements to the forked project:
 * made the **language reference**examples be "clickable", so that they load the **command** line
 and are executed when clicked.
 * added synonyms for commands (e.g., colour=color, fd=forward).
-* added **setx()** to **sety()** functions to change only the x or y coodinate.
+* added **xనియోగించు()** to **yనియోగించు()** functions to change only the x or y coodinate.
 * changed **రంగు_మార్చు()** to use 16 *standard* logo colors (integer) as well as strings for
 all of the Javascript color variations.
 * added buttons and samples of the 16 logo *standard* colors to the reference.
-* changed **write()** function to apply text along direction of turtle.
-* added **curveright()** and **curveleft()** functions to draw arcs with the turtle.
-* changed **circle** function to draw circles or arcs centered on the turtle.
-* added **dot()** function to draw filled circles centered on the turtle.
-* changed **random()** function to allow use with only a high value.
+* changed **వ్రాయి()** function to apply text along direction of కుంచిక.
+* added **కుడివైపు_చాపాము()** and **ఎడమవైపు_చాపాము()** functions to draw arcs with the కుంచిక.
+* changed **circle** function to draw circles or arcs centered on the కుంచిక.
+* added **నిండు_వృత్తము()** function to draw filled circles centered on the కుంచిక.
+* changed **యాదృచఛిక_సంఖ్య()** function to allow use with only a high value.
 * added **Stop** button for animations.
-* added **delay()** function as an alternative for animations.
+* added **విలంబించు()** function as an alternative for animations.
 * added **Run Demo** button for example code in the **definitions** box.
 * added select element for selecting and loading Javascript examples.
 * developed the shell tools to convert Javascript examples into strings that can be
@@ -91,7 +91,7 @@ its errors. This implements red text on a white background
 more room to the canvas.
 - [x] allow the examples select and **definitions** box to be hidden to give more room to the canvas.
 - [x] make the command box execute on a second ENTER without other changes (onkeypress?)
-- [X] delay() needs to have a way to turn off the **Stop** button. Perhaps it could include this in
+- [X] విలంబించు() needs to have a way to turn off the **Stop** button. Perhaps it could include this in
 the delayed function mechanism.
 - [ ] add a page of example outputs
      - [ ] make each output the same size
@@ -104,7 +104,7 @@ the delayed function mechanism.
      - [x] fix arc and cirle test to test 360 degree arcs from various angles and rotations
      - [x] fix arc and cirle test to be proportional for the turbine
      - [x] Koch snowflake
-     - [x] circle eye
+     - [x] వృత్తము eye
      - [x] dividing a circle
      - [x] random stick men
      - [x] jumping jack
@@ -149,7 +149,7 @@ the delayed function mechanism.
 	 - [ ] Add field labels
 - [ ] re-label current binary clock as a BCD clock and maybe add year month day + field labels
 - [x] compass rose
-- [x] circle limit compass rose
+- [x] వృత్తము limit compass rose
 - [ ] want to add something to make the project more interactive
 	 - [ ] buttons
 	 - [ ] values
@@ -160,7 +160,7 @@ It would be better to combine all of the outputs into a single .js file. Perhaps
 also configure the examples select.
 - [x] develop lessons to lead a student throught some basic programming concepts. [This may be a
 separate selector from the example selector].
- - [x] moving the turtle and executing a command
+ - [x] moving the కుంచిక and executing a command
  - [x] drawing a square
  - [x] using iteration to draw a square
  - [x] using a function to draw many squares
@@ -184,7 +184,7 @@ separate selector from the example selector].
  - [ ] maybe record things clicked on the language reference to build programs more easily
  - [ ] do you need lint? would that be easy to add?
  - [ ] do you need syntax highlighting? or at least discuss it.
- - [ ] include the intersection simulator as an example of using the turtle.js as a library on a standalone page.
+ - [ ] include the intersection simulator as an example of using the కుంచిక.js as a library on a standalone page.
  - [ ] figure out how to load examples on the fly.
  - [ ] figure out a way to display examples hierarchically
  - [ ] bring in bitsbox style commands (more like javascript)
@@ -202,17 +202,17 @@ separate selector from the example selector].
 * [ ] arc and curve test is missing third example
 	* Should add example for rounded rectangles
 * [ ] hexagon tessellation is not working
-* [ ] circle eye could be bigger, maybe different colors for each inscribed circle
+* [ ] వృత్తము eye could be bigger, maybe different colors for each inscribed circle
 * [ ] color changing dots is not working, should start with a చెరిపి_వేయి
-* [ ] dividing a circle is not working *****Fixed without identifying problem*****
+* [ ] dividing a వృత్తము is not working *****Fixed without identifying problem*****
 * [ ] Add tag //*sourceURL=foo.js to bottom of all examples for debugging purposes (or just add ~=definitions.js via the exec command?) <--alternate is better because it works for user entered code
 * optionally 
-* [ ] curveRight and curveLeft are not working from all start angles
+* [ ] కుడివైపు_చాపాము and ఎడమవైపు_చాపాము are not working from all start angles
 *  [ ] run demo is rough
 	-    should be consistent about errors
 	-    need to catch errors in repeat and delay and STOP!
 *  [ ] names in reference aren't proper camel case
-*  [ ] turtle context not saved and restored properly
+*  [ ] కుంచిక context not saved and restored properly
     color, కోణము, position, width is not restored
 *  [ ] error handling is inconsistant
 *  [ ] examples should be consistant
@@ -239,7 +239,7 @@ separate selector from the example selector].
 * [ ] miura should be scaled a bit ... 1-2 inches, at least 5x5
 * [ ] rotate mountain tesselation 90°
 * [ ] pentahex needs to be scaled
-* [ ] rhombic star should hide turtle
+* [ ] rhombic star should hide కుంచిక
 * [ ] rice pentellation needs more fill
 
 *tutorial got really short. should at least have progression on the square. 
@@ -265,7 +265,7 @@ tutorial has bugs
     - Backward
     - Right
     - Left
-    - Write (Hello World)
+    - వ్రాయి(Hello World)
 - Repeat loop
     - Drawing a square
     - Repeat
@@ -280,15 +280,15 @@ tutorial has bugs
 - Function
     - Random
 	- variables… show polygon functions. first #sides - Stamping
-    - Goto (x,y)
+    - స్థానము_మార్చు(x,y)
     - Set heading/కోణము
-    - Setx
-    - Sety
+    - xనియోగించు
+    - yనియోగించు
 - Variables
 - Parameters
 - Arcs and curves
-    - Curveleft
-    - Curveright
+    - ఎడమవైపు_చాపాము
+    - కుడివైపు_చాపాము
     - Circle
     - Dot
 - Conditionals

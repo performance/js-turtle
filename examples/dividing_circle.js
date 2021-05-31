@@ -1,11 +1,11 @@
-// Dividing a Circle -- divide a circle with other circles
+// Dividing a Circle -- divide a వృత్తము with other circles
 
 // *** GLOBALS ***
 var i; // loop variable
 
 
 // *** CONSTANTS ***
-rad = 50; // circle వ్యాసార్థము
+rad = 50; // వృత్తము వ్యాసార్థము
 limit = 6; // times to loop
 delayTime = 1000; // milliseconds
 
@@ -42,10 +42,10 @@ function tier () {
 function demo() {
   చెరిపి_వేయి();
   కుంచికను_దాచు();
-  home();
+  కేంద్రకమునకు_వెళ్ళు();
   కలమును_పైకి_ఎత్తు();
-  wrap(false);
-  circle (rad);
+   చుట్టు(false);
+  వృత్తము(rad);
   i = 1;
   delay (tier, delayTime);
 }

@@ -8,7 +8,7 @@ colors = ["red", "white", "blue", "yellow", "green"]
 
 function shapeUp (side, fillColor) {
   // assume pointing in direction of base
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు(3* side)
   ఎడమ_వైపు_తిరుగు(120)
   ముందుకు_జరుగు(2*side)
@@ -19,7 +19,7 @@ function shapeUp (side, fillColor) {
   ఎడమ_వైపు_తిరుగు( 120)
   ముందుకు_జరుగు( 2*side)
   ఎడమ_వైపు_తిరుగు(120)
-  fillShape( fillColor)
+  ఆకారాము_ముగించు( fillColor)
 }
 
 function mountainUnit(side){
@@ -66,7 +66,7 @@ function newRow(lastx, lasty) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap(false)
+   చుట్టు(false)
   side = 20
   rowx = కనిష్ఠX() - side // - 5.5 * side
   rowy = కనిష్ఠY()// +2*side
@@ -84,10 +84,10 @@ console.log("xy<: " + కనిష్ఠX() + " " + కనిష్ఠY())
   var sqrt3 = Math.sqrt(3)
   while (!done){
 console.log("xy: " + i + " " + mx + " " + my)
-    goto (mx, my)
+    స్థానము_మార్చు(mx, my)
     mountainUnit( side)
-    //goto (mx+2.2*side, my+1*sqrt3*side)
-    //write(i)
+    //స్థానము_మార్చు(mx+2.2*side, my+1*sqrt3*side)
+    //వ్రాయి(i)
     
     mx = mx + 4.5 * side
     my = my -sqrt3/2 * side

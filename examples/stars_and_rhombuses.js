@@ -18,7 +18,7 @@ function quadRhom( side) {
 
 function demo() {
   ఆది_స్థితి()
-  wrap( false)
+   చుట్టు( false)
   కుంచికను_దాచు()
   ang = 60
   side = 20
@@ -27,7 +27,7 @@ function demo() {
 
   for (var fy=గరిష్ఠY(); fy>కనిష్ఠY(); fy=fy - chord) {   
     for (var fx=కనిష్ఠX(); fx<గరిష్ఠX(); fx=fx + 2*chord) {
-      goto( fx+xoffset, fy)
+      స్థానము_మార్చు( fx+xoffset, fy)
       కోణము( 90 - ang/2)
       quadRhom( side)
     }

@@ -182,8 +182,8 @@ testRates();
 
 //** Drawing functions **
 function drawEWstreet() {
-  wrap(false);
-  setpos(కనిష్ఠX(),0);
+   చుట్టు(false);
+  స్థానము_మార్చు(కనిష్ఠX(),0);
   కోణము(90);
   కలమును_కింద_పెట్టు();
   రంగు_మార్చు("నలుపు");
@@ -192,7 +192,7 @@ function drawEWstreet() {
 }
 
 function drawNSstreet() {
-  setpos(0,గరిష్ఠY());
+  స్థానము_మార్చు(0,గరిష్ఠY());
   కోణము(180);
   కలమును_కింద_పెట్టు();
   రంగు_మార్చు("నలుపు");
@@ -201,7 +201,7 @@ function drawNSstreet() {
 }
 
 function drawEWstripe() {
-  setpos(కనిష్ఠX(),0);
+  స్థానము_మార్చు(కనిష్ఠX(),0);
   కోణము(90);
   రంగు_మార్చు( పసుపు );
   వెడల్పు(1);
@@ -213,7 +213,7 @@ function drawEWstripe() {
 }
 
 function drawNSstripe() {
-  setpos(0,గరిష్ఠY());
+  స్థానము_మార్చు(0,గరిష్ఠY());
   కోణము(180);
   రంగు_మార్చు( పసుపు );
   వెడల్పు(1);
@@ -231,7 +231,7 @@ function drawCrossWalk(x, y, dir) {
     
   // draw inner cross walk line
   రంగు_మార్చు( తెలుపు );
-  setposition(x, y);
+  స్థానము_మార్చు(x, y);
   కోణము(dir);
   వెడల్పు(1);
   కలమును_కింద_పెట్టు();
@@ -259,13 +259,13 @@ function drawCrossWalk(x, y, dir) {
 
 function drawTurnArrow(x, y, dir) {
   కుంచికను_దాచు();
-  goto (x,y);
+  స్థానము_మార్చు(x,y);
   కోణము (dir);
   కలమును_కింద_పెట్టు();
   రంగు_మార్చు( తెలుపు );
   వెడల్పు(5);
   ముందుకు_జరుగు(5);
-  curveLeft(5,90);
+  ఎడమవైపు_చాపాము(5,90);
   ముందుకు_జరుగు(4);
   వెడల్పు(2);
   ఎడమ_వైపు_తిరుగు(130);
@@ -309,7 +309,7 @@ function setLightColor(lightColor, stateColor) {
 }
 
 function drawArrow() { // assume pointing up, color set and pen up
-  var penWidth = turtle.వెడల్పు;
+  var penWidth = కుంచిక.వెడల్పు;
   var arrowSize = 8;
   var vertOffset = 5;
   వెనుకకు_జరుగు(vertOffset);
@@ -350,15 +350,15 @@ function drawMainSignal(state) { // main signal is straight ahead
   ఎడమ_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(13);
   setLightColor("green", state);
-  dot();
+  నిండు_వృత్తము();
 
   వెనుకకు_జరుగు(13);
   setLightColor("yellow", state);
-  dot();
+  నిండు_వృత్తము();
 
   వెనుకకు_జరుగు(13);
   setLightColor("red", state);
-  dot();
+  నిండు_వృత్తము();
 
   ముందుకు_జరుగు(13);
   కుడి_వైపు_తిరుగు(90);
@@ -371,7 +371,7 @@ function drawWalkSignal(state) {
   ఎడమ_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(5);
   కుడి_వైపు_తిరుగు(90);
-  write("WALK");
+  వ్రాయి("WALK");
 
   ఎడమ_వైపు_తిరుగు(90);
   వెనుకకు_జరుగు(5);
@@ -383,12 +383,12 @@ function drawWalkSignal(state) {
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(8);
   ఎడమ_వైపు_తిరుగు(90);
-  write("DONT");
+  వ్రాయి("DONT");
 
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(13);
   ఎడమ_వైపు_తిరుగు(90);
-  write("WALK");
+  వ్రాయి("WALK");
 
   కుడి_వైపు_తిరుగు(90);
   వెనుకకు_జరుగు(25);
@@ -396,8 +396,8 @@ function drawWalkSignal(state) {
 }
 
 function drawSignal(x, y, orient, mainState, turnState, walkState) {
-  // move turtle to position and కోణము depending on street direction
-  setpos (x, y);
+  // move కుంచిక to position and కోణము depending on street direction
+  స్థానము_మార్చు(x, y);
   కోణము(orient);
   drawTurnSignal(turnState);
 
@@ -455,48 +455,48 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
 //  turn is the turn light queue
 //  main is the main light queue
 //  walk is the walk light queue
-  setpos(x,y)
+  స్థానము_మార్చు(x,y)
   కోణము(orientation)
 /*
   if (dir === "N") {
-    setpos(55,-గరిష్ఠY()+5);
+    స్థానము_మార్చు(55,-గరిష్ఠY()+5);
     కోణము(0);
   } else if (dir === "S") {
-    setpos(-68,గరిష్ఠY()-20);
+    స్థానము_మార్చు(-68,గరిష్ఠY()-20);
     కోణము(0);
   } else if (dir === "E") {
-    setpos(-గరిష్ఠX()+5, -55);
+    స్థానము_మార్చు(-గరిష్ఠX()+5, -55);
     కోణము(90);
   } else if (dir === "W") {
-    setpos(గరిష్ఠX()-20, 68);
+    స్థానము_మార్చు(గరిష్ఠX()-20, 68);
     కోణము(90);
   } else {
-    setpos(-200,200);
+    స్థానము_మార్చు(-200,200);
     కోణము(90);
   }
 */
   వెడల్పు(1);
   రంగు_మార్చు("నలుపు");
   if (dir === "S" || dir === "W") { // South and West are in opposite order
-    write(walk);
+    వ్రాయి(walk);
   } else {
-    write(turn);
+    వ్రాయి(turn);
   }
 
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(12);
   ఎడమ_వైపు_తిరుగు(90);
-  write(main);
+  వ్రాయి(main);
 
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(12);
   ఎడమ_వైపు_తిరుగు(90);
   if (dir === "S" || dir === "W") {
-    write(turn);
+    వ్రాయి(turn);
   } else {
-    write(walk);
+    వ్రాయి(walk);
   }
-  write ("     " + dir); // debug statement
+  వ్రాయి("     " + dir); // debug statement
 }
 
 function drawQueues() {
@@ -522,7 +522,7 @@ function drawQueues() {
 }
 
 function drawQueue(x, y, dir, queue, len) {
-  goto(x, y);
+  స్థానము_మార్చు(x, y);
   కోణము(dir);
   వెడల్పు(10);
   for (var i=0; i<queue.length; i++) {
@@ -762,7 +762,7 @@ function turnStateMachine(signal, currentTime) {
     break;
 
     default:
-      stopAnimation();
+      ఆట_ఆపు();
       throw "unknown next turn state for " + signal.id;
     }
   }
@@ -803,7 +803,7 @@ function walkStateMachine(signal, currentTime) {
     break;
 
     default:
-      stopAnimation();
+      ఆట_ఆపు();
       throw "unknown next walk state for " + signal.id;
     }
   }
@@ -840,7 +840,7 @@ function mainStateMachine(signal, currentTime) {
     break;
 
     default:
-      stopAnimation();
+      ఆట_ఆపు();
       throw "unknown next main state for " + signal.id;
     }
   }
@@ -855,7 +855,7 @@ function incDecQueue(signal) {
   var spread;
   spread = 0.5;
   var possibleDepartureTime = currentTime +
-            random((1 - spread) * signal.aveDepartureTime, (1 + spread) * signal.aveDepartureTime);
+            యాదృచఛిక_సంఖ్య((1 - spread) * signal.aveDepartureTime, (1 + spread) * signal.aveDepartureTime);
   if (signal.state === green) {
     if (signal.aveDepartureTime === 0) { // special case for walkers
       signal.queue = [];
@@ -878,11 +878,11 @@ function incDecQueue(signal) {
   // check for arrivals
   if (signal.nextArrivalTime === undefined || currentTime > signal.nextArrivalTime) {
     changed = true;
-    signal.queue.push ({color:random(16), arrivalTime:currentTime});
+    signal.queue.push ({color:యాదృచఛిక_సంఖ్య(16), arrivalTime:currentTime});
     // adjust the average to give it some variation within the average
     spread = 0.95;
     signal.nextArrivalTime = currentTime +
-      random((1 - spread) * signal.aveArrivalTime, (1 + spread) * signal.aveArrivalTime);
+      యాదృచఛిక_సంఖ్య((1 - spread) * signal.aveArrivalTime, (1 + spread) * signal.aveArrivalTime);
   }
 }
 
@@ -1203,5 +1203,5 @@ function loop() {
 }
  
 function demo() {
-  animate(loop, 100);
+  ఆడించు(loop, 100);
 }

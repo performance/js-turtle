@@ -1,7 +1,7 @@
 // Simple Story -- simple framework for story frames
 // shows how to construct a story using frames. There is a text generator,
 // "explain" that puts text on the screen, but a frame can be anything:
-// a drawing, a turtle graphics image, or a turtle graphics animation
+// a drawing, a కుంచిక graphics image, or a కుంచిక graphics animation
 // (hopefully of a finite duration).
 
 //**** GLOBALS ****
@@ -18,15 +18,15 @@ function explain( text) {
   var cWidth = 2* గరిష్ఠX();
   var cHeight = 2* గరిష్ఠY();
   var lineNumber = 0;
-  goto(-.90 * cWidth + గరిష్ఠX(), .9 * cHeight - గరిష్ఠY());
+  స్థానము_మార్చు(-.90 * cWidth + గరిష్ఠX(), .9 * cHeight - గరిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("bold 20px arial,sans-serif");
 
   var lines = text.split("@");
   for (var i=0; i<lines.length; i++) {
     console.log( lines[i])
-    goto (-.90 * cWidth + గరిష్ఠX(), గరిష్ఠY() -(i+1) * .1 * cHeight)
-    write (lines[i]);
+    స్థానము_మార్చు(-.90 * cWidth + గరిష్ఠX(), గరిష్ఠY() -(i+1) * .1 * cHeight)
+    వ్రాయి(lines[i]);
     lineNumber = lineNumber + 1;
   }
   కుంచికను_దాచు();
@@ -122,7 +122,7 @@ function frame() {
   }
   if (frameNumber >= 0) {
     frameNumber = frameNumber + 1;
-    delay(frame, frameDelay)
+    విలంబించు(frame, frameDelay)
   }
 }
   

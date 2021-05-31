@@ -5,7 +5,7 @@ function v (side, fColor) {
   // assume pointing up at upper left corner
   // invariant
   if (fColor != "") {
-    beginShape()
+    ఆకారాము_ప్రారంభించు()
   }
   ఎడమ_వైపు_తిరుగు( 30)
   ముందుకు_జరుగు( 3*side)
@@ -21,7 +21,7 @@ function v (side, fColor) {
   ముందుకు_జరుగు( 3*side)
   కుడి_వైపు_తిరుగు(150)
   if (fColor != "") {
-    fillShape(fColor)
+    ఆకారాము_ముగించు(fColor)
   }
 }
 
@@ -65,14 +65,14 @@ function mizen( side, lColor, fColor) {
 function mizen6(side) {
   కలమును_పైకి_ఎత్తు()
   for (var j=0; j<6; j++) {
-    mx = turtle.pos.x
-    my = turtle.pos.y
-    ma = turtle.కోణము
+    mx = కుంచిక.pos.x
+    my = కుంచిక.pos.y
+    ma = కుంచిక.కోణము
     వెడల్పు(0)
     mizen( side, "white", "blue")
 
     // do it again for the border lines
-    goto( mx, my)
+    స్థానము_మార్చు( mx, my)
     కోణము( radToDeg( ma))
     వెడల్పు(.1 * side)
     mizen( side, "white", "")
@@ -93,6 +93,6 @@ function demo() {
   ఆది_స్థితి()
   side = .08 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   //center canvas more or less
-  goto (-8*side, 9*side)
+  స్థానము_మార్చు(-8*side, 9*side)
   mizen6( side)
 }

@@ -3,21 +3,21 @@
 colors = ["red", "white", "blue","yellow", "green"]
 
 function squ( side, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
 }
 
 function squLeft( side, fColor) {
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 90)
   }
-  fillShape( fColor)
+  ఆకారాము_ముగించు( fColor)
 }
 
 // nextColor could be a random function or use less colors
@@ -31,13 +31,13 @@ function demo() {
   ఆది_స్థితి()
   count = 0
   rowOffset = s/3
-  wrap(false)
-  goto (కనిష్ఠX(), గరిష్ఠY())
+   చుట్టు(false)
+  స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while (turtle.pos.y > కనిష్ఠY()) {
-    while (turtle.pos.x < గరిష్ఠX()) {
+  while (కుంచిక.pos.y > కనిష్ఠY()) {
+    while (కుంచిక.pos.x < గరిష్ఠX()) {
       squ(s, nextColor())
       ముందుకు_జరుగు(s)
     }
@@ -45,7 +45,7 @@ function demo() {
     ముందుకు_జరుగు( s)
     కుడి_వైపు_తిరుగు(90)
     వెనుకకు_జరుగు(rowOffset)
-    while (turtle.pos.x > కనిష్ఠX()) {
+    while (కుంచిక.pos.x > కనిష్ఠX()) {
       squLeft(s, nextColor())
       ముందుకు_జరుగు(s)
     }

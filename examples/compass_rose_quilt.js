@@ -69,9 +69,9 @@ function splitTri(outerSide, num, foreColor, triSide) {
   innerSide = triSide / num
   for (j = num; j >0; j = j - 1) {
      for (i = 0; i <j; i = i + 1) {
-        beginShape()
+        ఆకారాము_ప్రారంభించు()
         triangle (innerSide)
-        fillShape(foreColor)
+        ఆకారాము_ముగించు(foreColor)
         కలమును_పైకి_ఎత్తు()
         ముందుకు_జరుగు(innerSide)
         కలమును_కింద_పెట్టు()
@@ -141,7 +141,7 @@ function labelPoints(size) {
       వెనుకకు_జరుగు(textLen)
       అక్షరరూపము_స్థాపించు("bold " + pointSize + "pt Helvetica")
     }
-    write(boxedCompass[i])
+    వ్రాయి(boxedCompass[i])
     ముందుకు_జరుగు(textLen)
     ఎడమ_వైపు_తిరుగు(90)
     వెనుకకు_జరుగు(textRadius)
@@ -154,16 +154,16 @@ function demo () {
   ఆది_స్థితి()
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120
 console.log("size "+ size)
-  wrap(false)
+   చుట్టు(false)
   కుంచికను_దాచు() // don"t want it to show,  do this early
-  redrawOnMove(false) // don"t redraw image each move
+  కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // don"t redraw image each move
 
   // fill in the background
   background( backgroundColor)
 /*
-  goto( కనిష్ఠX()+1, గరిష్ఠY()-1)
+  స్థానము_మార్చు( కనిష్ఠX()+1, గరిష్ఠY()-1)
   కుడి_వైపు_తిరుగు( 90)
-  beginShape()
+  ఆకారాము_ప్రారంభించు()
   ముందుకు_జరుగు( 2 * గరిష్ఠX()-2)
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( 2 * గరిష్ఠY()-2)
@@ -171,19 +171,19 @@ console.log("size "+ size)
   ముందుకు_జరుగు( 2 * గరిష్ఠX()-2)
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( 2 * గరిష్ఠY()-2)
-  fillShape( backgroundColor)
+  ఆకారాము_ముగించు( backgroundColor)
 */
 
   //fill in the compass background
-  goto(0,0)
+  స్థానము_మార్చు(0,0)
   రంగు_మార్చు( compassBackgroundColor)
-  beginShape()
-  circle (size)
-  fillShape( compassBackgroundColor)
+  ఆకారాము_ప్రారంభించు()
+  వృత్తము(size)
+  ఆకారాము_ముగించు( compassBackgroundColor)
 
 
   //fill in the eight compass major points
-  goto(0,0)
+  స్థానము_మార్చు(0,0)
   కోణము(0)
   ఎడమ_వైపు_తిరుగు(22.5)
   side = size * .47
@@ -221,6 +221,6 @@ console.log("size "+ size)
 
   labelPoints( size)
 
-  //redrawOnMove(true)
-  draw() // just to render the final product
+  //కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)
+  చిత్రీకరించు() // just to render the final product
 }

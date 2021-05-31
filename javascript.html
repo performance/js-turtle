@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>JavaScript for Turtle Graphics</title>
-  <link rel="stylesheet" href="turtleweb.css" type="text/css">
+  <link rel="stylesheet" href="కుంచికweb.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <ul>
   <li><a href="overview.html" title="Overview of Turtle Graphics">Intro</a></li>
   <li><a href="guide.html" title="User Guide for Turtle Graphics Integrated Development Environment">Guide</a></li>
-  <li><a href="turtle.html" title="Integrated Development Environment for Turtle Graphics">IDE</a></li>
+  <li><a href="కుంచిక.html" title="Integrated Development Environment for Turtle Graphics">IDE</a></li>
   <li><a class="active" href="javascript.html" title="Tutorial for Simple JavaScript">JavaScript</a></li>
   <li><a href="tutorial.html" title="Tutorial for Basic Turtle Graphics">Tutorial</a></li>
   <li><a href="animation.html" title="Tutorial for Animation with Turtle Graphics">Animation</a></li>
@@ -87,7 +87,7 @@ a /* a bounded comment may be within code  */ = 1;
        </p>
        <p>
          A simple example could be a function that draws a square on the
-         canvas. The turtle is moved to where the
+         canvas. The కుంచిక is moved to where the
          shape is required and the function is invoked.
        </p>
        <code>// define the square function
@@ -112,7 +112,7 @@ square () { // invoke the square function once again
        <p>
          Good functions have no side effects, that is, they should not change
          the value of global variables. So a function that draws a shape
-         should leave the turtle in the same position as it
+         should leave the కుంచిక in the same position as it
          was when the function was called and pointing in the same direction.
          Of course there are exceptions like a function that draws
          a fancy corner. The point is, the function should be predictable
@@ -788,8 +788,8 @@ b = 3 // another statement
        <p>
        Now let's try some Turtle Graphics functions.
        These statements are simple function calls.
-       turn the turtle the right 90 degrees, <code>కుడి_వైపు_తిరుగు(90)</code>, and
-       move the turtle forward 10 units, <code>ముందుకు_జరుగు(10)</code>.
+       turn the కుంచిక the right 90 degrees, <code>కుడి_వైపు_తిరుగు(90)</code>, and
+       move the కుంచిక forward 10 units, <code>ముందుకు_జరుగు(10)</code>.
        </p>
 <code>కుడి_వైపు_తిరుగు(90)
 ముందుకు_జరుగు(10)
@@ -802,7 +802,7 @@ b = 3 // another statement
 
        <img src="images/square.gif">
        <p>
-       This tells the turtle to move and turn, move and turn, move and turn,
+       This tells the కుంచిక to move and turn, move and turn, move and turn,
        move and turn to complete a square as in the following figure.
        </p>
        <p>
@@ -886,12 +886,12 @@ dog = { breed: "dalmatian",        //object with 4 attributes
          Computer science calls the process of doing things over and
          over, <strong>iteration</strong>. Turtle graphics give you a way to
          do iteration with the
-         <code>repeat(<span class="var">count</span>, <span class="var">function</span>)</code>
+         <code>ఆవర్తించు(<span class="var">count</span>, <span class="var">function</span>)</code>
          statement. This lets you
          execute a defined function a number of times.
        </p>
        <code>function square (size) {
-  repeat (4, function () {
+  ఆవర్తించు(4, function () {
     ముందుకు_జరుగు(size);
     కుడి_వైపు_తిరుగు(90);
   })
@@ -917,7 +917,7 @@ dog = { breed: "dalmatian",        //object with 4 attributes
          </ul>
        <img src="images/square.gif">
        <p>
-         In the example, the condition being tested is the turtle running
+         In the example, the condition being tested is the కుంచిక running
          off of the screen. Since its path is enlarged each loop, eventually
          it should run off the screen and prevent an infinite loop.
        </p>
@@ -943,19 +943,19 @@ dog = { breed: "dalmatian",        //object with 4 attributes
          until it moves off of the canvas. This example also shows a variable
          that is increased in value for each loop to make the length of the
          sides increase. The condition for continuing the loop is whether the
-         turtle remains withing the bounds of the canvas. This is inherently
+         కుంచిక remains withing the bounds of the canvas. This is inherently
          initialized when the program starts. It is changed every iteration
-         when the turtle moves. It should be noted that if the turtle does
+         when the కుంచిక moves. It should be noted that if the కుంచిక does
          not move in bigger and bigger paths, the program will get stuck in
          an infinite loop.
        </p>
        <code>function spiral () {
-  wrap(false);
+   చుట్టు(false);
   var i = 1;
-  while ( turtle.pos.x < గరిష్ఠX()
-          && turtle.pos.x > కనిష్ఠX()
-          && turtle.pos.y < గరిష్ఠY()
-          && turtle.pos.y > కనిష్ఠY()) {
+  while ( కుంచిక.pos.x < గరిష్ఠX()
+          && కుంచిక.pos.x > కనిష్ఠX()
+          && కుంచిక.pos.y < గరిష్ఠY()
+          && కుంచిక.pos.y > కనిష్ఠY()) {
     ముందుకు_జరుగు(i + i);
     కుడి_వైపు_తిరుగు(90 - i);
     i = i + 1;
@@ -1538,7 +1538,7 @@ for (i=0; i<3; i=i+1) {
   }
 }
 
-setpos(కనిష్ఠX() + 20, కనిష్ఠY() + 20); // go toward bottom left of canvas
+స్థానము_మార్చు(కనిష్ఠX() + 20, కనిష్ఠY() + 20); // go toward bottom left of canvas
 కోణము(90);
 kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch line most of the width of the canvas
 </code>
@@ -1567,33 +1567,33 @@ kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch 
        should be made consistently to avoid a jerky appearance.
      </p>
      <p>
-       This turtle graphics provide two functions for animation:
-       <code>animate()</code> and <code>delay()</code> that
+       This కుంచిక graphics provide two functions for animation:
+       <code>ఆడించు()</code> and <code>విలంబించు()</code> that
        are discussed more thoroughly below.
      </p>
      <h3>Animate</h3>
        <p>
-         The <code>animate()</code> function is used to call the same function
+         The <code>ఆడించు()</code> function is used to call the same function
          over and over at a fixed period of time. The Turtle Graphics <a
-         href="turtle.html?example=clock">analog clock</a> is an example that
+         href="కుంచిక.html?example=clock">analog clock</a> is an example that
          uses the animate function to redraw the clock and its hands every second.
        </p>
      <h3>Delay</h3>
        <p>
-         The <code>delay()</code> function is used to call a function once after
+         The <code>విలంబించు()</code> function is used to call a function once after
          a period of time. For an animation there can be a series of
          functions that are invoked in a time sequence to provide the animation.
        </p>
        <p>
-         The <a href="turtle.html?example=dividing_circle">Dividing a Circle
+         The <a href="కుంచిక.html?example=dividing_circle">Dividing a Circle
          </a> example uses the
-         <code>delay()</code> function to draw a set of circles around a
+         <code>విలంబించు()</code> function to draw a set of circles around a
          preceding set of circles.  This is an example of building up a
          drawing of more and more complex parts.
        </p>
        <p>
-         The <a href="turtle.html?example=koch_snowflake">Koch Snowflake
-         </a> example uses the <code>delay()</code> function to draw successive
+         The <a href="కుంచిక.html?example=koch_snowflake">Koch Snowflake
+         </a> example uses the <code>విలంబించు()</code> function to draw successive
          drawings.
          This example shows the power of using both the delay function to
          draw a snowflake of a particular order and recursion to build the
@@ -1604,7 +1604,7 @@ kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch 
        <p>
          More can be learned by looking at the JavaScript source code that
          implements the
-         turtle graphic functions. While the functions are designed to hide the
+         కుంచిక graphic functions. While the functions are designed to hide the
          details of the mathematics (mostly trigonometry) that are necessary
          to plot a line of a given కోణము and length on a canvas that only
          understands the <em>x</em> and <em>y</em> coordinates of a Cartesian
@@ -1635,23 +1635,23 @@ kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch 
        </p>
        <ul>
          <li>
-           <strong>turtle.html</strong> defines the layout and content of the
+           <strong>కుంచిక.html</strong> defines the layout and content of the
            page as basic HTML. This page contains the text of the language
            reference, the help text and this tutorial.
          </li>
          <li>
-           <strong>turtle.css</strong> defines the styling used to make the page
+           <strong>కుంచిక.css</strong> defines the styling used to make the page
            more readable as a <strong>Cascading Style Sheet</strong> (CSS).
            CSS allows the artistic design of the page to be separated from
            the functional underpinnings of the page.
          </li>
          <li>
-           <strong>turtle.js</strong> defines the basic turtle graphics
+           <strong>కుంచిక.js</strong> defines the basic కుంచిక graphics
            functions for JavaScript. In theory this module could be included
-           in other programs which use turtle graphics.
+           in other programs which use కుంచిక graphics.
          </li>
          <li>
-           <strong>turtle_console.js</strong> defines the behind the scenes
+           <strong>కుంచిక_console.js</strong> defines the behind the scenes
            mechanisms to make this page work as a code development laboratory.
            It has the functions to pop up this tutorial and functions to hide
            and show the language reference and definitions sections of the work
@@ -1666,7 +1666,7 @@ kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch 
            area of the console where it may be viewed and modified.
            There are two ways to load an example. One is by using the example
            select button of the IDE. The other is by specifying the example
-           in the url of turtle graphics, as in
+           in the url of కుంచిక graphics, as in
            <a href="https://TurtleGraphics.fun?example=clock">
            https://TurtleGraphics.fun?example=clock"</a>
            The "TurtleGraphics.fun" part specifies the internet address of
@@ -1679,8 +1679,8 @@ kochForward(గరిష్ఠX() + గరిష్ఠX() - 40); // draw a Koch 
        </ul>
        The source code for all of the tools and the examples may also be viewed
        directly at
-       <a href="https://www.github.com/kirkcarlson/js-turtle">
-       https://www.github.com/kirkcarlson/js-turtle</a>.
+       <a href="https://www.github.com/kirkcarlson/js-కుంచిక">
+       https://www.github.com/kirkcarlson/js-కుంచిక</a>.
 </article>
 </body>
 </html>
