@@ -93,7 +93,7 @@ function B (side,gen) {
 
 function delayedHilbert () {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
 
   // targeting 80% of window
   size = .80 * Math.min( గరిష్ఠX(),గరిష్ఠY())*2

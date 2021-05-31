@@ -104,7 +104,7 @@ function drawAll() {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   కుంచికను_దాచు()
 
   side =   Math.min( 2*గరిష్ఠX()/ 12/ 1.5, 2*గరిష్ఠY()/ 16/ Math.sqrt(3))

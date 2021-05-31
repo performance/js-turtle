@@ -38,7 +38,7 @@ function decagon(s, fcolor) {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు( false)
+   wrap( false)
   కుడి_వైపు_తిరుగు(90)
   side = 40
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())

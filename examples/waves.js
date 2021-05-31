@@ -19,7 +19,7 @@ distances are known. This math is a bit tough.
 //
 function demo() {
 	ఆది_స్థితి()
-	 చుట్టు(false)
+	 wrap(false)
 	కుంచికను_దాచు()
 	size=200
 	step = 4

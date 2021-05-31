@@ -30,7 +30,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())
   //size=200
   inr = .33* size

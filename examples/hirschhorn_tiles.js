@@ -369,7 +369,7 @@ function hirchhorn(side) {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())
   hirchhorn(size)
 }

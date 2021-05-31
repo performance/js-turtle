@@ -79,7 +79,7 @@ function mizenSimple() {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   side = 40 // 1/2 basic face of hexagon, width...
   side = .15 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   mizenSimple()

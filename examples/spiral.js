@@ -23,7 +23,7 @@ function spiral2() {
 
 function spiral3() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   n=0
   while (n<40) {
     ముందుకు_జరుగు(n)
@@ -34,7 +34,7 @@ function spiral3() {
 
 function spiral() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   n=0
   while (n<1000) {
     ముందుకు_జరుగు(n)

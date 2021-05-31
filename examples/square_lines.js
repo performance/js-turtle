@@ -2,7 +2,7 @@
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   side = 30
   side2 = side + side
   offset = true

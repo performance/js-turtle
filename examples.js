@@ -221,7 +221,7 @@ function demo() {\n\
   count = 0\n\
   yB = గరిష్ఠY() + small\n\
   xB = కనిష్ఠX()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
@@ -328,7 +328,7 @@ function rain (drops, n) {\n\
 }\n\
 \n\
 function let_them_drop (n) {\n\
-    చుట్టు(false);\n\
+    wrap(false);\n\
    కుంచికను_దాచు();\n\
    drops = init_drops(n);\n\
    ఆడించు(function () { rain(drops, n)}, 100);\n\
@@ -373,7 +373,7 @@ function demo() {\n\
   count = 0\n\
   yB = గరిష్ఠY()\n\
   xB = కనిష్ఠX()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
@@ -1467,7 +1467,7 @@ function spiral( ) {\n\
 \n\
 function demo () {\n\
     ఆది_స్థితి()\n\
-     చుట్టు(false)\n\
+     wrap(false)\n\
     కలమును_కింద_పెట్టు()\n\
     spiral( )\n\
 }\n\
@@ -1493,7 +1493,7 @@ function drawRowOfDots () {\n\
 \n\
 function colorChangingDots () {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   స్థానము_మార్చు(కనిష్ఠX(),0)\n\
   కోణము(90)\n\
   కలమును_కింద_పెట్టు()\n\
@@ -1765,7 +1765,7 @@ function boxTheCompass(size) {\n\
 \n\
 function demo () {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుంచికను_దాచు() // do not want it to show, so do this early\n\
   కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // do not redraw image each move\n\
   size = 2* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -1956,7 +1956,7 @@ function demo () {\n\
   ఆది_స్థితి()\n\
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120\n\
 console.log("size "+ size)\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుంచికను_దాచు() // don"t want it to show,  do this early\n\
   కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // don"t redraw image each move\n\
 \n\
@@ -2060,7 +2060,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //size=200\n\
   inr = .33* size\n\
@@ -2369,7 +2369,7 @@ function delayedDivide() {\n\
 function demo() {\n\
   // initialize\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుంచికను_దాచు()\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(side/4)\n\
@@ -2648,7 +2648,7 @@ function delayedDivide() {\n\
 function startDelayedExpansion() {\n\
   //move to the origin of the big triangle\n\
   reset ()\n\
-   చుట్టు( false)\n\
+   wrap( false)\n\
   రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
 \n\
@@ -2737,7 +2737,7 @@ basically:\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   side = targetSide\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(side/2)\n\
@@ -2865,7 +2865,7 @@ function demo() {\n\
   కుంచికను_దాచు();\n\
   కేంద్రకమునకు_వెళ్ళు();\n\
   కలమును_పైకి_ఎత్తు();\n\
-   చుట్టు(false);\n\
+   wrap(false);\n\
   వృత్తము(rad);\n\
   i = 1;\n\
   delay (tier, delayTime);\n\
@@ -4417,7 +4417,7 @@ function demo() {\n\
   count = 0\n\
   yB = గరిష్ఠY() + sSide\n\
   xB = కనిష్ఠX()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
@@ -5093,7 +5093,7 @@ function demo() {\n\
   \n\
   \n\
   ఆది_స్థితి();\n\
-   చుట్టు(false);\n\
+   wrap(false);\n\
   వెడల్పు(1);\n\
   స్థానము_మార్చు(కనిష్ఠX()-1, గరిష్ఠY()-1);\n\
   \n\
@@ -5218,7 +5218,7 @@ function B (side,gen) {\n\
 \n\
 function delayedHilbert () {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
 \n\
   // targeting 80% of window\n\
   size = .80 * Math.min( గరిష్ఠX(),గరిష్ఠY())*2\n\
@@ -5622,7 +5622,7 @@ function hirchhorn(side) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   hirchhorn(size)\n\
 }\n\
@@ -5681,7 +5681,7 @@ function demo() {\n\
   count = 0\n\
   s = 50\n\
   rowOffset = s/3 // offset between rows\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -5962,7 +5962,7 @@ testRates();\n\
 \n\
 //** Drawing functions **\n\
 function drawEWstreet() {\n\
-   చుట్టు(false);\n\
+   wrap(false);\n\
   స్థానము_మార్చు(కనిష్ఠX(),0);\n\
   కోణము(90);\n\
   కలమును_కింద_పెట్టు();\n\
@@ -8247,7 +8247,7 @@ function vert( size) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు( false)\n\
+   wrap( false)\n\
   size = 100\n\
   horiz( size)\n\
   vert( size)\n\
@@ -8322,7 +8322,7 @@ function newRow(lastx, lasty) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   side = 20\n\
   rowx = కనిష్ఠX() - side // - 5.5 * side\n\
   rowy = కనిష్ఠY()// +2*side\n\
@@ -8415,7 +8415,7 @@ function quadrangle( ){\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   rows = 4\n\
   columns = 5\n\
 \n\
@@ -8723,7 +8723,7 @@ function decagon(s, fcolor) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు( false)\n\
+   wrap( false)\n\
   కుడి_వైపు_తిరుగు(90)\n\
   side = 40\n\
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -8938,7 +8938,7 @@ function mizenSimple() {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   side = 40 // 1/2 basic face of hexagon, width...\n\
   side = .15 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   mizenSimple()\n\
@@ -9159,7 +9159,7 @@ function antilayer (side, innerSide, offset) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుంచికను_దాచు()\n\
   side = .023 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
 \n\
@@ -9215,7 +9215,7 @@ function layer (side, offsetAngle) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   side = 14\n\
   side = .033 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   factor = Math.sqrt(2 + Math.sqrt( 2))\n\
@@ -9426,7 +9426,7 @@ function drawAll() {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుంచికను_దాచు()\n\
 \n\
   side =   Math.min( 2*గరిష్ఠX()/ 12/ 1.5, 2*గరిష్ఠY()/ 16/ Math.sqrt(3))\n\
@@ -9641,7 +9641,7 @@ function nextColor() { \n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   cent( side, 12)\n\
   కుంచికను_దాచు()\n\
@@ -9719,7 +9719,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు( false)\n\
+   wrap( false)\n\
   size = 10\n\
 \n\
   sidea = size\n\
@@ -11160,7 +11160,7 @@ function spiral2() {\n\
 \n\
 function spiral3() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   n=0\n\
   while (n<40) {\n\
     ముందుకు_జరుగు(n)\n\
@@ -11171,7 +11171,7 @@ function spiral3() {\n\
 \n\
 function spiral() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   n=0\n\
   while (n<1000) {\n\
     ముందుకు_జరుగు(n)\n\
@@ -11198,7 +11198,7 @@ square_lines ='\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   side = 30\n\
   side2 = side + side\n\
   offset = true\n\
@@ -11302,7 +11302,7 @@ function ccwRow( side) {\n\
 \n\
 \n\
 function demo() {\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   side = 30\n\
   for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {\n\
     yనియోగించు(i)\n\
@@ -11348,7 +11348,7 @@ function demo() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -11421,7 +11421,7 @@ function star (side) {\n\
 \n\
 function stamps () {\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   var x = కనిష్ఠX()\n\
   while (x <= గరిష్ఠX()) {\n\
     var y = కనిష్ఠY()\n\
@@ -11463,7 +11463,7 @@ function starburst () {\n\
 \n\
 function demo () {\n\
   ఆది_స్థితి()\n\
-   చుట్టు( false)\n\
+   wrap( false)\n\
   starburst()\n\
 } \n\
 '
@@ -11515,7 +11515,7 @@ function quadRhom( side) {\n\
 \n\
 function demo() {\n\
   ఆది_స్థితి()\n\
-   చుట్టు( false)\n\
+   wrap( false)\n\
   కుంచికను_దాచు()\n\
   ang = 60\n\
   side = 20\n\
@@ -11629,7 +11629,7 @@ function demo() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3 // offset between rows\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -11737,7 +11737,7 @@ function demo() {\n\
   rowCount = 0\n\
   column = కనిష్ఠX()\n\
   row = గరిష్ఠY()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
@@ -11848,7 +11848,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   starSize = .05 *flagHeight // star size\n\
   //outline flag and field\n\
   ఆది_స్థితి()\n\
-   చుట్టు(false)\n\
+   wrap(false)\n\
   కుంచికను_దాచు()\n\
   స్థానము_మార్చు(xBase, yBase)\n\
   కోణము (90)\n\
@@ -12231,7 +12231,7 @@ distances are known. This math is a bit tough.\n\
 //\n\
 function demo() {\n\
 	ఆది_స్థితి()\n\
-	 చుట్టు(false)\n\
+	 wrap(false)\n\
 	కుంచికను_దాచు()\n\
 	size=200\n\
 	step = 4\n\

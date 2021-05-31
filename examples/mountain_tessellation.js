@@ -66,7 +66,7 @@ function newRow(lastx, lasty) {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   side = 20
   rowx = కనిష్ఠX() - side // - 5.5 * side
   rowy = కనిష్ఠY()// +2*side

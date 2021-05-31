@@ -35,7 +35,7 @@ function antilayer (side, innerSide, offset) {
 
 function demo() {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   కుంచికను_దాచు()
   side = .023 * Math.min( గరిష్ఠX(), గరిష్ఠY())
 

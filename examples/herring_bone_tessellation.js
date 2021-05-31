@@ -32,7 +32,7 @@ function demo() {
   count = 0
   yB = గరిష్ఠY() + sSide
   xB = కనిష్ఠX()
-   చుట్టు(false)
+   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
   రంగు_మార్చు( తెలుపు )
 

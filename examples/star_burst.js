@@ -22,6 +22,6 @@ function starburst () {
 
 function demo () {
   ఆది_స్థితి()
-   చుట్టు( false)
+   wrap( false)
   starburst()
 } 

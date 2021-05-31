@@ -44,7 +44,7 @@ function demo() {
   కుంచికను_దాచు();
   కేంద్రకమునకు_వెళ్ళు();
   కలమును_పైకి_ఎత్తు();
-   చుట్టు(false);
+   wrap(false);
   వృత్తము(rad);
   i = 1;
   delay (tier, delayTime);

@@ -47,7 +47,7 @@ function demo() {
   count = 0
   yB = గరిష్ఠY() + small
   xB = కనిష్ఠX()
-   చుట్టు(false)
+   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50

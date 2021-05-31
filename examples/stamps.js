@@ -16,7 +16,7 @@ function star (side) {
 
 function stamps () {
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   var x = కనిష్ఠX()
   while (x <= గరిష్ఠX()) {
     var y = కనిష్ఠY()

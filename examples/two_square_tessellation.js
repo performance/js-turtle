@@ -36,7 +36,7 @@ function demo() {
   rowCount = 0
   column = కనిష్ఠX()
   row = గరిష్ఠY()
-   చుట్టు(false)
+   wrap(false)
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50

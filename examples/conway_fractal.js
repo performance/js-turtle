@@ -282,7 +282,7 @@ function delayedDivide() {
 function demo() {
   // initialize
   ఆది_స్థితి()
-   చుట్టు(false)
+   wrap(false)
   కుంచికను_దాచు()
   కలమును_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(side/4)

@@ -182,7 +182,7 @@ testRates();
 
 //** Drawing functions **
 function drawEWstreet() {
-   చుట్టు(false);
+   wrap(false);
   స్థానము_మార్చు(కనిష్ఠX(),0);
   కోణము(90);
   కలమును_కింద_పెట్టు();

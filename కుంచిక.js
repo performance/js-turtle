@@ -464,17 +464,17 @@ function కుంచిక_కదిలిన_ప్రతి_సారీ_చ�
 
 
 /*******************************************************************************
- * చుట్టు -- set the desired state of the boundary wrapping function
- * చుట్టు 
+ * wrap -- set the desired state of the boundary wrapping function
+ * wrap 
  * arguments:
  *   bool: desired state of boundary wrapping function
  *
  * returns: None
  ******************************************************************************/
-function చుట్టు(bool) {
-   కుంచిక.చుట్టు = bool;
+function wrap(bool) {
+   కుంచిక.wrap = bool;
 }
-wrap = చుట్టు;
+// wrap = wrap;
 
 
 /*******************************************************************************

@@ -51,7 +51,7 @@ function demo() {
   count = 0
   s = 50
   rowOffset = s/3 // offset between rows
-   చుట్టు(false)
+   wrap(false)
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())
   కుడి_వైపు_తిరుగు( 90)
 
