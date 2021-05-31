@@ -2818,7 +2818,7 @@ function demo() {\n\
   ticks (270, -కనిష్ఠX(), 10)\n\
 }\n\
 '
-dividing_వృత్తము ='\
+dividing_circle ='\
 // Dividing a Circle -- divide a వృత్తము with other circles\n\
 \n\
 // *** GLOBALS ***\n\
