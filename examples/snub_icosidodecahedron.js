@@ -18,8 +18,8 @@ function leftTriangle(side) {
 }
 
 function leftTab( side) {
-  var x = కుంచిక.pos.x
-  var y = కుంచిక.pos.y
+  var x = కుంచిక.స్థానము.x
+  var y = కుంచిక.స్థానము.y
   ఎడమ_వైపు_తిరుగు( 180 - 45)
   ముందుకు_జరుగు( side * .2)
   ఎడమ_వైపు_తిరుగు( 45)

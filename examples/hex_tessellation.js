@@ -12,7 +12,7 @@ function hexagon (side) {
 }
 
 function repeatToRight (side) {
-  while (కుంచిక.pos.x < గరిష్ఠX()) {
+  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {
     hexagon(side);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(side * 2);
@@ -22,7 +22,7 @@ function repeatToRight (side) {
 }
 
 function repeatToLeft(side) {
-  while (కుంచిక.pos.x > కనిష్ఠX())
+  while (కుంచిక.స్థానము.x > కనిష్ఠX())
    {
     hexagon(side);
     కలమును_పైకి_ఎత్తు();
@@ -42,7 +42,7 @@ function demo() {
   వెడల్పు(1);
   స్థానము_మార్చు(కనిష్ఠX()-1, గరిష్ఠY()-1);
   
-  while (కుంచిక.pos.y > కనిష్ఠY()) {
+  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {
     repeatToRight(side); // draw a row of hexagons
   
     //advance to next row on right side

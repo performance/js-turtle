@@ -51,9 +51,9 @@ function demo() {
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while( కుంచిక.pos.y > కనిష్ఠY()) {
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {
     స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       square(small, "yellow")
       కలమును_పైకి_ఎత్తు()
@@ -65,7 +65,7 @@ function demo() {
     yB = yB - small
 
     స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()
@@ -74,7 +74,7 @@ function demo() {
     yB = yB - sSide
 
     స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       square(small, "yellow")
       vRect(sSide, lSide, "lightblue")
@@ -86,7 +86,7 @@ function demo() {
     yB = yB - small
 
     స్థానము_మార్చు(xB- lSide +small, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()

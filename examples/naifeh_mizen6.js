@@ -65,8 +65,8 @@ function mizen( side, lColor, fColor) {
 function mizen6(side) {
   కలమును_పైకి_ఎత్తు()
   for (var j=0; j<6; j++) {
-    mx = కుంచిక.pos.x
-    my = కుంచిక.pos.y
+    mx = కుంచిక.స్థానము.x
+    my = కుంచిక.స్థానము.y
     ma = కుంచిక.కోణము
     వెడల్పు(0)
     mizen( side, "white", "blue")

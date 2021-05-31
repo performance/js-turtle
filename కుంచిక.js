@@ -68,7 +68,7 @@ function Pos (x,y) {
 }
 
 function Turtle () {
-  this.pos = new Pos(0,0)
+  this.స్థానము = new Pos(0,0)
   this.కోణము = 0
   this.penDown = true
   this.వెడల్పు = 1
@@ -92,8 +92,8 @@ console.log("Tangle:" + కుంచిక.కోణము + "Tfont: "+ కు�
  * returns: None
  ******************************************************************************/
 function initialize() {
-  కుంచిక.pos.x = 0
-  కుంచిక.pos.y = 0
+  కుంచిక.స్థానము.x = 0
+  కుంచిక.స్థానము.y = 0
   కుంచిక.కోణము = 0
   కుంచిక.penDown = true
   కుంచిక.వెడల్పు = 1
@@ -238,13 +238,13 @@ function updateHighWater( x, y, radx, rady) {
 function svgAppendPath( rx, ry) {
   // TODO(DSR) : uncomment this.
   // console.log( "sAP:",rx, ry, కుంచిక.penDown, "last:", svgLastMove)
-  updateHighWater( కుంచిక.pos.x, కుంచిక.pos.y)
+  updateHighWater( కుంచిక.స్థానము.x, కుంచిక.స్థానము.y)
 
   if (కుంచిక.penDown) { // pen down
     if (svgPath === "") { // path not open, putting off as long as possible
-      svgOpenPath( కుంచిక.pos.x - rx, కుంచిక.pos.y - ry); // position of where కుంచిక started line segment
+      svgOpenPath( కుంచిక.స్థానము.x - rx, కుంచిక.స్థానము.y - ry); // position of where కుంచిక started line segment
       svgLastMove = undefined; // since the open was absolute, don't need lead in
-      updateHighWater( కుంచిక.pos.x - rx, కుంచిక.pos.y - ry)
+      updateHighWater( కుంచిక.స్థానము.x - rx, కుంచిక.స్థానము.y - ry)
     }
     if (svgLastMove !== undefined) { // move the accumulated movement
       svgD = svgD + " m " + round( svgLastMove[0], svgPrecision) + " " + round( svgLastMove[1], svgPrecision)
@@ -321,8 +321,8 @@ function చిత్రీకరించు() {
    clearContext(కుంచికContext);
    // draw the కుంచిక, if it is visible
    if (కుంచిక.visible) {
-      var x = కుంచిక.pos.x;
-      var y = కుంచిక.pos.y;
+      var x = కుంచిక.స్థానము.x;
+      var y = కుంచిక.స్థానము.y;
       var w = 10;
       var h = 15;
       కుంచికContext.save();
@@ -438,12 +438,12 @@ goHome = కేంద్రకమునకు_వెళ్ళు;
  * returns: None
  ******************************************************************************/
 function ఆట_ఆపు() {
-  while (intervals.length > 0) {
+  యావత్_పరిక్రమ( () => (intervals.length > 0), () =>  {
     clearInterval(intervals.pop());
-  }
-  while (timeouts.length > 0) {
+  } );
+  యావత్_పరిక్రమ( () => (timeouts.length > 0), () => {
     clearTimeout(timeouts.pop());
-  }
+  } );
   document.getElementById("stopButton").hidden = true;
 }
 stopAnimation = ఆట_ఆపు;
@@ -551,10 +551,10 @@ function ముందుకు_జరుగు(distance) {
    var newX;
    var newY;
    var distance;
-   var entryX = కుంచిక.pos.x;
-   var entryY = కుంచిక.pos.y;
-   var x = కుంచిక.pos.x;
-   var y = కుంచిక.pos.y;
+   var entryX = కుంచిక.స్థానము.x;
+   var entryY = కుంచిక.స్థానము.y;
+   var x = కుంచిక.స్థానము.x;
+   var y = కుంచిక.స్థానము.y;
 
    // get the boundaries of the canvas
    var గరిష్ఠ_X = imageContext.canvas.width / 2;
@@ -571,8 +571,8 @@ function ముందుకు_జరుగు(distance) {
       distance -= distanceToEdge;
       x = otherBound;
       y = edgeY;
-      కుంచిక.pos.x = x;
-      కుంచిక.pos.y = y;
+      కుంచిక.స్థానము.x = x;
+      కుంచిక.స్థానము.y = y;
       svgAppendPath( x - entryX, y - entryY)
    }
 
@@ -584,16 +584,16 @@ function ముందుకు_జరుగు(distance) {
       distance -= distanceToEdge;
       x = edgeX;
       y = otherBound;
-      కుంచిక.pos.x = x;
-      కుంచిక.pos.y = y;
+      కుంచిక.స్థానము.x = x;
+      కుంచిక.స్థానము.y = y;
       svgAppendPath( x - entryX, y - entryY)
    }
 
    // don't wrap the కుంచిక on any boundary
    function noWrap(x, y) {
       imageContext.lineTo(x, y);
-      కుంచిక.pos.x = x;
-      కుంచిక.pos.y = y;
+      కుంచిక.స్థానము.x = x;
+      కుంచిక.స్థానము.y = y;
       distance = 0;
       svgAppendPath( x - entryX, y - entryY)
    }
@@ -606,7 +606,7 @@ function ముందుకు_జరుగు(distance) {
    }
 
    // trace out the forward steps
-   while (distance > 0) {
+   యావత్_పరిక్రమ( () => (distance > 0),() => {
       // move the to current location of the కుంచిక
       if (! కుంచిక.ఆకారాము) {
         imageContext.moveTo(x, y);
@@ -635,7 +635,7 @@ function ముందుకు_జరుగు(distance) {
       } else { // wrap is not on.
          noWrap(newX, newY);
       }
-   }
+   });
    // draw only if the pen is currently down.
    if (! కుంచిక.ఆకారాము && కుంచిక.penDown) {
       imageContext.stroke();
@@ -721,12 +721,12 @@ function ఎడమవైపు_చాపాము (వ్యాసార్థ�
   }
   var startAngle = కుంచిక.కోణము; // in radians from 12 o'clock .. heading is same as start
   var counterclockwise = true;
-  var centerX = కుంచిక.pos.x - వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // left of కుంచిక
-  var centerY = కుంచిక.pos.y + వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
+  var centerX = కుంచిక.స్థానము.x - వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // left of కుంచిక
+  var centerY = కుంచిక.స్థానము.y + వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
   stopAngle = constrain( (startAngle - degToRad(extent)), 0, 2*Math.PI); // in radians CCW
   కుంచిక.కోణము = stopAngle;
-  కుంచిక.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
-  కుంచిక.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
+  కుంచిక.స్థానము.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
+  కుంచిక.స్థానము.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
 
   // correct for flipping of x values, this changes rotation and angles
   counterclockwise = !counterclockwise;
@@ -755,7 +755,7 @@ dx and dy are the center of the arc
 
 so this translates "ఎడమవైపు_చాపాము (వ్యాసార్థము, extent)" roughly to:
 
-<path ... d="... a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 <కుంచిక.pos.x> + <వ్యాసార్థము> * sin(<కుంచిక.heading>) <కుంచిక.pos.x> + <వ్యాసార్థము> * cos(<కుంచిక.heading>)
+<path ... d="... a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 <కుంచిక.స్థానము.x> + <వ్యాసార్థము> * sin(<కుంచిక.heading>) <కుంచిక.స్థానము.x> + <వ్యాసార్థము> * cos(<కుంచిక.heading>)
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
 */
@@ -778,12 +778,12 @@ function కుడివైపు_చాపాము(వ్యాసార్థ
   }
   var startAngle = Math.PI + కుంచిక.కోణము; // in radians .. heading is same as start
   var counterclockwise = false;
-  var centerX = కుంచిక.pos.x + వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // right of కుంచిక
-  var centerY = కుంచిక.pos.y - వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
+  var centerX = కుంచిక.స్థానము.x + వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // right of కుంచిక
+  var centerY = కుంచిక.స్థానము.y - వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
   stopAngle = constrain( startAngle + degToRad(extent), 0, 2*Math.PI); // in radians CW
   కుంచిక.కోణము = stopAngle + Math.PI;
-  కుంచిక.pos.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
-  కుంచిక.pos.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
+  కుంచిక.స్థానము.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
+  కుంచిక.స్థానము.y = centerY - వ్యాసార్థము * Math.sin(stopAngle);
 
   // correct for flipping of x values, this changes rotation and angles
   counterclockwise = !counterclockwise;
@@ -828,17 +828,17 @@ function వృత్తము(వ్యాసార్థము, extent, CW) {
   //imageContext.fillStyle=కుంచిక.రంగు;
   // negate angles and CW due to context translation
   if (extent === undefined) {
-    imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, వ్యాసార్థము, 0, 2*Math.PI);
+    imageContext.arc (కుంచిక.స్థానము.x, కుంచిక.స్థానము.y, వ్యాసార్థము, 0, 2*Math.PI);
     svgClosePath()
-    svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.pos.x, svgPrecision) + '" cy="' + round( కుంచిక.pos.y, svgPrecision)
+    svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.స్థానము.x, svgPrecision) + '" cy="' + round( కుంచిక.స్థానము.y, svgPrecision)
               + '" r="' + round( వ్యాసార్థము, svgPrecision) + '"'
               + ' style="stroke:' + కుంచిక.రంగు + '; stroke-width:' + కుంచిక.వెడల్పు + '; fill:none"/>\n'; 
-    updateHighWater( కుంచిక.pos.x, కుంచిక.pos.y,  వ్యాసార్థము + కుంచిక.వెడల్పు, వ్యాసార్థము + కుంచిక.వెడల్పు)
+    updateHighWater( కుంచిక.స్థానము.x, కుంచిక.స్థానము.y,  వ్యాసార్థము + కుంచిక.వెడల్పు, వ్యాసార్థము + కుంచిక.వెడల్పు)
    
   } else if (CW) {
-    imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, వ్యాసార్థము, -startAngle, -(startAngle+degToRad(extent)), CW);
+    imageContext.arc (కుంచిక.స్థానము.x, కుంచిక.స్థానము.y, వ్యాసార్థము, -startAngle, -(startAngle+degToRad(extent)), CW);
   } else {
-    imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, వ్యాసార్థము, -startAngle, -(startAngle-degToRad(extent)), CW);
+    imageContext.arc (కుంచిక.స్థానము.x, కుంచిక.స్థానము.y, వ్యాసార్థము, -startAngle, -(startAngle-degToRad(extent)), CW);
   }
   // draw it regardless of pen up or down
   imageContext.stroke();
@@ -866,9 +866,9 @@ so this translates "వృత్తము (వ్యాసార్థము, ex
 
 need to compute path start, path end and వృత్తము center
 కోణము start = కుంచిక.heading
-వృత్తము center = కుంచిక.pos
-path start = కుంచిక.pos.x + వ్యాసార్థము * Math.cos( కుంచిక.కోణము), కుంచిక.pos.y + వ్యాసార్థము * Math.sin( కుంచిక.కోణము)
-path end = కుంచిక.pos.x + వ్యాసార్థము * Math.cos( కుంచిక.కోణము + extent), కుంచిక.pos.y + వ్యాసార్థము * Math.sin( కుంచిక.కోణము + extent)
+వృత్తము center = కుంచిక.స్థానము
+path start = కుంచిక.స్థానము.x + వ్యాసార్థము * Math.cos( కుంచిక.కోణము), కుంచిక.స్థానము.y + వ్యాసార్థము * Math.sin( కుంచిక.కోణము)
+path end = కుంచిక.స్థానము.x + వ్యాసార్థము * Math.cos( కుంచిక.కోణము + extent), కుంచిక.స్థానము.y + వ్యాసార్థము * Math.sin( కుంచిక.కోణము + extent)
 <path ... d="M <pathStartX> <pathStartY a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 0 circleCenterX circleCenterY l pathEndX pathEndY
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
@@ -892,13 +892,13 @@ function నిండు_వృత్తము(size) {
   imageContext.beginPath();
   imageContext.fillStyle=కుంచిక.రంగు;
   imageContext.strokeStyle=కుంచిక.రంగు;
-  imageContext.arc (కుంచిక.pos.x, కుంచిక.pos.y, size, 0, 2*Math.PI);
+  imageContext.arc (కుంచిక.స్థానము.x, కుంచిక.స్థానము.y, size, 0, 2*Math.PI);
   // draw it regardless of pen up or down
   imageContext.stroke();
   imageContext.fill();
   imageContext.restore();
   svgClosePath()
-  svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.pos.x, svgPrecision) + '" cy="' + round( కుంచిక.pos.y, svgPrecision)
+  svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.స్థానము.x, svgPrecision) + '" cy="' + round( కుంచిక.స్థానము.y, svgPrecision)
             + '" r="' + round( size, svgPrecision) + '"'
             + ' style="stroke:' + కుంచిక.రంగు + '; stroke-width:' + కుంచిక.వెడల్పు + '; fill:' + కుంచిక.రంగు + '"/>\n';
   drawIf();
@@ -982,8 +982,8 @@ showTurtle = కుంచికను_చూపు;
  * returns: None
  ******************************************************************************/
 function స్థానము_మార్చు(x,y) {
-   కుంచిక.pos.x = x;
-   కుంచిక.pos.y = y;
+   కుంచిక.స్థానము.x = x;
+   కుంచిక.స్థానము.y = y;
    drawIf();
 }
 
@@ -1003,7 +1003,7 @@ goto = స్థానము_మార్చు;
  * returns: None
  ******************************************************************************/
 function xనియోగించు(x) {
-   కుంచిక.pos.x = x;
+   కుంచిక.స్థానము.x = x;
    drawIf();
 }
 
@@ -1020,7 +1020,7 @@ setx = xనియోగించు;
  * returns: None
  ******************************************************************************/
 function yనియోగించు(y) {
-   కుంచిక.pos.y = y;
+   కుంచిక.స్థానము.y = y;
    drawIf();
 }
 
@@ -1086,7 +1086,7 @@ function background( styl) {
 function వ్రాయి(msg) {
    imageContext.save();
    centerCoords(imageContext);
-   imageContext.translate(కుంచిక.pos.x, కుంచిక.pos.y);
+   imageContext.translate(కుంచిక.స్థానము.x, కుంచిక.స్థానము.y);
    imageContext.transform(1, 0, 0, -1, 0, 0);
    imageContext.rotate(కుంచిక.కోణము - Math.PI/2);
    imageContext.textAlign = "left";
@@ -1433,24 +1433,25 @@ function radToDeg(rad) {
  ******************************************************************************/
 function గాడిలో_పెట్టు(n, low, high) {
   var modulo = high - low;
-  while (n < low) {
+  యావత్_పరిక్రమ( () => (n < low), () => {
     n = n + modulo;
-  }
-  while (n > high) {
+  } );
+  యావత్_పరిక్రమ( () => (n > high), () => {
     n = n - modulo;
-  }
+  } );
   return n;
 }
 constrain = గాడిలో_పెట్టు;
 
 var కుంచికState = new Turtle();
 
+
 function saveTurtleState(tState) {
   // tState is an object defining the state of a కుంచిక
   // కుంచిక is an object defining the current state of the కుంచిక
   //what about the font
-  tState.pos.x = కుంచిక.pos.x
-  tState.pos.y = కుంచిక.pos.y
+  tState.స్థానము.x = కుంచిక.స్థానము.x
+  tState.స్థానము.y = కుంచిక.స్థానము.y
   tState.కోణము = కుంచిక.కోణము
   tState.penDown = కుంచిక.penDown
   tState.వెడల్పు = కుంచిక.వెడల్పు
@@ -1468,8 +1469,8 @@ function restoreTurtleState(tState) {
   // tState is an object defining the state of a కుంచిక
   // కుంచిక is an object defining the current state of the కుంచిక
   //what about the font
-  కుంచిక.pos.x = tState.pos.x
-  కుంచిక.pos.y = tState.pos.y
+  కుంచిక.స్థానము.x = tState.స్థానము.x
+  కుంచిక.స్థానము.y = tState.స్థానము.y
   కుంచిక.కోణము = tState.కోణము
   కుంచిక.penDown = tState.penDown
   కుంచిక.వెడల్పు = tState.వెడల్పు
@@ -1491,7 +1492,7 @@ function restoreTurtleState(tState) {
 function logTurtle( where) {
   // t is an object defining the state of a కుంచిక
   if (where === undefined) where = "???"
-  console.log (where + " x:" + కుంచిక.pos.x + " y:" + కుంచిక.pos.y + " కోణము:" + కుంచిక.కోణము + " రంగు:" + కుంచిక.రంగు)
+  console.log (where + " x:" + కుంచిక.స్థానము.x + " y:" + కుంచిక.స్థానము.y + " కోణము:" + కుంచిక.కోణము + " రంగు:" + కుంచిక.రంగు)
   console.log ("  penDown:" + కుంచిక.penDown + " వెడల్పు:" + కుంచిక.వెడల్పు + " visible:" + కుంచిక.visible)
   console.log ("  redraw:" + కుంచిక.redraw + " shape:" + కుంచిక.ఆకారాము + " wrap:" + కుంచిక.wrap)
   console.log ("  font:" + కుంచిక.font)

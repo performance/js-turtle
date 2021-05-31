@@ -72,8 +72,8 @@ function drawTriangle (dir, side) {
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = కుంచిక.pos.x
-  var savedY = కుంచిక.pos.y
+  var savedX = కుంచిక.స్థానము.x
+  var savedY = కుంచిక.స్థానము.y
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = కుంచిక.రంగు
   var savedWidth = కుంచిక.వెడల్పు
@@ -99,8 +99,8 @@ function caption (message) {
 
 function shadeTriangle( dir, side, stepsize) {
   console.log( "sT: " + dir + " " + side + " " + stepsize)
-  var x = కుంచిక.pos.x
-  var y = కుంచిక.pos.y
+  var x = కుంచిక.స్థానము.x
+  var y = కుంచిక.స్థానము.y
   var steps = Math.floor( side/stepsize)
 
   for (var i=0; i< steps; i++) {
@@ -125,8 +125,8 @@ function recursiveDivide( dir, side, level, triangle) {
   //console.log("rD: " + level + " " + triangle)
   if (level > 0) {
     side = 0. + side/root5
-    var x = కుంచిక.pos.x
-    var y = కుంచిక.pos.y
+    var x = కుంచిక.స్థానము.x
+    var y = కుంచిక.స్థానము.y
     
     //draw the first line to point A
     dturn( dir, angleb)
@@ -192,8 +192,8 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
   //console.log( "rDB: " + level + " " + triangle + " " + background + " " + highlight)
   if (level > 0) {
     side = side/root5
-    var x = కుంచిక.pos.x
-    var y = కుంచిక.pos.y
+    var x = కుంచిక.స్థానము.x
+    var y = కుంచిక.స్థానము.y
 
     //move to point A
     కలమును_పైకి_ఎత్తు()

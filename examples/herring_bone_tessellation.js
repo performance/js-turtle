@@ -37,9 +37,9 @@ function demo() {
   రంగు_మార్చు( తెలుపు )
 
   s = 50
-  while( కుంచిక.pos.y > కనిష్ఠY()) {
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {
     స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
@@ -49,7 +49,7 @@ function demo() {
     yB = yB - sSide
 
     స్థానము_మార్చు(xB - lSide/2, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
@@ -59,7 +59,7 @@ function demo() {
     yB = yB - sSide
 
     స్థానము_మార్చు(xB - lSide, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
@@ -69,7 +69,7 @@ function demo() {
     yB = yB - sSide
 
     స్థానము_మార్చు(xB - 3/2 * lSide, yB)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")

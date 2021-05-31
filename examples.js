@@ -225,9 +225,9 @@ function demo() {\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
-  while( కుంచిక.pos.y > కనిష్ఠY()) {\n\
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       square(small, "yellow")\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -239,7 +239,7 @@ function demo() {\n\
     yB = yB - small\n\
 \n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "red")\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -248,7 +248,7 @@ function demo() {\n\
     yB = yB - sSide\n\
 \n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       square(small, "yellow")\n\
       vRect(sSide, lSide, "lightblue")\n\
@@ -260,7 +260,7 @@ function demo() {\n\
     yB = yB - small\n\
 \n\
     స్థానము_మార్చు(xB- lSide +small, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "red")\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -378,9 +378,9 @@ function demo() {\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
   s = 50\n\
-  while( కుంచిక.pos.y > కనిష్ఠY()) {\n\
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -388,7 +388,7 @@ function demo() {\n\
     yB = yB - sSide\n\
 \n\
     స్థానము_మార్చు(xB - lSide/2, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -2159,8 +2159,8 @@ function drawTriangle (dir, side) {\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -2186,8 +2186,8 @@ function caption (message) {\n\
 \n\
 function shadeTriangle( dir, side, stepsize) {\n\
   console.log( "sT: " + dir + " " + side + " " + stepsize)\n\
-  var x = కుంచిక.pos.x\n\
-  var y = కుంచిక.pos.y\n\
+  var x = కుంచిక.స్థానము.x\n\
+  var y = కుంచిక.స్థానము.y\n\
   var steps = Math.floor( side/stepsize)\n\
 \n\
   for (var i=0; i< steps; i++) {\n\
@@ -2212,8 +2212,8 @@ function recursiveDivide( dir, side, level, triangle) {\n\
   //console.log("rD: " + level + " " + triangle)\n\
   if (level > 0) {\n\
     side = 0. + side/root5\n\
-    var x = కుంచిక.pos.x\n\
-    var y = కుంచిక.pos.y\n\
+    var x = కుంచిక.స్థానము.x\n\
+    var y = కుంచిక.స్థానము.y\n\
     \n\
     //draw the first line to point A\n\
     dturn( dir, angleb)\n\
@@ -2279,8 +2279,8 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
   //console.log( "rDB: " + level + " " + triangle + " " + background + " " + highlight)\n\
   if (level > 0) {\n\
     side = side/root5\n\
-    var x = కుంచిక.pos.x\n\
-    var y = కుంచిక.pos.y\n\
+    var x = కుంచిక.స్థానము.x\n\
+    var y = కుంచిక.స్థానము.y\n\
 \n\
     //move to point A\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -2483,8 +2483,8 @@ function drawTriangle (dir, side) {\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -2511,8 +2511,8 @@ function caption (message) {\n\
 \n\
 function shadeTriangle( dir, side, stepsize) {\n\
   console.log( "sT: " + dir + " " + side + " " + stepsize)\n\
-  var x = కుంచిక.pos.x\n\
-  var y = కుంచిక.pos.y\n\
+  var x = కుంచిక.స్థానము.x\n\
+  var y = కుంచిక.స్థానము.y\n\
   var steps = Math.floor( side/stepsize)\n\
 \n\
   for (var i=0; i< steps; i++) {\n\
@@ -2538,8 +2538,8 @@ function recursiveDivide( dir, side, level, triangle) {\n\
   //console.log("rD: " + level + " " + triangle)\n\
   if (level > 0) {\n\
     side = 0. + side/root5\n\
-    var x = కుంచిక.pos.x\n\
-    var y = కుంచిక.pos.y\n\
+    var x = కుంచిక.స్థానము.x\n\
+    var y = కుంచిక.స్థానము.y\n\
     \n\
     //draw the first line to point A\n\
     dturn( dir, angleb)\n\
@@ -2946,8 +2946,8 @@ var root2 = Math.sqrt(2)\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -3589,8 +3589,8 @@ function loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {\n\
 \n\
 function caption (message) {\n\
     // save your current position, heading, etc.\n\
-    var savedX = కుంచిక.pos.x\n\
-    var savedY = కుంచిక.pos.y\n\
+    var savedX = కుంచిక.స్థానము.x\n\
+    var savedY = కుంచిక.స్థానము.y\n\
     var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
     var savedColor = కుంచిక.రంగు\n\
     var savedWidth = కుంచిక.వెడల్పు\n\
@@ -4130,8 +4130,8 @@ var size = 0\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -4422,9 +4422,9 @@ function demo() {\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
   s = 50\n\
-  while( కుంచిక.pos.y > కనిష్ఠY()) {\n\
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
@@ -4434,7 +4434,7 @@ function demo() {\n\
     yB = yB - sSide\n\
 \n\
     స్థానము_మార్చు(xB - lSide/2, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
@@ -4444,7 +4444,7 @@ function demo() {\n\
     yB = yB - sSide\n\
 \n\
     స్థానము_మార్చు(xB - lSide, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
@@ -4454,7 +4454,7 @@ function demo() {\n\
     yB = yB - sSide\n\
 \n\
     స్థానము_మార్చు(xB - 3/2 * lSide, yB)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       hRect(sSide, lSide, "darkred")\n\
       vRect(sSide, lSide, "darkred")\n\
@@ -4524,14 +4524,14 @@ py = 0\n\
 pangle = 0\n\
 \n\
 function savePos () {\n\
-  px = కుంచిక.pos.x\n\
-  py = కుంచిక.pos.y\n\
+  px = కుంచిక.స్థానము.x\n\
+  py = కుంచిక.స్థానము.y\n\
   pangle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos() {\n\
-  కుంచిక.pos.x = px\n\
-  కుంచిక.pos.y = py\n\
+  కుంచిక.స్థానము.x = px\n\
+  కుంచిక.స్థానము.y = py\n\
   కుంచిక.కోణము = pangle\n\
 }\n\
 \n\
@@ -4540,14 +4540,14 @@ p2y = 0\n\
 p2angle = 0\n\
 \n\
 function savePos2 () {\n\
-  p2x = కుంచిక.pos.x\n\
-  p2y = కుంచిక.pos.y\n\
+  p2x = కుంచిక.స్థానము.x\n\
+  p2y = కుంచిక.స్థానము.y\n\
   p2angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos2() {\n\
-  కుంచిక.pos.x = p2x\n\
-  కుంచిక.pos.y = p2y\n\
+  కుంచిక.స్థానము.x = p2x\n\
+  కుంచిక.స్థానము.y = p2y\n\
   కుంచిక.కోణము = p2angle\n\
 }\n\
 \n\
@@ -4556,14 +4556,14 @@ p3y = 0\n\
 p3angle = 0\n\
 \n\
 function savePos3 () {\n\
-  p3x = కుంచిక.pos.x\n\
-  p3y = కుంచిక.pos.y\n\
+  p3x = కుంచిక.స్థానము.x\n\
+  p3y = కుంచిక.స్థానము.y\n\
   p3angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos3() {\n\
-  కుంచిక.pos.x = p3x\n\
-  కుంచిక.pos.y = p3y\n\
+  కుంచిక.స్థానము.x = p3x\n\
+  కుంచిక.స్థానము.y = p3y\n\
   కుంచిక.కోణము = p3angle\n\
 }\n\
 \n\
@@ -4572,14 +4572,14 @@ p4y = 0\n\
 p4angle = 0\n\
 \n\
 function savePos4 () {\n\
-  p4x = కుంచిక.pos.x\n\
-  p4y = కుంచిక.pos.y\n\
+  p4x = కుంచిక.స్థానము.x\n\
+  p4y = కుంచిక.స్థానము.y\n\
   p4angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos4() {\n\
-  కుంచిక.pos.x = p4x\n\
-  కుంచిక.pos.y = p4y\n\
+  కుంచిక.స్థానము.x = p4x\n\
+  కుంచిక.స్థానము.y = p4y\n\
   కుంచిక.కోణము = p4angle\n\
 }\n\
 \n\
@@ -4754,14 +4754,14 @@ py = 0\n\
 pangle = 0\n\
 \n\
 function savePos () {\n\
-  px = కుంచిక.pos.x\n\
-  py = కుంచిక.pos.y\n\
+  px = కుంచిక.స్థానము.x\n\
+  py = కుంచిక.స్థానము.y\n\
   pangle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos() {\n\
-  కుంచిక.pos.x = px\n\
-  కుంచిక.pos.y = py\n\
+  కుంచిక.స్థానము.x = px\n\
+  కుంచిక.స్థానము.y = py\n\
   కుంచిక.కోణము = pangle\n\
 }\n\
 \n\
@@ -4770,14 +4770,14 @@ p2y = 0\n\
 p2angle = 0\n\
 \n\
 function savePos2 () {\n\
-  p2x = కుంచిక.pos.x\n\
-  p2y = కుంచిక.pos.y\n\
+  p2x = కుంచిక.స్థానము.x\n\
+  p2y = కుంచిక.స్థానము.y\n\
   p2angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos2() {\n\
-  కుంచిక.pos.x = p2x\n\
-  కుంచిక.pos.y = p2y\n\
+  కుంచిక.స్థానము.x = p2x\n\
+  కుంచిక.స్థానము.y = p2y\n\
   కుంచిక.కోణము = p2angle\n\
 }\n\
 \n\
@@ -4786,14 +4786,14 @@ p3y = 0\n\
 p3angle = 0\n\
 \n\
 function savePos3 () {\n\
-  p3x = కుంచిక.pos.x\n\
-  p3y = కుంచిక.pos.y\n\
+  p3x = కుంచిక.స్థానము.x\n\
+  p3y = కుంచిక.స్థానము.y\n\
   p3angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos3() {\n\
-  కుంచిక.pos.x = p3x\n\
-  కుంచిక.pos.y = p3y\n\
+  కుంచిక.స్థానము.x = p3x\n\
+  కుంచిక.స్థానము.y = p3y\n\
   కుంచిక.కోణము = p3angle\n\
 }\n\
 \n\
@@ -4802,14 +4802,14 @@ p4y = 0\n\
 p4angle = 0\n\
 \n\
 function savePos4 () {\n\
-  p4x = కుంచిక.pos.x\n\
-  p4y = కుంచిక.pos.y\n\
+  p4x = కుంచిక.స్థానము.x\n\
+  p4y = కుంచిక.స్థానము.y\n\
   p4angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos4() {\n\
-  కుంచిక.pos.x = p4x\n\
-  కుంచిక.pos.y = p4y\n\
+  కుంచిక.స్థానము.x = p4x\n\
+  కుంచిక.స్థానము.y = p4y\n\
   కుంచిక.కోణము = p4angle\n\
 }\n\
 \n\
@@ -4973,14 +4973,14 @@ py = 0\n\
 pangle = 0\n\
 \n\
 function savePos () {\n\
-  px = కుంచిక.pos.x\n\
-  py = కుంచిక.pos.y\n\
+  px = కుంచిక.స్థానము.x\n\
+  py = కుంచిక.స్థానము.y\n\
   pangle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos() {\n\
-  కుంచిక.pos.x = px\n\
-  కుంచిక.pos.y = py\n\
+  కుంచిక.స్థానము.x = px\n\
+  కుంచిక.స్థానము.y = py\n\
   కుంచిక.కోణము = pangle\n\
 }\n\
 \n\
@@ -4989,14 +4989,14 @@ p2y = 0\n\
 p2angle = 0\n\
 \n\
 function savePos2 () {\n\
-  p2x = కుంచిక.pos.x\n\
-  p2y = కుంచిక.pos.y\n\
+  p2x = కుంచిక.స్థానము.x\n\
+  p2y = కుంచిక.స్థానము.y\n\
   p2angle = కుంచిక.కోణము\n\
 }\n\
 \n\
 function restorePos2() {\n\
-  కుంచిక.pos.x = p2x\n\
-  కుంచిక.pos.y = p2y\n\
+  కుంచిక.స్థానము.x = p2x\n\
+  కుంచిక.స్థానము.y = p2y\n\
   కుంచిక.కోణము = p2angle\n\
 }\n\
 \n\
@@ -5067,7 +5067,7 @@ function hexagon (side) {\n\
 }\n\
 \n\
 function repeatToRight (side) {\n\
-  while (కుంచిక.pos.x < గరిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
     hexagon(side);\n\
     కలమును_పైకి_ఎత్తు();\n\
     ముందుకు_జరుగు(side * 2);\n\
@@ -5077,7 +5077,7 @@ function repeatToRight (side) {\n\
 }\n\
 \n\
 function repeatToLeft(side) {\n\
-  while (కుంచిక.pos.x > కనిష్ఠX())\n\
+  while (కుంచిక.స్థానము.x > కనిష్ఠX())\n\
    {\n\
     hexagon(side);\n\
     కలమును_పైకి_ఎత్తు();\n\
@@ -5097,7 +5097,7 @@ function demo() {\n\
   వెడల్పు(1);\n\
   స్థానము_మార్చు(కనిష్ఠX()-1, గరిష్ఠY()-1);\n\
   \n\
-  while (కుంచిక.pos.y > కనిష్ఠY()) {\n\
+  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
     repeatToRight(side); // draw a row of hexagons\n\
   \n\
     //advance to next row on right side\n\
@@ -5137,8 +5137,8 @@ var gen = 0\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -5686,8 +5686,8 @@ function demo() {\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
-  while (కుంచిక.pos.y > కనిష్ఠY()) {\n\
-  while (కుంచిక.pos.x < గరిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
+  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
     pentDown(s, nextColor())\n\
     ముందుకు_జరుగు(s)\n\
   }\n\
@@ -5695,7 +5695,7 @@ function demo() {\n\
   ముందుకు_జరుగు( 3/2*s)\n\
   కుడి_వైపు_తిరుగు(90)\n\
   వెనుకకు_జరుగు(s/2)\n\
-  while (కుంచిక.pos.x > కనిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.x > కనిష్ఠX()) {\n\
     pentDown(s, nextColor())\n\
     ముందుకు_జరుగు(s)\n\
   }\n\
@@ -7733,8 +7733,8 @@ function endTest (grid) {\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -8628,8 +8628,8 @@ function jeresh (sid, pAngle, fill) {\n\
     కలమును_కింద_పెట్టు()\n\
     tri( sid, pAngle, fill)\n\
 \n\
-    var tx = కుంచిక.pos.x\n\
-    var ty = కుంచిక.pos.y\n\
+    var tx = కుంచిక.స్థానము.x\n\
+    var ty = కుంచిక.స్థానము.y\n\
     var tHeading = కుంచిక.కోణము\n\
     కలమును_పైకి_ఎత్తు()\n\
     ముందుకు_జరుగు( sid)\n\
@@ -8824,8 +8824,8 @@ function mizen( side, lColor, fColor) {\n\
 function mizen6(side) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   for (var j=0; j<6; j++) {\n\
-    mx = కుంచిక.pos.x\n\
-    my = కుంచిక.pos.y\n\
+    mx = కుంచిక.స్థానము.x\n\
+    my = కుంచిక.స్థానము.y\n\
     ma = కుంచిక.కోణము\n\
     వెడల్పు(0)\n\
     mizen( side, "white", "blue")\n\
@@ -9737,9 +9737,9 @@ function demo() {\n\
   bigX = కనిష్ఠX() + 2*size\n\
   bigY = గరిష్ఠY()\n\
   దిశ_మార్చు(44)\n\
-  while (కుంచిక.pos.x < గరిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
     స్థానము_మార్చు(bigX, bigY)\n\
-    while (కుంచిక.pos.y > కనిష్ఠY()-8*size) {\n\
+    while (కుంచిక.స్థానము.y > కనిష్ఠY()-8*size) {\n\
       కలమును_పైకి_ఎత్తు()\n\
       ఎడమ_వైపు_తిరుగు( angleA)\n\
       ముందుకు_జరుగు( sidee)\n\
@@ -10776,8 +10776,8 @@ function demo() {\n\
 \n\
 function caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.pos.x\n\
-  var savedY = కుంచిక.pos.y\n\
+  var savedX = కుంచిక.స్థానము.x\n\
+  var savedY = కుంచిక.స్థానము.y\n\
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
   var savedColor = కుంచిక.రంగు\n\
   var savedWidth = కుంచిక.వెడల్పు\n\
@@ -11020,8 +11020,8 @@ function leftTriangle(side) {\n\
 }\n\
 \n\
 function leftTab( side) {\n\
-  var x = కుంచిక.pos.x\n\
-  var y = కుంచిక.pos.y\n\
+  var x = కుంచిక.స్థానము.x\n\
+  var y = కుంచిక.స్థానము.y\n\
   ఎడమ_వైపు_తిరుగు( 180 - 45)\n\
   ముందుకు_జరుగు( side * .2)\n\
   ఎడమ_వైపు_తిరుగు( 45)\n\
@@ -11177,10 +11177,10 @@ function spiral() {\n\
     ముందుకు_జరుగు(n)\n\
     కుడి_వైపు_తిరుగు(15)\n\
     n=n+.25\n\
-    // కుంచిక.pos.x is the x position of the కుంచిక\n\
-    // కుంచిక.pos.y is the y position of the కుంచిక\n\
-    x = కుంచిక.pos.x\n\
-    y = కుంచిక.pos.y\n\
+    // కుంచిక.స్థానము.x is the x position of the కుంచిక\n\
+    // కుంచిక.స్థానము.y is the y position of the కుంచిక\n\
+    x = కుంచిక.స్థానము.x\n\
+    y = కుంచిక.స్థానము.y\n\
 console.log("x:"+x+" y:"+y)\n\
     // "||" means "or", so the following statement checks for out of bounds\n\
     if (x>గరిష్ఠX() || x<కనిష్ఠX() || y>గరిష్ఠY() ||y<కనిష్ఠY()) {\n\
@@ -11353,8 +11353,8 @@ function demo() {\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
-  while (కుంచిక.pos.y > కనిష్ఠY()) {\n\
-    while (కుంచిక.pos.x < గరిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
+    while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       squ(s, nextColor())\n\
       ముందుకు_జరుగు(s)\n\
     }\n\
@@ -11362,7 +11362,7 @@ function demo() {\n\
     ముందుకు_జరుగు( s)\n\
     కుడి_వైపు_తిరుగు(90)\n\
     వెనుకకు_జరుగు(rowOffset)\n\
-    while (కుంచిక.pos.x > కనిష్ఠX()) {\n\
+    while (కుంచిక.స్థానము.x > కనిష్ఠX()) {\n\
       squLeft(s, nextColor())\n\
       ముందుకు_జరుగు(s)\n\
     }\n\
@@ -11634,15 +11634,15 @@ function demo() {\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
-  while (కుంచిక.pos.y > కనిష్ఠY()) {\n\
-  while (కుంచిక.pos.x < గరిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
+  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
     triDown(s, nextColor())\n\
     ముందుకు_జరుగు(s)\n\
   }\n\
   కుడి_వైపు_తిరుగు(120)\n\
   ముందుకు_జరుగు( s)\n\
   కుడి_వైపు_తిరుగు(60)\n\
-  while (కుంచిక.pos.x > కనిష్ఠX()) {\n\
+  while (కుంచిక.స్థానము.x > కనిష్ఠX()) {\n\
     triDown(s, nextColor())\n\
     ముందుకు_జరుగు(s)\n\
   }\n\
@@ -11741,9 +11741,9 @@ function demo() {\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
-  while( కుంచిక.pos.y > కనిష్ఠY()) {\n\
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
     స్థానము_మార్చు(కనిష్ఠX()+offsets[ rowCount % offsets.length]*s, గరిష్ఠY()-rowCount*s/2+s/2)\n\
-    while( కుంచిక.pos.x < గరిష్ఠX()) {\n\
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
       కలమును_కింద_పెట్టు()\n\
       squ(s, nextColor())\n\
       కలమును_పైకి_ఎత్తు()\n\

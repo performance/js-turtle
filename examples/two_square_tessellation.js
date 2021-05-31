@@ -40,9 +40,9 @@ function demo() {
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50
-  while( కుంచిక.pos.y > కనిష్ఠY()) {
+  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {
     స్థానము_మార్చు(కనిష్ఠX()+offsets[ rowCount % offsets.length]*s, గరిష్ఠY()-rowCount*s/2+s/2)
-    while( కుంచిక.pos.x < గరిష్ఠX()) {
+    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
       కలమును_కింద_పెట్టు()
       squ(s, nextColor())
       కలమును_పైకి_ఎత్తు()

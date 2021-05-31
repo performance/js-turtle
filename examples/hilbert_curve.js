@@ -12,8 +12,8 @@ var gen = 0
 
 function caption (message) {
   // save your current position, heading, etc.
-  var savedX = కుంచిక.pos.x
-  var savedY = కుంచిక.pos.y
+  var savedX = కుంచిక.స్థానము.x
+  var savedY = కుంచిక.స్థానము.y
   var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
   var savedColor = కుంచిక.రంగు
   var savedWidth = కుంచిక.వెడల్పు

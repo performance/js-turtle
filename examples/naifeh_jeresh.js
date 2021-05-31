@@ -35,8 +35,8 @@ function jeresh (sid, pAngle, fill) {
     కలమును_కింద_పెట్టు()
     tri( sid, pAngle, fill)
 
-    var tx = కుంచిక.pos.x
-    var ty = కుంచిక.pos.y
+    var tx = కుంచిక.స్థానము.x
+    var ty = కుంచిక.స్థానము.y
     var tHeading = కుంచిక.కోణము
     కలమును_పైకి_ఎత్తు()
     ముందుకు_జరుగు( sid)

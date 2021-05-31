@@ -57,14 +57,14 @@ py = 0
 pangle = 0
 
 function savePos () {
-  px = కుంచిక.pos.x
-  py = కుంచిక.pos.y
+  px = కుంచిక.స్థానము.x
+  py = కుంచిక.స్థానము.y
   pangle = కుంచిక.కోణము
 }
 
 function restorePos() {
-  కుంచిక.pos.x = px
-  కుంచిక.pos.y = py
+  కుంచిక.స్థానము.x = px
+  కుంచిక.స్థానము.y = py
   కుంచిక.కోణము = pangle
 }
 
@@ -73,14 +73,14 @@ p2y = 0
 p2angle = 0
 
 function savePos2 () {
-  p2x = కుంచిక.pos.x
-  p2y = కుంచిక.pos.y
+  p2x = కుంచిక.స్థానము.x
+  p2y = కుంచిక.స్థానము.y
   p2angle = కుంచిక.కోణము
 }
 
 function restorePos2() {
-  కుంచిక.pos.x = p2x
-  కుంచిక.pos.y = p2y
+  కుంచిక.స్థానము.x = p2x
+  కుంచిక.స్థానము.y = p2y
   కుంచిక.కోణము = p2angle
 }
 
@@ -89,14 +89,14 @@ p3y = 0
 p3angle = 0
 
 function savePos3 () {
-  p3x = కుంచిక.pos.x
-  p3y = కుంచిక.pos.y
+  p3x = కుంచిక.స్థానము.x
+  p3y = కుంచిక.స్థానము.y
   p3angle = కుంచిక.కోణము
 }
 
 function restorePos3() {
-  కుంచిక.pos.x = p3x
-  కుంచిక.pos.y = p3y
+  కుంచిక.స్థానము.x = p3x
+  కుంచిక.స్థానము.y = p3y
   కుంచిక.కోణము = p3angle
 }
 
@@ -105,14 +105,14 @@ p4y = 0
 p4angle = 0
 
 function savePos4 () {
-  p4x = కుంచిక.pos.x
-  p4y = కుంచిక.pos.y
+  p4x = కుంచిక.స్థానము.x
+  p4y = కుంచిక.స్థానము.y
   p4angle = కుంచిక.కోణము
 }
 
 function restorePos4() {
-  కుంచిక.pos.x = p4x
-  కుంచిక.pos.y = p4y
+  కుంచిక.స్థానము.x = p4x
+  కుంచిక.స్థానము.y = p4y
   కుంచిక.కోణము = p4angle
 }
 
