@@ -44,172 +44,162 @@ also roll in the tutorial stuff
       <div id="reference">
        <ul>
          <li>
-           ముందుకు_జరుగు(<em>distance</em>)
+           ముందుకు_జరుగు(<em>ఈప్సిత_బిందువులు</em>)
            <p>
-             Move the కుంచిక forward <em>distance</em> pixels.
+             కుంచికను <em>ఈప్సిత_బిందువులు</em> బిందువులు ముందుకు జరుపుతుంది.
            </p>
            <p>
-             Example: <code>ముందుకు_జరుగు(10)</code>
-           </p>
-         </li>
-         <li>
-           వెనుకకు_జరుగు(<em>distance</em>) | back(<em>distance</em>) | bk(<em>distance</em>)
-           <p>
-             Move the కుంచిక backward <em>distance</em> pixels, but leave
-             it pointing forward.
-           </p>
-           <p>
-             Example: <code>వెనుకకు_జరుగు(10)</code>
+             ఉదాహరణ: <code>ముందుకు_జరుగు(10)</code>
            </p>
          </li>
          <li>
-           కుడి_వైపు_తిరుగు(<em>కోణము</em>) | rt(<em>కోణము</em>) | turn(<em>కోణము</em>)
+           వెనుకకు_జరుగు(<em>ఈప్సిత_బిందువులు</em>)
            <p>
-             Turn the కుంచిక to the right <em>కోణము</em> degrees.
+             కుంచికను <em>ఈప్సిత_బిందువులు</em> బిందువులు వెనుకకు జరుపుతుంది. దిశ మార్చదు.
            </p>
            <p>
-             Example: <code>కుడి_వైపు_తిరుగు(90)</code>
+             ఉదాహరణ: <code>వెనుకకు_జరుగు(10)</code>
            </p>
          </li>
          <li>
-           ఎడమ_వైపు_తిరుగు(<em>కోణము</em>)
+           కుడి_వైపు_తిరుగు(<em>ఈప్సిత_కోణము</em>)
            <p>
-             Turn the కుంచిక to the left <em>కోణము</em> degrees.
+             కేవలం కుంచిక దిశను  <em>ఈప్సిత_కోణము</em> డిగ్రీలు <b>కుడి</b> వైపు తప్పుతుంది. స్థానము మార్చదు.
            </p>
            <p>
-             Example: <code>ఎడమ_వైపు_తిరుగు(90)</code>
+             ఉదాహరణ: <code>కుడి_వైపు_తిరుగు(90)</code>
+           </p>
+         </li>
+         <li>
+           ఎడమ_వైపు_తిరుగు(<em>ఈప్సిత_కోణము</em>)
+           <p>
+             కేవలం కుంచిక దిశను  <em>ఈప్సిత_కోణము</em> డిగ్రీలు <b>ఎడమ</b> వైపు తప్పుతుంది. స్థానము మార్చదు.
+           </p>
+           <p>
+             ఉదాహరణ: <code>ఎడమ_వైపు_తిరుగు(90)</code>
            </p>
          </li>
          <li>
            కలమును_పైకి_ఎత్తు()
            <p>
-              Lift the pen in the కుంచిక so that it does not leave a mark as
-              it moves.
+             యథా స్థానం కుంచికను పైకి ఎత్తుతుంది.
            </p>
            <p>
-              Example: <code>కలమును_పైకి_ఎత్తు()</code>
-           </p>
-         </li>
-         <li>
-           కలమును_కింద_పెట్టు() | down() | pd()
-           <p>
-             Lower the pen in the కుంచిక so that it leaves a mark as
-             it moves.
-           </p>
-           <p>
-             Example: <code>కలమును_కింద_పెట్టు()</code>
+              ఉదాహరణ: <code>కలమును_పైకి_ఎత్తు()</code>
            </p>
          </li>
          <li>
-           కుంచికను_దాచు() | ht()
+           కలమును_కింద_పెట్టు()
            <p>
-             Hide the కుంచిక. It can still draw, but it isn't shown.
+             యథా స్థానం కుంచికను కింద పెడుతుంది..
            </p>
            <p>
-             Example: <code>కుంచికను_దాచు()</code>
+             ఉదాహరణ: <code>కలమును_కింద_పెట్టు()</code>
            </p>
          </li>
          <li>
-           కుంచికను_చూపు() | st()
+           కుంచికను_దాచు()
            <p>
-             Show the కుంచిక.
+             కేవలం కుంచికను మాత్రమే ఆదృశ్యం చేస్తుంది. అది క్రింద ఉంటే వ్రాయ గలదు, పైన ఉంటే వ్రాయలేదు
            </p>
            <p>
-             Example: <code>కుంచికను_చూపు()</code>
+             ఉదాహరణ: <code>కుంచికను_దాచు()</code>
+           </p>
+         </li>
+         <li>
+           కుంచికను_చూపు()
+           <p>
+             కుంచిక ను చూపుతుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code>కుంచికను_చూపు()</code>
            </p>
          </li>
          <li>
            కేంద్రకమునకు_వెళ్ళు()
            <p>
-             Move the కుంచిక to its home in the center
-             (x=0, y=0) and pointing toward the top (కోణము=0).
+             కుంచికను చిత్రపటము మధ్యలో (x=0, y=0)(కోణము=0) పైకి / ఉత్తర దిశగా స్థాపిస్తుంది.
            </p>
            <p>
-             Example: <code>కేంద్రకమునకు_వెళ్ళు()</code>
+             ఉదాహరణ: <code>కేంద్రకమునకు_వెళ్ళు()</code>
            </p>
          </li>
          <li>
            చెరిపి_వేయి()
            <p>
-             Clear the graphics area, but leave the కుంచిక where it is.
+             చిత్రపటము లో ఉన్నవన్నీ చేరిపేస్తుంది, కానీ కుంచిక స్థానము, దిశ మార్చదు.
            </p>
            <p>
-             Example: <code>చెరిపి_వేయి()</code>
+             ఉదాహరణ: <code>చెరిపి_వేయి()</code>
            </p>
          </li>
          <li>
            ఆది_స్థితి()
            <p>
-             Clear the graphics area and move the కుంచిక to its home in the center
-             (x=0, y=0) and pointing toward the top (కోణము=0).
+             చిత్రపటము చెరిపి, కుంచికను చిత్రపటము మధ్యలో (x=0, y=0)(కోణము=0) పైకి / ఉత్తర దిశగా స్థాపిస్తుంది.
            </p>
            <p>
-             Example: <code>ఆది_స్థితి()</code>
-           </p>
-         </li>
-         <li>
-           స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>) | స్థానము_మార్చు(<em>x</em>,<em>y</em>)
-           <p>
-             Move the కుంచిక to the coordinates <em>x</em> pixels to the
-             right of the center of the drawing area (or <em>-x</em> pixels to the
-             left of the center) and <em>y</em> pixels above the center of the drawing
-             area (or <em>-y</em> to below the center). This does not draw on the way.
-           </p>
-           <p>
-             Example: <code>స్థానము_మార్చు(20,10)</code>
+             ఉదాహరణ: <code>ఆది_స్థితి()</code>
            </p>
          </li>
          <li>
-           xనియోగించు(<em>x</em>) | xనియోగించు(<em>x</em>)
+           స్థానము_మార్చు(<em>x</em>,<em>y</em>)
            <p>
-             Move the కుంచిక horizontally to the coordinates <em>x</em> pixels to the
-             right of the center of the drawing area (or <em>-x</em> pixels to the
-             left of the center).
+             కుంచికను కేంద్రకము నుంచి <em>x</em> బిందువులు తూర్పుగా / కుడి వైపుకి, <em>y</em> బిందువులు ఉత్తరంగా/ పైకి జరుపుతుంది.
+             వ్యతిరేక దిశగా జరపడానికి <em>-x</em> / <em>-y</em> అని సూచించ వలెను. <b>కుంచిక క్రింద ఉన్నా వ్రాయదు</b>.
            </p>
            <p>
-             Example: <code>xనియోగించు (0)</code>
+             ఉదాహరణ: <code>స్థానము_మార్చు(20,10)</code>
+           </p>
+         </li>
+         <li>
+           xనియోగించు(<em>x</em>)
+           <p>
+             కుంచికను కేంద్రకము నుంచి <em>x</em> బిందువులు తూర్పుగా / కుడి వైపుకి జరుపుతుంది.
+             పడమర దిశగా / కేంద్రకము నుంచి ఎడమ వైపుకి జరపడానికి <em>-x</em> అని సూచించ వలెను.
+           </p>
+           <p>
+             ఉదాహరణ: <code>xనియోగించు (0)</code>
            </p>
          </li>
          <li>
            yనియోగించు(<em>y</em>) | yనియోగించు(<em>y</em>)
            <p>
-             Move the కుంచిక vertically to the coordinates <em>y</em> pixels above
-             the center of the drawing area (or <em>-y</em> to below the center).
+             కుంచికను కేంద్రకము నుంచి <em>y</em> బిందువులు  ఉత్తరంగా/ పైకి జరుపుతుంది.
+             దక్షిణ దిశగా / కేంద్రకము నుంచి క్రిందికి జరపడానికి <em>-y</em> అని సూచించ వలెను.
              This does not draw on the way.
            </p>
            <p>
-             Example: <code>yనియోగించు (0)</code>
+             ఉదాహరణ: <code>yనియోగించు (0)</code>
            </p>
          </li>
          <li>
-           కోణము(<em>కోణము</em>) | దిశ_మార్చు(<em>కోణము</em>) | seth(<em>కోణము</em>)
+
+           కోణము(<em>ఈప్సిత_కోణము</em>) | దిశ_మార్చు(<em>ఈప్సిత_కోణము</em>)
            <p>
-             Turn the కుంచిక to to the absolute <em>కోణము</em> relative to top
-             of the graphic area. <em>0</em> is the top, <em>0</em> is toward the top,
-             <em>90</em> is toward the right, <em>180</em> is toward the bottom, and
-             <em>270</em> <em>-90</em> is toward the left.
+             కుంచిక దిశను ఉత్తరము నించి / నిలువు రేఖ నించి <b>కుడి వైపు తిరుగుతూ</b> <em>ఈప్సిత_కోణము</em> దిగ్రీలు తిప్పుతుంది.
+             పైకి <em>0</em>, కుడి వైపుకి <em>90</em>, క్రిందికి <em>180</em> మరియు ఎడమ వైపుకి <em>270</em> లేక <em>-90</em>.
+             ఎడమ వైపుకి తిరుగుతూ దిశ మార్చడానికి వ్యతిరేక సంఖ్య లు సూచించ వలెను. 
            </p>
            <p>
-             Example: <code>కోణము (90)</code>
-           </p>
-         </li>
-         <li>
-           వెడల్పు(<em>width</em>) | pensize(<em>width</em>) | penSize(<em>width</em>) | వెడల్పు(<em>width</em>) | వెడల్పు(<em>width</em>) | 
-           <p>
-             Change the <em>width</em> of the కుంచిక pen (in pixels).
-           </p>
-           <p>
-             Example: <code>వెడల్పు(5);</code>
+             ఉదాహరణ: <code>కోణము (90)</code>
            </p>
          </li>
          <li>
-<!--
-<a name="color"></a>
--->
-           రంగు_మార్చు(<em>colorcode</em>)
+           వెడల్పు(<em>ఈప్సిత_వెడల్పు</em>)
            <p>
-             Change the color of the కుంచిక pen. The <em>colorcode</em> may be a number
-             from 0 to 15 representing the standard కుంచిక graphics colors.
+             కుంచిక వెడల్పు <em>ఈప్సిత_వెడల్పు</em> బిందువులుగా నియోగిస్తుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code>వెడల్పు(5);</code>
+           </p>
+         </li>
+         <li>
+         <!-- <a name="color"></a> -->
+           రంగు_మార్చు(<em>ఈప్సిత_రంగు</em>)
+           <p>
+             కుంచిక సిరా రంగుని <em>ఈప్సిత_రంగు</em> కి మారుస్తుంది. ఈ పట్టిక లో చూపిన విధంగా 0 నుంచి 15 లోపు సంఖ్య ను 
+              <em>ఈప్సిత_రంగు</em> గా సూచించ వచ్చు.
              <br/>
              <button id="నలుపు">0 నలుపు</button>
              <button id="నీలము">1 నీలము</button>
@@ -229,12 +219,11 @@ also roll in the tutorial stuff
              <button id="బూడిద">15 బూడిద</button>
            </p>
            <p>
-             The <em>colorcode</em> may also be a quoted string with any acceptable CSS color code as in:
+             CSS color code ను కూడా <em>ఈప్సిత_రంగు</em> గా సూచించ వచ్చు. ఉదా.:
            </p>
              <ul>
                <li>
-                 "<em>colorName</em>"
-                 where <em>colorName</em> is any of the named CSS colors.
+                 "<em>red</em>" వంటి పేరున్న CSS colors.
                </li>
                <li>
                  "#<em>RRGGBB</em>"
@@ -242,17 +231,12 @@ also roll in the tutorial stuff
                  amount of red, green and blue respectively.
                </li>
                <li>
-                 "rgb(<em>RR</em>, <em>GG</em>, <em>BB</em>)"
-                 where <em>RR</em>, <em>GG</em>, and <em>BB</em> is the decimal
-                 amount of red, green and blue respectively.
-		 Each value is between 0 and 255.
+                 "rgb(<em>ఎరుపు_పాళ్ళు</em>, <em>ఆకుపచ్చ_పాళ్ళు</em>, <em>నీలం_పాళ్ళు</em>)"
+                 ఇందులో పాళ్ళన్నీ [ 0, 255] మధ్యలో సంఖ్యలు.
                </li>
                <li>
-                 "rgba(<em>RR</em>, <em>GG</em>, <em>BB</em>, <em>AA</em>)"
-                 where <em>RR</em>, <em>GG</em>, and <em>BB</em> is the decimal
-                 amount of red, green and blue respectively and
-                 <em>AA</em> is the alpha channel for transparancy between 1.0 for
-                 opaque and 0.0 for totally transparent.
+                 "rgba(<em>ఎరుపు_పాళ్ళు</em>, <em>ఆకుపచ్చ_పాళ్ళు</em>, <em>నీలం_పాళ్ళు</em>, <em>AA</em>)"
+                 ఇందులో  <em>AA</em> పారదర్శకత సూచిస్తుంది. 0.0 => పూర్తిగా పారదర్శకము అని, 1.0 => పూర్తిగా అపారదర్శకము అని.
                </li>
                <li>
                  "hsl(<em>hue</em>, <em>saturation%</em>, <em>lightness%</em>, <em>AA</em>)"
@@ -272,51 +256,49 @@ also roll in the tutorial stuff
                </li>
              </ul> 
            <p>
-             Example: <code>రంగు_మార్చు(1)</code>
+             ఉదాహరణ: <code>రంగు_మార్చు(1)</code>
            </p>
            <p>
-             Example: <code>రంగు_మార్చు( ఎరుపు )</code>
+             ఉదాహరణ: <code>రంగు_మార్చు( ఎరుపు )</code> | <code>రంగు_మార్చు( "red" )</code> 
            </p>
            <p>
-             Example: <code>రంగు_మార్చు("#ff0000")</code>
+             ఉదాహరణ: <code>రంగు_మార్చు("#ff0000")</code>
            </p>
            <p>
-             Example: <code>రంగు_మార్చు("rbg(255,0,0)")</code>
+             ఉదాహరణ: <code>రంగు_మార్చు("rbg(255,0,0)")</code>
            </p>
            <p>
-             Example: <code>రంగు_మార్చు("rbg(255,0,0, .5)")</code>
+             ఉదాహరణ: <code>రంగు_మార్చు("rbg(255,0,0, .5)")</code>
            </p>
            <p>
-             Example: <code>రంగు_మార్చు("hsl( 0, 100, 100")</code>
+             ఉదాహరణ: <code>రంగు_మార్చు("hsl( 0, 100, 100")</code>
            </p>
            <p>
-             Example: <code>రంగు_మార్చు("hsl( 0, 100, 100, .4")</code>
-           </p>
-         </li>
-         <li>
-           వ్రాయి(<em>string</em>)
-           <p>
-             Places the text in the <em>string</em>along the projected path of
-             the కుంచిక. The <em>string</em> may be a set of characters enclosed by
-             single or double quotation marks. The <em>string</em> may also be a value
-             returned by a function.
-           </p>
-           <p>
-             Example: <code>వ్రాయి("Hello World")</code>
+             ఉదాహరణ: <code>రంగు_మార్చు("hsl( 0, 100, 100, .4")</code>
            </p>
          </li>
          <li>
-           అక్షరరూపము_స్థాపించు(<em>fontName</em>) | అక్షరరూపము_స్థాపించు(<em>fontName</em>)
+           వ్రాయి(<em>ఈప్సిత_వాక్యము</em>)
            <p>
+             కుంచిక ప్రస్తుత దిశలో, ప్రస్తుత అక్షరరూపము వాడి  <em>ఈప్సిత_వాక్యము</em> ను వ్రాస్తుంది.
+           </p>
+           <p>
+             ఉదాహరణ: <code>వ్రాయి("సుప్రభాతము")</code>
+           </p>
+         </li>
+         <li>
+           అక్షరరూపము_స్థాపించు(<em>అక్షరరూపము</em>)
+           <p>
+             అక్షరరూపము అంటే fontName.
              Set the characteristics (<em>style</em>, <em>variant</em>, <em>weight</em>,
              <em>size</em>, and <em>font-family</em> desired for the font for subsequent writes.
            </p>
            <p>
-             Example: <code>అక్షరరూపము_స్థాపించు("italic small-caps bold 12px courier")</code>
+             ఉదాహరణ: <code>అక్షరరూపము_స్థాపించు("italic small-caps bold 12px courier")</code>
            </p>
          </li>
          <li>
-           కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
+           కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
            <p>
              Draw a circular curve from the కుంచిక's postion. The
              center of the curve is to the right of the కుంచిక at a perpendicular
@@ -324,10 +306,10 @@ also roll in the tutorial stuff
              <em>extent</em> is provided to limit the number of degrees of arc.
            </p>
            <p>
-             Example: <code>కుడివైపు_చాపాము(30)</code>
+             ఉదాహరణ: <code>కుడివైపు_చాపాము(30)</code>
            </p>
            <p>
-             Example: <code>కుడివైపు_చాపాము(10,45)</code>
+             ఉదాహరణ: <code>కుడివైపు_చాపాము(10,45)</code>
            </p>
          </li>
          <li>
@@ -339,10 +321,10 @@ also roll in the tutorial stuff
              <em>extent</em> is provided to limit the number of degrees of arc.
            </p>
            <p>
-             Example: <code>ఎడమవైపు_చాపాము(20)</code>
+             ఉదాహరణ: <code>ఎడమవైపు_చాపాము(20)</code>
            </p>
            <p>
-             Example: <code>ఎడమవైపు_చాపాము(10,45)</code>
+             ఉదాహరణ: <code>ఎడమవైపు_చాపాము(10,45)</code>
            </p>
          </li>
          <li>
@@ -354,13 +336,13 @@ also roll in the tutorial stuff
              is supplied and has a value of <em>false</em>.
            </p>
            <p>
-             Example: <code>వృత్తము(10)</code>
+             ఉదాహరణ: <code>వృత్తము(10)</code>
            </p>
            <p>
-             Example: <code>వృత్తము(20,90)</code>
+             ఉదాహరణ: <code>వృత్తము(20,90)</code>
            </p>
            <p>
-             Example: <code>వృత్తము(30,-90,false)</code>
+             ఉదాహరణ: <code>వృత్తము(30,-90,false)</code>
            </p>
          </li>
          <li>
@@ -373,10 +355,10 @@ also roll in the tutorial stuff
              width plus 4 or twice the pensize). 
            </p>
            <p>
-             Example: <code>నిండు_వృత్తము()</code>
+             ఉదాహరణ: <code>నిండు_వృత్తము()</code>
            </p>
            <p>
-             Example: <code>నిండు_వృత్తము(10)</code>
+             ఉదాహరణ: <code>నిండు_వృత్తము(10)</code>
            </p>
          </li>
          <li>
@@ -387,7 +369,7 @@ also roll in the tutorial stuff
               The set should be continuous and begin and end at the same point.
            </p>
            <p>
-             Example: <code>ఆకారాము_ప్రారంభించు()</code>
+             ఉదాహరణ: <code>ఆకారాము_ప్రారంభించు()</code>
            </p>
          </li>
          <li>
@@ -399,7 +381,7 @@ also roll in the tutorial stuff
               a pattern. This defaults to the కుంచిక color.
            </p>
            <p>
-             Example: <code>ఆకారాము_ముగించు("blue")</code>
+             ఉదాహరణ: <code>ఆకారాము_ముగించు("blue")</code>
            </p>
          </li>
          <li>
@@ -410,10 +392,10 @@ also roll in the tutorial stuff
              <em>high</em> -1.
            </p>
            <p>
-             Example: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(1,7)+ " ")</code>
+             ఉదాహరణ: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(1,7)+ " ")</code>
            </p>
            <p>
-             Example: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(6)+ " ")</code>
+             ఉదాహరణ: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(6)+ " ")</code>
            </p>
          </li>
          <li>
@@ -423,10 +405,10 @@ also roll in the tutorial stuff
              <em>n</em> times.
            </p>
            <p>
-             Example: <code>ఆవర్తించు(4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
+             ఉదాహరణ: <code>ఆవర్తించు(4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
            </p>
            <p>
-             Example: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; ఆవర్తించు(4, el)</code>
+             ఉదాహరణ: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; ఆవర్తించు(4, el)</code>
            </p>
          </li>
          <li>
@@ -436,10 +418,10 @@ also roll in the tutorial stuff
              <em>true</em> or <em>false</em> respecitively.
            </p>
            <p>
-             Example: <code> wrap(true)</code>
+             ఉదాహరణ: <code> wrap(true)</code>
            </p>
            <p>
-             Example: <code> wrap(false)</code>
+             ఉదాహరణ: <code> wrap(false)</code>
            </p>
          </li>
          <li>
@@ -448,13 +430,13 @@ also roll in the tutorial stuff
              Evalutes <em>action</em> every <em>ms</em> milliseconds.
            </p>
            <p>
-             Example: <code>ఆడించు("ముందుకు_జరుగు(10)",100)</code>
+             ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(10)",100)</code>
            </p>
            <p>
-             Example: <code>ఆడించు("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
+             ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
            </p>
            <p>
-             Example: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; ఆడించు(el,100)</code>
+             ఉదాహరణ: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; ఆడించు(el,100)</code>
            </p>
          </li>
          <li>
@@ -463,13 +445,13 @@ also roll in the tutorial stuff
              Evalutes <em>action</em> after a delay of <em>ms</em> milliseconds.
            </p>
            <p>
-             Example: <code>delay ("ముందుకు_జరుగు(10)",1000)</code>
+             ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(10)",1000)</code>
            </p>
            <p>
-             Example: <code>delay ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",1000)</code>
+             ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",1000)</code>
            </p>
            <p>
-             Example: <code>function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
+             ఉదాహరణ: <code>function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
            </p>
          </li>
          <li>
@@ -480,10 +462,10 @@ also roll in the tutorial stuff
              <!-- Not sure that this is useful. -->
            </p>
            <p>
-             Example: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)</code>
+             ఉదాహరణ: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)</code>
            </p>
            <p>
-             Example: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false)</code>
+             ఉదాహరణ: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false)</code>
            </p>
          </li>
          <li>
@@ -493,7 +475,7 @@ also roll in the tutorial stuff
              <!-- Not sure that this is useful. -->
            </p>
            <p>
-             Example: <code>చిత్రీకరించు()</code>
+             ఉదాహరణ: <code>చిత్రీకరించు()</code>
            </p>
          </li>
          <li>
@@ -502,7 +484,7 @@ also roll in the tutorial stuff
              Return the minimum value of x in pixels
            </p>
            <p>
-             Example: <code>వ్రాయి(కనిష్ఠX())</code>
+             ఉదాహరణ: <code>వ్రాయి(కనిష్ఠX())</code>
            </p>
          </li>
          <li>
@@ -511,7 +493,7 @@ also roll in the tutorial stuff
              Return the maximum value of x in pixels
            </p>
            <p>
-             Example: <code>వ్రాయి(గరిష్ఠX())</code>
+             ఉదాహరణ: <code>వ్రాయి(గరిష్ఠX())</code>
            </p>
          </li>
          <li>
@@ -520,7 +502,7 @@ also roll in the tutorial stuff
              Return the minimum value of Y in pixels
            </p>
            <p>
-             Example: <code>వ్రాయి(కనిష్ఠY())</code>
+             ఉదాహరణ: <code>వ్రాయి(కనిష్ఠY())</code>
            </p>
          </li>
          <li>
@@ -529,7 +511,7 @@ also roll in the tutorial stuff
              Return the maximum value of Y in pixels
            </p>
            <p>
-             Example: <code>వ్రాయి(గరిష్ఠY())</code>
+             ఉదాహరణ: <code>వ్రాయి(గరిష్ఠY())</code>
            </p>
          </li>
        </ul>

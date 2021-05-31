@@ -42,7 +42,7 @@ function kochLines () {
   }
 }
 
-function kochSnowflakeవిలంబించు() {
+function kochSnowflakeDelay() {
 
   చెరిపి_వేయి();
   var side = గరిష్ఠY() - కనిష్ఠY();
@@ -64,5 +64,5 @@ function kochSnowflakeవిలంబించు() {
 function demo() {
   కుంచికను_దాచు();
   i = 0;
-  kochSnowflakeవిలంబించు();
+  kochSnowflakeDelay();
 }

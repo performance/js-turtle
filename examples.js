@@ -7410,7 +7410,7 @@ function kochLines () {\n\
   }\n\
 }\n\
 \n\
-function kochSnowflakeవిలంబించు() {\n\
+function kochSnowflakeDelay() {\n\
 \n\
   చెరిపి_వేయి();\n\
   var side = గరిష్ఠY() - కనిష్ఠY();\n\
@@ -7432,7 +7432,7 @@ function kochSnowflakeవిలంబించు() {\n\
 function demo() {\n\
   కుంచికను_దాచు();\n\
   i = 0;\n\
-  kochSnowflakeవిలంబించు();\n\
+  kochSnowflakeDelay();\n\
 }\n\
 '
 koch_triangles_stacked ='\
