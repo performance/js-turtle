@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
   <title>కుంచిక : చిత్రలేఖనము</title>
   <meta charset="utf-8">
@@ -35,12 +36,12 @@
                     <line x1="62" y1="2" x2="2" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
                   </svg>
                 </button>
-        -->
+              -->
               <!--
-        add a menu .. sort of a table of contents to jump to contents
-              <a href="#color">jump to color</a>
-        also roll in the tutorial stuff
-        -->
+                add a menu .. sort of a table of contents to jump to contents
+                    <a href="#color">jump to color</a>
+                also roll in the tutorial stuff
+              -->
             </h4>
             <div id="reference">
               <ul>
@@ -426,16 +427,31 @@
                     <em>true</em> or <em>false</em> respecitively.
                   </p>
                   <p>
-                    ఉదాహరణ: <code> wrap(true)</code>
+                    ఉదాహరణ: <code> చుట్టు()</code>
                   </p>
                   <p>
-                    ఉదాహరణ: <code> wrap(false)</code>
+                    ఉదాహరణ: <code> చుట్టొద్దు()</code>
                   </p>
                 </li>
                 <li>
-                  ఆడించు(<em>action</em>,<em>ms</em>)
+                  కార్యము
                   <p>
-                    Evalutes <em>action</em> every <em>ms</em> milliseconds.
+                    కార్యము = function/procedure/lambda etc.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code> <pre>
+                      సమ_చతురస్రము = ( భుజము ) => {
+                        ఆవర్తించు(4, () => {
+                        ముందుకు_జరుగు( భుజము );
+                        కుడి_వైపు_తిరుగు(90);
+                      });
+                    }</pre></code>
+                  </p>
+                </li>
+                <li>
+                  ఆడించు(<em>కార్యము</em>,<em>ms</em>)
+                  <p>
+                    Evalutes <em>కార్యము</em> every <em>ms</em> milliseconds.
                   </p>
                   <p>
                     ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(10)",100)</code>
@@ -448,9 +464,9 @@
                   </p>
                 </li>
                 <li>
-                  విలంబించు(<em>action</em>,<em>ms</em>)
+                  విలంబించు(<em>కార్యము</em>,<em>ms</em>)
                   <p>
-                    Evalutes <em>action</em> after a delay of <em>ms</em> milliseconds.
+                    Evalutes <em>కార్యము</em> after a delay of <em>ms</em> milliseconds.
                   </p>
                   <p>
                     ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(10)",1000)</code>
@@ -460,6 +476,53 @@
                   </p>
                   <p>
                     ఉదాహరణ: <code>function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
+                  </p>
+                </li>
+                <li>
+                  యది_చేత్(<em>సంసక్త</em>, <em>కార్యము</em>)
+                  <p>
+                    <em>సంసక్త</em> నిజమైతే,  <em>కార్యము</em> చేస్తుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code> <pre> 
+                      యది_చేత్( 
+                        () => (లోతు < సంఖ్య),
+                        () => {వ్రాయి( "లోతు సంఖ్య కంటే చిన్నది");}
+                      ) </pre> </code>
+                  </p>
+                </li>
+                <li>
+                  యది_చేత్_అన్యథ(<em>సంసక్త</em>, <em>యది_కార్యము</em>, <em>అన్యథ_కార్యము</em>)
+                  <p>
+                    <em>సంసక్త</em> నిజమైతే, <em>యది_కార్యము</em> చేస్తుంది. కాకపోతే <em>అన్యథ_కార్యము</em> చేస్తుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code> <pre>
+                      యది_చేత్_అన్యథ( 
+                        () => (లోతు < సంఖ్య),
+                        () => {వ్రాయి( "లోతు సంఖ్య కంటే చిన్నది");},
+                        () => {వ్రాయి( "లోతు సంఖ్య కంటే పెద్దది లేక సమానమైనది");}
+                      )
+                  </pre> </code>
+                  </p>
+                </li>                 
+                <li>
+                  యావత్_పరిక్రమ(<em>సంసక్త</em>, <em>కార్యము</em>)
+                  <p>
+                    <em>సంసక్త</em> నిజమయ్యే వరుకు <em>కార్యము</em> చేస్తూ ఉంటుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ:  <pre><code>
+                      let భుజము = 100;
+                      let రంగు_సంఖ్య = 0;
+                      యావత్_పరిక్రమ( () => భుజము > 0, ()=> {
+                        సమ_చతురస్రము( భుజము );
+                        కుడి_వైపు_తిరుగు(36);
+                        భుజము = భుజము - 10;
+                        రంగు_సంఖ్య = ( రంగు_సంఖ్య + 1 ) % 16;
+                        రంగు_మార్చు( రంగు_సంఖ్య );
+                      } );
+                    </code></pre>
                   </p>
                 </li>
                 <li>
@@ -580,7 +643,7 @@
                 The Command area is where text can be entered and executed by pressing
                 the ENTER (Return) key.
               </p>
-            </span>            
+            </span>
             <button id="resetButton">ఆది స్థితి</button>
             <span class='help_text' id='resetButton_help_text'>
               <p>

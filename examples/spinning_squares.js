@@ -37,4 +37,4 @@ function spinningSquare() {
   }
 }
 
-demo = spinningSquare2 // set the demo function to be spinningSquare2
+ప్రదర్శన = spinningSquare2 // set the demo function to be spinningSquare2

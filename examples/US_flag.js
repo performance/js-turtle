@@ -89,7 +89,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   starSize = .05 *flagHeight // star size
   //outline flag and field
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   కుంచికను_దాచు()
   స్థానము_మార్చు(xBase, yBase)
   కోణము (90)
@@ -132,4 +132,4 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   }
 }
   
-demo = flag
+ప్రదర్శన = flag

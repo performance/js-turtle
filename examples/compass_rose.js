@@ -168,7 +168,7 @@ function boxTheCompass(size) {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   కుంచికను_దాచు() // do not want it to show, so do this early
   కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // do not redraw image each move
   size = 2* Math.min(గరిష్ఠX(), గరిష్ఠY())

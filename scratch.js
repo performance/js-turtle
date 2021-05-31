@@ -55,7 +55,7 @@ function rain (drops, n) {
 }
 
 function let_them_drop (n) {
-  wrap(false);
+  చుట్టొద్దు();
  hideTurtle();
  drops = init_drops(n);
  ఆడించు(function () { rain(drops, n)}, 100);

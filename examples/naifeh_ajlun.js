@@ -27,7 +27,7 @@ function quadrangle( ){
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   rows = 4
   columns = 5
 

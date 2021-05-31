@@ -19,7 +19,7 @@ distances are known. This math is a bit tough.
 //
 function ప్రదర్శన() {
 	ఆది_స్థితి()
-	 wrap(false)
+	 చుట్టొద్దు()
 	కుంచికను_దాచు()
 	size=200
 	step = 4

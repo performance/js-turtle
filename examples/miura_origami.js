@@ -30,7 +30,7 @@ function vert( size) {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap( false)
+   చుట్టొద్దు()
   size = 100
   horiz( size)
   vert( size)

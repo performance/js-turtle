@@ -36,7 +36,7 @@ function ప్రదర్శన() {
   rowCount = 0
   column = కనిష్ఠX()
   row = గరిష్ఠY()
-   wrap(false)
+   చుట్టొద్దు()
   కుడి_వైపు_తిరుగు( 90)
 
   s = 50

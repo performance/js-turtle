@@ -30,7 +30,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())
   //size=200
   inr = .33* size

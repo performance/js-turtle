@@ -69,7 +69,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap( false)
+   చుట్టొద్దు()
   size = 10
 
   sidea = size

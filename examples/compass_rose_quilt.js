@@ -154,7 +154,7 @@ function ప్రదర్శన() {
   ఆది_స్థితి()
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120
 console.log("size "+ size)
-   wrap(false)
+   చుట్టొద్దు()
   కుంచికను_దాచు() // don"t want it to show,  do this early
   కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // don"t redraw image each move
 

@@ -18,7 +18,7 @@ function quadRhom( side) {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap( false)
+   చుట్టొద్దు()
   కుంచికను_దాచు()
   ang = 60
   side = 20

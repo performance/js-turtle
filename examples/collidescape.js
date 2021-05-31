@@ -576,7 +576,7 @@ function spiral( ) {
 
 function ప్రదర్శన() {
     ఆది_స్థితి()
-     wrap(false)
+     చుట్టొద్దు()
     కలమును_కింద_పెట్టు()
     spiral( )
 }

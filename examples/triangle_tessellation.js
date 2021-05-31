@@ -31,7 +31,7 @@ function ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   rowOffset = s/3 // offset between rows
-   wrap(false)
+   చుట్టొద్దు()
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())
   కుడి_వైపు_తిరుగు( 90)
 

@@ -721,7 +721,7 @@ function showError(e) {
     height=10 // points
     స్థానము_మార్చు(కనిష్ఠX(), కనిష్ఠY()+24+height/2 +2);
     కోణము(90);
-     wrap(false);
+     చుట్టొద్దు();
 
     // చెరిపి_వేయి the line for the error message
     కలమును_కింద_పెట్టు()

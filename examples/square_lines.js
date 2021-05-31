@@ -2,7 +2,7 @@
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   side = 30
   side2 = side + side
   offset = true

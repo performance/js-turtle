@@ -68,7 +68,7 @@ function nextColor() {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())
   cent( side, 12)
   కుంచికను_దాచు()

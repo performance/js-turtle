@@ -152,5 +152,5 @@ function displayTime() {
   displaySegTime()
 }
 
-//demo = displayTime
+//ప్రదర్శన = displayTime
 ఆడించు(displayTime, 1000)

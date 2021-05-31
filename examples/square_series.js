@@ -63,7 +63,7 @@ function ccwRow( side) {
 
 
 function ప్రదర్శన() {
-   wrap(false)
+   చుట్టొద్దు()
   side = 30
   for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {
     yనియోగించు(i)

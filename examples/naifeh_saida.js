@@ -31,7 +31,7 @@ function layer (side, offsetAngle) {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   side = 14
   side = .033 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   factor = Math.sqrt(2 + Math.sqrt( 2))

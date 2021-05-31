@@ -1,3 +1,140 @@
+US_flag ='\
+// US Flag -- draw an American Flag\n\
+\n\
+function star (size) {\n\
+  కలమును_పైకి_ఎత్తు()\n\
+  ముందుకు_జరుగు(.54*size)\n\
+  turn (180-18)\n\
+  కలమును_కింద_పెట్టు()\n\
+  var i=0\n\
+  ఆకారాము_ప్రారంభించు()\n\
+  while (i<5){\n\
+    ముందుకు_జరుగు(size)\n\
+    కుడి_వైపు_తిరుగు(180-36)\n\
+    i = i + 1\n\
+  }\n\
+  ఆకారాము_ముగించు("white")\n\
+  turn (180+18)\n\
+  వెనుకకు_జరుగు(.54*size)\n\
+}\n\
+\n\
+\n\
+function starLine(count, size, sep) {\n\
+  while (count > 0) {\n\
+    star(size)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+    ముందుకు_జరుగు(sep)\n\
+    ఎడమ_వైపు_తిరుగు(90)\n\
+    కలమును_కింద_పెట్టు()\n\
+    count = count -1;\n\
+  }\n\
+}\n\
+\n\
+\n\
+function rectangle (width, height) {\n\
+  // assume x, y at upper right hand corner in and out\n\
+  // assume కోణము is 90 in and out\n\
+  కోణము (90)\n\
+  ముందుకు_జరుగు(width)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(height)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(width)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+  ముందుకు_జరుగు(height)\n\
+  కుడి_వైపు_తిరుగు(90)\n\
+}\n\
+\n\
+\n\
+function stripes (width, spacing, number) {\n\
+  //assume x, y is at right side of stripe\n\
+  //assume కోణము is -90\n\
+  var i = 0\n\
+  while (i<number) {\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(width)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    // make the turn\n\
+    if (i%2 == 0) {\n\
+      ఎడమ_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు(spacing)\n\
+      ఎడమ_వైపు_తిరుగు(90)\n\
+    } else {\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+      ముందుకు_జరుగు(spacing)\n\
+      కుడి_వైపు_తిరుగు(90)\n\
+    }\n\
+    i = i + 1\n\
+  }\n\
+}\n\
+\n\
+\n\
+function flag() {\n\
+  // ***Constants\n\
+  //var xBase = -200 // base is upper left corner\n\
+  //var yBase = 200\n\
+  //var flagHeight = 250 // everything else is proportional to flagHeight\n\
+ \n\
+  var flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())\n\
+  var flagWidth = 1.9 * flagHeight\n\
+console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+flagWidth + "H="+flagHeight)\n\
+  var xBase = -flagWidth/2\n\
+  var yBase = flagHeight/2 \n\
+\n\
+  var stripeWidth = flagHeight/13\n\
+  var fieldWidth = .76 * flagHeight\n\
+  var fieldHeight = 7 * stripeWidth\n\
+  var xSeparation = .063 * flagHeight\n\
+  var ySeparation = .054 * flagHeight\n\
+  starSize = .05 *flagHeight // star size\n\
+  //outline flag and field\n\
+  ఆది_స్థితి()\n\
+   చుట్టొద్దు()\n\
+  కుంచికను_దాచు()\n\
+  స్థానము_మార్చు(xBase, yBase)\n\
+  కోణము (90)\n\
+  రంగు_మార్చు("నలుపు")\n\
+\n\
+  వెడల్పు(1)\n\
+  rectangle (flagWidth, flagHeight)\n\
+  rectangle (fieldWidth, fieldHeight)\n\
+\n\
+  //  draw stripes\n\
+  రంగు_మార్చు( ఎరుపు );\n\
+  వెడల్పు(stripeWidth);\n\
+  స్థానము_మార్చు(xBase+flagWidth, yBase-stripeWidth/2)\n\
+  కోణము (-90)\n\
+  stripes (flagWidth-fieldWidth, 2*stripeWidth, 4)\n\
+  stripes (flagWidth, 2*stripeWidth, 3)\n\
+\n\
+  //draw field\n\
+  రంగు_మార్చు( నీలము )\n\
+  స్థానము_మార్చు(xBase+fieldWidth, yBase-stripeWidth/2)\n\
+  కోణము (-90)\n\
+  stripes (fieldWidth, stripeWidth, 7)\n\
+\n\
+  //draw field of stars\n\
+  కోణము(0)\n\
+  వెడల్పు(2)\n\
+  రంగు_మార్చు( తెలుపు )\n\
+  కలమును_కింద_పెట్టు()\n\
+\n\
+  var row = 0\n\
+  while (row<9) {\n\
+   if (row % 2 == 0) {\n\
+      స్థానము_మార్చు(xBase + xSeparation, yBase - (row +1) * ySeparation)\n\
+      starLine(6, starSize, xSeparation*2)\n\
+    } else {\n\
+      స్థానము_మార్చు(xBase + 2* xSeparation, yBase - (row +1) * ySeparation)\n\
+      starLine(5, starSize, xSeparation * 2)\n\
+    }\n\
+    row = row + 1;\n\
+  }\n\
+}\n\
+  \n\
+ప్రదర్శన = flag\n\
+'
 arc_test ='\
 // Arc and Curve Test -- test of arcs and curves\n\
 // this draws five figures\n\
@@ -221,7 +358,7 @@ function ప్రదర్శన() {\n\
   count = 0\n\
   yB = గరిష్ఠY() + small\n\
   xB = కనిష్ఠX()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
@@ -328,7 +465,7 @@ function rain (drops, n) {\n\
 }\n\
 \n\
 function let_them_drop (n) {\n\
-    wrap(false);\n\
+    చుట్టొద్దు();\n\
    కుంచికను_దాచు();\n\
    drops = init_drops(n);\n\
    ఆడించు(function () { rain(drops, n)}, 100);\n\
@@ -373,7 +510,7 @@ function ప్రదర్శన() {\n\
   count = 0\n\
   yB = గరిష్ఠY()\n\
   xB = కనిష్ఠX()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
@@ -445,6 +582,33 @@ function ప్రదర్శన() {\n\
   cafeTiles( tileHeight, tileWidth, mortarWidth, mortarColor, offset);\n\
 }\n\
 '
+circle_eye ='\
+// Circle Eye -- draws a set of n inscribed circles within circle\n\
+\n\
+function circleEye (x, y, n, outerRadius) {\n\
+  స్థానము_మార్చు(x, y);\n\
+  వృత్తము(outerRadius); //outer circle\n\
+\n\
+  for (i=0; i<n; i++) {\n\
+    స్థానము_మార్చు(x, y);\n\
+    కోణము (i/n * 360);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(outerRadius/2);\n\
+    కలమును_కింద_పెట్టు();\n\
+    వృత్తము(outerRadius/2); // one inscribed circle\n\
+  }\n\
+}\n\
+\n\
+\n\
+\n\
+function ప్రదర్శన() {\n\
+  ఆది_స్థితి();\n\
+  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
+  కుంచికను_దాచు();\n\
+  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(16));\n\
+  circleEye( 0, 0, 16, size);\n\
+}\n\
+'
 circle_eye2 ='\
 // Circle Eye2 -- draws a set of n inscribed circles between two concentric circles.\n\
 \n\
@@ -474,31 +638,105 @@ function ప్రదర్శన() {\n\
   circleEye( 0, 0, 32, size, .2*size);\n\
 }\n\
 '
-circle_eye ='\
-// Circle Eye -- draws a set of n inscribed circles within circle\n\
+clock ='\
+// Clock, Analog -- draw and animate an analog clock\n\
 \n\
-function circleEye (x, y, n, outerRadius) {\n\
-  స్థానము_మార్చు(x, y);\n\
-  వృత్తము(outerRadius); //outer circle\n\
+//GLOBALS\n\
+var size;\n\
 \n\
-  for (i=0; i<n; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (i/n * 360);\n\
-    కలమును_పైకి_ఎత్తు();\n\
-    ముందుకు_జరుగు(outerRadius/2);\n\
-    కలమును_కింద_పెట్టు();\n\
-    వృత్తము(outerRadius/2); // one inscribed circle\n\
-  }\n\
+//draw the tick marks around the edge of the clock\n\
+function ticks(x, y, వ్యాసార్థము) {\n\
+   var tickLen = 7;\n\
+   var gap = వ్యాసార్థము - tickLen;\n\
+   రంగు_మార్చు( నీలము );\n\
+   వెడల్పు(1);\n\
+   for (var theta = 0; theta < 360; theta = theta + 6) {\n\
+      // Thicken hour marks\n\
+      if (theta % 30 != 0) {\n\
+         వెడల్పు(1/130* size);\n\
+      } else {\n\
+         వెడల్పు(3/130* size);\n\
+      }\n\
+      కలమును_పైకి_ఎత్తు();\n\
+      స్థానము_మార్చు(0,0);\n\
+      కోణము(theta);\n\
+      ముందుకు_జరుగు(gap);\n\
+      కలమును_కింద_పెట్టు();\n\
+      ముందుకు_జరుగు(tickLen);\n\
+   }\n\
 }\n\
 \n\
 \n\
+// draw the hour numbers on the clock face\n\
+function numbers(x, y, వ్యాసార్థము) {\n\
+   కలమును_పైకి_ఎత్తు();\n\
+   fontSize = 20/130 * size\n\
+   అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");\n\
+   రంగు_మార్చు("నలుపు");\n\
+   for (var hour = 1; hour <= 12; hour++) {\n\
+      స్థానము_మార్చు(x,y);\n\
+      కోణము(hour * 30);\n\
+      ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit\n\
+      కోణము(180);\n\
+      ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline\n\
+      కుడి_వైపు_తిరుగు(90);\n\
+      if (hour < 10) {\n\
+        ముందుకు_జరుగు(6/130 * size); // horizontal correction to lower left corner\n\
+      } else {\n\
+        ముందుకు_జరుగు(10/130 * size)\n\
+      }\n\
+      కుడి_వైపు_తిరుగు(180);\n\
+      వ్రాయి(hour);\n\
+   }\n\
+   కలమును_కింద_పెట్టు();\n\
+}\n\
+\n\
+// draw one of the clock hands\n\
+function hand (theta, w, length, col) {\n\
+   var stepSize = 5;\n\
+   var widthDelta = w / (length / stepSize);\n\
+   స్థానము_మార్చు(0, 0);\n\
+   కోణము(theta);\n\
+   రంగు_మార్చు(col);\n\
+   for (var step = 0; step < length; step = step + stepSize) {\n\
+      వెడల్పు(w);\n\
+      ముందుకు_జరుగు(stepSize);\n\
+      w = w - widthDelta;\n\
+   }\n\
+}\n\
+\n\
+function hands(hours, minutes, seconds) {\n\
+    // draw seconds hand\n\
+    var secDegreesPerSecond = 6;	// = 360 degrees/60 seconds /minute\n\
+    hand(seconds * secDegreesPerSecond, 4, 100/130 * size, "red");\n\
+    // draw minutes hand \n\
+    var minDegreePerSecond = 0.1;	// = 360 degrees /3600 seconds /hour\n\
+    var minutesInSeconds = minutes * 60 + seconds;\n\
+    hand(minutesInSeconds * minDegreePerSecond, 10, 100/130 * size, "blue");\n\
+    // draw hours hand\n\
+    var hourDegreePerSecond = .1/12;	// = 360 degrees /3600 seconds per hour /12 hours per half day /half day\n\
+    var hoursInSeconds = ((hours % 12) * 3600) + minutesInSeconds;\n\
+    hand(hoursInSeconds * hourDegreePerSecond, 10, 60/130 * size, "blue");\n\
+}\n\
+\n\
+// refresh the entire clock\n\
+function clock() {\n\
+   చెరిపి_వేయి();\n\
+   size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
+  numbers(0, 0, 110/130 * size);\n\
+   రంగు_మార్చు("lightgreen");\n\
+   స్థానము_మార్చు(0,0);\n\
+   వెడల్పు(1/130* size)\n\
+   వృత్తము(130/130 * size );\n\
+   ticks(0, 0, 130/130 * size );\n\
+   var d = new Date();\n\
+   hands(d.getHours(), d.getMinutes(), d.getSeconds());\n\
+}\n\
 \n\
 function ప్రదర్శన() {\n\
-  ఆది_స్థితి();\n\
-  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
-  కుంచికను_దాచు();\n\
-  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(16));\n\
-  circleEye( 0, 0, 16, size);\n\
+   కుంచికను_దాచు();\n\
+   // refresh the clock every second\n\
+   ఆడించు(clock,1000);\n\
 }\n\
 '
 clock_BCD ='\
@@ -626,7 +864,7 @@ function displayTime() {\n\
   displayBinaryDots(hSpacing, vSpacing)\n\
 }\n\
 \n\
-demo = displayTime\n\
+ప్రదర్శన = displayTime\n\
 ఆడించు(displayTime, 1000)\n\
 '
 clock_digital ='\
@@ -749,7 +987,7 @@ function displaySegTime() {\n\
   // black out background\n\
   స్థానము_మార్చు(కనిష్ఠX(),0)\n\
   కోణము (90)\n\
-  రంగు_మార్చు("నలుపు")\n\
+  రంగు_మార్చు(black)\n\
   వెడల్పు(2*గరిష్ఠY())\n\
   కలమును_కింద_పెట్టు()\n\
   ముందుకు_జరుగు(2*గరిష్ఠX())\n\
@@ -784,109 +1022,8 @@ function displayTime() {\n\
   displaySegTime()\n\
 }\n\
 \n\
-//demo = displayTime\n\
+//ప్రదర్శన = displayTime\n\
 ఆడించు(displayTime, 1000)\n\
-'
-clock ='\
-// Clock, Analog -- draw and animate an analog clock\n\
-\n\
-//GLOBALS\n\
-var size;\n\
-\n\
-//draw the tick marks around the edge of the clock\n\
-function ticks(x, y, వ్యాసార్థము) {\n\
-   var tickLen = 7;\n\
-   var gap = వ్యాసార్థము - tickLen;\n\
-   రంగు_మార్చు( నీలము );\n\
-   వెడల్పు(1);\n\
-   for (var theta = 0; theta < 360; theta = theta + 6) {\n\
-      // Thicken hour marks\n\
-      if (theta % 30 != 0) {\n\
-         వెడల్పు(1/130* size);\n\
-      } else {\n\
-         వెడల్పు(3/130* size);\n\
-      }\n\
-      కలమును_పైకి_ఎత్తు();\n\
-      స్థానము_మార్చు(0,0);\n\
-      కోణము(theta);\n\
-      ముందుకు_జరుగు(gap);\n\
-      కలమును_కింద_పెట్టు();\n\
-      ముందుకు_జరుగు(tickLen);\n\
-   }\n\
-}\n\
-\n\
-\n\
-// draw the hour numbers on the clock face\n\
-function numbers(x, y, వ్యాసార్థము) {\n\
-   కలమును_పైకి_ఎత్తు();\n\
-   fontSize = 20/130 * size\n\
-   అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");\n\
-   రంగు_మార్చు("నలుపు");\n\
-   for (var hour = 1; hour <= 12; hour++) {\n\
-      స్థానము_మార్చు(x,y);\n\
-      కోణము(hour * 30);\n\
-      ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit\n\
-      కోణము(180);\n\
-      ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline\n\
-      కుడి_వైపు_తిరుగు(90);\n\
-      if (hour < 10) {\n\
-        ముందుకు_జరుగు(6/130 * size); // horizontal correction to lower left corner\n\
-      } else {\n\
-        ముందుకు_జరుగు(10/130 * size)\n\
-      }\n\
-      కుడి_వైపు_తిరుగు(180);\n\
-      వ్రాయి(hour);\n\
-   }\n\
-   కలమును_కింద_పెట్టు();\n\
-}\n\
-\n\
-// draw one of the clock hands\n\
-function hand (theta, w, length, col) {\n\
-   var stepSize = 5;\n\
-   var widthDelta = w / (length / stepSize);\n\
-   స్థానము_మార్చు(0, 0);\n\
-   కోణము(theta);\n\
-   రంగు_మార్చు(col);\n\
-   for (var step = 0; step < length; step = step + stepSize) {\n\
-      వెడల్పు(w);\n\
-      ముందుకు_జరుగు(stepSize);\n\
-      w = w - widthDelta;\n\
-   }\n\
-}\n\
-\n\
-function hands(hours, minutes, seconds) {\n\
-    // draw seconds hand\n\
-    var secDegreesPerSecond = 6;	// = 360 degrees/60 seconds /minute\n\
-    hand(seconds * secDegreesPerSecond, 4, 100/130 * size, "red");\n\
-    // draw minutes hand \n\
-    var minDegreePerSecond = 0.1;	// = 360 degrees /3600 seconds /hour\n\
-    var minutesInSeconds = minutes * 60 + seconds;\n\
-    hand(minutesInSeconds * minDegreePerSecond, 10, 100/130 * size, "blue");\n\
-    // draw hours hand\n\
-    var hourDegreePerSecond = .1/12;	// = 360 degrees /3600 seconds per hour /12 hours per half day /half day\n\
-    var hoursInSeconds = ((hours % 12) * 3600) + minutesInSeconds;\n\
-    hand(hoursInSeconds * hourDegreePerSecond, 10, 60/130 * size, "blue");\n\
-}\n\
-\n\
-// refresh the entire clock\n\
-function clock() {\n\
-   చెరిపి_వేయి();\n\
-   size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
-  numbers(0, 0, 110/130 * size);\n\
-   రంగు_మార్చు("lightgreen");\n\
-   స్థానము_మార్చు(0,0);\n\
-   వెడల్పు(1/130* size)\n\
-   వృత్తము(130/130 * size );\n\
-   ticks(0, 0, 130/130 * size );\n\
-   var d = new Date();\n\
-   hands(d.getHours(), d.getMinutes(), d.getSeconds());\n\
-}\n\
-\n\
-function ప్రదర్శన() {\n\
-   కుంచికను_దాచు();\n\
-   // refresh the clock every second\n\
-   ఆడించు(clock,1000);\n\
-}\n\
 '
 collidescape ='\
 // Collidescape (tm) -- aperiodic tiling researched by Ward Hollins.\n\
@@ -1467,7 +1604,7 @@ function spiral( ) {\n\
 \n\
 function ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
-     wrap(false)\n\
+     చుట్టొద్దు()\n\
     కలమును_కింద_పెట్టు()\n\
     spiral( )\n\
 }\n\
@@ -1493,7 +1630,7 @@ function drawRowOfDots () {\n\
 \n\
 function colorChangingDots () {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   స్థానము_మార్చు(కనిష్ఠX(),0)\n\
   కోణము(90)\n\
   కలమును_కింద_పెట్టు()\n\
@@ -1505,94 +1642,7 @@ function colorChangingDots () {\n\
   ఆడించు( drawRowOfDots, 500)\n\
 }\n\
 \n\
-demo = colorChangingDots;\n\
-'
-compass_rose2 ='\
-// Compass Rose 2 -- draws compass rose.\n\
-\n\
-function compassRose (x, y, n, outerRadius, innerRadius) {\n\
-  స్థానము_మార్చు(x, y);\n\
-  వృత్తము(outerRadius); //outer circle\n\
-  వృత్తము(innerRadius);\n\
-\n\
-  angleA= Math.atan((innerRadius* Math.sin(Math.PI/4))/(outerRadius-innerRadius* Math.cos(Math.PI/4))) //radians\n\
-  side1= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/4))\n\
-  side2= side1/Math.cos(angleA)\n\
-  for (i=0; i<4; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (i/4 * 360);\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    ముందుకు_జరుగు( innerRadius)\n\
-    కలమును_కింద_పెట్టు()\n\
-    ముందుకు_జరుగు(outerRadius-innerRadius);\n\
-    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
-    ముందుకు_జరుగు( side2);\n\
-    వెనుకకు_జరుగు( side2);\n\
-    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
-    ముందుకు_జరుగు( side2);\n\
-  }\n\
-\n\
-  side3= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/8))\n\
-  r3= side3/Math.cos(angleA)\n\
-  console.log( "side3:"+side3 + " r3: " + r3)\n\
-  for (i=0; i<4; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (45 + i/4 * 360);\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    ముందుకు_జరుగు( innerRadius)\n\
-    కలమును_కింద_పెట్టు()\n\
-    ముందుకు_జరుగు(outerRadius-innerRadius);\n\
-    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
-    ముందుకు_జరుగు( r3);\n\
-    వెనుకకు_జరుగు( r3);\n\
-    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
-    ముందుకు_జరుగు( r3);\n\
-  }\n\
-\n\
-  r4=outerRadius/2\n\
-\n\
-  side4= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/16))\n\
-  r4= side4/Math.cos(angleA)\n\
-  console.log( "side4:"+side4 + " r4: " + r4)\n\
-  for (i=0; i<8; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (22.5 + i/8 * 360);\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    ముందుకు_జరుగు(outerRadius);\n\
-    కలమును_కింద_పెట్టు()\n\
-    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
-    ముందుకు_జరుగు( r4);\n\
-    వెనుకకు_జరుగు( r4);\n\
-    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
-    ముందుకు_జరుగు( r4);\n\
-  }\n\
-\n\
-  r5 = .1 * outerRadius\n\
-  base = 2* r5* Math.sin(angleA)\n\
-  for (i=0; i<16; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (11.25 + i/16 * 360);\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    ముందుకు_జరుగు(outerRadius);\n\
-    కలమును_కింద_పెట్టు()\n\
-    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
-    ముందుకు_జరుగు( r5);\n\
-    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))\n\
-    ముందుకు_జరుగు(base)\n\
-    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))\n\
-    ముందుకు_జరుగు( r5);\n\
-  }\n\
-}\n\
-\n\
-\n\
-\n\
-function ప్రదర్శన() {\n\
-  ఆది_స్థితి();\n\
-  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
-  కుంచికను_దాచు();\n\
-  //రంగు_మార్చు( యాదృచఛిక_సంఖ్య(16));\n\
-  compassRose( 0, 0, 16, size, .2*size);\n\
-}\n\
+ప్రదర్శన = colorChangingDots;\n\
 '
 compass_rose ='\
 // Compass Rose -- draw a compass rose with the same triangles\n\
@@ -1765,7 +1815,7 @@ function boxTheCompass(size) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుంచికను_దాచు() // do not want it to show, so do this early\n\
   కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // do not redraw image each move\n\
   size = 2* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -1798,6 +1848,93 @@ function ప్రదర్శన() {\n\
 }\n\
 \n\
 ప్రదర్శన()\n\
+'
+compass_rose2 ='\
+// Compass Rose 2 -- draws compass rose.\n\
+\n\
+function compassRose (x, y, n, outerRadius, innerRadius) {\n\
+  స్థానము_మార్చు(x, y);\n\
+  వృత్తము(outerRadius); //outer circle\n\
+  వృత్తము(innerRadius);\n\
+\n\
+  angleA= Math.atan((innerRadius* Math.sin(Math.PI/4))/(outerRadius-innerRadius* Math.cos(Math.PI/4))) //radians\n\
+  side1= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/4))\n\
+  side2= side1/Math.cos(angleA)\n\
+  for (i=0; i<4; i++) {\n\
+    స్థానము_మార్చు(x, y);\n\
+    కోణము (i/4 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( innerRadius)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(outerRadius-innerRadius);\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( side2);\n\
+    వెనుకకు_జరుగు( side2);\n\
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
+    ముందుకు_జరుగు( side2);\n\
+  }\n\
+\n\
+  side3= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/8))\n\
+  r3= side3/Math.cos(angleA)\n\
+  console.log( "side3:"+side3 + " r3: " + r3)\n\
+  for (i=0; i<4; i++) {\n\
+    స్థానము_మార్చు(x, y);\n\
+    కోణము (45 + i/4 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( innerRadius)\n\
+    కలమును_కింద_పెట్టు()\n\
+    ముందుకు_జరుగు(outerRadius-innerRadius);\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( r3);\n\
+    వెనుకకు_జరుగు( r3);\n\
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
+    ముందుకు_జరుగు( r3);\n\
+  }\n\
+\n\
+  r4=outerRadius/2\n\
+\n\
+  side4= outerRadius/(1+Math.tan(angleA)/Math.tan(Math.PI/16))\n\
+  r4= side4/Math.cos(angleA)\n\
+  console.log( "side4:"+side4 + " r4: " + r4)\n\
+  for (i=0; i<8; i++) {\n\
+    స్థానము_మార్చు(x, y);\n\
+    కోణము (22.5 + i/8 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు(outerRadius);\n\
+    కలమును_కింద_పెట్టు()\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( r4);\n\
+    వెనుకకు_జరుగు( r4);\n\
+    కుడి_వైపు_తిరుగు( radToDeg( 2* angleA));\n\
+    ముందుకు_జరుగు( r4);\n\
+  }\n\
+\n\
+  r5 = .1 * outerRadius\n\
+  base = 2* r5* Math.sin(angleA)\n\
+  for (i=0; i<16; i++) {\n\
+    స్థానము_మార్చు(x, y);\n\
+    కోణము (11.25 + i/16 * 360);\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు(outerRadius);\n\
+    కలమును_కింద_పెట్టు()\n\
+    కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));\n\
+    ముందుకు_జరుగు( r5);\n\
+    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))\n\
+    ముందుకు_జరుగు(base)\n\
+    కుడి_వైపు_తిరుగు(90+radToDeg(angleA))\n\
+    ముందుకు_జరుగు( r5);\n\
+  }\n\
+}\n\
+\n\
+\n\
+\n\
+function ప్రదర్శన() {\n\
+  ఆది_స్థితి();\n\
+  size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
+  కుంచికను_దాచు();\n\
+  //రంగు_మార్చు( యాదృచఛిక_సంఖ్య(16));\n\
+  compassRose( 0, 0, 16, size, .2*size);\n\
+}\n\
 '
 compass_rose_quilt ='\
 // Compass Rose Quilt -- draw a compass rose quilt\n\
@@ -1956,7 +2093,7 @@ function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120\n\
 console.log("size "+ size)\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుంచికను_దాచు() // don"t want it to show,  do this early\n\
   కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false) // don"t redraw image each move\n\
 \n\
@@ -2060,7 +2197,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //size=200\n\
   inr = .33* size\n\
@@ -2369,7 +2506,7 @@ function delayedDivide() {\n\
 function ప్రదర్శన() {\n\
   // initialize\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(side/4)\n\
@@ -2648,7 +2785,7 @@ function delayedDivide() {\n\
 function startDelayedExpansion() {\n\
   //move to the origin of the big triangle\n\
   reset ()\n\
-   wrap( false)\n\
+   చుట్టొద్దు()\n\
   రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
 \n\
@@ -2737,7 +2874,7 @@ basically:\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   side = targetSide\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(side/2)\n\
@@ -2819,56 +2956,47 @@ function ప్రదర్శన() {\n\
 }\n\
 '
 dividing_circle ='\
-// Dividing a Circle -- divide a వృత్తము with other circles\n\
+// ఒక వృత్తమును వేరే వృత్తములతో విభజినచుట\n\
 \n\
-// *** GLOBALS ***\n\
-var i; // loop variable\n\
+// *** సార్వత్రికములు ***\n\
 \n\
-\n\
-// *** CONSTANTS ***\n\
-rad = 50; // వృత్తము వ్యాసార్థము\n\
-limit = 6; // times to loop\n\
-delayTime = 1000; // milliseconds\n\
+// *** నిత్యములు ***\n\
+const వ్యాసార్థము = 50; // వృత్తము వ్యాసార్థము\n\
+const ఆవర్తన_సంఖ్య = 6; // times to loop\n\
+const అవధి = 1000; // మిల్లిసెకన్లు, milliseconds\n\
 \n\
 \n\
-// *** FUNCTIONS ***\n\
+// *** ప్రక్రియలు ***\n\
 \n\
-function divideCenter(radii, వ్యాసార్థము) {\n\
+విభజినచు = (వృత్తములు, వ్యాసార్థము) => {\n\
   ఎడమ_వైపు_తిరుగు(60);\n\
   ముందుకు_జరుగు(వ్యాసార్థము);\n\
   కుడి_వైపు_తిరుగు(60);\n\
-  var side = 0\n\
-  while (side < 6) { // go to each side\n\
+  ఆవర్తించు( 6, () => { // ఒకొక్కటి చొప్పున ఆరు సమీపస్థ వృత్తములు\n\
     కుడి_వైపు_తిరుగు(60);\n\
-    var step = 0\n\
-    while (step < radii) { // step off side\n\
+    ఆవర్తించు(వృత్తములు, () => { \n\
       ముందుకు_జరుగు(వ్యాసార్థము);\n\
       వృత్తము(వ్యాసార్థము);\n\
-      step = step + 1\n\
-    };\n\
-    side = side + 1;\n\
-  };\n\
+    });\n\
+  });\n\
+}\n\
+\n\
+మెట్టు = (లోతు) => {\n\
+  విభజినచు( లోతు, వ్యాసార్థము )\n\
+  యది_చేత్( () => (లోతు < ఆవర్తన_సంఖ్య), () => {\n\
+    విలంబించు ( () => {మెట్టు(లోతు+1)}, అవధి);\n\
+  } );\n\
 }\n\
 \n\
 \n\
-function tier () {\n\
-  divideCenter (i, rad)\n\
-  i = i + 1\n\
-  if (i < limit) {\n\
-    delay (tier, delayTime)\n\
-  }\n\
-}\n\
-\n\
-\n\
-function ప్రదర్శన() {\n\
+ప్రదర్శన = () => {\n\
   చెరిపి_వేయి();\n\
   కుంచికను_దాచు();\n\
   కేంద్రకమునకు_వెళ్ళు();\n\
   కలమును_పైకి_ఎత్తు();\n\
-   wrap(false);\n\
-  వృత్తము(rad);\n\
-  i = 1;\n\
-  delay (tier, delayTime);\n\
+  చుట్టొద్దు();\n\
+  వృత్తము(వ్యాసార్థము);\n\
+  విలంబించు ( () => {మెట్టు(0)}, అవధి);\n\
 }\n\
 '
 dodecahedron_graph ='\
@@ -3039,7 +3167,7 @@ For example:    */\n\
   });\n\
 }\n\
 \n\
-demo = () => {\n\
+ప్రదర్శన = () => {\n\
   కుంచికను_దాచు();\n\
   రంగు_మార్చు( నీలము );\n\
   let భుజము = 100;\n\
@@ -3052,7 +3180,6 @@ demo = () => {\n\
     రంగు_మార్చు( రంగు_సంఖ్య );\n\
   } );\n\
 }\n\
-\n\
 '
 eye_simulator ='\
 // Eye Simulator -- Eye movement simulation\n\
@@ -4417,7 +4544,7 @@ function ప్రదర్శన() {\n\
   count = 0\n\
   yB = గరిష్ఠY() + sSide\n\
   xB = కనిష్ఠX()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
@@ -4462,6 +4589,76 @@ function ప్రదర్శన() {\n\
       ముందుకు_జరుగు( sSide)\n\
     }\n\
     yB = yB - sSide\n\
+  }\n\
+}\n\
+'
+hex_tessellation ='\
+// Hexagon Tessellation -- tile a surface with hexagons\n\
+\n\
+function hexagon (side) {\n\
+  కలమును_పైకి_ఎత్తు();\n\
+  ముందుకు_జరుగు(side);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  కలమును_కింద_పెట్టు();\n\
+  ఆవర్తించు(6, function () {\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(60);\n\
+  })\n\
+}\n\
+\n\
+function repeatToRight (side) {\n\
+  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+    hexagon(side);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(side * 2);\n\
+    ఎడమ_వైపు_తిరుగు(120);\n\
+    కలమును_కింద_పెట్టు();\n\
+  }\n\
+}\n\
+\n\
+function repeatToLeft(side) {\n\
+  while (కుంచిక.స్థానము.x > కనిష్ఠX())\n\
+   {\n\
+    hexagon(side);\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ముందుకు_జరుగు(side * 2);\n\
+    ఎడమ_వైపు_తిరుగు(120);\n\
+    కలమును_కింద_పెట్టు();\n\
+  }\n\
+}\n\
+\n\
+function ప్రదర్శన() {\n\
+  \n\
+  side = 50;\n\
+  \n\
+  \n\
+  ఆది_స్థితి();\n\
+   చుట్టొద్దు();\n\
+  వెడల్పు(1);\n\
+  స్థానము_మార్చు(కనిష్ఠX()-1, గరిష్ఠY()-1);\n\
+  \n\
+  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
+    repeatToRight(side); // draw a row of hexagons\n\
+  \n\
+    //advance to next row on right side\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ఎడమ_వైపు_తిరుగు(120);\n\
+    ముందుకు_జరుగు(side);\n\
+    ఎడమ_వైపు_తిరుగు(60);\n\
+    ముందుకు_జరుగు(side)\n\
+    కలమును_కింద_పెట్టు();\n\
+  \n\
+    repeatToLeft (side);  // draw a row of hexagons\n\
+  \n\
+    //advance on next row on left side\n\
+    కలమును_పైకి_ఎత్తు();\n\
+    ఎడమ_వైపు_తిరుగు(60);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(60);\n\
+    ముందుకు_జరుగు(side);\n\
+    కుడి_వైపు_తిరుగు(180);\n\
+    కలమును_కింద_పెట్టు();\n\
+    చిత్రీకరించు();\n\
   }\n\
 }\n\
 '
@@ -5052,76 +5249,6 @@ function ప్రదర్శన() {\n\
   }\n\
 }\n\
 '
-hex_tessellation ='\
-// Hexagon Tessellation -- tile a surface with hexagons\n\
-\n\
-function hexagon (side) {\n\
-  కలమును_పైకి_ఎత్తు();\n\
-  ముందుకు_జరుగు(side);\n\
-  కుడి_వైపు_తిరుగు(120);\n\
-  కలమును_కింద_పెట్టు();\n\
-  ఆవర్తించు(6, function () {\n\
-    ముందుకు_జరుగు(side);\n\
-    కుడి_వైపు_తిరుగు(60);\n\
-  })\n\
-}\n\
-\n\
-function repeatToRight (side) {\n\
-  while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
-    hexagon(side);\n\
-    కలమును_పైకి_ఎత్తు();\n\
-    ముందుకు_జరుగు(side * 2);\n\
-    ఎడమ_వైపు_తిరుగు(120);\n\
-    కలమును_కింద_పెట్టు();\n\
-  }\n\
-}\n\
-\n\
-function repeatToLeft(side) {\n\
-  while (కుంచిక.స్థానము.x > కనిష్ఠX())\n\
-   {\n\
-    hexagon(side);\n\
-    కలమును_పైకి_ఎత్తు();\n\
-    ముందుకు_జరుగు(side * 2);\n\
-    ఎడమ_వైపు_తిరుగు(120);\n\
-    కలమును_కింద_పెట్టు();\n\
-  }\n\
-}\n\
-\n\
-function ప్రదర్శన() {\n\
-  \n\
-  side = 50;\n\
-  \n\
-  \n\
-  ఆది_స్థితి();\n\
-   wrap(false);\n\
-  వెడల్పు(1);\n\
-  స్థానము_మార్చు(కనిష్ఠX()-1, గరిష్ఠY()-1);\n\
-  \n\
-  while (కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
-    repeatToRight(side); // draw a row of hexagons\n\
-  \n\
-    //advance to next row on right side\n\
-    కలమును_పైకి_ఎత్తు();\n\
-    ఎడమ_వైపు_తిరుగు(120);\n\
-    ముందుకు_జరుగు(side);\n\
-    ఎడమ_వైపు_తిరుగు(60);\n\
-    ముందుకు_జరుగు(side)\n\
-    కలమును_కింద_పెట్టు();\n\
-  \n\
-    repeatToLeft (side);  // draw a row of hexagons\n\
-  \n\
-    //advance on next row on left side\n\
-    కలమును_పైకి_ఎత్తు();\n\
-    ఎడమ_వైపు_తిరుగు(60);\n\
-    ముందుకు_జరుగు(side);\n\
-    కుడి_వైపు_తిరుగు(60);\n\
-    ముందుకు_జరుగు(side);\n\
-    కుడి_వైపు_తిరుగు(180);\n\
-    కలమును_కింద_పెట్టు();\n\
-    చిత్రీకరించు();\n\
-  }\n\
-}\n\
-'
 hilbert_curve ='\
 // Hilbert Curve -- draw a space filling fractal curve described by David Hilbert\n\
 // more information at Wikipedia  https://en.wikipedia.org/wiki/Hilbert_curve\n\
@@ -5218,7 +5345,7 @@ function B (side,gen) {\n\
 \n\
 function delayedHilbert () {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
 \n\
   // targeting 80% of window\n\
   size = .80 * Math.min( గరిష్ఠX(),గరిష్ఠY())*2\n\
@@ -5622,7 +5749,7 @@ function hirchhorn(side) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   hirchhorn(size)\n\
 }\n\
@@ -5681,7 +5808,7 @@ function ప్రదర్శన() {\n\
   count = 0\n\
   s = 50\n\
   rowOffset = s/3 // offset between rows\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -5962,7 +6089,7 @@ testRates();\n\
 \n\
 //** Drawing functions **\n\
 function drawEWstreet() {\n\
-   wrap(false);\n\
+   చుట్టొద్దు();\n\
   స్థానము_మార్చు(కనిష్ఠX(),0);\n\
   కోణము(90);\n\
   కలమును_కింద_పెట్టు();\n\
@@ -7229,6 +7356,76 @@ function ప్రదర్శన() {\n\
   kochLineవిలంబించు();\n\
 }\n\
 '
+koch_snowflake ='\
+// Koch Snowflakes -- draw an animated set of Koch snowflakes\n\
+\n\
+\n\
+function kochLine (length, order) {\n\
+  //assume drawn on the current కోణము\n\
+  if (order == 0) {\n\
+    ముందుకు_జరుగు(length);\n\
+  } else {\n\
+    //break line and bump out to the left\n\
+    kochLine (length/3, order-1);\n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
+    kochLine (length/3, order-1);\n\
+    కుడి_వైపు_తిరుగు(120); \n\
+    kochLine (length/3, order-1);\n\
+    ఎడమ_వైపు_తిరుగు(60); \n\
+    kochLine (length/3, order-1);\n\
+  }\n\
+}\n\
+\n\
+function kochSnowflake (length, order) {\n\
+  కోణము (30);\n\
+  స్థానము_మార్చు(-length/2,-.3 * length);\n\
+  kochLine (length, order);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  kochLine (length, order);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+  kochLine (length, order);\n\
+  కుడి_వైపు_తిరుగు(120);\n\
+}\n\
+  \n\
+\n\
+ఆది_స్థితి();\n\
+\n\
+var steps = 6;\n\
+var span = 240;\n\
+var i = 0;\n\
+\n\
+function kochLines () {\n\
+  for (i=0; i<steps; i++) {\n\
+    స్థానము_మార్చు(span/2 - i*span/steps, - span/2);\n\
+    kochLine (span,i);\n\
+  }\n\
+}\n\
+\n\
+function kochSnowflakeDelay() {\n\
+\n\
+  చెరిపి_వేయి();\n\
+  var side = గరిష్ఠY() - కనిష్ఠY();\n\
+  if (side > గరిష్ఠX() - కనిష్ఠX()) {\n\
+    side = గరిష్ఠX() - కనిష్ఠX()\n\
+  }\n\
+  kochSnowflake (.8 * side,i);\n\
+  స్థానము_మార్చు(కనిష్ఠX(),కనిష్ఠY());\n\
+  కోణము(90);\n\
+  అక్షరరూపము_స్థాపించు("Helvetica,san-serif 12pt")\n\
+  వ్రాయి("Koch snowflake of order " +i);\n\
+  చిత్రీకరించు();\n\
+  i = i + 1;\n\
+  if (i < steps) {\n\
+    delay (kochSnowflakeDelay, 2000);\n\
+  }\n\
+}\n\
+\n\
+function ప్రదర్శన() {\n\
+  కుంచికను_దాచు();\n\
+  i = 0;\n\
+  kochSnowflakeDelay();\n\
+}\n\
+'
 koch_snowflake2 ='\
 // Koch Snowflake 2 -- Koch snowflake with embellishments\n\
 \n\
@@ -7363,76 +7560,6 @@ function ప్రదర్శన() {\n\
   //కుంచికను_చూపు()\n\
   kochSnowFlake(3*size, 2)\n\
   kochSnowFlake(3*size, 3)\n\
-}\n\
-'
-koch_snowflake ='\
-// Koch Snowflakes -- draw an animated set of Koch snowflakes\n\
-\n\
-\n\
-function kochLine (length, order) {\n\
-  //assume drawn on the current కోణము\n\
-  if (order == 0) {\n\
-    ముందుకు_జరుగు(length);\n\
-  } else {\n\
-    //break line and bump out to the left\n\
-    kochLine (length/3, order-1);\n\
-    ఎడమ_వైపు_తిరుగు(60); \n\
-    kochLine (length/3, order-1);\n\
-    కుడి_వైపు_తిరుగు(120); \n\
-    kochLine (length/3, order-1);\n\
-    ఎడమ_వైపు_తిరుగు(60); \n\
-    kochLine (length/3, order-1);\n\
-  }\n\
-}\n\
-\n\
-function kochSnowflake (length, order) {\n\
-  కోణము (30);\n\
-  స్థానము_మార్చు(-length/2,-.3 * length);\n\
-  kochLine (length, order);\n\
-  కుడి_వైపు_తిరుగు(120);\n\
-  kochLine (length, order);\n\
-  కుడి_వైపు_తిరుగు(120);\n\
-  kochLine (length, order);\n\
-  కుడి_వైపు_తిరుగు(120);\n\
-}\n\
-  \n\
-\n\
-ఆది_స్థితి();\n\
-\n\
-var steps = 6;\n\
-var span = 240;\n\
-var i = 0;\n\
-\n\
-function kochLines () {\n\
-  for (i=0; i<steps; i++) {\n\
-    స్థానము_మార్చు(span/2 - i*span/steps, - span/2);\n\
-    kochLine (span,i);\n\
-  }\n\
-}\n\
-\n\
-function kochSnowflakeDelay() {\n\
-\n\
-  చెరిపి_వేయి();\n\
-  var side = గరిష్ఠY() - కనిష్ఠY();\n\
-  if (side > గరిష్ఠX() - కనిష్ఠX()) {\n\
-    side = గరిష్ఠX() - కనిష్ఠX()\n\
-  }\n\
-  kochSnowflake (.8 * side,i);\n\
-  స్థానము_మార్చు(కనిష్ఠX(),కనిష్ఠY());\n\
-  కోణము(90);\n\
-  అక్షరరూపము_స్థాపించు("Helvetica,san-serif 12pt")\n\
-  వ్రాయి("Koch snowflake of order " +i);\n\
-  చిత్రీకరించు();\n\
-  i = i + 1;\n\
-  if (i < steps) {\n\
-    delay (kochSnowflakeDelay, 2000);\n\
-  }\n\
-}\n\
-\n\
-function ప్రదర్శన() {\n\
-  కుంచికను_దాచు();\n\
-  i = 0;\n\
-  kochSnowflakeDelay();\n\
 }\n\
 '
 koch_triangles_stacked ='\
@@ -8247,7 +8374,7 @@ function vert( size) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap( false)\n\
+   చుట్టొద్దు()\n\
   size = 100\n\
   horiz( size)\n\
   vert( size)\n\
@@ -8322,7 +8449,7 @@ function newRow(lastx, lasty) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   side = 20\n\
   rowx = కనిష్ఠX() - side // - 5.5 * side\n\
   rowy = కనిష్ఠY()// +2*side\n\
@@ -8415,7 +8542,7 @@ function quadrangle( ){\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   rows = 4\n\
   columns = 5\n\
 \n\
@@ -8723,7 +8850,7 @@ function decagon(s, fcolor) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap( false)\n\
+   చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు(90)\n\
   side = 40\n\
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -8753,6 +8880,95 @@ function ప్రదర్శన() {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 60)\n\
   }\n\
+  కుంచికను_దాచు()\n\
+}\n\
+'
+naifeh_mizen ='\
+// Naifeh Mizen Simple -- inspired by the are of Steven Naifeh of the same name\n\
+// for more information see https://stevennaifeh.com\n\
+\n\
+\n\
+function v (side, fColor) {\n\
+  // assume pointing up at upper left corner\n\
+  // invariant\n\
+  if (fColor != "") {\n\
+    ఆకారాము_ప్రారంభించు()\n\
+  }\n\
+  ఎడమ_వైపు_తిరుగు( 30)\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు(side)\n\
+  ఎడమ_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు(60)\n\
+  ముందుకు_జరుగు( side)\n\
+  కుడి_వైపు_తిరుగు( 120)\n\
+  ముందుకు_జరుగు( 3*side)\n\
+  కుడి_వైపు_తిరుగు(150)\n\
+  if (fColor != "") {\n\
+    ఆకారాము_ముగించు(fColor)\n\
+  }\n\
+}\n\
+\n\
+\n\
+function mizen( side, lColor, fColor) {\n\
+  రంగు_మార్చు(lColor)\n\
+  కుడి_వైపు_తిరుగు(120)\n\
+  for (var i=0; i<6; i++) {\n\
+    v( side, fColor)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు( 60)\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    ఎడమ_వైపు_తిరుగు(30)\n\
+    కలమును_కింద_పెట్టు()\n\
+    v( side, fColor)\n\
+\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( 2*side)\n\
+    కుడి_వైపు_తిరుగు( 150)\n\
+    కలమును_కింద_పెట్టు()\n\
+    v( side, fColor)\n\
+\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(30)\n\
+    ముందుకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు(120)\n\
+    ముందుకు_జరుగు( 4*side)\n\
+    కుడి_వైపు_తిరుగు(150)\n\
+    కలమును_కింద_పెట్టు()\n\
+  }\n\
+}\n\
+\n\
+\n\
+function mizenSimple() {\n\
+  bColor = "red"\n\
+  lColor = "white"\n\
+  background ("tan")\n\
+\n\
+  //center canvas more or less\n\
+  స్థానము_మార్చు(-5*side, 3.5*side)\n\
+  వెడల్పు(1)\n\
+  కోణము(0)\n\
+  mizen( side, "నలుపు", "red")\n\
+\n\
+  // do again to make lines stand out\n\
+  స్థానము_మార్చు(-5*side, 3.5*side)\n\
+  వెడల్పు(3)\n\
+  కోణము(0)\n\
+  mizen( side, "white", "")\n\
+}\n\
+\n\
+function ప్రదర్శన() {\n\
+  ఆది_స్థితి()\n\
+   చుట్టొద్దు()\n\
+  side = 40 // 1/2 basic face of hexagon, width...\n\
+  side = .15 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
+  mizenSimple()\n\
   కుంచికను_దాచు()\n\
 }\n\
 '
@@ -8854,95 +9070,6 @@ function ప్రదర్శన() {\n\
   //center canvas more or less\n\
   స్థానము_మార్చు(-8*side, 9*side)\n\
   mizen6( side)\n\
-}\n\
-'
-naifeh_mizen ='\
-// Naifeh Mizen Simple -- inspired by the are of Steven Naifeh of the same name\n\
-// for more information see https://stevennaifeh.com\n\
-\n\
-\n\
-function v (side, fColor) {\n\
-  // assume pointing up at upper left corner\n\
-  // invariant\n\
-  if (fColor != "") {\n\
-    ఆకారాము_ప్రారంభించు()\n\
-  }\n\
-  ఎడమ_వైపు_తిరుగు( 30)\n\
-  ముందుకు_జరుగు( 3*side)\n\
-  కుడి_వైపు_తిరుగు( 120)\n\
-  ముందుకు_జరుగు( side)\n\
-  కుడి_వైపు_తిరుగు(60)\n\
-  ముందుకు_జరుగు(side)\n\
-  ఎడమ_వైపు_తిరుగు( 120)\n\
-  ముందుకు_జరుగు( side)\n\
-  కుడి_వైపు_తిరుగు(60)\n\
-  ముందుకు_జరుగు( side)\n\
-  కుడి_వైపు_తిరుగు( 120)\n\
-  ముందుకు_జరుగు( 3*side)\n\
-  కుడి_వైపు_తిరుగు(150)\n\
-  if (fColor != "") {\n\
-    ఆకారాము_ముగించు(fColor)\n\
-  }\n\
-}\n\
-\n\
-\n\
-function mizen( side, lColor, fColor) {\n\
-  రంగు_మార్చు(lColor)\n\
-  కుడి_వైపు_తిరుగు(120)\n\
-  for (var i=0; i<6; i++) {\n\
-    v( side, fColor)\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    కుడి_వైపు_తిరుగు(30)\n\
-    ముందుకు_జరుగు( side)\n\
-    ఎడమ_వైపు_తిరుగు( 60)\n\
-    ముందుకు_జరుగు( 2*side)\n\
-    ఎడమ_వైపు_తిరుగు(30)\n\
-    కలమును_కింద_పెట్టు()\n\
-    v( side, fColor)\n\
-\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    కుడి_వైపు_తిరుగు(30)\n\
-    ముందుకు_జరుగు( 2*side)\n\
-    కుడి_వైపు_తిరుగు( 150)\n\
-    కలమును_కింద_పెట్టు()\n\
-    v( side, fColor)\n\
-\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    కుడి_వైపు_తిరుగు(30)\n\
-    ముందుకు_జరుగు( side)\n\
-    కుడి_వైపు_తిరుగు(120)\n\
-    ముందుకు_జరుగు( 4*side)\n\
-    కుడి_వైపు_తిరుగు(150)\n\
-    కలమును_కింద_పెట్టు()\n\
-  }\n\
-}\n\
-\n\
-\n\
-function mizenSimple() {\n\
-  bColor = "red"\n\
-  lColor = "white"\n\
-  background ("tan")\n\
-\n\
-  //center canvas more or less\n\
-  స్థానము_మార్చు(-5*side, 3.5*side)\n\
-  వెడల్పు(1)\n\
-  కోణము(0)\n\
-  mizen( side, "నలుపు", "red")\n\
-\n\
-  // do again to make lines stand out\n\
-  స్థానము_మార్చు(-5*side, 3.5*side)\n\
-  వెడల్పు(3)\n\
-  కోణము(0)\n\
-  mizen( side, "white", "")\n\
-}\n\
-\n\
-function ప్రదర్శన() {\n\
-  ఆది_స్థితి()\n\
-   wrap(false)\n\
-  side = 40 // 1/2 basic face of hexagon, width...\n\
-  side = .15 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
-  mizenSimple()\n\
-  కుంచికను_దాచు()\n\
 }\n\
 '
 naifeh_petra ='\
@@ -9121,6 +9248,57 @@ function ప్రదర్శన() {\n\
   dashBackslashes(5, 1, fColor)\n\
 }\n\
 '
+naifeh_saida ='\
+// Naifeh Saida -- inspired by the art of Steven Naifeh with the same name\n\
+// for more information see https://stevennaifeh.com\n\
+\n\
+\n\
+function square (side) {\n\
+  ఆకారాము_ప్రారంభించు()\n\
+  for (var i=0; i<4; i++){\n\
+    ముందుకు_జరుగు(side)\n\
+    కుడి_వైపు_తిరుగు(90)\n\
+  }\n\
+  ఆకారాము_ముగించు("blue")\n\
+}\n\
+\n\
+\n\
+function layer (side, offsetAngle) {\n\
+  ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
+  for (var i=0; i<8; i++){\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    ముందుకు_జరుగు( side)\n\
+    ఎడమ_వైపు_తిరుగు(45)\n\
+    కలమును_కింద_పెట్టు()\n\
+    square(side)\n\
+    కలమును_పైకి_ఎత్తు()\n\
+    కుడి_వైపు_తిరుగు(45)\n\
+    వెనుకకు_జరుగు( side)\n\
+    కుడి_వైపు_తిరుగు(45)\n\
+  }\n\
+  కుడి_వైపు_తిరుగు(offsetAngle)\n\
+}\n\
+\n\
+\n\
+function ప్రదర్శన() {\n\
+  ఆది_స్థితి()\n\
+   చుట్టొద్దు()\n\
+  side = 14\n\
+  side = .033 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
+  factor = Math.sqrt(2 + Math.sqrt( 2))\n\
+  //    side, వ్యాసార్థము, offsetAngle\n\
+  layer(      side, 0)\n\
+  side = side * factor\n\
+  layer( side, 22.5)\n\
+  side = side * factor\n\
+  layer( side, 0)\n\
+  side = side * factor\n\
+  layer( side,   22.5)\n\
+  side = side * factor\n\
+  layer( side,   0)\n\
+  కుంచికను_దాచు()\n\
+}\n\
+'
 naifeh_saida_inverse ='\
 // Naifeh Saida Inverse -- draws the inverse of the Steven Naifeh Saida sculpture\n\
 // for more information see https://stevennaifeh.com\n\
@@ -9159,7 +9337,7 @@ function antilayer (side, innerSide, offset) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
   side = .023 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
 \n\
@@ -9179,57 +9357,6 @@ function ప్రదర్శన() {\n\
   side = outside\n\
   outside = factor * side\n\
   antilayer( outside, side, 22.5)\n\
-}\n\
-'
-naifeh_saida ='\
-// Naifeh Saida -- inspired by the art of Steven Naifeh with the same name\n\
-// for more information see https://stevennaifeh.com\n\
-\n\
-\n\
-function square (side) {\n\
-  ఆకారాము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++){\n\
-    ముందుకు_జరుగు(side)\n\
-    కుడి_వైపు_తిరుగు(90)\n\
-  }\n\
-  ఆకారాము_ముగించు("blue")\n\
-}\n\
-\n\
-\n\
-function layer (side, offsetAngle) {\n\
-  ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
-  for (var i=0; i<8; i++){\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    ముందుకు_జరుగు( side)\n\
-    ఎడమ_వైపు_తిరుగు(45)\n\
-    కలమును_కింద_పెట్టు()\n\
-    square(side)\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    కుడి_వైపు_తిరుగు(45)\n\
-    వెనుకకు_జరుగు( side)\n\
-    కుడి_వైపు_తిరుగు(45)\n\
-  }\n\
-  కుడి_వైపు_తిరుగు(offsetAngle)\n\
-}\n\
-\n\
-\n\
-function ప్రదర్శన() {\n\
-  ఆది_స్థితి()\n\
-   wrap(false)\n\
-  side = 14\n\
-  side = .033 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
-  factor = Math.sqrt(2 + Math.sqrt( 2))\n\
-  //    side, వ్యాసార్థము, offsetAngle\n\
-  layer(      side, 0)\n\
-  side = side * factor\n\
-  layer( side, 22.5)\n\
-  side = side * factor\n\
-  layer( side, 0)\n\
-  side = side * factor\n\
-  layer( side,   22.5)\n\
-  side = side * factor\n\
-  layer( side,   0)\n\
-  కుంచికను_దాచు()\n\
 }\n\
 '
 nested_hexagons ='\
@@ -9426,7 +9553,7 @@ function drawAll() {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
 \n\
   side =   Math.min( 2*గరిష్ఠX()/ 12/ 1.5, 2*గరిష్ఠY()/ 16/ Math.sqrt(3))\n\
@@ -9641,7 +9768,7 @@ function nextColor() { \n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   cent( side, 12)\n\
   కుంచికను_దాచు()\n\
@@ -9719,7 +9846,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap( false)\n\
+   చుట్టొద్దు()\n\
   size = 10\n\
 \n\
   sidea = size\n\
@@ -11132,7 +11259,7 @@ function spinningSquare() {\n\
   }\n\
 }\n\
 \n\
-demo = spinningSquare2 // set the demo function to be spinningSquare2\n\
+ప్రదర్శన = spinningSquare2 // set the demo function to be spinningSquare2\n\
 '
 spiral ='\
 // Spiral -- demonstrate some simple spirals\n\
@@ -11160,7 +11287,7 @@ function spiral2() {\n\
 \n\
 function spiral3() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   n=0\n\
   while (n<40) {\n\
     ముందుకు_జరుగు(n)\n\
@@ -11171,7 +11298,7 @@ function spiral3() {\n\
 \n\
 function spiral() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   n=0\n\
   while (n<1000) {\n\
     ముందుకు_జరుగు(n)\n\
@@ -11190,7 +11317,7 @@ console.log("exiting:")\n\
   }\n\
 }\n\
 \n\
-demo = spiral;\n\
+ప్రదర్శన = spiral;\n\
 \n\
 '
 square_lines ='\
@@ -11198,7 +11325,7 @@ square_lines ='\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   side = 30\n\
   side2 = side + side\n\
   offset = true\n\
@@ -11302,7 +11429,7 @@ function ccwRow( side) {\n\
 \n\
 \n\
 function ప్రదర్శన() {\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   side = 30\n\
   for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {\n\
     yనియోగించు(i)\n\
@@ -11348,7 +11475,7 @@ function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -11421,7 +11548,7 @@ function star (side) {\n\
 \n\
 function stamps () {\n\
   ఆది_స్థితి()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   var x = కనిష్ఠX()\n\
   while (x <= గరిష్ఠX()) {\n\
     var y = కనిష్ఠY()\n\
@@ -11436,36 +11563,7 @@ function stamps () {\n\
 }\n\
 \n\
   \n\
-demo = stamps\n\
-'
-star_burst ='\
-// Starburst -- simple example of while statement and colors\n\
-\n\
-function starburst () {\n\
-  var steps = 1000\n\
-  var len = గరిష్ఠX()\n\
-  if (len < గరిష్ఠY()) {\n\
-    len = గరిష్ఠY()\n\
-  }\n\
-  len = 1.5 * len\n\
-  var i = 0\n\
-  while ( i < steps) {\n\
-    స్థానము_మార్చు( 0,0)\n\
-    కోణము( 360/steps*i)\n\
-    రంగు_మార్చు( random (16))\n\
-    //రంగు_మార్చు("hsl("+ 360 * i/steps + ", 100%, 50%)") // color wheel\n\
-    //రంగు_మార్చు(i%16)\n\
-    //రంగు_మార్చు(Math.floor(16 * i/steps)) // logo colors\n\
-    ముందుకు_జరుగు(len)\n\
-    i = i + 1\n\
-  }\n\
-}\n\
-\n\
-function ప్రదర్శన() {\n\
-  ఆది_స్థితి()\n\
-   wrap( false)\n\
-  starburst()\n\
-} \n\
+ప్రదర్శన = stamps\n\
 '
 star ='\
 // Star -- draw a simple star\n\
@@ -11494,6 +11592,35 @@ function ప్రదర్శన() {\n\
   కుంచికను_దాచు()\n\
 }\n\
 '
+star_burst ='\
+// Starburst -- simple example of while statement and colors\n\
+\n\
+function starburst () {\n\
+  var steps = 1000\n\
+  var len = గరిష్ఠX()\n\
+  if (len < గరిష్ఠY()) {\n\
+    len = గరిష్ఠY()\n\
+  }\n\
+  len = 1.5 * len\n\
+  var i = 0\n\
+  while ( i < steps) {\n\
+    స్థానము_మార్చు( 0,0)\n\
+    కోణము( 360/steps*i)\n\
+    రంగు_మార్చు( random (16))\n\
+    //రంగు_మార్చు("hsl("+ 360 * i/steps + ", 100%, 50%)") // color wheel\n\
+    //రంగు_మార్చు(i%16)\n\
+    //రంగు_మార్చు(Math.floor(16 * i/steps)) // logo colors\n\
+    ముందుకు_జరుగు(len)\n\
+    i = i + 1\n\
+  }\n\
+}\n\
+\n\
+function ప్రదర్శన() {\n\
+  ఆది_స్థితి()\n\
+   చుట్టొద్దు()\n\
+  starburst()\n\
+} \n\
+'
 stars_and_rhombuses ='\
 // Stars and Rhombuses -- tesselation found on a wall paper pattern\n\
 \n\
@@ -11515,7 +11642,7 @@ function quadRhom( side) {\n\
 \n\
 function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
-   wrap( false)\n\
+   చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
   ang = 60\n\
   side = 20\n\
@@ -11629,7 +11756,7 @@ function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3 // offset between rows\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   స్థానము_మార్చు(కనిష్ఠX(), గరిష్ఠY())\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -11737,7 +11864,7 @@ function ప్రదర్శన() {\n\
   rowCount = 0\n\
   column = కనిష్ఠX()\n\
   row = గరిష్ఠY()\n\
-   wrap(false)\n\
+   చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
   s = 50\n\
@@ -11755,143 +11882,6 @@ function ప్రదర్శన() {\n\
     rowCount = rowCount + 1\n\
   }\n\
 }\n\
-'
-US_flag ='\
-// US Flag -- draw an American Flag\n\
-\n\
-function star (size) {\n\
-  కలమును_పైకి_ఎత్తు()\n\
-  ముందుకు_జరుగు(.54*size)\n\
-  turn (180-18)\n\
-  కలమును_కింద_పెట్టు()\n\
-  var i=0\n\
-  ఆకారాము_ప్రారంభించు()\n\
-  while (i<5){\n\
-    ముందుకు_జరుగు(size)\n\
-    కుడి_వైపు_తిరుగు(180-36)\n\
-    i = i + 1\n\
-  }\n\
-  ఆకారాము_ముగించు("white")\n\
-  turn (180+18)\n\
-  వెనుకకు_జరుగు(.54*size)\n\
-}\n\
-\n\
-\n\
-function starLine(count, size, sep) {\n\
-  while (count > 0) {\n\
-    star(size)\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    కుడి_వైపు_తిరుగు(90)\n\
-    ముందుకు_జరుగు(sep)\n\
-    ఎడమ_వైపు_తిరుగు(90)\n\
-    కలమును_కింద_పెట్టు()\n\
-    count = count -1;\n\
-  }\n\
-}\n\
-\n\
-\n\
-function rectangle (width, height) {\n\
-  // assume x, y at upper right hand corner in and out\n\
-  // assume కోణము is 90 in and out\n\
-  కోణము (90)\n\
-  ముందుకు_జరుగు(width)\n\
-  కుడి_వైపు_తిరుగు(90)\n\
-  ముందుకు_జరుగు(height)\n\
-  కుడి_వైపు_తిరుగు(90)\n\
-  ముందుకు_జరుగు(width)\n\
-  కుడి_వైపు_తిరుగు(90)\n\
-  ముందుకు_జరుగు(height)\n\
-  కుడి_వైపు_తిరుగు(90)\n\
-}\n\
-\n\
-\n\
-function stripes (width, spacing, number) {\n\
-  //assume x, y is at right side of stripe\n\
-  //assume కోణము is -90\n\
-  var i = 0\n\
-  while (i<number) {\n\
-    కలమును_కింద_పెట్టు()\n\
-    ముందుకు_జరుగు(width)\n\
-    కలమును_పైకి_ఎత్తు()\n\
-    // make the turn\n\
-    if (i%2 == 0) {\n\
-      ఎడమ_వైపు_తిరుగు(90)\n\
-      ముందుకు_జరుగు(spacing)\n\
-      ఎడమ_వైపు_తిరుగు(90)\n\
-    } else {\n\
-      కుడి_వైపు_తిరుగు(90)\n\
-      ముందుకు_జరుగు(spacing)\n\
-      కుడి_వైపు_తిరుగు(90)\n\
-    }\n\
-    i = i + 1\n\
-  }\n\
-}\n\
-\n\
-\n\
-function flag() {\n\
-  // ***Constants\n\
-  //var xBase = -200 // base is upper left corner\n\
-  //var yBase = 200\n\
-  //var flagHeight = 250 // everything else is proportional to flagHeight\n\
- \n\
-  var flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())\n\
-  var flagWidth = 1.9 * flagHeight\n\
-console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+flagWidth + "H="+flagHeight)\n\
-  var xBase = -flagWidth/2\n\
-  var yBase = flagHeight/2 \n\
-\n\
-  var stripeWidth = flagHeight/13\n\
-  var fieldWidth = .76 * flagHeight\n\
-  var fieldHeight = 7 * stripeWidth\n\
-  var xSeparation = .063 * flagHeight\n\
-  var ySeparation = .054 * flagHeight\n\
-  starSize = .05 *flagHeight // star size\n\
-  //outline flag and field\n\
-  ఆది_స్థితి()\n\
-   wrap(false)\n\
-  కుంచికను_దాచు()\n\
-  స్థానము_మార్చు(xBase, yBase)\n\
-  కోణము (90)\n\
-  రంగు_మార్చు("నలుపు")\n\
-\n\
-  వెడల్పు(1)\n\
-  rectangle (flagWidth, flagHeight)\n\
-  rectangle (fieldWidth, fieldHeight)\n\
-\n\
-  //  draw stripes\n\
-  రంగు_మార్చు( ఎరుపు );\n\
-  వెడల్పు(stripeWidth);\n\
-  స్థానము_మార్చు(xBase+flagWidth, yBase-stripeWidth/2)\n\
-  కోణము (-90)\n\
-  stripes (flagWidth-fieldWidth, 2*stripeWidth, 4)\n\
-  stripes (flagWidth, 2*stripeWidth, 3)\n\
-\n\
-  //draw field\n\
-  రంగు_మార్చు( నీలము )\n\
-  స్థానము_మార్చు(xBase+fieldWidth, yBase-stripeWidth/2)\n\
-  కోణము (-90)\n\
-  stripes (fieldWidth, stripeWidth, 7)\n\
-\n\
-  //draw field of stars\n\
-  కోణము(0)\n\
-  వెడల్పు(2)\n\
-  రంగు_మార్చు( తెలుపు )\n\
-  కలమును_కింద_పెట్టు()\n\
-\n\
-  var row = 0\n\
-  while (row<9) {\n\
-   if (row % 2 == 0) {\n\
-      స్థానము_మార్చు(xBase + xSeparation, yBase - (row +1) * ySeparation)\n\
-      starLine(6, starSize, xSeparation*2)\n\
-    } else {\n\
-      స్థానము_మార్చు(xBase + 2* xSeparation, yBase - (row +1) * ySeparation)\n\
-      starLine(5, starSize, xSeparation * 2)\n\
-    }\n\
-    row = row + 1;\n\
-  }\n\
-}\n\
-  \n\
-demo = flag\n\
 '
 wang_tiles ='\
 // Wang Tiles -- progressively tile the canvas with Wang Tiles\n\
@@ -12231,7 +12221,7 @@ distances are known. This math is a bit tough.\n\
 //\n\
 function ప్రదర్శన() {\n\
 	ఆది_స్థితి()\n\
-	 wrap(false)\n\
+	 చుట్టొద్దు()\n\
 	కుంచికను_దాచు()\n\
 	size=200\n\
 	step = 4\n\

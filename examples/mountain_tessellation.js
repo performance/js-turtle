@@ -66,7 +66,7 @@ function newRow(lastx, lasty) {
 
 function ప్రదర్శన() {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   side = 20
   rowx = కనిష్ఠX() - side // - 5.5 * side
   rowy = కనిష్ఠY()// +2*side

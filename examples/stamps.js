@@ -16,7 +16,7 @@ function star (side) {
 
 function stamps () {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   var x = కనిష్ఠX()
   while (x <= గరిష్ఠX()) {
     var y = కనిష్ఠY()
@@ -31,4 +31,4 @@ function stamps () {
 }
 
   
-demo = stamps
+ప్రదర్శన = stamps

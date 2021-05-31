@@ -18,7 +18,7 @@ function drawRowOfDots () {
 
 function colorChangingDots () {
   ఆది_స్థితి()
-   wrap(false)
+   చుట్టొద్దు()
   స్థానము_మార్చు(కనిష్ఠX(),0)
   కోణము(90)
   కలమును_కింద_పెట్టు()
@@ -30,4 +30,4 @@ function colorChangingDots () {
   ఆడించు( drawRowOfDots, 500)
 }
 
-demo = colorChangingDots;
+ప్రదర్శన = colorChangingDots;
