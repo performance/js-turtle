@@ -27,7 +27,7 @@ function nextColor() {
   return c
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   rowOffset = s/3

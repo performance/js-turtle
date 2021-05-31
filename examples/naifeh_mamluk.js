@@ -36,7 +36,7 @@ function decagon(s, fcolor) {
   ఆకారాము_ముగించు( fcolor)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap( false)
   కుడి_వైపు_తిరుగు(90)

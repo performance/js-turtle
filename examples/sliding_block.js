@@ -584,7 +584,7 @@ function demo1() {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   init()
 
@@ -843,7 +843,7 @@ function moveOne() {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   init()
   moveCount=0

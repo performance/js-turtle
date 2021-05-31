@@ -150,7 +150,7 @@ function labelPoints(size) {
 }
 
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120
 console.log("size "+ size)

@@ -120,7 +120,7 @@ function delayedHilbert () {
 }
 
 
-function demo () {
+function ప్రదర్శన() {
   gen = 0
   delayedHilbert()
 }

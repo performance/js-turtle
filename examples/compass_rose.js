@@ -166,7 +166,7 @@ function boxTheCompass(size) {
 }
 
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   కుంచికను_దాచు() // do not want it to show, so do this early
@@ -200,4 +200,4 @@ function demo () {
   చిత్రీకరించు() // just to render the final product
 }
 
-demo()
+ప్రదర్శన()

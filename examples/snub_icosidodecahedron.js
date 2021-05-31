@@ -82,7 +82,7 @@ function rightPentagon(side) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   స్థానము_మార్చు(-.666 * side, - .333 * side)

@@ -66,7 +66,7 @@ function nextColor() {
   return c
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())

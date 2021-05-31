@@ -42,7 +42,7 @@ function demo1() {
   ఆడించు( nest25, 200);
 }
 
-function demo() {
+function ప్రదర్శన() {
   // animate with function needing a parameter passed
   ఆది_స్థితి()
   size = 2* గరిష్ఠY()

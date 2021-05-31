@@ -9,7 +9,7 @@ function polygon(sides,side) {
 }
 
 // draw a random polygon
-function demo() {
+function ప్రదర్శన() {
    ఆది_స్థితి();
    side = గరిష్ఠY()
    if (గరిష్ఠX() < side) {

@@ -64,7 +64,7 @@ function newRow(lastx, lasty) {
   // function to determine where the new row should start
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   side = 20

@@ -16,7 +16,7 @@ function quadRhom( side) {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap( false)
   కుంచికను_దాచు()

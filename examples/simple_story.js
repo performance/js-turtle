@@ -126,7 +126,7 @@ function frame() {
   }
 }
   
-function demo() {
+function ప్రదర్శన() {
   // show three text frames
   frameDelay = 1000;
   frameNumber = 0;

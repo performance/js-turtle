@@ -9,7 +9,7 @@ function polygon(sides,side) {
 }
 
 // draw a set of nested hexagons
-function demo() {
+function ప్రదర్శన() {
    size = గరిష్ఠY()
    if (గరిష్ఠX() < size) {
      size = గరిష్ఠX()

@@ -84,7 +84,7 @@ function delayed() {
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   i = 0;
   delayed ();
 }

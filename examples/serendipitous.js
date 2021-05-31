@@ -1,6 +1,6 @@
 // Serendipitous Circles -- draw ellipses with quadratic equation
 // from Byte magazine Aug 1977
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   x1 = యాదృచఛిక_సంఖ్య(కనిష్ఠX(),గరిష్ఠX())
   y1 = యాదృచఛిక_సంఖ్య(కనిష్ఠY(),గరిష్ఠY())

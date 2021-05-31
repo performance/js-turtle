@@ -74,7 +74,7 @@ all of the Javascript color variations.
 * changed **యాదృచఛిక_సంఖ్య()** function to allow use with only a high value.
 * added **Stop** button for animations.
 * added **విలంబించు()** function as an alternative for animations.
-* added **Run Demo** button for example code in the **definitions** box.
+* added **విధిమ్ చాలయన్తు** button for example code in the **definitions** box.
 * added select element for selecting and loading Javascript examples.
 * developed the shell tools to convert Javascript examples into strings that can be
 dynamically loaded into the **definitions** box.
@@ -193,10 +193,10 @@ separate selector from the example selector].
 
 #Bugs
 * make the run button better
-	- [ ] if demo() is undefined, just say "Run"
+	- [ ] if ప్రదర్శన() is undefined, just say "Run"
 	* [ ] make enter work all of the time on the command line
-	* [ ] demo() needs to be cleared when changing examples (e.g., flag to clock, binary)
-	* [ ] demo() may be should be called automatically when the example is loaded
+	* [ ] ప్రదర్శన() needs to be cleared when changing examples (e.g., flag to clock, binary)
+	* [ ] ప్రదర్శన() may be should be called automatically when the example is loaded
 * [ ] add a visible version number to this thing somewhere
 * [ ] need some protection from infinite loops (hard to do without injecting code somewhere)mo
 * [ ] arc and curve test is missing third example
@@ -216,7 +216,7 @@ separate selector from the example selector].
     color, కోణము, position, width is not restored
 *  [ ] error handling is inconsistant
 *  [ ] examples should be consistant
-	-    [ ] include demo()
+	-    [ ] include ప్రదర్శన()
 	-    [ ] include ఆది_స్థితి()
 *  [ ] add example checker
 	-    [ ] no single quote

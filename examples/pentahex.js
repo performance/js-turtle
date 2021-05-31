@@ -102,7 +102,7 @@ function drawAll() {
   shape(9,12,0,X5)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   కుంచికను_దాచు()

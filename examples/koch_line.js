@@ -39,7 +39,7 @@ function kochLineవిలంబించు() {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి();
   కుంచికను_దాచు();
   steps = 6;

@@ -71,7 +71,7 @@ function circleEyeL (x, y, n, outerRadius) {
 }
 
 
-function demo () {
+function ప్రదర్శన() {
   var CW = true;
   var CCW = false;
   var size = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())

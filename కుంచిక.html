@@ -1,602 +1,613 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
-   <title>Turtle Graphics</title>
-   <meta charset="utf-8">
-   <link type="text/css" rel="stylesheet" href="కుంచిక.css" />
-   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+  <title>Turtle Graphics</title>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="కుంచిక.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
 </head>
 <!--body onresize="resizeColumns();"> -->
+
 <body id="body">
   <a href="javascript:void(0)" id="dragbarleft"></a>
-    <span class="help_text" id="dragbarleft_help_text">
-      <p>
+  <span class="help_text" id="dragbarleft_help_text">
+    <p>
       Click and drag on the drag bar to resize columns.
-      </p>
-    </span>
+    </p>
+  </span>
   <a href="javascript:void(0)" id="dragbarright"></a>
-    <span class="help_text" id="dragbarright_help_text">
-      <p>
+  <span class="help_text" id="dragbarright_help_text">
+    <p>
       Click and drag on the drag bar to resize columns.
-      </p>
-    </span>
+    </p>
+  </span>
   <div id="wrap">
     <div id="container">
-    <div id="leftcolumncontainer">
-    <div id="leftcolumn">
-    <div id="referencewrapper">
-      <h4 id="referenceTitle">
-        Language Reference
-<!--
-        <button id="referenceClose">
-          <svg class="fi" viewBox="0 0 64 64">
-            <line x1="2" y1="2" x2="62" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
-            <line x1="62" y1="2" x2="2" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
-          </svg>
-        </button>
--->
-<!--
-add a menu .. sort of a table of contents to jump to contents
-       <a href="#color">jump to color</a>
-also roll in the tutorial stuff
--->
-      </h4>
-      <div id="reference">
-       <ul>
-         <li>
-           ముందుకు_జరుగు(<em>ఈప్సిత_బిందువులు</em>)
-           <p>
-             కుంచికను <em>ఈప్సిత_బిందువులు</em> బిందువులు ముందుకు జరుపుతుంది.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ముందుకు_జరుగు(10)</code>
-           </p>
-         </li>
-         <li>
-           వెనుకకు_జరుగు(<em>ఈప్సిత_బిందువులు</em>)
-           <p>
-             కుంచికను <em>ఈప్సిత_బిందువులు</em> బిందువులు వెనుకకు జరుపుతుంది. దిశ మార్చదు.
-           </p>
-           <p>
-             ఉదాహరణ: <code>వెనుకకు_జరుగు(10)</code>
-           </p>
-         </li>
-         <li>
-           కుడి_వైపు_తిరుగు(<em>ఈప్సిత_కోణము</em>)
-           <p>
-             కేవలం కుంచిక దిశను  <em>ఈప్సిత_కోణము</em> డిగ్రీలు <b>కుడి</b> వైపు తప్పుతుంది. స్థానము మార్చదు.
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుడి_వైపు_తిరుగు(90)</code>
-           </p>
-         </li>
-         <li>
-           ఎడమ_వైపు_తిరుగు(<em>ఈప్సిత_కోణము</em>)
-           <p>
-             కేవలం కుంచిక దిశను  <em>ఈప్సిత_కోణము</em> డిగ్రీలు <b>ఎడమ</b> వైపు తప్పుతుంది. స్థానము మార్చదు.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఎడమ_వైపు_తిరుగు(90)</code>
-           </p>
-         </li>
-         <li>
-           కలమును_పైకి_ఎత్తు()
-           <p>
-             యథా స్థానం కుంచికను పైకి ఎత్తుతుంది.
-           </p>
-           <p>
-              ఉదాహరణ: <code>కలమును_పైకి_ఎత్తు()</code>
-           </p>
-         </li>
-         <li>
-           కలమును_కింద_పెట్టు()
-           <p>
-             యథా స్థానం కుంచికను కింద పెడుతుంది..
-           </p>
-           <p>
-             ఉదాహరణ: <code>కలమును_కింద_పెట్టు()</code>
-           </p>
-         </li>
-         <li>
-           కుంచికను_దాచు()
-           <p>
-             కేవలం కుంచికను మాత్రమే ఆదృశ్యం చేస్తుంది. అది క్రింద ఉంటే వ్రాయ గలదు, పైన ఉంటే వ్రాయలేదు
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుంచికను_దాచు()</code>
-           </p>
-         </li>
-         <li>
-           కుంచికను_చూపు()
-           <p>
-             కుంచిక ను చూపుతుంది.
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుంచికను_చూపు()</code>
-           </p>
-         </li>
-         <li>
-           కేంద్రకమునకు_వెళ్ళు()
-           <p>
-             కుంచికను చిత్రపటము మధ్యలో (x=0, y=0)(కోణము=0) పైకి / ఉత్తర దిశగా స్థాపిస్తుంది.
-           </p>
-           <p>
-             ఉదాహరణ: <code>కేంద్రకమునకు_వెళ్ళు()</code>
-           </p>
-         </li>
-         <li>
-           చెరిపి_వేయి()
-           <p>
-             చిత్రపటము లో ఉన్నవన్నీ చేరిపేస్తుంది, కానీ కుంచిక స్థానము, దిశ మార్చదు.
-           </p>
-           <p>
-             ఉదాహరణ: <code>చెరిపి_వేయి()</code>
-           </p>
-         </li>
-         <li>
-           ఆది_స్థితి()
-           <p>
-             చిత్రపటము చెరిపి, కుంచికను చిత్రపటము మధ్యలో (x=0, y=0)(కోణము=0) పైకి / ఉత్తర దిశగా స్థాపిస్తుంది.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఆది_స్థితి()</code>
-           </p>
-         </li>
-         <li>
-           స్థానము_మార్చు(<em>x</em>,<em>y</em>)
-           <p>
-             కుంచికను కేంద్రకము నుంచి <em>x</em> బిందువులు తూర్పుగా / కుడి వైపుకి, <em>y</em> బిందువులు ఉత్తరంగా/ పైకి జరుపుతుంది.
-             వ్యతిరేక దిశగా జరపడానికి <em>-x</em> / <em>-y</em> అని సూచించ వలెను. <b>కుంచిక క్రింద ఉన్నా వ్రాయదు</b>.
-           </p>
-           <p>
-             ఉదాహరణ: <code>స్థానము_మార్చు(20,10)</code>
-           </p>
-         </li>
-         <li>
-           xనియోగించు(<em>x</em>)
-           <p>
-             కుంచికను కేంద్రకము నుంచి <em>x</em> బిందువులు తూర్పుగా / కుడి వైపుకి జరుపుతుంది.
-             పడమర దిశగా / కేంద్రకము నుంచి ఎడమ వైపుకి జరపడానికి <em>-x</em> అని సూచించ వలెను.
-           </p>
-           <p>
-             ఉదాహరణ: <code>xనియోగించు (0)</code>
-           </p>
-         </li>
-         <li>
-           yనియోగించు(<em>y</em>) | yనియోగించు(<em>y</em>)
-           <p>
-             కుంచికను కేంద్రకము నుంచి <em>y</em> బిందువులు  ఉత్తరంగా/ పైకి జరుపుతుంది.
-             దక్షిణ దిశగా / కేంద్రకము నుంచి క్రిందికి జరపడానికి <em>-y</em> అని సూచించ వలెను.
-             This does not draw on the way.
-           </p>
-           <p>
-             ఉదాహరణ: <code>yనియోగించు (0)</code>
-           </p>
-         </li>
-         <li>
+      <div id="leftcolumncontainer">
+        <div id="leftcolumn">
+          <div id="referencewrapper">
+            <h4 id="referenceTitle">
+              కుంచిక భాషావలోకనము
+              <!--
+                <button id="referenceClose">
+                  <svg class="fi" viewBox="0 0 64 64">
+                    <line x1="2" y1="2" x2="62" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
+                    <line x1="62" y1="2" x2="2" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
+                  </svg>
+                </button>
+        -->
+              <!--
+        add a menu .. sort of a table of contents to jump to contents
+              <a href="#color">jump to color</a>
+        also roll in the tutorial stuff
+        -->
+            </h4>
+            <div id="reference">
+              <ul>
+                <li>
+                  ముందుకు_జరుగు(<em>ఈప్సిత_బిందువులు</em>)
+                  <p>
+                    కుంచికను <em>ఈప్సిత_బిందువులు</em> బిందువులు ముందుకు జరుపుతుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ముందుకు_జరుగు(10)</code>
+                  </p>
+                </li>
+                <li>
+                  వెనుకకు_జరుగు(<em>ఈప్సిత_బిందువులు</em>)
+                  <p>
+                    కుంచికను <em>ఈప్సిత_బిందువులు</em> బిందువులు వెనుకకు జరుపుతుంది. దిశ మార్చదు.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వెనుకకు_జరుగు(10)</code>
+                  </p>
+                </li>
+                <li>
+                  కుడి_వైపు_తిరుగు(<em>ఈప్సిత_కోణము</em>)
+                  <p>
+                    కేవలం కుంచిక దిశను <em>ఈప్సిత_కోణము</em> డిగ్రీలు <b>కుడి</b> వైపు తప్పుతుంది. స్థానము మార్చదు.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుడి_వైపు_తిరుగు(90)</code>
+                  </p>
+                </li>
+                <li>
+                  ఎడమ_వైపు_తిరుగు(<em>ఈప్సిత_కోణము</em>)
+                  <p>
+                    కేవలం కుంచిక దిశను <em>ఈప్సిత_కోణము</em> డిగ్రీలు <b>ఎడమ</b> వైపు తప్పుతుంది. స్థానము మార్చదు.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఎడమ_వైపు_తిరుగు(90)</code>
+                  </p>
+                </li>
+                <li>
+                  కలమును_పైకి_ఎత్తు()
+                  <p>
+                    యథా స్థానం కుంచికను పైకి ఎత్తుతుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కలమును_పైకి_ఎత్తు()</code>
+                  </p>
+                </li>
+                <li>
+                  కలమును_కింద_పెట్టు()
+                  <p>
+                    యథా స్థానం కుంచికను కింద పెడుతుంది..
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కలమును_కింద_పెట్టు()</code>
+                  </p>
+                </li>
+                <li>
+                  కుంచికను_దాచు()
+                  <p>
+                    కేవలం కుంచికను మాత్రమే ఆదృశ్యం చేస్తుంది. అది క్రింద ఉంటే వ్రాయ గలదు, పైన ఉంటే వ్రాయలేదు
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుంచికను_దాచు()</code>
+                  </p>
+                </li>
+                <li>
+                  కుంచికను_చూపు()
+                  <p>
+                    కుంచిక ను చూపుతుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుంచికను_చూపు()</code>
+                  </p>
+                </li>
+                <li>
+                  కేంద్రకమునకు_వెళ్ళు()
+                  <p>
+                    కుంచికను చిత్రపటము మధ్యలో (x=0, y=0)(కోణము=0) పైకి / ఉత్తర దిశగా స్థాపిస్తుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కేంద్రకమునకు_వెళ్ళు()</code>
+                  </p>
+                </li>
+                <li>
+                  చెరిపి_వేయి()
+                  <p>
+                    చిత్రపటము లో ఉన్నవన్నీ చేరిపేస్తుంది, కానీ కుంచిక స్థానము, దిశ మార్చదు.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>చెరిపి_వేయి()</code>
+                  </p>
+                </li>
+                <li>
+                  ఆది_స్థితి()
+                  <p>
+                    చిత్రపటము చెరిపి, కుంచికను చిత్రపటము మధ్యలో (x=0, y=0)(కోణము=0) పైకి / ఉత్తర దిశగా స్థాపిస్తుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఆది_స్థితి()</code>
+                  </p>
+                </li>
+                <li>
+                  స్థానము_మార్చు(<em>x</em>,<em>y</em>)
+                  <p>
+                    కుంచికను కేంద్రకము నుంచి <em>x</em> బిందువులు తూర్పుగా / కుడి వైపుకి, <em>y</em> బిందువులు ఉత్తరంగా/
+                    పైకి జరుపుతుంది.
+                    వ్యతిరేక దిశగా జరపడానికి <em>-x</em> / <em>-y</em> అని సూచించ వలెను. <b>కుంచిక క్రింద ఉన్నా
+                      వ్రాయదు</b>.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>స్థానము_మార్చు(20,10)</code>
+                  </p>
+                </li>
+                <li>
+                  xనియోగించు(<em>x</em>)
+                  <p>
+                    కుంచికను కేంద్రకము నుంచి <em>x</em> బిందువులు తూర్పుగా / కుడి వైపుకి జరుపుతుంది.
+                    పడమర దిశగా / కేంద్రకము నుంచి ఎడమ వైపుకి జరపడానికి <em>-x</em> అని సూచించ వలెను.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>xనియోగించు (0)</code>
+                  </p>
+                </li>
+                <li>
+                  yనియోగించు(<em>y</em>) | yనియోగించు(<em>y</em>)
+                  <p>
+                    కుంచికను కేంద్రకము నుంచి <em>y</em> బిందువులు ఉత్తరంగా/ పైకి జరుపుతుంది.
+                    దక్షిణ దిశగా / కేంద్రకము నుంచి క్రిందికి జరపడానికి <em>-y</em> అని సూచించ వలెను.
+                    This does not draw on the way.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>yనియోగించు (0)</code>
+                  </p>
+                </li>
+                <li>
 
-           కోణము(<em>ఈప్సిత_కోణము</em>) | దిశ_మార్చు(<em>ఈప్సిత_కోణము</em>)
-           <p>
-             కుంచిక దిశను ఉత్తరము నించి / నిలువు రేఖ నించి <b>కుడి వైపు తిరుగుతూ</b> <em>ఈప్సిత_కోణము</em> దిగ్రీలు తిప్పుతుంది.
-             పైకి <em>0</em>, కుడి వైపుకి <em>90</em>, క్రిందికి <em>180</em> మరియు ఎడమ వైపుకి <em>270</em> లేక <em>-90</em>.
-             ఎడమ వైపుకి తిరుగుతూ దిశ మార్చడానికి వ్యతిరేక సంఖ్య లు సూచించ వలెను. 
-           </p>
-           <p>
-             ఉదాహరణ: <code>కోణము (90)</code>
-           </p>
-         </li>
-         <li>
-           వెడల్పు(<em>ఈప్సిత_వెడల్పు</em>)
-           <p>
-             కుంచిక వెడల్పు <em>ఈప్సిత_వెడల్పు</em> బిందువులుగా నియోగిస్తుంది.
-           </p>
-           <p>
-             ఉదాహరణ: <code>వెడల్పు(5);</code>
-           </p>
-         </li>
-         <li>
-         <!-- <a name="color"></a> -->
-           రంగు_మార్చు(<em>ఈప్సిత_రంగు</em>)
-           <p>
-             కుంచిక సిరా రంగుని <em>ఈప్సిత_రంగు</em> కి మారుస్తుంది. ఈ పట్టిక లో చూపిన విధంగా 0 నుంచి 15 లోపు సంఖ్య ను 
-              <em>ఈప్సిత_రంగు</em> గా సూచించ వచ్చు.
-             <br/>
-             <button id="నలుపు">0 నలుపు</button>
-             <button id="నీలము">1 నీలము</button>
-             <button id="నిమ్మ">2 నిమ్మ</button>
-             <button id="cyan">3 cyan</button>
-             <button id="ఎరుపు">4 ఎరుపు</button>
-             <button id="magenta">5 magenta</button>
-             <button id="పసుపు">6 పసుపు</button>
-             <button id="తెలుపు">7 తెలుపు</button>
-             <button id="కపిలము">8 కపిలము</button>
-             <button id="tan">9 tan</button>
-             <button id="ఆకుపచ్చ">10 ఆకుపచ్చ</button>
-             <button id="సముద్రము">11 సముద్రము</button>
-             <button id="salmon">12 salmon</button>
-             <button id="purple">13 purple</button>
-             <button id="నారింజ">14 నారింజ</button>
-             <button id="బూడిద">15 బూడిద</button>
-           </p>
-           <p>
-             CSS color code ను కూడా <em>ఈప్సిత_రంగు</em> గా సూచించ వచ్చు. ఉదా.:
-           </p>
-             <ul>
-               <li>
-                 "<em>red</em>" వంటి పేరున్న CSS colors.
-               </li>
-               <li>
-                 "#<em>RRGGBB</em>"
-                 where <em>RR</em>, <em>GG</em>, and <em>BB</em> is the hexidecimal
-                 amount of red, green and blue respectively.
-               </li>
-               <li>
-                 "rgb(<em>ఎరుపు_పాళ్ళు</em>, <em>ఆకుపచ్చ_పాళ్ళు</em>, <em>నీలం_పాళ్ళు</em>)"
-                 ఇందులో పాళ్ళన్నీ [ 0, 255] మధ్యలో సంఖ్యలు.
-               </li>
-               <li>
-                 "rgba(<em>ఎరుపు_పాళ్ళు</em>, <em>ఆకుపచ్చ_పాళ్ళు</em>, <em>నీలం_పాళ్ళు</em>, <em>AA</em>)"
-                 ఇందులో  <em>AA</em> పారదర్శకత సూచిస్తుంది. 0.0 => పూర్తిగా పారదర్శకము అని, 1.0 => పూర్తిగా అపారదర్శకము అని.
-               </li>
-               <li>
-                 "hsl(<em>hue</em>, <em>saturation%</em>, <em>lightness%</em>, <em>AA</em>)"
-		 where the values are:
-		 <em>hue</em> is position on the color wheel (0 to 360),
-                 <em>saturation%</em> is the saturation percentage, and
-	         <em>lightness%</em> is the lightness percentage.
-               </li>
-               <li>
-                 "hsl(<em>hue</em>, <em>saturation%</em>, <em>lightness%</em>, <em>AA</em>)"
-		 where the values are:
-		 <em>hue</em> is position on the color wheel (0 to 360),
-                 <em>saturation%</em> is the saturation percentage,
-	         <em>lightness%</em> is the lightness percentage, and 
-                 <em>AA</em> is the alpha channel for transparancy between
-		 1.0 for opaque and 0.0 for totally transparent.
-               </li>
-             </ul> 
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు(1)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు( ఎరుపు )</code> | <code>రంగు_మార్చు( "red" )</code> 
-           </p>
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు("#ff0000")</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు("rbg(255,0,0)")</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు("rbg(255,0,0, .5)")</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు("hsl( 0, 100, 100")</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>రంగు_మార్చు("hsl( 0, 100, 100, .4")</code>
-           </p>
-         </li>
-         <li>
-           వ్రాయి(<em>ఈప్సిత_వాక్యము</em>)
-           <p>
-             కుంచిక ప్రస్తుత దిశలో, ప్రస్తుత అక్షరరూపము వాడి  <em>ఈప్సిత_వాక్యము</em> ను వ్రాస్తుంది.
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి("సుప్రభాతము")</code>
-           </p>
-         </li>
-         <li>
-           అక్షరరూపము_స్థాపించు(<em>అక్షరరూపము</em>)
-           <p>
-             అక్షరరూపము అంటే fontName.
-             Set the characteristics (<em>style</em>, <em>variant</em>, <em>weight</em>,
-             <em>size</em>, and <em>font-family</em> desired for the font for subsequent writes.
-           </p>
-           <p>
-             ఉదాహరణ: <code>అక్షరరూపము_స్థాపించు("italic small-caps bold 12px courier")</code>
-           </p>
-         </li>
-         <li>
-           కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
-           <p>
-             Draw a circular curve from the కుంచిక's postion. The
-             center of the curve is to the right of the కుంచిక at a perpendicular
-             distance of <em>వ్యాసార్థము</em> pixels. The curve is a full వృత్తము unless
-             <em>extent</em> is provided to limit the number of degrees of arc.
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుడివైపు_చాపాము(30)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుడివైపు_చాపాము(10,45)</code>
-           </p>
-         </li>
-         <li>
-           ఎడమవైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | ఎడమవైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
-           <p>
-             Draw a circular curve from the కుంచిక's postion. The
-             center of the curve is to the left of the కుంచిక at a perpendicular
-             distance of <em>వ్యాసార్థము</em> pixels. The curve is a full వృత్తము unless
-             <em>extent</em> is provided to limit the number of degrees of arc.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఎడమవైపు_చాపాము(20)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఎడమవైపు_చాపాము(10,45)</code>
-           </p>
-         </li>
-         <li>
-           వృత్తము(<em>వ్యాసార్థము</em>[[,(<em>extent</em>],(<em>CCW</em>])
-           <p>
-             Draw a వృత్తము or arc centered on the కుంచిక's postion.  A full circle
-             is drawn unless <em>extent</em> is provided to limit the number of
-             degrees of arc. The arc is drawn clockwise unless a boolean <em>CCW</em>
-             is supplied and has a value of <em>false</em>.
-           </p>
-           <p>
-             ఉదాహరణ: <code>వృత్తము(10)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>వృత్తము(20,90)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>వృత్తము(30,-90,false)</code>
-           </p>
-         </li>
-         <li>
-           నిండు_వృత్తము([<em>వ్యాసార్థము</em>])
-           <p>
-// వ్యాసార్థము in pixels (if none, max of pensize+4, 2*pensize)
-             Draw a filled వృత్తము centered on the కుంచిక's postion.
-             The వృత్తము is drawn with a వ్యాసార్థము of <em>వ్యాసార్థము</em>) pixels. If
-             <em>వ్యాసార్థము</em>) is not specified, it defaults to the larger of
-             width plus 4 or twice the pensize). 
-           </p>
-           <p>
-             ఉదాహరణ: <code>నిండు_వృత్తము()</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>నిండు_వృత్తము(10)</code>
-           </p>
-         </li>
-         <li>
-           ఆకారాము_ప్రారంభించు() | ఆకారాము_ప్రారంభించు()
-           <p>
-              Marks the begining of a shape to be filled. The shape consists of a
-              set of line segments (forward, backward, right, left, కుడివైపు_చాపాము, ఎడమవైపు_చాపాము).
-              The set should be continuous and begin and end at the same point.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఆకారాము_ప్రారంభించు()</code>
-           </p>
-         </li>
-         <li>
-           ఆకారాము_ముగించు([styl])
-           <p>
-              Fills the shape begun with the last ఆకారాము_ప్రారంభించు() directive.
-              The shape is filled with <em>styl</em>, which may be a logo color number,
-              a normal HTML color definition (see color above), a gradient or
-              a pattern. This defaults to the కుంచిక color.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఆకారాము_ముగించు("blue")</code>
-           </p>
-         </li>
-         <li>
-           n = యాదృచఛిక_సంఖ్య([<em>low,</em>]<em>high</em>)
-           <p>
-             Pick a random number between <em>low</em> and <em>high</em> -1.
-             If only one value <em>high</em> is provided, pick a number between 0 and
-             <em>high</em> -1.
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(1,7)+ " ")</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(6)+ " ")</code>
-           </p>
-         </li>
-         <li>
-           ఆవర్తించు(<em>n</em>, <em>action</em>)
-           <p>
-             Allows a function <em>action</em> or group of actions to be repeated
-             <em>n</em> times.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఆవర్తించు(4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; ఆవర్తించు(4, el)</code>
-           </p>
-         </li>
-         <li>
-            wrap(<em>bool</em>)
-           <p>
-             Turns wrapping on and off at the edges of the graphic area by setting it
-             <em>true</em> or <em>false</em> respecitively.
-           </p>
-           <p>
-             ఉదాహరణ: <code> wrap(true)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code> wrap(false)</code>
-           </p>
-         </li>
-         <li>
-           ఆడించు(<em>action</em>,<em>ms</em>)
-           <p>
-             Evalutes <em>action</em> every <em>ms</em> milliseconds.
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(10)",100)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; ఆడించు(el,100)</code>
-           </p>
-         </li>
-         <li>
-           విలంబించు(<em>action</em>,<em>ms</em>)
-           <p>
-             Evalutes <em>action</em> after a delay of <em>ms</em> milliseconds.
-           </p>
-           <p>
-             ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(10)",1000)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",1000)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
-           </p>
-         </li>
-         <li>
-           కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(<em>bool</em>)
-           <p>
-             Turn redrawing on or off by specifying the <em>bool</em> as
-             <em>true</em> or <em>false</em>.
-             <!-- Not sure that this is useful. -->
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)</code>
-           </p>
-           <p>
-             ఉదాహరణ: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false)</code>
-           </p>
-         </li>
-         <li>
-           చిత్రీకరించు()
-           <p>
-             Draw the కుంచిక and the current image.
-             <!-- Not sure that this is useful. -->
-           </p>
-           <p>
-             ఉదాహరణ: <code>చిత్రీకరించు()</code>
-           </p>
-         </li>
-         <li>
-           n = కనిష్ఠX() | n = కనిష్ఠX()
-           <p>
-             Return the minimum value of x in pixels
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి(కనిష్ఠX())</code>
-           </p>
-         </li>
-         <li>
-           n = గరిష్ఠX() | n = గరిష్ఠX()
-           <p>
-             Return the maximum value of x in pixels
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి(గరిష్ఠX())</code>
-           </p>
-         </li>
-         <li>
-           n = కనిష్ఠY() | n = కనిష్ఠY()
-           <p>
-             Return the minimum value of Y in pixels
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి(కనిష్ఠY())</code>
-           </p>
-         </li>
-         <li>
-           n = గరిష్ఠY() | n = గరిష్ఠY()
-           <p>
-             Return the maximum value of Y in pixels
-           </p>
-           <p>
-             ఉదాహరణ: <code>వ్రాయి(గరిష్ఠY())</code>
-           </p>
-         </li>
-       </ul>
-      </div> <!-- reference -->
-      </div> <!-- referencewrapper -->
-      </div> <!-- leftcolumn -->
+                  కోణము(<em>ఈప్సిత_కోణము</em>) | దిశ_మార్చు(<em>ఈప్సిత_కోణము</em>)
+                  <p>
+                    కుంచిక దిశను ఉత్తరము నించి / నిలువు రేఖ నించి <b>కుడి వైపు తిరుగుతూ</b> <em>ఈప్సిత_కోణము</em>
+                    దిగ్రీలు తిప్పుతుంది.
+                    పైకి <em>0</em>, కుడి వైపుకి <em>90</em>, క్రిందికి <em>180</em> మరియు ఎడమ వైపుకి <em>270</em> లేక
+                    <em>-90</em>.
+                    ఎడమ వైపుకి తిరుగుతూ దిశ మార్చడానికి వ్యతిరేక సంఖ్య లు సూచించ వలెను.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కోణము (90)</code>
+                  </p>
+                </li>
+                <li>
+                  వెడల్పు(<em>ఈప్సిత_వెడల్పు</em>)
+                  <p>
+                    కుంచిక వెడల్పు <em>ఈప్సిత_వెడల్పు</em> బిందువులుగా నియోగిస్తుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వెడల్పు(5);</code>
+                  </p>
+                </li>
+                <li>
+                  <!-- <a name="color"></a> -->
+                  రంగు_మార్చు(<em>ఈప్సిత_రంగు</em>)
+                  <p>
+                    కుంచిక సిరా రంగుని <em>ఈప్సిత_రంగు</em> కి మారుస్తుంది. ఈ పట్టిక లో చూపిన విధంగా 0 నుంచి 15 లోపు
+                    సంఖ్య ను
+                    <em>ఈప్సిత_రంగు</em> గా సూచించ వచ్చు.
+                    <br />
+                    <button id="నలుపు">0 నలుపు</button>
+                    <button id="నీలము">1 నీలము</button>
+                    <button id="నిమ్మ">2 నిమ్మ</button>
+                    <button id="cyan">3 cyan</button>
+                    <button id="ఎరుపు">4 ఎరుపు</button>
+                    <button id="magenta">5 magenta</button>
+                    <button id="పసుపు">6 పసుపు</button>
+                    <button id="తెలుపు">7 తెలుపు</button>
+                    <button id="కపిలము">8 కపిలము</button>
+                    <button id="tan">9 tan</button>
+                    <button id="ఆకుపచ్చ">10 ఆకుపచ్చ</button>
+                    <button id="సముద్రము">11 సముద్రము</button>
+                    <button id="salmon">12 salmon</button>
+                    <button id="purple">13 purple</button>
+                    <button id="నారింజ">14 నారింజ</button>
+                    <button id="బూడిద">15 బూడిద</button>
+                  </p>
+                  <p>
+                    CSS color code ను కూడా <em>ఈప్సిత_రంగు</em> గా సూచించ వచ్చు. ఉదా.:
+                  </p>
+                  <ul>
+                    <li>
+                      "<em>red</em>" వంటి పేరున్న CSS colors.
+                    </li>
+                    <li>
+                      "#<em>RRGGBB</em>"
+                      where <em>RR</em>, <em>GG</em>, and <em>BB</em> is the hexidecimal
+                      amount of red, green and blue respectively.
+                    </li>
+                    <li>
+                      "rgb(<em>ఎరుపు_పాళ్ళు</em>, <em>ఆకుపచ్చ_పాళ్ళు</em>, <em>నీలం_పాళ్ళు</em>)"
+                      ఇందులో పాళ్ళన్నీ [ 0, 255] మధ్యలో సంఖ్యలు.
+                    </li>
+                    <li>
+                      "rgba(<em>ఎరుపు_పాళ్ళు</em>, <em>ఆకుపచ్చ_పాళ్ళు</em>, <em>నీలం_పాళ్ళు</em>, <em>AA</em>)"
+                      ఇందులో <em>AA</em> పారదర్శకత సూచిస్తుంది. 0.0 => పూర్తిగా పారదర్శకము అని, 1.0 => పూర్తిగా
+                      అపారదర్శకము అని.
+                    </li>
+                    <li>
+                      "hsl(<em>hue</em>, <em>saturation%</em>, <em>lightness%</em>, <em>AA</em>)"
+                      where the values are:
+                      <em>hue</em> is position on the color wheel (0 to 360),
+                      <em>saturation%</em> is the saturation percentage, and
+                      <em>lightness%</em> is the lightness percentage.
+                    </li>
+                    <li>
+                      "hsl(<em>hue</em>, <em>saturation%</em>, <em>lightness%</em>, <em>AA</em>)"
+                      where the values are:
+                      <em>hue</em> is position on the color wheel (0 to 360),
+                      <em>saturation%</em> is the saturation percentage,
+                      <em>lightness%</em> is the lightness percentage, and
+                      <em>AA</em> is the alpha channel for transparancy between
+                      1.0 for opaque and 0.0 for totally transparent.
+                    </li>
+                  </ul>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు(1)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు( ఎరుపు )</code> | <code>రంగు_మార్చు( "red" )</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు("#ff0000")</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు("rbg(255,0,0)")</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు("rbg(255,0,0, .5)")</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు("hsl( 0, 100, 100")</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>రంగు_మార్చు("hsl( 0, 100, 100, .4")</code>
+                  </p>
+                </li>
+                <li>
+                  వ్రాయి(<em>ఈప్సిత_వాక్యము</em>)
+                  <p>
+                    కుంచిక ప్రస్తుత దిశలో, ప్రస్తుత అక్షరరూపము వాడి <em>ఈప్సిత_వాక్యము</em> ను వ్రాస్తుంది.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి("సుప్రభాతము")</code>
+                  </p>
+                </li>
+                <li>
+                  అక్షరరూపము_స్థాపించు(<em>అక్షరరూపము</em>)
+                  <p>
+                    అక్షరరూపము అంటే fontName.
+                    Set the characteristics (<em>style</em>, <em>variant</em>, <em>weight</em>,
+                    <em>size</em>, and <em>font-family</em> desired for the font for subsequent writes.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>అక్షరరూపము_స్థాపించు("italic small-caps bold 12px courier")</code>
+                  </p>
+                </li>
+                <li>
+                  కుడివైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>])
+                  <p>
+                    Draw a circular curve from the కుంచిక's postion. The
+                    center of the curve is to the right of the కుంచిక at a perpendicular
+                    distance of <em>వ్యాసార్థము</em> pixels. The curve is a full వృత్తము unless
+                    <em>extent</em> is provided to limit the number of degrees of arc.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుడివైపు_చాపాము(30)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుడివైపు_చాపాము(10,45)</code>
+                  </p>
+                </li>
+                <li>
+                  ఎడమవైపు_చాపాము (<em>వ్యాసార్థము</em>[,<em>extent</em>]) | ఎడమవైపు_చాపాము
+                  (<em>వ్యాసార్థము</em>[,<em>extent</em>])
+                  <p>
+                    Draw a circular curve from the కుంచిక's postion. The
+                    center of the curve is to the left of the కుంచిక at a perpendicular
+                    distance of <em>వ్యాసార్థము</em> pixels. The curve is a full వృత్తము unless
+                    <em>extent</em> is provided to limit the number of degrees of arc.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఎడమవైపు_చాపాము(20)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఎడమవైపు_చాపాము(10,45)</code>
+                  </p>
+                </li>
+                <li>
+                  వృత్తము(<em>వ్యాసార్థము</em>[[,(<em>extent</em>],(<em>CCW</em>])
+                  <p>
+                    Draw a వృత్తము or arc centered on the కుంచిక's postion. A full circle
+                    is drawn unless <em>extent</em> is provided to limit the number of
+                    degrees of arc. The arc is drawn clockwise unless a boolean <em>CCW</em>
+                    is supplied and has a value of <em>false</em>.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వృత్తము(10)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వృత్తము(20,90)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వృత్తము(30,-90,false)</code>
+                  </p>
+                </li>
+                <li>
+                  నిండు_వృత్తము([<em>వ్యాసార్థము</em>])
+                  <p>
+                    // వ్యాసార్థము in pixels (if none, max of pensize+4, 2*pensize)
+                    Draw a filled వృత్తము centered on the కుంచిక's postion.
+                    The వృత్తము is drawn with a వ్యాసార్థము of <em>వ్యాసార్థము</em>) pixels. If
+                    <em>వ్యాసార్థము</em>) is not specified, it defaults to the larger of
+                    width plus 4 or twice the pensize).
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>నిండు_వృత్తము()</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>నిండు_వృత్తము(10)</code>
+                  </p>
+                </li>
+                <li>
+                  ఆకారాము_ప్రారంభించు() | ఆకారాము_ప్రారంభించు()
+                  <p>
+                    Marks the begining of a shape to be filled. The shape consists of a
+                    set of line segments (forward, backward, right, left, కుడివైపు_చాపాము, ఎడమవైపు_చాపాము).
+                    The set should be continuous and begin and end at the same point.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఆకారాము_ప్రారంభించు()</code>
+                  </p>
+                </li>
+                <li>
+                  ఆకారాము_ముగించు([styl])
+                  <p>
+                    Fills the shape begun with the last ఆకారాము_ప్రారంభించు() directive.
+                    The shape is filled with <em>styl</em>, which may be a logo color number,
+                    a normal HTML color definition (see color above), a gradient or
+                    a pattern. This defaults to the కుంచిక color.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఆకారాము_ముగించు("blue")</code>
+                  </p>
+                </li>
+                <li>
+                  n = యాదృచఛిక_సంఖ్య([<em>low,</em>]<em>high</em>)
+                  <p>
+                    Pick a random number between <em>low</em> and <em>high</em> -1.
+                    If only one value <em>high</em> is provided, pick a number between 0 and
+                    <em>high</em> -1.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(1,7)+ " ")</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి(యాదృచఛిక_సంఖ్య(6)+ " ")</code>
+                  </p>
+                </li>
+                <li>
+                  ఆవర్తించు(<em>n</em>, <em>action</em>)
+                  <p>
+                    Allows a function <em>action</em> or group of actions to be repeated
+                    <em>n</em> times.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఆవర్తించు(4, function () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)})</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>function el () {ముందుకు_జరుగు(10);కుడి_వైపు_తిరుగు(90)}; ఆవర్తించు(4, el)</code>
+                  </p>
+                </li>
+                <li>
+                  wrap(<em>bool</em>)
+                  <p>
+                    Turns wrapping on and off at the edges of the graphic area by setting it
+                    <em>true</em> or <em>false</em> respecitively.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code> wrap(true)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code> wrap(false)</code>
+                  </p>
+                </li>
+                <li>
+                  ఆడించు(<em>action</em>,<em>ms</em>)
+                  <p>
+                    Evalutes <em>action</em> every <em>ms</em> milliseconds.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(10)",100)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>ఆడించు("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",100)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>function el () {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90)}; ఆడించు(el,100)</code>
+                  </p>
+                </li>
+                <li>
+                  విలంబించు(<em>action</em>,<em>ms</em>)
+                  <p>
+                    Evalutes <em>action</em> after a delay of <em>ms</em> milliseconds.
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(10)",1000)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>delay ("ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90);",1000)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>function el() {ముందుకు_జరుగు(100);కుడి_వైపు_తిరుగు(90); delay (el,100)};el()</code>
+                  </p>
+                </li>
+                <li>
+                  కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(<em>bool</em>)
+                  <p>
+                    Turn redrawing on or off by specifying the <em>bool</em> as
+                    <em>true</em> or <em>false</em>.
+                    <!-- Not sure that this is useful. -->
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(true)</code>
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు(false)</code>
+                  </p>
+                </li>
+                <li>
+                  చిత్రీకరించు()
+                  <p>
+                    Draw the కుంచిక and the current image.
+                    <!-- Not sure that this is useful. -->
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>చిత్రీకరించు()</code>
+                  </p>
+                </li>
+                <li>
+                  n = కనిష్ఠX() | n = కనిష్ఠX()
+                  <p>
+                    Return the minimum value of x in pixels
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి(కనిష్ఠX())</code>
+                  </p>
+                </li>
+                <li>
+                  n = గరిష్ఠX() | n = గరిష్ఠX()
+                  <p>
+                    Return the maximum value of x in pixels
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి(గరిష్ఠX())</code>
+                  </p>
+                </li>
+                <li>
+                  n = కనిష్ఠY() | n = కనిష్ఠY()
+                  <p>
+                    Return the minimum value of Y in pixels
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి(కనిష్ఠY())</code>
+                  </p>
+                </li>
+                <li>
+                  n = గరిష్ఠY() | n = గరిష్ఠY()
+                  <p>
+                    Return the maximum value of Y in pixels
+                  </p>
+                  <p>
+                    ఉదాహరణ: <code>వ్రాయి(గరిష్ఠY())</code>
+                  </p>
+                </li>
+              </ul>
+            </div> <!-- reference -->
+          </div> <!-- referencewrapper -->
+        </div> <!-- leftcolumn -->
       </div> <!-- leftcolumncontainer -->
-         <span class='help_text' id='reference_help_text'>
-           <p>
-           The language reference lists the available functions for కుంచిక graphics.
-           </p>
-           <p>
-           Parameters are <em>italicized</em> included within parentheses '(' and ')' characters.
-           Optional parameters and separating
-           commas are enclosed withing square bracket '[' and ']' characters
-           (the square brackets should not be entered).
-           </p>
-           <p>
-           Alternative forms of
-           the functions are separated with the pipe '|' character (e.g.,
-           cat()|dog() means cat() or dog()). 
-           </p>
-           <p>
-            Examples are shown in <code>bold typewriter font</code>. Each example may be clicked
-            to immediately execute it to see what it does.
-           </p>
-         </span>
+      <span class='help_text' id='reference_help_text'>
+        <p>
+          The language reference lists the available functions for కుంచిక graphics.
+        </p>
+        <p>
+          Parameters are <em>italicized</em> included within parentheses '(' and ')' characters.
+          Optional parameters and separating
+          commas are enclosed withing square bracket '[' and ']' characters
+          (the square brackets should not be entered).
+        </p>
+        <p>
+          Alternative forms of
+          the functions are separated with the pipe '|' character (e.g.,
+          cat()|dog() means cat() or dog()).
+        </p>
+        <p>
+          Examples are shown in <code>bold typewriter font</code>. Each example may be clicked
+          to immediately execute it to see what it does.
+        </p>
+      </span>
       <div id="midcolumncontainer">
-      <div id="midcolumn">
-        <h4 id=canvastitle>Canvas
-         <button id="infoButton">i</button>
-         <span class='help_text' id='infoButton_help_text'>
-           <p>
-           The <strong>i</strong> button toggles the rollover help text.
-           </p>
-         </span>
-        </h4>
-<!--
+        <div id="midcolumn">
+          <h4 id=canvastitle> చిత్రపటము
+            <button id="infoButton">i</button>
+            <span class='help_text' id='infoButton_help_text'>
+              <p>
+                The <strong>i</strong> button toggles the rollover help text.
+              </p>
+            </span>
+          </h4>
+          <!--
           <canvas2 id="కుంచికcanvas2" width="300" height="300"></canvas2>
           <canvas2 id="imagecanvas2" width="300" height="300" style="display:none"></canvas2>
 -->
-      <div id="canvaswrapper">
-          <canvas id="కుంచికcanvas"></canvas>
-          <canvas id="imagecanvas"></canvas>
-         <span class='help_text' id='కుంచికcanvas_help_text'>
-           <p>
-           The canvas is where the కుంచిక graphics are drawn.
-           The కుంచిక is the green triangle pointing in its direction of travel.
-           </p>
-         </span>
-      </div> <!-- canvaswrapper -->
-      <div id=commandwrapper> <!-- commandwrapper -->
-        <label id="commandLabel" for=#command>Command</label>
-        <input type="text" id="command" />
-         <span class='help_text' id='command_help_text'>
-           <p>
-           The Command area is where text can be entered and executed by pressing
-           the ENTER (Return) key.
-           </p>
-         </span>
-         <button id="resetButton">Reset</button>
-         <span class='help_text' id='resetButton_help_text'>
-           <p>
-           The <strong>Reset</strong> button clears the canvas and moves the కుంచిక to its start
-           position.
-           </p>
-         </span>
-         <button id="runButton">Run Demo</button>
-         <span class='help_text' id='runButton_help_text'>
-           <p
-           The <strong>Run Demo</strong> button runs the function in the <strong>Code</strong> area named 
-           demo().
-           </p>
-         </span>
-         <button id="stopButton">Stop</button>
-         <span class='help_text' id='stopButton_help_text'>
-           <p>
-           The <strong>Stop</strong> button stops animation.
-           </p>
-         </span>
-         <a id="saveCanvasButton">
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         viewBox="0 0 333.668 333.668" style="enable-background:new 0 0 333.668 333.668;" xml:space="preserve">
-<g>
-        <path d="M295.101,298.649H38.561C17.295,298.649,0,281.354,0,260.088V103.703c0-21.266,17.295-38.561,38.561-38.561h52.347
+          <div id="canvaswrapper">
+            <canvas id="కుంచికcanvas"></canvas>
+            <canvas id="imagecanvas"></canvas>
+            <span class='help_text' id='కుంచికcanvas_help_text'>
+              <p>
+                చిత్రపటము మీద కుంచిక భాష వాడి బొమ్మలు / graphics, చలన చిత్రాలూ చిత్రీకరించవచ్చు.
+                కుంచిక ముందుకు వెళ్ళబోయే దిశను చూపుతు న్న ఆకుపచ్చ త్రికోణము గా కనిపిస్తుంది.
+              </p>
+            </span>
+          </div> <!-- canvaswrapper -->
+          <div id=commandwrapper>
+            <!-- commandwrapper -->
+            <label id="commandLabel" for=#command>Command</label>
+            <input type="text" id="command" />
+            <span class='help_text' id='command_help_text'>
+              <p>
+                The Command area is where text can be entered and executed by pressing
+                the ENTER (Return) key.
+              </p>
+            </span>            
+            <button id="resetButton">ఆది స్థితి</button>
+            <span class='help_text' id='resetButton_help_text'>
+              <p>
+                The <strong>ఆది స్థితి</strong> button clears the canvas and moves the కుంచిక to its start
+                position.
+              </p>
+            </span>
+            <button id="runButton">విధిమ్ చాలయన్తు</button>
+            <span class='help_text' id='runButton_help_text'>
+              <p The <strong>విధిమ్ చాలయన్తు</strong> button runs the function in the <strong>Code</strong> area named
+                ప్రదర్శన().
+              </p>
+            </span>
+            <button id="stopButton">Stop</button>
+            <span class='help_text' id='stopButton_help_text'>
+              <p>
+                The <strong>Stop</strong> button stops animation.
+              </p>
+            </span>
+            <a id="saveCanvasButton">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 333.668 333.668"
+                style="enable-background:new 0 0 333.668 333.668;" xml:space="preserve">
+                <g>
+                  <path
+                    d="M295.101,298.649H38.561C17.295,298.649,0,281.354,0,260.088V103.703c0-21.266,17.295-38.561,38.561-38.561h52.347
                 l4.582-15.457c1.87-8.458,9.602-14.666,18.696-14.666h105.297c8.837,0,16.658,6.176,18.728,14.743l0.122,0.527l4.177,14.852h52.597
                 c21.266,0,38.561,17.295,38.561,38.561v156.384C333.662,281.354,316.361,298.649,295.101,298.649z M38.561,77.996
                 c-14.178,0-25.707,11.53-25.707,25.707v156.384c0,14.178,11.53,25.707,25.707,25.707h256.54c14.178,0,25.707-11.53,25.707-25.707
@@ -605,137 +616,139 @@ also roll in the tutorial stuff
                 c0-44.981,36.594-81.569,81.576-81.569c44.969,0,81.557,36.594,81.557,81.569C248.397,223.204,211.809,259.798,166.841,259.798z
                  M166.841,109.513c-37.893,0-68.722,30.823-68.722,68.716s30.83,68.709,68.722,68.709c37.886,0,68.703-30.823,68.703-68.709
                 C235.543,140.336,204.72,109.513,166.841,109.513z M286.804,101.852c-6.555,0-11.858,5.315-11.858,11.858
-                c0,6.549,5.302,11.857,11.858,11.857c6.549,0,11.851-5.309,11.851-11.857C298.649,107.167,293.346,101.852,286.804,101.852z"/>
-</svg>
-        </a>
-         <span class='help_text' id='saveCanvasButton_help_text'>
-           <p>
-           The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser download file with the name TurtleGraphic.png.
-           </p>
-         </span>
-         <button id="saveSVG">
-           Save SVG
-        </button>
-         <span class='help_text' id='saveCanvasButton_help_text'>
-           <p>
-           The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser download file with the name TurtleGraphic.png.
-           </p>
-         </span>
-        </div> <!-- commandwrapper -->
-      </div> <!-- midcolumn -->
+                c0,6.549,5.302,11.857,11.858,11.857c6.549,0,11.851-5.309,11.851-11.857C298.649,107.167,293.346,101.852,286.804,101.852z" />
+              </svg>
+            </a>
+            <span class='help_text' id='saveCanvasButton_help_text'>
+              <p>
+                The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser
+                download file with the name కుంచిక_చిత్రము.png.
+              </p>
+            </span>
+            <!-- <button id="saveSVG">
+              Save SVG
+            </button> -->
+            <span class='help_text' id='saveCanvasButton_help_text'>
+              <p>
+                The <strong>Save Canvas</strong> button takes a snap shot of the canvas and saves in the browser
+                download file with the name కుంచిక_చిత్రము.png.
+              </p>
+            </span>
+          </div> <!-- commandwrapper -->
+        </div> <!-- midcolumn -->
       </div> <!-- midcolumncontainer -->
       <div id="rightcolumncontainer">
-      <div id="rightcolumn">
-      <div id="examplewrapper">
-	<h4>Code Area
-        <!-- need to change name Examples to Code Area -->
-        <!-- The select options are populated with a tool, DO NOT EDIT. -->
-        <select id=examples>
-          <option selected value=example>Examples</option>
-          <option value="arc_test">Arc and Curve Test</option>
-          <option value="basket_weave_tessellation">Basket Weave Tessellation</option>
-          <option value="bounce">Bouncing Rectangles</option>
-          <option value="brick_tessellation">Brick Tessellation</option>
-          <option value="cafe_wall_illusion">Cafe Wall Illusion</option>
-          <option value="circle_eye2">Circle Eye2</option>
-          <option value="circle_eye">Circle Eye</option>
-          <option value="clock_BCD">Clock, BCD</option>
-          <option value="clock_digital">Clock, Digital</option>
-          <option value="clock">Clock, Analog</option>
-          <option value="collidescape">Collidescape (tm)</option>
-          <option value="color_changing_dots">Color Changing Dots</option>
-          <option value="compass_rose2">Compass Rose 2</option>
-          <option value="compass_rose">Compass Rose</option>
-          <option value="compass_rose_quilt">Compass Rose Quilt</option>
-          <option value="connected_points">Connected Points</option>
-          <option value="conway_fractal">Conway Fractal</option>
-          <option value="conway_pinwheel">Conway Pinwheel</option>
-          <option value="coordinates">Coordinates</option>
-          <option value="dividing_circle">Dividing a Circle</option>
-          <option value="dodecahedron_graph">Dodecahedron Graph</option>
-          <option value="dragon_curve">Dragon Curve</option>
-          <option value="example">Example</option>
-          <option value="eye_simulator">Eye Simulator</option>
-          <option value="fibinoucci">Fibanochi sequence</option>
-          <option value="gosper_curve">Gosper Curve</option>
-          <option value="graphitti">Graphitti</option>
-          <option value="heart">Heart</option>
-          <option value="herring_bone_tessellation">Herring Bone Tessellation</option>
-          <option value="hexapentakis_truncated_icosahedron_asymmetric_full">Hexapentakis-Truncated-Icosahedron-Asymmetric full</option>
-          <option value="hexapentakis_truncated_icosahedron_symmetric_full">Hexapentakis-Truncated-Icosahedron Symmetric full</option>
-          <option value="hexapentakis_truncated_icosahedron_symmetric_half">Hexapentakis Truncated Icosahedron half</option>
-          <option value="hex_tessellation">Hexagon Tessellation</option>
-          <option value="hilbert_curve">Hilbert Curve</option>
-          <option value="hirschhorn_tiles">Hircshhorn Tiles</option>
-          <option value="home_plate_tessellation">Home Plate Tessellation</option>
-          <option value="icosahedron_graph">Icosahedron Graph</option>
-          <option value="intersection_simulator">Intersection Simulator</option>
-          <option value="jumping_jack">Jumping Jack</option>
-          <option value="koch_line">Koch Lines</option>
-          <option value="koch_snowflake2">Koch Snowflake 2</option>
-          <option value="koch_snowflake">Koch Snowflakes</option>
-          <option value="koch_triangles_stacked">Koch Snowflakes, Stacked</option>
-          <option value="life">Life</option>
-          <option value="miura_origami">Miura Origami</option>
-          <option value="mountain_tessellation">Mountain Tessellation</option>
-          <option value="naifeh_ajlun">Naifah Ajlun</option>
-          <option value="naifeh_cyrene">Naifah Cyrene</option>
-          <option value="naifeh_jeresh">Naifah Jeresh</option>
-          <option value="naifeh_mamluk">Naifeh Mamluk</option>
-          <option value="naifeh_mizen6">Naifeh Mizen Six</option>
-          <option value="naifeh_mizen">Naifeh Mizen Simple</option>
-          <option value="naifeh_petra">Naifeh Petra</option>
-          <option value="naifeh_saida_inverse">Naifeh Saida Inverse</option>
-          <option value="naifeh_saida">Naifeh Saida</option>
-          <option value="nested_hexagons">Nested Hexagons</option>
-          <option value="nested_squares">Nested Squares</option>
-          <option value="pentahex">Pentahex</option>
-          <option value="polygon">Polygon</option>
-          <option value="random_stars">Random Stars</option>
-          <option value="random_stick_men">Random Stick Men</option>
-          <option value="rhombic_star_tessellation">Rhombic Star Tessellation</option>
-          <option value="rice_penta_tessellation_1">Rice Penta Tessellation 1</option>
-          <option value="serendipitous">Serendipitous Circles</option>
-          <option value="sierpinski_curve">Sierpinski Curve</option>
-          <option value="sierpinski_triangle">Sierpinski Triangle</option>
-          <option value="simple_story">Simple Story</option>
-          <option value="sliding_block">Sliding Block Puzzle</option>
-          <option value="snowman">Snowman</option>
-          <option value="snub_icosidodecahedron">Snub Icosidodecahedron Half</option>
-          <option value="spinning_squares">Spinning Squares</option>
-          <option value="spiral">Spiral</option>
-          <option value="square_lines">Square Lines</option>
-          <option value="square_series">Square Series</option>
-          <option value="square_tessellation">Square Tessellation</option>
-          <option value="squiggle">Squiggle</option>
-          <option value="stamps">Stamps</option>
-          <option value="star_burst">Starburst</option>
-          <option value="star">Star</option>
-          <option value="stars_and_rhombuses">Stars and Rhombuses</option>
-          <option value="tree">Tree Symmetrical</option>
-          <option value="triangle_tessellation">Triangle Tesselation</option>
-          <option value="triangle_tunnel">Triangle Tunnel</option>
-          <option value="two_square_tessellation">Two Square Tessellation</option>
-          <option value="US_flag">US Flag</option>
-          <option value="wang_tiles">Wang Tiles</option>
-          <option value="waves">Waves</option>
-        </select>
-        <!-- The above select options are populated with a tool, DO NOT EDIT. -->
-        <span class='left_help_text' id='examples_help_text'>
-          <p>
-          The <strong>Examples select</strong> is used to load an example into the
-          <strong>defintions</strong> area.
-          </p>
-          <p>
-          The example can be run with the <strong>Run Demo</strong> button.
-          </p>
-        </span>
-      </h4>
-      <textarea id="codeArea">
-/* Define helper functions here
-or write your own functions
-
-For example:    */
+        <div id="rightcolumn">
+          <div id="examplewrapper">
+            <h4> విధి లేఖ
+              <!-- need to change name Examples to Code Area -->
+              <!-- The select options are populated with a tool, DO NOT EDIT. -->
+              <select id=examples>
+                <option selected value=example> ఉదాహరణములు </option>
+                <option value="arc_test">Arc and Curve Test</option>
+                <option value="basket_weave_tessellation">Basket Weave Tessellation</option>
+                <option value="bounce">Bouncing Rectangles</option>
+                <option value="brick_tessellation">Brick Tessellation</option>
+                <option value="cafe_wall_illusion">Cafe Wall Illusion</option>
+                <option value="circle_eye2">Circle Eye2</option>
+                <option value="circle_eye">Circle Eye</option>
+                <option value="clock_BCD">Clock, BCD</option>
+                <option value="clock_digital">Clock, Digital</option>
+                <option value="clock">Clock, Analog</option>
+                <option value="collidescape">Collidescape (tm)</option>
+                <option value="color_changing_dots">Color Changing Dots</option>
+                <option value="compass_rose2">Compass Rose 2</option>
+                <option value="compass_rose">Compass Rose</option>
+                <option value="compass_rose_quilt">Compass Rose Quilt</option>
+                <option value="connected_points">Connected Points</option>
+                <option value="conway_fractal">Conway Fractal</option>
+                <option value="conway_pinwheel">Conway Pinwheel</option>
+                <option value="coordinates">Coordinates</option>
+                <option value="dividing_circle">Dividing a Circle</option>
+                <option value="dodecahedron_graph">Dodecahedron Graph</option>
+                <option value="dragon_curve">Dragon Curve</option>
+                <option value="example">Example</option>
+                <option value="eye_simulator">Eye Simulator</option>
+                <option value="fibinoucci">Fibanochi sequence</option>
+                <option value="gosper_curve">Gosper Curve</option>
+                <option value="graphitti">Graphitti</option>
+                <option value="heart">Heart</option>
+                <option value="herring_bone_tessellation">Herring Bone Tessellation</option>
+                <option value="hexapentakis_truncated_icosahedron_asymmetric_full">
+                  Hexapentakis-Truncated-Icosahedron-Asymmetric full</option>
+                <option value="hexapentakis_truncated_icosahedron_symmetric_full">Hexapentakis-Truncated-Icosahedron
+                  Symmetric full</option>
+                <option value="hexapentakis_truncated_icosahedron_symmetric_half">Hexapentakis Truncated Icosahedron
+                  half</option>
+                <option value="hex_tessellation">Hexagon Tessellation</option>
+                <option value="hilbert_curve">Hilbert Curve</option>
+                <option value="hirschhorn_tiles">Hircshhorn Tiles</option>
+                <option value="home_plate_tessellation">Home Plate Tessellation</option>
+                <option value="icosahedron_graph">Icosahedron Graph</option>
+                <option value="intersection_simulator">Intersection Simulator</option>
+                <option value="jumping_jack">Jumping Jack</option>
+                <option value="koch_line">Koch Lines</option>
+                <option value="koch_snowflake2">Koch Snowflake 2</option>
+                <option value="koch_snowflake">Koch Snowflakes</option>
+                <option value="koch_triangles_stacked">Koch Snowflakes, Stacked</option>
+                <option value="life">Life</option>
+                <option value="miura_origami">Miura Origami</option>
+                <option value="mountain_tessellation">Mountain Tessellation</option>
+                <option value="naifeh_ajlun">Naifah Ajlun</option>
+                <option value="naifeh_cyrene">Naifah Cyrene</option>
+                <option value="naifeh_jeresh">Naifah Jeresh</option>
+                <option value="naifeh_mamluk">Naifeh Mamluk</option>
+                <option value="naifeh_mizen6">Naifeh Mizen Six</option>
+                <option value="naifeh_mizen">Naifeh Mizen Simple</option>
+                <option value="naifeh_petra">Naifeh Petra</option>
+                <option value="naifeh_saida_inverse">Naifeh Saida Inverse</option>
+                <option value="naifeh_saida">Naifeh Saida</option>
+                <option value="nested_hexagons">Nested Hexagons</option>
+                <option value="nested_squares">Nested Squares</option>
+                <option value="pentahex">Pentahex</option>
+                <option value="polygon">Polygon</option>
+                <option value="random_stars">Random Stars</option>
+                <option value="random_stick_men">Random Stick Men</option>
+                <option value="rhombic_star_tessellation">Rhombic Star Tessellation</option>
+                <option value="rice_penta_tessellation_1">Rice Penta Tessellation 1</option>
+                <option value="serendipitous">Serendipitous Circles</option>
+                <option value="sierpinski_curve">Sierpinski Curve</option>
+                <option value="sierpinski_triangle">Sierpinski Triangle</option>
+                <option value="simple_story">Simple Story</option>
+                <option value="sliding_block">Sliding Block Puzzle</option>
+                <option value="snowman">Snowman</option>
+                <option value="snub_icosidodecahedron">Snub Icosidodecahedron Half</option>
+                <option value="spinning_squares">Spinning Squares</option>
+                <option value="spiral">Spiral</option>
+                <option value="square_lines">Square Lines</option>
+                <option value="square_series">Square Series</option>
+                <option value="square_tessellation">Square Tessellation</option>
+                <option value="squiggle">Squiggle</option>
+                <option value="stamps">Stamps</option>
+                <option value="star_burst">Starburst</option>
+                <option value="star">Star</option>
+                <option value="stars_and_rhombuses">Stars and Rhombuses</option>
+                <option value="tree">Tree Symmetrical</option>
+                <option value="triangle_tessellation">Triangle Tesselation</option>
+                <option value="triangle_tunnel">Triangle Tunnel</option>
+                <option value="two_square_tessellation">Two Square Tessellation</option>
+                <option value="US_flag">US Flag</option>
+                <option value="wang_tiles">Wang Tiles</option>
+                <option value="waves">Waves</option>
+              </select>
+              <!-- The above select options are populated with a tool, DO NOT EDIT. -->
+              <span class='left_help_text' id='examples_help_text'>
+                <p>
+                  The <strong>Examples select</strong> is used to load an example into the
+                  <strong>defintions</strong> area.
+                </p>
+                <p>
+                  The example can be run with the <strong>విధిమ్ చాలయన్తు</strong> button.
+                </p>
+              </span>
+            </h4>
+            <textarea id="codeArea">
+/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */
 
 సమ_చతురస్రము = ( భుజము ) => {
   ఆవర్తించు(4, () => {
@@ -744,11 +757,11 @@ For example:    */
   });
 }
 
-demo = () => {
+ప్రదర్శన = () => {
   కుంచికను_దాచు();
   రంగు_మార్చు( నీలము );
-  let భుజము = 100;
-  let రంగు_సంఖ్య = 0;
+  భుజము = 100;
+  రంగు_సంఖ్య = 0;
   యావత్_పరిక్రమ( () => భుజము > 0, ()=> {
     సమ_చతురస్రము( భుజము );
     కుడి_వైపు_తిరుగు(36);
@@ -758,70 +771,90 @@ demo = () => {
   } );
 }
          </textarea> <!-- codeArea -->
-         <span class='left_help_text' id='codeArea_help_text'>
-           <p>
-           The code area is for the entry of multi-line programs, helper
-           functions and examples.
-           </p>
-           <p>
-           The code can be examined or modified as desired.
-           </p>
-           <p>
-           Individual functions may be executed by typing their name and
-           partheses into the
-           <strong>Command</strong> line (for example: <code>demo()</code>) and pressing ENTER or RETURN.
-           </p>
-        </span>
-      <div id=codeButtons> <!-- codebuttons -->
-        <input type="file" id="uploadFile" accept=".js,.txt"/>
-        <button id="uploadButton">
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 60.903 60.903" style="enable-background:new 0 0 60.903 60.903;" xml:space="preserve">
-<g>
-	<path d="M49.561,16.464H39.45v6h10.111c3.008,0,5.341,1.535,5.341,2.857v26.607c0,1.321-2.333,2.858-5.341,2.858H11.34
+            <span class='left_help_text' id='codeArea_help_text'>
+              <p>
+                The code area is for the entry of multi-line programs, helper
+                functions and examples.
+              </p>
+              <p>
+                The code can be examined or modified as desired.
+              </p>
+              <p>
+                Individual functions may be executed by typing their name and
+                partheses into the
+                <strong>Command</strong> line (for example: <code>ప్రదర్శన()</code>) and pressing ENTER or RETURN.
+              </p>
+            </span>
+            <div id=codeButtons>
+              <!-- codebuttons -->
+              <input type="file" id="uploadFile" accept=".js,.txt" />
+              <button id="uploadButton">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60.903 60.903"
+                  style="enable-background:new 0 0 60.903 60.903;" xml:space="preserve">
+                  <g>
+                    <path
+                      d="M49.561,16.464H39.45v6h10.111c3.008,0,5.341,1.535,5.341,2.857v26.607c0,1.321-2.333,2.858-5.341,2.858H11.34
 		c-3.007,0-5.34-1.537-5.34-2.858V25.324c0-1.322,2.333-2.858,5.34-2.858h10.11v-6H11.34C4.981,16.466,0,20.357,0,25.324v26.605
-		c0,4.968,4.981,8.857,11.34,8.857h38.223c6.357,0,11.34-3.891,11.34-8.857V25.324C60.902,20.355,55.921,16.464,49.561,16.464z"/>
-	<path d="M39.529,29.004c-0.768,0-1.535,0.294-2.121,0.88l-3.756,3.755V20.612v-6V3.117c0-1.656-1.343-3-3-3s-3,1.344-3,3v11.494v6
+		c0,4.968,4.981,8.857,11.34,8.857h38.223c6.357,0,11.34-3.891,11.34-8.857V25.324C60.902,20.355,55.921,16.464,49.561,16.464z" />
+                    <path d="M39.529,29.004c-0.768,0-1.535,0.294-2.121,0.88l-3.756,3.755V20.612v-6V3.117c0-1.656-1.343-3-3-3s-3,1.344-3,3v11.494v6
 		v13.23l-3.959-3.958c-0.586-0.586-1.354-0.88-2.121-0.88s-1.535,0.294-2.121,0.88c-1.172,1.17-1.172,3.07,0,4.241l8.957,8.957
 		c0.586,0.586,1.354,0.877,2.12,0.877c0.008,0,0.016,0,0.023,0s0.015,0,0.022,0c0.768,0,1.534-0.291,2.12-0.877l8.957-8.957
-		c1.172-1.171,1.172-3.071,0-4.241C41.064,29.298,40.298,29.004,39.529,29.004z"/>
-</svg>
-        </button>
-         <span class='left_help_text' id='uploadButton_help_text'>
-           <p>
-           The <strong>Upload</strong> button opens a dialog to select a file
-           to load into the code text area.
-           </p>
-         </span>
-        <button id="downloadButton">
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 67.671 67.671" style="enable-background:new 0 0 67.671 67.671;" xml:space="preserve">
-<g>
-	<path d="M52.946,23.348H42.834v6h10.112c3.007,0,5.34,1.536,5.34,2.858v26.606c0,1.322-2.333,2.858-5.34,2.858H14.724
+		c1.172-1.171,1.172-3.071,0-4.241C41.064,29.298,40.298,29.004,39.529,29.004z" />
+                </svg>
+              </button>
+              <span class='left_help_text' id='uploadButton_help_text'>
+                <p>
+                  The <strong>Upload</strong> button opens a dialog to select a file
+                  to load into the code text area.
+                </p>
+              </span>
+              <button id="downloadButton">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 67.671 67.671"
+                  style="enable-background:new 0 0 67.671 67.671;" xml:space="preserve">
+                  <g>
+                    <path
+                      d="M52.946,23.348H42.834v6h10.112c3.007,0,5.34,1.536,5.34,2.858v26.606c0,1.322-2.333,2.858-5.34,2.858H14.724
 		c-3.007,0-5.34-1.536-5.34-2.858V32.207c0-1.322,2.333-2.858,5.34-2.858h10.11v-6h-10.11c-6.359,0-11.34,3.891-11.34,8.858v26.606
-		c0,4.968,4.981,8.858,11.34,8.858h38.223c6.358,0,11.34-3.891,11.34-8.858V32.207C64.286,27.239,59.305,23.348,52.946,23.348z"/>
-	<path d="M24.957,14.955c0.768,0,1.535-0.293,2.121-0.879l3.756-3.756v13.028v6v11.494c0,1.657,1.343,3,3,3s3-1.343,3-3V29.348v-6
+		c0,4.968,4.981,8.858,11.34,8.858h38.223c6.358,0,11.34-3.891,11.34-8.858V32.207C64.286,27.239,59.305,23.348,52.946,23.348z" />
+                    <path d="M24.957,14.955c0.768,0,1.535-0.293,2.121-0.879l3.756-3.756v13.028v6v11.494c0,1.657,1.343,3,3,3s3-1.343,3-3V29.348v-6
 		V10.117l3.959,3.959c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242l-8.957-8.957
 		C35.492,0.291,34.725,0,33.958,0c-0.008,0-0.015,0-0.023,0s-0.015,0-0.023,0c-0.767,0-1.534,0.291-2.12,0.877l-8.957,8.957
-		c-1.172,1.171-1.172,3.071,0,4.242C23.422,14.662,24.189,14.955,24.957,14.955z"/>
-</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-</svg>
-        </button>
-         <span class='left_help_text' id='downloadButton_help_text'>
-           <p>
-           The <strong>Download</strong> button downloads the code text
-           area to the directory designated for downloads by the browser.
-           </p>
-         </span>
-        <input type="text" id="downloadFilename" placeholder="TurtleGraphic" />.js
-         <span class='left_help_text' id='downloadFilename_help_text'>
-           <p>
-           The <strong>Download Filename</strong> text area holds the filename
-           used when downloading the code text area to the download directory.
-           </p>
-         </span>
+		c-1.172,1.171-1.172,3.071,0,4.242C23.422,14.662,24.189,14.955,24.957,14.955z" />
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg>
+              </button>
+              <span class='left_help_text' id='downloadButton_help_text'>
+                <p>
+                  The <strong>Download</strong> button downloads the code text
+                  area to the directory designated for downloads by the browser.
+                </p>
+              </span>
+              <input type="text" id="downloadFilename" placeholder="కుంచిక_చిత్రము" />.js
+              <span class='left_help_text' id='downloadFilename_help_text'>
+                <p>
+                  The <strong>Download Filename</strong> text area holds the filename
+                  used when downloading the code text area to the download directory.
+                </p>
+              </span>
 
-<!--
+              <!--
          <button id="saveButton">Download</button>
          <span class='left_help_text' id='saveButton_help_text'>
            <p>
@@ -835,25 +868,26 @@ demo = () => {
            </p>
          </span>
 -->
-         <button id="clearButton">Clear</button>
-         <span class='left_help_text' id='clearButton_help_text'>
-           <p>
-           The <strong>Clear</strong> button clears the code text area to allow entry of new programs.
-           </p>
-         </span>
-        </div> <!-- codebuttons -->
-      </div> <!-- examplewrapper -->
-      </div> <!-- rightcolumn -->
+              <button id="clearButton">లేఖ ను చెరుపు</button>
+              <span class='left_help_text' id='clearButton_help_text'>
+                <p>
+                  The <strong>లేఖ ను చెరుపు</strong> button clears the code text area to allow entry of new programs.
+                </p>
+              </span>
+            </div> <!-- codebuttons -->
+          </div> <!-- examplewrapper -->
+        </div> <!-- rightcolumn -->
       </div> <!-- rightcolumncontainer -->
-   </div> <!-- container-->
-   </div> <!-- wrap-->
+    </div> <!-- container-->
+  </div> <!-- wrap-->
 
 
-<!-- scripts -->
-   <script type="text/javascript" src="examples.js"></script>
-   <script type="text/javascript" src="కుంచిక.js"></script>
-   <script type="text/javascript" src="కుంచికConsole.js"></script>
-   <script type="text/javascript" src="FileSaver.min.js"></script>
-   <script src="he.js"></script>
+  <!-- scripts -->
+  <script type="text/javascript" src="examples.js"></script>
+  <script type="text/javascript" src="కుంచిక.js"></script>
+  <script type="text/javascript" src="కుంచికConsole.js"></script>
+  <script type="text/javascript" src="FileSaver.min.js"></script>
+  <script src="he.js"></script>
 </body>
+
 </html>

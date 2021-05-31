@@ -32,7 +32,7 @@ function repeatToLeft(side) {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   
   side = 50;
   

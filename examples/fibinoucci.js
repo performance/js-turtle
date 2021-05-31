@@ -40,7 +40,7 @@ function fib(count, side) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   స్థానము_మార్చు(150,60)
   కోణము(90)

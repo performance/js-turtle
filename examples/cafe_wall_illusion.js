@@ -31,7 +31,7 @@ function cafeTiles (h, w, gw, gc, off) {
 
 
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి();
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
   కుంచికను_దాచు();

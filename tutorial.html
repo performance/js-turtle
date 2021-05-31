@@ -95,7 +95,7 @@ be as follows:
 </code>
 
 <p>
-Click on the <span class="button">Run Demo</span> button.
+Click on the <span class="button">విధిమ్ చాలయన్తు</span> button.
 </p>
 <p>
 What happened? You
@@ -176,7 +176,7 @@ coding area is:
 </code>
 
 <p>
-Click on the <span class="button">Run Demo</span> button,
+Click on the <span class="button">విధిమ్ చాలయన్తు</span> button,
 you should see something like the figure on the right.
 </p>
 </section>
@@ -268,11 +268,11 @@ beginning and end of a block of statements to be executed when the
 <h2>Debugging</h2>
 <p>
 Try to execute the program by pressing on the
-<span class="button">Run Demo</span>.
+<span class="button">విధిమ్ చాలయన్తు</span>.
 You should get a error message about <strong>demo</strong> being undefined.
-This is because the <span class="button">Run Demo</span> tries to invoked the
-<code>demo()</code> function, and it isn't defined in the coding area.
-So let's adds a <code>demo()</code> function to the program:
+This is because the <span class="button">విధిమ్ చాలయన్తు</span> tries to invoked the
+<code>ప్రదర్శన()</code> function, and it isn't defined in the coding area.
+So let's adds a <code>ప్రదర్శన()</code> function to the program:
 </p>
 
 <code class="tryme">function hi () {
@@ -280,7 +280,7 @@ So let's adds a <code>demo()</code> function to the program:
   వ్రాయి( &quot;Hello World&quot;);
 }
 
-function demo () {
+function ప్రదర్శన() {
 }
 </code>
 </section>
@@ -288,26 +288,26 @@ function demo () {
 <section>
 <p>
 Now try to execute the program again by pressing on the
-<span class="button">Run Demo</span>.
+<span class="button">విధిమ్ చాలయన్తు</span>.
 The error has gone
-away, but nothing has executed. Why? We defined <code>demo()</code> as requested,
+away, but nothing has executed. Why? We defined <code>ప్రదర్శన()</code> as requested,
 but as defined, it does nothing.  The <code>hi()</code> function
 was never called or invoked. Let's add a call or invocation to the <code>hi()</code>
-function in the <code>demo()</code> function.
+function in the <code>ప్రదర్శన()</code> function.
 </p>
 <code class="tryme">function hi () {
   కుడి_వైపు_తిరుగు( 90);
   వ్రాయి( &quot;Hello World&quot;);
 }
 
-function demo () {
+function ప్రదర్శన() {
   hi()
 }
 </code>
 
 <p>
 Now when you press the
-<span class="button">Run Demo</span> button, the కుంచిక should print
+<span class="button">విధిమ్ చాలయన్తు</span> button, the కుంచిక should print
 &quot;Hello World&quot; on the canvas.
 </p>
 </section>
@@ -315,7 +315,7 @@ Now when you press the
 <section>
 <p>
 What happens if you
-press the <span class="button">Run Demo</span> button more than once? Why?
+press the <span class="button">విధిమ్ చాలయన్తు</span> button more than once? Why?
 </p>
     <img src="images/hello_world_pin_wheel.png" alt="">
 <p>
@@ -328,7 +328,7 @@ writing to the canvas.
   వ్రాయి( &quot;Hello World&quot;);
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   helloWorld()
 }
@@ -399,7 +399,7 @@ square, as we have learned previously.
   కుడి_వైపు_తిరుగు(90)
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square1()
 }
@@ -410,7 +410,7 @@ function demo () {
     <img src="images/rotated_squares.png" alt="">
 <p>
 Let's see some of the power of a function with a simple change to draw three
-squares rotated 30° about the starting point. Change the <code>demo ()</code>
+squares rotated 30° about the starting point. Change the <code>ప్రదర్శన()</code>
 function as follows:
 </p>
 <code class="tryme">function square1 () {
@@ -424,7 +424,7 @@ function as follows:
   కుడి_వైపు_తిరుగు(90)
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square1()
   కుడి_వైపు_తిరుగు(30)
@@ -453,7 +453,7 @@ function square () {
   ఆవర్తించు(4, el)
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square()
 }
@@ -471,7 +471,7 @@ when using the <code>ఆవర్తించు()</code> function. The code is 
   )
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square()
 }
@@ -602,7 +602,7 @@ turn the corner, and increment the number of sides.
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square()
 }
@@ -625,7 +625,7 @@ The equivalent code for drawing a square is shown below.
   } while (i < 4)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square()
 }
@@ -647,7 +647,7 @@ draw a square is as follows:
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square()
 }
@@ -684,7 +684,7 @@ the parameter name or names within the parentheses as in the following code.
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square(100) // 100 is an argument
 }
@@ -698,7 +698,7 @@ the argument, say '100,' within the parentheses, as in: <code>square (100)</code
 <p>
 Putting the two together, the code should look something like the figure to
 the right.  We also need to modify
-the function call in the <code>demo()</code> function to use the new arguments.
+the function call in the <code>ప్రదర్శన()</code> function to use the new arguments.
 When the function is invoked, it is supplied with arguments. The value of
 the arguments is passed to the parameter in the corresponding position defined
 with the function.
@@ -715,7 +715,7 @@ Of all this there can be no argument, or was that a parameter.
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   square(100) // 100 is an argument
 }
@@ -742,7 +742,7 @@ Let's do this one step at a time. First just turn it.
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   var i = 0
   while (i &lt; 12) {
@@ -758,7 +758,7 @@ function demo () {
 <p>
 The next modification to the code also
 changes the size of the squares and their color with each iteration within
-the while loop of the <code>demo()</code> function.
+the while loop of the <code>ప్రదర్శన()</code> function.
 </p>
 <code class="tryme">function square(side) {
   var i = 0;
@@ -769,7 +769,7 @@ the while loop of the <code>demo()</code> function.
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   var i = 0
   while ( i &lt; 12) {
@@ -809,7 +809,7 @@ function square(side) {
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   i = 0
   while ( i &lt; 12) {
@@ -1000,7 +1000,7 @@ function.
   }
 }
 
-function demo(){
+function ప్రదర్శన(){
   var i
   ఆది_స్థితి()
   for (i=0; i&lt;20; i= i + 1) {
@@ -1024,7 +1024,7 @@ the effects just build on the canvas. The program can be stopped by pressing the
 </p>
 <p>
 Let's use the same basic program that we used in the last exercise.
-We need to break the <code>demo()</code> function into two parts, because
+We need to break the <code>ప్రదర్శన()</code> function into two parts, because
 animate needs to call a function that draws something on the canvas.
 The iteration is no longer needed, because that is effectively done by
 the <code>ఆడించు()</code> function. The <code>ఆది_స్థితి()</code> should only be
@@ -1046,7 +1046,7 @@ function randomSquare(){
   square( యాదృచఛిక_సంఖ్య( 15,150))
 }
 
-function demo(){
+function ప్రదర్శన(){
   ఆది_స్థితి()
   ఆడించు( randomSquare, 100) // pass address of function,
                               // not results of the function
@@ -1055,7 +1055,7 @@ function demo(){
     <img src="images/animated_random_squares.png" alt="">
 <p>
 A funny thing is
-happening with the reference of <code>randomSquare</code> in the <code>demo()</code>
+happening with the reference of <code>randomSquare</code> in the <code>ప్రదర్శన()</code>
 function above. This is passing the address of the <code>randomSquare()</code>
 function to the <code>ఆడించు()</code> function. Animate executes the
 function at the address passed to it. By dropping the parentheses
@@ -1085,7 +1085,7 @@ function randomSquare(){
   square( యాదృచఛిక_సంఖ్య( 15,150))
 }
 
-function demo(){
+function ప్రదర్శన(){
   ఆది_స్థితి()
   ఆడించు( randomSquare, 100) // pass address of function,
                               // not results of the function
@@ -1119,7 +1119,7 @@ function randomSquare(){
   square( యాదృచఛిక_సంఖ్య( 15,150))
 }
 
-function demo(){
+function ప్రదర్శన(){
   ఆది_స్థితి()
   ఆడించు( randomSquare, 100) // pass address of function,
                               // not results of the function
@@ -1184,7 +1184,7 @@ sides and the number of sides required.
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   for (var i=3; i < 10; i = i+1) {
     polygon( 40+2*i, i)
@@ -1264,7 +1264,7 @@ function star (size) {
   spikey (size, 5, 2)
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   star(200)
 }
@@ -1287,7 +1287,7 @@ function polygon (size, sides) {
   spikey (size, sides, 1)
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   polygon(20, 20)
 }
@@ -1313,7 +1313,7 @@ function starN ( size, points) {
   spikey (size, points, Math.floor(points/2))
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   starN (200, 21)
 }

@@ -642,7 +642,7 @@ var gen
 var numDemos = 16
 var demoNumber
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   demoNumber = 0

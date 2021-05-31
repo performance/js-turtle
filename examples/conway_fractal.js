@@ -279,7 +279,7 @@ function delayedDivide() {
 
 //*** MAIN ***
 
-function demo() {
+function ప్రదర్శన() {
   // initialize
   ఆది_స్థితి()
    wrap(false)

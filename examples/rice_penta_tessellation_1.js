@@ -67,7 +67,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit
   pl(c8)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap( false)
   size = 10

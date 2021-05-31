@@ -17,7 +17,7 @@ distances are known. This math is a bit tough.
 
 
 //
-function demo() {
+function ప్రదర్శన() {
 	ఆది_స్థితి()
 	 wrap(false)
 	కుంచికను_దాచు()

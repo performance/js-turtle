@@ -112,7 +112,7 @@ function onWindowLoad() {
 
                     if (command !== undefined || command !== "") { // good enough validation??
                         console.log("in it now")
-                        cmd ("demo()");
+                        cmd ("ప్రదర్శన()");
                     }
                     console.log("passed it")
                     commandChanged()
@@ -435,7 +435,7 @@ function resetClicked() {
  *   None
  *************************************************************************/
 function runClicked() {
-    cmd ("demo()");
+    cmd ("ప్రదర్శన()");
     commandChanged();
 }
 
@@ -531,7 +531,7 @@ function saveCanvasClicked(e) {
             [codeArea.value || codeArea.placeholder]
             , {type: "text/plain;charset=" + document.characterSet}
         )
-        , "కుంచికGraphic.png"
+        , "కుంచిక_చిత్రము.png"
     );
     return false;
 }
@@ -605,15 +605,15 @@ on window load:
 should the code auto run or not...
 yes for the examples
 yes for the samples
-no for codeblock... override with command=demo()
+no for codeblock... override with command=ప్రదర్శన()
 on window load?
    not loaded with examples
    reloaded with with samples
    reloaded with codeblock
                   document.getElementById('codeArea').value = eval(sel.value);
                     eval (document.getElementById("codeArea").value);
-                      console.log("eval \"demo()\"")
-                      eval ("demo();");
+                      console.log("eval \"ప్రదర్శన()\"")
+                      eval ("ప్రదర్శన();");
                 //eval (document.getElementById("codeArea").value);
                 //  eval (command + "();");
         //document.getElementById('codeArea').value = eval(sel.value);
@@ -654,7 +654,7 @@ function examplesChanged () {
     } catch (e) {
         showError(e)
     }
-    cmd ("demo()");
+    cmd ("ప్రదర్శన()");
     commandChanged()
 }
 
@@ -684,10 +684,10 @@ function commandChanged () {
     }
 
     // execute the code in the command box
-    if (!errorFound && ( commandText !== "demo()" ||
-                         commandText !== "demo();" ||
+    if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
+                         commandText !== "ప్రదర్శన();" ||
                          demo !== undefined)) {
-    //same as !==demo() || ==demo(); && !==undefined
+    //same as !==ప్రదర్శన() || ==ప్రదర్శన(); && !==undefined
         try {
             console.log("cC cmd: " + commandText + ".")
             eval(commandText);
@@ -784,7 +784,7 @@ document.getElementById("body").onresize=fixDragButton;
 document.getElementById("stopButton").onclick=stopClicked;
 document.getElementById("stopButton").hidden=true;
 document.getElementById("downloadButton").onclick=downloadClicked;
-document.getElementById("saveSVG").onclick=svgDownloadClicked;
+// document.getElementById("saveSVG").onclick=svgDownloadClicked;
 document.getElementById("uploadButton").onclick= function () {
     document.getElementById("uploadFile").click();
 };

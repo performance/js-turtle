@@ -62,7 +62,7 @@ function pent(side) {
   వృత్తము(2.13*side)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   size = .4 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   //స్థానము_మార్చు(-50,-22)

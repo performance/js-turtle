@@ -20,7 +20,7 @@ function starburst () {
   }
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap( false)
   starburst()

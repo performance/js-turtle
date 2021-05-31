@@ -27,7 +27,7 @@ function hRect( sSide, lSide, fColor) {
   ముందుకు_జరుగు( lSide)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   yB = గరిష్ఠY() + sSide

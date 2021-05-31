@@ -72,7 +72,7 @@ function circleEyeL (x, y, n, outerRadius) {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   var CW = true;\n\
   var CCW = false;\n\
   var size = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -216,7 +216,7 @@ function square ( side, fColor) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   yB = గరిష్ఠY() + small\n\
@@ -334,7 +334,7 @@ function let_them_drop (n) {\n\
    ఆడించు(function () { rain(drops, n)}, 100);\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   let_them_drop (Math.floor(గరిష్ఠ_X * గరిష్ఠ_Y/2000));\n\
 }\n\
 '
@@ -368,7 +368,7 @@ function hRect( sSide, lSide, fColor) {\n\
   ముందుకు_జరుగు( lSide)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   yB = గరిష్ఠY()\n\
@@ -431,7 +431,7 @@ function cafeTiles (h, w, gw, gc, off) {\n\
 \n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -466,7 +466,7 @@ function circleEye (x, y, n, outerRadius, innerRadius) {\n\
 \n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -493,7 +493,7 @@ function circleEye (x, y, n, outerRadius) {\n\
 \n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -882,7 +882,7 @@ function clock() {\n\
    hands(d.getHours(), d.getMinutes(), d.getSeconds());\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
    కుంచికను_దాచు();\n\
    // refresh the clock every second\n\
    ఆడించు(clock,1000);\n\
@@ -1465,7 +1465,7 @@ function spiral( ) {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
      wrap(false)\n\
     కలమును_కింద_పెట్టు()\n\
@@ -1586,7 +1586,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
 \n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -1763,7 +1763,7 @@ function boxTheCompass(size) {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   కుంచికను_దాచు() // do not want it to show, so do this early\n\
@@ -1797,7 +1797,7 @@ function demo () {\n\
   చిత్రీకరించు() // just to render the final product\n\
 }\n\
 \n\
-demo()\n\
+ప్రదర్శన()\n\
 '
 compass_rose_quilt ='\
 // Compass Rose Quilt -- draw a compass rose quilt\n\
@@ -1952,7 +1952,7 @@ function labelPoints(size) {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120\n\
 console.log("size "+ size)\n\
@@ -2058,7 +2058,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 \n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -2366,7 +2366,7 @@ function delayedDivide() {\n\
 \n\
 //*** MAIN ***\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   // initialize\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
@@ -2726,7 +2726,7 @@ subColor = "wheat"\n\
 specialTriangle = 0\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   /* want demo to show a mix of divide and expand with animation\n\
 \n\
 basically:\n\
@@ -2810,7 +2810,7 @@ function ticks (dir, limit, step) {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   lines()\n\
   ticks (0, గరిష్ఠY(), 10)\n\
   ticks (90, గరిష్ఠX(), 10)\n\
@@ -2860,7 +2860,7 @@ function tier () {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   చెరిపి_వేయి();\n\
   కుంచికను_దాచు();\n\
   కేంద్రకమునకు_వెళ్ళు();\n\
@@ -2916,7 +2916,7 @@ function pent(side) {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   స్థానము_మార్చు(-50,-22)\n\
   కుడి_వైపు_తిరుగు(17)\n\
   pent(50)\n\
@@ -3017,7 +3017,7 @@ function delayedDragon () {\n\
 }  \n\
     \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   side = .9 * Math.min(గరిష్ఠX(), 2*గరిష్ఠY())\n\
   gen = 0\n\
   delayedDragon()\n\
@@ -3027,7 +3027,7 @@ example ='\
 // Example -- example of code\n\
 /* Define helper functions here\n\
 or write your own functions\n\
-including a demo() function\n\
+including a ప్రదర్శన() function\n\
 \n\
 For example:    */\n\
 \n\
@@ -4053,7 +4053,7 @@ function executeCommand () {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
     కుంచికను_దాచు()\n\
     commandDue = undefined\n\
@@ -4106,7 +4106,7 @@ function fib(count, side) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   స్థానము_మార్చు(150,60)\n\
   కోణము(90)\n\
@@ -4218,7 +4218,7 @@ function delayDemo () {\n\
   విలంబించు( delayDemo,3000)\n\
 }\n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   gen = 0\n\
   delayDemo()\n\
 }\n\
@@ -4243,7 +4243,7 @@ function plotOne() {\n\
   ముందుకు_జరుగు(యాదృచఛిక_సంఖ్య(10, 30));\n\
 }\n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   ఆడించు(plotOne, 20);\n\
 }\n\
@@ -4370,7 +4370,7 @@ function heart(size)\n\
   కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
-function demo()\n\
+function ప్రదర్శన()\n\
 {\n\
   ఆది_స్థితి()\n\
 \n\
@@ -4412,7 +4412,7 @@ function hRect( sSide, lSide, fColor) {\n\
   ముందుకు_జరుగు( lSide)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   yB = గరిష్ఠY() + sSide\n\
@@ -4583,7 +4583,7 @@ function restorePos4() {\n\
   కుంచిక.కోణము = p4angle\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .13* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   స్థానము_మార్చు(1.8*side,0)\n\
@@ -4813,7 +4813,7 @@ function restorePos4() {\n\
   కుంచిక.కోణము = p4angle\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .13* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   స్థానము_మార్చు(0,0)\n\
@@ -5000,7 +5000,7 @@ function restorePos2() {\n\
   కుంచిక.కోణము = p2angle\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   side = .23 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -5087,7 +5087,7 @@ function repeatToLeft(side) {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   \n\
   side = 50;\n\
   \n\
@@ -5245,7 +5245,7 @@ function delayedHilbert () {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   gen = 0\n\
   delayedHilbert()\n\
 }\n\
@@ -5620,7 +5620,7 @@ function hirchhorn(side) {\n\
   \n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -5676,7 +5676,7 @@ function nextColor() { \n\
   return c\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   s = 50\n\
@@ -5768,7 +5768,7 @@ function pent(side) {\n\
   వృత్తము(2.13*side)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .4 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //స్థానము_మార్చు(-50,-22)\n\
@@ -6982,7 +6982,7 @@ function loop() {\n\
   safetyCheck();\n\
 }\n\
  \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆడించు(loop, 100);\n\
 }\n\
 '
@@ -7169,7 +7169,7 @@ function moveBody () {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   n = 0;\n\
@@ -7219,7 +7219,7 @@ function kochLineవిలంబించు() {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   steps = 6;\n\
@@ -7353,7 +7353,7 @@ function kochLine (length, order) {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .6\n\
   కుంచికను_దాచు();\n\
@@ -7429,7 +7429,7 @@ function kochSnowflakeDelay() {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   కుంచికను_దాచు();\n\
   i = 0;\n\
   kochSnowflakeDelay();\n\
@@ -7468,7 +7468,7 @@ function kochSnowflake (length, order) {\n\
 }\n\
   \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .045* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   కుంచికను_దాచు();\n\
@@ -8122,7 +8122,7 @@ var gen\n\
 var numDemos = 16\n\
 var demoNumber\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   demoNumber = 0\n\
@@ -8245,7 +8245,7 @@ function vert( size) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap( false)\n\
   size = 100\n\
@@ -8320,7 +8320,7 @@ function newRow(lastx, lasty) {\n\
   // function to determine where the new row should start\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   side = 20\n\
@@ -8413,7 +8413,7 @@ function quadrangle( ){\n\
   ఆకారాము_ముగించు("lightblue")\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   rows = 4\n\
@@ -8552,7 +8552,7 @@ function kites( count, back) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   side = 2.5 * Math.min( గరిష్ఠX()/9, గరిష్ఠY()/8)\n\
@@ -8656,7 +8656,7 @@ function jeresh (sid, pAngle, fill) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   /* can vary point కోణము.\n\
   0 and 120 is a hex tesselation\n\
   60 and 180 are triangles\n\
@@ -8721,7 +8721,7 @@ function decagon(s, fcolor) {\n\
   ఆకారాము_ముగించు( fcolor)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap( false)\n\
   కుడి_వైపు_తిరుగు(90)\n\
@@ -8848,7 +8848,7 @@ function mizen6(side) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .08 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //center canvas more or less\n\
@@ -8936,7 +8936,7 @@ function mizenSimple() {\n\
   mizen( side, "white", "")\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   side = 40 // 1/2 basic face of hexagon, width...\n\
@@ -9060,7 +9060,7 @@ function slashes(count, fColor) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   fColor = "blue"\n\
   size = .17 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -9157,7 +9157,7 @@ function antilayer (side, innerSide, offset) {\n\
   కుడి_వైపు_తిరుగు(offset)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   కుంచికను_దాచు()\n\
@@ -9213,7 +9213,7 @@ function layer (side, offsetAngle) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   side = 14\n\
@@ -9244,7 +9244,7 @@ function polygon(sides,side) {\n\
 }\n\
 \n\
 // draw a set of nested hexagons\n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
    size = గరిష్ఠY()\n\
    if (గరిష్ఠX() < size) {\n\
      size = గరిష్ఠX()\n\
@@ -9308,7 +9308,7 @@ function demo1() {\n\
   ఆడించు( nest25, 200);\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   // animate with function needing a parameter passed\n\
   ఆది_స్థితి()\n\
   size = 2* గరిష్ఠY()\n\
@@ -9424,7 +9424,7 @@ function drawAll() {\n\
   shape(9,12,0,X5)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   కుంచికను_దాచు()\n\
@@ -9471,7 +9471,7 @@ function polygon(sides,side) {\n\
 }\n\
 \n\
 // draw a random polygon\n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
    ఆది_స్థితి();\n\
    side = గరిష్ఠY()\n\
    if (గరిష్ఠX() < side) {\n\
@@ -9503,7 +9503,7 @@ function star (side, sColor) {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   for (i=1; i< 150; i=i+1) {\n\
     స్థానము_మార్చు(యాదృచఛిక_సంఖ్య(కనిష్ఠX(),గరిష్ఠX()), యాదృచఛిక_సంఖ్య( కనిష్ఠY(),గరిష్ఠY()))\n\
@@ -9559,7 +9559,7 @@ function stickMan (height) {\n\
   ముందుకు_జరుగు(torsoLength/2);\n\
 }\n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   number = 0.0005 *  గరిష్ఠX() * గరిష్ఠY() // uniform density no matter size\n\
@@ -9639,7 +9639,7 @@ function nextColor() { \n\
   return c\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -9717,7 +9717,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit\n\
   pl(c8)\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap( false)\n\
   size = 10\n\
@@ -9761,7 +9761,7 @@ function demo() {\n\
 serendipitous ='\
 // Serendipitous Circles -- draw ellipses with quadratic equation\n\
 // from Byte magazine Aug 1977\n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   x1 = యాదృచఛిక_సంఖ్య(కనిష్ఠX(),గరిష్ఠX())\n\
   y1 = యాదృచఛిక_సంఖ్య(కనిష్ఠY(),గరిష్ఠY())\n\
@@ -9873,7 +9873,7 @@ function delayed() {\n\
   }\n\
 }\n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   i = 0;\n\
   delayed ();\n\
 }\n\
@@ -9938,7 +9938,7 @@ function sier (order) {\n\
 \n\
 var i ; //global iteration variable\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
     i = 0\n\
     delayed()\n\
@@ -10073,7 +10073,7 @@ function frame() {\n\
   }\n\
 }\n\
   \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   // show three text frames\n\
   frameDelay = 1000;\n\
   frameNumber = 0;\n\
@@ -10667,7 +10667,7 @@ function demo1() {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   init()\n\
 \n\
@@ -10926,7 +10926,7 @@ function moveOne() {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   init()\n\
   moveCount=0\n\
@@ -11084,7 +11084,7 @@ function rightPentagon(side) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   స్థానము_మార్చు(-.666 * side, - .333 * side)\n\
@@ -11196,7 +11196,7 @@ demo = spiral;\n\
 square_lines ='\
 // Square Lines -- draw a set of overlapping squares without turns\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap(false)\n\
   side = 30\n\
@@ -11301,7 +11301,7 @@ function ccwRow( side) {\n\
 }\n\
 \n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
    wrap(false)\n\
   side = 30\n\
   for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {\n\
@@ -11344,7 +11344,7 @@ function nextColor() {\n\
   return c\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3\n\
@@ -11396,7 +11396,7 @@ function drawRandomSquiggle() {\n\
   squiggle(యాదృచఛిక_సంఖ్య(100,1000), యాదృచఛిక_సంఖ్య(5,90));\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు();\n\
   drawRandomSquiggle();\n\
@@ -11461,7 +11461,7 @@ function starburst () {\n\
   }\n\
 }\n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap( false)\n\
   starburst()\n\
@@ -11485,7 +11485,7 @@ function star (side) {\n\
 }   \n\
     \n\
     \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side =  1.8* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   ఆకారాము_ప్రారంభించు()\n\
@@ -11513,7 +11513,7 @@ function quadRhom( side) {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    wrap( false)\n\
   కుంచికను_దాచు()\n\
@@ -11585,7 +11585,7 @@ function drawRTree(depth, branches) {\n\
   }\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   scale = .01 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -11625,7 +11625,7 @@ function nextColor() { \n\
   return c\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3 // offset between rows\n\
@@ -11685,7 +11685,7 @@ function nestTri () {\n\
 }\n\
 \n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
 \n\
@@ -11731,7 +11731,7 @@ function nextColor() {\n\
   return c\n\
 }\n\
 \n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowCount = 0\n\
@@ -12182,7 +12182,7 @@ function delayedBuild () {\n\
 \n\
 //****MAIN****\n\
 \n\
-function demo () {\n\
+function ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   //కుంచికను_దాచు()\n\
   tiles = []\n\
@@ -12229,7 +12229,7 @@ distances are known. This math is a bit tough.\n\
 \n\
 \n\
 //\n\
-function demo() {\n\
+function ప్రదర్శన() {\n\
 	ఆది_స్థితి()\n\
 	 wrap(false)\n\
 	కుంచికను_దాచు()\n\

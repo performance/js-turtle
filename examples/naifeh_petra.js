@@ -112,7 +112,7 @@ function slashes(count, fColor) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   fColor = "blue"
   size = .17 * Math.min( గరిష్ఠX(), గరిష్ఠY())

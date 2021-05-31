@@ -42,7 +42,7 @@ function square ( side, fColor) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   yB = గరిష్ఠY() + small

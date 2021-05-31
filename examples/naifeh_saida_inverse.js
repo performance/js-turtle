@@ -33,7 +33,7 @@ function antilayer (side, innerSide, offset) {
   కుడి_వైపు_తిరుగు(offset)
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   కుంచికను_దాచు()

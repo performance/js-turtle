@@ -15,7 +15,7 @@ function star (side) {
 }   
     
     
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   side =  1.8* Math.min( గరిష్ఠX(), గరిష్ఠY())
   ఆకారాము_ప్రారంభించు()

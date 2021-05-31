@@ -43,7 +43,7 @@ function stickMan (height) {
   ముందుకు_జరుగు(torsoLength/2);
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి();
   కుంచికను_దాచు();
   number = 0.0005 *  గరిష్ఠX() * గరిష్ఠY() // uniform density no matter size

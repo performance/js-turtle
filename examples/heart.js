@@ -119,7 +119,7 @@ function heart(size)
   కలమును_కింద_పెట్టు()
 }
 
-function demo()
+function ప్రదర్శన()
 {
   ఆది_స్థితి()
 

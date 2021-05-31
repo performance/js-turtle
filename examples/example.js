@@ -1,7 +1,7 @@
 // Example -- example of code
 /* Define helper functions here
 or write your own functions
-including a demo() function
+including a ప్రదర్శన() function
 
 For example:    */
 

@@ -91,7 +91,7 @@ function delayedDragon () {
 }  
     
 
-function demo() {
+function ప్రదర్శన() {
   side = .9 * Math.min(గరిష్ఠX(), 2*గరిష్ఠY())
   gen = 0
   delayedDragon()

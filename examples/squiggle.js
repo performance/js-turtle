@@ -20,7 +20,7 @@ function drawRandomSquiggle() {
   squiggle(యాదృచఛిక_సంఖ్య(100,1000), యాదృచఛిక_సంఖ్య(5,90));
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   కుంచికను_దాచు();
   drawRandomSquiggle();

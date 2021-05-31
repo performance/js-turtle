@@ -89,7 +89,7 @@ function mizen6(side) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   side = .08 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   //center canvas more or less

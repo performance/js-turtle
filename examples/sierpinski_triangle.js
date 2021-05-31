@@ -57,7 +57,7 @@ function sier (order) {
 
 var i ; //global iteration variable
 
-function demo() {
+function ప్రదర్శన() {
     ఆది_స్థితి()
     i = 0
     delayed()

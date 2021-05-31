@@ -63,7 +63,7 @@ function jeresh (sid, pAngle, fill) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   /* can vary point కోణము.
   0 and 120 is a hex tesselation
   60 and 180 are triangles

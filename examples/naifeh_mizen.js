@@ -77,7 +77,7 @@ function mizenSimple() {
   mizen( side, "white", "")
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   side = 40 // 1/2 basic face of hexagon, width...

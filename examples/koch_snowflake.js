@@ -61,7 +61,7 @@ function kochSnowflakeDelay() {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   కుంచికను_దాచు();
   i = 0;
   kochSnowflakeDelay();

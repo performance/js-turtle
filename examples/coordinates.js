@@ -59,7 +59,7 @@ function ticks (dir, limit, step) {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   lines()
   ticks (0, గరిష్ఠY(), 10)
   ticks (90, గరిష్ఠX(), 10)

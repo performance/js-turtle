@@ -315,7 +315,7 @@ subColor = "wheat"
 specialTriangle = 0
 
 
-function demo() {
+function ప్రదర్శన() {
   /* want demo to show a mix of divide and expand with animation
 
 basically:

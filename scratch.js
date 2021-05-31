@@ -61,6 +61,6 @@ function let_them_drop (n) {
  ఆడించు(function () { rain(drops, n)}, 100);
 }
 
-function demo() {
+function ప్రదర్శన() {
 let_them_drop (Math.floor(maxX * maxY/2000));
 }

@@ -29,7 +29,7 @@ function layer (side, offsetAngle) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   side = 14

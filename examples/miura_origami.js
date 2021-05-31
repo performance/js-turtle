@@ -28,7 +28,7 @@ function vert( size) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap( false)
   size = 100

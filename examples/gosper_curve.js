@@ -101,7 +101,7 @@ function delayDemo () {
   విలంబించు( delayDemo,3000)
 }
 
-function demo () {
+function ప్రదర్శన() {
   gen = 0
   delayDemo()
 }

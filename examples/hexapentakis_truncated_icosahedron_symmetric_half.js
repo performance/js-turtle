@@ -84,7 +84,7 @@ function restorePos2() {
   కుంచిక.కోణము = p2angle
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   side = .23 * Math.min(గరిష్ఠX(), గరిష్ఠY())

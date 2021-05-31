@@ -46,7 +46,7 @@ function drawRTree(depth, branches) {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి();
   కుంచికను_దాచు();
   scale = .01 * Math.min( గరిష్ఠX(), గరిష్ఠY())

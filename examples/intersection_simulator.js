@@ -1202,6 +1202,6 @@ function loop() {
   safetyCheck();
 }
  
-function demo() {
+function ప్రదర్శన() {
   ఆడించు(loop, 100);
 }

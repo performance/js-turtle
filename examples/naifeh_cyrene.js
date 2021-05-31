@@ -91,7 +91,7 @@ function kites( count, back) {
 }
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   side = 2.5 * Math.min( గరిష్ఠX()/9, గరిష్ఠY()/8)

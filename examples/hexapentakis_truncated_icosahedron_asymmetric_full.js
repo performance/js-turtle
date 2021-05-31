@@ -115,7 +115,7 @@ function restorePos4() {
   కుంచిక.కోణము = p4angle
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   side = .13* Math.min(గరిష్ఠX(), గరిష్ఠY())
   స్థానము_మార్చు(1.8*side,0)

@@ -25,7 +25,7 @@ function quadrangle( ){
   ఆకారాము_ముగించు("lightblue")
 }
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   rows = 4

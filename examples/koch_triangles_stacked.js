@@ -30,7 +30,7 @@ function kochSnowflake (length, order) {
 }
   
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   size = .045* Math.min(గరిష్ఠX(), గరిష్ఠY())
   కుంచికను_దాచు();

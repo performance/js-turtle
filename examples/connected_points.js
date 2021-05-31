@@ -28,7 +28,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 
 
 
-function demo() {
+function ప్రదర్శన() {
   ఆది_స్థితి()
    wrap(false)
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())

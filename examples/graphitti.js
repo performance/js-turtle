@@ -17,7 +17,7 @@ function plotOne() {
   ముందుకు_జరుగు(యాదృచఛిక_సంఖ్య(10, 30));
 }
 
-function demo () {
+function ప్రదర్శన() {
   ఆది_స్థితి()
   ఆడించు(plotOne, 20);
 }

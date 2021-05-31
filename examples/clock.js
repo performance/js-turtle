@@ -92,7 +92,7 @@ function clock() {
    hands(d.getHours(), d.getMinutes(), d.getSeconds());
 }
 
-function demo() {
+function ప్రదర్శన() {
    కుంచికను_దాచు();
    // refresh the clock every second
    ఆడించు(clock,1000);

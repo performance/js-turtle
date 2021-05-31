@@ -42,7 +42,7 @@ function pent(side) {
   }
 }
 
-function demo() {
+function ప్రదర్శన() {
   స్థానము_మార్చు(-50,-22)
   కుడి_వైపు_తిరుగు(17)
   pent(50)
