@@ -16,7 +16,7 @@ var bColor = "green"  // background color
 //
 function tri( side, pointAngle, fill) {
   if (fill) {
-    ఆకారాము_ప్రారంభించు()
+    ఆకారము_ప్రారంభించు()
   }
   for (var i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
@@ -25,7 +25,7 @@ function tri( side, pointAngle, fill) {
     కుడి_వైపు_తిరుగు( 180 - pointAngle)
   }
   if (fill) {
-    ఆకారాము_ముగించు(fColor)
+    ఆకారము_ముగించు(fColor)
   }
 }
 

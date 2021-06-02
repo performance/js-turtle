@@ -6,43 +6,53 @@
   var కనిష్ఠ_Y =  -గరిష్ఠ_Y;
   var maxVelocity = 12;
 
-function init_drops(n) {
-   var drops = new Array(n);
-   for (var i = 0; i < n; i++) {
+init_drops = (n) => {
+   let drops = new Array(n);
+   లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {
       drops[i] = { // each drop is an object with a set of properties
-         x: యాదృచఛిక_సంఖ్య(కనిష్ఠ_X, గరిష్ఠ_X),
-         y: యాదృచఛిక_సంఖ్య(కనిష్ఠ_Y, గరిష్ఠ_Y),
-         velocityX: యాదృచఛిక_సంఖ్య(-maxVelocity, maxVelocity),
-         velocityY: యాదృచఛిక_సంఖ్య(-maxVelocity, maxVelocity),
-         size: యాదృచఛిక_సంఖ్య(20,300),
-         red:యాదృచఛిక_సంఖ్య(0,255),
-         green:యాదృచఛిక_సంఖ్య(0,255),
-         blue: యాదృచఛిక_సంఖ్య(0,255),
+         x: యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_X, గరిష్ఠ_X),
+         y: యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_Y, గరిష్ఠ_Y),
+         velocityX: యాదృచ్ఛిక_సంఖ్య(-maxVelocity, maxVelocity),
+         velocityY: యాదృచ్ఛిక_సంఖ్య(-maxVelocity, maxVelocity),
+         size: యాదృచ్ఛిక_సంఖ్య(20,300),
+         red:యాదృచ్ఛిక_సంఖ్య(0,255),
+         green:యాదృచ్ఛిక_సంఖ్య(0,255),
+         blue: యాదృచ్ఛిక_సంఖ్య(0,255),
          alpha: Math.random(),
-         width: యాదృచఛిక_సంఖ్య(1,15)
+         width: యాదృచ్ఛిక_సంఖ్య(1,15)
       };
-   }
+   } );
    return drops;
 }
 
-function rain (drops, n) {
+rain = (drops, n) => {
    చెరిపి_వేయి();
-   for (var i = 0; i < n; i++) {
+   లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {
       // access each drop object
       var d = drops[i]; // access each drop object and react with it
       // if the drop hits a wall, reverse its motion direction (velocity)
-      if (d.y < కనిష్ఠ_Y) {
-         d.velocityY = -d.velocityY;
-      }
-      else if (d.y + d.size > గరిష్ఠ_Y && d.velocityY > 0) {
-         d.velocityY = -d.velocityY;
-      }
-      if (d.x - d.width/2 < కనిష్ఠ_X) {
-         d.velocityX = -d.velocityX;
-      }
-      else if (d.x + d.width/2 > గరిష్ఠ_X) {
-         d.velocityX = -d.velocityX;
-      }
+      యది_చేత్_అన్యథ ( () => (d.y < కనిష్ఠ_Y),
+         () => {
+            d.velocityY = -d.velocityY;
+         },
+         ()=>
+         యది_చేత్( () => (d.y + d.size > గరిష్ఠ_Y && d.velocityY > 0), 
+            () => {
+               d.velocityY = -d.velocityY;
+            }
+         )  
+      )
+      యది_చేత్_అన్యథ ( () => (d.x - d.width/2 < కనిష్ఠ_X),
+         () => {
+            d.velocityX = -d.velocityX;
+         },
+
+         ()=> యది_చేత్ ( () => (d.x + d.width/2 > గరిష్ఠ_X),
+            () => {
+               d.velocityX = -d.velocityX;
+            }
+         ) 
+      )
       // paint the drop
       రంగు_మార్చు("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");
       వెడల్పు(d.width);
@@ -51,16 +61,16 @@ function rain (drops, n) {
       // move the drop for the next time
       d.y = d.y + d.velocityY;
       d.x = d.x + d.velocityX;
-   }
+   } );
 }
 
-function let_them_drop (n) {
-    చుట్టొద్దు();
+let_them_drop = (n) => {
+   చుట్టొద్దు();
    కుంచికను_దాచు();
    drops = init_drops(n);
-   ఆడించు(function () { rain(drops, n)}, 100);
+   ఆడించు( () => { rain(drops, n)}, 100);
 }
 
-function ప్రదర్శన() {
+ప్రదర్శన = () => {
   let_them_drop (Math.floor(గరిష్ఠ_X * గరిష్ఠ_Y/2000));
 }

@@ -11,7 +11,7 @@ function decagon(s, fcolor) {
   //   the cutouts are for an outscribed rectangle
   //   2*side by sqrt(3)*side
 
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు( s)
   ఎడమ_వైపు_తిరుగు( 120)
   ముందుకు_జరుగు( d1)
@@ -33,7 +33,7 @@ function decagon(s, fcolor) {
   కుడి_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(d1)
   ఎడమ_వైపు_తిరుగు(120)
-  ఆకారాము_ముగించు( fcolor)
+  ఆకారము_ముగించు( fcolor)
 }
 
 function ప్రదర్శన() {

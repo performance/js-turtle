@@ -20,14 +20,14 @@ function penta (side, faceColor) {
   var pentaSide = .8639 * side
 
   for( i=0; i<5; i++) {
-    ఆకారాము_ప్రారంభించు()
+    ఆకారము_ప్రారంభించు()
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-basePentaAngle)
     ముందుకు_జరుగు( pentaSide)
     కుడి_వైపు_తిరుగు( 180-centralPentaAngle)
     ముందుకు_జరుగు( pentaSide)
     కుడి_వైపు_తిరుగు( 180-basePentaAngle)
-    ఆకారాము_ముగించు(faceColor)
+    ఆకారము_ముగించు(faceColor)
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-(2*basePentaAngle))
   }
@@ -39,14 +39,14 @@ function hexa (side, faceColor) {
   var hexaSide = 1.022 * side
 
   for( var i=0; i<6; i++) {
-    ఆకారాము_ప్రారంభించు()
+    ఆకారము_ప్రారంభించు()
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)
     ముందుకు_జరుగు( hexaSide)
     కుడి_వైపు_తిరుగు( 180-centralHexaAngle)
     ముందుకు_జరుగు( hexaSide)
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)
-    ఆకారాము_ముగించు(faceColor)
+    ఆకారము_ముగించు(faceColor)
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180-(2*baseHexaAngle))
   }

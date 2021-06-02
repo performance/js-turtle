@@ -96,15 +96,14 @@ circleEyeL = (అ, ని, న, outerRadius) => {
   పళ్ళచక్రం (అ౧, ని౧, 55/55*tSize, 64, అపసవ్య);
 
 
-  var pedals = 8;
   tSize = గది_పొడవు/2 * .90
-  for (i=0; i<pedals; i++) {
+  లెక్క_పెడుతూ_ఆవర్తించు (8, (i) => {
 //radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir)
-    radialArc (అ౨, ని౧, 10/60*tSize, 360*i/pedals, -45, 10/60*tSize, 180, సవ్య); // inner shell
-    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/pedals, -125, 15/60*tSize, 110, అపసవ్య); //inside arc
-    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/pedals, -85, 18/60*tSize, 170, సవ్య); //outside arcs
-    radialArc (అ౨, ని౧, 41/60*tSize, 360*i/pedals, 0, 10/60*tSize, 360, సవ్య); // radial circles
-  }
+    radialArc (అ౨, ని౧, 10/60*tSize, 360*i/8, -45, 10/60*tSize, 180, సవ్య); // inner shell
+    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/8, -125, 15/60*tSize, 110, అపసవ్య); //inside arc
+    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/8, -85, 18/60*tSize, 170, సవ్య); //outside arcs
+    radialArc (అ౨, ని౧, 41/60*tSize, 360*i/8, 0, 10/60*tSize, 360, సవ్య); // radial circles
+  })
   
 
   స్థానము_మార్చు(అ౨, ని౧);

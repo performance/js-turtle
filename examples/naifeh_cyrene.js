@@ -37,7 +37,7 @@ function bowties (count, back){
 
 function upKite() {
   //assume direction is in the axis of the kite
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   కుడి_వైపు_తిరుగు( shortAngle)
   ముందుకు_జరుగు( longSide)
   ఎడమ_వైపు_తిరుగు( 90)
@@ -47,12 +47,12 @@ function upKite() {
   ఎడమ_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( longSide)
   కుడి_వైపు_తిరుగు(180+ shortAngle)
-  ఆకారాము_ముగించు("lightblue")
+  ఆకారము_ముగించు("lightblue")
 }
 
 function downKite() {
   //assume direction is in the axis of the kite
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   కుడి_వైపు_తిరుగు( longAngle)
   ముందుకు_జరుగు( shortSide)
   ఎడమ_వైపు_తిరుగు( 90)
@@ -62,7 +62,7 @@ function downKite() {
   ఎడమ_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( shortSide)
   కుడి_వైపు_తిరుగు( 180 + longAngle)
-  ఆకారాము_ముగించు("lightblue")
+  ఆకారము_ముగించు("lightblue")
 }
 
 function kites( count, back) {

@@ -8,7 +8,7 @@ colors = ["red", "white", "blue", "yellow", "green"]
 
 function shapeUp (side, fillColor) {
   // assume pointing in direction of base
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు(3* side)
   ఎడమ_వైపు_తిరుగు(120)
   ముందుకు_జరుగు(2*side)
@@ -19,7 +19,7 @@ function shapeUp (side, fillColor) {
   ఎడమ_వైపు_తిరుగు( 120)
   ముందుకు_జరుగు( 2*side)
   ఎడమ_వైపు_తిరుగు(120)
-  ఆకారాము_ముగించు( fillColor)
+  ఆకారము_ముగించు( fillColor)
 }
 
 function mountainUnit(side){

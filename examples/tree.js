@@ -10,9 +10,9 @@ function drawTree(depth, branches) {
   var tilt = 0;		//tilt is కోణము of the cluster
   var ratio = 7;	//ratio is branch depth to length ratio
   if (depth>0) { 
-   రంగు_మార్చు( యాదృచఛిక_సంఖ్య( 16));
+   రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య( 16));
    కలమును_కింద_పెట్టు();
-   వెడల్పు(depth + యాదృచఛిక_సంఖ్య(0,2));
+   వెడల్పు(depth + యాదృచ్ఛిక_సంఖ్య(0,2));
    ముందుకు_జరుగు(scale* ratio * depth);
    ఎడమ_వైపు_తిరుగు(tilt + spread/2 + spread/branches/2);
    ఆవర్తించు(branches, function () {
@@ -27,13 +27,13 @@ function drawTree(depth, branches) {
 
 // draw a more random tree
 function drawRTree(depth, branches) {
-  var spread = యాదృచఛిక_సంఖ్య(90,180);	// spread is కోణము of left to right branches
-  var tilt = యాదృచఛిక_సంఖ్య(-15,15);	// tilt is కోణము of the cluster
+  var spread = యాదృచ్ఛిక_సంఖ్య(90,180);	// spread is కోణము of left to right branches
+  var tilt = యాదృచ్ఛిక_సంఖ్య(-15,15);	// tilt is కోణము of the cluster
   var ratio = random (5,9);	// ratio is branch depth to length ratio
   if (depth>0) { 
-   రంగు_మార్చు( యాదృచఛిక_సంఖ్య( 16));
+   రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య( 16));
    కలమును_కింద_పెట్టు();
-   వెడల్పు(depth + యాదృచఛిక_సంఖ్య(0,2));
+   వెడల్పు(depth + యాదృచ్ఛిక_సంఖ్య(0,2));
    ముందుకు_జరుగు(scale * ratio * depth);
    ఎడమ_వైపు_తిరుగు(tilt + spread/2 + spread/branches/2);
    ఆవర్తించు(branches, function () {

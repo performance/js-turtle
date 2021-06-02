@@ -5,7 +5,7 @@ function v (side, fColor) {
   // assume pointing up at upper left corner
   // invariant
   if (fColor != "") {
-    ఆకారాము_ప్రారంభించు()
+    ఆకారము_ప్రారంభించు()
   }
   ఎడమ_వైపు_తిరుగు( 30)
   ముందుకు_జరుగు( 3*side)
@@ -21,7 +21,7 @@ function v (side, fColor) {
   ముందుకు_జరుగు( 3*side)
   కుడి_వైపు_తిరుగు(150)
   if (fColor != "") {
-    ఆకారాము_ముగించు(fColor)
+    ఆకారము_ముగించు(fColor)
   }
 }
 

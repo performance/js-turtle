@@ -4,7 +4,7 @@ colors = ["red", "white", "blue", "yellow", "green"]
 numColors = colors.length
 
 function rh(side, fillColor) {
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( side)
@@ -13,7 +13,7 @@ function rh(side, fillColor) {
   ఎడమ_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 180-45)
-  ఆకారాము_ముగించు(fillColor)
+  ఆకారము_ముగించు(fillColor)
 }
 
 function sideBySide( count, side, fillColor) {

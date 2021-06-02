@@ -115,11 +115,11 @@ function ప్రదర్శన() {
 We can even fill in the interior of the polygons or spikeys
 by using the fill directives of కుంచిక graphics. This directive
 is a little different than others we have used in that it has
-to bracket a series of moves with a <code>ఆకారాము_ప్రారంభించు()</code> and
-a <code>ఆకారాము_ముగించు()</code> functions. This lets the program know the boundaries
+to bracket a series of moves with a <code>ఆకారము_ప్రారంభించు()</code> and
+a <code>ఆకారము_ముగించు()</code> functions. This lets the program know the boundaries
 of the shape to fill.
-Of course the movements between the <code>ఆకారాము_ప్రారంభించు()</code> and
-<code>ఆకారాము_ముగించు()</code> functions should start and end at the same point on
+Of course the movements between the <code>ఆకారము_ప్రారంభించు()</code> and
+<code>ఆకారము_ముగించు()</code> functions should start and end at the same point on
 the canvas.
 </p>
 <p>
@@ -138,9 +138,9 @@ So let's give it a try:
 function ప్రదర్శన() {
   ఆది_స్థితి()
   రంగు_మార్చు("నలుపు")
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   spikey(5, 2, 50)
-  ఆకారాము_ముగించు("red")
+  ఆకారము_ముగించు("red")
 }
 </code>
 
@@ -168,9 +168,9 @@ function ప్రదర్శన() {
   ఆది_స్థితి()
   వెడల్పు(1)
   రంగు_మార్చు( తెలుపు )
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   spikey(5, 2, 50)
-  ఆకారాము_ముగించు("blue")
+  ఆకారము_ముగించు("blue")
   వెడల్పు(2)
   రంగు_మార్చు( తెలుపు )
   spikey(5, 2, 50)
@@ -411,12 +411,12 @@ the user of the function having to call it twice.
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 function ప్రదర్శన() {
@@ -530,12 +530,12 @@ Let's start with simply twisting a simple star.
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 // GLOBALS
@@ -613,12 +613,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -673,12 +673,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -731,12 +731,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -791,12 +791,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -873,12 +873,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -977,12 +977,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -1044,22 +1044,22 @@ function generatePolys () {
   for (i=0; i < 10; i++) { //>
     x = random (-100, 100)
     y = random (-100, 100)
-    points = యాదృచఛిక_సంఖ్య(5, 11)
+    points = యాదృచ్ఛిక_సంఖ్య(5, 11)
     polys.push ({
       points: points,
       revs: revs[ points],
-      వ్యాసార్థము: యాదృచఛిక_సంఖ్య( 1,6)/2,
-      color: logoColors[ యాదృచఛిక_సంఖ్య(15)],
-      fill: logoColors[ యాదృచఛిక_సంఖ్య(15)],
+      వ్యాసార్థము: యాదృచ్ఛిక_సంఖ్య( 1,6)/2,
+      color: logoColors[ యాదృచ్ఛిక_సంఖ్య(15)],
+      fill: logoColors[ యాదృచ్ఛిక_సంఖ్య(15)],
       width: 1,
-      heading: యాదృచఛిక_సంఖ్య(360),
+      heading: యాదృచ్ఛిక_సంఖ్య(360),
       x: x,
       y: y,
       drad: 1,
       dhead: 1,
       dx: Math.sign(x),
       dy: Math.sign(y) * Math.abs(y/x),
-      ddrad: యాదృచఛిక_సంఖ్య(1,6)/20,
+      ddrad: యాదృచ్ఛిక_సంఖ్య(1,6)/20,
       ddhead: .2,
       ddx: .4 * Math.sign(x),
       ddy: .2 * Math.sign(y) * Math.abs(y/x)
@@ -1079,12 +1079,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -1138,22 +1138,22 @@ function generatePolys (count) {
   for (i=0; i < count; i++) { //>
     x = random (-100, 100)
     y = random (-100, 100)
-    points = యాదృచఛిక_సంఖ్య(5, 11)
+    points = యాదృచ్ఛిక_సంఖ్య(5, 11)
     polys.push ({
       points: 5,
       revs: 2,
-      వ్యాసార్థము: యాదృచఛిక_సంఖ్య( 1,6)/2,
-      color: logoColors[ యాదృచఛిక_సంఖ్య(15)],
-      fill: logoColors[ యాదృచఛిక_సంఖ్య(15)],
+      వ్యాసార్థము: యాదృచ్ఛిక_సంఖ్య( 1,6)/2,
+      color: logoColors[ యాదృచ్ఛిక_సంఖ్య(15)],
+      fill: logoColors[ యాదృచ్ఛిక_సంఖ్య(15)],
       width: 1,
-      heading: యాదృచఛిక_సంఖ్య(360),
+      heading: యాదృచ్ఛిక_సంఖ్య(360),
       x: x,
       y: y,
       drad: 1,
       dhead: 1,
       dx: Math.sign(x),
       dy: Math.sign(y) * Math.abs(y/x),
-      ddrad: యాదృచఛిక_సంఖ్య(1,6)/60,
+      ddrad: యాదృచ్ఛిక_సంఖ్య(1,6)/60,
       ddhead: .2,
       ddx: .4 * Math.sign(x),
       ddy: .2 * Math.sign(y) * Math.abs(y/x)
@@ -1173,12 +1173,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -1250,22 +1250,22 @@ function generatePolys (count) {
   for (i=0; i < count; i++) { //>
     x = random (-100, 100)
     y = random (-100, 100)
-    points = యాదృచఛిక_సంఖ్య(5, 11)
+    points = యాదృచ్ఛిక_సంఖ్య(5, 11)
     polys.push ({
       points: 5,
       revs: 2,
-      వ్యాసార్థము: యాదృచఛిక_సంఖ్య( 1,6)/2,
-      color: logoColors[ యాదృచఛిక_సంఖ్య(15)],
-      fill: logoColors[ యాదృచఛిక_సంఖ్య(15)],
+      వ్యాసార్థము: యాదృచ్ఛిక_సంఖ్య( 1,6)/2,
+      color: logoColors[ యాదృచ్ఛిక_సంఖ్య(15)],
+      fill: logoColors[ యాదృచ్ఛిక_సంఖ్య(15)],
       width: 1,
-      heading: యాదృచఛిక_సంఖ్య(360),
+      heading: యాదృచ్ఛిక_సంఖ్య(360),
       x: x,
       y: y,
       drad: 1,
       dhead: 1,
       dx: Math.sign(x),
       dy: Math.sign(y) * Math.abs(y/x),
-      ddrad: యాదృచఛిక_సంఖ్య(1,6)/60,
+      ddrad: యాదృచ్ఛిక_సంఖ్య(1,6)/60,
       ddhead: .2,
       ddx: .4 * Math.sign(x),
       ddy: .2 * Math.sign(y) * Math.abs(y/x)
@@ -1285,12 +1285,12 @@ function spikey ( args ) { // the simpler version for brevity
 
   రంగు_మార్చు( args.color)
   వెడల్పు( args.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < args.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( args.fill)
+  ఆకారము_ముగించు( args.fill)
 }
 
 
@@ -1458,12 +1458,12 @@ Spikey.prototype.draw = function () { // the simpler version for brevity
 
   రంగు_మార్చు( this.color)
   వెడల్పు( this.width)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for( var i = 0; i < this.points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
-  ఆకారాము_ముగించు( this.fill)
+  ఆకారము_ముగించు( this.fill)
 }
 
 
@@ -1482,23 +1482,23 @@ function generatePolys (count) {
   for (i=0; i < count; i++) { //>
     x = random (-100, 100)
     y = random (-100, 100)
-    points = యాదృచఛిక_సంఖ్య(5, 11)
+    points = యాదృచ్ఛిక_సంఖ్య(5, 11)
     polys.push( new Spikey())
     var last = polys.length -1
     polys[last].points = 5
     polys[last].revs = 2
-    polys[last].వ్యాసార్థము = యాదృచఛిక_సంఖ్య( 1,6)/2
-    polys[last].color = logoColors[ యాదృచఛిక_సంఖ్య(15)]
-    polys[last].fill = logoColors[ యాదృచఛిక_సంఖ్య(15)]
+    polys[last].వ్యాసార్థము = యాదృచ్ఛిక_సంఖ్య( 1,6)/2
+    polys[last].color = logoColors[ యాదృచ్ఛిక_సంఖ్య(15)]
+    polys[last].fill = logoColors[ యాదృచ్ఛిక_సంఖ్య(15)]
     polys[last].width = 1
-    polys[last].heading = యాదృచఛిక_సంఖ్య(360)
+    polys[last].heading = యాదృచ్ఛిక_సంఖ్య(360)
     polys[last].x = x
     polys[last].y = y
     polys[last].drad = 1
     polys[last].dhead = 1
     polys[last].dx = Math.sign(x)
     polys[last].dy = Math.sign(y) * Math.abs(y/x)
-    polys[last].ddrad = యాదృచఛిక_సంఖ్య(1,6)/60
+    polys[last].ddrad = యాదృచ్ఛిక_సంఖ్య(1,6)/60
     polys[last].ddhead = .2
     polys[last].ddx = .4 * Math.sign(x)
     polys[last].ddy = .2 * Math.sign(y) * Math.abs(y/x)

@@ -1,97 +1,94 @@
 // Basket Weave Tessellation -- tile a space using basket weave pattern
 
-// this assumes that the smaller square is 1/2 of the larger square.
+// this assumes that the smaller సమచతురస్రము is 1/2 of the larger సమచతురస్రము.
 // that need not be the case
 
-small = 20
-sSide = 2.5 * small
-lSide = sSide + 2 * small
+const small = 20
+const sSide = 2.5 * small
+const lSide = sSide + 2 * small
 
-function vRect( sSide, lSide, fColor) {
-  ఆకారాము_ప్రారంభించు()
-  for (var i=0; i<2; i++) {
+vRect = ( sSide, lSide, fColor) => {
+  ఆకారము_ప్రారంభించు()
+  లెక్క_పెడుతూ_ఆవర్తించు (2, (i) => {
     ముందుకు_జరుగు( sSide)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( lSide)
     కుడి_వైపు_తిరుగు(90)
-  }
-  ఆకారాము_ముగించు( fColor)
+  } );
+  ఆకారము_ముగించు( fColor)
   ముందుకు_జరుగు( sSide)
 }
 
-function hRect( sSide, lSide, fColor) {
-  ఆకారాము_ప్రారంభించు()
-  for (var i=0; i<2; i++) {
+hRect = ( sSide, lSide, fColor) => {
+  ఆకారము_ప్రారంభించు()
+  లెక్క_పెడుతూ_ఆవర్తించు (2, (i) => {
     ముందుకు_జరుగు( lSide)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( sSide)
     కుడి_వైపు_తిరుగు(90)
-  }
-  ఆకారాము_ముగించు( fColor)
+  } )
+  ఆకారము_ముగించు( fColor)
   ముందుకు_జరుగు( lSide)
 }
 
-function square ( side, fColor) {
-  ఆకారాము_ప్రారంభించు()
-  for (var i=0; i<4; i++) {
-    ముందుకు_జరుగు( side)
+సమచతురస్రము = ( భుజము, fColor) => {
+  ఆకారము_ప్రారంభించు()
+  లెక్క_పెడుతూ_ఆవర్తించు (4, (i) => {
+    ముందుకు_జరుగు( భుజము)
     కుడి_వైపు_తిరుగు(90)
-  }
-  ఆకారాము_ముగించు( fColor)
-  ముందుకు_జరుగు( side)
+  })
+  ఆకారము_ముగించు( fColor)
+  ముందుకు_జరుగు( భుజము)
 }
 
-
-function ప్రదర్శన() {
+ప్రదర్శన = () =>  {
   ఆది_స్థితి()
-  count = 0
-  yB = గరిష్ఠY() + small
-  xB = కనిష్ఠX()
-   చుట్టొద్దు()
+  let yB = గరిష్ఠY() + small
+  let xB = కనిష్ఠX()
+  చుట్టొద్దు()
   కుడి_వైపు_తిరుగు( 90)
 
-  s = 50
-  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {
-    స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
+  యావత్_పరిక్రమ( () => కుంచిక.స్థానము.y > కనిష్ఠY(), () =>  {
+    స్థానము_మార్చు(xB, yB);
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {
       కలమును_కింద_పెట్టు()
-      square(small, "yellow")
+      సమచతురస్రము(small, "పసుపు")
       కలమును_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
       కలమును_కింద_పెట్టు()
-      square(small, "yellow")
+      సమచతురస్రము(small, "పసుపు")
       vRect(sSide, lSide, "lightblue")
-    }
+    } );
     yB = yB - small
 
     స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
-    }
+    } )
     yB = yB - sSide
 
     స్థానము_మార్చు(xB, yB)
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {
       కలమును_కింద_పెట్టు()
-      square(small, "yellow")
+      సమచతురస్రము(small, "పసుపు")
       vRect(sSide, lSide, "lightblue")
-      square(small, "yellow")
+      సమచతురస్రము(small, "పసుపు")
       కలమును_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
       కలమును_కింద_పెట్టు()
-    }
+    } )
     yB = yB - small
 
     స్థానము_మార్చు(xB- lSide +small, yB)
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {
       కలమును_కింద_పెట్టు()
       hRect(sSide, lSide, "red")
       కలమును_పైకి_ఎత్తు()
       ముందుకు_జరుగు(sSide)
-    }
+    } )
     yB = yB - sSide
-  }
+  } )
 }

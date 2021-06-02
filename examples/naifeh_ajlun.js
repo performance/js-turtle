@@ -9,7 +9,7 @@
 
 function quadrangle( ){
   // start at lower left corner of outer square
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు(longSide)
   కుడి_వైపు_తిరుగు( 180 - angleA)
   ముందుకు_జరుగు(longSide)
@@ -22,7 +22,7 @@ function quadrangle( ){
   ముందుకు_జరుగు( longSide + shortSide)
   కుడి_వైపు_తిరుగు(90)
   కలమును_కింద_పెట్టు()
-  ఆకారాము_ముగించు("lightblue")
+  ఆకారము_ముగించు("lightblue")
 }
 
 function ప్రదర్శన() {

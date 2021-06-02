@@ -485,29 +485,29 @@ function wrap(bool) {
 
 
 /*******************************************************************************
- * ఆకారాము_ప్రారంభించు -- mark the beginning of a filled shape
- * ఆకారాము_ప్రారంభించు 
+ * ఆకారము_ప్రారంభించు -- mark the beginning of a filled shape
+ * ఆకారము_ప్రారంభించు 
  * arguments: None
  *
  * returns: None
  ******************************************************************************/
-function ఆకారాము_ప్రారంభించు() {
+function ఆకారము_ప్రారంభించు() {
   కుంచిక.ఆకారాము = true;
   imageContext.beginPath();
 }
 
-beginShape = ఆకారాము_ప్రారంభించు;
+beginShape = ఆకారము_ప్రారంభించు;
 
 
 /*******************************************************************************
- * ఆకారాము_ముగించు -- fill shape
- *  ఆకారాము_ముగించు  
+ * ఆకారము_ముగించు -- fill shape
+ *  ఆకారము_ముగించు  
  * arguments:
  *   styl: fill style (రంగు, gradient, or pattern), defaulting to కుంచిక రంగు
  *
  * returns: None
  ******************************************************************************/
-function ఆకారాము_ముగించు( styl) {
+function ఆకారము_ముగించు( styl) {
   if (కుంచిక.ఆకారాము) {
     if (styl == undefined) {
        styl = కుంచిక.రంగు;
@@ -536,7 +536,7 @@ function ఆకారాము_ముగించు( styl) {
   కుంచిక.ఆకారాము = false;
 }
 
-fillShape = ఆకారాము_ముగించు;
+fillShape = ఆకారము_ముగించు;
 
 
 //////Movement Functions
@@ -1106,23 +1106,24 @@ function వ్రాయి(msg) {
 write = వ్రాయి;
 
 /*******************************************************************************
- * యాదృచఛిక_సంఖ్య -- generate a యాదృచఛిక_సంఖ్య integer between low (or 0 if unspecified) and high
- * యాదృచఛిక_సంఖ్య 
+ * యాదృచ్ఛిక_సంఖ్య -- generate a యాదృచ్ఛిక_సంఖ్య integer between low (or 0 if unspecified) and high
+ * యాదృచ్ఛిక_సంఖ్య 
  * arguments:
- *   low: low limit of the యాదృచఛిక_సంఖ్య number (0, if only one parameter is used)
- *   high: high limit of the యాదృచఛిక_సంఖ్య number
+ *   low: low limit of the యాదృచ్ఛిక_సంఖ్య number (0, if only one parameter is used)
+ *   high: high limit of the యాదృచ్ఛిక_సంఖ్య number
  *
  * returns:
- *   (int) generated యాదృచఛిక_సంఖ్య number
+ *   (int) generated యాదృచ్ఛిక_సంఖ్య number
  ******************************************************************************/
-function యాదృచఛిక_సంఖ్య(low, high) {
+function యాదృచ్ఛిక_సంఖ్య(low, high) {
    if (high == undefined) {
      return Math.floor( (low + 1) * Math.random ());
    } else {
      return Math.floor(Math.random() * (high - low + 1) + low);
    }
 }
-random = యాదృచఛిక_సంఖ్య;
+random = యాదృచ్ఛిక_సంఖ్య;
+
 
 /*******************************************************************************
  * ఆవర్తించు -- repeat an action n times

@@ -855,7 +855,7 @@ function incDecQueue(signal) {
   var spread;
   spread = 0.5;
   var possibleDepartureTime = currentTime +
-            యాదృచఛిక_సంఖ్య((1 - spread) * signal.aveDepartureTime, (1 + spread) * signal.aveDepartureTime);
+            యాదృచ్ఛిక_సంఖ్య((1 - spread) * signal.aveDepartureTime, (1 + spread) * signal.aveDepartureTime);
   if (signal.state === green) {
     if (signal.aveDepartureTime === 0) { // special case for walkers
       signal.queue = [];
@@ -878,11 +878,11 @@ function incDecQueue(signal) {
   // check for arrivals
   if (signal.nextArrivalTime === undefined || currentTime > signal.nextArrivalTime) {
     changed = true;
-    signal.queue.push ({color:యాదృచఛిక_సంఖ్య(16), arrivalTime:currentTime});
+    signal.queue.push ({color:యాదృచ్ఛిక_సంఖ్య(16), arrivalTime:currentTime});
     // adjust the average to give it some variation within the average
     spread = 0.95;
     signal.nextArrivalTime = currentTime +
-      యాదృచఛిక_సంఖ్య((1 - spread) * signal.aveArrivalTime, (1 + spread) * signal.aveArrivalTime);
+      యాదృచ్ఛిక_సంఖ్య((1 - spread) * signal.aveArrivalTime, (1 + spread) * signal.aveArrivalTime);
   }
 }
 

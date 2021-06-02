@@ -952,7 +952,7 @@ about having the program make up values and use them on the fly.
 Let’s try to place
 random-colored, random-sized squares at random places on the canvas.
 It sounds like we need a random number generating function. The
-<code>యాదృచఛిక_సంఖ్య()</code> function
+<code>యాదృచ్ఛిక_సంఖ్య()</code> function
 fills the need. This has two forms: one with one number and one with
 two numbers. The single number form generates an integer
 between 0 and the value supplied. The two number form generates
@@ -961,7 +961,7 @@ an integer between the two numbers.
     <img src="images/random_squares.png" alt="">
 <p>
 We used the <code>రంగు_మార్చు()</code> function in the last exercise.  It works on
-a number between 0 and 15, so <code>యాదృచఛిక_సంఖ్య( 15)</code> will work for a random
+a number between 0 and 15, so <code>యాదృచ్ఛిక_సంఖ్య( 15)</code> will work for a random
 రంగు_మార్చు(as long has you are happy with crayon colors).
 </p>
 
@@ -984,8 +984,8 @@ on laptops and desktop machines as the browser window is changed.
 <p>
 We need to pick a random number for a random x and a random y on the
 canvas for the <code>స్థానము_మార్చు()</function></code>.
-<code>యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX())</code> will pick a suitable x value and
-<code>యాదృచఛిక_సంఖ్య( కనిష్ఠY(), గరిష్ఠY())</code> will pick a suitable y value.
+<code>యాదృచ్ఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX())</code> will pick a suitable x value and
+<code>యాదృచ్ఛిక_సంఖ్య( కనిష్ఠY(), గరిష్ఠY())</code> will pick a suitable y value.
 This is put altogether in the following code. Note that the x and y parameter
 positions in the definition of the <code>స్థానము_మార్చు()</code> function definition
 determine the order of the arguments when invoking the <code>స్థానము_మార్చు()</code>
@@ -1004,9 +1004,9 @@ function ప్రదర్శన(){
   var i
   ఆది_స్థితి()
   for (i=0; i&lt;20; i= i + 1) {
-    రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
-    స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
-    square( యాదృచఛిక_సంఖ్య( 15,150))
+    రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య(15))
+    స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచ్ఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+    square( యాదృచ్ఛిక_సంఖ్య( 15,150))
   }
 }
 </code>
@@ -1041,9 +1041,9 @@ Everything else can be put into a <code>randomSquare()</code> function.
 }
 
 function randomSquare(){
-  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
-  స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
-  square( యాదృచఛిక_సంఖ్య( 15,150))
+  రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య(15))
+  స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచ్ఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+  square( యాదృచ్ఛిక_సంఖ్య( 15,150))
 }
 
 function ప్రదర్శన(){
@@ -1061,12 +1061,12 @@ function to the <code>ఆడించు()</code> function. Animate executes the
 function at the address passed to it. By dropping the parentheses
 from the <code>demo2()</code> function, the address of the function is used
 rather than to attempt to invoke the function immediately as is done with the
-<code>యాదృచఛిక_సంఖ్య()</code>, <code>కనిష్ఠX()</code>, <code>కనిష్ఠY()</code>,
+<code>యాదృచ్ఛిక_సంఖ్య()</code>, <code>కనిష్ఠX()</code>, <code>కనిష్ఠY()</code>,
 <code>గరిష్ఠX()</code>, <code>గరిష్ఠY()</code> functions elsewhere in the code.
 </p>
 <p>
 The squares can be
-rotated as well by throwing in a turn (యాదృచఛిక_సంఖ్య(something)) into the
+rotated as well by throwing in a turn (యాదృచ్ఛిక_సంఖ్య(something)) into the
 mix.
 </p>
 <code class="tryme">function square(side) {
@@ -1079,10 +1079,10 @@ mix.
 }
 
 function randomSquare(){
-  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
-  స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
-  కుడి_వైపు_తిరుగు(యాదృచఛిక_సంఖ్య( 5, 30))
-  square( యాదృచఛిక_సంఖ్య( 15,150))
+  రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య(15))
+  స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచ్ఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+  కుడి_వైపు_తిరుగు(యాదృచ్ఛిక_సంఖ్య( 5, 30))
+  square( యాదృచ్ఛిక_సంఖ్య( 15,150))
 }
 
 function ప్రదర్శన(){
@@ -1098,7 +1098,7 @@ function ప్రదర్శన(){
 <p>
 The line widths of squares can also be varied by throwing in <code>width</code>
 function. So in keeping with the randomness theme, why not make the lines a
-random width with <code>వెడల్పు(యాదృచఛిక_సంఖ్య(</code>something<code>))</code> into the mix.
+random width with <code>వెడల్పు(యాదృచ్ఛిక_సంఖ్య(</code>something<code>))</code> into the mix.
 You may not want lines that are too thin (zero?) or too wide, so limit the range
 of the widths. This code looks something like the following.
 </p>
@@ -1112,11 +1112,11 @@ of the widths. This code looks something like the following.
 }
 
 function randomSquare(){
-  రంగు_మార్చు( యాదృచఛిక_సంఖ్య(15))
-  స్థానము_మార్చు(యాదృచఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
-  కుడి_వైపు_తిరుగు(యాదృచఛిక_సంఖ్య( 5, 30))
-  వెడల్పు( యాదృచఛిక_సంఖ్య( 1, 6))
-  square( యాదృచఛిక_సంఖ్య( 15,150))
+  రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య(15))
+  స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య( కనిష్ఠX(), గరిష్ఠX()), యాదృచ్ఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()))
+  కుడి_వైపు_తిరుగు(యాదృచ్ఛిక_సంఖ్య( 5, 30))
+  వెడల్పు( యాదృచ్ఛిక_సంఖ్య( 1, 6))
+  square( యాదృచ్ఛిక_సంఖ్య( 15,150))
 }
 
 function ప్రదర్శన(){
@@ -1349,12 +1349,12 @@ next coding adventure.
 </li>
 <li>
     Play with random colors.
-    Hint: <code>రంగు_మార్చు(యాదృచఛిక_సంఖ్య(15))</code> or even more colors if
+    Hint: <code>రంగు_మార్చు(యాదృచ్ఛిక_సంఖ్య(15))</code> or even more colors if
     you use individual red, green and blue color codes like
     <code>రంగు_మార్చు("rgb(" + </code>
-    <code>యాదృచఛిక_సంఖ్య(255) + "," + </code>
-    <code>యాదృచఛిక_సంఖ్య(255) + "," + </code>
-    <code>యాదృచఛిక_సంఖ్య(255) + ")" )</code>.
+    <code>యాదృచ్ఛిక_సంఖ్య(255) + "," + </code>
+    <code>యాదృచ్ఛిక_సంఖ్య(255) + "," + </code>
+    <code>యాదృచ్ఛిక_సంఖ్య(255) + ")" )</code>.
 </li>
 <li>
     Play with color around a color wheel to change colors more subtly.

@@ -10,16 +10,16 @@ function init_drops(n) {
  var drops = new Array(n);
  for (var i = 0; i < n; i++) {
     drops[i] = { // each drop is an object with a set of properties
-       x: యాదృచఛిక_సంఖ్య(minX, maxX),
-       y: యాదృచఛిక_సంఖ్య(minY, maxY),
-       velocityX: యాదృచఛిక_సంఖ్య(-maxVelocity, maxVelocity),
-       velocityY: యాదృచఛిక_సంఖ్య(-maxVelocity, maxVelocity),
-       size: యాదృచఛిక_సంఖ్య(20,300),
-       red:యాదృచఛిక_సంఖ్య(0,255),
-       green:యాదృచఛిక_సంఖ్య(0,255),
-       blue: యాదృచఛిక_సంఖ్య(0,255),
+       x: యాదృచ్ఛిక_సంఖ్య(minX, maxX),
+       y: యాదృచ్ఛిక_సంఖ్య(minY, maxY),
+       velocityX: యాదృచ్ఛిక_సంఖ్య(-maxVelocity, maxVelocity),
+       velocityY: యాదృచ్ఛిక_సంఖ్య(-maxVelocity, maxVelocity),
+       size: యాదృచ్ఛిక_సంఖ్య(20,300),
+       red:యాదృచ్ఛిక_సంఖ్య(0,255),
+       green:యాదృచ్ఛిక_సంఖ్య(0,255),
+       blue: యాదృచ్ఛిక_సంఖ్య(0,255),
        alpha: Math.random(),
-       width: యాదృచఛిక_సంఖ్య(1,15)
+       width: యాదృచ్ఛిక_సంఖ్య(1,15)
     };
  }
  return drops;

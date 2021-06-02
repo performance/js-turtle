@@ -3,21 +3,21 @@
 colors = ["red", "white", "blue", "yellow", "green"]
 
 function triUp( side, fColor) {
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for (var i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 120)
   }
-  ఆకారాము_ముగించు( fColor)
+  ఆకారము_ముగించు( fColor)
 }
 
 function triDown( side, fColor) {
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for (var i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 120)
   }
-  ఆకారాము_ముగించు( fColor)
+  ఆకారము_ముగించు( fColor)
 }
 
 // nextColor could be completely random, if desired

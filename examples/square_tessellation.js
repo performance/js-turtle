@@ -3,21 +3,21 @@
 colors = ["red", "white", "blue","yellow", "green"]
 
 function squ( side, fColor) {
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
   }
-  ఆకారాము_ముగించు( fColor)
+  ఆకారము_ముగించు( fColor)
 }
 
 function squLeft( side, fColor) {
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   for (var i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 90)
   }
-  ఆకారాము_ముగించు( fColor)
+  ఆకారము_ముగించు( fColor)
 }
 
 // nextColor could be a random function or use less colors

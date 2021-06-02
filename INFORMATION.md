@@ -71,7 +71,7 @@ all of the Javascript color variations.
 * added **కుడివైపు_చాపాము()** and **ఎడమవైపు_చాపాము()** functions to draw arcs with the కుంచిక.
 * changed **circle** function to draw circles or arcs centered on the కుంచిక.
 * added **నిండు_వృత్తము()** function to draw filled circles centered on the కుంచిక.
-* changed **యాదృచఛిక_సంఖ్య()** function to allow use with only a high value.
+* changed **యాదృచ్ఛిక_సంఖ్య()** function to allow use with only a high value.
 * added **Stop** button for animations.
 * added **విలంబించు()** function as an alternative for animations.
 * added **విధిమ్ చాలయన్తు** button for example code in the **definitions** box.

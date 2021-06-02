@@ -69,9 +69,9 @@ function splitTri(outerSide, num, foreColor, triSide) {
   innerSide = triSide / num
   for (j = num; j >0; j = j - 1) {
      for (i = 0; i <j; i = i + 1) {
-        ఆకారాము_ప్రారంభించు()
+        ఆకారము_ప్రారంభించు()
         triangle (innerSide)
-        ఆకారాము_ముగించు(foreColor)
+        ఆకారము_ముగించు(foreColor)
         కలమును_పైకి_ఎత్తు()
         ముందుకు_జరుగు(innerSide)
         కలమును_కింద_పెట్టు()
@@ -163,7 +163,7 @@ console.log("size "+ size)
 /*
   స్థానము_మార్చు( కనిష్ఠX()+1, గరిష్ఠY()-1)
   కుడి_వైపు_తిరుగు( 90)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు( 2 * గరిష్ఠX()-2)
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( 2 * గరిష్ఠY()-2)
@@ -171,15 +171,15 @@ console.log("size "+ size)
   ముందుకు_జరుగు( 2 * గరిష్ఠX()-2)
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( 2 * గరిష్ఠY()-2)
-  ఆకారాము_ముగించు( backgroundColor)
+  ఆకారము_ముగించు( backgroundColor)
 */
 
   //fill in the compass background
   స్థానము_మార్చు(0,0)
   రంగు_మార్చు( compassBackgroundColor)
-  ఆకారాము_ప్రారంభించు()
+  ఆకారము_ప్రారంభించు()
   వృత్తము(size)
-  ఆకారాము_ముగించు( compassBackgroundColor)
+  ఆకారము_ముగించు( compassBackgroundColor)
 
 
   //fill in the eight compass major points
