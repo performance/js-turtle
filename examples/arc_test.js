@@ -1,118 +1,118 @@
 // Arc and Curve Test -- test of arcs and curves
 // this draws five figures
 
-function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir) {
+radialArc = (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, సవ్యము) => {
   స్థానము_మార్చు(x,y);
   కలమును_పైకి_ఎత్తు();
   కోణము(armAngle);
   ముందుకు_జరుగు(startRadius);
   కుడి_వైపు_తిరుగు(tangentAngle);
   కలమును_కింద_పెట్టు();
-  వృత్తము(arcRadius,extent, dir);
+  వృత్తము(arcRadius,extent, సవ్యము);
 }
 
 
-function turbine(x,y, వ్యాసార్థము, pedals, dir) {
-  for (i=0; i<pedals; i++) {
-    if (dir) {
-      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, -135, 10, 90, dir);
+పళ్ళచక్రం = (x,y, వ్యాసార్థము, pedals, సవ్యము) => {
+
+  లెక్క_పెడుతూ_ఆవర్తించు( pedals, (i) => {
+    if (సవ్యము) {
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, -135, 10, 90, సవ్యము);
     } else {
-      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, 45, 10, 90, !dir);
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, 45, 10, 90, !సవ్యము);
     }
-  }
+  });
 }
 
-function roundedOctogon (side, వ్యాసార్థము) {
-  ఆవర్తించు((8), function () {
+roundedOctogon = (side, వ్యాసార్థము) => {
+  ఆవర్తించు((8),  ()=> {
     ముందుకు_జరుగు(side);
     కుడివైపు_చాపాము(వ్యాసార్థము,45);
   })
 }
 
 
-function roundedOctogonL (side, వ్యాసార్థము) {
-  ఆవర్తించు((8), function () {
+roundedOctogonL = (side, వ్యాసార్థము) => {
+  ఆవర్తించు((8),  ()=> {
     ముందుకు_జరుగు(side);
     ఎడమవైపు_చాపాము(వ్యాసార్థము,45);
   })
 }
 
 
-function circleEyeR (x, y, n, outerRadius) {
-  స్థానము_మార్చు(x, y);
+circleEyeR = (అ, ని, న, outerRadius) => {
+  స్థానము_మార్చు(అ, ని);
   వృత్తము(outerRadius); //outer circle
 
-  for (var i=0; i<n; i++) {
-    స్థానము_మార్చు(x, y);
-    కోణము (i/n * 360);
+  లెక్క_పెడుతూ_ఆవర్తించు ( న, ( చ ) => {
+    స్థానము_మార్చు(అ, ని);
+    కోణము (చ/న * 360);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(outerRadius);
     కుడి_వైపు_తిరుగు(90)
     కలమును_కింద_పెట్టు();
-    వ్రాయి(i)
+    వ్రాయి(చ)
     కుడివైపు_చాపాము(outerRadius/2) // one inscribed circle
-  }
+  } )
 }
 
-function circleEyeL (x, y, n, outerRadius) {
-  స్థానము_మార్చు(x, y);
+circleEyeL = (అ, ని, న, outerRadius) => {
+  స్థానము_మార్చు(అ, ని);
   వృత్తము(outerRadius); //outer circle
 
-  for (var i=0; i<n; i++) {
-    స్థానము_మార్చు(x, y);
-    కోణము (i/n * 360);
+  లెక్క_పెడుతూ_ఆవర్తించు ( న, ( చ ) => {
+    స్థానము_మార్చు(అ, ని);
+    కోణము (చ/న * 360);
     కలమును_పైకి_ఎత్తు();
     ముందుకు_జరుగు(outerRadius);
     కలమును_కింద_పెట్టు();
     ఎడమ_వైపు_తిరుగు(90)
-    వ్రాయి(i)
+    వ్రాయి(చ)
     ఎడమవైపు_చాపాము(outerRadius/2); // one inscribed circle
-  }
+  } )
 }
 
 
-function ప్రదర్శన() {
-  var CW = true;
-  var CCW = false;
-  var size = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())
-  var cellSize = size/3
+ప్రదర్శన = () => {
+  const సవ్య = అవును;
+  const అపసవ్య = !సవ్య;
+  const పొడవు = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())
+  const గది_పొడవు = పొడవు/3
 
   //divide area into 6 cells: 2 vertical, 3 horizontal
   // centers are:
-  v1 = +1/4 * size
-  v2 = -1/4 * size
-  h1 = -2/6 * size
-  h2 = 0
-  h3 = +2/6 * size
+  ని౧ = +1/4 * పొడవు
+  ని౨ = -1/4 * పొడవు
+  అ౧ = -2/6 * పొడవు
+  అ౨ = 0
+  అ౩ = +2/6 * పొడవు
 
   ఆది_స్థితి();
   కుంచికను_దాచు();
 
-  tSize = cellSize/2 * .90
-// turbine(x,y, వ్యాసార్థము, pedals, dir) {
-  turbine (h1, v1, 10/55*tSize, 8, CW);
-  turbine (h1, v1, 25/55*tSize, 16, CCW);
-  turbine (h1, v1, 40/55*tSize, 32, CW);
-  turbine (h1, v1, 55/55*tSize, 64, CCW);
+  tSize = గది_పొడవు/2 * .90
+  పళ్ళచక్రం (అ౧, ని౧, 10/55*tSize, 8, సవ్య);
+  పళ్ళచక్రం (అ౧, ని౧, 25/55*tSize, 16, అపసవ్య);
+  పళ్ళచక్రం (అ౧, ని౧, 40/55*tSize, 32, సవ్య);
+  పళ్ళచక్రం (అ౧, ని౧, 55/55*tSize, 64, అపసవ్య);
 
 
   var pedals = 8;
-  tSize = cellSize/2 * .90
+  tSize = గది_పొడవు/2 * .90
   for (i=0; i<pedals; i++) {
 //radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir)
-    radialArc (h2, v1, 10/60*tSize, 360*i/pedals, -45, 10/60*tSize, 180, CW); // inner shell
-    radialArc (h2, v1, 40/60*tSize, 360*i/pedals, -125, 15/60*tSize, 110, CCW); //inside arc
-    radialArc (h2, v1, 40/60*tSize, 360*i/pedals, -85, 18/60*tSize, 170, CW); //outside arcs
-    radialArc (h2, v1, 41/60*tSize, 360*i/pedals, 0, 10/60*tSize, 360, CW); // radial circles
+    radialArc (అ౨, ని౧, 10/60*tSize, 360*i/pedals, -45, 10/60*tSize, 180, సవ్య); // inner shell
+    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/pedals, -125, 15/60*tSize, 110, అపసవ్య); //inside arc
+    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/pedals, -85, 18/60*tSize, 170, సవ్య); //outside arcs
+    radialArc (అ౨, ని౧, 41/60*tSize, 360*i/pedals, 0, 10/60*tSize, 360, సవ్య); // radial circles
   }
   
 
-  స్థానము_మార్చు(h2, v1);
+  స్థానము_మార్చు(అ౨, ని౧);
   వృత్తము(60/60 * tSize);
 
-  స్థానము_మార్చు( h1, v2)
+  స్థానము_మార్చు( అ౧, ని౨)
   కోణము(0)
-  oRadius = cellSize/2 * .9
+  oRadius = గది_పొడవు/2 * .9
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
@@ -124,9 +124,9 @@ function ప్రదర్శన() {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  స్థానము_మార్చు( h1, v2)
+  స్థానము_మార్చు( అ౧, ని౨)
   కోణము(0)
-  oRadius = cellSize/2 * .8
+  oRadius = గది_పొడవు/2 * .8
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
@@ -138,9 +138,9 @@ function ప్రదర్శన() {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  స్థానము_మార్చు( h1, v2)
+  స్థానము_మార్చు( అ౧, ని౨)
   కోణము(22.5)
-  oRadius = cellSize/2 * .7
+  oRadius = గది_పొడవు/2 * .7
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
@@ -152,9 +152,9 @@ function ప్రదర్శన() {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  స్థానము_మార్చు( h1, v2)
+  స్థానము_మార్చు( అ౧, ని౨)
   కోణము(22.5)
-  oRadius = cellSize/2 * .6
+  oRadius = గది_పొడవు/2 * .6
   cRadius = .3 * oRadius
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
@@ -166,6 +166,6 @@ function ప్రదర్శన() {
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
 
-  circleEyeR( h2, v2, 16, cellSize/2 * .8);
-  circleEyeL( h3, v2, 16, cellSize/2 * .8);
+  circleEyeR( అ౨, ని౨, 16, గది_పొడవు/2 * .8);
+  circleEyeL( అ౩, ని౨, 16, గది_పొడవు/2 * .8);
 }
