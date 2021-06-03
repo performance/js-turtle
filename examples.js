@@ -139,118 +139,117 @@ arc_test ='\
 // Arc and Curve Test -- test of arcs and curves\n\
 // this draws five figures\n\
 \n\
-function radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir) {\n\
+radialArc = (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, సవ్యము) => {\n\
   స్థానము_మార్చు(x,y);\n\
   కలమును_పైకి_ఎత్తు();\n\
   కోణము(armAngle);\n\
   ముందుకు_జరుగు(startRadius);\n\
   కుడి_వైపు_తిరుగు(tangentAngle);\n\
   కలమును_కింద_పెట్టు();\n\
-  వృత్తము(arcRadius,extent, dir);\n\
+  వృత్తము(arcRadius,extent, సవ్యము);\n\
 }\n\
 \n\
 \n\
-function turbine(x,y, వ్యాసార్థము, pedals, dir) {\n\
-  for (i=0; i<pedals; i++) {\n\
-    if (dir) {\n\
-      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, -135, 10, 90, dir);\n\
+పళ్ళచక్రం = (x,y, వ్యాసార్థము, pedals, సవ్యము) => {\n\
+\n\
+  లెక్క_పెడుతూ_ఆవర్తించు( pedals, (i) => {\n\
+    if (సవ్యము) {\n\
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, -135, 10, 90, సవ్యము);\n\
     } else {\n\
-      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, 45, 10, 90, !dir);\n\
+      radialArc (x,y, వ్యాసార్థము, 360*i/pedals, 45, 10, 90, !సవ్యము);\n\
     }\n\
-  }\n\
+  });\n\
 }\n\
 \n\
-function roundedOctogon (side, వ్యాసార్థము) {\n\
-  ఆవర్తించు((8), function () {\n\
+roundedOctogon = (side, వ్యాసార్థము) => {\n\
+  ఆవర్తించు((8),  ()=> {\n\
     ముందుకు_జరుగు(side);\n\
     కుడివైపు_చాపాము(వ్యాసార్థము,45);\n\
   })\n\
 }\n\
 \n\
 \n\
-function roundedOctogonL (side, వ్యాసార్థము) {\n\
-  ఆవర్తించు((8), function () {\n\
+roundedOctogonL = (side, వ్యాసార్థము) => {\n\
+  ఆవర్తించు((8),  ()=> {\n\
     ముందుకు_జరుగు(side);\n\
     ఎడమవైపు_చాపాము(వ్యాసార్థము,45);\n\
   })\n\
 }\n\
 \n\
 \n\
-function circleEyeR (x, y, n, outerRadius) {\n\
-  స్థానము_మార్చు(x, y);\n\
+circleEyeR = (అ, ని, న, outerRadius) => {\n\
+  స్థానము_మార్చు(అ, ని);\n\
   వృత్తము(outerRadius); //outer circle\n\
 \n\
-  for (var i=0; i<n; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (i/n * 360);\n\
+  లెక్క_పెడుతూ_ఆవర్తించు ( న, ( చ ) => {\n\
+    స్థానము_మార్చు(అ, ని);\n\
+    కోణము (చ/న * 360);\n\
     కలమును_పైకి_ఎత్తు();\n\
     ముందుకు_జరుగు(outerRadius);\n\
     కుడి_వైపు_తిరుగు(90)\n\
     కలమును_కింద_పెట్టు();\n\
-    వ్రాయి(i)\n\
+    వ్రాయి(చ)\n\
     కుడివైపు_చాపాము(outerRadius/2) // one inscribed circle\n\
-  }\n\
+  } )\n\
 }\n\
 \n\
-function circleEyeL (x, y, n, outerRadius) {\n\
-  స్థానము_మార్చు(x, y);\n\
+circleEyeL = (అ, ని, న, outerRadius) => {\n\
+  స్థానము_మార్చు(అ, ని);\n\
   వృత్తము(outerRadius); //outer circle\n\
 \n\
-  for (var i=0; i<n; i++) {\n\
-    స్థానము_మార్చు(x, y);\n\
-    కోణము (i/n * 360);\n\
+  లెక్క_పెడుతూ_ఆవర్తించు ( న, ( చ ) => {\n\
+    స్థానము_మార్చు(అ, ని);\n\
+    కోణము (చ/న * 360);\n\
     కలమును_పైకి_ఎత్తు();\n\
     ముందుకు_జరుగు(outerRadius);\n\
     కలమును_కింద_పెట్టు();\n\
     ఎడమ_వైపు_తిరుగు(90)\n\
-    వ్రాయి(i)\n\
+    వ్రాయి(చ)\n\
     ఎడమవైపు_చాపాము(outerRadius/2); // one inscribed circle\n\
-  }\n\
+  } )\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
-  var CW = true;\n\
-  var CCW = false;\n\
-  var size = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
-  var cellSize = size/3\n\
+ప్రదర్శన = () => {\n\
+  const సవ్య = అవును;\n\
+  const అపసవ్య = !సవ్య;\n\
+  const పొడవు = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
+  const గది_పొడవు = పొడవు/3\n\
 \n\
   //divide area into 6 cells: 2 vertical, 3 horizontal\n\
   // centers are:\n\
-  v1 = +1/4 * size\n\
-  v2 = -1/4 * size\n\
-  h1 = -2/6 * size\n\
-  h2 = 0\n\
-  h3 = +2/6 * size\n\
+  ని౧ = +1/4 * పొడవు\n\
+  ని౨ = -1/4 * పొడవు\n\
+  అ౧ = -2/6 * పొడవు\n\
+  అ౨ = 0\n\
+  అ౩ = +2/6 * పొడవు\n\
 \n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
 \n\
-  tSize = cellSize/2 * .90\n\
-// turbine(x,y, వ్యాసార్థము, pedals, dir) {\n\
-  turbine (h1, v1, 10/55*tSize, 8, CW);\n\
-  turbine (h1, v1, 25/55*tSize, 16, CCW);\n\
-  turbine (h1, v1, 40/55*tSize, 32, CW);\n\
-  turbine (h1, v1, 55/55*tSize, 64, CCW);\n\
+  tSize = గది_పొడవు/2 * .90\n\
+  పళ్ళచక్రం (అ౧, ని౧, 10/55*tSize, 8, సవ్య);\n\
+  పళ్ళచక్రం (అ౧, ని౧, 25/55*tSize, 16, అపసవ్య);\n\
+  పళ్ళచక్రం (అ౧, ని౧, 40/55*tSize, 32, సవ్య);\n\
+  పళ్ళచక్రం (అ౧, ని౧, 55/55*tSize, 64, అపసవ్య);\n\
 \n\
 \n\
-  var pedals = 8;\n\
-  tSize = cellSize/2 * .90\n\
-  for (i=0; i<pedals; i++) {\n\
+  tSize = గది_పొడవు/2 * .90\n\
+  లెక్క_పెడుతూ_ఆవర్తించు (8, (i) => {\n\
 //radialArc (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, dir)\n\
-    radialArc (h2, v1, 10/60*tSize, 360*i/pedals, -45, 10/60*tSize, 180, CW); // inner shell\n\
-    radialArc (h2, v1, 40/60*tSize, 360*i/pedals, -125, 15/60*tSize, 110, CCW); //inside arc\n\
-    radialArc (h2, v1, 40/60*tSize, 360*i/pedals, -85, 18/60*tSize, 170, CW); //outside arcs\n\
-    radialArc (h2, v1, 41/60*tSize, 360*i/pedals, 0, 10/60*tSize, 360, CW); // radial circles\n\
-  }\n\
+    radialArc (అ౨, ని౧, 10/60*tSize, 360*i/8, -45, 10/60*tSize, 180, సవ్య); // inner shell\n\
+    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/8, -125, 15/60*tSize, 110, అపసవ్య); //inside arc\n\
+    radialArc (అ౨, ని౧, 40/60*tSize, 360*i/8, -85, 18/60*tSize, 170, సవ్య); //outside arcs\n\
+    radialArc (అ౨, ని౧, 41/60*tSize, 360*i/8, 0, 10/60*tSize, 360, సవ్య); // radial circles\n\
+  })\n\
   \n\
 \n\
-  స్థానము_మార్చు(h2, v1);\n\
+  స్థానము_మార్చు(అ౨, ని౧);\n\
   వృత్తము(60/60 * tSize);\n\
 \n\
-  స్థానము_మార్చు( h1, v2)\n\
+  స్థానము_మార్చు( అ౧, ని౨)\n\
   కోణము(0)\n\
-  oRadius = cellSize/2 * .9\n\
+  oRadius = గది_పొడవు/2 * .9\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
@@ -262,9 +261,9 @@ function ప్రదర్శన() {\n\
   వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
-  స్థానము_మార్చు( h1, v2)\n\
+  స్థానము_మార్చు( అ౧, ని౨)\n\
   కోణము(0)\n\
-  oRadius = cellSize/2 * .8\n\
+  oRadius = గది_పొడవు/2 * .8\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
@@ -276,9 +275,9 @@ function ప్రదర్శన() {\n\
   వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
-  స్థానము_మార్చు( h1, v2)\n\
+  స్థానము_మార్చు( అ౧, ని౨)\n\
   కోణము(22.5)\n\
-  oRadius = cellSize/2 * .7\n\
+  oRadius = గది_పొడవు/2 * .7\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
@@ -290,9 +289,9 @@ function ప్రదర్శన() {\n\
   వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
-  స్థానము_మార్చు( h1, v2)\n\
+  స్థానము_మార్చు( అ౧, ని౨)\n\
   కోణము(22.5)\n\
-  oRadius = cellSize/2 * .6\n\
+  oRadius = గది_పొడవు/2 * .6\n\
   cRadius = .3 * oRadius\n\
   curveLoss = cRadius * Math.tan( degToRad( 22.5))\n\
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss\n\
@@ -304,107 +303,104 @@ function ప్రదర్శన() {\n\
   వెనుకకు_జరుగు(side/2)\n\
   roundedOctogon( side, cRadius)\n\
 \n\
-  circleEyeR( h2, v2, 16, cellSize/2 * .8);\n\
-  circleEyeL( h3, v2, 16, cellSize/2 * .8);\n\
+  circleEyeR( అ౨, ని౨, 16, గది_పొడవు/2 * .8);\n\
+  circleEyeL( అ౩, ని౨, 16, గది_పొడవు/2 * .8);\n\
 }\n\
 '
 basket_weave_tessellation ='\
 // Basket Weave Tessellation -- tile a space using basket weave pattern\n\
 \n\
-// this assumes that the smaller square is 1/2 of the larger square.\n\
+// this assumes that the చిన్న సమచతురస్రము is 1/2 of the larger సమచతురస్రము.\n\
 // that need not be the case\n\
 \n\
-small = 20\n\
-sSide = 2.5 * small\n\
-lSide = sSide + 2 * small\n\
+const సమచతురస్రభుజము = 20\n\
+const ఎత్తు = 2.5 * సమచతురస్రభుజము\n\
+const వెడల్పు = ఎత్తు + 2 * సమచతురస్రభుజము\n\
 \n\
-function vRect( sSide, lSide, fColor) {\n\
+నిలువు_దీర్ఘచతురస్రము = ( ఎత్తు, వెడల్పు, వర్ణము) => {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<2; i++) {\n\
-    ముందుకు_జరుగు( sSide)\n\
+  ఆవర్తించు (2, () => {\n\
+    ముందుకు_జరుగు( ఎత్తు)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-    ముందుకు_జరుగు( lSide)\n\
+    ముందుకు_జరుగు( వెడల్పు)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-  }\n\
-  ఆకారము_ముగించు( fColor)\n\
-  ముందుకు_జరుగు( sSide)\n\
+  } );\n\
+  ఆకారము_ముగించు( వర్ణము)\n\
+  ముందుకు_జరుగు( ఎత్తు)\n\
 }\n\
 \n\
-function hRect( sSide, lSide, fColor) {\n\
+అడ్డ_దీర్ఘచతురస్రము = ( ఎత్తు, వెడల్పు, వర్ణము) => {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<2; i++) {\n\
-    ముందుకు_జరుగు( lSide)\n\
+  ఆవర్తించు (2, () => {\n\
+    ముందుకు_జరుగు( వెడల్పు)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-    ముందుకు_జరుగు( sSide)\n\
+    ముందుకు_జరుగు( ఎత్తు)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-  }\n\
-  ఆకారము_ముగించు( fColor)\n\
-  ముందుకు_జరుగు( lSide)\n\
+  } )\n\
+  ఆకారము_ముగించు( వర్ణము)\n\
+  ముందుకు_జరుగు( వెడల్పు)\n\
 }\n\
 \n\
-function square ( side, fColor) {\n\
+సమచతురస్రము = ( భుజము, వర్ణము) => {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++) {\n\
-    ముందుకు_జరుగు( side)\n\
+  ఆవర్తించు (4, () => {\n\
+    ముందుకు_జరుగు( భుజము)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-  }\n\
-  ఆకారము_ముగించు( fColor)\n\
-  ముందుకు_జరుగు( side)\n\
+  })\n\
+  ఆకారము_ముగించు( వర్ణము)\n\
+  ముందుకు_జరుగు( భుజము)\n\
 }\n\
 \n\
-\n\
-function ప్రదర్శన() {\n\
+ప్రదర్శన = () =>  {\n\
   ఆది_స్థితి()\n\
-  count = 0\n\
-  yB = గరిష్ఠY() + small\n\
-  xB = కనిష్ఠX()\n\
-   చుట్టొద్దు()\n\
+  let yB = గరిష్ఠY() + సమచతురస్రభుజము\n\
+  let xB = కనిష్ఠX()\n\
+  చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
-  s = 50\n\
-  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
-    స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+  యావత్_పరిక్రమ( () => కుంచిక.స్థానము.y > కనిష్ఠY(), () =>  {\n\
+    స్థానము_మార్చు(xB, yB);\n\
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {\n\
       కలమును_కింద_పెట్టు()\n\
-      square(small, "yellow")\n\
+      సమచతురస్రము(సమచతురస్రభుజము, "yellow")\n\
       కలమును_పైకి_ఎత్తు()\n\
-      ముందుకు_జరుగు( sSide)\n\
+      ముందుకు_జరుగు( ఎత్తు)\n\
       కలమును_కింద_పెట్టు()\n\
-      square(small, "yellow")\n\
-      vRect(sSide, lSide, "lightblue")\n\
-    }\n\
-    yB = yB - small\n\
+      సమచతురస్రము(సమచతురస్రభుజము, "yellow")\n\
+      నిలువు_దీర్ఘచతురస్రము(ఎత్తు, వెడల్పు, "lightblue")\n\
+    } );\n\
+    yB = yB - సమచతురస్రభుజము\n\
 \n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {\n\
       కలమును_కింద_పెట్టు()\n\
-      hRect(sSide, lSide, "red")\n\
+      అడ్డ_దీర్ఘచతురస్రము(ఎత్తు, వెడల్పు, "red")\n\
       కలమును_పైకి_ఎత్తు()\n\
-      ముందుకు_జరుగు( sSide)\n\
-    }\n\
-    yB = yB - sSide\n\
+      ముందుకు_జరుగు( ఎత్తు)\n\
+    } )\n\
+    yB = yB - ఎత్తు\n\
 \n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {\n\
       కలమును_కింద_పెట్టు()\n\
-      square(small, "yellow")\n\
-      vRect(sSide, lSide, "lightblue")\n\
-      square(small, "yellow")\n\
+      సమచతురస్రము(సమచతురస్రభుజము, "yellow")\n\
+      నిలువు_దీర్ఘచతురస్రము(ఎత్తు, వెడల్పు, "lightblue")\n\
+      సమచతురస్రము(సమచతురస్రభుజము, "yellow")\n\
       కలమును_పైకి_ఎత్తు()\n\
-      ముందుకు_జరుగు( sSide)\n\
+      ముందుకు_జరుగు( ఎత్తు)\n\
       కలమును_కింద_పెట్టు()\n\
-    }\n\
-    yB = yB - small\n\
+    } )\n\
+    yB = yB - సమచతురస్రభుజము\n\
 \n\
-    స్థానము_మార్చు(xB- lSide +small, yB)\n\
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+    స్థానము_మార్చు(xB- వెడల్పు +సమచతురస్రభుజము, yB)\n\
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {\n\
       కలమును_కింద_పెట్టు()\n\
-      hRect(sSide, lSide, "red")\n\
+      అడ్డ_దీర్ఘచతురస్రము(ఎత్తు, వెడల్పు, "red")\n\
       కలమును_పైకి_ఎత్తు()\n\
-      ముందుకు_జరుగు(sSide)\n\
-    }\n\
-    yB = yB - sSide\n\
-  }\n\
+      ముందుకు_జరుగు(ఎత్తు)\n\
+    } )\n\
+    yB = yB - ఎత్తు\n\
+  } )\n\
 }\n\
 '
 bounce ='\
@@ -416,9 +412,9 @@ bounce ='\
   var కనిష్ఠ_Y =  -గరిష్ఠ_Y;\n\
   var maxVelocity = 12;\n\
 \n\
-function init_drops(n) {\n\
-   var drops = new Array(n);\n\
-   for (var i = 0; i < n; i++) {\n\
+init_drops = (n) => {\n\
+   let drops = new Array(n);\n\
+   లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {\n\
       drops[i] = { // each drop is an object with a set of properties\n\
          x: యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_X, గరిష్ఠ_X),\n\
          y: యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_Y, గరిష్ఠ_Y),\n\
@@ -431,28 +427,38 @@ function init_drops(n) {\n\
          alpha: Math.random(),\n\
          width: యాదృచ్ఛిక_సంఖ్య(1,15)\n\
       };\n\
-   }\n\
+   } );\n\
    return drops;\n\
 }\n\
 \n\
-function rain (drops, n) {\n\
+rain = (drops, n) => {\n\
    చెరిపి_వేయి();\n\
-   for (var i = 0; i < n; i++) {\n\
+   లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {\n\
       // access each drop object\n\
       var d = drops[i]; // access each drop object and react with it\n\
       // if the drop hits a wall, reverse its motion direction (velocity)\n\
-      if (d.y < కనిష్ఠ_Y) {\n\
-         d.velocityY = -d.velocityY;\n\
-      }\n\
-      else if (d.y + d.size > గరిష్ఠ_Y && d.velocityY > 0) {\n\
-         d.velocityY = -d.velocityY;\n\
-      }\n\
-      if (d.x - d.width/2 < కనిష్ఠ_X) {\n\
-         d.velocityX = -d.velocityX;\n\
-      }\n\
-      else if (d.x + d.width/2 > గరిష్ఠ_X) {\n\
-         d.velocityX = -d.velocityX;\n\
-      }\n\
+      యది_చేత్_అన్యథ ( () => (d.y < కనిష్ఠ_Y),\n\
+         () => {\n\
+            d.velocityY = -d.velocityY;\n\
+         },\n\
+         ()=>\n\
+         యది_చేత్( () => (d.y + d.size > గరిష్ఠ_Y && d.velocityY > 0), \n\
+            () => {\n\
+               d.velocityY = -d.velocityY;\n\
+            }\n\
+         )  \n\
+      )\n\
+      యది_చేత్_అన్యథ ( () => (d.x - d.width/2 < కనిష్ఠ_X),\n\
+         () => {\n\
+            d.velocityX = -d.velocityX;\n\
+         },\n\
+\n\
+         ()=> యది_చేత్ ( () => (d.x + d.width/2 > గరిష్ఠ_X),\n\
+            () => {\n\
+               d.velocityX = -d.velocityX;\n\
+            }\n\
+         ) \n\
+      )\n\
       // paint the drop\n\
       రంగు_మార్చు("rgba(" +d.red+ "," +d.green+ "," +d.blue+ "," +d.alpha +")");\n\
       వెడల్పు(d.width);\n\
@@ -461,77 +467,66 @@ function rain (drops, n) {\n\
       // move the drop for the next time\n\
       d.y = d.y + d.velocityY;\n\
       d.x = d.x + d.velocityX;\n\
-   }\n\
+   } );\n\
 }\n\
 \n\
-function let_them_drop (n) {\n\
-    చుట్టొద్దు();\n\
+let_them_drop = (n) => {\n\
+   చుట్టొద్దు();\n\
    కుంచికను_దాచు();\n\
    drops = init_drops(n);\n\
-   ఆడించు(function () { rain(drops, n)}, 100);\n\
+   ఆడించు( () => { rain(drops, n)}, 100);\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+ప్రదర్శన = () => {\n\
   let_them_drop (Math.floor(గరిష్ఠ_X * గరిష్ఠ_Y/2000));\n\
 }\n\
 '
 brick_tessellation ='\
 // Brick Tessellation -- tile a space using a basic brick laying pattern\n\
 \n\
-sSide = 15\n\
-lSide = 2* sSide \n\
+const ఎత్తు = 15\n\
+const వెడల్పు = 2* ఎత్తు \n\
 \n\
-function vRect( sSide, lSide, fColor) {\n\
+// ఇష్టికా == ఇటుక \n\
+\n\
+ఇష్టికా = ( ఎత్తు, వెడల్పు, fColor) => {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<2; i++) {\n\
-    ముందుకు_జరుగు( sSide)\n\
+  ఆవర్తించు (2, () => {\n\
+    ముందుకు_జరుగు( వెడల్పు)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-    ముందుకు_జరుగు( lSide)\n\
+    ముందుకు_జరుగు( ఎత్తు)\n\
     కుడి_వైపు_తిరుగు(90)\n\
-  }\n\
+  })\n\
   ఆకారము_ముగించు( fColor)\n\
-  ముందుకు_జరుగు( sSide)\n\
+  ముందుకు_జరుగు( వెడల్పు)\n\
 }\n\
 \n\
-function hRect( sSide, lSide, fColor) {\n\
-  ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<2; i++) {\n\
-    ముందుకు_జరుగు( lSide)\n\
-    కుడి_వైపు_తిరుగు(90)\n\
-    ముందుకు_జరుగు( sSide)\n\
-    కుడి_వైపు_తిరుగు(90)\n\
-  }\n\
-  ఆకారము_ముగించు( fColor)\n\
-  ముందుకు_జరుగు( lSide)\n\
-}\n\
-\n\
-function ప్రదర్శన() {\n\
+ప్రదర్శన = () => {\n\
   ఆది_స్థితి()\n\
-  count = 0\n\
+ \n\
   yB = గరిష్ఠY()\n\
   xB = కనిష్ఠX()\n\
    చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
   రంగు_మార్చు( తెలుపు )\n\
 \n\
-  s = 50\n\
-  while( కుంచిక.స్థానము.y > కనిష్ఠY()) {\n\
+  యావత్_పరిక్రమ( () => కుంచిక.స్థానము.y > కనిష్ఠY(), () => {\n\
     స్థానము_మార్చు(xB, yB)\n\
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {\n\
       కలమును_కింద_పెట్టు()\n\
-      hRect(sSide, lSide, "darkred")\n\
+      ఇష్టికా(ఎత్తు, వెడల్పు, "darkred")\n\
       కలమును_పైకి_ఎత్తు()\n\
-    }\n\
-    yB = yB - sSide\n\
+    } )\n\
+    yB = yB - ఎత్తు\n\
 \n\
-    స్థానము_మార్చు(xB - lSide/2, yB)\n\
-    while( కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
+    స్థానము_మార్చు(xB - వెడల్పు/2, yB)\n\
+    యావత్_పరిక్రమ( () => కుంచిక.స్థానము.x < గరిష్ఠX(), () => {\n\
       కలమును_కింద_పెట్టు()\n\
-      hRect(sSide, lSide, "darkred")\n\
+      ఇష్టికా(ఎత్తు, వెడల్పు, "darkred")\n\
       కలమును_పైకి_ఎత్తు()\n\
-    }\n\
-    yB = yB - sSide\n\
-  }\n\
+    } )\n\
+    yB = yB - ఎత్తు\n\
+  } )\n\
 }\n\
 '
 cafe_wall_illusion ='\
@@ -2956,19 +2951,20 @@ function ప్రదర్శన() {\n\
 }\n\
 '
 dividing_circle ='\
-// ఒక వృత్తమును వేరే వృత్తములతో విభజినచుట\n\
+// ఒక వృత్తమును వేరే వృత్తములతో విభజించుట\n\
 \n\
 // *** సార్వత్రికములు ***\n\
 \n\
 // *** నిత్యములు ***\n\
-const వ్యాసార్థము = 50; // వృత్తము వ్యాసార్థము\n\
-const ఆవర్తన_సంఖ్య = 6; // times to loop\n\
-const అవధి = 1000; // మిల్లిసెకన్లు, milliseconds\n\
-\n\
+const వ్యాసార్థము = 50;  // అన్ని వృత్తముల వ్యాసార్థము\n\
+const మెట్ట్ల_సంఖ్య = 6; // మధ్యలో ఉన్న వృత్తాకార మెట్టు నుంచి చివరన ఉన్న మెట్టు వరకు\n\
+                     // ఉన్న సోపానముల సంఖ్య  \n\
+const అవధి = 1000;   // మిల్లిసెకన్లు. ఒక స్థాయి మెట్ట్లు చిత్రీకరించిన తరువాత \n\
+                     // క్రింది స్థాయి మెట్ట్లు చిత్రీకరించడానికి ఎంత సేపు ఆగాలి? \n\
 \n\
 // *** ప్రక్రియలు ***\n\
 \n\
-విభజినచు = (వృత్తములు, వ్యాసార్థము) => {\n\
+విభజించు = (వృత్తములు, వ్యాసార్థము) => {\n\
   ఎడమ_వైపు_తిరుగు(60);\n\
   ముందుకు_జరుగు(వ్యాసార్థము);\n\
   కుడి_వైపు_తిరుగు(60);\n\
@@ -2982,10 +2978,13 @@ const అవధి = 1000; // మిల్లిసెకన్లు, milliseco
 }\n\
 \n\
 మెట్టు = (లోతు) => {\n\
-  విభజినచు( లోతు, వ్యాసార్థము )\n\
-  యది_చేత్( () => (లోతు < ఆవర్తన_సంఖ్య), () => {\n\
-    విలంబించు ( () => {మెట్టు(లోతు+1)}, అవధి);\n\
-  } );\n\
+  విభజించు( లోతు, వ్యాసార్థము )\n\
+  యది_చేత్( \n\
+    () => (లోతు < మెట్ట్ల_సంఖ్య),\n\
+    () => {\n\
+      విలంబించు ( () => {మెట్టు(లోతు+1)}, అవధి);\n\
+    } \n\
+  );\n\
 }\n\
 \n\
 \n\
