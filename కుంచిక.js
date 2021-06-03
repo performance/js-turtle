@@ -288,7 +288,7 @@ function svgClose() {
 //really want to set the size of the blob here and provide a transform
 // so svgBlog = preamble + svgBlob + '</svg'
   svgClosePath();
-  var svgOpenBlob = '<svg id="కుంచిక-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + round( svgXHighWater - svgXLowWater, svgPrecision) + '"'
+  let svgOpenBlob = '<svg id="కుంచిక-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + round( svgXHighWater - svgXLowWater, svgPrecision) + '"'
   svgOpenBlob = svgOpenBlob + ' height="' + round( svgYHighWater - svgYLowWater, svgPrecision) + '">\n'
   if (svgBackground !== "") {
     svgOpenBlob = svgOpenBlob + '<rect width="100%" height="100%" fill="' + svgBackground + '"/>\n';
@@ -326,10 +326,10 @@ function చిత్రీకరించు() {
    clearContext(కుంచికContext);
    // draw the కుంచిక, if it is visible
    if (కుంచిక.visible) {
-      var x = కుంచిక.స్థానము.x;
-      var y = కుంచిక.స్థానము.y;
-      var w = 10;
-      var h = 15;
+      let x = కుంచిక.స్థానము.x;
+      let y = కుంచిక.స్థానము.y;
+      let w = 10;
+      let h = 15;
       కుంచికContext.save();
       // use canvas centered coordinates facing upwards
       centerCoords(కుంచికContext);
@@ -366,8 +366,8 @@ function చిత్రీకరించు() {
  ******************************************************************************/
 // use canvas centered coordinates facing upwards
 function centerCoords (context) {
-   var వెడల్పు = context.canvas.width;
-   var height = context.canvas.height;
+   let వెడల్పు = context.canvas.width;
+   let height = context.canvas.height;
    context.translate(వెడల్పు/2, height/2);
    context.transform(1, 0, 0, -1, 0, 0);
 }
@@ -549,31 +549,29 @@ fillShape = ఆకారము_ముగించు;
  *
  * returns: None
  ******************************************************************************/
-function ముందుకు_జరుగు(distance) {
+function ముందుకు_జరుగు( ఎన్ని_బిందువులు) {
    // define some local variables and functions
-   var cosAngle = Math.cos(కుంచిక.కోణము);
-   var sinAngle = Math.sin(కుంచిక.కోణము);
-   var entryX;
-   var entryY;
-   var newX;
-   var newY;
-   var distance;
-   var entryX = కుంచిక.స్థానము.x;
-   var entryY = కుంచిక.స్థానము.y;
-   var x = కుంచిక.స్థానము.x;
-   var y = కుంచిక.స్థానము.y;
+   let cosAngle = Math.cos(కుంచిక.కోణము);
+   let sinAngle = Math.sin(కుంచిక.కోణము);
+   let newX;
+   let newY;
+   let distance = ఎన్ని_బిందువులు;
+   let entryX = కుంచిక.స్థానము.x;
+   let entryY = కుంచిక.స్థానము.y;
+   let x = కుంచిక.స్థానము.x;
+   let y = కుంచిక.స్థానము.y;
 
    // get the boundaries of the canvas
-   var గరిష్ఠ_X = imageContext.canvas.width / 2;
-   var కనిష్ఠ_X = -imageContext.canvas.width / 2;
-   var గరిష్ఠ_Y = imageContext.canvas.height / 2;
-   var కనిష్ఠ_Y = -imageContext.canvas.height / 2;
+   let గరిష్ఠ_X = imageContext.canvas.width / 2;
+   let కనిష్ఠ_X = -imageContext.canvas.width / 2;
+   let గరిష్ఠ_Y = imageContext.canvas.height / 2;
+   let కనిష్ఠ_Y = -imageContext.canvas.height / 2;
 
 
    // wrap on the X boundary
    function xWrap(cutBound, otherBound) {
-      var distanceToEdge = Math.abs((cutBound - x) / sinAngle);
-      var edgeY = cosAngle * distanceToEdge + y;
+      let distanceToEdge = Math.abs((cutBound - x) / sinAngle);
+      let edgeY = cosAngle * distanceToEdge + y;
       imageContext.lineTo(cutBound, edgeY);
       distance -= distanceToEdge;
       x = otherBound;
@@ -585,8 +583,8 @@ function ముందుకు_జరుగు(distance) {
 
    // wrap on the Y boundary
    function yWrap(cutBound, otherBound) {
-      var distanceToEdge = Math.abs((cutBound - y) / cosAngle);
-      var edgeX = sinAngle * distanceToEdge + x;
+      let distanceToEdge = Math.abs((cutBound - y) / cosAngle);
+      let edgeX = sinAngle * distanceToEdge + x;
       imageContext.lineTo(edgeX, cutBound);
       distance -= distanceToEdge;
       x = edgeX;
@@ -726,10 +724,10 @@ function ఎడమవైపు_చాపాము (వ్యాసార్థ�
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
-  var startAngle = కుంచిక.కోణము; // in radians from 12 o'clock .. heading is same as start
-  var counterclockwise = true;
-  var centerX = కుంచిక.స్థానము.x - వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // left of కుంచిక
-  var centerY = కుంచిక.స్థానము.y + వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
+  let startAngle = కుంచిక.కోణము; // in radians from 12 o'clock .. heading is same as start
+  let counterclockwise = true;
+  let centerX = కుంచిక.స్థానము.x - వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // left of కుంచిక
+  let centerY = కుంచిక.స్థానము.y + వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
   stopAngle = constrain( (startAngle - degToRad(extent)), 0, 2*Math.PI); // in radians CCW
   కుంచిక.కోణము = stopAngle;
   కుంచిక.స్థానము.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
@@ -783,10 +781,10 @@ function కుడివైపు_చాపాము(వ్యాసార్థ
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
-  var startAngle = Math.PI + కుంచిక.కోణము; // in radians .. heading is same as start
-  var counterclockwise = false;
-  var centerX = కుంచిక.స్థానము.x + వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // right of కుంచిక
-  var centerY = కుంచిక.స్థానము.y - వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
+  let startAngle = Math.PI + కుంచిక.కోణము; // in radians .. heading is same as start
+  let counterclockwise = false;
+  let centerX = కుంచిక.స్థానము.x + వ్యాసార్థము * Math.cos (కుంచిక.కోణము); // right of కుంచిక
+  let centerY = కుంచిక.స్థానము.y - వ్యాసార్థము * Math.sin (కుంచిక.కోణము);
   stopAngle = constrain( startAngle + degToRad(extent), 0, 2*Math.PI); // in radians CW
   కుంచిక.కోణము = stopAngle + Math.PI;
   కుంచిక.స్థానము.x = centerX + వ్యాసార్థము * Math.cos(stopAngle);
@@ -1218,9 +1216,9 @@ repeat = ఆవర్తించు;
  * returns: None
  ******************************************************************************/
 function విరామము(ms) {
-  var start = new Date().getTime();
-  var limit = 1000 * 60 * 1; // set గరిష్ఠ time to 1 minute
-  var i = 0;
+  let start = new Date().getTime();
+  let limit = 1000 * 60 * 1; // set గరిష్ఠ time to 1 minute
+  let i = 0;
   for (i = 0; i < limit; i += 1) {
     if ((new Date().getTime() - start) > ms) {
       break;
@@ -1301,15 +1299,15 @@ function రంగు_మార్చు( col ) {
   } else if (typeof(col) != "string") { // col is not a supported type
     col = "నలుపు";
   } 
-  else {
-    const idx = రంగుల_పేర్లు.indexOf(col);
-    // TODO(DSR) : uncomment this.
-    // console.log( "col, idx = ", col, idx );
-    if ( idx > 0 ) {
-      // console.log( " రంగు = ", logoColors[idx] );
-      col = logoColors[idx];
-    }  
-  }
+  
+  const idx = రంగుల_పేర్లు.indexOf(col);
+  // TODO(DSR) : uncomment this.
+  console.log( "col, idx = ", col, idx );
+  if ( idx >= 0 ) {
+    // console.log( " రంగు = ", logoColors[idx] );
+    col = logoColors[idx];
+  }  
+
   కుంచిక.రంగు = col;
   imageContext.strokeStyle = col;
 }
@@ -1496,7 +1494,7 @@ function radToDeg(rad) {
  *   (int or float) constrained value
  ******************************************************************************/
 function గాడిలో_పెట్టు(n, low, high) {
-  var modulo = high - low;
+  let modulo = high - low;
   యావత్_పరిక్రమ( () => (n < low), () => {
     n = n + modulo;
   } );
