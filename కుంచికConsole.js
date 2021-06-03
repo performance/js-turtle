@@ -45,11 +45,11 @@ if (window.addEventListener) {
 function onWindowLoad() {
     fixDragButton()
     // check if an example was requested in the URL
-    var queryString = window.location.search; // was "?..." specified
+    let queryString = window.location.search; // was "?..." specified
     if (queryString != undefined && queryString != "") {
-        var exampleValue = ""
-        var command = ""
-        var pos = 0
+        let exampleValue = ""
+        let command = ""
+        let pos = 0
         //queryString = queryString.substr(1) // get rid of leading '?'... simple case
         // want to (queryStrint + "&").search (/[?&]example=[^=]&/)
         // no want to split string up into separate queries... divide on &
@@ -57,7 +57,7 @@ function onWindowLoad() {
         console.log("queries was: " + queries + ", " + typeof(queries))
         // check specific queries like
         if (queries != undefined && queries.length > 0) {
-            for (var i=0; i<queries.length; i = i+1) {
+            for (let i=0; i<queries.length; i = i+1) {
                 pos = queries[i].search(/^\??example=/)
 //want to change 'code' to 'exampleValue'
 // exampleOption ...name that is displayed
@@ -138,49 +138,48 @@ var draggingright = false;
 function fixDragButton() {
     //console.log("fixDragButton")
 
-    var w = window.innerWidth
+    let w = window.innerWidth
     || document.documentElement.clientWidth
     || document.body.clientWidth; // variations for cross browser support
 
-    var h = window.innerHeight
+    let h = window.innerHeight
     || document.documentElement.clientHeight
     || document.body.clientHeight; // variations for cross browser support
-
+    
+    let overallWidth = 1200;
     if (w < 12000) {
-        var overallWidth = w;
-    } else {
-        var overallWidth = 1200;
+        overallWidth = w;
     }
 
     // work area height
-    var overallHeight = h /* guessed margin */;
-    var workAreaHeight = h -4 ; /* - 50 /*top displacement* / - 17 /* guessed margin? */;
+    let overallHeight = h /* guessed margin */;
+    let workAreaHeight = h -4 ; /* - 50 /*top displacement* / - 17 /* guessed margin? */;
     if (workAreaHeight < 400) {
-        var canvasHeight = 300;
+        let canvasHeight = 300;
     } else {
-        var canvasHeight = workAreaHeight - 140 /* APPROXIMATION space for controls */;
+        let canvasHeight = workAreaHeight - 140 /* APPROXIMATION space for controls */;
     }
 
-    var wrapWidth = overallWidth - 2; //leftcolWidth + midcolWidth + rightcolWidth;
+    let wrapWidth = overallWidth - 2; //leftcolWidth + midcolWidth + rightcolWidth;
 
 
-    var referencewidth, refLeftPadding , dragleft, containertop, dropbarwidthleft, dropbarwidthright
+    // let referencewidth, refLeftPadding , dragleft, containertop, dropbarwidthleft, dropbarwidthright
 
-    var containertop = Number(getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+    let containertop = Number(getStyleValue(document.getElementById("container"), "top").replace("px", ""));
 
-    var wrapElement = document.getElementById("wrap");
+    let wrapElement = document.getElementById("wrap");
     wrapElement.style.width = wrapWidth + "px";
     wrapElement.style.height = overallHeight + "px";
 
     /* dragbar setup*/
 
     /* left setup */
-    var refElement = document.getElementById("reference");
-    var leftcolElement = document.getElementById("leftcolumn")
+    let refElement = document.getElementById("reference");
+    let leftcolElement = document.getElementById("leftcolumn")
 
-    referenceWidth = Number(getStyleValue(document.getElementById("referencewrapper"), "width").replace("px", ""));
-    var refTitleHeight = Number(getStyleValue(document.getElementById("referenceTitle"), "height").replace("px", ""));
-    var refLeftPadding = Number(getStyleValue(document.getElementById("reference"), "padding-left").replace("px", ""));
+    let referenceWidth = Number(getStyleValue(document.getElementById("referencewrapper"), "width").replace("px", ""));
+    let refTitleHeight = Number(getStyleValue(document.getElementById("referenceTitle"), "height").replace("px", ""));
+    let refLeftPadding = Number(getStyleValue(document.getElementById("reference"), "padding-left").replace("px", ""));
 
     /* center setup */
     midWidth = getStyleValue(document.getElementById("canvaswrapper"), "width").replace("px","");
@@ -189,8 +188,8 @@ function fixDragButton() {
     midRightPadding = getStyleValue(document.getElementById("canvaswrapper"), "padding-right").replace("px","");
     canvasTitleHeight = getStyleValue(document.getElementById("canvastitle"), "height").replace("px","");
     commandWrapperHeight = getStyleValue(document.getElementById("commandwrapper"), "height").replace("px","");
-    var canvasHeight = midContainerHeight - canvasTitleHeight - commandWrapperHeight -25;
-    var canvasWidth = midWidth - midLeftPadding - midRightPadding;
+    let canvasHeight = midContainerHeight - canvasTitleHeight - commandWrapperHeight -25;
+    let canvasWidth = midWidth - midLeftPadding - midRightPadding;
 
     /* right setup */
     exampleWidth = Number(getStyleValue(document.getElementById("examplewrapper"), "width").replace("px", ""));
@@ -198,19 +197,19 @@ function fixDragButton() {
     examplesMarginTop = Number(getStyleValue(document.getElementById("examples"), "margin-top").replace("px", "")); // around select height
     examplesMarginBottom = Number(getStyleValue(document.getElementById("examples"), "margin-bottom").replace("px", "")); // around select height
 
-    var rightcolElement = document.getElementById("rightcolumn");
-    var codeAreaElement = document.getElementById("codeArea");
-    var codeAreaRightPadding = Number(getStyleValue(document.getElementById("codeArea"), "padding-right").replace("px", ""));
+    let rightcolElement = document.getElementById("rightcolumn");
+    let codeAreaElement = document.getElementById("codeArea");
+    let codeAreaRightPadding = Number(getStyleValue(document.getElementById("codeArea"), "padding-right").replace("px", ""));
 
     /* dragbar attribute setting */
     document.getElementById("dragbarleft").style.width = "5px";
     document.getElementById("dragbarright").style.width = "5px";
 
-    dropbarwidthleft = Number(getStyleValue(document.getElementById("dragbarleft"), "width").replace("px", ""));
-    dropbarwidthright = Number(getStyleValue(document.getElementById("dragbarright"), "width").replace("px", ""));
+    let dropbarwidthleft = Number(getStyleValue(document.getElementById("dragbarleft"), "width").replace("px", ""));
+    let dropbarwidthright = Number(getStyleValue(document.getElementById("dragbarright"), "width").replace("px", ""));
 
-    dragleft = referenceWidth + refLeftPadding + (refLeftPadding / 2) - (dropbarwidthleft / 2);
-    dragright = exampleWidth + codeAreaRightPadding + (codeAreaRightPadding / 2) + (dropbarwidthright / 2);
+    let dragleft = referenceWidth + refLeftPadding + (refLeftPadding / 2) - (dropbarwidthleft / 2);
+    let dragright = exampleWidth + codeAreaRightPadding + (codeAreaRightPadding / 2) + (dropbarwidthright / 2);
 
     document.getElementById("dragbarleft").style.top = containertop + "px";
     document.getElementById("dragbarleft").style.left = dragleft + "px";
@@ -238,7 +237,7 @@ function fixDragButton() {
     document.getElementById("canvaswrapper").style.height = canvasHeight +8+ "px";
     //console.log("midWidth:", midWidth, midLeftPadding, midRightPadding);
 
-    var midcolElement = document.getElementById("midcolumn")
+    let midcolElement = document.getElementById("midcolumn")
     midcolElement.style.height = workAreaHeight + "px";
 
 
@@ -289,14 +288,14 @@ function dragstartright(e) {
 function dragmove(e) {
     if (draggingleft)
     {
-        var rect = document.getElementById("dragbarright").getBoundingClientRect();
+        let rect = document.getElementById("dragbarright").getBoundingClientRect();
         //console.log("dragBarRight:", rect.top, rect.right, rect.bottom, rect.left);
         //console.log("window width:", window.innerWidth);
-        var rightPercentage = 100 - (rect.left / window.innerWidth) * 100;
+        let rightPercentage = 100 - (rect.left / window.innerWidth) * 100;
 
         leftPercentage = (e.pageX / window.innerWidth) * 100;
         if (leftPercentage > 1 && leftPercentage < 98) {
-            var centerPercentage = 100-leftPercentage-rightPercentage;
+            let centerPercentage = 100-leftPercentage-rightPercentage;
             //console.log("left:", leftPercentage, centerPercentage, rightPercentage);
             document.getElementById("leftcolumncontainer").style.width = leftPercentage + "%";
             document.getElementById("midcolumncontainer").style.width = centerPercentage + "%";
@@ -306,17 +305,17 @@ function dragmove(e) {
 
     if (draggingright)
     {
-        var rect = document.getElementById("dragbarleft").getBoundingClientRect();
+        let rect = document.getElementById("dragbarleft").getBoundingClientRect();
         //console.log("dragBarLeft:", rect.top, rect.right, rect.bottom, rect.left);
         //console.log("width:", window.innerWidth);
-        var leftPercentage = (rect.right / window.innerWidth) * 100;
+        let leftPercentage = (rect.right / window.innerWidth) * 100;
         //console.log("leftPercentage:", leftPercentage);
 
-        var rightPercentage = 100 - (e.pageX / window.innerWidth) * 100;
+        let rightPercentage = 100 - (e.pageX / window.innerWidth) * 100;
         //console.log("rightPercentage:", rightPercentage);
 
         if (rightPercentage > 1 && rightPercentage < 98 - leftPercentage) {
-            var centerPercentage = 100-rightPercentage-leftPercentage;
+            let centerPercentage = 100-rightPercentage-leftPercentage;
             //console.log("right:", leftPercentage, centerPercentage, rightPercentage);
             document.getElementById("rightcolumncontainer").style.width = rightPercentage + "%";
             document.getElementById("midcolumncontainer").style.width = centerPercentage + "%";
@@ -394,23 +393,24 @@ function stopClicked() {
 
 
 // set up command field to accept an ENTER without field modification
-
-var command = document.getElementById("command");
-if (command.addEventListener) {
-    command.addEventListener("keypress", function(e) {
-        if (e.keyCode === 13) {
-            commandChanged();
-            e.preventDefault();
-        }
-    }, false);
-} else if (command.attachEvent) {
-    command.attachEvent("onkeypress", function(e) {
-        if (e.keyCode === 13) {
-            commandChanged();
-            return e.returnValue = false;
-        }
-    });
-}
+(() => {
+    let command = document.getElementById("command");
+    if (command.addEventListener) {
+        command.addEventListener("keypress", function(e) {
+            if (e.keyCode === 13) {
+                commandChanged();
+                e.preventDefault();
+            }
+        }, false);
+    } else if (command.attachEvent) {
+        command.attachEvent("onkeypress", function(e) {
+            if (e.keyCode === 13) {
+                commandChanged();
+                return e.returnValue = false;
+            }
+        });
+    }
+})();
 
 /*************************************************************************
  * resetClicked -- handler for when the reset button is clicked
@@ -450,11 +450,11 @@ function runClicked() {
  *   None
  *************************************************************************/
 function uploadChanged(e) {
-    var file = e.target.files[0];
+    let file = e.target.files[0];
     if (!file) {
         return;
     }
-    var reader = new FileReader();
+    let reader = new FileReader();
     reader.onload = function(e) {
         document.getElementById('codeArea').value = e.target.result;
     };
@@ -462,9 +462,7 @@ function uploadChanged(e) {
 }
 
 
-var get_blob = function() {
-   return Blob;
-}
+let get_blob = () => Blob;
 
 /*************************************************************************
  * downloadClicked -- handler for when the download button is clicked
@@ -477,7 +475,7 @@ var get_blob = function() {
  *************************************************************************/
 function downloadClicked(e) {
     e.preventDefault();
-    var BB = get_blob();
+    let BB = get_blob();
     saveAs(
         new BB(
             [codeArea.value || codeArea.placeholder]
@@ -502,7 +500,7 @@ function svgDownloadClicked(e) {
 /*
     e.preventDefault();
     svgClose();
-    var BB = get_blob();
+    let BB = get_blob();
     saveAs(
         new BB(
             svgBlob, {type: "text/plain;charset=" + document.characterSet}
@@ -525,7 +523,7 @@ function svgDownloadClicked(e) {
  *************************************************************************/
 function saveCanvasClicked(e) {
     e.preventDefault();
-    var BB = get_blob();
+    let BB = get_blob();
     saveAs(
         new BB(
             [codeArea.value || codeArea.placeholder]
@@ -572,8 +570,8 @@ function infoClicked() {
 }
 
 // Set up all reference code elements to be linked and have onclick functionality
-var codeElements = document.querySelectorAll ("#reference code");
-for (var i=0; i< codeElements.length; i++) {
+let codeElements = document.querySelectorAll ("#reference code");
+for (let i=0; i< codeElements.length; i++) {
     codeElements[i].className = "linked";
     codeElements[i].onclick = function () {
         cmd (this.innerHTML + ";");
@@ -582,10 +580,10 @@ for (var i=0; i< codeElements.length; i++) {
 }
 
 // Set up all color button elements to be linked and have onclick functionality
-var codeElements = document.querySelectorAll ("#reference button");
-for (var i=0; i< codeElements.length; i++) {
-    //console.log(codeElements[i].id)
-    codeElements[i].onclick = function () {
+let colorCodeElements = document.querySelectorAll ("#reference button");
+for (let i=0; i< colorCodeElements.length; i++) {
+    //console.log(colorCodeElements[i].id)
+    colorCodeElements[i].onclick = function () {
         cmd ("రంగు_మార్చు(\"" + this.id +"\");");
         commandChanged();
     }
@@ -647,8 +645,8 @@ kirk
  *************************************************************************/
 function examplesChanged () {
     ఆట_ఆపు()
-    var codeArea = document.getElementById('codeArea')
-    var examples = document.getElementById('examples')
+    let codeArea = document.getElementById('codeArea')
+    let examples = document.getElementById('examples')
     try {
         codeArea.value = eval(examples.value);
     } catch (e) {
@@ -669,8 +667,8 @@ function examplesChanged () {
  *   None
  *************************************************************************/
 function commandChanged () {
-    var commandText = document.getElementById("command").value;
-    var codeAreaText = document.getElementById('codeArea').value;
+    let commandText = document.getElementById("command").value;
+    let codeAreaText = document.getElementById('codeArea').value;
     errorFound = false
     ఆట_ఆపు()
     try {
@@ -794,8 +792,8 @@ document.getElementById("clearButton").onclick=clearClicked;
 saveCanvasLink = document.getElementById("saveCanvasButton");
 saveCanvasLink.addEventListener('click', function(ev) {
     saveCanvasLink.href = imagecanvas.toDataURL();
-    var d = new Date();
-    var timestamp =
+    let d = new Date();
+    let timestamp =
         "" +
         d.getFullYear() +
         twoDigits(d.getMonth()+1) +
@@ -831,17 +829,17 @@ mouseOverElementIds = [ // list of elements with help text
                        "uploadButton"
                        ];
 
-var helpTextTimer; // global for delaying all help text
-var helpDelay = 1000; // global delay in milliseconds for all help text
-var bottomY = (window.innerHeight // global for lowest Y on page for tool tip
+let helpTextTimer; // global for delaying all help text
+let helpDelay = 1000; // global delay in milliseconds for all help text
+let bottomY = (window.innerHeight // global for lowest Y on page for tool tip
       || document.documentElement.clientHeight
       || document.body.clientHeight) // variations for cross browser support
       - 50; // bottom margin in pixels
 
-for (var i=0; i < mouseOverElementIds.length; i++) {
+for (let i=0; i < mouseOverElementIds.length; i++) {
     element = document.getElementById(mouseOverElementIds[i]);
     element.onmouseenter = function (event) {
-        var tooltip = document.getElementById(this.id + "_help_text");
+        let tooltip = document.getElementById(this.id + "_help_text");
         //console.log ( "hamburger: " + mouseOverElementIds[i]) + tooltip.innerHTML;
         onHelpEnter(tooltip);
         if (event.clientY < bottomY) {
@@ -856,7 +854,7 @@ for (var i=0; i < mouseOverElementIds.length; i++) {
         }
     }
     element.onmouseleave = function () {
-        var tooltip = document.getElementById(this.id + "_help_text");
+        let tooltip = document.getElementById(this.id + "_help_text");
         onHelpExit(tooltip);
     }
 }

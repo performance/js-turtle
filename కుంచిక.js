@@ -837,7 +837,7 @@ function వృత్తము(వ్యాసార్థము, extent, CW) {
   if (extent === undefined) {
     imageContext.arc (కుంచిక.స్థానము.x, కుంచిక.స్థానము.y, వ్యాసార్థము, 0, 2*Math.PI);
     svgClosePath()
-    svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.స్థానము.x, svgPrecision) + '" cy="' + round( కుంచిక.స్థానము.y, svgPrecision)
+    svgBlob = svgBlob + '<circle cx="' + round( కుంచిక.స్థానము.x, svgPrecision) + '" cy="' + round( కుంచిక.స్థానము.y, svgPrecision)
               + '" r="' + round( వ్యాసార్థము, svgPrecision) + '"'
               + ' style="stroke:' + కుంచిక.రంగు + '; stroke-width:' + కుంచిక.వెడల్పు + '; fill:none"/>\n'; 
     updateHighWater( కుంచిక.స్థానము.x, కుంచిక.స్థానము.y,  వ్యాసార్థము + కుంచిక.వెడల్పు, వ్యాసార్థము + కుంచిక.వెడల్పు)
@@ -905,7 +905,7 @@ function నిండు_వృత్తము(size) {
   imageContext.fill();
   imageContext.restore();
   svgClosePath()
-  svgBlob = svgBlob + '<వృత్తము cx="' + round( కుంచిక.స్థానము.x, svgPrecision) + '" cy="' + round( కుంచిక.స్థానము.y, svgPrecision)
+  svgBlob = svgBlob + '<circle cx="' + round( కుంచిక.స్థానము.x, svgPrecision) + '" cy="' + round( కుంచిక.స్థానము.y, svgPrecision)
             + '" r="' + round( size, svgPrecision) + '"'
             + ' style="stroke:' + కుంచిక.రంగు + '; stroke-width:' + కుంచిక.వెడల్పు + '; fill:' + కుంచిక.రంగు + '"/>\n';
   drawIf();

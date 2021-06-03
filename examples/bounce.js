@@ -1,10 +1,10 @@
 // Bouncing Rectangles -- rectangles which bounce off the side of the canvas
 
-  var గరిష్ఠ_X =  imageContext.canvas.width/2;
-  var గరిష్ఠ_Y =  imageContext.canvas.height/2;
-  var కనిష్ఠ_X =  -గరిష్ఠ_X;
-  var కనిష్ఠ_Y =  -గరిష్ఠ_Y;
-  var maxVelocity = 12;
+  const గరిష్ఠ_X =  imageContext.canvas.width/2;
+  const గరిష్ఠ_Y =  imageContext.canvas.height/2;
+  const కనిష్ఠ_X =  -గరిష్ఠ_X;
+  const కనిష్ఠ_Y =  -గరిష్ఠ_Y;
+  const maxVelocity = 12;
 
 init_drops = (n) => {
    let drops = new Array(n);
@@ -29,7 +29,7 @@ rain = (drops, n) => {
    చెరిపి_వేయి();
    లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {
       // access each drop object
-      var d = drops[i]; // access each drop object and react with it
+      let d = drops[i]; // access each drop object and react with it
       // if the drop hits a wall, reverse its motion direction (velocity)
       యది_చేత్_అన్యథ ( () => (d.y < కనిష్ఠ_Y),
          () => {
