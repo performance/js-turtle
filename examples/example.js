@@ -1,10 +1,4 @@
-// Example -- example of code
-/* Define helper functions here
-or write your own functions
-including a ప్రదర్శన() function
-
-For example:    */
-
+/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */
 
 సమ_చతురస్రము = ( భుజము ) => {
   ఆవర్తించు(4, () => {

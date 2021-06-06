@@ -814,14 +814,14 @@
             <textarea id="codeArea">
 /* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */
 
-సమ_చతురస్రము = ( భుజము ) => {
+const సమ_చతురస్రము = ( భుజము ) => {
   ఆవర్తించు(4, () => {
     ముందుకు_జరుగు( భుజము );
     కుడి_వైపు_తిరుగు(90);
   });
 }
 
-ప్రదర్శన = () => {
+const ప్రదర్శన = () => {
   కుంచికను_దాచు();
   రంగు_మార్చు( నీలము );
   భుజము = 100;
@@ -948,8 +948,8 @@
 
   <!-- scripts -->
   <script type="text/javascript" src="examples.js"></script>
-  <script type="text/javascript" src="కుంచిక.js"></script>
-  <script type="text/javascript" src="కుంచికConsole.js"></script>
+  <script type="module" src="./కుంచిక.js"></script>
+  <script type="module" src="కుంచికConsole.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
   <script src="he.js"></script>
 </body>

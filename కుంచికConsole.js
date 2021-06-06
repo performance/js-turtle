@@ -4,11 +4,31 @@
  *  Copyright (c) 2015-2019 Kirk Carlson
  *  MIT license
  ************************************************************************/
+
+import { ఆవర్తించు, లెక్క_పెడుతూ_ఆవర్తించు, యావత్_పరిక్రమ, యది_చేత్_అన్యథ, యది_చేత్, విరామము, ఆడించు, విలంబించు } from "./కార్యభాషా.js";
+import {errorFound, setErrorFound, resetErrorFound}  from "./కార్యభాషా.js";
+import {svgPrecision,clear,reset,home,go_home,goHome,stopAnimation,redrawOnMove,beginShape,fillShape,fd,forward,bk,back,backward,turn,rt,lt,curveLeft,curveleft,curveRight,curveright,circle,arc,dot,
+    pu,up,penUp,pd,down,penDown,ht,hideTurtle,st,showTurtle,setposition,setpos,setPosition,setPos,goto,setX,setx,setY,sety,setheading,setHeading,seth,write,random,pensize,penwidth,penSize,penWidth,width,
+    logoColors,colour,color,changeColor,setColor,setcolor,setFont,setfont,maxx,maxX,minx,minX,maxy,maxY,miny,minY,constrain} from "./కుంచిక.js";
+import {Pos, Turtle, initialize, round, svgInitialize, svgOpenPath, updateHighWater, svgAppendPath, svgClosePath, svgClose, drawIf, 
+        centerCoords, clearContext, wrap, background, degToRad, radToDeg, saveTurtleState, restoreTurtleState, logTurtle } from "./కుంచిక.js";
+    
+import {అవును,కాదు,ఉంది,లేదు,చుట్టు,చుట్టొద్దు,చాపము,బిందువు,దిశ_మార్చు,
+    నలుపు,నీలము,నిమ్మ,ఎరుపు,పసుపు,తెలుపు,కపిలము,ఆకుపచ్చ,సముద్రము,నారింజ,బూడిద,రంగుల_పేర్లు,
+  } from "./కుంచిక.js";
+  
+import {చిత్రీకరించు, చెరిపి_వేయి, ఆది_స్థితి, కేంద్రకమునకు_వెళ్ళు, ఆట_ఆపు, కుంచిక_కదిలిన_ప్రతి_సారీ_చిత్రీకరించు, 
+  ఆకారము_ప్రారంభించు, ఆకారము_ముగించు, ముందుకు_జరుగు, వెనుకకు_జరుగు, కుడి_వైపు_తిరుగు, ఎడమ_వైపు_తిరుగు, 
+  ఎడమవైపు_చాపాము, కుడివైపు_చాపాము, వృత్తము, నిండు_వృత్తము, కలమును_పైకి_ఎత్తు, కలమును_కింద_పెట్టు, కుంచికను_దాచు, 
+  కుంచికను_చూపు, స్థానము_మార్చు, xనియోగించు, yనియోగించు, కోణము, వ్రాయి, యాదృచ్ఛిక_సంఖ్య, వెడల్పు, రంగు_మార్చు, 
+  అక్షరరూపము_స్థాపించు, గరిష్ఠX, కనిష్ఠX, గరిష్ఠY, కనిష్ఠY, గాడిలో_పెట్టు } from "./కుంచిక.js"; 
+
+import {కుంచికState,imageContext,imageCanvas} from "./కుంచిక.js"; 
+
 //console.log("Starting up")
 
 //**GLOBALS***
 var helpTextActive = true;
-var errorFound = false;
 
 
 //SUPPORT FUNCTIONS
@@ -182,20 +202,20 @@ function fixDragButton() {
     let refLeftPadding = Number(getStyleValue(document.getElementById("reference"), "padding-left").replace("px", ""));
 
     /* center setup */
-    midWidth = getStyleValue(document.getElementById("canvaswrapper"), "width").replace("px","");
-    midContainerHeight = getStyleValue(document.getElementById("midcolumncontainer"), "height").replace("px","");
-    midLeftPadding = getStyleValue(document.getElementById("canvaswrapper"), "padding-left").replace("px","");
-    midRightPadding = getStyleValue(document.getElementById("canvaswrapper"), "padding-right").replace("px","");
-    canvasTitleHeight = getStyleValue(document.getElementById("canvastitle"), "height").replace("px","");
-    commandWrapperHeight = getStyleValue(document.getElementById("commandwrapper"), "height").replace("px","");
+    const midWidth = getStyleValue(document.getElementById("canvaswrapper"), "width").replace("px","");
+    const midContainerHeight = getStyleValue(document.getElementById("midcolumncontainer"), "height").replace("px","");
+    const midLeftPadding = getStyleValue(document.getElementById("canvaswrapper"), "padding-left").replace("px","");
+    const midRightPadding = getStyleValue(document.getElementById("canvaswrapper"), "padding-right").replace("px","");
+    const canvasTitleHeight = getStyleValue(document.getElementById("canvastitle"), "height").replace("px","");
+    const commandWrapperHeight = getStyleValue(document.getElementById("commandwrapper"), "height").replace("px","");
     let canvasHeight = midContainerHeight - canvasTitleHeight - commandWrapperHeight -25;
     let canvasWidth = midWidth - midLeftPadding - midRightPadding;
 
     /* right setup */
-    exampleWidth = Number(getStyleValue(document.getElementById("examplewrapper"), "width").replace("px", ""));
-    examplesHeight = Number(getStyleValue(document.getElementById("examples"), "height").replace("px", "")); // basically the select height
-    examplesMarginTop = Number(getStyleValue(document.getElementById("examples"), "margin-top").replace("px", "")); // around select height
-    examplesMarginBottom = Number(getStyleValue(document.getElementById("examples"), "margin-bottom").replace("px", "")); // around select height
+    const exampleWidth = Number(getStyleValue(document.getElementById("examplewrapper"), "width").replace("px", ""));
+    const examplesHeight = Number(getStyleValue(document.getElementById("examples"), "height").replace("px", "")); // basically the select height
+    const examplesMarginTop = Number(getStyleValue(document.getElementById("examples"), "margin-top").replace("px", "")); // around select height
+    const examplesMarginBottom = Number(getStyleValue(document.getElementById("examples"), "margin-bottom").replace("px", "")); // around select height
 
     let rightcolElement = document.getElementById("rightcolumn");
     let codeAreaElement = document.getElementById("codeArea");
@@ -667,35 +687,40 @@ function examplesChanged () {
  *   None
  *************************************************************************/
 function commandChanged () {
-    let commandText = document.getElementById("command").value;
+    let commandElem = document.getElementById("command");
+    let commandText = commandElem.value;
     let codeAreaText = document.getElementById('codeArea').value;
-    errorFound = false
+    // errorFound = false;
+    resetErrorFound();
     ఆట_ఆపు()
     try {
 
         // execute any code in the codeArea box
         console.log("cC codeArea")
+        // Function('"use strict";return (' + codeAreaText + ')')();
         eval(codeAreaText);
     } catch(e) {
-        errorFound = true
+        // errorFound = true
+        setErrorFound();
         showError(e)
     }
 
     // execute the code in the command box
     if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
                          commandText !== "ప్రదర్శన();" ||
-                         demo !== undefined)) {
+                         ప్రదర్శన !== undefined)) {
     //same as !==ప్రదర్శన() || ==ప్రదర్శన(); && !==undefined
         try {
             console.log("cC cmd: " + commandText + ".")
             eval(commandText);
         } catch(e) {
-            errorFound = true
+            // errorFound = true
+            setErrorFound();
             showError(e)
             stopClicked()
         } finally {
             // చెరిపి_వేయి the command box
-            this.value = "";
+            commandElem.value = "";
         }
     }
 }
@@ -716,10 +741,10 @@ function showError(e) {
     imageContext.save();
     //కుంచికState = కుంచిక;
     //logTurtle("sEtop")
-    height=10 // points
+    const height=10 // points
     స్థానము_మార్చు(కనిష్ఠX(), కనిష్ఠY()+24+height/2 +2);
     కోణము(90);
-     చుట్టొద్దు();
+    చుట్టొద్దు();
 
     // చెరిపి_వేయి the line for the error message
     కలమును_కింద_పెట్టు()
@@ -789,7 +814,7 @@ document.getElementById("uploadButton").onclick= function () {
 document.getElementById("clearButton").onclick=clearClicked;
 //document.getElementById("saveCanvasButton").onclick=saveCanvasClicked;
 
-saveCanvasLink = document.getElementById("saveCanvasButton");
+let saveCanvasLink = document.getElementById("saveCanvasButton");
 saveCanvasLink.addEventListener('click', function(ev) {
     saveCanvasLink.href = imagecanvas.toDataURL();
     let d = new Date();
@@ -811,7 +836,7 @@ document.getElementById("uploadFile")
     .addEventListener('change', uploadChanged, false);
 
 
-mouseOverElementIds = [ // list of elements with help text
+let mouseOverElementIds = [ // list of elements with help text
                        "clearButton",
                        "codeArea",
                        "command",
@@ -837,7 +862,7 @@ let bottomY = (window.innerHeight // global for lowest Y on page for tool tip
       - 50; // bottom margin in pixels
 
 for (let i=0; i < mouseOverElementIds.length; i++) {
-    element = document.getElementById(mouseOverElementIds[i]);
+    let element = document.getElementById(mouseOverElementIds[i]);
     element.onmouseenter = function (event) {
         let tooltip = document.getElementById(this.id + "_help_text");
         //console.log ( "hamburger: " + mouseOverElementIds[i]) + tooltip.innerHTML;
