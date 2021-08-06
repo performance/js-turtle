@@ -671,11 +671,23 @@ function commandChanged () {
     let codeAreaText = document.getElementById('codeArea').value;
     errorFound = false
     ఆట_ఆపు()
-    try {
 
+    const kw_map = {
+         "_అత్ర_" : "let",
+        "_సర్వత్ర_" : "var",
+        "_సర్వదా_" : "const",
+        "_విధానము_" : "function",
+        "_ఫలము_" : "return"
+    };
+    try {
         // execute any code in the codeArea box
         console.log("cC codeArea")
-        eval(codeAreaText);
+        let replaced = codeAreaText
+        Object.entries( kw_map).forEach( ([key,val],i) => {
+            const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
+            replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
+        });
+        eval(replaced);
     } catch(e) {
         errorFound = true
         showError(e)
@@ -688,7 +700,12 @@ function commandChanged () {
     //same as !==ప్రదర్శన() || ==ప్రదర్శన(); && !==undefined
         try {
             console.log("cC cmd: " + commandText + ".")
-            eval(commandText);
+            let replaced = commandText
+            Object.entries( kw_map).forEach( ([key,val],i) => {
+                const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
+                replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
+            });
+            eval(replaced);        
         } catch(e) {
             errorFound = true
             showError(e)

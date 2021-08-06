@@ -7,7 +7,7 @@
   const maxVelocity = 12;
 
 init_drops = (n) => {
-   let drops = new Array(n);
+   _అత్ర_ drops = new Array(n);
    లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {
       drops[i] = { // each drop is an object with a set of properties
          x: యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_X, గరిష్ఠ_X),
@@ -29,7 +29,7 @@ rain = (drops, n) => {
    చెరిపి_వేయి();
    లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {
       // access each drop object
-      let d = drops[i]; // access each drop object and react with it
+      _అత్ర_ d = drops[i]; // access each drop object and react with it
       // if the drop hits a wall, reverse its motion direction (velocity)
       యది_చేత్_అన్యథ ( () => (d.y < కనిష్ఠ_Y),
          () => {

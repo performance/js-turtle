@@ -1,12 +1,12 @@
 US_flag ='\
 // US Flag -- draw an American Flag\n\
 \n\
-function star (size) {\n\
+_విధానము_  star (size) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు(.54*size)\n\
   turn (180-18)\n\
   కలమును_కింద_పెట్టు()\n\
-  var i=0\n\
+  _సర్వత్ర_  i=0\n\
   ఆకారము_ప్రారంభించు()\n\
   while (i<5){\n\
     ముందుకు_జరుగు(size)\n\
@@ -19,7 +19,7 @@ function star (size) {\n\
 }\n\
 \n\
 \n\
-function starLine(count, size, sep) {\n\
+_విధానము_  starLine(count, size, sep) {\n\
   while (count > 0) {\n\
     star(size)\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -32,7 +32,7 @@ function starLine(count, size, sep) {\n\
 }\n\
 \n\
 \n\
-function rectangle (width, height) {\n\
+_విధానము_  rectangle (width, height) {\n\
   // assume x, y at upper right hand corner in and out\n\
   // assume కోణము is 90 in and out\n\
   కోణము (90)\n\
@@ -47,10 +47,10 @@ function rectangle (width, height) {\n\
 }\n\
 \n\
 \n\
-function stripes (width, spacing, number) {\n\
+_విధానము_  stripes (width, spacing, number) {\n\
   //assume x, y is at right side of stripe\n\
   //assume కోణము is -90\n\
-  var i = 0\n\
+  _సర్వత్ర_  i = 0\n\
   while (i<number) {\n\
     కలమును_కింద_పెట్టు()\n\
     ముందుకు_జరుగు(width)\n\
@@ -70,23 +70,23 @@ function stripes (width, spacing, number) {\n\
 }\n\
 \n\
 \n\
-function flag() {\n\
+_విధానము_  flag() {\n\
   // ***Constants\n\
-  //var xBase = -200 // base is upper left corner\n\
-  //var yBase = 200\n\
-  //var flagHeight = 250 // everything else is proportional to flagHeight\n\
+  //_సర్వత్ర_  xBase = -200 // base is upper left corner\n\
+  //_సర్వత్ర_  yBase = 200\n\
+  //_సర్వత్ర_  flagHeight = 250 // everything else is proportional to flagHeight\n\
  \n\
-  var flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())\n\
-  var flagWidth = 1.9 * flagHeight\n\
+  _సర్వత్ర_  flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())\n\
+  _సర్వత్ర_  flagWidth = 1.9 * flagHeight\n\
 console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+flagWidth + "H="+flagHeight)\n\
-  var xBase = -flagWidth/2\n\
-  var yBase = flagHeight/2 \n\
+  _సర్వత్ర_  xBase = -flagWidth/2\n\
+  _సర్వత్ర_  yBase = flagHeight/2 \n\
 \n\
-  var stripeWidth = flagHeight/13\n\
-  var fieldWidth = .76 * flagHeight\n\
-  var fieldHeight = 7 * stripeWidth\n\
-  var xSeparation = .063 * flagHeight\n\
-  var ySeparation = .054 * flagHeight\n\
+  _సర్వత్ర_  stripeWidth = flagHeight/13\n\
+  _సర్వత్ర_  fieldWidth = .76 * flagHeight\n\
+  _సర్వత్ర_  fieldHeight = 7 * stripeWidth\n\
+  _సర్వత్ర_  xSeparation = .063 * flagHeight\n\
+  _సర్వత్ర_  ySeparation = .054 * flagHeight\n\
   starSize = .05 *flagHeight // star size\n\
   //outline flag and field\n\
   ఆది_స్థితి()\n\
@@ -120,7 +120,7 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   రంగు_మార్చు( తెలుపు )\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
-  var row = 0\n\
+  _సర్వత్ర_  row = 0\n\
   while (row<9) {\n\
    if (row % 2 == 0) {\n\
       స్థానము_మార్చు(xBase + xSeparation, yBase - (row +1) * ySeparation)\n\
@@ -211,10 +211,10 @@ circleEyeL = (అ, ని, న, outerRadius) => {\n\
 \n\
 \n\
 ప్రదర్శన = () => {\n\
-  const సవ్య = అవును;\n\
-  const అపసవ్య = !సవ్య;\n\
-  const పొడవు = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
-  const గది_పొడవు = పొడవు/3\n\
+  _సర్వదా_ సవ్య = అవును;\n\
+  _సర్వదా_ అపసవ్య = !సవ్య;\n\
+  _సర్వదా_ పొడవు = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
+  _సర్వదా_ గది_పొడవు = పొడవు/3\n\
 \n\
   //divide area into 6 cells: 2 vertical, 3 horizontal\n\
   // centers are:\n\
@@ -313,9 +313,9 @@ basket_weave_tessellation ='\
 // this assumes that the చిన్న సమచతురస్రము is 1/2 of the larger సమచతురస్రము.\n\
 // that need not be the case\n\
 \n\
-const సమచతురస్రభుజము = 20\n\
-const ఎత్తు = 2.5 * సమచతురస్రభుజము\n\
-const వెడల్పు = ఎత్తు + 2 * సమచతురస్రభుజము\n\
+_సర్వదా_ సమచతురస్రభుజము = 20\n\
+_సర్వదా_ ఎత్తు = 2.5 * సమచతురస్రభుజము\n\
+_సర్వదా_ వెడల్పు = ఎత్తు + 2 * సమచతురస్రభుజము\n\
 \n\
 నిలువు_దీర్ఘచతురస్రము = ( ఎత్తు, వెడల్పు, వర్ణము) => {\n\
   ఆకారము_ప్రారంభించు()\n\
@@ -353,8 +353,8 @@ const వెడల్పు = ఎత్తు + 2 * సమచతురస్ర�
 \n\
 ప్రదర్శన = () =>  {\n\
   ఆది_స్థితి()\n\
-  let yB = గరిష్ఠY() + సమచతురస్రభుజము\n\
-  let xB = కనిష్ఠX()\n\
+  _అత్ర_ yB = గరిష్ఠY() + సమచతురస్రభుజము\n\
+  _అత్ర_ xB = కనిష్ఠX()\n\
   చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
 \n\
@@ -406,14 +406,14 @@ const వెడల్పు = ఎత్తు + 2 * సమచతురస్ర�
 bounce ='\
 // Bouncing Rectangles -- rectangles which bounce off the side of the canvas\n\
 \n\
-  const గరిష్ఠ_X =  imageContext.canvas.width/2;\n\
-  const గరిష్ఠ_Y =  imageContext.canvas.height/2;\n\
-  const కనిష్ఠ_X =  -గరిష్ఠ_X;\n\
-  const కనిష్ఠ_Y =  -గరిష్ఠ_Y;\n\
-  const maxVelocity = 12;\n\
+  _సర్వదా_ గరిష్ఠ_X =  imageContext.canvas.width/2;\n\
+  _సర్వదా_ గరిష్ఠ_Y =  imageContext.canvas.height/2;\n\
+  _సర్వదా_ కనిష్ఠ_X =  -గరిష్ఠ_X;\n\
+  _సర్వదా_ కనిష్ఠ_Y =  -గరిష్ఠ_Y;\n\
+  _సర్వదా_ maxVelocity = 12;\n\
 \n\
 init_drops = (n) => {\n\
-   let drops = new Array(n);\n\
+   _అత్ర_ drops = new Array(n);\n\
    లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {\n\
       drops[i] = { // each drop is an object with a set of properties\n\
          x: యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_X, గరిష్ఠ_X),\n\
@@ -428,14 +428,14 @@ init_drops = (n) => {\n\
          width: యాదృచ్ఛిక_సంఖ్య(1,15)\n\
       };\n\
    } );\n\
-   return drops;\n\
+   _ఫలము_  drops;\n\
 }\n\
 \n\
 rain = (drops, n) => {\n\
    చెరిపి_వేయి();\n\
    లెక్క_పెడుతూ_ఆవర్తించు (n, (i) => {\n\
       // access each drop object\n\
-      let d = drops[i]; // access each drop object and react with it\n\
+      _అత్ర_ d = drops[i]; // access each drop object and react with it\n\
       // if the drop hits a wall, reverse its motion direction (velocity)\n\
       యది_చేత్_అన్యథ ( () => (d.y < కనిష్ఠ_Y),\n\
          () => {\n\
@@ -484,8 +484,8 @@ let_them_drop = (n) => {\n\
 brick_tessellation ='\
 // Brick Tessellation -- tile a space using a basic brick laying pattern\n\
 \n\
-const ఎత్తు = 15\n\
-const వెడల్పు = 2* ఎత్తు \n\
+_సర్వదా_ ఎత్తు = 15\n\
+_సర్వదా_ వెడల్పు = 2* ఎత్తు \n\
 \n\
 // ఇష్టికా == ఇటుక \n\
 \n\
@@ -532,7 +532,7 @@ const వెడల్పు = 2* ఎత్తు \n\
 cafe_wall_illusion ='\
 // Cafe Wall Illusion -- draws cafe tiles. see Wikipedia.\n\
 \n\
-function drawTile (h,w, tc, x, y) {\n\
+_విధానము_  drawTile (h,w, tc, x, y) {\n\
   స్థానము_మార్చు(x,y)\n\
   ఆకారము_ప్రారంభించు()\n\
   ఆవర్తించు(2, () => {\n\
@@ -544,7 +544,7 @@ function drawTile (h,w, tc, x, y) {\n\
   ఆకారము_ముగించు( tc)\n\
 }\n\
 \n\
-function cafeTiles (h, w, gw, gc, off) {\n\
+_విధానము_  cafeTiles (h, w, gw, gc, off) {\n\
   maxRow = 2*గరిష్ఠY()/h\n\
   maxCol = 2*గరిష్ఠX()/w\n\
   వెడల్పు(gw)\n\
@@ -563,24 +563,24 @@ function cafeTiles (h, w, gw, gc, off) {\n\
 \n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   // size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
 \n\
-  const tileHeight = 50\n\
-  const tileWidth = 50\n\
-  const mortarWidth = 1\n\
-  // const mortarColor = "#c0c0c0"\n\
-  const mortarColor = "#808080"\n\
-  const offset = .5\n\
+  _సర్వదా_ tileHeight = 50\n\
+  _సర్వదా_ tileWidth = 50\n\
+  _సర్వదా_ mortarWidth = 1\n\
+  // _సర్వదా_ mortarColor = "#c0c0c0"\n\
+  _సర్వదా_ mortarColor = "#808080"\n\
+  _సర్వదా_ offset = .5\n\
   cafeTiles( tileHeight, tileWidth, mortarWidth, mortarColor, offset);\n\
 }\n\
 '
 circle_eye ='\
 // Circle Eye -- draws a set of n inscribed circles within circle\n\
 \n\
-function circleEye (x, y, n, outerRadius) {\n\
+_విధానము_  circleEye (x, y, n, outerRadius) {\n\
   స్థానము_మార్చు(x, y);\n\
   వృత్తము(outerRadius); //outer circle\n\
 \n\
@@ -596,7 +596,7 @@ function circleEye (x, y, n, outerRadius) {\n\
 \n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -607,7 +607,7 @@ function ప్రదర్శన() {\n\
 circle_eye2 ='\
 // Circle Eye2 -- draws a set of n inscribed circles between two concentric circles.\n\
 \n\
-function circleEye (x, y, n, outerRadius, innerRadius) {\n\
+_విధానము_  circleEye (x, y, n, outerRadius, innerRadius) {\n\
   స్థానము_మార్చు(x, y);\n\
   //వృత్తము(outerRadius); //outer circle\n\
   //వృత్తము(innerRadius)\n\
@@ -625,7 +625,7 @@ function circleEye (x, y, n, outerRadius, innerRadius) {\n\
 \n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -637,15 +637,15 @@ clock ='\
 // Clock, Analog -- draw and animate an analog clock\n\
 \n\
 //GLOBALS\n\
-var size;\n\
+_సర్వత్ర_  size;\n\
 \n\
 //draw the tick marks around the edge of the clock\n\
-function ticks(x, y, వ్యాసార్థము) {\n\
-   var tickLen = 7;\n\
-   var gap = వ్యాసార్థము - tickLen;\n\
+_విధానము_  ticks(x, y, వ్యాసార్థము) {\n\
+   _సర్వత్ర_  tickLen = 7;\n\
+   _సర్వత్ర_  gap = వ్యాసార్థము - tickLen;\n\
    రంగు_మార్చు( నీలము );\n\
    వెడల్పు(1);\n\
-   for (var theta = 0; theta < 360; theta = theta + 6) {\n\
+   for (_సర్వత్ర_  theta = 0; theta < 360; theta = theta + 6) {\n\
       // Thicken hour marks\n\
       if (theta % 30 != 0) {\n\
          వెడల్పు(1/130* size);\n\
@@ -663,12 +663,12 @@ function ticks(x, y, వ్యాసార్థము) {\n\
 \n\
 \n\
 // draw the hour numbers on the clock face\n\
-function numbers(x, y, వ్యాసార్థము) {\n\
+_విధానము_  numbers(x, y, వ్యాసార్థము) {\n\
    కలమును_పైకి_ఎత్తు();\n\
    fontSize = 20/130 * size\n\
    అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");\n\
    రంగు_మార్చు("నలుపు");\n\
-   for (var hour = 1; hour <= 12; hour++) {\n\
+   for (_సర్వత్ర_  hour = 1; hour <= 12; hour++) {\n\
       స్థానము_మార్చు(x,y);\n\
       కోణము(hour * 30);\n\
       ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit\n\
@@ -687,35 +687,35 @@ function numbers(x, y, వ్యాసార్థము) {\n\
 }\n\
 \n\
 // draw one of the clock hands\n\
-function hand (theta, w, length, col) {\n\
-   var stepSize = 5;\n\
-   var widthDelta = w / (length / stepSize);\n\
+_విధానము_  hand (theta, w, length, col) {\n\
+   _సర్వత్ర_  stepSize = 5;\n\
+   _సర్వత్ర_  widthDelta = w / (length / stepSize);\n\
    స్థానము_మార్చు(0, 0);\n\
    కోణము(theta);\n\
    రంగు_మార్చు(col);\n\
-   for (var step = 0; step < length; step = step + stepSize) {\n\
+   for (_సర్వత్ర_  step = 0; step < length; step = step + stepSize) {\n\
       వెడల్పు(w);\n\
       ముందుకు_జరుగు(stepSize);\n\
       w = w - widthDelta;\n\
    }\n\
 }\n\
 \n\
-function hands(hours, minutes, seconds) {\n\
+_విధానము_  hands(hours, minutes, seconds) {\n\
     // draw seconds hand\n\
-    var secDegreesPerSecond = 6;	// = 360 degrees/60 seconds /minute\n\
+    _సర్వత్ర_  secDegreesPerSecond = 6;	// = 360 degrees/60 seconds /minute\n\
     hand(seconds * secDegreesPerSecond, 4, 100/130 * size, "red");\n\
     // draw minutes hand \n\
-    var minDegreePerSecond = 0.1;	// = 360 degrees /3600 seconds /hour\n\
-    var minutesInSeconds = minutes * 60 + seconds;\n\
+    _సర్వత్ర_  minDegreePerSecond = 0.1;	// = 360 degrees /3600 seconds /hour\n\
+    _సర్వత్ర_  minutesInSeconds = minutes * 60 + seconds;\n\
     hand(minutesInSeconds * minDegreePerSecond, 10, 100/130 * size, "blue");\n\
     // draw hours hand\n\
-    var hourDegreePerSecond = .1/12;	// = 360 degrees /3600 seconds per hour /12 hours per half day /half day\n\
-    var hoursInSeconds = ((hours % 12) * 3600) + minutesInSeconds;\n\
+    _సర్వత్ర_  hourDegreePerSecond = .1/12;	// = 360 degrees /3600 seconds per hour /12 hours per half day /half day\n\
+    _సర్వత్ర_  hoursInSeconds = ((hours % 12) * 3600) + minutesInSeconds;\n\
     hand(hoursInSeconds * hourDegreePerSecond, 10, 60/130 * size, "blue");\n\
 }\n\
 \n\
 // refresh the entire clock\n\
-function clock() {\n\
+_విధానము_  clock() {\n\
    చెరిపి_వేయి();\n\
    size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   numbers(0, 0, 110/130 * size);\n\
@@ -724,11 +724,11 @@ function clock() {\n\
    వెడల్పు(1/130* size)\n\
    వృత్తము(130/130 * size );\n\
    ticks(0, 0, 130/130 * size );\n\
-   var d = new Date();\n\
+   _సర్వత్ర_  d = new Date();\n\
    hands(d.getHours(), d.getMinutes(), d.getSeconds());\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
    కుంచికను_దాచు();\n\
    // refresh the clock every second\n\
    ఆడించు(clock,1000);\n\
@@ -739,34 +739,34 @@ clock_BCD ='\
 \n\
 //*** GLOBALS ***\n\
 \n\
-var hour10;\n\
-var hour1;\n\
-var minute10;\n\
-var minute1;\n\
-var second10;\n\
-var second1;\n\
-var hSpacing;\n\
-var vSpacing;\n\
+_సర్వత్ర_  hour10;\n\
+_సర్వత్ర_  hour1;\n\
+_సర్వత్ర_  minute10;\n\
+_సర్వత్ర_  minute1;\n\
+_సర్వత్ర_  second10;\n\
+_సర్వత్ర_  second1;\n\
+_సర్వత్ర_  hSpacing;\n\
+_సర్వత్ర_  vSpacing;\n\
 \n\
-var hourColor = "red"\n\
-var minuteColor = "green"\n\
-var secondColor = "blue"\n\
-var offColor = "lightgray"\n\
+_సర్వత్ర_  hourColor = "red"\n\
+_సర్వత్ర_  minuteColor = "green"\n\
+_సర్వత్ర_  secondColor = "blue"\n\
+_సర్వత్ర_  offColor = "lightgray"\n\
 \n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function tensDigit (number) {\n\
-  return Math.floor (number/10) % 10\n\
+_విధానము_  tensDigit (number) {\n\
+  _ఫలము_  Math.floor (number/10) % 10\n\
 }\n\
 \n\
 \n\
-function onesDigit (number) {\n\
-  return Math.floor (number % 10)\n\
+_విధానము_  onesDigit (number) {\n\
+  _ఫలము_  Math.floor (number % 10)\n\
 }\n\
 \n\
 \n\
-function getBinaryTime() {\n\
+_విధానము_  getBinaryTime() {\n\
   time = new Date\n\
   hours = time.getHours()\n\
   minutes = time.getMinutes()\n\
@@ -803,7 +803,7 @@ function getBinaryTime() {\n\
 }\n\
 \n\
 \n\
-function drawDot (digit, onColor, offColor, step) {\n\
+_విధానము_  drawDot (digit, onColor, offColor, step) {\n\
   if (digit == 1) {\n\
     రంగు_మార్చు( onColor)\n\
   } else {\n\
@@ -814,7 +814,7 @@ function drawDot (digit, onColor, offColor, step) {\n\
 }\n\
 \n\
 \n\
-function drawNumberDots (digitString, onColor, offColor, spacing) {\n\
+_విధానము_  drawNumberDots (digitString, onColor, offColor, spacing) {\n\
   drawDot( digitString[0], onColor, offColor, spacing)\n\
   drawDot( digitString[1], onColor, offColor, spacing)\n\
   drawDot( digitString[2], onColor, offColor, spacing)\n\
@@ -823,7 +823,7 @@ function drawNumberDots (digitString, onColor, offColor, spacing) {\n\
 }\n\
 \n\
 \n\
-function displayBinaryDots(hSpacing, vSpacing) {\n\
+_విధానము_  displayBinaryDots(hSpacing, vSpacing) {\n\
   bottom = vSpacing * 1.5\n\
   leftSide = -hSpacing * 2.5\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -847,7 +847,7 @@ function displayBinaryDots(hSpacing, vSpacing) {\n\
 }\n\
 \n\
 \n\
-function displayTime() {\n\
+_విధానము_  displayTime() {\n\
   చెరిపి_వేయి()\n\
   కోణము(180)\n\
   spacing = Math.min(గరిష్ఠX(), గరిష్ఠY()) *1.8/6\n\
@@ -867,21 +867,21 @@ clock_digital ='\
 \n\
 //*** GLOBALS ***\n\
 \n\
-var hour1digit;\n\
-var hour10digit;\n\
-var min1digit;\n\
-var min10digit;\n\
-var sec10digit;\n\
-var sec1digit;\n\
+_సర్వత్ర_  hour1digit;\n\
+_సర్వత్ర_  hour10digit;\n\
+_సర్వత్ర_  min1digit;\n\
+_సర్వత్ర_  min10digit;\n\
+_సర్వత్ర_  sec10digit;\n\
+_సర్వత్ర_  sec1digit;\n\
 \n\
-var segSize;\n\
-var horizontalElements\n\
-var digitSpacing\n\
-var interdigitSpacing\n\
-var segWidth\n\
-var segAngle = 10 // degrees\n\
-var segOnColor = "red"\n\
-var segOffColor = "నలుపు"\n\
+_సర్వత్ర_  segSize;\n\
+_సర్వత్ర_  horizontalElements\n\
+_సర్వత్ర_  digitSpacing\n\
+_సర్వత్ర_  interdigitSpacing\n\
+_సర్వత్ర_  segWidth\n\
+_సర్వత్ర_  segAngle = 10 // degrees\n\
+_సర్వత్ర_  segOnColor = "red"\n\
+_సర్వత్ర_  segOffColor = "నలుపు"\n\
 \n\
 \n\
 //*** CONSTANTS ***\n\
@@ -901,7 +901,7 @@ The seven-segment display is layed out as follows:\n\
 //segment strings are in the order: abcdefg\n\
 //  where 1 turns segment on\n\
 //    and 0 turns segment off\n\
-var segments = [ "1111110", //0\n\
+_సర్వత్ర_  segments = [ "1111110", //0\n\
                  "0110000", //1\n\
                  "1101101", //2\n\
                  "1111--1", //3\n\
@@ -916,17 +916,17 @@ var segments = [ "1111110", //0\n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function tensDigit (number) {\n\
-  return Math.floor (number/10) % 10\n\
+_విధానము_  tensDigit (number) {\n\
+  _ఫలము_  Math.floor (number/10) % 10\n\
 }\n\
 \n\
 \n\
-function onesDigit (number) {\n\
-  return Math.floor (number % 10)\n\
+_విధానము_  onesDigit (number) {\n\
+  _ఫలము_  Math.floor (number % 10)\n\
 }\n\
 \n\
 \n\
-function getTime() {\n\
+_విధానము_  getTime() {\n\
   time = new Date\n\
   hours = time.getHours()\n\
   minutes = time.getMinutes()\n\
@@ -942,7 +942,7 @@ function getTime() {\n\
 }\n\
 \n\
 \n\
-function segColor (bit) {\n\
+_విధానము_  segColor (bit) {\n\
   if (bit == "1") {\n\
     రంగు_మార్చు( segOnColor)\n\
   } else {\n\
@@ -951,7 +951,7 @@ function segColor (bit) {\n\
 }\n\
 \n\
 \n\
-function display7segment(digit) {\n\
+_విధానము_  display7segment(digit) {\n\
   కలమును_కింద_పెట్టు()\n\
   segColor (segments [digit].substr(0,1)) //a\n\
   ముందుకు_జరుగు(segSize)\n\
@@ -978,11 +978,11 @@ function display7segment(digit) {\n\
 }\n\
 \n\
 \n\
-function displaySegTime() {\n\
+_విధానము_  displaySegTime() {\n\
   // black out background\n\
   స్థానము_మార్చు(కనిష్ఠX(),0)\n\
   కోణము (90)\n\
-  రంగు_మార్చు(black)\n\
+  రంగు_మార్చు("నలుపు")\n\
   వెడల్పు(2*గరిష్ఠY())\n\
   కలమును_కింద_పెట్టు()\n\
   ముందుకు_జరుగు(2*గరిష్ఠX())\n\
@@ -1006,7 +1006,7 @@ function displaySegTime() {\n\
 }\n\
 \n\
 \n\
-function displayTime() {\n\
+_విధానము_  displayTime() {\n\
   horizontalElements = 6 + 3*.4 + 2*1.24\n\
   segSize = Math.min (గరిష్ఠY(), 2* గరిష్ఠX()/horizontalElements) * .9\n\
   digitSpacing = 1.4 * segSize\n\
@@ -1031,7 +1031,7 @@ bBase = 2* side * Math.cos( degToRad( ang)) // length of big base\n\
 sBase = 2* side * Math.sin( degToRad( ang/2)) // length of small base\n\
 \n\
 \n\
-function bb (fColor) { //big piece, big కోణము\n\
+_విధానము_  bb (fColor) { //big piece, big కోణము\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 4 * ang)\n\
@@ -1043,7 +1043,7 @@ function bb (fColor) { //big piece, big కోణము\n\
 }\n\
 \n\
 \n\
-function bs (fColor) { // big piece, small కోణము\n\
+_విధానము_  bs (fColor) { // big piece, small కోణము\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 2 * ang)\n\
@@ -1055,7 +1055,7 @@ function bs (fColor) { // big piece, small కోణము\n\
 }\n\
 \n\
 \n\
-function bs2 (fColor) { // big piece, small కోణము other corner\n\
+_విధానము_  bs2 (fColor) { // big piece, small కోణము other corner\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( bBase)\n\
     కుడి_వైపు_తిరుగు( 4 * ang)\n\
@@ -1067,7 +1067,7 @@ function bs2 (fColor) { // big piece, small కోణము other corner\n\
 }\n\
 \n\
 \n\
-function ss (fColor) { // small piece, small కోణము\n\
+_విధానము_  ss (fColor) { // small piece, small కోణము\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 3 * ang)\n\
@@ -1079,7 +1079,7 @@ function ss (fColor) { // small piece, small కోణము\n\
 }\n\
 \n\
 \n\
-function sb (fColor) { // small piece, big కోణము\n\
+_విధానము_  sb (fColor) { // small piece, big కోణము\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( sBase)\n\
     కుడి_వైపు_తిరుగు( 3 * ang)\n\
@@ -1091,7 +1091,7 @@ function sb (fColor) { // small piece, big కోణము\n\
 }\n\
 \n\
 \n\
-function sb2 (fColor) { // small piece, big కోణము other corner\n\
+_విధానము_  sb2 (fColor) { // small piece, big కోణము other corner\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 4 * ang)\n\
@@ -1103,8 +1103,8 @@ function sb2 (fColor) { // small piece, big కోణము other corner\n\
 }\n\
 \n\
 \n\
-function spiral( ) {\n\
-// function draws a spiral using only two isosceles triangles\n\
+_విధానము_  spiral( ) {\n\
+// _విధానము_  draws a spiral using only two isosceles triangles\n\
 // this is done with a series of points. Each point starts at the\n\
 // center of the spiral and moves to the point where several triangles\n\
 // are drawn. This technique isolates changes, but is less efficient\n\
@@ -1115,7 +1115,7 @@ function spiral( ) {\n\
 \n\
     c1 = "yellow"\n\
     c2 = "blue"\n\
-    for (var i=0; i<5; i++) {\n\
+    for (_సర్వత్ర_  i=0; i<5; i++) {\n\
 //point0:\n\
         స్థానము_మార్చు(0,0)\n\
         దిశ_మార్చు( (i * 2 + 1) * ang)\n\
@@ -1597,7 +1597,7 @@ function spiral( ) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
      చుట్టొద్దు()\n\
     కలమును_కింద_పెట్టు()\n\
@@ -1644,7 +1644,7 @@ compass_rose ='\
 \n\
 // The triangle functions could provide shading and color\n\
 \n\
-function triangle (side){\n\
+_విధానము_  triangle (side){\n\
   ముందుకు_జరుగు(side)\n\
   a = 45\n\
   b = (180-a)/2\n\
@@ -1656,7 +1656,7 @@ function triangle (side){\n\
   కుడి_వైపు_తిరుగు(180-a)\n\
 }\n\
 \n\
-function triangleL (side){\n\
+_విధానము_  triangleL (side){\n\
   ముందుకు_జరుగు(side)\n\
   a = 45\n\
   b = (180-a)/2\n\
@@ -1667,7 +1667,7 @@ function triangleL (side){\n\
   ఎడమ_వైపు_తిరుగు(180-a)\n\
 }\n\
 \n\
-function halfTri(side) {\n\
+_విధానము_  halfTri(side) {\n\
   triangle (side)\n\
   ముందుకు_జరుగు(side)\n\
   triangle (side)\n\
@@ -1680,7 +1680,7 @@ function halfTri(side) {\n\
   కుడి_వైపు_తిరుగు(180-45)\n\
 }\n\
 \n\
-function flipIt (side) {\n\
+_విధానము_  flipIt (side) {\n\
   //not quite symmetrical...\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు( side*3)\n\
@@ -1699,7 +1699,7 @@ function flipIt (side) {\n\
 }\n\
 \n\
 \n\
-function flipHalf (side) {\n\
+_విధానము_  flipHalf (side) {\n\
   //not quite symmetrical...\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు( side*3)\n\
@@ -1718,7 +1718,7 @@ function flipHalf (side) {\n\
 }\n\
 \n\
 \n\
-function flipPoint (side) {\n\
+_విధానము_  flipPoint (side) {\n\
   //not quite symmetrical...\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు( side*3)\n\
@@ -1737,7 +1737,7 @@ function flipPoint (side) {\n\
   కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
-function thirdTri(side) {\n\
+_విధానము_  thirdTri(side) {\n\
   triangle (side)//1\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు(side)\n\
@@ -1771,7 +1771,7 @@ function thirdTri(side) {\n\
 }\n\
 \n\
 \n\
-function boxTheCompass(size) {\n\
+_విధానము_  boxTheCompass(size) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   కోణము( 0)\n\
   boxedCompass=["N", "NxE", "NNE", "NExN", "NE", "NExE", "ENE", "ExN", "E", "ExS", "ESE", "SExE", "SE", "SExS", "SSE", "SxE", "S", "SxW", "SSW", "SWxS", "SW", "SWxW", "WSW", "WxS", "W", "WxN", "WNW", "NWxW", "NW", "NWxN", "NNW", "NxW"]\n\
@@ -1808,7 +1808,7 @@ function boxTheCompass(size) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   కుంచికను_దాచు() // do not want it to show, so do this early\n\
@@ -1847,7 +1847,7 @@ function ప్రదర్శన() {\n\
 compass_rose2 ='\
 // Compass Rose 2 -- draws compass rose.\n\
 \n\
-function compassRose (x, y, n, outerRadius, innerRadius) {\n\
+_విధానము_  compassRose (x, y, n, outerRadius, innerRadius) {\n\
   స్థానము_మార్చు(x, y);\n\
   వృత్తము(outerRadius); //outer circle\n\
   వృత్తము(innerRadius);\n\
@@ -1923,7 +1923,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {\n\
 \n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9\n\
   కుంచికను_దాచు();\n\
@@ -1975,13 +1975,13 @@ background32Color = "నలుపు"\n\
 foreground32Color = "yellow"\n\
 \n\
 \n\
-function indexColor(index, colors) {\n\
-  var len = colors.length\n\
-  return colors[ index % len]\n\
+_విధానము_  indexColor(index, colors) {\n\
+  _సర్వత్ర_  len = colors.length\n\
+  _ఫలము_  colors[ index % len]\n\
 }\n\
 \n\
 \n\
-function triangle (side){\n\
+_విధానము_  triangle (side){\n\
   ముందుకు_జరుగు(side)\n\
   a = 45\n\
   b = (180-a)/2\n\
@@ -1994,8 +1994,8 @@ function triangle (side){\n\
 }\n\
 \n\
 \n\
-function splitTri(outerSide, num, foreColor, triSide) {\n\
-  var i, j\n\
+_విధానము_  splitTri(outerSide, num, foreColor, triSide) {\n\
+  _సర్వత్ర_  i, j\n\
   \n\
   if (triSide == undefined) {\n\
     triSide = outerSide\n\
@@ -2025,7 +2025,7 @@ function splitTri(outerSide, num, foreColor, triSide) {\n\
 }\n\
 \n\
 \n\
-function flipSplitTri( outerSide, num, foreColor, triSide) {\n\
+_విధానము_  flipSplitTri( outerSide, num, foreColor, triSide) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు( outerSide)\n\
   కుడి_వైపు_తిరుగు( 45)\n\
@@ -2043,7 +2043,7 @@ function flipSplitTri( outerSide, num, foreColor, triSide) {\n\
 }\n\
 \n\
 \n\
-function labelPoints(size) {\n\
+_విధానము_  labelPoints(size) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   కోణము( 0)\n\
   boxedCompass=["N", "NxE", "NNE", "NExN", "NE", "NExE", "ENE", "ExN", "E", "ExS", "ESE", "SExE", "SE", "SExS", "SSE", "SxE", "S", "SxW", "SSW", "SWxS", "SW", "SWxW", "WSW", "WxS", "W", "WxN", "WNW", "NWxW", "NW", "NWxN", "NNW", "NxW"]\n\
@@ -2084,7 +2084,7 @@ function labelPoints(size) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120\n\
 console.log("size "+ size)\n\
@@ -2163,26 +2163,26 @@ connected_points ='\
 // Connected Points -- points connected by spikeys\n\
 \n\
 //draw the radials\n\
-function drawRadials(side) {\n\
-  for (var i=0; i<16; i++) {\n\
+_విధానము_  drawRadials(side) {\n\
+  for (_సర్వత్ర_  i=0; i<16; i++) {\n\
     స్థానము_మార్చు(0,0)\n\
     కోణము(i/16 * 360)\n\
     ముందుకు_జరుగు( size)\n\
   }\n\
 }\n\
 \n\
-function spikey ( points, revs, వ్యాసార్థము, x, y, head) {\n\
+_విధానము_  spikey ( points, revs, వ్యాసార్థము, x, y, head) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   స్థానము_మార్చు(x, y)\n\
   దిశ_మార్చు(head)\n\
   ముందుకు_జరుగు(వ్యాసార్థము)\n\
-  var turnAngle = 360 * revs/points\n\
-  var angleA = ( 180 - turnAngle)/2\n\
-  var stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))\n\
+  _సర్వత్ర_  turnAngle = 360 * revs/points\n\
+  _సర్వత్ర_  angleA = ( 180 - turnAngle)/2\n\
+  _సర్వత్ర_  stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))\n\
   కుడి_వైపు_తిరుగు( 180 - angleA)\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
-  for( var i = 0; i < points; i = i + 1) { //>\n\
+  for( _సర్వత్ర_  i = 0; i < points; i = i + 1) { //>\n\
     ముందుకు_జరుగు( stroke)\n\
     కుడి_వైపు_తిరుగు( turnAngle)\n\
   }\n\
@@ -2190,7 +2190,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 \n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -2249,29 +2249,29 @@ need routines for\n\
 \n\
 //*** GLOBALS ***\n\
 \n\
-var level = 0\n\
-var targetLevel = 5\n\
-var side = .80 * Math.min( గరిష్ఠY()*2, గరిష్ఠX()) // base of big triangle\n\
-var mainColor = "tan"\n\
-var subColor = "wheat"\n\
-var dividerColor = "నలుపు"\n\
-var stepsize = 1.5       //spacing between shading lines\n\
-var specialTriangle = 0  // triangle number selected for highlighting (1-5, 0 for none)\n\
+_సర్వత్ర_  level = 0\n\
+_సర్వత్ర_  targetLevel = 5\n\
+_సర్వత్ర_  side = .80 * Math.min( గరిష్ఠY()*2, గరిష్ఠX()) // base of big triangle\n\
+_సర్వత్ర_  mainColor = "tan"\n\
+_సర్వత్ర_  subColor = "wheat"\n\
+_సర్వత్ర_  dividerColor = "నలుపు"\n\
+_సర్వత్ర_  stepsize = 1.5       //spacing between shading lines\n\
+_సర్వత్ర_  specialTriangle = 0  // triangle number selected for highlighting (1-5, 0 for none)\n\
 \n\
 \n\
 //*** CONSTANTS ***\n\
 \n\
-var targetLevel = 4\n\
-var root5 = Math.sqrt(5)\n\
-var anglea = Math.asin( 1 / root5) * 360 / 2 / Math.PI\n\
-var angleb = Math.asin( 2 / root5) * 360 / 2 / Math.PI\n\
-var CCW = false\n\
-var CW = true\n\
+_సర్వత్ర_  targetLevel = 4\n\
+_సర్వత్ర_  root5 = Math.sqrt(5)\n\
+_సర్వత్ర_  anglea = Math.asin( 1 / root5) * 360 / 2 / Math.PI\n\
+_సర్వత్ర_  angleb = Math.asin( 2 / root5) * 360 / 2 / Math.PI\n\
+_సర్వత్ర_  CCW = false\n\
+_సర్వత్ర_  CW = true\n\
 \n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function dturn( dir, degrees) {\n\
+_విధానము_  dturn( dir, degrees) {\n\
   if (dir) {\n\
     కుడి_వైపు_తిరుగు( degrees)\n\
   } else {\n\
@@ -2279,7 +2279,7 @@ function dturn( dir, degrees) {\n\
   }\n\
 }\n\
 \n\
-function drawTriangle (dir, side) {\n\
+_విధానము_  drawTriangle (dir, side) {\n\
   ముందుకు_జరుగు(2*side)\n\
   dturn(dir, 180-anglea)\n\
   ముందుకు_జరుగు(root5*side)\n\
@@ -2289,13 +2289,13 @@ function drawTriangle (dir, side) {\n\
 }\n\
 \n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -2316,13 +2316,13 @@ function caption (message) {\n\
 }\n\
 \n\
 \n\
-function shadeTriangle( dir, side, stepsize) {\n\
+_విధానము_  shadeTriangle( dir, side, stepsize) {\n\
   console.log( "sT: " + dir + " " + side + " " + stepsize)\n\
-  var x = కుంచిక.స్థానము.x\n\
-  var y = కుంచిక.స్థానము.y\n\
-  var steps = Math.floor( side/stepsize)\n\
+  _సర్వత్ర_  x = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  y = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  steps = Math.floor( side/stepsize)\n\
 \n\
-  for (var i=0; i< steps; i++) {\n\
+  for (_సర్వత్ర_  i=0; i< steps; i++) {\n\
      ముందుకు_జరుగు( 2*side * (steps-i)/steps)\n\
      వెనుకకు_జరుగు( 2*side * (steps-i)/steps)\n\
      కలమును_పైకి_ఎత్తు()\n\
@@ -2331,7 +2331,7 @@ function shadeTriangle( dir, side, stepsize) {\n\
      dturn( !dir, 90)\n\
      కలమును_కింద_పెట్టు()\n\
   }\n\
-  //return to start\n\
+  //_ఫలము_  to start\n\
   కలమును_పైకి_ఎత్తు()\n\
   dturn( !dir, 90)\n\
   ముందుకు_జరుగు( side)\n\
@@ -2340,12 +2340,12 @@ function shadeTriangle( dir, side, stepsize) {\n\
   కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
-function recursiveDivide( dir, side, level, triangle) {\n\
+_విధానము_  recursiveDivide( dir, side, level, triangle) {\n\
   //console.log("rD: " + level + " " + triangle)\n\
   if (level > 0) {\n\
     side = 0. + side/root5\n\
-    var x = కుంచిక.స్థానము.x\n\
-    var y = కుంచిక.స్థానము.y\n\
+    _సర్వత్ర_  x = కుంచిక.స్థానము.x\n\
+    _సర్వత్ర_  y = కుంచిక.స్థానము.y\n\
     \n\
     //draw the first line to point A\n\
     dturn( dir, angleb)\n\
@@ -2407,12 +2407,12 @@ i    //sub triangle 4\n\
   }\n\
 }\n\
 \n\
-function recursiveDivideBlocks( dir, side, level, triangle, background, highlight) {\n\
+_విధానము_  recursiveDivideBlocks( dir, side, level, triangle, background, highlight) {\n\
   //console.log( "rDB: " + level + " " + triangle + " " + background + " " + highlight)\n\
   if (level > 0) {\n\
     side = side/root5\n\
-    var x = కుంచిక.స్థానము.x\n\
-    var y = కుంచిక.స్థానము.y\n\
+    _సర్వత్ర_  x = కుంచిక.స్థానము.x\n\
+    _సర్వత్ర_  y = కుంచిక.స్థానము.y\n\
 \n\
     //move to point A\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -2483,7 +2483,7 @@ function recursiveDivideBlocks( dir, side, level, triangle, background, highligh
 }\n\
 \n\
 \n\
-function delayedDivide() {\n\
+_విధానము_  delayedDivide() {\n\
   level = level + 1\n\
   if (level <= targetLevel) {\n\
     recursiveDivideBlocks( CCW, side, level, 0, mainColor, subColor)\n\
@@ -2498,7 +2498,7 @@ function delayedDivide() {\n\
 \n\
 //*** MAIN ***\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   // initialize\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
@@ -2572,29 +2572,29 @@ need routines for\n\
 \n\
 //*** GLOBALS ***\n\
 \n\
-var levels = 4\n\
-var targetSide = .80 * Math.min( గరిష్ఠY()*2, గరిష్ఠX()) // base of big encompassing triangle\n\
-var delayedSide = 0		// current side being worked\n\
+_సర్వత్ర_  levels = 4\n\
+_సర్వత్ర_  targetSide = .80 * Math.min( గరిష్ఠY()*2, గరిష్ఠX()) // base of big encompassing triangle\n\
+_సర్వత్ర_  delayedSide = 0		// current side being worked\n\
 \n\
-var mainColor = "tan"\n\
-var subColor = "wheat"\n\
-var dividerColor = "నలుపు"\n\
-var stepsize = 1.5       //spacing between shading lines\n\
-var specialTriangle = 0  // triangle number selected for highlighting (1-5, 0 for none)\n\
+_సర్వత్ర_  mainColor = "tan"\n\
+_సర్వత్ర_  subColor = "wheat"\n\
+_సర్వత్ర_  dividerColor = "నలుపు"\n\
+_సర్వత్ర_  stepsize = 1.5       //spacing between shading lines\n\
+_సర్వత్ర_  specialTriangle = 0  // triangle number selected for highlighting (1-5, 0 for none)\n\
 \n\
 \n\
 //*** CONSTANTS ***\n\
 \n\
-var root5 = Math.sqrt(5)\n\
-var anglea = Math.asin( 1 / root5) * 360 / 2 / Math.PI\n\
-var angleb = Math.asin( 2 / root5) * 360 / 2 / Math.PI\n\
-var CCW = false\n\
-var CW = true\n\
+_సర్వత్ర_  root5 = Math.sqrt(5)\n\
+_సర్వత్ర_  anglea = Math.asin( 1 / root5) * 360 / 2 / Math.PI\n\
+_సర్వత్ర_  angleb = Math.asin( 2 / root5) * 360 / 2 / Math.PI\n\
+_సర్వత్ర_  CCW = false\n\
+_సర్వత్ర_  CW = true\n\
 \n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function dturn( dir, degrees) { // allows turning based on triangle type\n\
+_విధానము_  dturn( dir, degrees) { // allows turning based on triangle type\n\
   if (dir) {\n\
     కుడి_వైపు_తిరుగు( degrees)\n\
   } else {\n\
@@ -2603,7 +2603,7 @@ function dturn( dir, degrees) { // allows turning based on triangle type\n\
 }\n\
 \n\
 \n\
-function drawTriangle (dir, side) {\n\
+_విధానము_  drawTriangle (dir, side) {\n\
   ముందుకు_జరుగు(2*side)\n\
   dturn(dir, 180-anglea)\n\
   ముందుకు_జరుగు(root5*side)\n\
@@ -2613,13 +2613,13 @@ function drawTriangle (dir, side) {\n\
 }\n\
 \n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -2641,13 +2641,13 @@ function caption (message) {\n\
 \n\
 \n\
 \n\
-function shadeTriangle( dir, side, stepsize) {\n\
+_విధానము_  shadeTriangle( dir, side, stepsize) {\n\
   console.log( "sT: " + dir + " " + side + " " + stepsize)\n\
-  var x = కుంచిక.స్థానము.x\n\
-  var y = కుంచిక.స్థానము.y\n\
-  var steps = Math.floor( side/stepsize)\n\
+  _సర్వత్ర_  x = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  y = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  steps = Math.floor( side/stepsize)\n\
 \n\
-  for (var i=0; i< steps; i++) {\n\
+  for (_సర్వత్ర_  i=0; i< steps; i++) {\n\
      ముందుకు_జరుగు( 2*side * (steps-i)/steps)\n\
      వెనుకకు_జరుగు( 2*side * (steps-i)/steps)\n\
      కలమును_పైకి_ఎత్తు()\n\
@@ -2656,7 +2656,7 @@ function shadeTriangle( dir, side, stepsize) {\n\
      dturn( !dir, 90)\n\
      కలమును_కింద_పెట్టు()\n\
   }\n\
-  //return to start\n\
+  //_ఫలము_  to start\n\
   కలమును_పైకి_ఎత్తు()\n\
   dturn( !dir, 90)\n\
   ముందుకు_జరుగు( side)\n\
@@ -2666,12 +2666,12 @@ function shadeTriangle( dir, side, stepsize) {\n\
 }\n\
 \n\
 \n\
-function recursiveDivide( dir, side, level, triangle) {\n\
+_విధానము_  recursiveDivide( dir, side, level, triangle) {\n\
   //console.log("rD: " + level + " " + triangle)\n\
   if (level > 0) {\n\
     side = 0. + side/root5\n\
-    var x = కుంచిక.స్థానము.x\n\
-    var y = కుంచిక.స్థానము.y\n\
+    _సర్వత్ర_  x = కుంచిక.స్థానము.x\n\
+    _సర్వత్ర_  y = కుంచిక.స్థానము.y\n\
     \n\
     //draw the first line to point A\n\
     dturn( dir, angleb)\n\
@@ -2734,7 +2734,7 @@ i    //sub triangle 4\n\
 }\n\
 \n\
 \n\
-function moveToExpandOrigin (side) {\n\
+_విధానము_  moveToExpandOrigin (side) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   కుడి_వైపు_తిరుగు( 90)\n\
   ముందుకు_జరుగు( side)\n\
@@ -2743,7 +2743,7 @@ function moveToExpandOrigin (side) {\n\
 }\n\
 \n\
 \n\
-function startDelayedDivide() {\n\
+_విధానము_  startDelayedDivide() {\n\
   // move to the origin of the big triangle\n\
   ఆది_స్థితి()\n\
   రంగు_మార్చు(mainColor)\n\
@@ -2764,7 +2764,7 @@ function startDelayedDivide() {\n\
 }\n\
 \n\
 \n\
-function delayedDivide() {\n\
+_విధానము_  delayedDivide() {\n\
   //console.log ("dD: "+ side + " " + level)\n\
   recursiveDivide( CCW, side, level, 0)\n\
   drawTriangle( CCW, side)\n\
@@ -2777,14 +2777,14 @@ function delayedDivide() {\n\
   }\n\
 }\n\
 \n\
-function startDelayedExpansion() {\n\
+_విధానము_  startDelayedExpansion() {\n\
   //move to the origin of the big triangle\n\
   reset ()\n\
    చుట్టొద్దు()\n\
   రంగు_మార్చు(mainColor)\n\
   కలమును_పైకి_ఎత్తు()\n\
 \n\
-  var tempSide = targetSide\n\
+  _సర్వత్ర_  tempSide = targetSide\n\
   వెనుకకు_జరుగు(side/2)\n\
   కుడి_వైపు_తిరుగు(90)\n\
   వెనుకకు_జరుగు(side)\n\
@@ -2794,14 +2794,14 @@ function startDelayedExpansion() {\n\
   dir = CCW\n\
 \n\
   // move the starting point so that it ends where it starts\n\
-  for (var i=0; i<iterations; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<iterations; i++) {\n\
     tempSide = tempSide/root5\n\
   }\n\
   delayedSide = tempSide\n\
-  for (var i=0; i<iterations; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<iterations; i++) {\n\
     tempSide = tempSide * root5\n\
   }\n\
-  for (var i=0; i<iterations; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<iterations; i++) {\n\
     కలమును_కింద_పెట్టు()\n\
     drawTriangle( dir, tempSide)\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -2820,7 +2820,7 @@ function startDelayedExpansion() {\n\
   విలంబించు( delayedExpansion,1000)\n\
 }\n\
 \n\
-function delayedExpansion() {\n\
+_విధానము_  delayedExpansion() {\n\
   /* on entry\n\
     delayedSide is the size of the base triangle.\n\
     depth is how many generations to do.\n\
@@ -2858,7 +2858,7 @@ subColor = "wheat"\n\
 specialTriangle = 0\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   /* want demo to show a mix of divide and expand with animation\n\
 \n\
 basically:\n\
@@ -2883,7 +2883,7 @@ basically:\n\
 coordinates ='\
 // Coordinates -- Draw the axes of the coordinate system on the canvas\n\
 \n\
-function lines () {\n\
+_విధానము_  lines () {\n\
   చెరిపి_వేయి()\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
@@ -2915,8 +2915,8 @@ function lines () {\n\
 }\n\
 \n\
 \n\
-function ticks (dir, limit, step) {\n\
-  var tickLen = 5\n\
+_విధానము_  ticks (dir, limit, step) {\n\
+  _సర్వత్ర_  tickLen = 5\n\
   కోణము(dir)\n\
   స్థానము_మార్చు(0,0)\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -2942,7 +2942,7 @@ function ticks (dir, limit, step) {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   lines()\n\
   ticks (0, గరిష్ఠY(), 10)\n\
   ticks (90, గరిష్ఠX(), 10)\n\
@@ -2956,10 +2956,10 @@ dividing_circle ='\
 // *** సార్వత్రికములు ***\n\
 \n\
 // *** నిత్యములు ***\n\
-const వ్యాసార్థము = 50;  // అన్ని వృత్తముల వ్యాసార్థము\n\
-const మెట్ట్ల_సంఖ్య = 6; // మధ్యలో ఉన్న వృత్తాకార మెట్టు నుంచి చివరన ఉన్న మెట్టు వరకు\n\
+_సర్వదా_ వ్యాసార్థము = 50;  // అన్ని వృత్తముల వ్యాసార్థము\n\
+_సర్వదా_ మెట్ట్ల_సంఖ్య = 6; // మధ్యలో ఉన్న వృత్తాకార మెట్టు నుంచి చివరన ఉన్న మెట్టు వరకు\n\
                      // ఉన్న సోపానముల సంఖ్య  \n\
-const అవధి = 1000;   // మిల్లిసెకన్లు. ఒక స్థాయి మెట్ట్లు చిత్రీకరించిన తరువాత \n\
+_సర్వదా_ అవధి = 1000;   // మిల్లిసెకన్లు. ఒక స్థాయి మెట్ట్లు చిత్రీకరించిన తరువాత \n\
                      // క్రింది స్థాయి మెట్ట్లు చిత్రీకరించడానికి ఎంత సేపు ఆగాలి? \n\
 \n\
 // *** ప్రక్రియలు ***\n\
@@ -3006,18 +3006,18 @@ dodecahedron_graph ='\
 //   This would be easier to draw to points on concentric circles\n\
 //   This is just lines and not shadable polygons\n\
 \n\
-function pent(side) {\n\
-  var angle2=72-(360-108)/2\n\
+_విధానము_  pent(side) {\n\
+  _సర్వత్ర_  angle2=72-(360-108)/2\n\
   // the sides below are really trigonometric conversions\n\
   // without the trig functions\n\
-  var side2 = .4*side\n\
-  var angle3 = 80\n\
-  var side3 = 1.05 * side\n\
-  var angle4 = 40\n\
-  var side4 = .5 * side\n\
-  var angle5 = 129\n\
-  var side5 = 2.65 * side\n\
-  for (var i=0; i<5; i++) {\n\
+  _సర్వత్ర_  side2 = .4*side\n\
+  _సర్వత్ర_  angle3 = 80\n\
+  _సర్వత్ర_  side3 = 1.05 * side\n\
+  _సర్వత్ర_  angle4 = 40\n\
+  _సర్వత్ర_  side4 = .5 * side\n\
+  _సర్వత్ర_  angle5 = 129\n\
+  _సర్వత్ర_  side5 = 2.65 * side\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     ముందుకు_జరుగు(side)\n\
       కుడి_వైపు_తిరుగు(angle2)\n\
       ముందుకు_జరుగు(side2)\n\
@@ -3043,7 +3043,7 @@ function pent(side) {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   స్థానము_మార్చు(-50,-22)\n\
   కుడి_వైపు_తిరుగు(17)\n\
   pent(50)\n\
@@ -3056,13 +3056,13 @@ dragon_curve ='\
 \n\
 \n\
 //*** GLOBALS ***\n\
-var gen = 0\n\
-var side\n\
+_సర్వత్ర_  gen = 0\n\
+_సర్వత్ర_  side\n\
 \n\
 \n\
 //*** CONSTANTS ***\n\
 \n\
-var root2 = Math.sqrt(2)\n\
+_సర్వత్ర_  root2 = Math.sqrt(2)\n\
 //  X ↦ X+YF+\n\
 //  Y ↦ −FX−Y.\n\
 // కోణము is 90\n\
@@ -3071,13 +3071,13 @@ var root2 = Math.sqrt(2)\n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -3099,7 +3099,7 @@ function caption (message) {\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
-function X (side, gen) {\n\
+_విధానము_  X (side, gen) {\n\
   if (gen <= 0) {\n\
      ముందుకు_జరుగు(side)\n\
   }\n\
@@ -3112,7 +3112,7 @@ function X (side, gen) {\n\
   }\n\
 }\n\
 \n\
-function Y (side, gen) {\n\
+_విధానము_  Y (side, gen) {\n\
   if (gen <= 0) {\n\
     ముందుకు_జరుగు(side)\n\
   }\n\
@@ -3126,7 +3126,7 @@ function Y (side, gen) {\n\
 }\n\
 \n\
 \n\
-function delayedDragon () {\n\
+_విధానము_  delayedDragon () {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   స్థానము_మార్చు(-side * .4, +side *.2)\n\
@@ -3144,20 +3144,14 @@ function delayedDragon () {\n\
 }  \n\
     \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   side = .9 * Math.min(గరిష్ఠX(), 2*గరిష్ఠY())\n\
   gen = 0\n\
   delayedDragon()\n\
 }  \n\
 '
 example ='\
-// Example -- example of code\n\
-/* Define helper functions here\n\
-or write your own functions\n\
-including a ప్రదర్శన() function\n\
-\n\
-For example:    */\n\
-\n\
+/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */\n\
 \n\
 సమ_చతురస్రము = ( భుజము ) => {\n\
   ఆవర్తించు(4, () => {\n\
@@ -3169,8 +3163,8 @@ For example:    */\n\
 ప్రదర్శన = () => {\n\
   కుంచికను_దాచు();\n\
   రంగు_మార్చు( నీలము );\n\
-  let భుజము = 100;\n\
-  let రంగు_సంఖ్య = 0;\n\
+  _అత్ర_  భుజము = 100;\n\
+  _అత్ర_  రంగు_సంఖ్య = 0;\n\
   యావత్_పరిక్రమ( () => భుజము > 0, ()=> {\n\
     సమ_చతురస్రము( భుజము );\n\
     కుడి_వైపు_తిరుగు(36);\n\
@@ -3191,53 +3185,53 @@ design to Arduino hardware.\n\
 \n\
 // ****CONSTANTS FOR DOT MATRICES****\n\
 \n\
-const columns = 32 // left and right eye are side by side\n\
-const rows = 9\n\
+_సర్వదా_ columns = 32 // left and right eye are side by side\n\
+_సర్వదా_ rows = 9\n\
 \n\
 \n\
 // ****CONSTANTS FOR TURTLE GRAPHICS****\n\
 \n\
-const dotSize = 4\n\
-const dotGap = 2 // space between dots\n\
-const eyeGap = 4 // space between eyes\n\
-const columnSize = 2 * dotSize + dotGap\n\
-const rowSize = 2 * dotSize + dotGap\n\
-const columnMid = columns/2 * columnSize + eyeGap/2\n\
-const rowMid = rows/2 * rowSize\n\
+_సర్వదా_ dotSize = 4\n\
+_సర్వదా_ dotGap = 2 // space between dots\n\
+_సర్వదా_ eyeGap = 4 // space between eyes\n\
+_సర్వదా_ columnSize = 2 * dotSize + dotGap\n\
+_సర్వదా_ rowSize = 2 * dotSize + dotGap\n\
+_సర్వదా_ columnMid = columns/2 * columnSize + eyeGap/2\n\
+_సర్వదా_ rowMid = rows/2 * rowSize\n\
 \n\
-const dotOff =          "#f0f0f0"\n\
-const eyeBrowColor =    "#8080ff"\n\
-const eyeBallColor =    "#ccccff"\n\
-const eyeOutlineColor = "#b3b3ff"\n\
-const rightEyeColor =   "#0000ff"\n\
-const leftEyeColor =    "#0000ff"\n\
-const rightPupilColor = "#000000"\n\
-const leftPupilColor =  "#000000"\n\
+_సర్వదా_ dotOff =          "#f0f0f0"\n\
+_సర్వదా_ eyeBrowColor =    "#8080ff"\n\
+_సర్వదా_ eyeBallColor =    "#ccccff"\n\
+_సర్వదా_ eyeOutlineColor = "#b3b3ff"\n\
+_సర్వదా_ rightEyeColor =   "#0000ff"\n\
+_సర్వదా_ leftEyeColor =    "#0000ff"\n\
+_సర్వదా_ rightPupilColor = "#000000"\n\
+_సర్వదా_ leftPupilColor =  "#000000"\n\
 \n\
 \n\
 // these may be dependent upon eye graphic\n\
-const irisWidth =       5\n\
-const irisHeight =      3\n\
-const irisCenterRight = 7 // absolute grid x for right eye center\n\
-const irisCenterLeft = 24 // absolute grid x for left eye center\n\
-const irisMiddle =      6 // absolute grid y for iris middle\n\
+_సర్వదా_ irisWidth =       5\n\
+_సర్వదా_ irisHeight =      3\n\
+_సర్వదా_ irisCenterRight = 7 // absolute grid x for right eye center\n\
+_సర్వదా_ irisCenterLeft = 24 // absolute grid x for left eye center\n\
+_సర్వదా_ irisMiddle =      6 // absolute grid y for iris middle\n\
 \n\
 // relative from bottom\n\
-const lidsClosed = 0\n\
-const lidsNormal = 4 // normal/relaxed position of the eye lids\n\
-const lidsMin = 0\n\
-const lidsMax = 6\n\
+_సర్వదా_ lidsClosed = 0\n\
+_సర్వదా_ lidsNormal = 4 // normal/relaxed position of the eye lids\n\
+_సర్వదా_ lidsMin = 0\n\
+_సర్వదా_ lidsMax = 6\n\
 \n\
 // relative to iris center, middle:\n\
-const irisMaxX = 5\n\
-const irisMinX = -4\n\
-const irisMaxY = irisMiddle - rows + 1 + lidsMax\n\
-const irisMinY = irisMiddle - rows + 1 + lidsMin\n\
-const irisNormalX = 0 // normal/relaxed X position of the iris and pupil\n\
-const irisNormalY = 0 // normal/relaxed Y position of the iris and pupil\n\
+_సర్వదా_ irisMaxX = 5\n\
+_సర్వదా_ irisMinX = -4\n\
+_సర్వదా_ irisMaxY = irisMiddle - rows + 1 + lidsMax\n\
+_సర్వదా_ irisMinY = irisMiddle - rows + 1 + lidsMin\n\
+_సర్వదా_ irisNormalX = 0 // normal/relaxed X position of the iris and pupil\n\
+_సర్వదా_ irisNormalY = 0 // normal/relaxed Y position of the iris and pupil\n\
 \n\
 \n\
-const lids = [\n\
+_సర్వదా_ lids = [\n\
     [\n\
         // lids[0]\n\
         //10987654321098765432109876543210\n\
@@ -3332,7 +3326,7 @@ const lids = [\n\
 ]\n\
 \n\
 \n\
-const masks = [\n\
+_సర్వదా_ masks = [\n\
     [\n\
         // masks[0]\n\
         //10987654321098765432109876543210\n\
@@ -3428,13 +3422,13 @@ const masks = [\n\
 \n\
 \n\
 \n\
-const irisTypes = {\n\
+_సర్వదా_ irisTypes = {\n\
     NORMAL : 0,\n\
     HEART : 1\n\
 }\n\
 \n\
 \n\
-const irises = [\n\
+_సర్వదా_ irises = [\n\
     [ // normal\n\
         //43210\n\
         0b01110, //00\n\
@@ -3450,7 +3444,7 @@ const irises = [\n\
 ]\n\
 \n\
 \n\
-const pupilTypes = {\n\
+_సర్వదా_ pupilTypes = {\n\
     NONE :     0,\n\
     SMALL :    1,\n\
     MEDIUM :   2,\n\
@@ -3460,7 +3454,7 @@ const pupilTypes = {\n\
 }\n\
 \n\
 \n\
-const pupils = [\n\
+_సర్వదా_ pupils = [\n\
     [\n\
         //pupils[ 0]\n\
         //43210\n\
@@ -3506,7 +3500,7 @@ const pupils = [\n\
 ]\n\
 \n\
 \n\
-const browTypes = {\n\
+_సర్వదా_ browTypes = {\n\
     NONE :     0,\n\
     NORMAL :   1,\n\
     UP :       2,\n\
@@ -3517,7 +3511,7 @@ const browTypes = {\n\
     DOUBLE :   7,\n\
 }\n\
 \n\
-const brows = [\n\
+_సర్వదా_ brows = [\n\
     [\n\
         // brows[0]\n\
         //10987654321098765432109876543210\n\
@@ -3588,7 +3582,7 @@ so if a eye is command to move 2 right and 2 up.\n\
 there would be steps for eye movement until the eye reached the target x and y\n\
 */\n\
 \n\
-const commands = {\n\
+_సర్వదా_ commands = {\n\
     //lid commands\n\
     LIDS_TO :            01, //n, step time\n\
     LIDS_NORMAL :        02, //step time\n\
@@ -3665,14 +3659,14 @@ simulatorCommands = [\n\
 \n\
 // ****GLOBALS****\n\
 \n\
-//var grid = []\n\
-var coloredGrid = []\n\
+//_సర్వత్ర_  grid = []\n\
+_సర్వత్ర_  coloredGrid = []\n\
 \n\
 \n\
 // ****FUNCTIONS****\n\
 \n\
 \n\
-function loadColoredPattern( pattern, col) {\n\
+_విధానము_  loadColoredPattern( pattern, col) {\n\
   for (r=0; r < rows; r++) {\n\
     for ( c=0; c < columns; c++) {\n\
       if (pattern[ r] & (1<<c)) {\n\
@@ -3686,12 +3680,12 @@ function loadColoredPattern( pattern, col) {\n\
 \n\
 \n\
 \n\
-function loadColoredSubPattern( subPattern, col, x, y, w, h) {\n\
+_విధానము_  loadColoredSubPattern( subPattern, col, x, y, w, h) {\n\
   // x,y is top left corner of pattern position\n\
   // it is aiso top left corner of grid\n\
-  for ( var iy=0; iy < h; iy++) {\n\
-    for ( var ix = w-1; ix >=0; ix--) {\n\
-      var mask = 0b00000000000000001 << ix\n\
+  for ( _సర్వత్ర_  iy=0; iy < h; iy++) {\n\
+    for ( _సర్వత్ర_  ix = w-1; ix >=0; ix--) {\n\
+      _సర్వత్ర_  mask = 0b00000000000000001 << ix\n\
       if (subPattern[ iy] & mask) {\n\
         coloredGrid [(y+iy) * columns + 31-x + ix -w + 1] = col\n\
       }\n\
@@ -3700,11 +3694,11 @@ function loadColoredSubPattern( subPattern, col, x, y, w, h) {\n\
 }\n\
 \n\
 \n\
-function loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {\n\
+_విధానము_  loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {\n\
   // x,y is top left corner of pattern position\n\
   // it is also top left corner of grid\n\
-  for ( var iy=0; iy < h; iy++) {\n\
-    for ( var ix = w-1; ix >=0; ix--) {\n\
+  for ( _సర్వత్ర_  iy=0; iy < h; iy++) {\n\
+    for ( _సర్వత్ర_  ix = w-1; ix >=0; ix--) {\n\
       if (subPattern[ iy] & (1<<ix) && mask[y+iy] & 1<<(x+w-1-ix)) {\n\
         coloredGrid [(y+iy) * columns + 31-x + ix -w + 1] = col\n\
       }\n\
@@ -3713,13 +3707,13 @@ function loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {\n\
 }\n\
 \n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
     // save your current position, heading, etc.\n\
-    var savedX = కుంచిక.స్థానము.x\n\
-    var savedY = కుంచిక.స్థానము.y\n\
-    var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-    var savedColor = కుంచిక.రంగు\n\
-    var savedWidth = కుంచిక.వెడల్పు\n\
+    _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+    _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+    _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+    _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+    _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
     స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
     దిశ_మార్చు( 90)\n\
@@ -3743,68 +3737,68 @@ function caption (message) {\n\
 \n\
 \n\
 // ****GLOBALS FOR COMMAND INTERPRETER****\n\
-    var baseCaption = "" // base caption\n\
+    _సర్వత్ర_  baseCaption = "" // base caption\n\
 \n\
-    const lidStates = {\n\
+    _సర్వదా_ lidStates = {\n\
         IDLE : 0,\n\
         CLOSING : 1,\n\
         OPENING : 2,\n\
     }\n\
-    var lidState = lidStates.IDLE\n\
-    var lidTarget = 0\n\
-    var lidCommanded = 0 // lid position requested. May be overridden by high iris value.\n\
+    _సర్వత్ర_  lidState = lidStates.IDLE\n\
+    _సర్వత్ర_  lidTarget = 0\n\
+    _సర్వత్ర_  lidCommanded = 0 // lid position requested. May be overridden by high iris value.\n\
 \n\
-    var lidsCurrent = lidsNormal\n\
+    _సర్వత్ర_  lidsCurrent = lidsNormal\n\
 \n\
-    var irisTypeCurrent = irisTypes.NORMAL\n\
-    const irisStates = {\n\
+    _సర్వత్ర_  irisTypeCurrent = irisTypes.NORMAL\n\
+    _సర్వదా_ irisStates = {\n\
         IDLE : 0,\n\
         MOVING : 1,\n\
         MOVING_BACK : 2\n\
     }\n\
-    var irisState = irisStates.IDLE\n\
+    _సర్వత్ర_  irisState = irisStates.IDLE\n\
 \n\
     // iris coordinates relative to the eye center and middle\n\
-    var irisTargetX = 0\n\
-    var irisTargetY = 0\n\
-    var irisCurrentX = 0\n\
-    var irisCurrentY = 0\n\
+    _సర్వత్ర_  irisTargetX = 0\n\
+    _సర్వత్ర_  irisTargetY = 0\n\
+    _సర్వత్ర_  irisCurrentX = 0\n\
+    _సర్వత్ర_  irisCurrentY = 0\n\
 \n\
-    const pupilNormal = pupilTypes.SMALL // normal/relaxed type of pupil\n\
-    var pupilCurrent = pupilTypes.SMALL // normal/relaxed type of pupil\n\
+    _సర్వదా_ pupilNormal = pupilTypes.SMALL // normal/relaxed type of pupil\n\
+    _సర్వత్ర_  pupilCurrent = pupilTypes.SMALL // normal/relaxed type of pupil\n\
 \n\
-    const browNormal = browTypes.NORMAL // normal/relaxed type of eye brow\n\
-    var browCurrent = browTypes.NORMAL // current type of the brow\n\
+    _సర్వదా_ browNormal = browTypes.NORMAL // normal/relaxed type of eye brow\n\
+    _సర్వత్ర_  browCurrent = browTypes.NORMAL // current type of the brow\n\
 \n\
-    var commandSequence = [] // array of commands to be executed\n\
-    var currentCommand = 0 // index into command sequence of the current command\n\
-    var subCommand = 0 // number of times current command has executed\n\
-    var commandDue = undefined // epoch milliseconds when normal command is due\n\
+    _సర్వత్ర_  commandSequence = [] // array of commands to be executed\n\
+    _సర్వత్ర_  currentCommand = 0 // index into command sequence of the current command\n\
+    _సర్వత్ర_  subCommand = 0 // number of times current command has executed\n\
+    _సర్వత్ర_  commandDue = undefined // epoch milliseconds when normal command is due\n\
                        // = undefined when not active\n\
-    var browCommandDue = undefined // epoch milliseconds when default brow command is due\n\
+    _సర్వత్ర_  browCommandDue = undefined // epoch milliseconds when default brow command is due\n\
                        // = undefined when not active\n\
 \n\
 \n\
 \n\
-function absIrisY ( irisY) {\n\
-    // return the absolute grid Y coordinate for a given iris Y coordinate\n\
+_విధానము_  absIrisY ( irisY) {\n\
+    // _ఫలము_  the absolute grid Y coordinate for a given iris Y coordinate\n\
     // irisY = 0 is the grid irisMiddle\n\
-    return irisMiddle - irisY\n\
+    _ఫలము_  irisMiddle - irisY\n\
 }\n\
 \n\
 \n\
-function absLidY (lidY) {\n\
-    // return the absolute grid Y coordinate for a given lid Y coordinate\n\
+_విధానము_  absLidY (lidY) {\n\
+    // _ఫలము_  the absolute grid Y coordinate for a given lid Y coordinate\n\
     // lidY = 0 is grid max Y = rows -1\n\
-    return rows - 1 - lidY\n\
+    _ఫలము_  rows - 1 - lidY\n\
 }\n\
 \n\
 \n\
-function irisMovementCheck () {\n\
+_విధానము_  irisMovementCheck () {\n\
     // check if iris and lid movement is required\n\
     console.log( "iMC", irisCurrentX, irisCurrentY, irisTargetX, irisTargetY, lidsCurrent, lidCommanded)\n\
     console.log( "iMC1", absIrisY(irisCurrentY), absIrisY(irisTargetY), absLidY(lidsCurrent), absLidY(lidCommanded))\n\
-    var moved = false\n\
+    _సర్వత్ర_  moved = false\n\
     if (irisCurrentY > irisTargetY) {\n\
         irisCurrentY = irisCurrentY - 1\n\
         moved = true\n\
@@ -3830,22 +3824,22 @@ function irisMovementCheck () {\n\
         moved = true\n\
     }\n\
     console.log( "iMC moved =", moved ? "true" : "false")\n\
-    return moved\n\
+    _ఫలము_  moved\n\
 }\n\
 \n\
 \n\
-function commandCheck ( currentTime) {\n\
+_విధానము_  commandCheck ( currentTime) {\n\
     // check is a command is due to be executed\n\
     // returns false if no delay requested\n\
     // returns true if a delay was requested for rendering\n\
     console.log("cmdchk0:", currentTime, commandDue, currentCommand, subCommand)\n\
 \n\
-    var renderingRequired = false\n\
-    var commandAdvance = false // only advance command explicitly\n\
+    _సర్వత్ర_  renderingRequired = false\n\
+    _సర్వత్ర_  commandAdvance = false // only advance command explicitly\n\
 \n\
     if (commandDue === undefined || currentTime > commandDue) {\n\
         commandDue = undefined\n\
-        var command = commandSequence [ currentCommand]\n\
+        _సర్వత్ర_  command = commandSequence [ currentCommand]\n\
         // execute the command. Some commands are immediate, others take time.\n\
         console.log("cmdchk1:", currentCommand, command[0], command[1], command[2])\n\
 \n\
@@ -4101,11 +4095,11 @@ console.log("cmdchk render",lidsCurrent, browCurrent, irisTypeCurrent, pupilCurr
         currentCommand = (currentCommand + 1) % commandSequence.length\n\
         subCommand = 0\n\
     }\n\
-    return commandAdvance\n\
+    _ఫలము_  commandAdvance\n\
 }\n\
 \n\
 \n\
-function renderEyes (eyeOpening, browType, irisType, pupilType, ix, iy) {\n\
+_విధానము_  renderEyes (eyeOpening, browType, irisType, pupilType, ix, iy) {\n\
     // ix and iy use relative coordinates, positive up and right\n\
     // grid coordinates: positive down and right\n\
 \n\
@@ -4148,13 +4142,13 @@ console.log("rE2:",leftEyeColor,\n\
             irisWidth, irisHeight)\n\
 }\n\
 \n\
-function drawEyes( eyeOpening, browType, irisType, pupilType, ix, iy, baseCaption) {\n\
+_విధానము_  drawEyes( eyeOpening, browType, irisType, pupilType, ix, iy, baseCaption) {\n\
 console.log("dE1:",eyeOpening, browType, irisType, pupilType, ix, iy, baseCaption)\n\
 \n\
     renderEyes (eyeOpening, browType, irisType, pupilType, ix, iy)\n\
-    for ( var r=0; r < rows; r++) {\n\
-        for ( var c=0; c < columns; c++) {\n\
-             var offset = 0\n\
+    for ( _సర్వత్ర_  r=0; r < rows; r++) {\n\
+        for ( _సర్వత్ర_  c=0; c < columns; c++) {\n\
+             _సర్వత్ర_  offset = 0\n\
              if ( c >= columns/2) {\n\
                  offset = eyeGap\n\
              }\n\
@@ -4168,9 +4162,9 @@ console.log("dE1:",eyeOpening, browType, irisType, pupilType, ix, iy, baseCaptio
 \n\
 \n\
 \n\
-function executeCommand () {\n\
-    var d = new Date()\n\
-    var currentTime = d.getTime()\n\
+_విధానము_  executeCommand () {\n\
+    _సర్వత్ర_  d = new Date()\n\
+    _సర్వత్ర_  currentTime = d.getTime()\n\
     //while ( !commandCheck ( currentTime)) {}\n\
     commandCheck ( currentTime)\n\
 \n\
@@ -4179,7 +4173,7 @@ function executeCommand () {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
     కుంచికను_దాచు()\n\
     commandDue = undefined\n\
@@ -4198,8 +4192,8 @@ fibinoucci ='\
 // Originally it was thought to be the rate of reproduction of rabbits.\n\
 // More at Wikipedia.com\n\
 \n\
-function box (side) {\n\
-  for (var i = 0; i<4; i++) {\n\
+_విధానము_  box (side) {\n\
+  for (_సర్వత్ర_  i = 0; i<4; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
@@ -4208,9 +4202,9 @@ function box (side) {\n\
   ముందుకు_జరుగు( side)\n\
 }\n\
 \n\
-function fib(count, side) {\n\
-  var fiblist = [1,1]\n\
-  var fibcount = 1\n\
+_విధానము_  fib(count, side) {\n\
+  _సర్వత్ర_  fiblist = [1,1]\n\
+  _సర్వత్ర_  fibcount = 1\n\
   while (fibcount <= count) {\n\
     console.log("fig " + fibcount + " " + fiblist[0] + "," + fiblist[1])\n\
     if (fibcount == 1) {\n\
@@ -4232,7 +4226,7 @@ function fib(count, side) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   స్థానము_మార్చు(150,60)\n\
   కోణము(90)\n\
@@ -4249,18 +4243,18 @@ gosper_curve ='\
 \n\
 //*** GLOBALS ***\n\
 \n\
-var gen = 0\n\
-var size = 0\n\
+_సర్వత్ర_  gen = 0\n\
+_సర్వత్ర_  size = 0\n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -4282,7 +4276,7 @@ function caption (message) {\n\
 }\n\
 \n\
 \n\
-function A (side, gen) {\n\
+_విధానము_  A (side, gen) {\n\
   if (gen ===0) {\n\
     ముందుకు_జరుగు(side)\n\
   }\n\
@@ -4306,7 +4300,7 @@ function A (side, gen) {\n\
 \n\
 // B ↦ + A − B B − − B − A + + A + B \n\
 \n\
-function B (side, gen) {\n\
+_విధానము_  B (side, gen) {\n\
   if (gen ===0) {\n\
     ముందుకు_జరుగు(side)\n\
   }\n\
@@ -4329,7 +4323,7 @@ function B (side, gen) {\n\
 }\n\
 \n\
 \n\
-function delayDemo () {\n\
+_విధానము_  delayDemo () {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   size = 1.5 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -4344,7 +4338,7 @@ function delayDemo () {\n\
   విలంబించు( delayDemo,3000)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   gen = 0\n\
   delayDemo()\n\
 }\n\
@@ -4354,14 +4348,14 @@ graphitti ='\
 \n\
 //** Globals **\n\
 \n\
-var గరిష్ఠ_X =  imageContext.canvas.width/2;\n\
-var గరిష్ఠ_Y =  imageContext.canvas.height/2;\n\
-var కనిష్ఠ_X =  -గరిష్ఠ_X;\n\
-var కనిష్ఠ_Y =  -గరిష్ఠ_Y;\n\
-var maxVelocity = 12;\n\
+_సర్వత్ర_  గరిష్ఠ_X =  imageContext.canvas.width/2;\n\
+_సర్వత్ర_  గరిష్ఠ_Y =  imageContext.canvas.height/2;\n\
+_సర్వత్ర_  కనిష్ఠ_X =  -గరిష్ఠ_X;\n\
+_సర్వత్ర_  కనిష్ఠ_Y =  -గరిష్ఠ_Y;\n\
+_సర్వత్ర_  maxVelocity = 12;\n\
 \n\
 \n\
-function plotOne() {\n\
+_విధానము_  plotOne() {\n\
   స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_X, గరిష్ఠ_X), యాదృచ్ఛిక_సంఖ్య(కనిష్ఠ_Y, గరిష్ఠ_Y));\n\
   రంగు_మార్చు(యాదృచ్ఛిక_సంఖ్య(16));\n\
   కోణము(యాదృచ్ఛిక_సంఖ్య(0, 180));\n\
@@ -4369,7 +4363,7 @@ function plotOne() {\n\
   ముందుకు_జరుగు(యాదృచ్ఛిక_సంఖ్య(10, 30));\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   ఆడించు(plotOne, 20);\n\
 }\n\
@@ -4392,7 +4386,7 @@ to make solid:\n\
   fill the square by drawing it on one shot\n\
 */\n\
 \n\
-function oheart(size)\n\
+_విధానము_  oheart(size)\n\
 {\n\
   రంగు_మార్చు( ఎరుపు )\n\
   వెడల్పు(4)\n\
@@ -4423,7 +4417,7 @@ function oheart(size)\n\
   కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
-function fheart(size, fcolor)\n\
+_విధానము_  fheart(size, fcolor)\n\
 {\n\
   రంగు_మార్చు(fcolor)\n\
   వెనుకకు_జరుగు(.707*size)\n\
@@ -4454,7 +4448,7 @@ function fheart(size, fcolor)\n\
   ముందుకు_జరుగు(.707*size)\n\
 }\n\
 \n\
-function heart(size)\n\
+_విధానము_  heart(size)\n\
 {\n\
   రంగు_మార్చు( ఎరుపు )\n\
   వెడల్పు(4)\n\
@@ -4496,7 +4490,7 @@ function heart(size)\n\
   కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
-function ప్రదర్శన()\n\
+_విధానము_  ప్రదర్శన()\n\
 {\n\
   ఆది_స్థితి()\n\
 \n\
@@ -4514,9 +4508,9 @@ herring_bone_tessellation ='\
 sSide = 15\n\
 lSide = 2* sSide \n\
 \n\
-function vRect( sSide, lSide, fColor) {\n\
+_విధానము_  vRect( sSide, lSide, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<2; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<2; i++) {\n\
     ముందుకు_జరుగు( sSide)\n\
     కుడి_వైపు_తిరుగు(90)\n\
     ముందుకు_జరుగు( lSide)\n\
@@ -4526,9 +4520,9 @@ function vRect( sSide, lSide, fColor) {\n\
   ముందుకు_జరుగు( sSide)\n\
 }\n\
 \n\
-function hRect( sSide, lSide, fColor) {\n\
+_విధానము_  hRect( sSide, lSide, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<2; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<2; i++) {\n\
     ముందుకు_జరుగు( lSide)\n\
     కుడి_వైపు_తిరుగు(90)\n\
     ముందుకు_జరుగు( sSide)\n\
@@ -4538,7 +4532,7 @@ function hRect( sSide, lSide, fColor) {\n\
   ముందుకు_జరుగు( lSide)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   yB = గరిష్ఠY() + sSide\n\
@@ -4594,18 +4588,18 @@ function ప్రదర్శన() {\n\
 hex_tessellation ='\
 // Hexagon Tessellation -- tile a surface with hexagons\n\
 \n\
-function hexagon (side) {\n\
+_విధానము_  hexagon (side) {\n\
   కలమును_పైకి_ఎత్తు();\n\
   ముందుకు_జరుగు(side);\n\
   కుడి_వైపు_తిరుగు(120);\n\
   కలమును_కింద_పెట్టు();\n\
-  ఆవర్తించు(6, function () {\n\
+  ఆవర్తించు(6, _విధానము_  () {\n\
     ముందుకు_జరుగు(side);\n\
     కుడి_వైపు_తిరుగు(60);\n\
   })\n\
 }\n\
 \n\
-function repeatToRight (side) {\n\
+_విధానము_  repeatToRight (side) {\n\
   while (కుంచిక.స్థానము.x < గరిష్ఠX()) {\n\
     hexagon(side);\n\
     కలమును_పైకి_ఎత్తు();\n\
@@ -4615,7 +4609,7 @@ function repeatToRight (side) {\n\
   }\n\
 }\n\
 \n\
-function repeatToLeft(side) {\n\
+_విధానము_  repeatToLeft(side) {\n\
   while (కుంచిక.స్థానము.x > కనిష్ఠX())\n\
    {\n\
     hexagon(side);\n\
@@ -4626,7 +4620,7 @@ function repeatToLeft(side) {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   \n\
   side = 50;\n\
   \n\
@@ -4671,16 +4665,16 @@ more at Wikipedia.com\n\
 */\n\
 \n\
 //Global constants\n\
-var  centralPentaAngle = 70.72\n\
-var  basePentaAngle = 90 - centralPentaAngle/2\n\
-var  centralHexaAngle = 58.58\n\
-var  baseHexaAngle = 90 - centralHexaAngle/2\n\
+_సర్వత్ర_   centralPentaAngle = 70.72\n\
+_సర్వత్ర_   basePentaAngle = 90 - centralPentaAngle/2\n\
+_సర్వత్ర_   centralHexaAngle = 58.58\n\
+_సర్వత్ర_   baseHexaAngle = 90 - centralHexaAngle/2\n\
 \n\
 \n\
-function penta (side, faceColor) {\n\
+_విధానము_  penta (side, faceColor) {\n\
   //assume pointing in direction of base and center is above\n\
   // move around point CW\n\
-  var pentaSide = .8639 * side\n\
+  _సర్వత్ర_  pentaSide = .8639 * side\n\
 \n\
   for( i=0; i<5; i++) {\n\
     ఆకారము_ప్రారంభించు()\n\
@@ -4696,12 +4690,12 @@ function penta (side, faceColor) {\n\
   }\n\
 }\n\
 \n\
-function hexa (side, faceColor) {\n\
+_విధానము_  hexa (side, faceColor) {\n\
   //assume pointing in direction of base and center is above\n\
   // move around point CW\n\
-  var hexaSide = 1.022 * side\n\
+  _సర్వత్ర_  hexaSide = 1.022 * side\n\
 \n\
-  for( var i=0; i<6; i++) {\n\
+  for( _సర్వత్ర_  i=0; i<6; i++) {\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
@@ -4719,13 +4713,13 @@ px = 0\n\
 py = 0\n\
 pangle = 0\n\
 \n\
-function savePos () {\n\
+_విధానము_  savePos () {\n\
   px = కుంచిక.స్థానము.x\n\
   py = కుంచిక.స్థానము.y\n\
   pangle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos() {\n\
+_విధానము_  restorePos() {\n\
   కుంచిక.స్థానము.x = px\n\
   కుంచిక.స్థానము.y = py\n\
   కుంచిక.కోణము = pangle\n\
@@ -4735,13 +4729,13 @@ p2x = 0\n\
 p2y = 0\n\
 p2angle = 0\n\
 \n\
-function savePos2 () {\n\
+_విధానము_  savePos2 () {\n\
   p2x = కుంచిక.స్థానము.x\n\
   p2y = కుంచిక.స్థానము.y\n\
   p2angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos2() {\n\
+_విధానము_  restorePos2() {\n\
   కుంచిక.స్థానము.x = p2x\n\
   కుంచిక.స్థానము.y = p2y\n\
   కుంచిక.కోణము = p2angle\n\
@@ -4751,13 +4745,13 @@ p3x = 0\n\
 p3y = 0\n\
 p3angle = 0\n\
 \n\
-function savePos3 () {\n\
+_విధానము_  savePos3 () {\n\
   p3x = కుంచిక.స్థానము.x\n\
   p3y = కుంచిక.స్థానము.y\n\
   p3angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos3() {\n\
+_విధానము_  restorePos3() {\n\
   కుంచిక.స్థానము.x = p3x\n\
   కుంచిక.స్థానము.y = p3y\n\
   కుంచిక.కోణము = p3angle\n\
@@ -4767,26 +4761,26 @@ p4x = 0\n\
 p4y = 0\n\
 p4angle = 0\n\
 \n\
-function savePos4 () {\n\
+_విధానము_  savePos4 () {\n\
   p4x = కుంచిక.స్థానము.x\n\
   p4y = కుంచిక.స్థానము.y\n\
   p4angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos4() {\n\
+_విధానము_  restorePos4() {\n\
   కుంచిక.స్థానము.x = p4x\n\
   కుంచిక.స్థానము.y = p4y\n\
   కుంచిక.కోణము = p4angle\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .13* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   స్థానము_మార్చు(1.8*side,0)\n\
   కుడి_వైపు_తిరుగు(80)\n\
   penta (side, "green")\n\
   కుడి_వైపు_తిరుగు( (2*basePentaAngle))\n\
-  for (var i=0; i<5; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     savePos()\n\
     // start with the base opposite of where you are now\n\
     కుడి_వైపు_తిరుగు(2*baseHexaAngle)\n\
@@ -4855,7 +4849,7 @@ function ప్రదర్శన() {\n\
       restorePos4()\n\
       ముందుకు_జరుగు(side)\n\
       savePos4()\n\
-      for (var j=1; j<5; j++) {\n\
+      for (_సర్వత్ర_  j=1; j<5; j++) {\n\
          restorePos4()\n\
          కుడి_వైపు_తిరుగు( 180 - 2*basePentaAngle)\n\
          ముందుకు_జరుగు( side)\n\
@@ -4900,17 +4894,17 @@ more at Wikipedia.com\n\
 */\n\
 \n\
 //Global constants\n\
-var centralPentaAngle = 70.72\n\
-var basePentaAngle = 90 - centralPentaAngle/2\n\
-var centralHexaAngle = 58.58\n\
-var baseHexaAngle = 90 - centralHexaAngle/2\n\
-var baseAngle = 90 - centralPentaAngle/2\n\
+_సర్వత్ర_  centralPentaAngle = 70.72\n\
+_సర్వత్ర_  basePentaAngle = 90 - centralPentaAngle/2\n\
+_సర్వత్ర_  centralHexaAngle = 58.58\n\
+_సర్వత్ర_  baseHexaAngle = 90 - centralHexaAngle/2\n\
+_సర్వత్ర_  baseAngle = 90 - centralPentaAngle/2\n\
 \n\
 \n\
-function penta (side, faceColor) {\n\
+_విధానము_  penta (side, faceColor) {\n\
   //assume pointing in direction of base and center is above\n\
   // move around point CW\n\
-  var pentaSide = .8639 * side\n\
+  _సర్వత్ర_  pentaSide = .8639 * side\n\
 \n\
   for( i=0; i<5; i++) {\n\
     ఆకారము_ప్రారంభించు()\n\
@@ -4926,12 +4920,12 @@ function penta (side, faceColor) {\n\
   }\n\
 }\n\
 \n\
-function hexa (side, faceColor) {\n\
+_విధానము_  hexa (side, faceColor) {\n\
   //assume pointing in direction of base and center is above\n\
   // move around point CW\n\
-  var hexaSide = 1.022 * side\n\
+  _సర్వత్ర_  hexaSide = 1.022 * side\n\
 \n\
-  for( var i=0; i<6; i++) {\n\
+  for( _సర్వత్ర_  i=0; i<6; i++) {\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
@@ -4949,13 +4943,13 @@ px = 0\n\
 py = 0\n\
 pangle = 0\n\
 \n\
-function savePos () {\n\
+_విధానము_  savePos () {\n\
   px = కుంచిక.స్థానము.x\n\
   py = కుంచిక.స్థానము.y\n\
   pangle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos() {\n\
+_విధానము_  restorePos() {\n\
   కుంచిక.స్థానము.x = px\n\
   కుంచిక.స్థానము.y = py\n\
   కుంచిక.కోణము = pangle\n\
@@ -4965,13 +4959,13 @@ p2x = 0\n\
 p2y = 0\n\
 p2angle = 0\n\
 \n\
-function savePos2 () {\n\
+_విధానము_  savePos2 () {\n\
   p2x = కుంచిక.స్థానము.x\n\
   p2y = కుంచిక.స్థానము.y\n\
   p2angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos2() {\n\
+_విధానము_  restorePos2() {\n\
   కుంచిక.స్థానము.x = p2x\n\
   కుంచిక.స్థానము.y = p2y\n\
   కుంచిక.కోణము = p2angle\n\
@@ -4981,13 +4975,13 @@ p3x = 0\n\
 p3y = 0\n\
 p3angle = 0\n\
 \n\
-function savePos3 () {\n\
+_విధానము_  savePos3 () {\n\
   p3x = కుంచిక.స్థానము.x\n\
   p3y = కుంచిక.స్థానము.y\n\
   p3angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos3() {\n\
+_విధానము_  restorePos3() {\n\
   కుంచిక.స్థానము.x = p3x\n\
   కుంచిక.స్థానము.y = p3y\n\
   కుంచిక.కోణము = p3angle\n\
@@ -4997,26 +4991,26 @@ p4x = 0\n\
 p4y = 0\n\
 p4angle = 0\n\
 \n\
-function savePos4 () {\n\
+_విధానము_  savePos4 () {\n\
   p4x = కుంచిక.స్థానము.x\n\
   p4y = కుంచిక.స్థానము.y\n\
   p4angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos4() {\n\
+_విధానము_  restorePos4() {\n\
   కుంచిక.స్థానము.x = p4x\n\
   కుంచిక.స్థానము.y = p4y\n\
   కుంచిక.కోణము = p4angle\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .13* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   స్థానము_మార్చు(0,0)\n\
   కుడి_వైపు_తిరుగు(80)\n\
   penta (side, "green")\n\
   కుడి_వైపు_తిరుగు( (2*basePentaAngle))\n\
-  for (var i=0; i<5; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     savePos()\n\
     // start with the base opposite of where you are now\n\
     కుడి_వైపు_తిరుగు(2*baseHexaAngle)\n\
@@ -5120,16 +5114,16 @@ More at Wikipedia.com\n\
 \n\
 \n\
 //Global constants\n\
-var  centralPentaAngle = 70.72\n\
-var  basePentaAngle = 90 - centralPentaAngle/2\n\
-var  centralHexaAngle = 58.58\n\
-var  baseHexaAngle = 90 - centralHexaAngle/2\n\
+_సర్వత్ర_   centralPentaAngle = 70.72\n\
+_సర్వత్ర_   basePentaAngle = 90 - centralPentaAngle/2\n\
+_సర్వత్ర_   centralHexaAngle = 58.58\n\
+_సర్వత్ర_   baseHexaAngle = 90 - centralHexaAngle/2\n\
 \n\
 \n\
-function penta (side, faceColor) {\n\
+_విధానము_  penta (side, faceColor) {\n\
   //assume pointing in direction of base and center is above\n\
   // move around point CW\n\
-  var pentaSide = .8639 * side\n\
+  _సర్వత్ర_  pentaSide = .8639 * side\n\
 \n\
   for( i=0; i<5; i++) {\n\
     ఆకారము_ప్రారంభించు()\n\
@@ -5145,12 +5139,12 @@ function penta (side, faceColor) {\n\
   }\n\
 }\n\
 \n\
-function hexa (side, faceColor) {\n\
+_విధానము_  hexa (side, faceColor) {\n\
   //assume pointing in direction of base and center is above\n\
   // move around point CW\n\
-  var hexaSide = 1.022 * side\n\
+  _సర్వత్ర_  hexaSide = 1.022 * side\n\
 \n\
-  for( var i=0; i<6; i++) {\n\
+  for( _సర్వత్ర_  i=0; i<6; i++) {\n\
     ఆకారము_ప్రారంభించు()\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 180-baseHexaAngle)\n\
@@ -5168,13 +5162,13 @@ px = 0\n\
 py = 0\n\
 pangle = 0\n\
 \n\
-function savePos () {\n\
+_విధానము_  savePos () {\n\
   px = కుంచిక.స్థానము.x\n\
   py = కుంచిక.స్థానము.y\n\
   pangle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos() {\n\
+_విధానము_  restorePos() {\n\
   కుంచిక.స్థానము.x = px\n\
   కుంచిక.స్థానము.y = py\n\
   కుంచిక.కోణము = pangle\n\
@@ -5184,19 +5178,19 @@ p2x = 0\n\
 p2y = 0\n\
 p2angle = 0\n\
 \n\
-function savePos2 () {\n\
+_విధానము_  savePos2 () {\n\
   p2x = కుంచిక.స్థానము.x\n\
   p2y = కుంచిక.స్థానము.y\n\
   p2angle = కుంచిక.కోణము\n\
 }\n\
 \n\
-function restorePos2() {\n\
+_విధానము_  restorePos2() {\n\
   కుంచిక.స్థానము.x = p2x\n\
   కుంచిక.స్థానము.y = p2y\n\
   కుంచిక.కోణము = p2angle\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   side = .23 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -5204,7 +5198,7 @@ function ప్రదర్శన() {\n\
   కుడి_వైపు_తిరుగు(18)\n\
   penta (side, "green")\n\
   కుడి_వైపు_తిరుగు( (2*basePentaAngle))\n\
-  for (var i=0; i<5; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     savePos()\n\
     // start with the base opposite of where you are now\n\
     కుడి_వైపు_తిరుగు(2*baseHexaAngle)\n\
@@ -5256,18 +5250,18 @@ hilbert_curve ='\
 \n\
 \n\
 //*** GLOBALS ***\n\
-var gen = 0\n\
+_సర్వత్ర_  gen = 0\n\
 \n\
 \n\
 //*** FUNCTIONS ***\n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -5289,7 +5283,7 @@ function caption (message) {\n\
 }\n\
 \n\
 \n\
-function A (side,gen) {\n\
+_విధానము_  A (side,gen) {\n\
   if (gen === 0) {\n\
     ఎడమ_వైపు_తిరుగు(90)\n\
     ముందుకు_జరుగు(side)\n\
@@ -5316,7 +5310,7 @@ function A (side,gen) {\n\
 //  B → + A F − B F B − F A +\n\
 //Here, "F" means "draw forward", "−" means "turn left 90°", "+" means "turn right 90°" (see కుంచిక graphics), and "A" and "B" are ignored during drawing.\n\
 \n\
-function B (side,gen) {\n\
+_విధానము_  B (side,gen) {\n\
   if (gen === 0) {\n\
     కుడి_వైపు_తిరుగు(90)\n\
     ముందుకు_జరుగు(side)\n\
@@ -5342,19 +5336,19 @@ function B (side,gen) {\n\
 }\n\
 \n\
 \n\
-function delayedHilbert () {\n\
+_విధానము_  delayedHilbert () {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
 \n\
   // targeting 80% of window\n\
   size = .80 * Math.min( గరిష్ఠX(),గరిష్ఠY())*2\n\
-  var side = 10\n\
+  _సర్వత్ర_  side = 10\n\
 \n\
   /*overall side seems to be: gen 0: 1\n\
     gen 1: 3 (2*gen 0 + 1)\n\
     gen 2: 7 (2*gen 1 + 1)\n\
     gen 3: 15(2*gen 2 +1)\n\
-   */  var overallSides = 1\n\
+   */  _సర్వత్ర_  overallSides = 1\n\
   for (i=1; i<=gen; i++)\n\
     overallSides = 2*overallSides + 1\n\
   side = size/overallSides\n\
@@ -5371,7 +5365,7 @@ function delayedHilbert () {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   gen = 0\n\
   delayedHilbert()\n\
 }\n\
@@ -5490,7 +5484,7 @@ fColors = [\n\
 */\n\
 colorlayer = 0\n\
 \n\
-function pentagon(side, fColor) {\n\
+_విధానము_  pentagon(side, fColor) {\n\
   // direction of the point\n\
   // invariant\n\
   ఆకారము_ప్రారంభించు()\n\
@@ -5508,7 +5502,7 @@ function pentagon(side, fColor) {\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-function p(pNum, ccw, side, fColor) {\n\
+_విధానము_  p(pNum, ccw, side, fColor) {\n\
   if (ccw) {\n\
     r = -1\n\
   } else {\n\
@@ -5516,7 +5510,7 @@ function p(pNum, ccw, side, fColor) {\n\
   }\n\
   ఆకారము_ప్రారంభించు()\n\
   ఎడమ_వైపు_తిరుగు( angles[pNum]/2)\n\
-  for (var i=1; i<5; i++) {\n\
+  for (_సర్వత్ర_  i=1; i<5; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     //వ్రాయి( angles[(i+pNum)%5])\n\
     కుడి_వైపు_తిరుగు( 180 - angles[(5+r*i+pNum)%5])  \n\
@@ -5526,8 +5520,8 @@ function p(pNum, ccw, side, fColor) {\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-function hirchhorn(side) {\n\
-  for (var i=0; i<6; i++) {\n\
+_విధానము_  hirchhorn(side) {\n\
+  for (_సర్వత్ర_  i=0; i<6; i++) {\n\
     //pentagon( s, fColors[colorlayer])\n\
     p( 0, CW, side, fColors[colorlayer])\n\
     ఎడమ_వైపు_తిరుగు( 60)\n\
@@ -5535,7 +5529,7 @@ function hirchhorn(side) {\n\
   colorlayer++\n\
 \n\
   ఎడమ_వైపు_తిరుగు(30)\n\
-  for (var i=0; i<6; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<6; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     ఎడమ_వైపు_తిరుగు( 10)\n\
     //pentagon( s, fColors[colorlayer])\n\
@@ -5546,7 +5540,7 @@ function hirchhorn(side) {\n\
   }\n\
   colorlayer++\n\
 \n\
-  for (var i=0; i<6; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<6; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 180 - ang1)\n\
     ముందుకు_జరుగు( side)\n\
@@ -5569,7 +5563,7 @@ function hirchhorn(side) {\n\
   ఎడమ_వైపు_తిరుగు( 180 - ang3 - ang0/2)\n\
   \n\
   cl = colorlayer\n\
-  for( var i=0; i<18; i++) {\n\
+  for( _సర్వత్ర_  i=0; i<18; i++) {\n\
     colorlayer = cl\n\
     p( 0, CCW, side, fColors[colorlayer])\n\
     colorlayer++\n\
@@ -5746,7 +5740,7 @@ function hirchhorn(side) {\n\
   \n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -5763,7 +5757,7 @@ home_plate_tessellation ='\
 \n\
 colors = ["red", "white", "blue", "yellow", "green"]\n\
 \n\
-function pentUp( side, fColor) {\n\
+_విధానము_  pentUp( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు( side)\n\
   ఎడమ_వైపు_తిరుగు( 90)\n\
@@ -5779,7 +5773,7 @@ function pentUp( side, fColor) {\n\
 }\n\
 \n\
 \n\
-function pentDown( side, fColor) {\n\
+_విధానము_  pentDown( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు( side)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
@@ -5796,13 +5790,13 @@ function pentDown( side, fColor) {\n\
 \n\
 \n\
 // nextColor could be completely random, if desired\n\
-function nextColor() { \n\
+_విధానము_  nextColor() { \n\
   c = colors[ count % colors.length]\n\
   count = count + 1\n\
-  return c\n\
+  _ఫలము_  c\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   s = 50\n\
@@ -5834,18 +5828,18 @@ icosahedron_graph ='\
 // graph here describes the connections between vertices, more at\n\
 // Wikipedia.com\n\
 \n\
-function pent(side) {\n\
+_విధానము_  pent(side) {\n\
   // the below side variable are doing trigonometry without\n\
   // the trig functions. Values found emperically.\n\
-  var angle2=180-(180-72)/2\n\
-  var side2 = 1.18*side\n\
-  var angle3 = 60\n\
-  var side3 = side2\n\
-  var angle4 = 156.5\n\
-  var side4 = 2.15 * side\n\
-  var angle5 = 31\n\
-  var side5 = 1.27 * side\n\
-  for (var i=0; i<5; i++) {\n\
+  _సర్వత్ర_  angle2=180-(180-72)/2\n\
+  _సర్వత్ర_  side2 = 1.18*side\n\
+  _సర్వత్ర_  angle3 = 60\n\
+  _సర్వత్ర_  side3 = side2\n\
+  _సర్వత్ర_  angle4 = 156.5\n\
+  _సర్వత్ర_  side4 = 2.15 * side\n\
+  _సర్వత్ర_  angle5 = 31\n\
+  _సర్వత్ర_  side5 = 1.27 * side\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     రంగు_మార్చు("నలుపు")\n\
     ముందుకు_జరుగు(side)\n\
       ఎడమ_వైపు_తిరుగు(angle2)\n\
@@ -5894,7 +5888,7 @@ function pent(side) {\n\
   వృత్తము(2.13*side)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .4 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //స్థానము_మార్చు(-50,-22)\n\
@@ -5969,53 +5963,53 @@ basic duration rules\n\
 \n\
 //**** GLOBALS ****\n\
 // reporting and debug constants\n\
-var NO_MESSAGES =      0;\n\
-var QUEUE_MESSAGES =   1;\n\
-var OVERALL_MESSAGES = 2;\n\
-var STATE_MESSAGES =   3;\n\
-var EVENT_MESSAGES =   4;\n\
-var DEBUG_LEVEL = QUEUE_MESSAGES;\n\
+_సర్వత్ర_  NO_MESSAGES =      0;\n\
+_సర్వత్ర_  QUEUE_MESSAGES =   1;\n\
+_సర్వత్ర_  OVERALL_MESSAGES = 2;\n\
+_సర్వత్ర_  STATE_MESSAGES =   3;\n\
+_సర్వత్ర_  EVENT_MESSAGES =   4;\n\
+_సర్వత్ర_  DEBUG_LEVEL = QUEUE_MESSAGES;\n\
 \n\
 // drawing constants\n\
-var roadWidth = 80;\n\
-var crossWalkWidth = 8;\n\
-var stopLineSeparation = 4;\n\
-var stopLineWidth = 2;\n\
+_సర్వత్ర_  roadWidth = 80;\n\
+_సర్వత్ర_  crossWalkWidth = 8;\n\
+_సర్వత్ర_  stopLineSeparation = 4;\n\
+_సర్వత్ర_  stopLineWidth = 2;\n\
 \n\
 // light states\n\
-var red = "red";\n\
-var green = "green";\n\
-var yellow = "yellow";\n\
+_సర్వత్ర_  red = "red";\n\
+_సర్వత్ర_  green = "green";\n\
+_సర్వత్ర_  yellow = "yellow";\n\
 \n\
 // light types\n\
-var main = "main";\n\
-var leftTurn = "leftTurn";\n\
-var walk = "walk";\n\
+_సర్వత్ర_  main = "main";\n\
+_సర్వత్ర_  leftTurn = "leftTurn";\n\
+_సర్వత్ర_  walk = "walk";\n\
 \n\
 // light duration constants\n\
 // all of the below times are in milliseconds\n\
-var minimumGreenDuration =      5 * 1000;\n\
-var maximumGreenDuration =     30 * 1000;\n\
-var mainPerCar =              1.5 * 1000;\n\
-var yellowDuration =            5 * 1000;\n\
-var mainGuardDuration =         1 * 1000;\n\
+_సర్వత్ర_  minimumGreenDuration =      5 * 1000;\n\
+_సర్వత్ర_  maximumGreenDuration =     30 * 1000;\n\
+_సర్వత్ర_  mainPerCar =              1.5 * 1000;\n\
+_సర్వత్ర_  yellowDuration =            5 * 1000;\n\
+_సర్వత్ర_  mainGuardDuration =         1 * 1000;\n\
 \n\
-var minimumTurnDuration =       4 * 1000;\n\
-var maximumTurnDuration =      20 * 1000;\n\
-var turnPerCar =                2 * 1000;\n\
-var turnGuardDuration =         1 * 1000;\n\
+_సర్వత్ర_  minimumTurnDuration =       4 * 1000;\n\
+_సర్వత్ర_  maximumTurnDuration =      20 * 1000;\n\
+_సర్వత్ర_  turnPerCar =                2 * 1000;\n\
+_సర్వత్ర_  turnGuardDuration =         1 * 1000;\n\
 \n\
-var minimumGreenWalkDuration =  4 * 1000;\n\
-var ewWalkDuration =           20 * 1000;\n\
-var nsWalkDuration =           25 * 1000;\n\
+_సర్వత్ర_  minimumGreenWalkDuration =  4 * 1000;\n\
+_సర్వత్ర_  ewWalkDuration =           20 * 1000;\n\
+_సర్వత్ర_  nsWalkDuration =           25 * 1000;\n\
 \n\
-var extendDuration =            1 * 1000;\n\
-var extendDelayDuration =       3 * 1000; // must be less than minimum green duration and minimum walk duration\n\
-var extendDelayDuration = Math.min (minimumGreenWalkDuration, minimumGreenDuration) - .5 * 1000; // must be less than minimum green duration and minimum walk duration\n\
+_సర్వత్ర_  extendDuration =            1 * 1000;\n\
+_సర్వత్ర_  extendDelayDuration =       3 * 1000; // must be less than minimum green duration and minimum walk duration\n\
+_సర్వత్ర_  extendDelayDuration = Math.min (minimumGreenWalkDuration, minimumGreenDuration) - .5 * 1000; // must be less than minimum green duration and minimum walk duration\n\
 \n\
 // light data structures (object)\n\
 \n\
-function Light(id, type, aveArrivalTime, aveDepartureTime) {\n\
+_విధానము_  Light(id, type, aveArrivalTime, aveDepartureTime) {\n\
     // create a Light object\n\
     this.id = id;\n\
     this.type = type;\n\
@@ -6032,23 +6026,23 @@ function Light(id, type, aveArrivalTime, aveDepartureTime) {\n\
 \n\
 //  milliseconds per hour / arrivals per hour = ave milliseconds /arrival\n\
 //                  id       type, ave arrival time per hour, ave departure msec\n\
-var ebMain = new Light("ebMain", main,     3600000 / 600, 1200);\n\
-var ebTurn = new Light("ebTurn", leftTurn, 3600000 / 300, 1700);\n\
-var ebWalk = new Light("ebWalk", walk,     3600000 /  25,    0);\n\
-var wbMain = new Light("wbMain", main,     3600000 / 600, 1200);\n\
-var wbTurn = new Light("wbTurn", leftTurn, 3600000 / 300, 1700);\n\
-var wbWalk = new Light("wbWalk", walk,     3600000 /  25,    0);\n\
-var nbMain = new Light("nbMain", main,     3600000 / 600, 1200);\n\
-var nbTurn = new Light("nbTurn", leftTurn, 3600000 / 300, 1700);\n\
-var nbWalk = new Light("nbWalk", walk,     3600000 /  25,    0);\n\
-var sbMain = new Light("sbMain", main,     3600000 / 600, 1200);\n\
-var sbTurn = new Light("sbTurn", leftTurn, 3600000 / 300, 1700);\n\
-var sbWalk = new Light("sbWalk", walk,     3600000 /  25,    0);\n\
+_సర్వత్ర_  ebMain = new Light("ebMain", main,     3600000 / 600, 1200);\n\
+_సర్వత్ర_  ebTurn = new Light("ebTurn", leftTurn, 3600000 / 300, 1700);\n\
+_సర్వత్ర_  ebWalk = new Light("ebWalk", walk,     3600000 /  25,    0);\n\
+_సర్వత్ర_  wbMain = new Light("wbMain", main,     3600000 / 600, 1200);\n\
+_సర్వత్ర_  wbTurn = new Light("wbTurn", leftTurn, 3600000 / 300, 1700);\n\
+_సర్వత్ర_  wbWalk = new Light("wbWalk", walk,     3600000 /  25,    0);\n\
+_సర్వత్ర_  nbMain = new Light("nbMain", main,     3600000 / 600, 1200);\n\
+_సర్వత్ర_  nbTurn = new Light("nbTurn", leftTurn, 3600000 / 300, 1700);\n\
+_సర్వత్ర_  nbWalk = new Light("nbWalk", walk,     3600000 /  25,    0);\n\
+_సర్వత్ర_  sbMain = new Light("sbMain", main,     3600000 / 600, 1200);\n\
+_సర్వత్ర_  sbTurn = new Light("sbTurn", leftTurn, 3600000 / 300, 1700);\n\
+_సర్వత్ర_  sbWalk = new Light("sbWalk", walk,     3600000 /  25,    0);\n\
 \n\
 \n\
-function testRates () {\n\
+_విధానము_  testRates () {\n\
   // testRates -- test assumptions to see if they can handle the indicated traffic\n\
-  var totalCycleTime = 2 * (Math.max( maximumGreenDuration + yellowDuration + mainGuardDuration,\n\
+  _సర్వత్ర_  totalCycleTime = 2 * (Math.max( maximumGreenDuration + yellowDuration + mainGuardDuration,\n\
                               minimumGreenWalkDuration + ewWalkDuration + mainGuardDuration) +\n\
                             maximumTurnDuration + yellowDuration + turnGuardDuration);\n\
   \n\
@@ -6065,16 +6059,16 @@ function testRates () {\n\
   testRate (wbWalk);\n\
   testRate (wbTurn);\n\
 \n\
-  function testRate (signal) {\n\
+  _విధానము_  testRate (signal) {\n\
     // testRate -- test assumptions to see if a signal can handle the indicated traffic\n\
   \n\
-    var cycleArrivalRate = totalCycleTime / signal.aveArrivalTime;\n\
+    _సర్వత్ర_  cycleArrivalRate = totalCycleTime / signal.aveArrivalTime;\n\
     if (signal.type === leftTurn) {\n\
-      var cycleDepartureRate = maximumTurnDuration / signal.aveDepartureTime;\n\
+      _సర్వత్ర_  cycleDepartureRate = maximumTurnDuration / signal.aveDepartureTime;\n\
     } else if (signal.type === main) {\n\
-      var cycleDepartureRate = maximumGreenDuration / signal.aveDepartureTime;\n\
+      _సర్వత్ర_  cycleDepartureRate = maximumGreenDuration / signal.aveDepartureTime;\n\
     } else { // assume walkers\n\
-      var cycleDepartureRate = 10000; // assuming no walker delay or congestion\n\
+      _సర్వత్ర_  cycleDepartureRate = 10000; // assuming no walker delay or congestion\n\
     }\n\
     if (cycleArrivalRate > .90 * cycleDepartureRate) {\n\
       throw "Cycle arrival rate exceeded departure rate for " + signal.id;\n\
@@ -6087,7 +6081,7 @@ testRates();\n\
 //**** FUNCTIONS ****\n\
 \n\
 //** Drawing functions **\n\
-function drawEWstreet() {\n\
+_విధానము_  drawEWstreet() {\n\
    చుట్టొద్దు();\n\
   స్థానము_మార్చు(కనిష్ఠX(),0);\n\
   కోణము(90);\n\
@@ -6097,7 +6091,7 @@ function drawEWstreet() {\n\
   ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX());\n\
 }\n\
 \n\
-function drawNSstreet() {\n\
+_విధానము_  drawNSstreet() {\n\
   స్థానము_మార్చు(0,గరిష్ఠY());\n\
   కోణము(180);\n\
   కలమును_కింద_పెట్టు();\n\
@@ -6106,7 +6100,7 @@ function drawNSstreet() {\n\
   ముందుకు_జరుగు(గరిష్ఠY() + గరిష్ఠY());\n\
 }\n\
 \n\
-function drawEWstripe() {\n\
+_విధానము_  drawEWstripe() {\n\
   స్థానము_మార్చు(కనిష్ఠX(),0);\n\
   కోణము(90);\n\
   రంగు_మార్చు( పసుపు );\n\
@@ -6118,7 +6112,7 @@ function drawEWstripe() {\n\
   ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);\n\
 }\n\
 \n\
-function drawNSstripe() {\n\
+_విధానము_  drawNSstripe() {\n\
   స్థానము_మార్చు(0,గరిష్ఠY());\n\
   కోణము(180);\n\
   రంగు_మార్చు( పసుపు );\n\
@@ -6130,7 +6124,7 @@ function drawNSstripe() {\n\
   ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);\n\
 }\n\
 \n\
-function drawCrossWalk(x, y, dir) {\n\
+_విధానము_  drawCrossWalk(x, y, dir) {\n\
   // draw stripes for a crosswalk\n\
   // x,y is coordinates of travel side of road\n\
   // dir is direction across road\n\
@@ -6163,7 +6157,7 @@ function drawCrossWalk(x, y, dir) {\n\
   వెడల్పు(1);\n\
 }\n\
 \n\
-function drawTurnArrow(x, y, dir) {\n\
+_విధానము_  drawTurnArrow(x, y, dir) {\n\
   కుంచికను_దాచు();\n\
   స్థానము_మార్చు(x,y);\n\
   కోణము (dir);\n\
@@ -6185,7 +6179,7 @@ function drawTurnArrow(x, y, dir) {\n\
 }\n\
   \n\
 \n\
-function drawStreets() {\n\
+_విధానము_  drawStreets() {\n\
   drawNSstreet();\n\
   drawEWstreet();\n\
 \n\
@@ -6205,8 +6199,8 @@ function drawStreets() {\n\
 \n\
 //** Light Drawing Functions **\n\
 \n\
-function setLightColor(lightColor, stateColor) {\n\
-  var signalBackground = "lightgray"; // color of an "off" signal light\n\
+_విధానము_  setLightColor(lightColor, stateColor) {\n\
+  _సర్వత్ర_  signalBackground = "lightgray"; // color of an "off" signal light\n\
   if (lightColor === stateColor) {\n\
     రంగు_మార్చు(lightColor);\n\
   } else {\n\
@@ -6214,10 +6208,10 @@ function setLightColor(lightColor, stateColor) {\n\
   }\n\
 }\n\
 \n\
-function drawArrow() { // assume pointing up, color set and pen up\n\
-  var penWidth = కుంచిక.వెడల్పు;\n\
-  var arrowSize = 8;\n\
-  var vertOffset = 5;\n\
+_విధానము_  drawArrow() { // assume pointing up, color set and pen up\n\
+  _సర్వత్ర_  penWidth = కుంచిక.వెడల్పు;\n\
+  _సర్వత్ర_  arrowSize = 8;\n\
+  _సర్వత్ర_  vertOffset = 5;\n\
   వెనుకకు_జరుగు(vertOffset);\n\
   కలమును_కింద_పెట్టు();\n\
   వెడల్పు(3);\n\
@@ -6234,7 +6228,7 @@ function drawArrow() { // assume pointing up, color set and pen up\n\
   ముందుకు_జరుగు(vertOffset);\n\
 }\n\
 \n\
-function drawTurnSignal(state) {\n\
+_విధానము_  drawTurnSignal(state) {\n\
   ఎడమ_వైపు_తిరుగు(90);\n\
   ముందుకు_జరుగు(13);\n\
   setLightColor("green", state);\n\
@@ -6252,7 +6246,7 @@ function drawTurnSignal(state) {\n\
   కుడి_వైపు_తిరుగు(90);\n\
 }\n\
 \n\
-function drawMainSignal(state) { // main signal is straight ahead\n\
+_విధానము_  drawMainSignal(state) { // main signal is straight ahead\n\
   ఎడమ_వైపు_తిరుగు(90);\n\
   ముందుకు_జరుగు(13);\n\
   setLightColor("green", state);\n\
@@ -6270,7 +6264,7 @@ function drawMainSignal(state) { // main signal is straight ahead\n\
   కుడి_వైపు_తిరుగు(90);\n\
 }\n\
 \n\
-function drawWalkSignal(state) {\n\
+_విధానము_  drawWalkSignal(state) {\n\
   // should do the flashing red for don\'t start\n\
   // could do the flash down counter\n\
   setLightColor("green", state);\n\
@@ -6301,7 +6295,7 @@ function drawWalkSignal(state) {\n\
   ఎడమ_వైపు_తిరుగు(90);\n\
 }\n\
 \n\
-function drawSignal(x, y, orient, mainState, turnState, walkState) {\n\
+_విధానము_  drawSignal(x, y, orient, mainState, turnState, walkState) {\n\
   // move కుంచిక to position and కోణము depending on street direction\n\
   స్థానము_మార్చు(x, y);\n\
   కోణము(orient);\n\
@@ -6314,7 +6308,7 @@ function drawSignal(x, y, orient, mainState, turnState, walkState) {\n\
   drawWalkSignal(walkState);\n\
 }\n\
 \n\
-function drawSignals() {\n\
+_విధానము_  drawSignals() {\n\
   drawSignal( 50,  65,  90, nbMain.state, nbTurn.state, nbWalk.state);\n\
   drawSignal(-50, -65, 270, sbMain.state, sbTurn.state, sbWalk.state);\n\
   drawSignal( 65, -50, 180, ebMain.state, ebTurn.state, ebWalk.state);\n\
@@ -6322,7 +6316,7 @@ function drawSignals() {\n\
 }\n\
 \n\
 \n\
-function printQueues () {\n\
+_విధానము_  printQueues () {\n\
   console.log (currentSecs +\n\
                " Northbound main: " + nbMain.queue.length +\n\
                ", turn: " +           nbTurn.queue.length +\n\
@@ -6341,7 +6335,7 @@ function printQueues () {\n\
 }\n\
 \n\
 \n\
-function writeQueues () {\n\
+_విధానము_  writeQueues () {\n\
   writeQueueSizes(55,  -గరిష్ఠY()+5,  0, "N",\n\
     nbTurn.queue.length, nbMain.queue.length, nbWalk.queue.length);\n\
   writeQueueSizes(-68,  గరిష్ఠY()-20, 0, "S",\n\
@@ -6352,7 +6346,7 @@ function writeQueues () {\n\
     wbTurn.queue.length, wbMain.queue.length, wbWalk.queue.length);\n\
 }\n\
 \n\
-function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {\n\
+_విధానము_  writeQueueSizes(x, y, orientation, dir, turn, main, walk) {\n\
 //write the number waiting for each signal\n\
 //  x is the x position of the text start\n\
 //  y is the y position of the text start\n\
@@ -6405,7 +6399,7 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {\n\
   వ్రాయి("     " + dir); // debug statement\n\
 }\n\
 \n\
-function drawQueues() {\n\
+_విధానము_  drawQueues() {\n\
   //SB\n\
   drawQueue( -10,   55,   0, sbTurn.queue, 12);\n\
   drawQueue( -30,   55,   0, sbMain.queue, 12);\n\
@@ -6427,11 +6421,11 @@ function drawQueues() {\n\
   drawQueue(-105,  -50, 270, ebWalk.queue,  6);\n\
 }\n\
 \n\
-function drawQueue(x, y, dir, queue, len) {\n\
+_విధానము_  drawQueue(x, y, dir, queue, len) {\n\
   స్థానము_మార్చు(x, y);\n\
   కోణము(dir);\n\
   వెడల్పు(10);\n\
-  for (var i=0; i<queue.length; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<queue.length; i++) {\n\
     కలమును_కింద_పెట్టు();\n\
     రంగు_మార్చు(queue[i].color);\n\
     ముందుకు_జరుగు(len); \n\
@@ -6442,7 +6436,7 @@ function drawQueue(x, y, dir, queue, len) {\n\
 \n\
 //** Safety Functions **\n\
 \n\
-function safetyCheck() {\n\
+_విధానము_  safetyCheck() {\n\
 /*\n\
  safetyCheck makes sure that traffic is not allowed in cross\n\
  directions (even if a programmer made an error)\n\
@@ -6450,7 +6444,7 @@ function safetyCheck() {\n\
  no cross traffic is allowed for any green or yellow light\n\
 \n\
 */\n\
-  var fault = false;\n\
+  _సర్వత్ర_  fault = false;\n\
   if ( (ebMain.state === green || ebMain.state === yellow ||\n\
         ebWalk.state === green || ebWalk.state === yellow) &&\n\
        !(nbMain.state === red && sbMain.state === red &&\n\
@@ -6537,15 +6531,15 @@ state s/b flashing red all around, may restart after a time\n\
 // the light state machines advances the light from one state to the next\n\
 // usually based on the expiry of a timer, but may change due to a callback\n\
 \n\
-var baseTime;\n\
-function msToSec(msecs) {\n\
+_సర్వత్ర_  baseTime;\n\
+_విధానము_  msToSec(msecs) {\n\
   if (baseTime === undefined) {\n\
     baseTime = msecs;\n\
   }\n\
-  return (msecs - baseTime) % 1000000/1000;\n\
+  _ఫలము_  (msecs - baseTime) % 1000000/1000;\n\
 }\n\
 \n\
-function logEvent (id, eventName, duration) {\n\
+_విధానము_  logEvent (id, eventName, duration) {\n\
   if (duration === undefined) {\n\
     duration =  "undefined"\n\
   } else {\n\
@@ -6556,7 +6550,7 @@ function logEvent (id, eventName, duration) {\n\
   }\n\
 }\n\
 \n\
-function turnGreen(signal, duration) {\n\
+_విధానము_  turnGreen(signal, duration) {\n\
   logEvent (signal.id, "green", duration)\n\
   signal.state = green;\n\
   greenCount = greenCount + 1;\n\
@@ -6570,13 +6564,13 @@ function turnGreen(signal, duration) {\n\
   signal.nextTime = currentTime + duration;\n\
 }\n\
 \n\
-function extendTurn (signal, duration) {\n\
+_విధానము_  extendTurn (signal, duration) {\n\
   logEvent (signal.id, "extendTurn", duration);\n\
   signal.nextState = "extendTurn";\n\
   signal.nextTime = currentTime + duration;\n\
 }\n\
 \n\
-function extendGreen(signal, duration) {\n\
+_విధానము_  extendGreen(signal, duration) {\n\
   logEvent (signal.id, "extending green", duration)\n\
   // signal should already be green, assume no extension, so ignor duration\n\
   signal.nextState = "turnYellow";\n\
@@ -6587,14 +6581,14 @@ function extendGreen(signal, duration) {\n\
   }\n\
 }\n\
 \n\
-function turnYellow(signal, duration) {\n\
+_విధానము_  turnYellow(signal, duration) {\n\
   logEvent (signal.id, "yellow", duration)\n\
   signal.state = yellow;\n\
   signal.nextState = "turnRed";\n\
   signal.nextTime = currentTime + duration;\n\
 }\n\
 \n\
-function turnRed(signal, duration) {\n\
+_విధానము_  turnRed(signal, duration) {\n\
   logEvent (signal.id, "red", duration)\n\
   signal.state = red;\n\
   signal.nextState = "turnGuardRed";\n\
@@ -6605,7 +6599,7 @@ function turnRed(signal, duration) {\n\
   }\n\
 }\n\
 \n\
-function turnGuardRed(signal, duration) {\n\
+_విధానము_  turnGuardRed(signal, duration) {\n\
   logEvent (signal.id, "guard red", duration)\n\
   signal.state = red;\n\
   signal.nextState = "turnGreen";\n\
@@ -6616,7 +6610,7 @@ function turnGuardRed(signal, duration) {\n\
   }\n\
 }\n\
 \n\
-function turnFlashingRed(signal, duration) {\n\
+_విధానము_  turnFlashingRed(signal, duration) {\n\
   logEvent (signal.id, "flashing red", duration)\n\
   signal.state = red;\n\
   signal.nextState = "turnGreen";\n\
@@ -6627,12 +6621,12 @@ function turnFlashingRed(signal, duration) {\n\
   }\n\
 }\n\
 \n\
-function enableTransition(signal, nextState) { // allow light state machine to fire on next go around\n\
+_విధానము_  enableTransition(signal, nextState) { // allow light state machine to fire on next go around\n\
   signal.nextState = nextState;\n\
   signal.nextTime = currentTime;\n\
 }\n\
 \n\
-function turnStateMachine(signal, currentTime) {\n\
+_విధానము_  turnStateMachine(signal, currentTime) {\n\
   if (signal.nextTime !== undefined && currentTime >= signal.nextTime) { // state change is due\n\
     changed = true;\n\
     if (DEBUG_LEVEL >= STATE_MESSAGES) {\n\
@@ -6674,7 +6668,7 @@ function turnStateMachine(signal, currentTime) {\n\
   }\n\
 }\n\
 \n\
-function walkStateMachine(signal, currentTime) {\n\
+_విధానము_  walkStateMachine(signal, currentTime) {\n\
   if (signal.nextTime !== undefined && currentTime >= signal.nextTime) { // state change is due\n\
     changed = true;\n\
     if (DEBUG_LEVEL >= STATE_MESSAGES) {\n\
@@ -6715,7 +6709,7 @@ function walkStateMachine(signal, currentTime) {\n\
   }\n\
 }\n\
 \n\
-function mainStateMachine(signal, currentTime) {\n\
+_విధానము_  mainStateMachine(signal, currentTime) {\n\
   if (signal.nextTime !== undefined && currentTime >= signal.nextTime) { // state change is due\n\
     changed = true;\n\
     if (DEBUG_LEVEL >= STATE_MESSAGES) {\n\
@@ -6755,12 +6749,12 @@ function mainStateMachine(signal, currentTime) {\n\
 \n\
 //** Traffic Simulation Functions **\n\
 \n\
-function incDecQueue(signal) {\n\
+_విధానము_  incDecQueue(signal) {\n\
   // check for departures when light is green\n\
    // should only do this when light is green and start new departure timer when light goes green\n\
-  var spread;\n\
+  _సర్వత్ర_  spread;\n\
   spread = 0.5;\n\
-  var possibleDepartureTime = currentTime +\n\
+  _సర్వత్ర_  possibleDepartureTime = currentTime +\n\
             యాదృచ్ఛిక_సంఖ్య((1 - spread) * signal.aveDepartureTime, (1 + spread) * signal.aveDepartureTime);\n\
   if (signal.state === green) {\n\
     if (signal.aveDepartureTime === 0) { // special case for walkers\n\
@@ -6793,7 +6787,7 @@ function incDecQueue(signal) {\n\
 }\n\
 \n\
 \n\
-function simulateTraffic() {\n\
+_విధానము_  simulateTraffic() {\n\
   incDecQueue(ebTurn);\n\
   incDecQueue(ebWalk);\n\
   incDecQueue(ebMain);\n\
@@ -6811,19 +6805,19 @@ function simulateTraffic() {\n\
 // ** Overall State Machine and Functions\n\
 \n\
 // *Globals*\n\
-var overallNextState;\n\
-var overallNextTime;\n\
-var turnCount = 0;\n\
-var greenCount = 0;\n\
+_సర్వత్ర_  overallNextState;\n\
+_సర్వత్ర_  overallNextTime;\n\
+_సర్వత్ర_  turnCount = 0;\n\
+_సర్వత్ర_  greenCount = 0;\n\
 \n\
-function nextOverallState(nextState, time) {\n\
+_విధానము_  nextOverallState(nextState, time) {\n\
   overallNextState = nextState;\n\
   overallNextTime = time;\n\
 }\n\
 \n\
-function redGuardComplete(signal) {\n\
+_విధానము_  redGuardComplete(signal) {\n\
   /* callback when red guard time complete for a particular signal */\n\
-  var id = signal.id;\n\
+  _సర్వత్ర_  id = signal.id;\n\
   if (id === nbTurn || id === sbTurn || id === ebTurn || id === wbTurn) {\n\
     turnCount = turnCount - 1; //global\n\
     if (turnCount < 0) {\n\
@@ -6838,13 +6832,13 @@ function redGuardComplete(signal) {\n\
   }\n\
 }\n\
 \n\
-function startNS() {\n\
+_విధానము_  startNS() {\n\
   /* entry point to start overall machine into motion */\n\
   nextOverallState("startNS", currentTime);\n\
 }\n\
 \n\
 \n\
-function overallStateMachine() {\n\
+_విధానము_  overallStateMachine() {\n\
 /*\n\
 - controls the start of travel in either direction\n\
 - extends the main green\n\
@@ -7060,13 +7054,13 @@ overall extends main green in a coordinated way\n\
 \n\
 \n\
 \n\
-var date = new Date();\n\
-var currentTime = date.getTime();\n\
-var currentSecs = msToSec(currentTime);\n\
-var changed = false;\n\
+_సర్వత్ర_  date = new Date();\n\
+_సర్వత్ర_  currentTime = date.getTime();\n\
+_సర్వత్ర_  currentSecs = msToSec(currentTime);\n\
+_సర్వత్ర_  changed = false;\n\
 startNS(); // start up the overall machine \n\
 \n\
-function loop() {\n\
+_విధానము_  loop() {\n\
   changed = false;\n\
   date = new Date();\n\
   currentTime = date.getTime();\n\
@@ -7108,7 +7102,7 @@ function loop() {\n\
   safetyCheck();\n\
 }\n\
  \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆడించు(loop, 100);\n\
 }\n\
 '
@@ -7122,15 +7116,15 @@ height. Changing the height variable changes the size of the other body parts.\n
 \n\
 Drawing of the body parts is done so that the కుంచిక is returned to its starting point.\n\
 This allows the body parts to be drawn in any order or for the center of the stick man\n\
-to be moved. Each body part is draw with a function (also called a sub-routine) to\n\
+to be moved. Each body part is draw with a function  (also called a sub-routine) to\n\
 make the problem easier to understand.\n\
 \n\
 The drawLeftLeg(), drawRightLeg(), drawLeftArm(), and drawRightArm() functions use a\n\
 parameter that is used to determine the కోణము of\n\
-the particular appendage being drawn. This way the same function can be used without\n\
+the particular appendage being drawn. This way the same function  can be used without\n\
 regard to the arm or leg position.\n\
 \n\
-The drawBody() function ties everything together and draws all of the body parts.\n\
+The drawBody() function  ties everything together and draws all of the body parts.\n\
 It has two parameters, one for the arm కోణము and one for the leg కోణము. This assumes\n\
 that the arms move together and the legs move together, but that is not a requirement.\n\
 You can change this.\n\
@@ -7149,7 +7143,7 @@ and\n\
 For smooth motion, there should be 4 steps. (This is really a guess, there could be\n\
 more or there could be less, but for now lets assume that 4 is a good number.)\n\
 A step would be the base movement plus one quarter of the total movement. The moveBody()\n\
-function uses the variable\n\
+function  uses the variable\n\
 n to step throught the various movements with n=0, n=1, n=2, n=3, and n=4\n\
 successively.\n\
 \n\
@@ -7160,9 +7154,9 @@ For the legs: 45 - n * (45-5)/4\n\
 The direction of the movement changes at either end, that is when\n\
 n = 0 or n = 4; So when n is zero, n should be increased by one to get to 1. When n is\n\
 4, n should be decreased by one (add a negative one) to get to 3. Using a direction\n\
-variable allows the moveBody() function to remember what direction it is moving.\n\
+variable allows the moveBody() function  to remember what direction it is moving.\n\
 \n\
-Successive calls to moveBody() are controlled by the విలంబించు() function. This function is set\n\
+Successive calls to moveBody() are controlled by the విలంబించు() function . This function  is set\n\
 to repeat in 100 ms. You could change the time to make it faster or slower.\n\
 \n\
 */\n\
@@ -7170,12 +7164,12 @@ to repeat in 100 ms. You could change the time to make it faster or slower.\n\
 \n\
 \n\
 // GLOBALS\n\
-var height;\n\
-var headDiameter;\n\
-var torsoLength;\n\
-var neckLength;\n\
-var armLength;\n\
-var legLength;\n\
+_సర్వత్ర_  height;\n\
+_సర్వత్ర_  headDiameter;\n\
+_సర్వత్ర_  torsoLength;\n\
+_సర్వత్ర_  neckLength;\n\
+_సర్వత్ర_  armLength;\n\
+_సర్వత్ర_  legLength;\n\
 \n\
 /*\n\
   The body parts are drawn with the following asumptions\n\
@@ -7186,7 +7180,7 @@ var legLength;\n\
 */\n\
 \n\
 \n\
-function drawHead() {\n\
+_విధానము_  drawHead() {\n\
   ముందుకు_జరుగు(torsoLength/2 + neckLength + headDiameter/2); \n\
   కలమును_కింద_పెట్టు();\n\
   వృత్తము(headDiameter/2); //draw head\n\
@@ -7196,7 +7190,7 @@ function drawHead() {\n\
   కుడి_వైపు_తిరుగు(180);\n\
 }\n\
 \n\
-function drawNeck() {\n\
+_విధానము_  drawNeck() {\n\
   ముందుకు_జరుగు(torsoLength/2 ); \n\
   కలమును_కింద_పెట్టు();\n\
   ముందుకు_జరుగు(neckLength); //neck\n\
@@ -7204,7 +7198,7 @@ function drawNeck() {\n\
   వెనుకకు_జరుగు(torsoLength/2 + neckLength); \n\
 }\n\
 \n\
-function drawTorso() {\n\
+_విధానము_  drawTorso() {\n\
   వెనుకకు_జరుగు(torsoLength/2); \n\
   కలమును_కింద_పెట్టు();\n\
   ముందుకు_జరుగు(torsoLength); \n\
@@ -7212,7 +7206,7 @@ function drawTorso() {\n\
   వెనుకకు_జరుగు(torsoLength/2); \n\
 }\n\
 \n\
-function drawLeftLeg(కోణము){\n\
+_విధానము_  drawLeftLeg(కోణము){\n\
   కుడి_వైపు_తిరుగు(180);\n\
   ముందుకు_జరుగు(torsoLength/2);\n\
   ఎడమ_వైపు_తిరుగు(కోణము);\n\
@@ -7225,7 +7219,7 @@ function drawLeftLeg(కోణము){\n\
   ముందుకు_జరుగు(torsoLength/2); \n\
 } \n\
 \n\
-function drawRightLeg(కోణము) {\n\
+_విధానము_  drawRightLeg(కోణము) {\n\
   కుడి_వైపు_తిరుగు(180);\n\
   ముందుకు_జరుగు(torsoLength/2);\n\
   కుడి_వైపు_తిరుగు(కోణము);\n\
@@ -7238,7 +7232,7 @@ function drawRightLeg(కోణము) {\n\
   ముందుకు_జరుగు(torsoLength/2); \n\
 }\n\
 \n\
-function drawLeftArm(కోణము){\n\
+_విధానము_  drawLeftArm(కోణము){\n\
   ముందుకు_జరుగు(torsoLength/2);\n\
   కుడి_వైపు_తిరుగు(కోణము);\n\
   కలమును_కింద_పెట్టు();\n\
@@ -7249,7 +7243,7 @@ function drawLeftArm(కోణము){\n\
   వెనుకకు_జరుగు(torsoLength/2); \n\
 } \n\
 \n\
-function drawRightArm(కోణము) {\n\
+_విధానము_  drawRightArm(కోణము) {\n\
   ముందుకు_జరుగు(torsoLength/2);\n\
   ఎడమ_వైపు_తిరుగు(కోణము);\n\
   కలమును_కింద_పెట్టు();\n\
@@ -7260,7 +7254,7 @@ function drawRightArm(కోణము) {\n\
   వెనుకకు_జరుగు(torsoLength/2); \n\
 }\n\
 \n\
-function drawBody(armAngle, legAngle) {\n\
+_విధానము_  drawBody(armAngle, legAngle) {\n\
   drawTorso();\n\
   drawHead();\n\
   drawNeck();\n\
@@ -7270,11 +7264,11 @@ function drawBody(armAngle, legAngle) {\n\
   drawRightLeg(legAngle);\n\
 }\n\
 \n\
-var n = 0;\n\
-var direction = +1;\n\
+_సర్వత్ర_  n = 0;\n\
+_సర్వత్ర_  direction = +1;\n\
 \n\
 \n\
-function moveBody () {\n\
+_విధానము_  moveBody () {\n\
   చెరిపి_వేయి();\n\
   height = 40;\n\
   height = 1.5 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -7295,7 +7289,7 @@ function moveBody () {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   n = 0;\n\
@@ -7306,7 +7300,7 @@ function ప్రదర్శన() {\n\
 koch_line ='\
 // Koch Lines -- draw an animated set of Koch lines\n\
 \n\
-function kochLine (length, order) {\n\
+_విధానము_  kochLine (length, order) {\n\
   //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
     ముందుకు_జరుగు(length);\n\
@@ -7323,10 +7317,10 @@ function kochLine (length, order) {\n\
 }\n\
 \n\
 \n\
-function kochLineవిలంబించు() {\n\
+_విధానము_  kochLineవిలంబించు() {\n\
 ;\n\
   చెరిపి_వేయి();\n\
-  var side = గరిష్ఠY() - కనిష్ఠY();\n\
+  _సర్వత్ర_  side = గరిష్ఠY() - కనిష్ఠY();\n\
   if (side > గరిష్ఠX() - కనిష్ఠX()) {\n\
     side = గరిష్ఠX() - కనిష్ఠX()\n\
   }\n\
@@ -7341,11 +7335,11 @@ function kochLineవిలంబించు() {\n\
   చిత్రీకరించు();\n\
   i = i + 1;\n\
   if (i < steps) {\n\
-    delay (kochLineDelay, 2000);\n\
+    delay (kochLineవిలంబించు, 2000);\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   steps = 6;\n\
@@ -7359,7 +7353,7 @@ koch_snowflake ='\
 // Koch Snowflakes -- draw an animated set of Koch snowflakes\n\
 \n\
 \n\
-function kochLine (length, order) {\n\
+_విధానము_  kochLine (length, order) {\n\
   //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
     ముందుకు_జరుగు(length);\n\
@@ -7375,7 +7369,7 @@ function kochLine (length, order) {\n\
   }\n\
 }\n\
 \n\
-function kochSnowflake (length, order) {\n\
+_విధానము_  kochSnowflake (length, order) {\n\
   కోణము (30);\n\
   స్థానము_మార్చు(-length/2,-.3 * length);\n\
   kochLine (length, order);\n\
@@ -7389,21 +7383,21 @@ function kochSnowflake (length, order) {\n\
 \n\
 ఆది_స్థితి();\n\
 \n\
-var steps = 6;\n\
-var span = 240;\n\
-var i = 0;\n\
+_సర్వత్ర_  steps = 6;\n\
+_సర్వత్ర_  span = 240;\n\
+_సర్వత్ర_  i = 0;\n\
 \n\
-function kochLines () {\n\
+_విధానము_  kochLines () {\n\
   for (i=0; i<steps; i++) {\n\
     స్థానము_మార్చు(span/2 - i*span/steps, - span/2);\n\
     kochLine (span,i);\n\
   }\n\
 }\n\
 \n\
-function kochSnowflakeDelay() {\n\
+_విధానము_  kochSnowflakeDelay() {\n\
 \n\
   చెరిపి_వేయి();\n\
-  var side = గరిష్ఠY() - కనిష్ఠY();\n\
+  _సర్వత్ర_  side = గరిష్ఠY() - కనిష్ఠY();\n\
   if (side > గరిష్ఠX() - కనిష్ఠX()) {\n\
     side = గరిష్ఠX() - కనిష్ఠX()\n\
   }\n\
@@ -7419,7 +7413,7 @@ function kochSnowflakeDelay() {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   కుంచికను_దాచు();\n\
   i = 0;\n\
   kochSnowflakeDelay();\n\
@@ -7428,7 +7422,7 @@ function ప్రదర్శన() {\n\
 koch_snowflake2 ='\
 // Koch Snowflake 2 -- Koch snowflake with embellishments\n\
 \n\
-function diamond(side) {\n\
+_విధానము_  diamond(side) {\n\
   ముందుకు_జరుగు(side)\n\
   ఎడమ_వైపు_తిరుగు(60)\n\
   ముందుకు_జరుగు(side)\n\
@@ -7439,7 +7433,7 @@ function diamond(side) {\n\
   ఎడమ_వైపు_తిరుగు(120)\n\
 }\n\
 \n\
-function dazzle( side, inset) {\n\
+_విధానము_  dazzle( side, inset) {\n\
   inner(side,inset)\n\
   newside = (side - Math.sqrt(3)* inset) /3\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -7476,7 +7470,7 @@ function dazzle( side, inset) {\n\
 }\n\
 \n\
 \n\
-function inner( side, inset) {\n\
+_విధానము_  inner( side, inset) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   ఎడమ_వైపు_తిరుగు( 30)\n\
   ముందుకు_జరుగు( inset)\n\
@@ -7494,14 +7488,14 @@ function inner( side, inset) {\n\
   కలమును_కింద_పెట్టు()\n\
 }\n\
 \n\
-function starOfDavid (side) {\n\
+_విధానము_  starOfDavid (side) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   వెనుకకు_జరుగు(2*side)\n\
   కుడి_వైపు_తిరుగు(30)\n\
   ముందుకు_జరుగు(side)\n\
   కుడి_వైపు_తిరుగు(60)\n\
   కలమును_కింద_పెట్టు()\n\
-  for (var i=0;i<6;i=i+1) {\n\
+  for (_సర్వత్ర_  i=0;i<6;i=i+1) {\n\
     inner(side, 10)\n\
     inner(side, 20)\n\
     dazzle(side, 30)\n\
@@ -7522,7 +7516,7 @@ function starOfDavid (side) {\n\
   }\n\
 }\n\
 \n\
-function kochSnowFlake (side, order) {\n\
+_విధానము_  kochSnowFlake (side, order) {\n\
   kochLine(side, order)\n\
   కుడి_వైపు_తిరుగు(120)\n\
   kochLine(side, order)\n\
@@ -7532,7 +7526,7 @@ function kochSnowFlake (side, order) {\n\
 } \n\
 \n\
 \n\
-function kochLine (length, order) {\n\
+_విధానము_  kochLine (length, order) {\n\
   //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
     ముందుకు_జరుగు(length);\n\
@@ -7549,7 +7543,7 @@ function kochLine (length, order) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .6\n\
   కుంచికను_దాచు();\n\
@@ -7565,7 +7559,7 @@ koch_triangles_stacked ='\
 // Koch Snowflakes, Stacked -- draw an set of stacked Koch snowflakes\n\
 \n\
 \n\
-function kochLine (length, order) {\n\
+_విధానము_  kochLine (length, order) {\n\
   //assume drawn on the current కోణము\n\
   if (order == 0) {\n\
     ముందుకు_జరుగు(length);\n\
@@ -7582,7 +7576,7 @@ function kochLine (length, order) {\n\
 }\n\
 \n\
 \n\
-function kochSnowflake (length, order) {\n\
+_విధానము_  kochSnowflake (length, order) {\n\
   కోణము (30);\n\
   స్థానము_మార్చు(-length/2,-.3 * length);\n\
   kochLine (length, order);\n\
@@ -7594,11 +7588,11 @@ function kochSnowflake (length, order) {\n\
 }\n\
   \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   size = .045* Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
   కుంచికను_దాచు();\n\
-  for (var i=0; i<6; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<6; i++) {\n\
     kochSnowflake( size*(i+1)*(i+1), i)\n\
   }\n\
 }\n\
@@ -7617,7 +7611,7 @@ columnMid = columns/2 * columnSize\n\
 rowMid = rows/2 * rowSize\n\
 \n\
 \n\
-var grid = [ [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],\n\
+_సర్వత్ర_  grid = [ [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],\n\
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],\n\
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],\n\
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],\n\
@@ -7635,9 +7629,9 @@ var grid = [ [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],\n\
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0]\n\
 ]\n\
 \n\
-var grid2 = Array( rows * columns)\n\
+_సర్వత్ర_  grid2 = Array( rows * columns)\n\
 \n\
-function drawGrid( grid) {\n\
+_విధానము_  drawGrid( grid) {\n\
   for (r=0; r < rows; r++) {\n\
     for ( c=0; c < columns; c++) {\n\
        //వ్రాయి( r + " " + c)\n\
@@ -7653,7 +7647,7 @@ function drawGrid( grid) {\n\
 }\n\
 \n\
 \n\
-function drawGrid2( grid, baseCaption) {\n\
+_విధానము_  drawGrid2( grid, baseCaption) {\n\
   for (r=0; r < rows; r++) {\n\
     for ( c=0; c < columns; c++) {\n\
        స్థానము_మార్చు( columnMid - c * columnSize , rowMid - r * rowSize)\n\
@@ -7669,7 +7663,7 @@ function drawGrid2( grid, baseCaption) {\n\
 }\n\
 \n\
 \n\
-function loadPattern( pattern) {\n\
+_విధానము_  loadPattern( pattern) {\n\
   for (r=0; r < rows; r++) {\n\
     mask = 0b1000000000000000\n\
     for ( c=0; c < columns; c++) {\n\
@@ -7680,7 +7674,7 @@ function loadPattern( pattern) {\n\
 }\n\
 \n\
 \n\
-function loadPattern2( pattern) {\n\
+_విధానము_  loadPattern2( pattern) {\n\
   for (r=0; r < rows; r++) {\n\
     mask = 0b00000000000000001\n\
     for ( c=0; c < columns; c++) {\n\
@@ -7694,11 +7688,11 @@ function loadPattern2( pattern) {\n\
   }\n\
 }\n\
 \n\
-function generation2( currentGrid) {\n\
-  var nextGrid = Array(rows*columns)\n\
+_విధానము_  generation2( currentGrid) {\n\
+  _సర్వత్ర_  nextGrid = Array(rows*columns)\n\
   for (r=0; r < rows; r++) {\n\
     for ( c=0; c < columns; c++) {\n\
-      var cell = r * columns + c\n\
+      _సర్వత్ర_  cell = r * columns + c\n\
       count = neighborCount2( currentGrid, cell)\n\
       //console.log ("row:" + r + " col:" + c + " count:" + count)\n\
       if (currentGrid[ cell]) { //alive\n\
@@ -7726,10 +7720,10 @@ function generation2( currentGrid) {\n\
 \n\
 \n\
 \n\
-function neighborCount( grid, cell) {\n\
-  var r = cell / columns\n\
-  var c = cell % columns\n\
-  var count = 0\n\
+_విధానము_  neighborCount( grid, cell) {\n\
+  _సర్వత్ర_  r = cell / columns\n\
+  _సర్వత్ర_  c = cell % columns\n\
+  _సర్వత్ర_  count = 0\n\
   if (r > 0) {\n\
     if ( c>0 && grid[r-1, c-1]) {\n\
       count = count + 1\n\
@@ -7758,14 +7752,14 @@ function neighborCount( grid, cell) {\n\
       count = count + 1\n\
     }\n\
   }\n\
-  return count\n\
+  _ఫలము_  count\n\
 }\n\
 \n\
 \n\
-function neighborCount2( grid, cell) {\n\
-  var r = Math.floor(cell / columns)\n\
-  var c = cell % columns\n\
-  var count = 0\n\
+_విధానము_  neighborCount2( grid, cell) {\n\
+  _సర్వత్ర_  r = Math.floor(cell / columns)\n\
+  _సర్వత్ర_  c = cell % columns\n\
+  _సర్వత్ర_  count = 0\n\
   if ( r>0) {\n\
     if ( c>0 && grid[(r-1)*columns + c-1]) {\n\
       count = count + 1\n\
@@ -7802,26 +7796,26 @@ function neighborCount2( grid, cell) {\n\
       //console.log("SE " + r + "," + c)\n\
     }\n\
   }\n\
-  return count\n\
+  _ఫలము_  count\n\
 }\n\
 \n\
-var past = [ Array( rows*columns).fill(false),\n\
+_సర్వత్ర_  past = [ Array( rows*columns).fill(false),\n\
              Array( rows*columns).fill(false),\n\
              Array( rows*columns).fill(false)\n\
            ]\n\
-var numPast = past.length\n\
+_సర్వత్ర_  numPast = past.length\n\
 \n\
-var lastPast = 0\n\
-var oscillatingCount = 0\n\
-var oscillatingPast\n\
-var oscillatingDuration = 3 // how many oscillations are visible before stopping\n\
+_సర్వత్ర_  lastPast = 0\n\
+_సర్వత్ర_  oscillatingCount = 0\n\
+_సర్వత్ర_  oscillatingPast\n\
+_సర్వత్ర_  oscillatingDuration = 3 // how many oscillations are visible before stopping\n\
 \n\
-function endTest (grid) {\n\
-  // return true if stable or oscillating\n\
-  var stable = true\n\
-  var oscillating2 = true\n\
-  var oscillating3 = true\n\
-  var oscillating = false\n\
+_విధానము_  endTest (grid) {\n\
+  // _ఫలము_  true if stable or oscillating\n\
+  _సర్వత్ర_  stable = true\n\
+  _సర్వత్ర_  oscillating2 = true\n\
+  _సర్వత్ర_  oscillating3 = true\n\
+  _సర్వత్ర_  oscillating = false\n\
   for (i = grid.length - 1; i>=0; i= i-1) {\n\
     // is the pattern stable?\n\
     if (grid[i] != past[lastPast] [i]) {\n\
@@ -7853,17 +7847,17 @@ function endTest (grid) {\n\
   }\n\
   lastPast = (lastPast+1) % numPast\n\
   //console.log( "stable:" + stable + " oscil2:" + oscillating2 + " oscil3:" + oscillating3+ " lastPast:" + lastPast)\n\
-  return ( stable || oscillating)\n\
+  _ఫలము_  ( stable || oscillating)\n\
 }\n\
 \n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -7888,7 +7882,7 @@ function caption (message) {\n\
 // in the following patterns, the left most bit\n\
 // is taken to be the highest bit. There is one\n\
 // number per row (for up to 32 bits).\n\
-var trafficLight = [\n\
+_సర్వత్ర_  trafficLight = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -7908,7 +7902,7 @@ var trafficLight = [\n\
   0b0000000000000000  //15\n\
 ]\n\
 \n\
-var greaterThan = [\n\
+_సర్వత్ర_  greaterThan = [\n\
   //5432109876543210\n\
   0b1000000000000000, //00\n\
   0b0100000000000000, //01\n\
@@ -7929,7 +7923,7 @@ var greaterThan = [\n\
 ]\n\
 \n\
 \n\
-var pulsar = [\n\
+_సర్వత్ర_  pulsar = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -7950,7 +7944,7 @@ var pulsar = [\n\
 ]\n\
 \n\
 \n\
-var glider = [\n\
+_సర్వత్ర_  glider = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -7971,7 +7965,7 @@ var glider = [\n\
 ]\n\
 \n\
 \n\
-var glider2 = [\n\
+_సర్వత్ర_  glider2 = [\n\
   //5432109876543210\n\
   0b0100000000000010, //00\n\
   0b0010000000000100, //01\n\
@@ -7992,7 +7986,7 @@ var glider2 = [\n\
 ]\n\
 \n\
 \n\
-var lwss = [ // light weight space ship\n\
+_సర్వత్ర_  lwss = [ // light weight space ship\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8013,7 +8007,7 @@ var lwss = [ // light weight space ship\n\
 ]\n\
 \n\
 \n\
-var lwss2 = [ // light weight space ship\n\
+_సర్వత్ర_  lwss2 = [ // light weight space ship\n\
   //5432109876543210\n\
   0b1010000000001001, //00\n\
   0b0001000000010000, //01\n\
@@ -8033,7 +8027,7 @@ var lwss2 = [ // light weight space ship\n\
   0b1001000000000101, //15\n\
 ]\n\
 \n\
-var beacons = [\n\
+_సర్వత్ర_  beacons = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //00\n\
@@ -8054,7 +8048,7 @@ var beacons = [\n\
 ]\n\
 \n\
 \n\
-var pentathalon = [\n\
+_సర్వత్ర_  pentathalon = [\n\
   //5432109876543210\n\
   0b0000000010000000, //00\n\
   0b0000000010000000, //01\n\
@@ -8075,7 +8069,7 @@ var pentathalon = [\n\
 ]\n\
 \n\
 \n\
-var mwss = [\n\
+_సర్వత్ర_  mwss = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8096,7 +8090,7 @@ var mwss = [\n\
 ]\n\
 \n\
 \n\
-var hwss = [\n\
+_సర్వత్ర_  hwss = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8117,7 +8111,7 @@ var hwss = [\n\
 ]\n\
 \n\
 \n\
-var oscillator14 = [\n\
+_సర్వత్ర_  oscillator14 = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8138,7 +8132,7 @@ var oscillator14 = [\n\
 ]\n\
 \n\
 \n\
-var tumbler = [\n\
+_సర్వత్ర_  tumbler = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8159,7 +8153,7 @@ var tumbler = [\n\
 ]\n\
 \n\
 \n\
-var unix = [ // period 6 oscillator\n\
+_సర్వత్ర_  unix = [ // period 6 oscillator\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8181,7 +8175,7 @@ var unix = [ // period 6 oscillator\n\
 \n\
 \n\
 \n\
-var greatOnOff = [\n\
+_సర్వత్ర_  greatOnOff = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8202,7 +8196,7 @@ var greatOnOff = [\n\
 ]\n\
 \n\
 \n\
-var birther = [\n\
+_సర్వత్ర_  birther = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b1100000000000000, //01\n\
@@ -8223,7 +8217,7 @@ var birther = [\n\
 ]\n\
 \n\
 \n\
-var blank = [\n\
+_సర్వత్ర_  blank = [\n\
   //5432109876543210\n\
   0b0000000000000000, //00\n\
   0b0000000000000000, //01\n\
@@ -8244,11 +8238,11 @@ var blank = [\n\
 ]\n\
 \n\
 \n\
-var gen\n\
-var numDemos = 16\n\
-var demoNumber\n\
+_సర్వత్ర_  gen\n\
+_సర్వత్ర_  numDemos = 16\n\
+_సర్వత్ర_  demoNumber\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   demoNumber = 0\n\
@@ -8256,7 +8250,7 @@ function ప్రదర్శన() {\n\
   nextGen()\n\
 }\n\
 \n\
-function nextGen() {\n\
+_విధానము_  nextGen() {\n\
   gen = gen + 1\n\
   if (gen < 100 && !endTest(grid)) {\n\
     generation2( grid)\n\
@@ -8343,7 +8337,7 @@ function nextGen() {\n\
 miura_origami ='\
 // Miura Origami -- fold pattern for the miura origami\n\
 \n\
-function horiz( size){\n\
+_విధానము_  horiz( size){\n\
   hy = గరిష్ఠY()\n\
   while (hy > కనిష్ఠY()) {\n\
     స్థానము_మార్చు(కనిష్ఠX(), hy)\n\
@@ -8353,7 +8347,7 @@ function horiz( size){\n\
   } \n\
 }\n\
 \n\
-function vert( size) {\n\
+_విధానము_  vert( size) {\n\
   vx = కనిష్ఠX()\n\
   while ( vx < గరిష్ఠX()) {\n\
     vy = గరిష్ఠY()\n\
@@ -8371,7 +8365,7 @@ function vert( size) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   size = 100\n\
@@ -8388,7 +8382,7 @@ mountain_tessellation ='\
 \n\
 colors = ["red", "white", "blue", "yellow", "green"]\n\
 \n\
-function shapeUp (side, fillColor) {\n\
+_విధానము_  shapeUp (side, fillColor) {\n\
   // assume pointing in direction of base\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు(3* side)\n\
@@ -8404,7 +8398,7 @@ function shapeUp (side, fillColor) {\n\
   ఆకారము_ముగించు( fillColor)\n\
 }\n\
 \n\
-function mountainUnit(side){\n\
+_విధానము_  mountainUnit(side){\n\
   కలమును_కింద_పెట్టు()\n\
   shapeUp(side, "darkgreen")//1,1\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -8435,18 +8429,18 @@ function mountainUnit(side){\n\
 }\n\
 \n\
 // nextColor could be completely random, if desired\n\
-function nextColor() {\n\
+_విధానము_  nextColor() {\n\
   c = colors[ count % color.length]\n\
   count = count + 1\n\
-  return c\n\
+  _ఫలము_  c\n\
 }\n\
 \n\
 \n\
-function newRow(lastx, lasty) {\n\
-  // function to determine where the new row should start\n\
+_విధానము_  newRow(lastx, lasty) {\n\
+  // _విధానము_  to determine where the new row should start\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   side = 20\n\
@@ -8461,9 +8455,9 @@ console.log("xy<: " + కనిష్ఠX() + " " + కనిష్ఠY())\n\
   // column when end is off screen\n\
 \n\
   // while ( x<గరిష్ఠX() && y>కనిష్ఠY()) {\n\
-  var done = false\n\
-  var i = 0\n\
-  var sqrt3 = Math.sqrt(3)\n\
+  _సర్వత్ర_  done = false\n\
+  _సర్వత్ర_  i = 0\n\
+  _సర్వత్ర_  sqrt3 = Math.sqrt(3)\n\
   while (!done){\n\
 console.log("xy: " + i + " " + mx + " " + my)\n\
     స్థానము_మార్చు(mx, my)\n\
@@ -8521,7 +8515,7 @@ naifeh_ajlun ='\
 // try calulating the కోణము\n\
 \n\
 \n\
-function quadrangle( ){\n\
+_విధానము_  quadrangle( ){\n\
   // start at lower left corner of outer square\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు(longSide)\n\
@@ -8539,7 +8533,7 @@ function quadrangle( ){\n\
   ఆకారము_ముగించు("lightblue")\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   rows = 4\n\
@@ -8558,9 +8552,9 @@ console.log ("side:"+side)\n\
   // center this more or less\n\
   స్థానము_మార్చు(-.5 * columns * (shortSide + longSide) + .4 *side, .5 * (rows-2) * (shortSide + longSide) + .4*side)\n\
   ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
-  for (var k=0; k<rows; k++) {\n\
-    for (var j=0; j<columns; j++) { // across row\n\
-      for (var i=0; i<4; i++) { // around inner square\n\
+  for (_సర్వత్ర_  k=0; k<rows; k++) {\n\
+    for (_సర్వత్ర_  j=0; j<columns; j++) { // across row\n\
+      for (_సర్వత్ర_  i=0; i<4; i++) { // around inner square\n\
         quadrangle()\n\
       }\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -8599,12 +8593,12 @@ The quadrangle must be symmetrical, in that the short sides are equal and\n\
 the long sides are equal. The ratio between the two may vary.\n\
 */\n\
 \n\
-function bowties (count, back){\n\
+_విధానము_  bowties (count, back){\n\
   //assume on left edge pointing up, moving to right\n\
   // routine has invariance\n\
   // back = 0 big end first, =1 small end first\n\
   కుడి_వైపు_తిరుగు( 90)\n\
-  for (var i=0; i<count; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<count; i++) {\n\
     కలమును_కింద_పెట్టు()\n\
     if (i % 2 == back) {\n\
       downKite()\n\
@@ -8622,7 +8616,7 @@ function bowties (count, back){\n\
 }\n\
 \n\
 \n\
-function upKite() {\n\
+_విధానము_  upKite() {\n\
   //assume direction is in the axis of the kite\n\
   ఆకారము_ప్రారంభించు()\n\
   కుడి_వైపు_తిరుగు( shortAngle)\n\
@@ -8637,7 +8631,7 @@ function upKite() {\n\
   ఆకారము_ముగించు("lightblue")\n\
 }\n\
 \n\
-function downKite() {\n\
+_విధానము_  downKite() {\n\
   //assume direction is in the axis of the kite\n\
   ఆకారము_ప్రారంభించు()\n\
   కుడి_వైపు_తిరుగు( longAngle)\n\
@@ -8652,11 +8646,11 @@ function downKite() {\n\
   ఆకారము_ముగించు("lightblue")\n\
 }\n\
 \n\
-function kites( count, back) {\n\
+_విధానము_  kites( count, back) {\n\
   //assume pointing up, perpendicular to flow\n\
   // routine has invariance\n\
   ఎడమ_వైపు_తిరుగు(180)\n\
-  for( var i=0; i<count; i++) {\n\
+  for( _సర్వత్ర_  i=0; i<count; i++) {\n\
     కలమును_కింద_పెట్టు()\n\
     if (i % 2 == back) {\n\
       downKite()\n\
@@ -8678,7 +8672,7 @@ function kites( count, back) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
   side = 2.5 * Math.min( గరిష్ఠX()/9, గరిష్ఠY()/8)\n\
@@ -8704,7 +8698,7 @@ function ప్రదర్శన() {\n\
   కుడి_వైపు_తిరుగు(90)\n\
   కలమును_కింద_పెట్టు()\n\
 \n\
-  for (var i=0; i<verticalCount; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<verticalCount; i++) {\n\
     bowties( horizontalCount, i % 2)\n\
     kites( horizontalCount+1, 1 - (i % 2)) // change 1 to 0 and 0 to 1\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -8726,18 +8720,18 @@ naifeh_jeresh ='\
 \n\
 // GLOBALS\n\
 // \n\
-var sColor = "నలుపు"  // stroke color\n\
-var sWidth = 3        // stroke width\n\
-var fColor = "white"  // fill color\n\
-var bColor = "green"  // background color\n\
+_సర్వత్ర_  sColor = "నలుపు"  // stroke color\n\
+_సర్వత్ర_  sWidth = 3        // stroke width\n\
+_సర్వత్ర_  fColor = "white"  // fill color\n\
+_సర్వత్ర_  bColor = "green"  // background color\n\
 \n\
 // FUNCTIONS\n\
 //\n\
-function tri( side, pointAngle, fill) {\n\
+_విధానము_  tri( side, pointAngle, fill) {\n\
   if (fill) {\n\
     ఆకారము_ప్రారంభించు()\n\
   }\n\
-  for (var i=0; i<3; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<3; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     ఎడమ_వైపు_తిరుగు(60 - pointAngle)\n\
     ముందుకు_జరుగు( side)\n\
@@ -8749,14 +8743,14 @@ function tri( side, pointAngle, fill) {\n\
 }\n\
 \n\
 \n\
-function jeresh (sid, pAngle, fill) {\n\
-  for (var i=0;i<6;i++) {\n\
+_విధానము_  jeresh (sid, pAngle, fill) {\n\
+  for (_సర్వత్ర_  i=0;i<6;i++) {\n\
     కలమును_కింద_పెట్టు()\n\
     tri( sid, pAngle, fill)\n\
 \n\
-    var tx = కుంచిక.స్థానము.x\n\
-    var ty = కుంచిక.స్థానము.y\n\
-    var tHeading = కుంచిక.కోణము\n\
+    _సర్వత్ర_  tx = కుంచిక.స్థానము.x\n\
+    _సర్వత్ర_  ty = కుంచిక.స్థానము.y\n\
+    _సర్వత్ర_  tHeading = కుంచిక.కోణము\n\
     కలమును_పైకి_ఎత్తు()\n\
     ముందుకు_జరుగు( sid)\n\
     ఎడమ_వైపు_తిరుగు( 60 - pAngle)\n\
@@ -8765,7 +8759,7 @@ function jeresh (sid, pAngle, fill) {\n\
     ముందుకు_జరుగు( sid)\n\
     ఎడమ_వైపు_తిరుగు( 60)\n\
 \n\
-    for (var j=0; j<3; j++) {\n\
+    for (_సర్వత్ర_  j=0; j<3; j++) {\n\
       కలమును_కింద_పెట్టు()\n\
       tri(sid, pAngle, fill)\n\
       కలమును_పైకి_ఎత్తు()\n\
@@ -8782,7 +8776,7 @@ function jeresh (sid, pAngle, fill) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   /* can vary point కోణము.\n\
   0 and 120 is a hex tesselation\n\
   60 and 180 are triangles\n\
@@ -8792,8 +8786,8 @@ function ప్రదర్శన() {\n\
   */\n\
   ఆది_స్థితి()\n\
   కలమును_పైకి_ఎత్తు()\n\
-  var pointAngle = 30\n\
-  var side = 60\n\
+  _సర్వత్ర_  pointAngle = 30\n\
+  _సర్వత్ర_  side = 60\n\
   side = .2* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //center a bit\n\
   స్థానము_మార్చు(side, -.3 * side)\n\
@@ -8813,7 +8807,7 @@ naifeh_mamluk ='\
 // for more information see https://stevennaifeh.com\n\
 \n\
 \n\
-function decagon(s, fcolor) {\n\
+_విధానము_  decagon(s, fcolor) {\n\
   // position at base of the decagon  parallel to bottom\n\
   // invariant\n\
   // note:\n\
@@ -8847,7 +8841,7 @@ function decagon(s, fcolor) {\n\
   ఆకారము_ముగించు( fcolor)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   కుడి_వైపు_తిరుగు(90)\n\
@@ -8859,7 +8853,7 @@ function ప్రదర్శన() {\n\
   d1 = side/2\n\
   d2 = side * Math.sqrt(3)/2\n\
 \n\
-  for( var i=0; i<6; i++) {\n\
+  for( _సర్వత్ర_  i=0; i<6; i++) {\n\
     decagon( side, "blue")\n\
 \n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -8887,7 +8881,7 @@ naifeh_mizen ='\
 // for more information see https://stevennaifeh.com\n\
 \n\
 \n\
-function v (side, fColor) {\n\
+_విధానము_  v (side, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   if (fColor != "") {\n\
@@ -8912,10 +8906,10 @@ function v (side, fColor) {\n\
 }\n\
 \n\
 \n\
-function mizen( side, lColor, fColor) {\n\
+_విధానము_  mizen( side, lColor, fColor) {\n\
   రంగు_మార్చు(lColor)\n\
   కుడి_వైపు_తిరుగు(120)\n\
-  for (var i=0; i<6; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<6; i++) {\n\
     v( side, fColor)\n\
     కలమును_పైకి_ఎత్తు()\n\
     కుడి_వైపు_తిరుగు(30)\n\
@@ -8944,7 +8938,7 @@ function mizen( side, lColor, fColor) {\n\
 }\n\
 \n\
 \n\
-function mizenSimple() {\n\
+_విధానము_  mizenSimple() {\n\
   bColor = "red"\n\
   lColor = "white"\n\
   background ("tan")\n\
@@ -8962,7 +8956,7 @@ function mizenSimple() {\n\
   mizen( side, "white", "")\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   side = 40 // 1/2 basic face of hexagon, width...\n\
@@ -8975,7 +8969,7 @@ naifeh_mizen6 ='\
 // Naifeh Mizen Six -- inspired by the art of Steven Naifeh of the same name\n\
 // for more information see https://stevennaifeh.com\n\
 \n\
-function v (side, fColor) {\n\
+_విధానము_  v (side, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   if (fColor != "") {\n\
@@ -9000,12 +8994,12 @@ function v (side, fColor) {\n\
 }\n\
 \n\
 \n\
-function mizen( side, lColor, fColor) {\n\
+_విధానము_  mizen( side, lColor, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // ends up rotated 120 CW at same point\n\
   రంగు_మార్చు(lColor)\n\
   కుడి_వైపు_తిరుగు(120)\n\
-  for (var i=0; i<6; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<6; i++) {\n\
     కలమును_కింద_పెట్టు()\n\
     v( side, fColor)\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -9036,9 +9030,9 @@ function mizen( side, lColor, fColor) {\n\
 \n\
 \n\
 \n\
-function mizen6(side) {\n\
+_విధానము_  mizen6(side) {\n\
   కలమును_పైకి_ఎత్తు()\n\
-  for (var j=0; j<6; j++) {\n\
+  for (_సర్వత్ర_  j=0; j<6; j++) {\n\
     mx = కుంచిక.స్థానము.x\n\
     my = కుంచిక.స్థానము.y\n\
     ma = కుంచిక.కోణము\n\
@@ -9063,7 +9057,7 @@ function mizen6(side) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .08 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   //center canvas more or less\n\
@@ -9083,7 +9077,7 @@ row of slashes\n\
 This does not support using a wider pen width.\n\
 */\n\
 \n\
-function backslash (fColor) {\n\
+_విధానము_  backslash (fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   ఆకారము_ప్రారంభించు()\n\
@@ -9099,7 +9093,7 @@ function backslash (fColor) {\n\
   ఆకారము_ముగించు(fColor)\n\
 }\n\
 \n\
-function slash (fColor) {\n\
+_విధానము_  slash (fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   ఆకారము_ప్రారంభించు()\n\
@@ -9115,7 +9109,7 @@ function slash (fColor) {\n\
   ఆకారము_ముగించు(fColor)\n\
 }\n\
 \n\
-function dash () {\n\
+_విధానము_  dash () {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
   ఆకారము_ప్రారంభించు()\n\
@@ -9131,12 +9125,12 @@ function dash () {\n\
   ఆకారము_ముగించు(fColor)\n\
 }\n\
 \n\
-function dashBackslashes(count, mode, fColor) {\n\
+_విధానము_  dashBackslashes(count, mode, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // mode = 0 normal; mode =1 skip first\n\
   // invariant\n\
   backup = 0\n\
-  for (var i=0; i<count; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<count; i++) {\n\
     కలమును_కింద_పెట్టు()\n\
     if (i % 2 == 0) {\n\
       if (mode == 0 || i != 0){\n\
@@ -9166,10 +9160,10 @@ function dashBackslashes(count, mode, fColor) {\n\
 }\n\
 \n\
 \n\
-function slashes(count, fColor) {\n\
+_విధానము_  slashes(count, fColor) {\n\
   // assume pointing up at upper left corner\n\
   // invariant\n\
-  for (var i=0; i<count; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<count; i++) {\n\
     slash( fColor)\n\
     కలమును_పైకి_ఎత్తు()\n\
     కుడి_వైపు_తిరుగు(90)\n\
@@ -9186,7 +9180,7 @@ function slashes(count, fColor) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   fColor = "blue"\n\
   size = .17 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -9252,9 +9246,9 @@ naifeh_saida ='\
 // for more information see https://stevennaifeh.com\n\
 \n\
 \n\
-function square (side) {\n\
+_విధానము_  square (side) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++){\n\
+  for (_సర్వత్ర_  i=0; i<4; i++){\n\
     ముందుకు_జరుగు(side)\n\
     కుడి_వైపు_తిరుగు(90)\n\
   }\n\
@@ -9262,9 +9256,9 @@ function square (side) {\n\
 }\n\
 \n\
 \n\
-function layer (side, offsetAngle) {\n\
+_విధానము_  layer (side, offsetAngle) {\n\
   ఎడమ_వైపు_తిరుగు( offsetAngle)\n\
-  for (var i=0; i<8; i++){\n\
+  for (_సర్వత్ర_  i=0; i<8; i++){\n\
     కలమును_పైకి_ఎత్తు()\n\
     ముందుకు_జరుగు( side)\n\
     ఎడమ_వైపు_తిరుగు(45)\n\
@@ -9279,7 +9273,7 @@ function layer (side, offsetAngle) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   side = 14\n\
@@ -9303,9 +9297,9 @@ naifeh_saida_inverse ='\
 // for more information see https://stevennaifeh.com\n\
 \n\
 \n\
-function antilayer (side, innerSide, offset) {\n\
+_విధానము_  antilayer (side, innerSide, offset) {\n\
   ఎడమ_వైపు_తిరుగు( offset)\n\
-  for (var i=0; i<8; i++){\n\
+  for (_సర్వత్ర_  i=0; i<8; i++){\n\
     కలమును_పైకి_ఎత్తు()\n\
     ముందుకు_జరుగు( side)\n\
     కలమును_కింద_పెట్టు()\n\
@@ -9334,7 +9328,7 @@ function antilayer (side, innerSide, offset) {\n\
   కుడి_వైపు_తిరుగు(offset)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
@@ -9362,15 +9356,15 @@ nested_hexagons ='\
 // Nested Hexagons -- draw a set of nested hexagons\n\
 \n\
 // draw a polygon of n sides of length m\n\
-function polygon(sides,side) {\n\
-  ఆవర్తించు(sides, function () {\n\
+_విధానము_  polygon(sides,side) {\n\
+  ఆవర్తించు(sides, _విధానము_  () {\n\
     ముందుకు_జరుగు(side);\n\
     కుడి_వైపు_తిరుగు(360/sides);\n\
   });\n\
 }\n\
 \n\
 // draw a set of nested hexagons\n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
    size = గరిష్ఠY()\n\
    if (గరిష్ఠX() < size) {\n\
      size = గరిష్ఠX()\n\
@@ -9393,8 +9387,8 @@ nested_squares ='\
 // Nested Squares -- draw a set of nested squares\n\
 \n\
 //draw a square\n\
-function square(side) {\n\
-   ఆవర్తించు(4, function () {\n\
+_విధానము_  square(side) {\n\
+   ఆవర్తించు(4, _విధానము_  () {\n\
       ముందుకు_జరుగు(side);\n\
       కుడి_వైపు_తిరుగు(90);\n\
    });\n\
@@ -9402,7 +9396,7 @@ function square(side) {\n\
 \n\
 \n\
 // draw some nested squares\n\
-function nestedSquares(count) {\n\
+_విధానము_  nestedSquares(count) {\n\
   చెరిపి_వేయి();\n\
   స్థానము_మార్చు(0,0);\n\
   కుంచికను_దాచు();\n\
@@ -9420,29 +9414,29 @@ function nestedSquares(count) {\n\
   }\n\
 }\n\
 \n\
-function demo1() {\n\
+_విధానము_  demo1() {\n\
   ఆది_స్థితి()\n\
   size = 2* గరిష్ఠY()\n\
   if (2* గరిష్ఠX() < size) {\n\
     size = 2*గరిష్ఠX()\n\
   }\n\
   number = .9 * size /4  // 4 is the difference in square size\n\
-  function nest25 () {\n\
+  _విధానము_  nest25 () {\n\
     nestedSquares (size);\n\
   }\n\
-  // animate a simple parameterless function\n\
+  // animate a simple parameterless _విధానము_ \n\
   ఆడించు( nest25, 200);\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
-  // animate with function needing a parameter passed\n\
+_విధానము_  ప్రదర్శన() {\n\
+  // animate with _విధానము_  needing a parameter passed\n\
   ఆది_స్థితి()\n\
   size = 2* గరిష్ఠY()\n\
   if (2* గరిష్ఠX() < size) {\n\
     size = 2*గరిష్ఠX()\n\
   }\n\
   number = .9 * size /4  // 4 is the difference in square size\n\
-  ఆడించు( function () { nestedSquares(number)} ,200);\n\
+  ఆడించు( _విధానము_  () { nestedSquares(number)} ,200);\n\
 }\n\
 '
 pentahex ='\
@@ -9452,12 +9446,12 @@ pentahex ='\
 // token. Each piece consists of a set of such moves to from the outline\n\
 // of the piece.\n\
 \n\
-function r() {\n\
+_విధానము_  r() {\n\
   ముందుకు_జరుగు( side)\n\
   కుడి_వైపు_తిరుగు( 60)\n\
 }\n\
 \n\
-function l() {\n\
+_విధానము_  l() {\n\
   ముందుకు_జరుగు( side)\n\
   ఎడమ_వైపు_తిరుగు( 60)\n\
 }\n\
@@ -9485,7 +9479,7 @@ function l() {\n\
   S5=[l,l,l,r,r,l,r,l,l,r,l,l,l,l,r,r,l,r,l,l,r,l]\n\
   p5=[l,l,r,l,r,l,l,r,l,l,l,r,l,l,r,r,l,l]\n\
 \n\
-function shape( bx, by, axis, turns, fillColor ) {\n\
+_విధానము_  shape( bx, by, axis, turns, fillColor ) {\n\
   // draw a shape at board position bx, by, with the piece oriented\n\
   // on one of six axises. The shape consists of an array of turns.\n\
   కలమును_పైకి_ఎత్తు()\n\
@@ -9514,13 +9508,13 @@ function shape( bx, by, axis, turns, fillColor ) {\n\
   వెనుకకు_జరుగు(side)\n\
   కుడి_వైపు_తిరుగు( 60)\n\
 \n\
-// return to the start position, not really necessary\n\
+// _ఫలము_  to the start position, not really necessary\n\
   ఎడమ_వైపు_తిరుగు(60)\n\
   ముందుకు_జరుగు( side)\n\
   ఎడమ_వైపు_తిరుగు( 30)\n\
 }\n\
 \n\
-function drawAll() {\n\
+_విధానము_  drawAll() {\n\
   ఆది_స్థితి()\n\
   side = 15\n\
   baseX = -200\n\
@@ -9550,7 +9544,7 @@ function drawAll() {\n\
   shape(9,12,0,X5)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
@@ -9589,15 +9583,15 @@ polygon ='\
 // Polygon -- draw a polygon of n sides of length m\n\
 \n\
 // draw a polygon with n sides of length m\n\
-function polygon(sides,side) {\n\
-  ఆవర్తించు(sides, function () {\n\
+_విధానము_  polygon(sides,side) {\n\
+  ఆవర్తించు(sides, _విధానము_  () {\n\
     ముందుకు_జరుగు(side);\n\
     కుడి_వైపు_తిరుగు(360/sides);\n\
   });\n\
 }\n\
 \n\
 // draw a random polygon\n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
    ఆది_స్థితి();\n\
    side = గరిష్ఠY()\n\
    if (గరిష్ఠX() < side) {\n\
@@ -9612,12 +9606,12 @@ function ప్రదర్శన() {\n\
 random_stars ='\
 // Random Stars -- draw stars randomly on the canvas\n\
 \n\
-function star (side, sColor) {\n\
+_విధానము_  star (side, sColor) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు(.54*side)\n\
   turn (180-18)\n\
   కలమును_కింద_పెట్టు()\n\
-  var i=0\n\
+  _సర్వత్ర_  i=0\n\
   ఆకారము_ప్రారంభించు()\n\
   while (i<5){\n\
     ముందుకు_జరుగు(side)\n\
@@ -9629,7 +9623,7 @@ function star (side, sColor) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   for (i=1; i< 150; i=i+1) {\n\
     స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య(కనిష్ఠX(),గరిష్ఠX()), యాదృచ్ఛిక_సంఖ్య( కనిష్ఠY(),గరిష్ఠY()))\n\
@@ -9643,12 +9637,12 @@ random_stick_men ='\
 // Random Stick Men -- draw stick men randomly on the canvas\n\
 \n\
 // stick man\n\
-function stickMan (height) {\n\
-  var headDiameter = height/4;\n\
-  var torsoLength = height/3;\n\
-  var neckLength = torsoLength/3\n\
-  var armLength = height/3;\n\
-  var legLength = height/2;\n\
+_విధానము_  stickMan (height) {\n\
+  _సర్వత్ర_  headDiameter = height/4;\n\
+  _సర్వత్ర_  torsoLength = height/3;\n\
+  _సర్వత్ర_  neckLength = torsoLength/3\n\
+  _సర్వత్ర_  armLength = height/3;\n\
+  _సర్వత్ర_  legLength = height/2;\n\
 \n\
   //assume center of man is center of torso and up is in the pointed direction\n\
   కలమును_పైకి_ఎత్తు();\n\
@@ -9685,7 +9679,7 @@ function stickMan (height) {\n\
   ముందుకు_జరుగు(torsoLength/2);\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   number = 0.0005 *  గరిష్ఠX() * గరిష్ఠY() // uniform density no matter size\n\
@@ -9702,7 +9696,7 @@ rhombic_star_tessellation ='\
 colors = ["red", "white", "blue", "yellow", "green"]\n\
 numColors = colors.length\n\
 \n\
-function rh(side, fillColor) {\n\
+_విధానము_  rh(side, fillColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు( side)\n\
   ఎడమ_వైపు_తిరుగు( 45)\n\
@@ -9715,8 +9709,8 @@ function rh(side, fillColor) {\n\
   ఆకారము_ముగించు(fillColor)\n\
 }\n\
 \n\
-function sideBySide( count, side, fillColor) {\n\
-  for( var j=0; j<count; j++) {\n\
+_విధానము_  sideBySide( count, side, fillColor) {\n\
+  for( _సర్వత్ర_  j=0; j<count; j++) {\n\
     కలమును_కింద_పెట్టు()\n\
     rh( side, fillColor)\n\
     కలమును_పైకి_ఎత్తు()\n\
@@ -9729,13 +9723,13 @@ function sideBySide( count, side, fillColor) {\n\
   కుడి_వైపు_తిరుగు( (180-45)/2)\n\
 }\n\
 \n\
-function cent(side, count) {\n\
-  for( var i=0; i<8; i++) { // draw the center\n\
+_విధానము_  cent(side, count) {\n\
+  for( _సర్వత్ర_  i=0; i<8; i++) { // draw the center\n\
     rh( side, colors[0%numColors])\n\
     ఎడమ_వైపు_తిరుగు( 45)\n\
   }\n\
 \n\
-  for( var i=0; i<8; i++) { // draw the second tier\n\
+  for( _సర్వత్ర_  i=0; i<8; i++) { // draw the second tier\n\
     ముందుకు_జరుగు( side)\n\
     rh( side, colors[1%numColors])\n\
     కుడి_వైపు_తిరుగు( 45)\n\
@@ -9745,8 +9739,8 @@ function cent(side, count) {\n\
     ఎడమ_వైపు_తిరుగు(45)\n\
   }\n\
 \n\
-  for( var j=2; j<count; j++) { // draw the other tiers\n\
-    for( var i=0; i<8; i++) {\n\
+  for( _సర్వత్ర_  j=2; j<count; j++) { // draw the other tiers\n\
+    for( _సర్వత్ర_  i=0; i<8; i++) {\n\
       ముందుకు_జరుగు( j*side)\n\
       కలమును_కింద_పెట్టు()\n\
       rh( side, colors[j%numColors])\n\
@@ -9759,13 +9753,13 @@ function cent(side, count) {\n\
 }\n\
 \n\
 // nextColor could be completely random, if desired\n\
-function nextColor() { \n\
+_విధానము_  nextColor() { \n\
   c = colors[ count % color.length]\n\
   count = count + 1\n\
-  return c\n\
+  _ఫలము_  c\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   side = .075 * Math.min(గరిష్ఠX(), గరిష్ఠY())\n\
@@ -9785,7 +9779,7 @@ c6 = "red"\n\
 c7 = "yellow"\n\
 c8 = "నారింజ"\n\
 \n\
-function pr(fill) {\n\
+_విధానము_  pr(fill) {\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు(sidea)\n\
   ఎడమ_వైపు_తిరుగు(180-angleB)\n\
@@ -9800,7 +9794,7 @@ function pr(fill) {\n\
   ఆకారము_ముగించు(fill)\n\
 }\n\
 \n\
-function pl(fill) {\n\
+_విధానము_  pl(fill) {\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు(sidea)\n\
   కుడి_వైపు_తిరుగు(180-angleB)\n\
@@ -9816,7 +9810,7 @@ function pl(fill) {\n\
 }\n\
 \n\
 \n\
-function కలమును_పైకి_ఎత్తు() { // penta unit\n\
+_విధానము_  కలమును_పైకి_ఎత్తు() { // penta unit\n\
   pr(c1)\n\
   pl(c2)\n\
 \n\
@@ -9843,7 +9837,7 @@ function కలమును_పైకి_ఎత్తు() { // penta unit\n\
   pl(c8)\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   size = 10\n\
@@ -9887,7 +9881,7 @@ function ప్రదర్శన() {\n\
 serendipitous ='\
 // Serendipitous Circles -- draw ellipses with quadratic equation\n\
 // from Byte magazine Aug 1977\n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   x1 = యాదృచ్ఛిక_సంఖ్య(కనిష్ఠX(),గరిష్ఠX())\n\
   y1 = యాదృచ్ఛిక_సంఖ్య(కనిష్ఠY(),గరిష్ఠY())\n\
@@ -9921,26 +9915,26 @@ Note how each level is similar to the\n\
 preceding level\n\
 \n\
 This also demonstrates the use of the\n\
-delay function and powerful concepts\n\
-of function redefinition and\n\
+delay function  and powerful concepts\n\
+of function  redefinition and\n\
 recursion.\n\
-Function redefinition is a function\n\
-defined within a function so that each\n\
-time the outer function is invoked a new\n\
-copy of the inner function is created.\n\
-In this example, a part() function is\n\
+Function redefinition is a function \n\
+defined within a function  so that each\n\
+time the outer function  is invoked a new\n\
+copy of the inner function  is created.\n\
+In this example, a part() function  is\n\
 created when either the sierpinski or\n\
 halfSierpinski functions are invoked.\n\
-Recursion is a function that calls\n\
+Recursion is a function  that calls\n\
 itself. Recursive functions must include\n\
 some test to stop the recursion to\n\
 prevent the dreaded infinite loop.\n\
 */\n\
-function halfSierpinski(size, level) {\n\
+_విధానము_  halfSierpinski(size, level) {\n\
   if (level == 0)\n\
     ముందుకు_జరుగు(size);\n\
   else {\n\
-    function part() {\n\
+    _విధానము_  part() {\n\
       halfSierpinski(size, level - 1);\n\
       ఎడమ_వైపు_తిరుగు(45);\n\
       ముందుకు_జరుగు(size * Math.sqrt(2));\n\
@@ -9955,8 +9949,8 @@ function halfSierpinski(size, level) {\n\
   }\n\
 }\n\
 \n\
-function sierpinski(size, level) {\n\
-  function part () {\n\
+_విధానము_  sierpinski(size, level) {\n\
+  _విధానము_  part () {\n\
     halfSierpinski(size, level);\n\
     కుడి_వైపు_తిరుగు(90);\n\
     ముందుకు_జరుగు(size);\n\
@@ -9966,9 +9960,9 @@ function sierpinski(size, level) {\n\
   part ();\n\
 }\n\
 \n\
-var i = 1; // a global variable used for each iteration of delayed\n\
+_సర్వత్ర_  i = 1; // a global variable used for each iteration of delayed\n\
 \n\
-function delayed() {\n\
+_విధానము_  delayed() {\n\
   if (i<7) {\n\
     చెరిపి_వేయి();\n\
     కుంచికను_దాచు();\n\
@@ -9980,8 +9974,8 @@ function delayed() {\n\
     కోణము(0);\n\
 \n\
     size = 1.8 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
-    var sides = 4 * 2**i -3 // number of sides\n\
-    var side = size/sides;\n\
+    _సర్వత్ర_  sides = 4 * 2**i -3 // number of sides\n\
+    _సర్వత్ర_  side = size/sides;\n\
     ఎడమ_వైపు_తిరుగు(90)\n\
     ముందుకు_జరుగు(side/2)\n\
     కుడి_వైపు_తిరుగు(90)\n\
@@ -9999,15 +9993,15 @@ function delayed() {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   i = 0;\n\
   delayed ();\n\
 }\n\
 '
 sierpinski_triangle ='\
 // Sierpinski Triangle -- draw a recursive triangular fractal\n\
-// a recursive function is one that calls itself\n\
-function sierpinski (order, side) {\n\
+// a recursive _విధానము_  is one that calls itself\n\
+_విధానము_  sierpinski (order, side) {\n\
     if (order == 0) {\n\
         ఆకారము_ప్రారంభించు()\n\
         ముందుకు_జరుగు(side)\n\
@@ -10038,7 +10032,7 @@ function sierpinski (order, side) {\n\
 }\n\
 \n\
 \n\
-function delayed() {\n\
+_విధానము_  delayed() {\n\
     if (i < 7) {\n\
         sier( i)\n\
         i = i+1\n\
@@ -10047,7 +10041,7 @@ function delayed() {\n\
 }\n\
 \n\
 \n\
-function sier (order) {\n\
+_విధానము_  sier (order) {\n\
     ఆది_స్థితి()\n\
     కుంచికను_దాచు()\n\
     side = 2* Math.min(గరిష్ఠX(),గరిష్ఠY()) -20\n\
@@ -10062,9 +10056,9 @@ function sier (order) {\n\
     వ్రాయి("Sierpinski triangle of order " + order)  \n\
 }\n\
 \n\
-var i ; //global iteration variable\n\
+_సర్వత్ర_  i ; //global iteration variable\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
     ఆది_స్థితి()\n\
     i = 0\n\
     delayed()\n\
@@ -10079,24 +10073,24 @@ simple_story ='\
 \n\
 //**** GLOBALS ****\n\
 \n\
-var frameNumber = 0\n\
-var frameDelay = 0\n\
+_సర్వత్ర_  frameNumber = 0\n\
+_సర్వత్ర_  frameDelay = 0\n\
 \n\
 \n\
 //**** FUNCTIONS ****\n\
 \n\
-function explain( text) {\n\
+_విధానము_  explain( text) {\n\
   // lines within the text string are separated with an at "@" character.\n\
   ఆది_స్థితి();\n\
-  var cWidth = 2* గరిష్ఠX();\n\
-  var cHeight = 2* గరిష్ఠY();\n\
-  var lineNumber = 0;\n\
+  _సర్వత్ర_  cWidth = 2* గరిష్ఠX();\n\
+  _సర్వత్ర_  cHeight = 2* గరిష్ఠY();\n\
+  _సర్వత్ర_  lineNumber = 0;\n\
   స్థానము_మార్చు(-.90 * cWidth + గరిష్ఠX(), .9 * cHeight - గరిష్ఠY());\n\
   కోణము(90);\n\
   అక్షరరూపము_స్థాపించు("bold 20px arial,sans-serif");\n\
 \n\
-  var lines = text.split("@");\n\
-  for (var i=0; i<lines.length; i++) {\n\
+  _సర్వత్ర_  lines = text.split("@");\n\
+  for (_సర్వత్ర_  i=0; i<lines.length; i++) {\n\
     console.log( lines[i])\n\
     స్థానము_మార్చు(-.90 * cWidth + గరిష్ఠX(), గరిష్ఠY() -(i+1) * .1 * cHeight)\n\
     వ్రాయి(lines[i]);\n\
@@ -10105,11 +10099,11 @@ function explain( text) {\n\
   కుంచికను_దాచు();\n\
 }\n\
 \n\
-function textDemo () {\n\
+_విధానము_  textDemo () {\n\
   explain ("In a time@long, long ago@and a place far, far away@there was a battle@that changed the history@of the entire@universe.");\n\
 }\n\
 \n\
-function frame() {\n\
+_విధానము_  frame() {\n\
   switch (frameNumber) {\n\
   case 0:\n\
     frameDelay = 1000;\n\
@@ -10199,7 +10193,7 @@ function frame() {\n\
   }\n\
 }\n\
   \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   // show three text frames\n\
   frameDelay = 1000;\n\
   frameNumber = 0;\n\
@@ -10210,27 +10204,27 @@ sliding_block ='\
 // Sliding Block Puzzle -- animated solution to Square Root sliding block puzzle\n\
 // details of the moves are on the console.log\n\
 \n\
-var side\n\
-var baseX\n\
-var baseY\n\
-var count\n\
+_సర్వత్ర_  side\n\
+_సర్వత్ర_  baseX\n\
+_సర్వత్ర_  baseY\n\
+_సర్వత్ర_  count\n\
 \n\
-var e = "e"\n\
-var w = "w"\n\
-var n = "n"\n\
-var s = "s"\n\
-var ee = "ee"\n\
-var ww = "ww"\n\
-var nn = "nn"\n\
-var ss = "ss"\n\
-var ne = "ne"\n\
-var nw = "nw"\n\
-var se = "se"\n\
-var sw = "sw"\n\
-var en = "en"\n\
-var es = "es"\n\
-var wn = "wn"\n\
-var ws = "ws"\n\
+_సర్వత్ర_  e = "e"\n\
+_సర్వత్ర_  w = "w"\n\
+_సర్వత్ర_  n = "n"\n\
+_సర్వత్ర_  s = "s"\n\
+_సర్వత్ర_  ee = "ee"\n\
+_సర్వత్ర_  ww = "ww"\n\
+_సర్వత్ర_  nn = "nn"\n\
+_సర్వత్ర_  ss = "ss"\n\
+_సర్వత్ర_  ne = "ne"\n\
+_సర్వత్ర_  nw = "nw"\n\
+_సర్వత్ర_  se = "se"\n\
+_సర్వత్ర_  sw = "sw"\n\
+_సర్వత్ర_  en = "en"\n\
+_సర్వత్ర_  es = "es"\n\
+_సర్వత్ర_  wn = "wn"\n\
+_సర్వత్ర_  ws = "ws"\n\
 \n\
 /* valid moves for blocks\n\
  * all tests include bounds test\n\
@@ -10282,14 +10276,14 @@ blocks = [ {h:1, v:2, x:0, y:0},\n\
            {h:1, v:1, x:3, y:3},\n\
            {h:1, v:1, x:3, y:4} ]\n\
 \n\
-function init () {\n\
+_విధానము_  init () {\n\
   side = .9 * 2* Math.min(గరిష్ఠX()/4, గరిష్ఠY()/5)\n\
   baseX = -2 * side\n\
   baseY = 2.5 * side\n\
   count = 0\n\
 }\n\
 \n\
-function drawBlock( h, v, x, y, n) {\n\
+_విధానము_  drawBlock( h, v, x, y, n) {\n\
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)\n\
   // draw a block\n\
   రంగు_మార్చు("నలుపు")\n\
@@ -10311,17 +10305,17 @@ function drawBlock( h, v, x, y, n) {\n\
 }\n\
 \n\
 \n\
-function moveBlock (blockIndex, x, y) {\n\
+_విధానము_  moveBlock (blockIndex, x, y) {\n\
   blocks[ blockIndex].x = x\n\
   blocks[ blockIndex].y = y\n\
   count = count + 1\n\
 }\n\
 \n\
 \n\
-function drag( blockIndex, dir) {\n\
+_విధానము_  drag( blockIndex, dir) {\n\
   //dir is a string of e, w, n, s\n\
-  var x = 0\n\
-  var y = 0\n\
+  _సర్వత్ర_  x = 0\n\
+  _సర్వత్ర_  y = 0\n\
   for (ch in dir) {\n\
     if (dir[ch] == "w") {\n\
       x = x - 1\n\
@@ -10340,8 +10334,8 @@ function drag( blockIndex, dir) {\n\
   count = count + 1\n\
 }\n\
 \n\
-function drawBlocks () {\n\
-  for (var block in blocks) {\n\
+_విధానము_  drawBlocks () {\n\
+  for (_సర్వత్ర_  block in blocks) {\n\
     //console.log("dBs: " + block)\n\
     drawBlock( blocks[ block].h, blocks[block].v, blocks[block].x, blocks[block].y, block)\n\
   }\n\
@@ -10349,11 +10343,11 @@ function drawBlocks () {\n\
 \n\
 \n\
 \n\
-var free = []\n\
+_సర్వత్ర_  free = []\n\
 \n\
-function findFree() {\n\
+_విధానము_  findFree() {\n\
   // find the free spaces in the puzzle\n\
-  var x,y, v, h, block, overlap, freeList\n\
+  _సర్వత్ర_  x,y, v, h, block, overlap, freeList\n\
 \n\
 free = [[undefined, undefined, undefined, undefined],\n\
         [undefined, undefined, undefined, undefined],\n\
@@ -10424,16 +10418,16 @@ free = [[undefined, undefined, undefined, undefined],\n\
   }\n\
   //console.log( "FreeList:  " + freeList)\n\
   //console.log( "FreeList0:  " + freeList[0])\n\
-  var freeStr = ""\n\
-  var lead = ""\n\
-  var freemember\n\
+  _సర్వత్ర_  freeStr = ""\n\
+  _సర్వత్ర_  lead = ""\n\
+  _సర్వత్ర_  freemember\n\
   for (freemember in freeList) {\n\
     freeStr = freeStr + lead + "[" +  freeList[freemember] + "]"\n\
     lead = ","\n\
   }\n\
 \n\
   // log the blocks\n\
-  var logStr\n\
+  _సర్వత్ర_  logStr\n\
   for( y=0; y<5; y = y+1) { \n\
     logStr = y + ":"\n\
     for( x=0; x<4; x = x+1) {\n\
@@ -10448,11 +10442,11 @@ free = [[undefined, undefined, undefined, undefined],\n\
   console.log( "  FreeList: "+ freeStr)\n\
 }\n\
 \n\
-var moveList = []\n\
+_సర్వత్ర_  moveList = []\n\
 \n\
-function checkMove( block, direction) {\n\
-  var found = false\n\
-  var index\n\
+_విధానము_  checkMove( block, direction) {\n\
+  _సర్వత్ర_  found = false\n\
+  _సర్వత్ర_  index\n\
   //if move is not on moveList\n\
   for (index in moveList) {\n\
     if (moveList[index][0] == block && moveList[index][1].localeCompare(direction)==0) {\n\
@@ -10465,12 +10459,12 @@ function checkMove( block, direction) {\n\
 }\n\
  \n\
 \n\
-function checkLastMove( block, direction) {\n\
+_విధానము_  checkLastMove( block, direction) {\n\
   // check that the moveList includes the reciprocal of the last move\n\
-  var index\n\
-  var directions = direction.split("")\n\
-  var ripString = ""\n\
-  var found = false\n\
+  _సర్వత్ర_  index\n\
+  _సర్వత్ర_  directions = direction.split("")\n\
+  _సర్వత్ర_  ripString = ""\n\
+  _సర్వత్ర_  found = false\n\
   for (index in directions) {\n\
     if (directions[index] == "e") { ripString = "w" + ripString } \n\
     if (directions[index] == "w") { ripString = "e" + ripString } \n\
@@ -10487,9 +10481,9 @@ function checkLastMove( block, direction) {\n\
   }\n\
 }\n\
 \n\
-function findMoves() {\n\
+_విధానము_  findMoves() {\n\
   // find the free spaces in the puzzle\n\
-  var x, y, v, h, block\n\
+  _సర్వత్ర_  x, y, v, h, block\n\
 \n\
   moveList = []\n\
 \n\
@@ -10573,10 +10567,10 @@ function findMoves() {\n\
   }\n\
 \n\
   //console.log("Moves: " + moveList)\n\
-  var moveStr = ""\n\
-  var lead = ""\n\
-  var index\n\
-  var possibleMoveCount = 0\n\
+  _సర్వత్ర_  moveStr = ""\n\
+  _సర్వత్ర_  lead = ""\n\
+  _సర్వత్ర_  index\n\
+  _సర్వత్ర_  possibleMoveCount = 0\n\
   for (index in moveList) {\n\
     moveStr = moveStr + lead +  moveList[index][0] +  moveList[index][1] \n\
     if ( lastMove[0] == moveList[index][0]) { // tag reciprocal moves\n\
@@ -10634,19 +10628,19 @@ function findMoves() {\n\
 */\n\
 \n\
 \n\
-function getState() {\n\
+_విధానము_  getState() {\n\
   //returns a value that is the state of the puzzle\n\
   //each piece is located with a 2-bit x and 3-bit y\n\
   //1x2 and 1x1 pieces are deternined by left to right and top to bottom order\n\
 	// this allows the same state for exchanged pieces\n\
-  var blockPos = [undefined, undefined, undefined,\n\
+  _సర్వత్ర_  blockPos = [undefined, undefined, undefined,\n\
 	          undefined, undefined, undefined,\n\
 	          undefined, undefined, undefined]\n\
-  var blockSeen = [ false, false, false, false, false,\n\
+  _సర్వత్ర_  blockSeen = [ false, false, false, false, false,\n\
                     false, false, false, false]\n\
-  var blockMap1x2 = 2 \n\
-  var blockMap1x1 = 6 \n\
-  var blockNum\n\
+  _సర్వత్ర_  blockMap1x2 = 2 \n\
+  _సర్వత్ర_  blockMap1x1 = 6 \n\
+  _సర్వత్ర_  blockNum\n\
 \n\
   for( y=0; y<5; y = y+1) { \n\
     for( x=0; x<4; x = x+1) {\n\
@@ -10672,7 +10666,7 @@ function getState() {\n\
   // uses 2 bits for x and 3 bits for y for each of 10 blocks = 50 bits\n\
   // 5 bits is 2**5 = 32\n\
   // putting the most stable blocks at high end of state number\n\
-  var state = 0\n\
+  _సర్వత్ర_  state = 0\n\
   for (blockNum = 0; blockNum <10; blockNum = blockNum + 1) {\n\
     console.log ("state blockNum:" + blockNum + " pos:" + blockPos[ blockNum] + " state:" + state + " " + (blockPos[blockNum][0] + (blockPos[blockNum][1]*4)) * 32**( 9 - blockNum) + " " + (blockPos[blockNum][0] + (blockPos[blockNum][1]*4)) )\n\
     state = state + ((blockPos[blockNum][0] + (blockPos[blockNum][1]*4)) * 32**( 9 - blockNum))\n\
@@ -10680,11 +10674,11 @@ function getState() {\n\
   if ( blockMap1x2 != 6  | blockMap1x1 != 10) {\n\
     console.log( "   ***State Processing Error***" + blockMap1x2 + " " + blockMap1x1)\n\
   }\n\
-  return state\n\
+  _ఫలము_  state\n\
 }\n\
 \n\
 \n\
-function demo1() {\n\
+_విధానము_  demo1() {\n\
   ఆది_స్థితి()\n\
   init()\n\
   console.log("demo: " + blocks[0])\n\
@@ -10793,7 +10787,7 @@ function demo1() {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   init()\n\
 \n\
@@ -10900,13 +10894,13 @@ function ప్రదర్శన() {\n\
 }\n\
 \n\
 \n\
-function caption (message) {\n\
+_విధానము_  caption (message) {\n\
   // save your current position, heading, etc.\n\
-  var savedX = కుంచిక.స్థానము.x\n\
-  var savedY = కుంచిక.స్థానము.y\n\
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
-  var savedColor = కుంచిక.రంగు\n\
-  var savedWidth = కుంచిక.వెడల్పు\n\
+  _సర్వత్ర_  savedX = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  savedY = కుంచిక.స్థానము.y\n\
+  _సర్వత్ర_  savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees\n\
+  _సర్వత్ర_  savedColor = కుంచిక.రంగు\n\
+  _సర్వత్ర_  savedWidth = కుంచిక.వెడల్పు\n\
 \n\
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)\n\
   దిశ_మార్చు( 90)\n\
@@ -10927,10 +10921,10 @@ function caption (message) {\n\
   వెడల్పు(savedWidth)\n\
 }\n\
 \n\
-var moveCount;\n\
-var delayTime = 300;\n\
-var moves; // List of the moves to be made\n\
-var lastMove = []; // last move made\n\
+_సర్వత్ర_  moveCount;\n\
+_సర్వత్ర_  delayTime = 300;\n\
+_సర్వత్ర_  moves; // List of the moves to be made\n\
+_సర్వత్ర_  lastMove = []; // last move made\n\
 moves = [ // series of moves\n\
 // [ blockNumber, move directions ]\n\
   [ 3, ee],\n\
@@ -11027,7 +11021,7 @@ moves = [ // series of moves\n\
 ]\n\
 \n\
 \n\
-function moveOne() {\n\
+_విధానము_  moveOne() {\n\
   ఆది_స్థితి()\n\
   //console.log( "mO " + moveCount)\n\
   //console.log( "mO " + moves[moveCount])\n\
@@ -11040,8 +11034,8 @@ function moveOne() {\n\
   if (moveCount > 0) {\n\
     checkLastMove( lastMove[0], lastMove[1])\n\
   }\n\
-  var block = moves[ moveCount][0]\n\
-  var dir =   moves[ moveCount][1]\n\
+  _సర్వత్ర_  block = moves[ moveCount][0]\n\
+  _సర్వత్ర_  dir =   moves[ moveCount][1]\n\
   console.log( "  Move " + moveCount + ": " + block + dir)\n\
   checkMove( block,  dir)\n\
   drag( block, dir)\n\
@@ -11052,7 +11046,7 @@ function moveOne() {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   init()\n\
   moveCount=0\n\
@@ -11138,16 +11132,16 @@ the inner single tabs (5).\n\
 Have fun.\n\
 */\n\
 \n\
-function leftTriangle(side) {\n\
-  for (var i=0; i<3; i++) {\n\
+_విధానము_  leftTriangle(side) {\n\
+  for (_సర్వత్ర_  i=0; i<3; i++) {\n\
     ముందుకు_జరుగు(side)\n\
     ఎడమ_వైపు_తిరుగు(120)\n\
   }\n\
 }\n\
 \n\
-function leftTab( side) {\n\
-  var x = కుంచిక.స్థానము.x\n\
-  var y = కుంచిక.స్థానము.y\n\
+_విధానము_  leftTab( side) {\n\
+  _సర్వత్ర_  x = కుంచిక.స్థానము.x\n\
+  _సర్వత్ర_  y = కుంచిక.స్థానము.y\n\
   ఎడమ_వైపు_తిరుగు( 180 - 45)\n\
   ముందుకు_జరుగు( side * .2)\n\
   ఎడమ_వైపు_తిరుగు( 45)\n\
@@ -11160,8 +11154,8 @@ function leftTab( side) {\n\
 }\n\
 \n\
 \n\
-function rightTriangle(side, tabs) {\n\
-  for (var i=0; i<3; i++) {\n\
+_విధానము_  rightTriangle(side, tabs) {\n\
+  for (_సర్వత్ర_  i=0; i<3; i++) {\n\
     ముందుకు_జరుగు(side)\n\
     if (tabs.includes (""+i)) {\n\
       leftTab(side)\n\
@@ -11170,8 +11164,8 @@ function rightTriangle(side, tabs) {\n\
   }\n\
 }\n\
 \n\
-function leftPentagon(side) {\n\
-  for (var i=0; i<5; i++) {\n\
+_విధానము_  leftPentagon(side) {\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     ముందుకు_జరుగు(side)\n\
     ఎడమ_వైపు_తిరుగు(72)\n\
     if (i  == 0) {\n\
@@ -11191,8 +11185,8 @@ function leftPentagon(side) {\n\
   }\n\
 }\n\
 \n\
-function rightPentagon(side) {\n\
-  for (var i=0; i<5; i++) {\n\
+_విధానము_  rightPentagon(side) {\n\
+  for (_సర్వత్ర_  i=0; i<5; i++) {\n\
     ఎడమ_వైపు_తిరుగు(120)\n\
     ముందుకు_జరుగు(side)\n\
     కుడి_వైపు_తిరుగు(120)\n\
@@ -11210,7 +11204,7 @@ function rightPentagon(side) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   స్థానము_మార్చు(-.666 * side, - .333 * side)\n\
@@ -11221,8 +11215,8 @@ function ప్రదర్శన() {\n\
 spinning_squares ='\
 // Spinning Squares -- draw some square of increasing size and కోణము.\n\
 \n\
-function square (side) {\n\
-  var i=0\n\
+_విధానము_  square (side) {\n\
+  _సర్వత్ర_  i=0\n\
   while (i<4) {\n\
     ముందుకు_జరుగు( side)\n\
     turn(90)\n\
@@ -11230,11 +11224,11 @@ function square (side) {\n\
   }\n\
 }\n\
 \n\
-function spinningSquare2() {\n\
+_విధానము_  spinningSquare2() {\n\
    ఆది_స్థితి();\n\
    కుంచికను_దాచు();\n\
    రంగు_మార్చు( నీలము );\n\
-   var side = 100;\n\
+   _సర్వత్ర_  side = 100;\n\
    while (side > 0) {\n\
       square(side);\n\
       కుడి_వైపు_తిరుగు(36);\n\
@@ -11242,28 +11236,28 @@ function spinningSquare2() {\n\
    }\n\
 }\n\
 \n\
-function spinningSquare() {\n\
+_విధానము_  spinningSquare() {\n\
   ఆది_స్థితి()\n\
-  var steps = 100\n\
+  _సర్వత్ర_  steps = 100\n\
   stepSize = 2 * గరిష్ఠX()\n\
   if (1.5 * గరిష్ఠY() < stepSize) {\n\
     stepSize = 1.5 * గరిష్ఠY()\n\
   }\n\
   stepSize = .5 * stepSize/steps\n\
-  //var stepSize = 200/steps\n\
+  //_సర్వత్ర_  stepSize = 200/steps\n\
   రంగు_మార్చు( నీలము );\n\
-  for (var i=0; i<steps; i=i+1) {\n\
+  for (_సర్వత్ర_  i=0; i<steps; i=i+1) {\n\
     square(stepSize*i);\n\
     కుడి_వైపు_తిరుగు(360/steps)\n\
   }\n\
 }\n\
 \n\
-ప్రదర్శన = spinningSquare2 // set the demo function to be spinningSquare2\n\
+ప్రదర్శన = spinningSquare2 // set the demo _విధానము_  to be spinningSquare2\n\
 '
 spiral ='\
 // Spiral -- demonstrate some simple spirals\n\
 \n\
-function spiral1() {\n\
+_విధానము_  spiral1() {\n\
   ఆది_స్థితి()\n\
   n=0\n\
   while (n<400) {\n\
@@ -11273,7 +11267,7 @@ function spiral1() {\n\
   }\n\
 }\n\
 \n\
-function spiral2() {\n\
+_విధానము_  spiral2() {\n\
   ఆది_స్థితి()\n\
   n=0\n\
   while (n<75) {\n\
@@ -11284,7 +11278,7 @@ function spiral2() {\n\
 }\n\
 \n\
 \n\
-function spiral3() {\n\
+_విధానము_  spiral3() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   n=0\n\
@@ -11295,7 +11289,7 @@ function spiral3() {\n\
   }\n\
 }\n\
 \n\
-function spiral() {\n\
+_విధానము_  spiral() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   n=0\n\
@@ -11322,13 +11316,13 @@ console.log("exiting:")\n\
 square_lines ='\
 // Square Lines -- draw a set of overlapping squares without turns\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   side = 30\n\
   side2 = side + side\n\
   offset = true\n\
-  for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + side) {\n\
+  for (_సర్వత్ర_  i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + side) {\n\
     స్థానము_మార్చు(కనిష్ఠX(),i)\n\
     కోణము(90)\n\
     if (offset) {\n\
@@ -11337,7 +11331,7 @@ function ప్రదర్శన() {\n\
       కలమును_కింద_పెట్టు()\n\
     }\n\
     offset = !offset\n\
-    for (var j=కనిష్ఠX(); j<గరిష్ఠX(); j = j + 3*side) {\n\
+    for (_సర్వత్ర_  j=కనిష్ఠX(); j<గరిష్ఠX(); j = j + 3*side) {\n\
       ముందుకు_జరుగు( side2)\n\
       కలమును_పైకి_ఎత్తు()\n\
       ముందుకు_జరుగు( side)\n\
@@ -11346,14 +11340,14 @@ function ప్రదర్శన() {\n\
   }\n\
 \n\
   offset = true\n\
-  for (var i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + side) {\n\
+  for (_సర్వత్ర_  i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + side) {\n\
     స్థానము_మార్చు(i, కనిష్ఠY())\n\
     కోణము(0)\n\
     if (offset) {\n\
       ముందుకు_జరుగు( side)\n\
     }\n\
     offset = !offset\n\
-    for (var j=గరిష్ఠY(); j>కనిష్ఠY(); j = j - 3*side) {\n\
+    for (_సర్వత్ర_  j=గరిష్ఠY(); j>కనిష్ఠY(); j = j - 3*side) {\n\
       కలమును_పైకి_ఎత్తు()\n\
       ముందుకు_జరుగు( side)\n\
       కలమును_కింద_పెట్టు()\n\
@@ -11367,7 +11361,7 @@ square_series ='\
 \n\
 // lower right is not quite right, it gets left out.\n\
 \n\
-function paddle (side) {\n\
+_విధానము_  paddle (side) {\n\
   side2 = side + side\n\
   ముందుకు_జరుగు( side2)\n\
   కుడి_వైపు_తిరుగు( 90)\n\
@@ -11388,8 +11382,8 @@ function paddle (side) {\n\
 }\n\
 \n\
 \n\
-function cwGroup( side) {\n\
-  for( var i=0; i<4; i++) {\n\
+_విధానము_  cwGroup( side) {\n\
+  for( _సర్వత్ర_  i=0; i<4; i++) {\n\
     paddle( side)\n\
     కలమును_పైకి_ఎత్తు()\n\
     ముందుకు_జరుగు( side)\n\
@@ -11399,8 +11393,8 @@ function cwGroup( side) {\n\
 }\n\
 \n\
 \n\
-function ccwGroup( side) {\n\
-  for( var i=0; i<4; i++) {\n\
+_విధానము_  ccwGroup( side) {\n\
+  for( _సర్వత్ర_  i=0; i<4; i++) {\n\
     paddle( side)\n\
     కలమును_పైకి_ఎత్తు()\n\
     ముందుకు_జరుగు( side)\n\
@@ -11410,16 +11404,16 @@ function ccwGroup( side) {\n\
 }\n\
 \n\
 \n\
-function cwRow( side) {\n\
-  for (var i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + 6*side) {\n\
+_విధానము_  cwRow( side) {\n\
+  for (_సర్వత్ర_  i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + 6*side) {\n\
     xనియోగించు(i)\n\
     cwGroup( side)\n\
   }\n\
 }\n\
 \n\
 \n\
-function ccwRow( side) {\n\
-  for (var i=కనిష్ఠX() + 4*side; i<గరిష్ఠX(); i = i + 6*side) {\n\
+_విధానము_  ccwRow( side) {\n\
+  for (_సర్వత్ర_  i=కనిష్ఠX() + 4*side; i<గరిష్ఠX(); i = i + 6*side) {\n\
                      // offset row 3 sides + 1 for cw/ccw flip\n\
     xనియోగించు(i)\n\
     ccwGroup( side)\n\
@@ -11427,10 +11421,10 @@ function ccwRow( side) {\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
    చుట్టొద్దు()\n\
   side = 30\n\
-  for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {\n\
+  for (_సర్వత్ర_  i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {\n\
     yనియోగించు(i)\n\
     cwRow( side)\n\
     yనియోగించు(i + 3*side)\n\
@@ -11445,32 +11439,32 @@ square_tessellation ='\
 \n\
 colors = ["red", "white", "blue","yellow", "green"]\n\
 \n\
-function squ( side, fColor) {\n\
+_విధానము_  squ( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<4; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-function squLeft( side, fColor) {\n\
+_విధానము_  squLeft( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<4; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     ఎడమ_వైపు_తిరుగు( 90)\n\
   }\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-// nextColor could be a random function or use less colors\n\
-function nextColor() {\n\
+// nextColor could be a random _విధానము_  or use less colors\n\
+_విధానము_  nextColor() {\n\
   c = colors[ count % colors.length]\n\
   count = count + 1\n\
-  return c\n\
+  _ఫలము_  c\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3\n\
@@ -11502,11 +11496,11 @@ function ప్రదర్శన() {\n\
 squiggle ='\
 // Squiggle -- draw a random squiggle\n\
 \n\
-function squiggle(steps,కోణము) {\n\
+_విధానము_  squiggle(steps,కోణము) {\n\
   widthInc = 5 / steps;\n\
   distInc = 10 / steps;\n\
   w = 0.1;\n\
-  ఆవర్తించు(steps, function () {\n\
+  ఆవర్తించు(steps, _విధానము_  () {\n\
     వెడల్పు(w);\n\
     ముందుకు_జరుగు(యాదృచ్ఛిక_సంఖ్య(1,10));\n\
     కుడి_వైపు_తిరుగు(కోణము);\n\
@@ -11515,14 +11509,14 @@ function squiggle(steps,కోణము) {\n\
   })\n\
 }\n\
 \n\
-function drawRandomSquiggle() {\n\
+_విధానము_  drawRandomSquiggle() {\n\
   రంగు_మార్చు(యాదృచ్ఛిక_సంఖ్య(16));\n\
   స్థానము_మార్చు(యాదృచ్ఛిక_సంఖ్య(కనిష్ఠX(), గరిష్ఠX()), యాదృచ్ఛిక_సంఖ్య(కనిష్ఠY(), గరిష్ఠY()));\n\
   కోణము(యాదృచ్ఛిక_సంఖ్య(0,360));\n\
   squiggle(యాదృచ్ఛిక_సంఖ్య(100,1000), యాదృచ్ఛిక_సంఖ్య(5,90));\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు();\n\
   drawRandomSquiggle();\n\
@@ -11531,12 +11525,12 @@ function ప్రదర్శన() {\n\
 stamps ='\
 // Stamps -- demonstrate stamping of a star design multiple times\n\
 \n\
-function star (side) {\n\
+_విధానము_  star (side) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు(.54*side)\n\
   turn (180-18)\n\
   కలమును_కింద_పెట్టు()\n\
-  var i=0\n\
+  _సర్వత్ర_  i=0\n\
   while (i<5){\n\
     ముందుకు_జరుగు(side)\n\
     కుడి_వైపు_తిరుగు(180-36)\n\
@@ -11545,12 +11539,12 @@ function star (side) {\n\
   turn (180+18)\n\
 }\n\
 \n\
-function stamps () {\n\
+_విధానము_  stamps () {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
-  var x = కనిష్ఠX()\n\
+  _సర్వత్ర_  x = కనిష్ఠX()\n\
   while (x <= గరిష్ఠX()) {\n\
-    var y = కనిష్ఠY()\n\
+    _సర్వత్ర_  y = కనిష్ఠY()\n\
     while (y <= గరిష్ఠY()) {\n\
       స్థానము_మార్చు(x,y)\n\
       కోణము (0);\n\
@@ -11567,12 +11561,12 @@ function stamps () {\n\
 star ='\
 // Star -- draw a simple star\n\
 \n\
-function star (side) {\n\
+_విధానము_  star (side) {\n\
   కలమును_పైకి_ఎత్తు()\n\
   ముందుకు_జరుగు(.54*side)\n\
   turn (180-18)\n\
   కలమును_కింద_పెట్టు()\n\
-  var i=0\n\
+  _సర్వత్ర_  i=0\n\
   while (i<5){\n\
     ముందుకు_జరుగు(side)\n\
     కుడి_వైపు_తిరుగు(180-36)\n\
@@ -11582,7 +11576,7 @@ function star (side) {\n\
 }   \n\
     \n\
     \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   side =  1.8* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   ఆకారము_ప్రారంభించు()\n\
@@ -11594,14 +11588,14 @@ function ప్రదర్శన() {\n\
 star_burst ='\
 // Starburst -- simple example of while statement and colors\n\
 \n\
-function starburst () {\n\
-  var steps = 1000\n\
-  var len = గరిష్ఠX()\n\
+_విధానము_  starburst () {\n\
+  _సర్వత్ర_  steps = 1000\n\
+  _సర్వత్ర_  len = గరిష్ఠX()\n\
   if (len < గరిష్ఠY()) {\n\
     len = గరిష్ఠY()\n\
   }\n\
   len = 1.5 * len\n\
-  var i = 0\n\
+  _సర్వత్ర_  i = 0\n\
   while ( i < steps) {\n\
     స్థానము_మార్చు( 0,0)\n\
     కోణము( 360/steps*i)\n\
@@ -11614,7 +11608,7 @@ function starburst () {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   starburst()\n\
@@ -11623,9 +11617,9 @@ function ప్రదర్శన() {\n\
 stars_and_rhombuses ='\
 // Stars and Rhombuses -- tesselation found on a wall paper pattern\n\
 \n\
-function quadRhom( side) {\n\
-  for( var i=0; i<4; i++) {\n\
-    for ( var j=0; j<4; j++) {\n\
+_విధానము_  quadRhom( side) {\n\
+  for( _సర్వత్ర_  i=0; i<4; i++) {\n\
+    for ( _సర్వత్ర_  j=0; j<4; j++) {\n\
       ముందుకు_జరుగు( side)\n\
       కుడి_వైపు_తిరుగు( ang)\n\
       ముందుకు_జరుగు( side)\n\
@@ -11639,7 +11633,7 @@ function quadRhom( side) {\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
    చుట్టొద్దు()\n\
   కుంచికను_దాచు()\n\
@@ -11648,8 +11642,8 @@ function ప్రదర్శన() {\n\
   xoffset = 0\n\
   chord = 2* side * Math.cos(degToRad(ang/2))\n\
 \n\
-  for (var fy=గరిష్ఠY(); fy>కనిష్ఠY(); fy=fy - chord) {   \n\
-    for (var fx=కనిష్ఠX(); fx<గరిష్ఠX(); fx=fx + 2*chord) {\n\
+  for (_సర్వత్ర_  fy=గరిష్ఠY(); fy>కనిష్ఠY(); fy=fy - chord) {   \n\
+    for (_సర్వత్ర_  fx=కనిష్ఠX(); fx<గరిష్ఠX(); fx=fx + 2*chord) {\n\
       స్థానము_మార్చు( fx+xoffset, fy)\n\
       కోణము( 90 - ang/2)\n\
       quadRhom( side)\n\
@@ -11666,52 +11660,52 @@ tree ='\
 // Tree Symmetrical -- draw a symmetrical tree\n\
 \n\
 //GLOBALS\n\
-var scale // varible to influence overall tree size\n\
+_సర్వత్ర_  scale // varible to influence overall tree size\n\
 \n\
 \n\
 //  code inspired from a code.org lesson\n\
-function drawTree(depth, branches) {\n\
-  var spread = 120;	//spread is కోణము of left to right branches\n\
-  var tilt = 0;		//tilt is కోణము of the cluster\n\
-  var ratio = 7;	//ratio is branch depth to length ratio\n\
+_విధానము_  drawTree(depth, branches) {\n\
+  _సర్వత్ర_  spread = 120;	//spread is కోణము of left to right branches\n\
+  _సర్వత్ర_  tilt = 0;		//tilt is కోణము of the cluster\n\
+  _సర్వత్ర_  ratio = 7;	//ratio is branch depth to length ratio\n\
   if (depth>0) { \n\
    రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య( 16));\n\
    కలమును_కింద_పెట్టు();\n\
    వెడల్పు(depth + యాదృచ్ఛిక_సంఖ్య(0,2));\n\
    ముందుకు_జరుగు(scale* ratio * depth);\n\
    ఎడమ_వైపు_తిరుగు(tilt + spread/2 + spread/branches/2);\n\
-   ఆవర్తించు(branches, function () {\n\
+   ఆవర్తించు(branches, _విధానము_  () {\n\
      కుడి_వైపు_తిరుగు(spread/branches);\n\
      drawTree(depth-1, branches);\n\
    });\n\
-   ఎడమ_వైపు_తిరుగు(spread - tilt - spread/2 - spread/branches/2); // return to start కోణము\n\
+   ఎడమ_వైపు_తిరుగు(spread - tilt - spread/2 - spread/branches/2); // _ఫలము_  to start కోణము\n\
    కలమును_పైకి_ఎత్తు();\n\
    వెనుకకు_జరుగు(scale * ratio * depth); // backup to start point\n\
   }\n\
 }\n\
 \n\
 // draw a more random tree\n\
-function drawRTree(depth, branches) {\n\
-  var spread = యాదృచ్ఛిక_సంఖ్య(90,180);	// spread is కోణము of left to right branches\n\
-  var tilt = యాదృచ్ఛిక_సంఖ్య(-15,15);	// tilt is కోణము of the cluster\n\
-  var ratio = random (5,9);	// ratio is branch depth to length ratio\n\
+_విధానము_  drawRTree(depth, branches) {\n\
+  _సర్వత్ర_  spread = యాదృచ్ఛిక_సంఖ్య(90,180);	// spread is కోణము of left to right branches\n\
+  _సర్వత్ర_  tilt = యాదృచ్ఛిక_సంఖ్య(-15,15);	// tilt is కోణము of the cluster\n\
+  _సర్వత్ర_  ratio = random (5,9);	// ratio is branch depth to length ratio\n\
   if (depth>0) { \n\
    రంగు_మార్చు( యాదృచ్ఛిక_సంఖ్య( 16));\n\
    కలమును_కింద_పెట్టు();\n\
    వెడల్పు(depth + యాదృచ్ఛిక_సంఖ్య(0,2));\n\
    ముందుకు_జరుగు(scale * ratio * depth);\n\
    ఎడమ_వైపు_తిరుగు(tilt + spread/2 + spread/branches/2);\n\
-   ఆవర్తించు(branches, function () {\n\
+   ఆవర్తించు(branches, _విధానము_  () {\n\
      కుడి_వైపు_తిరుగు(spread/branches);\n\
      drawTree(depth-1, branches);\n\
    });\n\
-   ఎడమ_వైపు_తిరుగు(spread - tilt - spread/2 - spread/branches/2); // return to start కోణము\n\
+   ఎడమ_వైపు_తిరుగు(spread - tilt - spread/2 - spread/branches/2); // _ఫలము_  to start కోణము\n\
    కలమును_పైకి_ఎత్తు();\n\
    వెనుకకు_జరుగు(scale * ratio * depth); // backup to start point\n\
   }\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
   scale = .01 * Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
@@ -11726,18 +11720,18 @@ triangle_tessellation ='\
 \n\
 colors = ["red", "white", "blue", "yellow", "green"]\n\
 \n\
-function triUp( side, fColor) {\n\
+_విధానము_  triUp( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<3; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<3; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     ఎడమ_వైపు_తిరుగు( 120)\n\
   }\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-function triDown( side, fColor) {\n\
+_విధానము_  triDown( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<3; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<3; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 120)\n\
   }\n\
@@ -11745,13 +11739,13 @@ function triDown( side, fColor) {\n\
 }\n\
 \n\
 // nextColor could be completely random, if desired\n\
-function nextColor() { \n\
+_విధానము_  nextColor() { \n\
   c = colors[ count % colors.length]\n\
   count = count + 1\n\
-  return c\n\
+  _ఫలము_  c\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowOffset = s/3 // offset between rows\n\
@@ -11782,17 +11776,17 @@ triangle_tunnel ='\
 // this uses an array to hold the colors of the current triangles\n\
 \n\
 // GLOBALS\n\
-var sides = 80;\n\
+_సర్వత్ర_  sides = 80;\n\
 \n\
 \n\
-function triangle (side) {\n\
+_విధానము_  triangle (side) {\n\
   if (side < maxSide) {\n\
     కేంద్రకమునకు_వెళ్ళు()\n\
     కలమును_పైకి_ఎత్తు();\n\
     ముందుకు_జరుగు(side/2);\n\
     కుడి_వైపు_తిరుగు(150);\n\
     కలమును_కింద_పెట్టు();\n\
-    for (var i=0; i<3; i++) {\n\
+    for (_సర్వత్ర_  i=0; i<3; i++) {\n\
       ముందుకు_జరుగు(side);\n\
       కుడి_వైపు_తిరుగు(120);\n\
     }\n\
@@ -11800,24 +11794,24 @@ function triangle (side) {\n\
 }\n\
 \n\
 \n\
-function nestTri () {\n\
+_విధానము_  nestTri () {\n\
   console.log("one more" + tColor + " sides:"+ sides)\n\
   tColor.push(random (15));\n\
   tColor.shift();\n\
-  for (var i=0; i<sides; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<sides; i++) {\n\
     రంగు_మార్చు(tColor[i]);\n\
     triangle (i*15);\n\
   }\n\
 }\n\
 \n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   కుంచికను_దాచు()\n\
 \n\
   maxSide = 1.8* Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
   tColor = []\n\
-  for (var i=0; i<sides; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<sides; i++) {\n\
     tColor [i] = random (15)\n\
   }\n\
   ఆడించు(nestTri,1);\n\
@@ -11833,31 +11827,31 @@ two_square_tessellation ='\
 colors = ["red", "blue", "yellow", "green"]\n\
 offsets = [0, -1, -2, -.5, -1.5]\n\
 \n\
-function squ( side, fColor) {\n\
+_విధానము_  squ( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<4; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     కుడి_వైపు_తిరుగు( 90)\n\
   }\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-function squLeft( side, fColor) {\n\
+_విధానము_  squLeft( side, fColor) {\n\
   ఆకారము_ప్రారంభించు()\n\
-  for (var i=0; i<4; i++) {\n\
+  for (_సర్వత్ర_  i=0; i<4; i++) {\n\
     ముందుకు_జరుగు( side)\n\
     ఎడమ_వైపు_తిరుగు( 90)\n\
   }\n\
   ఆకారము_ముగించు( fColor)\n\
 }\n\
 \n\
-function nextColor() {\n\
+_విధానము_  nextColor() {\n\
   c = colors[ count % colors.length]\n\
   count = count + 1\n\
-  return c\n\
+  _ఫలము_  c\n\
 }\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   count = 0\n\
   rowCount = 0\n\
@@ -11900,7 +11894,7 @@ S = 2\n\
 W = 3\n\
 \n\
 \n\
-var TILES = [ // original 13\n\
+_సర్వత్ర_  TILES = [ // original 13\n\
   "GGBR",\n\
   "GBGR",\n\
   "GBBG",\n\
@@ -11918,7 +11912,7 @@ var TILES = [ // original 13\n\
 \n\
 \n\
 /*\n\
-var TILES = [ // new 11\n\
+_సర్వత్ర_  TILES = [ // new 11\n\
   "RRRY",\n\
   "BRBY",\n\
   "RYYY",\n\
@@ -11934,7 +11928,7 @@ var TILES = [ // new 11\n\
 */\n\
 \n\
 \n\
-var COLORS = { // original colors\n\
+_సర్వత్ర_  COLORS = { // original colors\n\
   "R": "red",\n\
   "G": "green",\n\
   "B": "blue",\n\
@@ -11945,7 +11939,7 @@ var COLORS = { // original colors\n\
 \n\
 \n\
 /*\n\
-var COLORS = { // for red-green color blind\n\
+_సర్వత్ర_  COLORS = { // for red-green color blind\n\
   "R": "red",\n\
   "G": "lightgreen",\n\
   "B": "blue",\n\
@@ -11958,15 +11952,15 @@ var COLORS = { // for red-green color blind\n\
 \n\
 //****GLOBALS****\n\
 \n\
-var tiles; // global array of tile objects\n\
-var currentTile; // current tile to be considered\n\
-var hHumber; // number of tiles horizontally\n\
-var vHumber; // number of tiles vertically\n\
+_సర్వత్ర_  tiles; // global array of tile objects\n\
+_సర్వత్ర_  currentTile; // current tile to be considered\n\
+_సర్వత్ర_  hHumber; // number of tiles horizontally\n\
+_సర్వత్ర_  vHumber; // number of tiles vertically\n\
 \n\
 \n\
 //****FUNCTIONS****\n\
 \n\
-function drawTriangle (fill) {\n\
+_విధానము_  drawTriangle (fill) {\n\
   // draw triangle in place\n\
   ఆకారము_ప్రారంభించు()\n\
   ముందుకు_జరుగు( side)\n\
@@ -11979,7 +11973,7 @@ function drawTriangle (fill) {\n\
 }\n\
 \n\
 \n\
-function drawTile (x, y, tile) {\n\
+_విధానము_  drawTile (x, y, tile) {\n\
   స్థానము_మార్చు(x,y)\n\
   కోణము(90)\n\
   drawTriangle( COLORS[ TILES[tile][N]])\n\
@@ -11997,19 +11991,19 @@ function drawTile (x, y, tile) {\n\
 }\n\
 \n\
 \n\
-function north(tx, ty) { // get tile north of given coordinate\n\
-  var possibles = tiles[ty-1][tx].possibles\n\
-  var nTile = possibles[tiles[ty-1][tx].posIndex]\n\
+_విధానము_  north(tx, ty) { // get tile north of given coordinate\n\
+  _సర్వత్ర_  possibles = tiles[ty-1][tx].possibles\n\
+  _సర్వత్ర_  nTile = possibles[tiles[ty-1][tx].posIndex]\n\
   console.log("north",tx,ty, nTile)\n\
-  return nTile\n\
+  _ఫలము_  nTile\n\
 }\n\
 \n\
 \n\
-function west(tx, ty) { // get tile west of given coordinate\n\
-  var possibles = tiles[ty][tx-1].possibles\n\
-  var wTile = possibles[tiles[ty][tx-1].posIndex]\n\
+_విధానము_  west(tx, ty) { // get tile west of given coordinate\n\
+  _సర్వత్ర_  possibles = tiles[ty][tx-1].possibles\n\
+  _సర్వత్ర_  wTile = possibles[tiles[ty][tx-1].posIndex]\n\
   console.log("west",tx,ty, wTile)\n\
-  return wTile\n\
+  _ఫలము_  wTile\n\
 }\n\
 \n\
 \n\
@@ -12041,8 +12035,8 @@ class Tile {\n\
 \n\
     } else if (this.ty == 0) {\n\
       console.log ("fP first row")\n\
-      var w = TILES[west(this.tx, this.ty)][E]\n\
-      for (var i = 0; i<TILES.length; i++) {\n\
+      _సర్వత్ర_  w = TILES[west(this.tx, this.ty)][E]\n\
+      for (_సర్వత్ర_  i = 0; i<TILES.length; i++) {\n\
         console.log("fP",w , TILES[i][W])\n\
         if (TILES[i][W] == w){\n\
            console.log("fP push", i)\n\
@@ -12052,8 +12046,8 @@ class Tile {\n\
 \n\
     } else if (this.tx == 0){\n\
       console.log ("fP new row")\n\
-      var n = TILES[north(this.tx, this.ty)][S]\n\
-      for (var i = 0; i<TILES.length; i++) {\n\
+      _సర్వత్ర_  n = TILES[north(this.tx, this.ty)][S]\n\
+      for (_సర్వత్ర_  i = 0; i<TILES.length; i++) {\n\
         if (TILES[i][N] == n){\n\
           this.possibles.push(i)\n\
         }\n\
@@ -12061,9 +12055,9 @@ class Tile {\n\
 \n\
     } else {\n\
       console.log ("fP in row")\n\
-      var w = TILES[west(this.tx, this.ty)][E]\n\
-      var n = TILES[north(this.tx, this.ty)][S]\n\
-      for (var i = 0; i<TILES.length; i++) {\n\
+      _సర్వత్ర_  w = TILES[west(this.tx, this.ty)][E]\n\
+      _సర్వత్ర_  n = TILES[north(this.tx, this.ty)][S]\n\
+      for (_సర్వత్ర_  i = 0; i<TILES.length; i++) {\n\
         if (TILES[i][W] == w && TILES[i][N] == n){\n\
           this.possibles.push(i)\n\
         }\n\
@@ -12072,7 +12066,7 @@ class Tile {\n\
 \n\
     if (this.possibles.length > 0) { // ready to plot\n\
       //randomize order of possibles\n\
-      var possibles = []\n\
+      _సర్వత్ర_  possibles = []\n\
       while (this.possibles.length > 0) {\n\
         possibles.push(\n\
             this.possibles.splice( \n\
@@ -12082,16 +12076,16 @@ class Tile {\n\
       this.possibles = possibles\n\
       this.posIndex = 0\n\
       console.log("fP-",this.tx, this.ty, this.possibles, this.posIndex)\n\
-      return (true)\n\
+      _ఫలము_  (true)\n\
 \n\
     } else { // blocked, need to backtrack\n\
       this.possibles = []\n\
       this.posIndex = undefined\n\
       this.plotBlank()\n\
       if (this.tx != 0 || this.ty != 0) {\n\
-        return( this.prev.backtrack())\n\
+        _ఫలము_ ( this.prev.backtrack())\n\
       } else { // truly blocked\n\
-        return( false)\n\
+        _ఫలము_ ( false)\n\
       }\n\
     }\n\
   }\n\
@@ -12107,16 +12101,16 @@ class Tile {\n\
     if (this.posIndex != undefined && this.posIndex + 1 < this.possibles.length) {\n\
       // ready to plot\n\
       this.posIndex = this.posIndex + 1\n\
-      return( true)\n\
+      _ఫలము_ ( true)\n\
 \n\
     } else { // backtrack again\n\
       this.possibles = []\n\
       this.posIndex = undefined\n\
       this.plotBlank()\n\
       if (this.tx != 0 || this.ty != 0) {\n\
-        return( this.prev.backtrack())\n\
+        _ఫలము_ ( this.prev.backtrack())\n\
       } else { // truly blocked\n\
-        return( false)\n\
+        _ఫలము_ ( false)\n\
       }\n\
     }\n\
   }\n\
@@ -12124,7 +12118,7 @@ class Tile {\n\
 \n\
   plot() {\n\
     if (this.posIndex != undefined && this.posIndex < this.possibles.length) {\n\
-      var tile = this.possibles[this.posIndex]\n\
+      _సర్వత్ర_  tile = this.possibles[this.posIndex]\n\
       console.log("plot", this.tx, this.ty, this.posIndex, tile)\n\
       drawTile (కనిష్ఠX()+margin + this.tx * side * 1,\n\
                 గరిష్ఠY()-margin - this.ty * side * 1,\n\
@@ -12156,7 +12150,7 @@ class Tile {\n\
 }\n\
 \n\
 \n\
-function delayedBuild () {\n\
+_విధానము_  delayedBuild () {\n\
   కుంచికను_దాచు()\n\
   if (currentTile.findPossibles()) { // currentTile may change here\n\
     currentTile.plot()\n\
@@ -12171,7 +12165,7 @@ function delayedBuild () {\n\
 \n\
 //****MAIN****\n\
 \n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
   ఆది_స్థితి()\n\
   //కుంచికను_దాచు()\n\
   tiles = []\n\
@@ -12180,12 +12174,12 @@ function ప్రదర్శన() {\n\
   vNumber = Math.floor((గరిష్ఠY()*2 - margin * 2) / side)\n\
   //hNumber = 8\n\
   //vNumber = 8\n\
-  var prev = undefined\n\
-  for (var r=0; r< vNumber; r++) {\n\
+  _సర్వత్ర_  prev = undefined\n\
+  for (_సర్వత్ర_  r=0; r< vNumber; r++) {\n\
     tiles.push([]) //append row  \n\
     //వ్రాయి(tiles[0]) \n\
-    for (var c=0; c< hNumber; c++) {\n\
-      var tile = new Tile (c, r, prev)\n\
+    for (_సర్వత్ర_  c=0; c< hNumber; c++) {\n\
+      _సర్వత్ర_  tile = new Tile (c, r, prev)\n\
       tiles[r].push(tile) //append tile\n\
       if (prev != undefined){\n\
          prev.next = tile\n\
@@ -12202,8 +12196,8 @@ waves ='\
 // Waves -- wave interference patterns\n\
 \n\
 //draw the radials\n\
-function drawRadials(side) {\n\
-	for (var i=0; i<16; i++) {\n\
+_విధానము_  drawRadials(side) {\n\
+	for (_సర్వత్ర_  i=0; i<16; i++) {\n\
 		స్థానము_మార్చు(0,0)\n\
 		కోణము(i/16 * 360)\n\
 		ముందుకు_జరుగు( size)\n\
@@ -12218,7 +12212,7 @@ distances are known. This math is a bit tough.\n\
 \n\
 \n\
 //\n\
-function ప్రదర్శన() {\n\
+_విధానము_  ప్రదర్శన() {\n\
 	ఆది_స్థితి()\n\
 	 చుట్టొద్దు()\n\
 	కుంచికను_దాచు()\n\
@@ -12228,11 +12222,11 @@ function ప్రదర్శన() {\n\
 	స్థానము_మార్చు(0,0)\n\
 	వృత్తము( size)\n\
 	స్థానము_మార్చు(size,0)\n\
-	for( var i=0; i< n; i=i+step){\n\
+	for( _సర్వత్ర_  i=0; i< n; i=i+step){\n\
 		చాపము(i * step, 180, false)\n\
 	}\n\
 	స్థానము_మార్చు(-size,0)\n\
-	for( var i=0; i< n; i=i+step){\n\
+	for( _సర్వత్ర_  i=0; i< n; i=i+step){\n\
 		చాపము(i * step, 180, true)\n\
 	}\n\
 }\n\
