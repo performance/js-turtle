@@ -2,9 +2,9 @@
 // for more information see https://stevennaifeh.com
 
 
-function square (side) {
+_విధానము_     square (side) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<4; i++){
+  for (_సర్వత్ర_   i=0; i<4; i++){
     ముందుకు_జరుగు(side)
     కుడి_వైపు_తిరుగు(90)
   }
@@ -12,15 +12,15 @@ function square (side) {
 }
 
 
-function layer (side, offsetAngle) {
+_విధానము_     layer (side, offsetAngle) {
   ఎడమ_వైపు_తిరుగు( offsetAngle)
-  for (var i=0; i<8; i++){
-    కలమును_పైకి_ఎత్తు()
+  for (_సర్వత్ర_   i=0; i<8; i++){
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు(45)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     square(side)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(45)
     వెనుకకు_జరుగు( side)
     కుడి_వైపు_తిరుగు(45)
@@ -29,7 +29,7 @@ function layer (side, offsetAngle) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   side = 14

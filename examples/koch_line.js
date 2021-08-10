@@ -1,6 +1,6 @@
 // Koch Lines -- draw an animated set of Koch lines
 
-function kochLine (length, order) {
+_విధానము_     kochLine (length, order) {
   //assume drawn on the current కోణము
   if (order == 0) {
     ముందుకు_జరుగు(length);
@@ -17,10 +17,10 @@ function kochLine (length, order) {
 }
 
 
-function kochLineవిలంబించు() {
+_విధానము_     kochLineవిలంబించు() {
 ;
   చెరిపి_వేయి();
-  var side = గరిష్ఠY() - కనిష్ఠY();
+  _సర్వత్ర_   side = గరిష్ఠY() - కనిష్ఠY();
   if (side > గరిష్ఠX() - కనిష్ఠX()) {
     side = గరిష్ఠX() - కనిష్ఠX()
   }
@@ -39,7 +39,7 @@ function kochLineవిలంబించు() {
   }
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి();
   కుంచికను_దాచు();
   steps = 6;

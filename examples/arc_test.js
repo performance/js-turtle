@@ -3,11 +3,11 @@
 
 radialArc = (x, y, startRadius, armAngle, tangentAngle, arcRadius, extent, సవ్యము) => {
   స్థానము_మార్చు(x,y);
-  కలమును_పైకి_ఎత్తు();
+  కుంచికను_పైకి_ఎత్తు();
   కోణము(armAngle);
   ముందుకు_జరుగు(startRadius);
   కుడి_వైపు_తిరుగు(tangentAngle);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   వృత్తము(arcRadius,extent, సవ్యము);
 }
 
@@ -46,10 +46,10 @@ circleEyeR = (అ, ని, న, outerRadius) => {
   లెక్క_పెడుతూ_ఆవర్తించు ( న, ( చ ) => {
     స్థానము_మార్చు(అ, ని);
     కోణము (చ/న * 360);
-    కలమును_పైకి_ఎత్తు();
+    కుంచికను_పైకి_ఎత్తు();
     ముందుకు_జరుగు(outerRadius);
     కుడి_వైపు_తిరుగు(90)
-    కలమును_కింద_పెట్టు();
+    కుంచికను_కింద_పెట్టు();
     వ్రాయి(చ)
     కుడివైపు_చాపాము(outerRadius/2) // one inscribed circle
   } )
@@ -62,9 +62,9 @@ circleEyeL = (అ, ని, న, outerRadius) => {
   లెక్క_పెడుతూ_ఆవర్తించు ( న, ( చ ) => {
     స్థానము_మార్చు(అ, ని);
     కోణము (చ/న * 360);
-    కలమును_పైకి_ఎత్తు();
+    కుంచికను_పైకి_ఎత్తు();
     ముందుకు_జరుగు(outerRadius);
-    కలమును_కింద_పెట్టు();
+    కుంచికను_కింద_పెట్టు();
     ఎడమ_వైపు_తిరుగు(90)
     వ్రాయి(చ)
     ఎడమవైపు_చాపాము(outerRadius/2); // one inscribed circle
@@ -73,10 +73,10 @@ circleEyeL = (అ, ని, న, outerRadius) => {
 
 
 ప్రదర్శన = () => {
-  const సవ్య = అవును;
-  const అపసవ్య = !సవ్య;
-  const పొడవు = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())
-  const గది_పొడవు = పొడవు/3
+  _సర్వదా_    సవ్య = అవును;
+  _సర్వదా_    అపసవ్య = !సవ్య;
+  _సర్వదా_    పొడవు = 2 * Math.min(గరిష్ఠX(), గరిష్ఠY())
+  _సర్వదా_    గది_పొడవు = పొడవు/3
 
   //divide area into 6 cells: 2 vertical, 3 horizontal
   // centers are:
@@ -116,9 +116,9 @@ circleEyeL = (అ, ని, న, outerRadius) => {
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(height)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   కుడి_వైపు_తిరుగు(90)
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
@@ -130,9 +130,9 @@ circleEyeL = (అ, ని, న, outerRadius) => {
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(height)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   కుడి_వైపు_తిరుగు(90)
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
@@ -144,9 +144,9 @@ circleEyeL = (అ, ని, న, outerRadius) => {
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(height)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   కుడి_వైపు_తిరుగు(90)
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)
@@ -158,9 +158,9 @@ circleEyeL = (అ, ని, న, outerRadius) => {
   curveLoss = cRadius * Math.tan( degToRad( 22.5))
   side = 2 * oRadius * Math.sin( degToRad(22.5)) -  2* curveLoss
   height = oRadius * Math.cos( degToRad( 22.5))
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(height)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   కుడి_వైపు_తిరుగు(90)
   వెనుకకు_జరుగు(side/2)
   roundedOctogon( side, cRadius)

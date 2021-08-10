@@ -1,10 +1,10 @@
 // Bouncing Rectangles -- rectangles which bounce off the side of the canvas
 
-  const గరిష్ఠ_X =  imageContext.canvas.width/2;
-  const గరిష్ఠ_Y =  imageContext.canvas.height/2;
-  const కనిష్ఠ_X =  -గరిష్ఠ_X;
-  const కనిష్ఠ_Y =  -గరిష్ఠ_Y;
-  const maxVelocity = 12;
+  _సర్వదా_    గరిష్ఠ_X =  imageContext.canvas.width/2;
+  _సర్వదా_    గరిష్ఠ_Y =  imageContext.canvas.height/2;
+  _సర్వదా_    కనిష్ఠ_X =  -గరిష్ఠ_X;
+  _సర్వదా_    కనిష్ఠ_Y =  -గరిష్ఠ_Y;
+  _సర్వదా_    maxVelocity = 12;
 
 init_drops = (n) => {
    _అత్ర_ drops = new Array(n);
@@ -22,7 +22,7 @@ init_drops = (n) => {
          width: యాదృచ్ఛిక_సంఖ్య(1,15)
       };
    } );
-   return drops;
+   _ఫలము_  drops;
 }
 
 rain = (drops, n) => {

@@ -1,6 +1,6 @@
 #Project Information
 ##History
-This project was forked from bjpop/js-కుంచిక. This project had the basic కుంచిక
+This project was forked from bjpop/js-turtle. This project had the basic కుంచిక
 functions, **animate** function, the immediate execution of the **command**
 line, and the editable **definitions** area. This was a substantial portion of
 this project, and overall had brilliant ideas.

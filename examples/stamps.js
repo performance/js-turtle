@@ -1,11 +1,11 @@
 // Stamps -- demonstrate stamping of a star design multiple times
 
-function star (side) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     star (side) {
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(.54*side)
   turn (180-18)
-  కలమును_కింద_పెట్టు()
-  var i=0
+  కుంచికను_కింద_పెట్టు()
+  _సర్వత్ర_   i=0
   while (i<5){
     ముందుకు_జరుగు(side)
     కుడి_వైపు_తిరుగు(180-36)
@@ -14,12 +14,12 @@ function star (side) {
   turn (180+18)
 }
 
-function stamps () {
+_విధానము_     stamps () {
   ఆది_స్థితి()
    చుట్టొద్దు()
-  var x = కనిష్ఠX()
+  _సర్వత్ర_   x = కనిష్ఠX()
   while (x <= గరిష్ఠX()) {
-    var y = కనిష్ఠY()
+    _సర్వత్ర_   y = కనిష్ఠY()
     while (y <= గరిష్ఠY()) {
       స్థానము_మార్చు(x,y)
       కోణము (0);

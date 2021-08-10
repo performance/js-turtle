@@ -3,13 +3,13 @@
 
 
 //*** GLOBALS ***
-var gen = 0
-var side
+_సర్వత్ర_   gen = 0
+_సర్వత్ర_   side
 
 
 //*** CONSTANTS ***
 
-var root2 = Math.sqrt(2)
+_సర్వత్ర_   root2 = Math.sqrt(2)
 //  X ↦ X+YF+
 //  Y ↦ −FX−Y.
 // కోణము is 90
@@ -18,13 +18,13 @@ var root2 = Math.sqrt(2)
 
 //*** FUNCTIONS ***
 
-function caption (message) {
+_విధానము_     caption (message) {
   // save your current position, heading, etc.
-  var savedX = కుంచిక.స్థానము.x
-  var savedY = కుంచిక.స్థానము.y
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = కుంచిక.రంగు
-  var savedWidth = కుంచిక.వెడల్పు
+  _సర్వత్ర_   savedX = కుంచిక.స్థానము.x
+  _సర్వత్ర_   savedY = కుంచిక.స్థానము.y
+  _సర్వత్ర_   savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  _సర్వత్ర_   savedColor = కుంచిక.రంగు
+  _సర్వత్ర_   savedWidth = కుంచిక.వెడల్పు
 
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
@@ -46,7 +46,7 @@ function caption (message) {
   వెడల్పు(savedWidth)
 }
 
-function X (side, gen) {
+_విధానము_     X (side, gen) {
   if (gen <= 0) {
      ముందుకు_జరుగు(side)
   }
@@ -59,7 +59,7 @@ function X (side, gen) {
   }
 }
 
-function Y (side, gen) {
+_విధానము_     Y (side, gen) {
   if (gen <= 0) {
     ముందుకు_జరుగు(side)
   }
@@ -73,12 +73,12 @@ function Y (side, gen) {
 }
 
 
-function delayedDragon () {
+_విధానము_     delayedDragon () {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   స్థానము_మార్చు(-side * .4, +side *.2)
   దిశ_మార్చు(90+ gen * 45)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   X (side, gen)
   caption( "Dragon curve, generation " + gen)
 
@@ -91,7 +91,7 @@ function delayedDragon () {
 }  
     
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   side = .9 * Math.min(గరిష్ఠX(), 2*గరిష్ఠY())
   gen = 0
   delayedDragon()

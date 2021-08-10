@@ -7,7 +7,7 @@
 
 colors = ["red", "white", "blue", "yellow", "green"]
 
-function pentUp( side, fColor) {
+_విధానము_     pentUp( side, fColor) {
   ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 90)
@@ -23,7 +23,7 @@ function pentUp( side, fColor) {
 }
 
 
-function pentDown( side, fColor) {
+_విధానము_     pentDown( side, fColor) {
   ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు( side)
   కుడి_వైపు_తిరుగు( 90)
@@ -40,13 +40,13 @@ function pentDown( side, fColor) {
 
 
 // nextColor could be completely random, if desired
-function nextColor() { 
+_విధానము_     nextColor() { 
   c = colors[ count % colors.length]
   count = count + 1
-  return c
+  _ఫలము_  c
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   s = 50

@@ -4,12 +4,12 @@
 // token. Each piece consists of a set of such moves to from the outline
 // of the piece.
 
-function r() {
+_విధానము_     r() {
   ముందుకు_జరుగు( side)
   కుడి_వైపు_తిరుగు( 60)
 }
 
-function l() {
+_విధానము_     l() {
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 60)
 }
@@ -37,28 +37,28 @@ function l() {
   S5=[l,l,l,r,r,l,r,l,l,r,l,l,l,l,r,r,l,r,l,l,r,l]
   p5=[l,l,r,l,r,l,l,r,l,l,l,r,l,l,r,r,l,l]
 
-function shape( bx, by, axis, turns, fillColor ) {
+_విధానము_     shape( bx, by, axis, turns, fillColor ) {
   // draw a shape at board position bx, by, with the piece oriented
   // on one of six axises. The shape consists of an array of turns.
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   స్థానము_మార్చు( baseX, baseY)
   కోణము(0)
   ముందుకు_జరుగు( 2* by * side * Math.cos(degToRad(30)))
   కుడి_వైపు_తిరుగు(60)
   ముందుకు_జరుగు( 2* bx * side * Math.cos(degToRad(30)))
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   నిండు_వృత్తము()  //center of start cell
   కోణము(60 * axis )
   ఎడమ_వైపు_తిరుగు( 180 - 30)
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు(120) 
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   ఆకారము_ప్రారంభించు()
   for (j=0; j< turns.length; j++) {
     turns[j]()
   }
   ఆకారము_ముగించు( fillColor)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
 
   ఎడమ_వైపు_తిరుగు( 60)
   ముందుకు_జరుగు(side)
@@ -66,13 +66,13 @@ function shape( bx, by, axis, turns, fillColor ) {
   వెనుకకు_జరుగు(side)
   కుడి_వైపు_తిరుగు( 60)
 
-// return to the start position, not really necessary
+// _ఫలము_  to the start position, not really necessary
   ఎడమ_వైపు_తిరుగు(60)
   ముందుకు_జరుగు( side)
   ఎడమ_వైపు_తిరుగు( 30)
 }
 
-function drawAll() {
+_విధానము_     drawAll() {
   ఆది_స్థితి()
   side = 15
   baseX = -200
@@ -102,7 +102,7 @@ function drawAll() {
   shape(9,12,0,X5)
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   కుంచికను_దాచు()

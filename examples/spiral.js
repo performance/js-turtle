@@ -1,6 +1,6 @@
 // Spiral -- demonstrate some simple spirals
 
-function spiral1() {
+_విధానము_     spiral1() {
   ఆది_స్థితి()
   n=0
   while (n<400) {
@@ -10,7 +10,7 @@ function spiral1() {
   }
 }
 
-function spiral2() {
+_విధానము_     spiral2() {
   ఆది_స్థితి()
   n=0
   while (n<75) {
@@ -21,7 +21,7 @@ function spiral2() {
 }
 
 
-function spiral3() {
+_విధానము_     spiral3() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   n=0
@@ -32,7 +32,7 @@ function spiral3() {
   }
 }
 
-function spiral() {
+_విధానము_     spiral() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   n=0

@@ -6,7 +6,7 @@
 
 colors = ["red", "white", "blue", "yellow", "green"]
 
-function shapeUp (side, fillColor) {
+_విధానము_     shapeUp (side, fillColor) {
   // assume pointing in direction of base
   ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు(3* side)
@@ -22,49 +22,49 @@ function shapeUp (side, fillColor) {
   ఆకారము_ముగించు( fillColor)
 }
 
-function mountainUnit(side){
-  కలమును_కింద_పెట్టు()
+_విధానము_     mountainUnit(side){
+  కుంచికను_కింద_పెట్టు()
   shapeUp(side, "darkgreen")//1,1
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ఎడమ_వైపు_తిరుగు(60)
   ముందుకు_జరుగు(side)
   కుడి_వైపు_తిరుగు(60)
   ముందుకు_జరుగు(5*side)
   కుడి_వైపు_తిరుగు(180)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   shapeUp(side, "skyblue")//1,0
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
 
   ముందుకు_జరుగు(3*side)
   ఎడమ_వైపు_తిరుగు(180)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   shapeUp(side, "green") //0,0
 
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ఎడమ_వైపు_తిరుగు(60)
   ముందుకు_జరుగు(2*side)
   ఎడమ_వైపు_తిరుగు(120)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   shapeUp(side, "lightblue")//0,1
   ముందుకు_జరుగు( 3*side)
   ఎడమ_వైపు_తిరుగు( 180)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
 
 }
 
 // nextColor could be completely random, if desired
-function nextColor() {
+_విధానము_     nextColor() {
   c = colors[ count % color.length]
   count = count + 1
-  return c
+  _ఫలము_  c
 }
 
 
-function newRow(lastx, lasty) {
-  // function to determine where the new row should start
+_విధానము_     newRow(lastx, lasty) {
+  // _విధానము_     to determine where the new row should start
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   side = 20
@@ -79,9 +79,9 @@ console.log("xy<: " + కనిష్ఠX() + " " + కనిష్ఠY())
   // column when end is off screen
 
   // while ( x<గరిష్ఠX() && y>కనిష్ఠY()) {
-  var done = false
-  var i = 0
-  var sqrt3 = Math.sqrt(3)
+  _సర్వత్ర_   done = false
+  _సర్వత్ర_   i = 0
+  _సర్వత్ర_   sqrt3 = Math.sqrt(3)
   while (!done){
 console.log("xy: " + i + " " + mx + " " + my)
     స్థానము_మార్చు(mx, my)

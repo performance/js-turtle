@@ -1,7 +1,7 @@
 // Koch Snowflakes, Stacked -- draw an set of stacked Koch snowflakes
 
 
-function kochLine (length, order) {
+_విధానము_     kochLine (length, order) {
   //assume drawn on the current కోణము
   if (order == 0) {
     ముందుకు_జరుగు(length);
@@ -18,7 +18,7 @@ function kochLine (length, order) {
 }
 
 
-function kochSnowflake (length, order) {
+_విధానము_     kochSnowflake (length, order) {
   కోణము (30);
   స్థానము_మార్చు(-length/2,-.3 * length);
   kochLine (length, order);
@@ -30,11 +30,11 @@ function kochSnowflake (length, order) {
 }
   
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   size = .045* Math.min(గరిష్ఠX(), గరిష్ఠY())
   కుంచికను_దాచు();
-  for (var i=0; i<6; i++) {
+  for (_సర్వత్ర_   i=0; i<6; i++) {
     kochSnowflake( size*(i+1)*(i+1), i)
   }
 }

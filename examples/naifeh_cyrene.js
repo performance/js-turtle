@@ -12,30 +12,30 @@ The quadrangle must be symmetrical, in that the short sides are equal and
 the long sides are equal. The ratio between the two may vary.
 */
 
-function bowties (count, back){
+_విధానము_     bowties (count, back){
   //assume on left edge pointing up, moving to right
   // routine has invariance
   // back = 0 big end first, =1 small end first
   కుడి_వైపు_తిరుగు( 90)
-  for (var i=0; i<count; i++) {
-    కలమును_కింద_పెట్టు()
+  for (_సర్వత్ర_   i=0; i<count; i++) {
+    కుంచికను_కింద_పెట్టు()
     if (i % 2 == back) {
       downKite()
     } else {
       upKite()
     }
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( hypoteneuse)
   }
   ఎడమ_వైపు_తిరుగు(180)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు( count * hypoteneuse)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   కుడి_వైపు_తిరుగు(90)
 }
 
 
-function upKite() {
+_విధానము_     upKite() {
   //assume direction is in the axis of the kite
   ఆకారము_ప్రారంభించు()
   కుడి_వైపు_తిరుగు( shortAngle)
@@ -50,7 +50,7 @@ function upKite() {
   ఆకారము_ముగించు("lightblue")
 }
 
-function downKite() {
+_విధానము_     downKite() {
   //assume direction is in the axis of the kite
   ఆకారము_ప్రారంభించు()
   కుడి_వైపు_తిరుగు( longAngle)
@@ -65,33 +65,33 @@ function downKite() {
   ఆకారము_ముగించు("lightblue")
 }
 
-function kites( count, back) {
+_విధానము_     kites( count, back) {
   //assume pointing up, perpendicular to flow
   // routine has invariance
   ఎడమ_వైపు_తిరుగు(180)
-  for( var i=0; i<count; i++) {
-    కలమును_కింద_పెట్టు()
+  for( _సర్వత్ర_   i=0; i<count; i++) {
+    కుంచికను_కింద_పెట్టు()
     if (i % 2 == back) {
       downKite()
     } else {
       upKite()
     }
 
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ఎడమ_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( hypoteneuse)
     కుడి_వైపు_తిరుగు(90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు(90)
   ముందుకు_జరుగు( count * hypoteneuse)
   కుడి_వైపు_తిరుగు(90)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   side = 2.5 * Math.min( గరిష్ఠX()/9, గరిష్ఠY()/8)
@@ -110,21 +110,21 @@ function ప్రదర్శన() {
   longAngle = 90 - shortAngle
 
   // center the figure
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(side * horizontalCount * 1.3 / 4)
   ఎడమ_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(side * verticalCount * 1.7 /4)
   కుడి_వైపు_తిరుగు(90)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 
-  for (var i=0; i<verticalCount; i++) {
+  for (_సర్వత్ర_   i=0; i<verticalCount; i++) {
     bowties( horizontalCount, i % 2)
     kites( horizontalCount+1, 1 - (i % 2)) // change 1 to 0 and 0 to 1
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(180)
     ముందుకు_జరుగు( hypoteneuse)
     కుడి_వైపు_తిరుగు(180)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
   bowties( horizontalCount,i%2) // row across bottom to be neat
 }

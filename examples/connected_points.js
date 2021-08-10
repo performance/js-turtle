@@ -1,26 +1,26 @@
 // Connected Points -- points connected by spikeys
 
 //draw the radials
-function drawRadials(side) {
-  for (var i=0; i<16; i++) {
+_విధానము_     drawRadials(side) {
+  for (_సర్వత్ర_   i=0; i<16; i++) {
     స్థానము_మార్చు(0,0)
     కోణము(i/16 * 360)
     ముందుకు_జరుగు( size)
   }
 }
 
-function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     spikey ( points, revs, వ్యాసార్థము, x, y, head) {
+  కుంచికను_పైకి_ఎత్తు()
   స్థానము_మార్చు(x, y)
   దిశ_మార్చు(head)
   ముందుకు_జరుగు(వ్యాసార్థము)
-  var turnAngle = 360 * revs/points
-  var angleA = ( 180 - turnAngle)/2
-  var stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))
+  _సర్వత్ర_   turnAngle = 360 * revs/points
+  _సర్వత్ర_   angleA = ( 180 - turnAngle)/2
+  _సర్వత్ర_   stroke = 2 * వ్యాసార్థము * Math.cos( degToRad( angleA))
   కుడి_వైపు_తిరుగు( 180 - angleA)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 
-  for( var i = 0; i < points; i = i + 1) { //>
+  for( _సర్వత్ర_   i = 0; i < points; i = i + 1) { //>
     ముందుకు_జరుగు( stroke)
     కుడి_వైపు_తిరుగు( turnAngle)
   }
@@ -28,7 +28,7 @@ function spikey ( points, revs, వ్యాసార్థము, x, y, head) {
 
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   size = .9* Math.min( గరిష్ఠX(), గరిష్ఠY())

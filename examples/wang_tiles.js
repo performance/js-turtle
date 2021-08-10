@@ -15,7 +15,7 @@ S = 2
 W = 3
 
 
-var TILES = [ // original 13
+_సర్వత్ర_   TILES = [ // original 13
   "GGBR",
   "GBGR",
   "GBBG",
@@ -33,7 +33,7 @@ var TILES = [ // original 13
 
 
 /*
-var TILES = [ // new 11
+_సర్వత్ర_   TILES = [ // new 11
   "RRRY",
   "BRBY",
   "RYYY",
@@ -49,7 +49,7 @@ var TILES = [ // new 11
 */
 
 
-var COLORS = { // original colors
+_సర్వత్ర_   COLORS = { // original colors
   "R": "red",
   "G": "green",
   "B": "blue",
@@ -60,7 +60,7 @@ var COLORS = { // original colors
 
 
 /*
-var COLORS = { // for red-green color blind
+_సర్వత్ర_   COLORS = { // for red-green color blind
   "R": "red",
   "G": "lightgreen",
   "B": "blue",
@@ -73,15 +73,15 @@ var COLORS = { // for red-green color blind
 
 //****GLOBALS****
 
-var tiles; // global array of tile objects
-var currentTile; // current tile to be considered
-var hHumber; // number of tiles horizontally
-var vHumber; // number of tiles vertically
+_సర్వత్ర_   tiles; // global array of tile objects
+_సర్వత్ర_   currentTile; // current tile to be considered
+_సర్వత్ర_   hHumber; // number of tiles horizontally
+_సర్వత్ర_   vHumber; // number of tiles vertically
 
 
 //****FUNCTIONS****
 
-function drawTriangle (fill) {
+_విధానము_     drawTriangle (fill) {
   // draw triangle in place
   ఆకారము_ప్రారంభించు()
   ముందుకు_జరుగు( side)
@@ -94,7 +94,7 @@ function drawTriangle (fill) {
 }
 
 
-function drawTile (x, y, tile) {
+_విధానము_     drawTile (x, y, tile) {
   స్థానము_మార్చు(x,y)
   కోణము(90)
   drawTriangle( COLORS[ TILES[tile][N]])
@@ -112,19 +112,19 @@ function drawTile (x, y, tile) {
 }
 
 
-function north(tx, ty) { // get tile north of given coordinate
-  var possibles = tiles[ty-1][tx].possibles
-  var nTile = possibles[tiles[ty-1][tx].posIndex]
+_విధానము_     north(tx, ty) { // get tile north of given coordinate
+  _సర్వత్ర_   possibles = tiles[ty-1][tx].possibles
+  _సర్వత్ర_   nTile = possibles[tiles[ty-1][tx].posIndex]
   console.log("north",tx,ty, nTile)
-  return nTile
+  _ఫలము_  nTile
 }
 
 
-function west(tx, ty) { // get tile west of given coordinate
-  var possibles = tiles[ty][tx-1].possibles
-  var wTile = possibles[tiles[ty][tx-1].posIndex]
+_విధానము_     west(tx, ty) { // get tile west of given coordinate
+  _సర్వత్ర_   possibles = tiles[ty][tx-1].possibles
+  _సర్వత్ర_   wTile = possibles[tiles[ty][tx-1].posIndex]
   console.log("west",tx,ty, wTile)
-  return wTile
+  _ఫలము_  wTile
 }
 
 
@@ -156,8 +156,8 @@ class Tile {
 
     } else if (this.ty == 0) {
       console.log ("fP first row")
-      var w = TILES[west(this.tx, this.ty)][E]
-      for (var i = 0; i<TILES.length; i++) {
+      _సర్వత్ర_   w = TILES[west(this.tx, this.ty)][E]
+      for (_సర్వత్ర_   i = 0; i<TILES.length; i++) {
         console.log("fP",w , TILES[i][W])
         if (TILES[i][W] == w){
            console.log("fP push", i)
@@ -167,8 +167,8 @@ class Tile {
 
     } else if (this.tx == 0){
       console.log ("fP new row")
-      var n = TILES[north(this.tx, this.ty)][S]
-      for (var i = 0; i<TILES.length; i++) {
+      _సర్వత్ర_   n = TILES[north(this.tx, this.ty)][S]
+      for (_సర్వత్ర_   i = 0; i<TILES.length; i++) {
         if (TILES[i][N] == n){
           this.possibles.push(i)
         }
@@ -176,9 +176,9 @@ class Tile {
 
     } else {
       console.log ("fP in row")
-      var w = TILES[west(this.tx, this.ty)][E]
-      var n = TILES[north(this.tx, this.ty)][S]
-      for (var i = 0; i<TILES.length; i++) {
+      _సర్వత్ర_   w = TILES[west(this.tx, this.ty)][E]
+      _సర్వత్ర_   n = TILES[north(this.tx, this.ty)][S]
+      for (_సర్వత్ర_   i = 0; i<TILES.length; i++) {
         if (TILES[i][W] == w && TILES[i][N] == n){
           this.possibles.push(i)
         }
@@ -187,7 +187,7 @@ class Tile {
 
     if (this.possibles.length > 0) { // ready to plot
       //randomize order of possibles
-      var possibles = []
+      _సర్వత్ర_   possibles = []
       while (this.possibles.length > 0) {
         possibles.push(
             this.possibles.splice( 
@@ -197,16 +197,16 @@ class Tile {
       this.possibles = possibles
       this.posIndex = 0
       console.log("fP-",this.tx, this.ty, this.possibles, this.posIndex)
-      return (true)
+      _ఫలము_  (true)
 
     } else { // blocked, need to backtrack
       this.possibles = []
       this.posIndex = undefined
       this.plotBlank()
       if (this.tx != 0 || this.ty != 0) {
-        return( this.prev.backtrack())
+        _ఫలము_ ( this.prev.backtrack())
       } else { // truly blocked
-        return( false)
+        _ఫలము_ ( false)
       }
     }
   }
@@ -222,16 +222,16 @@ class Tile {
     if (this.posIndex != undefined && this.posIndex + 1 < this.possibles.length) {
       // ready to plot
       this.posIndex = this.posIndex + 1
-      return( true)
+      _ఫలము_ ( true)
 
     } else { // backtrack again
       this.possibles = []
       this.posIndex = undefined
       this.plotBlank()
       if (this.tx != 0 || this.ty != 0) {
-        return( this.prev.backtrack())
+        _ఫలము_ ( this.prev.backtrack())
       } else { // truly blocked
-        return( false)
+        _ఫలము_ ( false)
       }
     }
   }
@@ -239,7 +239,7 @@ class Tile {
 
   plot() {
     if (this.posIndex != undefined && this.posIndex < this.possibles.length) {
-      var tile = this.possibles[this.posIndex]
+      _సర్వత్ర_   tile = this.possibles[this.posIndex]
       console.log("plot", this.tx, this.ty, this.posIndex, tile)
       drawTile (కనిష్ఠX()+margin + this.tx * side * 1,
                 గరిష్ఠY()-margin - this.ty * side * 1,
@@ -271,7 +271,7 @@ class Tile {
 }
 
 
-function delayedBuild () {
+_విధానము_     delayedBuild () {
   కుంచికను_దాచు()
   if (currentTile.findPossibles()) { // currentTile may change here
     currentTile.plot()
@@ -286,7 +286,7 @@ function delayedBuild () {
 
 //****MAIN****
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   //కుంచికను_దాచు()
   tiles = []
@@ -295,12 +295,12 @@ function ప్రదర్శన() {
   vNumber = Math.floor((గరిష్ఠY()*2 - margin * 2) / side)
   //hNumber = 8
   //vNumber = 8
-  var prev = undefined
-  for (var r=0; r< vNumber; r++) {
+  _సర్వత్ర_   prev = undefined
+  for (_సర్వత్ర_   r=0; r< vNumber; r++) {
     tiles.push([]) //append row  
     //వ్రాయి(tiles[0]) 
-    for (var c=0; c< hNumber; c++) {
-      var tile = new Tile (c, r, prev)
+    for (_సర్వత్ర_   c=0; c< hNumber; c++) {
+      _సర్వత్ర_   tile = new Tile (c, r, prev)
       tiles[r].push(tile) //append tile
       if (prev != undefined){
          prev.next = tile

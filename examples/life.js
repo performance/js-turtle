@@ -11,7 +11,7 @@ columnMid = columns/2 * columnSize
 rowMid = rows/2 * rowSize
 
 
-var grid = [ [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],
+_సర్వత్ర_   grid = [ [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],
@@ -29,9 +29,9 @@ var grid = [ [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0]
 ]
 
-var grid2 = Array( rows * columns)
+_సర్వత్ర_   grid2 = Array( rows * columns)
 
-function drawGrid( grid) {
+_విధానము_     drawGrid( grid) {
   for (r=0; r < rows; r++) {
     for ( c=0; c < columns; c++) {
        //వ్రాయి( r + " " + c)
@@ -47,7 +47,7 @@ function drawGrid( grid) {
 }
 
 
-function drawGrid2( grid, baseCaption) {
+_విధానము_     drawGrid2( grid, baseCaption) {
   for (r=0; r < rows; r++) {
     for ( c=0; c < columns; c++) {
        స్థానము_మార్చు( columnMid - c * columnSize , rowMid - r * rowSize)
@@ -63,7 +63,7 @@ function drawGrid2( grid, baseCaption) {
 }
 
 
-function loadPattern( pattern) {
+_విధానము_     loadPattern( pattern) {
   for (r=0; r < rows; r++) {
     mask = 0b1000000000000000
     for ( c=0; c < columns; c++) {
@@ -74,7 +74,7 @@ function loadPattern( pattern) {
 }
 
 
-function loadPattern2( pattern) {
+_విధానము_     loadPattern2( pattern) {
   for (r=0; r < rows; r++) {
     mask = 0b00000000000000001
     for ( c=0; c < columns; c++) {
@@ -88,11 +88,11 @@ function loadPattern2( pattern) {
   }
 }
 
-function generation2( currentGrid) {
-  var nextGrid = Array(rows*columns)
+_విధానము_     generation2( currentGrid) {
+  _సర్వత్ర_   nextGrid = Array(rows*columns)
   for (r=0; r < rows; r++) {
     for ( c=0; c < columns; c++) {
-      var cell = r * columns + c
+      _సర్వత్ర_   cell = r * columns + c
       count = neighborCount2( currentGrid, cell)
       //console.log ("row:" + r + " col:" + c + " count:" + count)
       if (currentGrid[ cell]) { //alive
@@ -120,10 +120,10 @@ function generation2( currentGrid) {
 
 
 
-function neighborCount( grid, cell) {
-  var r = cell / columns
-  var c = cell % columns
-  var count = 0
+_విధానము_     neighborCount( grid, cell) {
+  _సర్వత్ర_   r = cell / columns
+  _సర్వత్ర_   c = cell % columns
+  _సర్వత్ర_   count = 0
   if (r > 0) {
     if ( c>0 && grid[r-1, c-1]) {
       count = count + 1
@@ -152,14 +152,14 @@ function neighborCount( grid, cell) {
       count = count + 1
     }
   }
-  return count
+  _ఫలము_  count
 }
 
 
-function neighborCount2( grid, cell) {
-  var r = Math.floor(cell / columns)
-  var c = cell % columns
-  var count = 0
+_విధానము_     neighborCount2( grid, cell) {
+  _సర్వత్ర_   r = Math.floor(cell / columns)
+  _సర్వత్ర_   c = cell % columns
+  _సర్వత్ర_   count = 0
   if ( r>0) {
     if ( c>0 && grid[(r-1)*columns + c-1]) {
       count = count + 1
@@ -196,26 +196,26 @@ function neighborCount2( grid, cell) {
       //console.log("SE " + r + "," + c)
     }
   }
-  return count
+  _ఫలము_  count
 }
 
-var past = [ Array( rows*columns).fill(false),
+_సర్వత్ర_   past = [ Array( rows*columns).fill(false),
              Array( rows*columns).fill(false),
              Array( rows*columns).fill(false)
            ]
-var numPast = past.length
+_సర్వత్ర_   numPast = past.length
 
-var lastPast = 0
-var oscillatingCount = 0
-var oscillatingPast
-var oscillatingDuration = 3 // how many oscillations are visible before stopping
+_సర్వత్ర_   lastPast = 0
+_సర్వత్ర_   oscillatingCount = 0
+_సర్వత్ర_   oscillatingPast
+_సర్వత్ర_   oscillatingDuration = 3 // how many oscillations are visible before stopping
 
-function endTest (grid) {
-  // return true if stable or oscillating
-  var stable = true
-  var oscillating2 = true
-  var oscillating3 = true
-  var oscillating = false
+_విధానము_     endTest (grid) {
+  // _ఫలము_  true if stable or oscillating
+  _సర్వత్ర_   stable = true
+  _సర్వత్ర_   oscillating2 = true
+  _సర్వత్ర_   oscillating3 = true
+  _సర్వత్ర_   oscillating = false
   for (i = grid.length - 1; i>=0; i= i-1) {
     // is the pattern stable?
     if (grid[i] != past[lastPast] [i]) {
@@ -247,17 +247,17 @@ function endTest (grid) {
   }
   lastPast = (lastPast+1) % numPast
   //console.log( "stable:" + stable + " oscil2:" + oscillating2 + " oscil3:" + oscillating3+ " lastPast:" + lastPast)
-  return ( stable || oscillating)
+  _ఫలము_  ( stable || oscillating)
 }
 
 
-function caption (message) {
+_విధానము_     caption (message) {
   // save your current position, heading, etc.
-  var savedX = కుంచిక.స్థానము.x
-  var savedY = కుంచిక.స్థానము.y
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = కుంచిక.రంగు
-  var savedWidth = కుంచిక.వెడల్పు
+  _సర్వత్ర_   savedX = కుంచిక.స్థానము.x
+  _సర్వత్ర_   savedY = కుంచిక.స్థానము.y
+  _సర్వత్ర_   savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  _సర్వత్ర_   savedColor = కుంచిక.రంగు
+  _సర్వత్ర_   savedWidth = కుంచిక.వెడల్పు
 
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
@@ -282,7 +282,7 @@ function caption (message) {
 // in the following patterns, the left most bit
 // is taken to be the highest bit. There is one
 // number per row (for up to 32 bits).
-var trafficLight = [
+_సర్వత్ర_   trafficLight = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -302,7 +302,7 @@ var trafficLight = [
   0b0000000000000000  //15
 ]
 
-var greaterThan = [
+_సర్వత్ర_   greaterThan = [
   //5432109876543210
   0b1000000000000000, //00
   0b0100000000000000, //01
@@ -323,7 +323,7 @@ var greaterThan = [
 ]
 
 
-var pulsar = [
+_సర్వత్ర_   pulsar = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -344,7 +344,7 @@ var pulsar = [
 ]
 
 
-var glider = [
+_సర్వత్ర_   glider = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -365,7 +365,7 @@ var glider = [
 ]
 
 
-var glider2 = [
+_సర్వత్ర_   glider2 = [
   //5432109876543210
   0b0100000000000010, //00
   0b0010000000000100, //01
@@ -386,7 +386,7 @@ var glider2 = [
 ]
 
 
-var lwss = [ // light weight space ship
+_సర్వత్ర_   lwss = [ // light weight space ship
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -407,7 +407,7 @@ var lwss = [ // light weight space ship
 ]
 
 
-var lwss2 = [ // light weight space ship
+_సర్వత్ర_   lwss2 = [ // light weight space ship
   //5432109876543210
   0b1010000000001001, //00
   0b0001000000010000, //01
@@ -427,7 +427,7 @@ var lwss2 = [ // light weight space ship
   0b1001000000000101, //15
 ]
 
-var beacons = [
+_సర్వత్ర_   beacons = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //00
@@ -448,7 +448,7 @@ var beacons = [
 ]
 
 
-var pentathalon = [
+_సర్వత్ర_   pentathalon = [
   //5432109876543210
   0b0000000010000000, //00
   0b0000000010000000, //01
@@ -469,7 +469,7 @@ var pentathalon = [
 ]
 
 
-var mwss = [
+_సర్వత్ర_   mwss = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -490,7 +490,7 @@ var mwss = [
 ]
 
 
-var hwss = [
+_సర్వత్ర_   hwss = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -511,7 +511,7 @@ var hwss = [
 ]
 
 
-var oscillator14 = [
+_సర్వత్ర_   oscillator14 = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -532,7 +532,7 @@ var oscillator14 = [
 ]
 
 
-var tumbler = [
+_సర్వత్ర_   tumbler = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -553,7 +553,7 @@ var tumbler = [
 ]
 
 
-var unix = [ // period 6 oscillator
+_సర్వత్ర_   unix = [ // period 6 oscillator
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -575,7 +575,7 @@ var unix = [ // period 6 oscillator
 
 
 
-var greatOnOff = [
+_సర్వత్ర_   greatOnOff = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -596,7 +596,7 @@ var greatOnOff = [
 ]
 
 
-var birther = [
+_సర్వత్ర_   birther = [
   //5432109876543210
   0b0000000000000000, //00
   0b1100000000000000, //01
@@ -617,7 +617,7 @@ var birther = [
 ]
 
 
-var blank = [
+_సర్వత్ర_   blank = [
   //5432109876543210
   0b0000000000000000, //00
   0b0000000000000000, //01
@@ -638,11 +638,11 @@ var blank = [
 ]
 
 
-var gen
-var numDemos = 16
-var demoNumber
+_సర్వత్ర_   gen
+_సర్వత్ర_   numDemos = 16
+_సర్వత్ర_   demoNumber
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   కుంచికను_దాచు()
   demoNumber = 0
@@ -650,7 +650,7 @@ function ప్రదర్శన() {
   nextGen()
 }
 
-function nextGen() {
+_విధానము_     nextGen() {
   gen = gen + 1
   if (gen < 100 && !endTest(grid)) {
     generation2( grid)

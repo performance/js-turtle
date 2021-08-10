@@ -1,6 +1,6 @@
 // Compass Rose 2 -- draws compass rose.
 
-function compassRose (x, y, n, outerRadius, innerRadius) {
+_విధానము_     compassRose (x, y, n, outerRadius, innerRadius) {
   స్థానము_మార్చు(x, y);
   వృత్తము(outerRadius); //outer circle
   వృత్తము(innerRadius);
@@ -11,9 +11,9 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   for (i=0; i<4; i++) {
     స్థానము_మార్చు(x, y);
     కోణము (i/4 * 360);
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( innerRadius)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     ముందుకు_జరుగు(outerRadius-innerRadius);
     కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
     ముందుకు_జరుగు( side2);
@@ -28,9 +28,9 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   for (i=0; i<4; i++) {
     స్థానము_మార్చు(x, y);
     కోణము (45 + i/4 * 360);
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( innerRadius)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     ముందుకు_జరుగు(outerRadius-innerRadius);
     కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
     ముందుకు_జరుగు( r3);
@@ -47,9 +47,9 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   for (i=0; i<8; i++) {
     స్థానము_మార్చు(x, y);
     కోణము (22.5 + i/8 * 360);
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు(outerRadius);
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
     ముందుకు_జరుగు( r4);
     వెనుకకు_జరుగు( r4);
@@ -62,9 +62,9 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
   for (i=0; i<16; i++) {
     స్థానము_మార్చు(x, y);
     కోణము (11.25 + i/16 * 360);
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు(outerRadius);
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     కుడి_వైపు_తిరుగు( 180-radToDeg( angleA));
     ముందుకు_జరుగు( r5);
     కుడి_వైపు_తిరుగు(90+radToDeg(angleA))
@@ -76,7 +76,7 @@ function compassRose (x, y, n, outerRadius, innerRadius) {
 
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి();
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
   కుంచికను_దాచు();

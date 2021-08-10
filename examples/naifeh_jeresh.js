@@ -7,18 +7,18 @@
 
 // GLOBALS
 // 
-var sColor = "నలుపు"  // stroke color
-var sWidth = 3        // stroke width
-var fColor = "white"  // fill color
-var bColor = "green"  // background color
+_సర్వత్ర_   sColor = "నలుపు"  // stroke color
+_సర్వత్ర_   sWidth = 3        // stroke width
+_సర్వత్ర_   fColor = "white"  // fill color
+_సర్వత్ర_   bColor = "green"  // background color
 
 // FUNCTIONS
 //
-function tri( side, pointAngle, fill) {
+_విధానము_     tri( side, pointAngle, fill) {
   if (fill) {
     ఆకారము_ప్రారంభించు()
   }
-  for (var i=0; i<3; i++) {
+  for (_సర్వత్ర_   i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు(60 - pointAngle)
     ముందుకు_జరుగు( side)
@@ -30,15 +30,15 @@ function tri( side, pointAngle, fill) {
 }
 
 
-function jeresh (sid, pAngle, fill) {
-  for (var i=0;i<6;i++) {
-    కలమును_కింద_పెట్టు()
+_విధానము_     jeresh (sid, pAngle, fill) {
+  for (_సర్వత్ర_   i=0;i<6;i++) {
+    కుంచికను_కింద_పెట్టు()
     tri( sid, pAngle, fill)
 
-    var tx = కుంచిక.స్థానము.x
-    var ty = కుంచిక.స్థానము.y
-    var tHeading = కుంచిక.కోణము
-    కలమును_పైకి_ఎత్తు()
+    _సర్వత్ర_   tx = కుంచిక.స్థానము.x
+    _సర్వత్ర_   ty = కుంచిక.స్థానము.y
+    _సర్వత్ర_   tHeading = కుంచిక.కోణము
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( sid)
     ఎడమ_వైపు_తిరుగు( 60 - pAngle)
     ముందుకు_జరుగు( sid)
@@ -46,24 +46,24 @@ function jeresh (sid, pAngle, fill) {
     ముందుకు_జరుగు( sid)
     ఎడమ_వైపు_తిరుగు( 60)
 
-    for (var j=0; j<3; j++) {
-      కలమును_కింద_పెట్టు()
+    for (_సర్వత్ర_   j=0; j<3; j++) {
+      కుంచికను_కింద_పెట్టు()
       tri(sid, pAngle, fill)
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       ముందుకు_జరుగు(sid)
       ఎడమ_వైపు_తిరుగు(60)
     }
     స్థానము_మార్చు(tx,ty)
 
     కుంచిక.కోణము=tHeading
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( sid)
     ఎడమ_వైపు_తిరుగు(60)
   }
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   /* can vary point కోణము.
   0 and 120 is a hex tesselation
   60 and 180 are triangles
@@ -72,9 +72,9 @@ function ప్రదర్శన() {
   something is not quite right
   */
   ఆది_స్థితి()
-  కలమును_పైకి_ఎత్తు()
-  var pointAngle = 30
-  var side = 60
+  కుంచికను_పైకి_ఎత్తు()
+  _సర్వత్ర_   pointAngle = 30
+  _సర్వత్ర_   side = 60
   side = .2* Math.min( గరిష్ఠX(), గరిష్ఠY())
   //center a bit
   స్థానము_మార్చు(side, -.3 * side)

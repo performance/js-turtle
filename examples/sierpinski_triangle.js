@@ -1,6 +1,6 @@
 // Sierpinski Triangle -- draw a recursive triangular fractal
-// a recursive function is one that calls itself
-function sierpinski (order, side) {
+// a recursive _విధానము_     is one that calls itself
+_విధానము_     sierpinski (order, side) {
     if (order == 0) {
         ఆకారము_ప్రారంభించు()
         ముందుకు_జరుగు(side)
@@ -11,27 +11,27 @@ function sierpinski (order, side) {
         ఎడమ_వైపు_తిరుగు(120)
         ఆకారము_ముగించు("red")
     } else {
-        కలమును_పైకి_ఎత్తు()
+        కుంచికను_పైకి_ఎత్తు()
         ముందుకు_జరుగు(side/2)
-        కలమును_కింద_పెట్టు()
+        కుంచికను_కింద_పెట్టు()
         sierpinski( order-1, side/2) // bottom right
-        కలమును_పైకి_ఎత్తు()
+        కుంచికను_పైకి_ఎత్తు()
         ఎడమ_వైపు_తిరుగు(120)
         ముందుకు_జరుగు(side/2)
         కుడి_వైపు_తిరుగు(120)
-        కలమును_కింద_పెట్టు()
+        కుంచికను_కింద_పెట్టు()
         sierpinski( order-1, side/2) // top center
-        కలమును_పైకి_ఎత్తు()
+        కుంచికను_పైకి_ఎత్తు()
         కుడి_వైపు_తిరుగు(120)
         ముందుకు_జరుగు(side/2)
         ఎడమ_వైపు_తిరుగు(120)
-        కలమును_కింద_పెట్టు()
+        కుంచికను_కింద_పెట్టు()
         sierpinski( order-1, side/2) // bottom left
     }
 }
 
 
-function delayed() {
+_విధానము_     delayed() {
     if (i < 7) {
         sier( i)
         i = i+1
@@ -40,14 +40,14 @@ function delayed() {
 }
 
 
-function sier (order) {
+_విధానము_     sier (order) {
     ఆది_స్థితి()
     కుంచికను_దాచు()
     side = 2* Math.min(గరిష్ఠX(),గరిష్ఠY()) -20
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     స్థానము_మార్చు(-side/2, -side/2+20)
     కుడి_వైపు_తిరుగు(90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     sierpinski( order, side)
 
     స్థానము_మార్చు(0+10- side/2,కనిష్ఠY()+10)
@@ -55,9 +55,9 @@ function sier (order) {
     వ్రాయి("Sierpinski triangle of order " + order)  
 }
 
-var i ; //global iteration variable
+_సర్వత్ర_   i ; //global iteration variable
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
     ఆది_స్థితి()
     i = 0
     delayed()

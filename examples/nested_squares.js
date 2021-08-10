@@ -1,8 +1,8 @@
 // Nested Squares -- draw a set of nested squares
 
 //draw a square
-function square(side) {
-   ఆవర్తించు(4, function () {
+_విధానము_     square(side) {
+   ఆవర్తించు(4, _విధానము_     () {
       ముందుకు_జరుగు(side);
       కుడి_వైపు_తిరుగు(90);
    });
@@ -10,45 +10,45 @@ function square(side) {
 
 
 // draw some nested squares
-function nestedSquares(count) {
+_విధానము_     nestedSquares(count) {
   చెరిపి_వేయి();
   స్థానము_మార్చు(0,0);
   కుంచికను_దాచు();
   for (s=1; s<count*4; s=s+4) {
-    కలమును_పైకి_ఎత్తు();
+    కుంచికను_పైకి_ఎత్తు();
     // move down and back 2 spaces
     ఎడమ_వైపు_తిరుగు(90);
     ముందుకు_జరుగు(2);
     ఎడమ_వైపు_తిరుగు(90);
     ముందుకు_జరుగు(2);
     ఎడమ_వైపు_తిరుగు(180);
-    కలమును_కింద_పెట్టు();
+    కుంచికను_కింద_పెట్టు();
     రంగు_మార్చు(యాదృచ్ఛిక_సంఖ్య(16));
     square (s);
   }
 }
 
-function demo1() {
+_విధానము_     demo1() {
   ఆది_స్థితి()
   size = 2* గరిష్ఠY()
   if (2* గరిష్ఠX() < size) {
     size = 2*గరిష్ఠX()
   }
   number = .9 * size /4  // 4 is the difference in square size
-  function nest25 () {
+  _విధానము_     nest25 () {
     nestedSquares (size);
   }
   // animate a simple parameterless function
   ఆడించు( nest25, 200);
 }
 
-function ప్రదర్శన() {
-  // animate with function needing a parameter passed
+_విధానము_     ప్రదర్శన() {
+  // animate with _విధానము_     needing a parameter passed
   ఆది_స్థితి()
   size = 2* గరిష్ఠY()
   if (2* గరిష్ఠX() < size) {
     size = 2*గరిష్ఠX()
   }
   number = .9 * size /4  // 4 is the difference in square size
-  ఆడించు( function () { nestedSquares(number)} ,200);
+  ఆడించు( _విధానము_     () { nestedSquares(number)} ,200);
 }

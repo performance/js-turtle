@@ -6,24 +6,24 @@
 
 //**** GLOBALS ****
 
-var frameNumber = 0
-var frameDelay = 0
+_సర్వత్ర_   frameNumber = 0
+_సర్వత్ర_   frameDelay = 0
 
 
 //**** FUNCTIONS ****
 
-function explain( text) {
+_విధానము_     explain( text) {
   // lines within the text string are separated with an at "@" character.
   ఆది_స్థితి();
-  var cWidth = 2* గరిష్ఠX();
-  var cHeight = 2* గరిష్ఠY();
-  var lineNumber = 0;
+  _సర్వత్ర_   cWidth = 2* గరిష్ఠX();
+  _సర్వత్ర_   cHeight = 2* గరిష్ఠY();
+  _సర్వత్ర_   lineNumber = 0;
   స్థానము_మార్చు(-.90 * cWidth + గరిష్ఠX(), .9 * cHeight - గరిష్ఠY());
   కోణము(90);
   అక్షరరూపము_స్థాపించు("bold 20px arial,sans-serif");
 
-  var lines = text.split("@");
-  for (var i=0; i<lines.length; i++) {
+  _సర్వత్ర_   lines = text.split("@");
+  for (_సర్వత్ర_   i=0; i<lines.length; i++) {
     console.log( lines[i])
     స్థానము_మార్చు(-.90 * cWidth + గరిష్ఠX(), గరిష్ఠY() -(i+1) * .1 * cHeight)
     వ్రాయి(lines[i]);
@@ -32,11 +32,11 @@ function explain( text) {
   కుంచికను_దాచు();
 }
 
-function textDemo () {
+_విధానము_     textDemo () {
   explain ("In a time@long, long ago@and a place far, far away@there was a battle@that changed the history@of the entire@universe.");
 }
 
-function frame() {
+_విధానము_     frame() {
   switch (frameNumber) {
   case 0:
     frameDelay = 1000;
@@ -126,7 +126,7 @@ function frame() {
   }
 }
   
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   // show three text frames
   frameDelay = 1000;
   frameNumber = 0;

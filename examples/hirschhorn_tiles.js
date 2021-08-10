@@ -111,7 +111,7 @@ fColors = [
 */
 colorlayer = 0
 
-function pentagon(side, fColor) {
+_విధానము_     pentagon(side, fColor) {
   // direction of the point
   // invariant
   ఆకారము_ప్రారంభించు()
@@ -129,7 +129,7 @@ function pentagon(side, fColor) {
   ఆకారము_ముగించు( fColor)
 }
 
-function p(pNum, ccw, side, fColor) {
+_విధానము_     p(pNum, ccw, side, fColor) {
   if (ccw) {
     r = -1
   } else {
@@ -137,7 +137,7 @@ function p(pNum, ccw, side, fColor) {
   }
   ఆకారము_ప్రారంభించు()
   ఎడమ_వైపు_తిరుగు( angles[pNum]/2)
-  for (var i=1; i<5; i++) {
+  for (_సర్వత్ర_   i=1; i<5; i++) {
     ముందుకు_జరుగు( side)
     //వ్రాయి( angles[(i+pNum)%5])
     కుడి_వైపు_తిరుగు( 180 - angles[(5+r*i+pNum)%5])  
@@ -147,8 +147,8 @@ function p(pNum, ccw, side, fColor) {
   ఆకారము_ముగించు( fColor)
 }
 
-function hirchhorn(side) {
-  for (var i=0; i<6; i++) {
+_విధానము_     hirchhorn(side) {
+  for (_సర్వత్ర_   i=0; i<6; i++) {
     //pentagon( s, fColors[colorlayer])
     p( 0, CW, side, fColors[colorlayer])
     ఎడమ_వైపు_తిరుగు( 60)
@@ -156,7 +156,7 @@ function hirchhorn(side) {
   colorlayer++
 
   ఎడమ_వైపు_తిరుగు(30)
-  for (var i=0; i<6; i++) {
+  for (_సర్వత్ర_   i=0; i<6; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 10)
     //pentagon( s, fColors[colorlayer])
@@ -167,7 +167,7 @@ function hirchhorn(side) {
   }
   colorlayer++
 
-  for (var i=0; i<6; i++) {
+  for (_సర్వత్ర_   i=0; i<6; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 180 - ang1)
     ముందుకు_జరుగు( side)
@@ -190,7 +190,7 @@ function hirchhorn(side) {
   ఎడమ_వైపు_తిరుగు( 180 - ang3 - ang0/2)
   
   cl = colorlayer
-  for( var i=0; i<18; i++) {
+  for( _సర్వత్ర_   i=0; i<18; i++) {
     colorlayer = cl
     p( 0, CCW, side, fColors[colorlayer])
     colorlayer++
@@ -367,7 +367,7 @@ function hirchhorn(side) {
   
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   size = .07* Math.min(గరిష్ఠX(), గరిష్ఠY())

@@ -2,18 +2,18 @@
 // graph here describes the connections between vertices, more at
 // Wikipedia.com
 
-function pent(side) {
+_విధానము_     pent(side) {
   // the below side variable are doing trigonometry without
   // the trig functions. Values found emperically.
-  var angle2=180-(180-72)/2
-  var side2 = 1.18*side
-  var angle3 = 60
-  var side3 = side2
-  var angle4 = 156.5
-  var side4 = 2.15 * side
-  var angle5 = 31
-  var side5 = 1.27 * side
-  for (var i=0; i<5; i++) {
+  _సర్వత్ర_   angle2=180-(180-72)/2
+  _సర్వత్ర_   side2 = 1.18*side
+  _సర్వత్ర_   angle3 = 60
+  _సర్వత్ర_   side3 = side2
+  _సర్వత్ర_   angle4 = 156.5
+  _సర్వత్ర_   side4 = 2.15 * side
+  _సర్వత్ర_   angle5 = 31
+  _సర్వత్ర_   side5 = 1.27 * side
+  for (_సర్వత్ర_   i=0; i<5; i++) {
     రంగు_మార్చు("నలుపు")
     ముందుకు_జరుగు(side)
       ఎడమ_వైపు_తిరుగు(angle2)
@@ -62,7 +62,7 @@ function pent(side) {
   వృత్తము(2.13*side)
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   size = .4 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   //స్థానము_మార్చు(-50,-22)

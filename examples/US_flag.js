@@ -1,11 +1,11 @@
 // US Flag -- draw an American Flag
 
-function star (size) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     star (size) {
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు(.54*size)
   turn (180-18)
-  కలమును_కింద_పెట్టు()
-  var i=0
+  కుంచికను_కింద_పెట్టు()
+  _సర్వత్ర_   i=0
   ఆకారము_ప్రారంభించు()
   while (i<5){
     ముందుకు_జరుగు(size)
@@ -18,20 +18,20 @@ function star (size) {
 }
 
 
-function starLine(count, size, sep) {
+_విధానము_     starLine(count, size, sep) {
   while (count > 0) {
     star(size)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు(sep)
     ఎడమ_వైపు_తిరుగు(90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     count = count -1;
   }
 }
 
 
-function rectangle (width, height) {
+_విధానము_     rectangle (width, height) {
   // assume x, y at upper right hand corner in and out
   // assume కోణము is 90 in and out
   కోణము (90)
@@ -46,14 +46,14 @@ function rectangle (width, height) {
 }
 
 
-function stripes (width, spacing, number) {
+_విధానము_     stripes (width, spacing, number) {
   //assume x, y is at right side of stripe
   //assume కోణము is -90
-  var i = 0
+  _సర్వత్ర_   i = 0
   while (i<number) {
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     ముందుకు_జరుగు(width)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     // make the turn
     if (i%2 == 0) {
       ఎడమ_వైపు_తిరుగు(90)
@@ -69,23 +69,23 @@ function stripes (width, spacing, number) {
 }
 
 
-function flag() {
+_విధానము_     flag() {
   // ***Constants
-  //var xBase = -200 // base is upper left corner
-  //var yBase = 200
-  //var flagHeight = 250 // everything else is proportional to flagHeight
+  //_సర్వత్ర_   xBase = -200 // base is upper left corner
+  //_సర్వత్ర_   yBase = 200
+  //_సర్వత్ర_   flagHeight = 250 // everything else is proportional to flagHeight
  
-  var flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())
-  var flagWidth = 1.9 * flagHeight
+  _సర్వత్ర_   flagHeight =  1.8 * Math.min(గరిష్ఠX()/1.9, గరిష్ఠY())
+  _సర్వత్ర_   flagWidth = 1.9 * flagHeight
 console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+flagWidth + "H="+flagHeight)
-  var xBase = -flagWidth/2
-  var yBase = flagHeight/2 
+  _సర్వత్ర_   xBase = -flagWidth/2
+  _సర్వత్ర_   yBase = flagHeight/2 
 
-  var stripeWidth = flagHeight/13
-  var fieldWidth = .76 * flagHeight
-  var fieldHeight = 7 * stripeWidth
-  var xSeparation = .063 * flagHeight
-  var ySeparation = .054 * flagHeight
+  _సర్వత్ర_   stripeWidth = flagHeight/13
+  _సర్వత్ర_   fieldWidth = .76 * flagHeight
+  _సర్వత్ర_   fieldHeight = 7 * stripeWidth
+  _సర్వత్ర_   xSeparation = .063 * flagHeight
+  _సర్వత్ర_   ySeparation = .054 * flagHeight
   starSize = .05 *flagHeight // star size
   //outline flag and field
   ఆది_స్థితి()
@@ -117,9 +117,9 @@ console.log("X="+2*గరిష్ఠX()+ " Y="+2*గరిష్ఠY() + " W="+
   కోణము(0)
   వెడల్పు(2)
   రంగు_మార్చు( తెలుపు )
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 
-  var row = 0
+  _సర్వత్ర_   row = 0
   while (row<9) {
    if (row % 2 == 0) {
       స్థానము_మార్చు(xBase + xSeparation, yBase - (row +1) * ySeparation)

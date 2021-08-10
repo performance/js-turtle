@@ -8,53 +8,53 @@ design to Arduino hardware.
 
 // ****CONSTANTS FOR DOT MATRICES****
 
-const columns = 32 // left and right eye are side by side
-const rows = 9
+_సర్వదా_    columns = 32 // left and right eye are side by side
+_సర్వదా_    rows = 9
 
 
 // ****CONSTANTS FOR TURTLE GRAPHICS****
 
-const dotSize = 4
-const dotGap = 2 // space between dots
-const eyeGap = 4 // space between eyes
-const columnSize = 2 * dotSize + dotGap
-const rowSize = 2 * dotSize + dotGap
-const columnMid = columns/2 * columnSize + eyeGap/2
-const rowMid = rows/2 * rowSize
+_సర్వదా_    dotSize = 4
+_సర్వదా_    dotGap = 2 // space between dots
+_సర్వదా_    eyeGap = 4 // space between eyes
+_సర్వదా_    columnSize = 2 * dotSize + dotGap
+_సర్వదా_    rowSize = 2 * dotSize + dotGap
+_సర్వదా_    columnMid = columns/2 * columnSize + eyeGap/2
+_సర్వదా_    rowMid = rows/2 * rowSize
 
-const dotOff =          "#f0f0f0"
-const eyeBrowColor =    "#8080ff"
-const eyeBallColor =    "#ccccff"
-const eyeOutlineColor = "#b3b3ff"
-const rightEyeColor =   "#0000ff"
-const leftEyeColor =    "#0000ff"
-const rightPupilColor = "#000000"
-const leftPupilColor =  "#000000"
+_సర్వదా_    dotOff =          "#f0f0f0"
+_సర్వదా_    eyeBrowColor =    "#8080ff"
+_సర్వదా_    eyeBallColor =    "#ccccff"
+_సర్వదా_    eyeOutlineColor = "#b3b3ff"
+_సర్వదా_    rightEyeColor =   "#0000ff"
+_సర్వదా_    leftEyeColor =    "#0000ff"
+_సర్వదా_    rightPupilColor = "#000000"
+_సర్వదా_    leftPupilColor =  "#000000"
 
 
 // these may be dependent upon eye graphic
-const irisWidth =       5
-const irisHeight =      3
-const irisCenterRight = 7 // absolute grid x for right eye center
-const irisCenterLeft = 24 // absolute grid x for left eye center
-const irisMiddle =      6 // absolute grid y for iris middle
+_సర్వదా_    irisWidth =       5
+_సర్వదా_    irisHeight =      3
+_సర్వదా_    irisCenterRight = 7 // absolute grid x for right eye center
+_సర్వదా_    irisCenterLeft = 24 // absolute grid x for left eye center
+_సర్వదా_    irisMiddle =      6 // absolute grid y for iris middle
 
 // relative from bottom
-const lidsClosed = 0
-const lidsNormal = 4 // normal/relaxed position of the eye lids
-const lidsMin = 0
-const lidsMax = 6
+_సర్వదా_    lidsClosed = 0
+_సర్వదా_    lidsNormal = 4 // normal/relaxed position of the eye lids
+_సర్వదా_    lidsMin = 0
+_సర్వదా_    lidsMax = 6
 
 // relative to iris center, middle:
-const irisMaxX = 5
-const irisMinX = -4
-const irisMaxY = irisMiddle - rows + 1 + lidsMax
-const irisMinY = irisMiddle - rows + 1 + lidsMin
-const irisNormalX = 0 // normal/relaxed X position of the iris and pupil
-const irisNormalY = 0 // normal/relaxed Y position of the iris and pupil
+_సర్వదా_    irisMaxX = 5
+_సర్వదా_    irisMinX = -4
+_సర్వదా_    irisMaxY = irisMiddle - rows + 1 + lidsMax
+_సర్వదా_    irisMinY = irisMiddle - rows + 1 + lidsMin
+_సర్వదా_    irisNormalX = 0 // normal/relaxed X position of the iris and pupil
+_సర్వదా_    irisNormalY = 0 // normal/relaxed Y position of the iris and pupil
 
 
-const lids = [
+_సర్వదా_    lids = [
     [
         // lids[0]
         //10987654321098765432109876543210
@@ -149,7 +149,7 @@ const lids = [
 ]
 
 
-const masks = [
+_సర్వదా_    masks = [
     [
         // masks[0]
         //10987654321098765432109876543210
@@ -245,13 +245,13 @@ const masks = [
 
 
 
-const irisTypes = {
+_సర్వదా_    irisTypes = {
     NORMAL : 0,
     HEART : 1
 }
 
 
-const irises = [
+_సర్వదా_    irises = [
     [ // normal
         //43210
         0b01110, //00
@@ -267,7 +267,7 @@ const irises = [
 ]
 
 
-const pupilTypes = {
+_సర్వదా_    pupilTypes = {
     NONE :     0,
     SMALL :    1,
     MEDIUM :   2,
@@ -277,7 +277,7 @@ const pupilTypes = {
 }
 
 
-const pupils = [
+_సర్వదా_    pupils = [
     [
         //pupils[ 0]
         //43210
@@ -323,7 +323,7 @@ const pupils = [
 ]
 
 
-const browTypes = {
+_సర్వదా_    browTypes = {
     NONE :     0,
     NORMAL :   1,
     UP :       2,
@@ -334,7 +334,7 @@ const browTypes = {
     DOUBLE :   7,
 }
 
-const brows = [
+_సర్వదా_    brows = [
     [
         // brows[0]
         //10987654321098765432109876543210
@@ -405,7 +405,7 @@ so if a eye is command to move 2 right and 2 up.
 there would be steps for eye movement until the eye reached the target x and y
 */
 
-const commands = {
+_సర్వదా_    commands = {
     //lid commands
     LIDS_TO :            01, //n, step time
     LIDS_NORMAL :        02, //step time
@@ -482,14 +482,14 @@ simulatorCommands = [
 
 // ****GLOBALS****
 
-//var grid = []
-var coloredGrid = []
+//_సర్వత్ర_   grid = []
+_సర్వత్ర_   coloredGrid = []
 
 
 // ****FUNCTIONS****
 
 
-function loadColoredPattern( pattern, col) {
+_విధానము_     loadColoredPattern( pattern, col) {
   for (r=0; r < rows; r++) {
     for ( c=0; c < columns; c++) {
       if (pattern[ r] & (1<<c)) {
@@ -503,12 +503,12 @@ function loadColoredPattern( pattern, col) {
 
 
 
-function loadColoredSubPattern( subPattern, col, x, y, w, h) {
+_విధానము_     loadColoredSubPattern( subPattern, col, x, y, w, h) {
   // x,y is top left corner of pattern position
   // it is aiso top left corner of grid
-  for ( var iy=0; iy < h; iy++) {
-    for ( var ix = w-1; ix >=0; ix--) {
-      var mask = 0b00000000000000001 << ix
+  for ( _సర్వత్ర_   iy=0; iy < h; iy++) {
+    for ( _సర్వత్ర_   ix = w-1; ix >=0; ix--) {
+      _సర్వత్ర_   mask = 0b00000000000000001 << ix
       if (subPattern[ iy] & mask) {
         coloredGrid [(y+iy) * columns + 31-x + ix -w + 1] = col
       }
@@ -517,11 +517,11 @@ function loadColoredSubPattern( subPattern, col, x, y, w, h) {
 }
 
 
-function loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {
+_విధానము_     loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {
   // x,y is top left corner of pattern position
   // it is also top left corner of grid
-  for ( var iy=0; iy < h; iy++) {
-    for ( var ix = w-1; ix >=0; ix--) {
+  for ( _సర్వత్ర_   iy=0; iy < h; iy++) {
+    for ( _సర్వత్ర_   ix = w-1; ix >=0; ix--) {
       if (subPattern[ iy] & (1<<ix) && mask[y+iy] & 1<<(x+w-1-ix)) {
         coloredGrid [(y+iy) * columns + 31-x + ix -w + 1] = col
       }
@@ -530,13 +530,13 @@ function loadColoredMaskedSubPattern( subPattern, mask, col, x, y, w, h) {
 }
 
 
-function caption (message) {
+_విధానము_     caption (message) {
     // save your current position, heading, etc.
-    var savedX = కుంచిక.స్థానము.x
-    var savedY = కుంచిక.స్థానము.y
-    var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-    var savedColor = కుంచిక.రంగు
-    var savedWidth = కుంచిక.వెడల్పు
+    _సర్వత్ర_   savedX = కుంచిక.స్థానము.x
+    _సర్వత్ర_   savedY = కుంచిక.స్థానము.y
+    _సర్వత్ర_   savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+    _సర్వత్ర_   savedColor = కుంచిక.రంగు
+    _సర్వత్ర_   savedWidth = కుంచిక.వెడల్పు
 
     స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
     దిశ_మార్చు( 90)
@@ -560,68 +560,68 @@ function caption (message) {
 
 
 // ****GLOBALS FOR COMMAND INTERPRETER****
-    var baseCaption = "" // base caption
+    _సర్వత్ర_   baseCaption = "" // base caption
 
-    const lidStates = {
+    _సర్వదా_    lidStates = {
         IDLE : 0,
         CLOSING : 1,
         OPENING : 2,
     }
-    var lidState = lidStates.IDLE
-    var lidTarget = 0
-    var lidCommanded = 0 // lid position requested. May be overridden by high iris value.
+    _సర్వత్ర_   lidState = lidStates.IDLE
+    _సర్వత్ర_   lidTarget = 0
+    _సర్వత్ర_   lidCommanded = 0 // lid position requested. May be overridden by high iris value.
 
-    var lidsCurrent = lidsNormal
+    _సర్వత్ర_   lidsCurrent = lidsNormal
 
-    var irisTypeCurrent = irisTypes.NORMAL
-    const irisStates = {
+    _సర్వత్ర_   irisTypeCurrent = irisTypes.NORMAL
+    _సర్వదా_    irisStates = {
         IDLE : 0,
         MOVING : 1,
         MOVING_BACK : 2
     }
-    var irisState = irisStates.IDLE
+    _సర్వత్ర_   irisState = irisStates.IDLE
 
     // iris coordinates relative to the eye center and middle
-    var irisTargetX = 0
-    var irisTargetY = 0
-    var irisCurrentX = 0
-    var irisCurrentY = 0
+    _సర్వత్ర_   irisTargetX = 0
+    _సర్వత్ర_   irisTargetY = 0
+    _సర్వత్ర_   irisCurrentX = 0
+    _సర్వత్ర_   irisCurrentY = 0
 
-    const pupilNormal = pupilTypes.SMALL // normal/relaxed type of pupil
-    var pupilCurrent = pupilTypes.SMALL // normal/relaxed type of pupil
+    _సర్వదా_    pupilNormal = pupilTypes.SMALL // normal/relaxed type of pupil
+    _సర్వత్ర_   pupilCurrent = pupilTypes.SMALL // normal/relaxed type of pupil
 
-    const browNormal = browTypes.NORMAL // normal/relaxed type of eye brow
-    var browCurrent = browTypes.NORMAL // current type of the brow
+    _సర్వదా_    browNormal = browTypes.NORMAL // normal/relaxed type of eye brow
+    _సర్వత్ర_   browCurrent = browTypes.NORMAL // current type of the brow
 
-    var commandSequence = [] // array of commands to be executed
-    var currentCommand = 0 // index into command sequence of the current command
-    var subCommand = 0 // number of times current command has executed
-    var commandDue = undefined // epoch milliseconds when normal command is due
+    _సర్వత్ర_   commandSequence = [] // array of commands to be executed
+    _సర్వత్ర_   currentCommand = 0 // index into command sequence of the current command
+    _సర్వత్ర_   subCommand = 0 // number of times current command has executed
+    _సర్వత్ర_   commandDue = undefined // epoch milliseconds when normal command is due
                        // = undefined when not active
-    var browCommandDue = undefined // epoch milliseconds when default brow command is due
+    _సర్వత్ర_   browCommandDue = undefined // epoch milliseconds when default brow command is due
                        // = undefined when not active
 
 
 
-function absIrisY ( irisY) {
-    // return the absolute grid Y coordinate for a given iris Y coordinate
+_విధానము_     absIrisY ( irisY) {
+    // _ఫలము_  the absolute grid Y coordinate for a given iris Y coordinate
     // irisY = 0 is the grid irisMiddle
-    return irisMiddle - irisY
+    _ఫలము_  irisMiddle - irisY
 }
 
 
-function absLidY (lidY) {
-    // return the absolute grid Y coordinate for a given lid Y coordinate
+_విధానము_     absLidY (lidY) {
+    // _ఫలము_  the absolute grid Y coordinate for a given lid Y coordinate
     // lidY = 0 is grid max Y = rows -1
-    return rows - 1 - lidY
+    _ఫలము_  rows - 1 - lidY
 }
 
 
-function irisMovementCheck () {
+_విధానము_     irisMovementCheck () {
     // check if iris and lid movement is required
     console.log( "iMC", irisCurrentX, irisCurrentY, irisTargetX, irisTargetY, lidsCurrent, lidCommanded)
     console.log( "iMC1", absIrisY(irisCurrentY), absIrisY(irisTargetY), absLidY(lidsCurrent), absLidY(lidCommanded))
-    var moved = false
+    _సర్వత్ర_   moved = false
     if (irisCurrentY > irisTargetY) {
         irisCurrentY = irisCurrentY - 1
         moved = true
@@ -647,22 +647,22 @@ function irisMovementCheck () {
         moved = true
     }
     console.log( "iMC moved =", moved ? "true" : "false")
-    return moved
+    _ఫలము_  moved
 }
 
 
-function commandCheck ( currentTime) {
+_విధానము_     commandCheck ( currentTime) {
     // check is a command is due to be executed
     // returns false if no delay requested
     // returns true if a delay was requested for rendering
     console.log("cmdchk0:", currentTime, commandDue, currentCommand, subCommand)
 
-    var renderingRequired = false
-    var commandAdvance = false // only advance command explicitly
+    _సర్వత్ర_   renderingRequired = false
+    _సర్వత్ర_   commandAdvance = false // only advance command explicitly
 
     if (commandDue === undefined || currentTime > commandDue) {
         commandDue = undefined
-        var command = commandSequence [ currentCommand]
+        _సర్వత్ర_   command = commandSequence [ currentCommand]
         // execute the command. Some commands are immediate, others take time.
         console.log("cmdchk1:", currentCommand, command[0], command[1], command[2])
 
@@ -918,11 +918,11 @@ console.log("cmdchk render",lidsCurrent, browCurrent, irisTypeCurrent, pupilCurr
         currentCommand = (currentCommand + 1) % commandSequence.length
         subCommand = 0
     }
-    return commandAdvance
+    _ఫలము_  commandAdvance
 }
 
 
-function renderEyes (eyeOpening, browType, irisType, pupilType, ix, iy) {
+_విధానము_     renderEyes (eyeOpening, browType, irisType, pupilType, ix, iy) {
     // ix and iy use relative coordinates, positive up and right
     // grid coordinates: positive down and right
 
@@ -965,13 +965,13 @@ console.log("rE2:",leftEyeColor,
             irisWidth, irisHeight)
 }
 
-function drawEyes( eyeOpening, browType, irisType, pupilType, ix, iy, baseCaption) {
+_విధానము_     drawEyes( eyeOpening, browType, irisType, pupilType, ix, iy, baseCaption) {
 console.log("dE1:",eyeOpening, browType, irisType, pupilType, ix, iy, baseCaption)
 
     renderEyes (eyeOpening, browType, irisType, pupilType, ix, iy)
-    for ( var r=0; r < rows; r++) {
-        for ( var c=0; c < columns; c++) {
-             var offset = 0
+    for ( _సర్వత్ర_   r=0; r < rows; r++) {
+        for ( _సర్వత్ర_   c=0; c < columns; c++) {
+             _సర్వత్ర_   offset = 0
              if ( c >= columns/2) {
                  offset = eyeGap
              }
@@ -985,9 +985,9 @@ console.log("dE1:",eyeOpening, browType, irisType, pupilType, ix, iy, baseCaptio
 
 
 
-function executeCommand () {
-    var d = new Date()
-    var currentTime = d.getTime()
+_విధానము_     executeCommand () {
+    _సర్వత్ర_   d = new Date()
+    _సర్వత్ర_   currentTime = d.getTime()
     //while ( !commandCheck ( currentTime)) {}
     commandCheck ( currentTime)
 
@@ -996,7 +996,7 @@ function executeCommand () {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
     ఆది_స్థితి()
     కుంచికను_దాచు()
     commandDue = undefined

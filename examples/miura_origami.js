@@ -1,6 +1,6 @@
 // Miura Origami -- fold pattern for the miura origami
 
-function horiz( size){
+_విధానము_     horiz( size){
   hy = గరిష్ఠY()
   while (hy > కనిష్ఠY()) {
     స్థానము_మార్చు(కనిష్ఠX(), hy)
@@ -10,7 +10,7 @@ function horiz( size){
   } 
 }
 
-function vert( size) {
+_విధానము_     vert( size) {
   vx = కనిష్ఠX()
   while ( vx < గరిష్ఠX()) {
     vy = గరిష్ఠY()
@@ -28,7 +28,7 @@ function vert( size) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   size = 100

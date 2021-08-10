@@ -1,27 +1,27 @@
 // Sliding Block Puzzle -- animated solution to Square Root sliding block puzzle
 // details of the moves are on the console.log
 
-var side
-var baseX
-var baseY
-var count
+_సర్వత్ర_   side
+_సర్వత్ర_   baseX
+_సర్వత్ర_   baseY
+_సర్వత్ర_   count
 
-var e = "e"
-var w = "w"
-var n = "n"
-var s = "s"
-var ee = "ee"
-var ww = "ww"
-var nn = "nn"
-var ss = "ss"
-var ne = "ne"
-var nw = "nw"
-var se = "se"
-var sw = "sw"
-var en = "en"
-var es = "es"
-var wn = "wn"
-var ws = "ws"
+_సర్వత్ర_   e = "e"
+_సర్వత్ర_   w = "w"
+_సర్వత్ర_   n = "n"
+_సర్వత్ర_   s = "s"
+_సర్వత్ర_   ee = "ee"
+_సర్వత్ర_   ww = "ww"
+_సర్వత్ర_   nn = "nn"
+_సర్వత్ర_   ss = "ss"
+_సర్వత్ర_   ne = "ne"
+_సర్వత్ర_   nw = "nw"
+_సర్వత్ర_   se = "se"
+_సర్వత్ర_   sw = "sw"
+_సర్వత్ర_   en = "en"
+_సర్వత్ర_   es = "es"
+_సర్వత్ర_   wn = "wn"
+_సర్వత్ర_   ws = "ws"
 
 /* valid moves for blocks
  * all tests include bounds test
@@ -73,14 +73,14 @@ blocks = [ {h:1, v:2, x:0, y:0},
            {h:1, v:1, x:3, y:3},
            {h:1, v:1, x:3, y:4} ]
 
-function init () {
+_విధానము_     init () {
   side = .9 * 2* Math.min(గరిష్ఠX()/4, గరిష్ఠY()/5)
   baseX = -2 * side
   baseY = 2.5 * side
   count = 0
 }
 
-function drawBlock( h, v, x, y, n) {
+_విధానము_     drawBlock( h, v, x, y, n) {
   //console.log("DB" + " " + h + " " + v + " " + x + " " + y)
   // draw a block
   రంగు_మార్చు("నలుపు")
@@ -102,17 +102,17 @@ function drawBlock( h, v, x, y, n) {
 }
 
 
-function moveBlock (blockIndex, x, y) {
+_విధానము_     moveBlock (blockIndex, x, y) {
   blocks[ blockIndex].x = x
   blocks[ blockIndex].y = y
   count = count + 1
 }
 
 
-function drag( blockIndex, dir) {
+_విధానము_     drag( blockIndex, dir) {
   //dir is a string of e, w, n, s
-  var x = 0
-  var y = 0
+  _సర్వత్ర_   x = 0
+  _సర్వత్ర_   y = 0
   for (ch in dir) {
     if (dir[ch] == "w") {
       x = x - 1
@@ -131,8 +131,8 @@ function drag( blockIndex, dir) {
   count = count + 1
 }
 
-function drawBlocks () {
-  for (var block in blocks) {
+_విధానము_     drawBlocks () {
+  for (_సర్వత్ర_   block in blocks) {
     //console.log("dBs: " + block)
     drawBlock( blocks[ block].h, blocks[block].v, blocks[block].x, blocks[block].y, block)
   }
@@ -140,11 +140,11 @@ function drawBlocks () {
 
 
 
-var free = []
+_సర్వత్ర_   free = []
 
-function findFree() {
+_విధానము_     findFree() {
   // find the free spaces in the puzzle
-  var x,y, v, h, block, overlap, freeList
+  _సర్వత్ర_   x,y, v, h, block, overlap, freeList
 
 free = [[undefined, undefined, undefined, undefined],
         [undefined, undefined, undefined, undefined],
@@ -215,16 +215,16 @@ free = [[undefined, undefined, undefined, undefined],
   }
   //console.log( "FreeList:  " + freeList)
   //console.log( "FreeList0:  " + freeList[0])
-  var freeStr = ""
-  var lead = ""
-  var freemember
+  _సర్వత్ర_   freeStr = ""
+  _సర్వత్ర_   lead = ""
+  _సర్వత్ర_   freemember
   for (freemember in freeList) {
     freeStr = freeStr + lead + "[" +  freeList[freemember] + "]"
     lead = ","
   }
 
   // log the blocks
-  var logStr
+  _సర్వత్ర_   logStr
   for( y=0; y<5; y = y+1) { 
     logStr = y + ":"
     for( x=0; x<4; x = x+1) {
@@ -239,11 +239,11 @@ free = [[undefined, undefined, undefined, undefined],
   console.log( "  FreeList: "+ freeStr)
 }
 
-var moveList = []
+_సర్వత్ర_   moveList = []
 
-function checkMove( block, direction) {
-  var found = false
-  var index
+_విధానము_     checkMove( block, direction) {
+  _సర్వత్ర_   found = false
+  _సర్వత్ర_   index
   //if move is not on moveList
   for (index in moveList) {
     if (moveList[index][0] == block && moveList[index][1].localeCompare(direction)==0) {
@@ -256,12 +256,12 @@ function checkMove( block, direction) {
 }
  
 
-function checkLastMove( block, direction) {
+_విధానము_     checkLastMove( block, direction) {
   // check that the moveList includes the reciprocal of the last move
-  var index
-  var directions = direction.split("")
-  var ripString = ""
-  var found = false
+  _సర్వత్ర_   index
+  _సర్వత్ర_   directions = direction.split("")
+  _సర్వత్ర_   ripString = ""
+  _సర్వత్ర_   found = false
   for (index in directions) {
     if (directions[index] == "e") { ripString = "w" + ripString } 
     if (directions[index] == "w") { ripString = "e" + ripString } 
@@ -278,9 +278,9 @@ function checkLastMove( block, direction) {
   }
 }
 
-function findMoves() {
+_విధానము_     findMoves() {
   // find the free spaces in the puzzle
-  var x, y, v, h, block
+  _సర్వత్ర_   x, y, v, h, block
 
   moveList = []
 
@@ -364,10 +364,10 @@ function findMoves() {
   }
 
   //console.log("Moves: " + moveList)
-  var moveStr = ""
-  var lead = ""
-  var index
-  var possibleMoveCount = 0
+  _సర్వత్ర_   moveStr = ""
+  _సర్వత్ర_   lead = ""
+  _సర్వత్ర_   index
+  _సర్వత్ర_   possibleMoveCount = 0
   for (index in moveList) {
     moveStr = moveStr + lead +  moveList[index][0] +  moveList[index][1] 
     if ( lastMove[0] == moveList[index][0]) { // tag reciprocal moves
@@ -425,19 +425,19 @@ function findMoves() {
 */
 
 
-function getState() {
+_విధానము_     getState() {
   //returns a value that is the state of the puzzle
   //each piece is located with a 2-bit x and 3-bit y
   //1x2 and 1x1 pieces are deternined by left to right and top to bottom order
 	// this allows the same state for exchanged pieces
-  var blockPos = [undefined, undefined, undefined,
+  _సర్వత్ర_   blockPos = [undefined, undefined, undefined,
 	          undefined, undefined, undefined,
 	          undefined, undefined, undefined]
-  var blockSeen = [ false, false, false, false, false,
+  _సర్వత్ర_   blockSeen = [ false, false, false, false, false,
                     false, false, false, false]
-  var blockMap1x2 = 2 
-  var blockMap1x1 = 6 
-  var blockNum
+  _సర్వత్ర_   blockMap1x2 = 2 
+  _సర్వత్ర_   blockMap1x1 = 6 
+  _సర్వత్ర_   blockNum
 
   for( y=0; y<5; y = y+1) { 
     for( x=0; x<4; x = x+1) {
@@ -463,7 +463,7 @@ function getState() {
   // uses 2 bits for x and 3 bits for y for each of 10 blocks = 50 bits
   // 5 bits is 2**5 = 32
   // putting the most stable blocks at high end of state number
-  var state = 0
+  _సర్వత్ర_   state = 0
   for (blockNum = 0; blockNum <10; blockNum = blockNum + 1) {
     console.log ("state blockNum:" + blockNum + " pos:" + blockPos[ blockNum] + " state:" + state + " " + (blockPos[blockNum][0] + (blockPos[blockNum][1]*4)) * 32**( 9 - blockNum) + " " + (blockPos[blockNum][0] + (blockPos[blockNum][1]*4)) )
     state = state + ((blockPos[blockNum][0] + (blockPos[blockNum][1]*4)) * 32**( 9 - blockNum))
@@ -471,11 +471,11 @@ function getState() {
   if ( blockMap1x2 != 6  | blockMap1x1 != 10) {
     console.log( "   ***State Processing Error***" + blockMap1x2 + " " + blockMap1x1)
   }
-  return state
+  _ఫలము_  state
 }
 
 
-function demo1() {
+_విధానము_     demo1() {
   ఆది_స్థితి()
   init()
   console.log("demo: " + blocks[0])
@@ -584,7 +584,7 @@ function demo1() {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   init()
 
@@ -691,13 +691,13 @@ function ప్రదర్శన() {
 }
 
 
-function caption (message) {
+_విధానము_     caption (message) {
   // save your current position, heading, etc.
-  var savedX = కుంచిక.స్థానము.x
-  var savedY = కుంచిక.స్థానము.y
-  var savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
-  var savedColor = కుంచిక.రంగు
-  var savedWidth = కుంచిక.వెడల్పు
+  _సర్వత్ర_   savedX = కుంచిక.స్థానము.x
+  _సర్వత్ర_   savedY = కుంచిక.స్థానము.y
+  _సర్వత్ర_   savedHeading = కుంచిక.కోణము / 2 / Math.PI * 360 //convert radians to degrees
+  _సర్వత్ర_   savedColor = కుంచిక.రంగు
+  _సర్వత్ర_   savedWidth = కుంచిక.వెడల్పు
 
   స్థానము_మార్చు(కనిష్ఠX()+10, కనిష్ఠY()+10)
   దిశ_మార్చు( 90)
@@ -718,10 +718,10 @@ function caption (message) {
   వెడల్పు(savedWidth)
 }
 
-var moveCount;
-var delayTime = 300;
-var moves; // List of the moves to be made
-var lastMove = []; // last move made
+_సర్వత్ర_   moveCount;
+_సర్వత్ర_   delayTime = 300;
+_సర్వత్ర_   moves; // List of the moves to be made
+_సర్వత్ర_   lastMove = []; // last move made
 moves = [ // series of moves
 // [ blockNumber, move directions ]
   [ 3, ee],
@@ -818,7 +818,7 @@ moves = [ // series of moves
 ]
 
 
-function moveOne() {
+_విధానము_     moveOne() {
   ఆది_స్థితి()
   //console.log( "mO " + moveCount)
   //console.log( "mO " + moves[moveCount])
@@ -831,8 +831,8 @@ function moveOne() {
   if (moveCount > 0) {
     checkLastMove( lastMove[0], lastMove[1])
   }
-  var block = moves[ moveCount][0]
-  var dir =   moves[ moveCount][1]
+  _సర్వత్ర_   block = moves[ moveCount][0]
+  _సర్వత్ర_   dir =   moves[ moveCount][1]
   console.log( "  Move " + moveCount + ": " + block + dir)
   checkMove( block,  dir)
   drag( block, dir)
@@ -843,7 +843,7 @@ function moveOne() {
   }
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   init()
   moveCount=0

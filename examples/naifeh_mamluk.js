@@ -2,7 +2,7 @@
 // for more information see https://stevennaifeh.com
 
 
-function decagon(s, fcolor) {
+_విధానము_     decagon(s, fcolor) {
   // position at base of the decagon  parallel to bottom
   // invariant
   // note:
@@ -36,7 +36,7 @@ function decagon(s, fcolor) {
   ఆకారము_ముగించు( fcolor)
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   కుడి_వైపు_తిరుగు(90)
@@ -48,22 +48,22 @@ function ప్రదర్శన() {
   d1 = side/2
   d2 = side * Math.sqrt(3)/2
 
-  for( var i=0; i<6; i++) {
+  for( _సర్వత్ర_   i=0; i<6; i++) {
     decagon( side, "blue")
 
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ఎడమ_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( Math.sqrt(3) * side)
     ఎడమ_వైపు_తిరుగు(30)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
 
     decagon( side, "blue")
 
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ఎడమ_వైపు_తిరుగు(150)
     ముందుకు_జరుగు( Math.sqrt(3) * side)
     ఎడమ_వైపు_తిరుగు( 90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
 
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 60)

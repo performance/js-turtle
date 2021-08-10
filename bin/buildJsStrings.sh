@@ -13,6 +13,7 @@ DIRECTORY=$1 # name of directory containing a set of JavaScript programs
 
 if [ ${DIRECTORY}NotSpecified =  NotSpecified ]; then
   echo Input directory not specified
+  DIRECTORY=examples
   exit
 fi
 

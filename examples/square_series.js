@@ -2,7 +2,7 @@
 
 // lower right is not quite right, it gets left out.
 
-function paddle (side) {
+_విధానము_     paddle (side) {
   side2 = side + side
   ముందుకు_జరుగు( side2)
   కుడి_వైపు_తిరుగు( 90)
@@ -15,46 +15,46 @@ function paddle (side) {
   ముందుకు_జరుగు( side2)
   ఎడమ_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( side)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు( 90)
   ముందుకు_జరుగు( side2)
   కుడి_వైపు_తిరుగు( 180)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
 
-function cwGroup( side) {
-  for( var i=0; i<4; i++) {
+_విధానము_     cwGroup( side) {
+  for( _సర్వత్ర_   i=0; i<4; i++) {
     paddle( side)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
 }
 
 
-function ccwGroup( side) {
-  for( var i=0; i<4; i++) {
+_విధానము_     ccwGroup( side) {
+  for( _సర్వత్ర_   i=0; i<4; i++) {
     paddle( side)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
 }
 
 
-function cwRow( side) {
-  for (var i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + 6*side) {
+_విధానము_     cwRow( side) {
+  for (_సర్వత్ర_   i=కనిష్ఠX(); i<గరిష్ఠX(); i = i + 6*side) {
     xనియోగించు(i)
     cwGroup( side)
   }
 }
 
 
-function ccwRow( side) {
-  for (var i=కనిష్ఠX() + 4*side; i<గరిష్ఠX(); i = i + 6*side) {
+_విధానము_     ccwRow( side) {
+  for (_సర్వత్ర_   i=కనిష్ఠX() + 4*side; i<గరిష్ఠX(); i = i + 6*side) {
                      // offset row 3 sides + 1 for cw/ccw flip
     xనియోగించు(i)
     ccwGroup( side)
@@ -62,10 +62,10 @@ function ccwRow( side) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
    చుట్టొద్దు()
   side = 30
-  for (var i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {
+  for (_సర్వత్ర_   i=కనిష్ఠY(); i<గరిష్ఠY(); i = i + 6*side) {
     yనియోగించు(i)
     cwRow( side)
     yనియోగించు(i + 3*side)

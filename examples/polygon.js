@@ -1,15 +1,15 @@
 // Polygon -- draw a polygon of n sides of length m
 
 // draw a polygon with n sides of length m
-function polygon(sides,side) {
-  ఆవర్తించు(sides, function () {
+_విధానము_     polygon(sides,side) {
+  ఆవర్తించు(sides, _విధానము_     () {
     ముందుకు_జరుగు(side);
     కుడి_వైపు_తిరుగు(360/sides);
   });
 }
 
 // draw a random polygon
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
    ఆది_స్థితి();
    side = గరిష్ఠY()
    if (గరిష్ఠX() < side) {

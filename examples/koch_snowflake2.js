@@ -1,6 +1,6 @@
 // Koch Snowflake 2 -- Koch snowflake with embellishments
 
-function diamond(side) {
+_విధానము_     diamond(side) {
   ముందుకు_జరుగు(side)
   ఎడమ_వైపు_తిరుగు(60)
   ముందుకు_జరుగు(side)
@@ -11,16 +11,16 @@ function diamond(side) {
   ఎడమ_వైపు_తిరుగు(120)
 }
 
-function dazzle( side, inset) {
+_విధానము_     dazzle( side, inset) {
   inner(side,inset)
   newside = (side - Math.sqrt(3)* inset) /3
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ఎడమ_వైపు_తిరుగు(30)
   ముందుకు_జరుగు(inset)
   కుడి_వైపు_తిరుగు(30)
   ముందుకు_జరుగు(newside)
   ఎడమ_వైపు_తిరుగు(60)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   ముందుకు_జరుగు(newside)
   diamond(newside/3)
   ముందుకు_జరుగు(newside)
@@ -38,42 +38,42 @@ function dazzle( side, inset) {
   ముందుకు_జరుగు(newside)
   ఎడమ_వైపు_తిరుగు(120)
   ముందుకు_జరుగు(newside)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు(120)
   ముందుకు_జరుగు(newside)
   ఎడమ_వైపు_తిరుగు(30)
   ముందుకు_జరుగు(inset)
   ఎడమ_వైపు_తిరుగు(150)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
 
-function inner( side, inset) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     inner( side, inset) {
+  కుంచికను_పైకి_ఎత్తు()
   ఎడమ_వైపు_తిరుగు( 30)
   ముందుకు_జరుగు( inset)
   కుడి_వైపు_తిరుగు(30)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   ముందుకు_జరుగు( side - Math.sqrt(3)*inset)
   ఎడమ_వైపు_తిరుగు(120)
   ముందుకు_జరుగు( side - Math.sqrt(3)*inset)
   ఎడమ_వైపు_తిరుగు(120)
   ముందుకు_జరుగు( side - Math.sqrt(3)*inset)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు(30)
   ముందుకు_జరుగు( inset)
   ఎడమ_వైపు_తిరుగు(150)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
-function starOfDavid (side) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     starOfDavid (side) {
+  కుంచికను_పైకి_ఎత్తు()
   వెనుకకు_జరుగు(2*side)
   కుడి_వైపు_తిరుగు(30)
   ముందుకు_జరుగు(side)
   కుడి_వైపు_తిరుగు(60)
-  కలమును_కింద_పెట్టు()
-  for (var i=0;i<6;i=i+1) {
+  కుంచికను_కింద_పెట్టు()
+  for (_సర్వత్ర_   i=0;i<6;i=i+1) {
     inner(side, 10)
     inner(side, 20)
     dazzle(side, 30)
@@ -94,7 +94,7 @@ function starOfDavid (side) {
   }
 }
 
-function kochSnowFlake (side, order) {
+_విధానము_     kochSnowFlake (side, order) {
   kochLine(side, order)
   కుడి_వైపు_తిరుగు(120)
   kochLine(side, order)
@@ -104,7 +104,7 @@ function kochSnowFlake (side, order) {
 } 
 
 
-function kochLine (length, order) {
+_విధానము_     kochLine (length, order) {
   //assume drawn on the current కోణము
   if (order == 0) {
     ముందుకు_జరుగు(length);
@@ -121,7 +121,7 @@ function kochLine (length, order) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి();
   size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .6
   కుంచికను_దాచు();

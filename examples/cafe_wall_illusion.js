@@ -1,6 +1,6 @@
 // Cafe Wall Illusion -- draws cafe tiles. see Wikipedia.
 
-function drawTile (h,w, tc, x, y) {
+_విధానము_     drawTile (h,w, tc, x, y) {
   స్థానము_మార్చు(x,y)
   ఆకారము_ప్రారంభించు()
   ఆవర్తించు(2, () => {
@@ -12,7 +12,7 @@ function drawTile (h,w, tc, x, y) {
   ఆకారము_ముగించు( tc)
 }
 
-function cafeTiles (h, w, gw, gc, off) {
+_విధానము_     cafeTiles (h, w, gw, gc, off) {
   maxRow = 2*గరిష్ఠY()/h
   maxCol = 2*గరిష్ఠX()/w
   వెడల్పు(gw)
@@ -31,16 +31,16 @@ function cafeTiles (h, w, gw, gc, off) {
 
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి();
   // size = Math.min( గరిష్ఠX(), గరిష్ఠY()) * .9
   కుంచికను_దాచు();
 
-  const tileHeight = 50
-  const tileWidth = 50
-  const mortarWidth = 1
-  // const mortarColor = "#c0c0c0"
-  const mortarColor = "#808080"
-  const offset = .5
+  _సర్వదా_    tileHeight = 50
+  _సర్వదా_    tileWidth = 50
+  _సర్వదా_    mortarWidth = 1
+  // _సర్వదా_    mortarColor = "#c0c0c0"
+  _సర్వదా_    mortarColor = "#808080"
+  _సర్వదా_    offset = .5
   cafeTiles( tileHeight, tileWidth, mortarWidth, mortarColor, offset);
 }

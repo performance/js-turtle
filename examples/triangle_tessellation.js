@@ -2,18 +2,18 @@
 
 colors = ["red", "white", "blue", "yellow", "green"]
 
-function triUp( side, fColor) {
+_విధానము_     triUp( side, fColor) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<3; i++) {
+  for (_సర్వత్ర_   i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 120)
   }
   ఆకారము_ముగించు( fColor)
 }
 
-function triDown( side, fColor) {
+_విధానము_     triDown( side, fColor) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<3; i++) {
+  for (_సర్వత్ర_   i=0; i<3; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 120)
   }
@@ -21,13 +21,13 @@ function triDown( side, fColor) {
 }
 
 // nextColor could be completely random, if desired
-function nextColor() { 
+_విధానము_     nextColor() { 
   c = colors[ count % colors.length]
   count = count + 1
-  return c
+  _ఫలము_  c
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   rowOffset = s/3 // offset between rows

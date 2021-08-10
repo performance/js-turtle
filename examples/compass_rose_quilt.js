@@ -41,13 +41,13 @@ background32Color = "నలుపు"
 foreground32Color = "yellow"
 
 
-function indexColor(index, colors) {
-  var len = colors.length
-  return colors[ index % len]
+_విధానము_     indexColor(index, colors) {
+  _సర్వత్ర_   len = colors.length
+  _ఫలము_  colors[ index % len]
 }
 
 
-function triangle (side){
+_విధానము_     triangle (side){
   ముందుకు_జరుగు(side)
   a = 45
   b = (180-a)/2
@@ -60,8 +60,8 @@ function triangle (side){
 }
 
 
-function splitTri(outerSide, num, foreColor, triSide) {
-  var i, j
+_విధానము_     splitTri(outerSide, num, foreColor, triSide) {
+  _సర్వత్ర_   i, j
   
   if (triSide == undefined) {
     triSide = outerSide
@@ -72,45 +72,45 @@ function splitTri(outerSide, num, foreColor, triSide) {
         ఆకారము_ప్రారంభించు()
         triangle (innerSide)
         ఆకారము_ముగించు(foreColor)
-        కలమును_పైకి_ఎత్తు()
+        కుంచికను_పైకి_ఎత్తు()
         ముందుకు_జరుగు(innerSide)
-        కలమును_కింద_పెట్టు()
+        కుంచికను_కింద_పెట్టు()
     }
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     వెనుకకు_జరుగు( j * innerSide)
     కుడి_వైపు_తిరుగు(45)
     ముందుకు_జరుగు( innerSide)
     ఎడమ_వైపు_తిరుగు(45)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు(45)
   వెనుకకు_జరుగు( innerSide * num)
   ఎడమ_వైపు_తిరుగు(45)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
 
-function flipSplitTri( outerSide, num, foreColor, triSide) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     flipSplitTri( outerSide, num, foreColor, triSide) {
+  కుంచికను_పైకి_ఎత్తు()
   ముందుకు_జరుగు( outerSide)
   కుడి_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( outerSide)
   కుడి_వైపు_తిరుగు( 180-45)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   splitTri( outerSide, num, foreColor, triSide)
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( outerSide)
   ఎడమ_వైపు_తిరుగు( 45)
   ముందుకు_జరుగు( outerSide)
   ఎడమ_వైపు_తిరుగు( 180)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
 
-function labelPoints(size) {
-  కలమును_పైకి_ఎత్తు()
+_విధానము_     labelPoints(size) {
+  కుంచికను_పైకి_ఎత్తు()
   కోణము( 0)
   boxedCompass=["N", "NxE", "NNE", "NExN", "NE", "NExE", "ENE", "ExN", "E", "ExS", "ESE", "SExE", "SE", "SExS", "SSE", "SxE", "S", "SxW", "SSW", "SWxS", "SW", "SWxW", "WSW", "WxS", "W", "WxN", "WNW", "NWxW", "NW", "NWxN", "NNW", "NxW"]
 
@@ -150,7 +150,7 @@ function labelPoints(size) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   size = .9 * Math.min( గరిష్ఠX(), గరిష్ఠY()) //120
 console.log("size "+ size)

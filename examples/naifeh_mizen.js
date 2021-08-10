@@ -2,7 +2,7 @@
 // for more information see https://stevennaifeh.com
 
 
-function v (side, fColor) {
+_విధానము_     v (side, fColor) {
   // assume pointing up at upper left corner
   // invariant
   if (fColor != "") {
@@ -27,39 +27,39 @@ function v (side, fColor) {
 }
 
 
-function mizen( side, lColor, fColor) {
+_విధానము_     mizen( side, lColor, fColor) {
   రంగు_మార్చు(lColor)
   కుడి_వైపు_తిరుగు(120)
-  for (var i=0; i<6; i++) {
+  for (_సర్వత్ర_   i=0; i<6; i++) {
     v( side, fColor)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(30)
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 60)
     ముందుకు_జరుగు( 2*side)
     ఎడమ_వైపు_తిరుగు(30)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     v( side, fColor)
 
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(30)
     ముందుకు_జరుగు( 2*side)
     కుడి_వైపు_తిరుగు( 150)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
     v( side, fColor)
 
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(30)
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు(120)
     ముందుకు_జరుగు( 4*side)
     కుడి_వైపు_తిరుగు(150)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
 }
 
 
-function mizenSimple() {
+_విధానము_     mizenSimple() {
   bColor = "red"
   lColor = "white"
   background ("tan")
@@ -77,7 +77,7 @@ function mizenSimple() {
   mizen( side, "white", "")
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   side = 40 // 1/2 basic face of hexagon, width...

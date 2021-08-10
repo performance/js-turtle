@@ -63,53 +63,53 @@ basic duration rules
 
 //**** GLOBALS ****
 // reporting and debug constants
-var NO_MESSAGES =      0;
-var QUEUE_MESSAGES =   1;
-var OVERALL_MESSAGES = 2;
-var STATE_MESSAGES =   3;
-var EVENT_MESSAGES =   4;
-var DEBUG_LEVEL = QUEUE_MESSAGES;
+_సర్వత్ర_   NO_MESSAGES =      0;
+_సర్వత్ర_   QUEUE_MESSAGES =   1;
+_సర్వత్ర_   OVERALL_MESSAGES = 2;
+_సర్వత్ర_   STATE_MESSAGES =   3;
+_సర్వత్ర_   EVENT_MESSAGES =   4;
+_సర్వత్ర_   DEBUG_LEVEL = QUEUE_MESSAGES;
 
 // drawing constants
-var roadWidth = 80;
-var crossWalkWidth = 8;
-var stopLineSeparation = 4;
-var stopLineWidth = 2;
+_సర్వత్ర_   roadWidth = 80;
+_సర్వత్ర_   crossWalkWidth = 8;
+_సర్వత్ర_   stopLineSeparation = 4;
+_సర్వత్ర_   stopLineWidth = 2;
 
 // light states
-var red = "red";
-var green = "green";
-var yellow = "yellow";
+_సర్వత్ర_   red = "red";
+_సర్వత్ర_   green = "green";
+_సర్వత్ర_   yellow = "yellow";
 
 // light types
-var main = "main";
-var leftTurn = "leftTurn";
-var walk = "walk";
+_సర్వత్ర_   main = "main";
+_సర్వత్ర_   leftTurn = "leftTurn";
+_సర్వత్ర_   walk = "walk";
 
 // light duration constants
 // all of the below times are in milliseconds
-var minimumGreenDuration =      5 * 1000;
-var maximumGreenDuration =     30 * 1000;
-var mainPerCar =              1.5 * 1000;
-var yellowDuration =            5 * 1000;
-var mainGuardDuration =         1 * 1000;
+_సర్వత్ర_   minimumGreenDuration =      5 * 1000;
+_సర్వత్ర_   maximumGreenDuration =     30 * 1000;
+_సర్వత్ర_   mainPerCar =              1.5 * 1000;
+_సర్వత్ర_   yellowDuration =            5 * 1000;
+_సర్వత్ర_   mainGuardDuration =         1 * 1000;
 
-var minimumTurnDuration =       4 * 1000;
-var maximumTurnDuration =      20 * 1000;
-var turnPerCar =                2 * 1000;
-var turnGuardDuration =         1 * 1000;
+_సర్వత్ర_   minimumTurnDuration =       4 * 1000;
+_సర్వత్ర_   maximumTurnDuration =      20 * 1000;
+_సర్వత్ర_   turnPerCar =                2 * 1000;
+_సర్వత్ర_   turnGuardDuration =         1 * 1000;
 
-var minimumGreenWalkDuration =  4 * 1000;
-var ewWalkDuration =           20 * 1000;
-var nsWalkDuration =           25 * 1000;
+_సర్వత్ర_   minimumGreenWalkDuration =  4 * 1000;
+_సర్వత్ర_   ewWalkDuration =           20 * 1000;
+_సర్వత్ర_   nsWalkDuration =           25 * 1000;
 
-var extendDuration =            1 * 1000;
-var extendDelayDuration =       3 * 1000; // must be less than minimum green duration and minimum walk duration
-var extendDelayDuration = Math.min (minimumGreenWalkDuration, minimumGreenDuration) - .5 * 1000; // must be less than minimum green duration and minimum walk duration
+_సర్వత్ర_   extendDuration =            1 * 1000;
+_సర్వత్ర_   extendDelayDuration =       3 * 1000; // must be less than minimum green duration and minimum walk duration
+_సర్వత్ర_   extendDelayDuration = Math.min (minimumGreenWalkDuration, minimumGreenDuration) - .5 * 1000; // must be less than minimum green duration and minimum walk duration
 
 // light data structures (object)
 
-function Light(id, type, aveArrivalTime, aveDepartureTime) {
+_విధానము_     Light(id, type, aveArrivalTime, aveDepartureTime) {
     // create a Light object
     this.id = id;
     this.type = type;
@@ -126,23 +126,23 @@ function Light(id, type, aveArrivalTime, aveDepartureTime) {
 
 //  milliseconds per hour / arrivals per hour = ave milliseconds /arrival
 //                  id       type, ave arrival time per hour, ave departure msec
-var ebMain = new Light("ebMain", main,     3600000 / 600, 1200);
-var ebTurn = new Light("ebTurn", leftTurn, 3600000 / 300, 1700);
-var ebWalk = new Light("ebWalk", walk,     3600000 /  25,    0);
-var wbMain = new Light("wbMain", main,     3600000 / 600, 1200);
-var wbTurn = new Light("wbTurn", leftTurn, 3600000 / 300, 1700);
-var wbWalk = new Light("wbWalk", walk,     3600000 /  25,    0);
-var nbMain = new Light("nbMain", main,     3600000 / 600, 1200);
-var nbTurn = new Light("nbTurn", leftTurn, 3600000 / 300, 1700);
-var nbWalk = new Light("nbWalk", walk,     3600000 /  25,    0);
-var sbMain = new Light("sbMain", main,     3600000 / 600, 1200);
-var sbTurn = new Light("sbTurn", leftTurn, 3600000 / 300, 1700);
-var sbWalk = new Light("sbWalk", walk,     3600000 /  25,    0);
+_సర్వత్ర_   ebMain = new Light("ebMain", main,     3600000 / 600, 1200);
+_సర్వత్ర_   ebTurn = new Light("ebTurn", leftTurn, 3600000 / 300, 1700);
+_సర్వత్ర_   ebWalk = new Light("ebWalk", walk,     3600000 /  25,    0);
+_సర్వత్ర_   wbMain = new Light("wbMain", main,     3600000 / 600, 1200);
+_సర్వత్ర_   wbTurn = new Light("wbTurn", leftTurn, 3600000 / 300, 1700);
+_సర్వత్ర_   wbWalk = new Light("wbWalk", walk,     3600000 /  25,    0);
+_సర్వత్ర_   nbMain = new Light("nbMain", main,     3600000 / 600, 1200);
+_సర్వత్ర_   nbTurn = new Light("nbTurn", leftTurn, 3600000 / 300, 1700);
+_సర్వత్ర_   nbWalk = new Light("nbWalk", walk,     3600000 /  25,    0);
+_సర్వత్ర_   sbMain = new Light("sbMain", main,     3600000 / 600, 1200);
+_సర్వత్ర_   sbTurn = new Light("sbTurn", leftTurn, 3600000 / 300, 1700);
+_సర్వత్ర_   sbWalk = new Light("sbWalk", walk,     3600000 /  25,    0);
 
 
-function testRates () {
+_విధానము_     testRates () {
   // testRates -- test assumptions to see if they can handle the indicated traffic
-  var totalCycleTime = 2 * (Math.max( maximumGreenDuration + yellowDuration + mainGuardDuration,
+  _సర్వత్ర_   totalCycleTime = 2 * (Math.max( maximumGreenDuration + yellowDuration + mainGuardDuration,
                               minimumGreenWalkDuration + ewWalkDuration + mainGuardDuration) +
                             maximumTurnDuration + yellowDuration + turnGuardDuration);
   
@@ -159,16 +159,16 @@ function testRates () {
   testRate (wbWalk);
   testRate (wbTurn);
 
-  function testRate (signal) {
+  _విధానము_     testRate (signal) {
     // testRate -- test assumptions to see if a signal can handle the indicated traffic
   
-    var cycleArrivalRate = totalCycleTime / signal.aveArrivalTime;
+    _సర్వత్ర_   cycleArrivalRate = totalCycleTime / signal.aveArrivalTime;
     if (signal.type === leftTurn) {
-      var cycleDepartureRate = maximumTurnDuration / signal.aveDepartureTime;
+      _సర్వత్ర_   cycleDepartureRate = maximumTurnDuration / signal.aveDepartureTime;
     } else if (signal.type === main) {
-      var cycleDepartureRate = maximumGreenDuration / signal.aveDepartureTime;
+      _సర్వత్ర_   cycleDepartureRate = maximumGreenDuration / signal.aveDepartureTime;
     } else { // assume walkers
-      var cycleDepartureRate = 10000; // assuming no walker delay or congestion
+      _సర్వత్ర_   cycleDepartureRate = 10000; // assuming no walker delay or congestion
     }
     if (cycleArrivalRate > .90 * cycleDepartureRate) {
       throw "Cycle arrival rate exceeded departure rate for " + signal.id;
@@ -181,50 +181,50 @@ testRates();
 //**** FUNCTIONS ****
 
 //** Drawing functions **
-function drawEWstreet() {
+_విధానము_     drawEWstreet() {
    చుట్టొద్దు();
   స్థానము_మార్చు(కనిష్ఠX(),0);
   కోణము(90);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   రంగు_మార్చు("నలుపు");
   వెడల్పు(roadWidth);
   ముందుకు_జరుగు(గరిష్ఠX() + గరిష్ఠX());
 }
 
-function drawNSstreet() {
+_విధానము_     drawNSstreet() {
   స్థానము_మార్చు(0,గరిష్ఠY());
   కోణము(180);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   రంగు_మార్చు("నలుపు");
   వెడల్పు(roadWidth);
   ముందుకు_జరుగు(గరిష్ఠY() + గరిష్ఠY());
 }
 
-function drawEWstripe() {
+_విధానము_     drawEWstripe() {
   స్థానము_మార్చు(కనిష్ఠX(),0);
   కోణము(90);
   రంగు_మార్చు( పసుపు );
   వెడల్పు(1);
   ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);
-  కలమును_పైకి_ఎత్తు();
+  కుంచికను_పైకి_ఎత్తు();
   ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   ముందుకు_జరుగు(గరిష్ఠX() - roadWidth / 2 - crossWalkWidth);
 }
 
-function drawNSstripe() {
+_విధానము_     drawNSstripe() {
   స్థానము_మార్చు(0,గరిష్ఠY());
   కోణము(180);
   రంగు_మార్చు( పసుపు );
   వెడల్పు(1);
   ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);
-  కలమును_పైకి_ఎత్తు();
+  కుంచికను_పైకి_ఎత్తు();
   ముందుకు_జరుగు(roadWidth + 2 * crossWalkWidth);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   ముందుకు_జరుగు(గరిష్ఠY() - roadWidth / 2 - crossWalkWidth);
 }
 
-function drawCrossWalk(x, y, dir) {
+_విధానము_     drawCrossWalk(x, y, dir) {
   // draw stripes for a crosswalk
   // x,y is coordinates of travel side of road
   // dir is direction across road
@@ -234,34 +234,34 @@ function drawCrossWalk(x, y, dir) {
   స్థానము_మార్చు(x, y);
   కోణము(dir);
   వెడల్పు(1);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   ముందుకు_జరుగు(roadWidth);
     
   // draw outer cross walk line
-  కలమును_పైకి_ఎత్తు();
+  కుంచికను_పైకి_ఎత్తు();
   ఎడమ_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(crossWalkWidth);
   ఎడమ_వైపు_తిరుగు(90);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   ముందుకు_జరుగు(roadWidth);
     
   // draw stop line
-  కలమును_పైకి_ఎత్తు();
+  కుంచికను_పైకి_ఎత్తు();
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(stopLineSeparation);
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(2);
   వెడల్పు(stopLineWidth);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   ముందుకు_జరుగు(roadWidth / 2 - 4);
   వెడల్పు(1);
 }
 
-function drawTurnArrow(x, y, dir) {
+_విధానము_     drawTurnArrow(x, y, dir) {
   కుంచికను_దాచు();
   స్థానము_మార్చు(x,y);
   కోణము (dir);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   రంగు_మార్చు( తెలుపు );
   వెడల్పు(5);
   ముందుకు_జరుగు(5);
@@ -279,7 +279,7 @@ function drawTurnArrow(x, y, dir) {
 }
   
 
-function drawStreets() {
+_విధానము_     drawStreets() {
   drawNSstreet();
   drawEWstreet();
 
@@ -299,8 +299,8 @@ function drawStreets() {
 
 //** Light Drawing Functions **
 
-function setLightColor(lightColor, stateColor) {
-  var signalBackground = "lightgray"; // color of an "off" signal light
+_విధానము_     setLightColor(lightColor, stateColor) {
+  _సర్వత్ర_   signalBackground = "lightgray"; // color of an "off" signal light
   if (lightColor === stateColor) {
     రంగు_మార్చు(lightColor);
   } else {
@@ -308,18 +308,18 @@ function setLightColor(lightColor, stateColor) {
   }
 }
 
-function drawArrow() { // assume pointing up, color set and pen up
-  var penWidth = కుంచిక.వెడల్పు;
-  var arrowSize = 8;
-  var vertOffset = 5;
+_విధానము_     drawArrow() { // assume pointing up, color set and pen up
+  _సర్వత్ర_   penWidth = కుంచిక.వెడల్పు;
+  _సర్వత్ర_   arrowSize = 8;
+  _సర్వత్ర_   vertOffset = 5;
   వెనుకకు_జరుగు(vertOffset);
-  కలమును_కింద_పెట్టు();
+  కుంచికను_కింద_పెట్టు();
   వెడల్పు(3);
   ఎడమ_వైపు_తిరుగు(45);
   ముందుకు_జరుగు(arrowSize);
   కుడి_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(arrowSize);
-  కలమును_పైకి_ఎత్తు();
+  కుంచికను_పైకి_ఎత్తు();
   వెనుకకు_జరుగు(arrowSize);
   ఎడమ_వైపు_తిరుగు(90);
   వెనుకకు_జరుగు(arrowSize);
@@ -328,7 +328,7 @@ function drawArrow() { // assume pointing up, color set and pen up
   ముందుకు_జరుగు(vertOffset);
 }
 
-function drawTurnSignal(state) {
+_విధానము_     drawTurnSignal(state) {
   ఎడమ_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(13);
   setLightColor("green", state);
@@ -346,7 +346,7 @@ function drawTurnSignal(state) {
   కుడి_వైపు_తిరుగు(90);
 }
 
-function drawMainSignal(state) { // main signal is straight ahead
+_విధానము_     drawMainSignal(state) { // main signal is straight ahead
   ఎడమ_వైపు_తిరుగు(90);
   ముందుకు_జరుగు(13);
   setLightColor("green", state);
@@ -364,7 +364,7 @@ function drawMainSignal(state) { // main signal is straight ahead
   కుడి_వైపు_తిరుగు(90);
 }
 
-function drawWalkSignal(state) {
+_విధానము_     drawWalkSignal(state) {
   // should do the flashing red for don\'t start
   // could do the flash down counter
   setLightColor("green", state);
@@ -395,7 +395,7 @@ function drawWalkSignal(state) {
   ఎడమ_వైపు_తిరుగు(90);
 }
 
-function drawSignal(x, y, orient, mainState, turnState, walkState) {
+_విధానము_     drawSignal(x, y, orient, mainState, turnState, walkState) {
   // move కుంచిక to position and కోణము depending on street direction
   స్థానము_మార్చు(x, y);
   కోణము(orient);
@@ -408,7 +408,7 @@ function drawSignal(x, y, orient, mainState, turnState, walkState) {
   drawWalkSignal(walkState);
 }
 
-function drawSignals() {
+_విధానము_     drawSignals() {
   drawSignal( 50,  65,  90, nbMain.state, nbTurn.state, nbWalk.state);
   drawSignal(-50, -65, 270, sbMain.state, sbTurn.state, sbWalk.state);
   drawSignal( 65, -50, 180, ebMain.state, ebTurn.state, ebWalk.state);
@@ -416,7 +416,7 @@ function drawSignals() {
 }
 
 
-function printQueues () {
+_విధానము_     printQueues () {
   console.log (currentSecs +
                " Northbound main: " + nbMain.queue.length +
                ", turn: " +           nbTurn.queue.length +
@@ -435,7 +435,7 @@ function printQueues () {
 }
 
 
-function writeQueues () {
+_విధానము_     writeQueues () {
   writeQueueSizes(55,  -గరిష్ఠY()+5,  0, "N",
     nbTurn.queue.length, nbMain.queue.length, nbWalk.queue.length);
   writeQueueSizes(-68,  గరిష్ఠY()-20, 0, "S",
@@ -446,7 +446,7 @@ function writeQueues () {
     wbTurn.queue.length, wbMain.queue.length, wbWalk.queue.length);
 }
 
-function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
+_విధానము_     writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
 //write the number waiting for each signal
 //  x is the x position of the text start
 //  y is the y position of the text start
@@ -499,7 +499,7 @@ function writeQueueSizes(x, y, orientation, dir, turn, main, walk) {
   వ్రాయి("     " + dir); // debug statement
 }
 
-function drawQueues() {
+_విధానము_     drawQueues() {
   //SB
   drawQueue( -10,   55,   0, sbTurn.queue, 12);
   drawQueue( -30,   55,   0, sbMain.queue, 12);
@@ -521,22 +521,22 @@ function drawQueues() {
   drawQueue(-105,  -50, 270, ebWalk.queue,  6);
 }
 
-function drawQueue(x, y, dir, queue, len) {
+_విధానము_     drawQueue(x, y, dir, queue, len) {
   స్థానము_మార్చు(x, y);
   కోణము(dir);
   వెడల్పు(10);
-  for (var i=0; i<queue.length; i++) {
-    కలమును_కింద_పెట్టు();
+  for (_సర్వత్ర_   i=0; i<queue.length; i++) {
+    కుంచికను_కింద_పెట్టు();
     రంగు_మార్చు(queue[i].color);
     ముందుకు_జరుగు(len); 
-    కలమును_పైకి_ఎత్తు();
+    కుంచికను_పైకి_ఎత్తు();
     ముందుకు_జరుగు(4);
   }
 }
 
 //** Safety Functions **
 
-function safetyCheck() {
+_విధానము_     safetyCheck() {
 /*
  safetyCheck makes sure that traffic is not allowed in cross
  directions (even if a programmer made an error)
@@ -544,7 +544,7 @@ function safetyCheck() {
  no cross traffic is allowed for any green or yellow light
 
 */
-  var fault = false;
+  _సర్వత్ర_   fault = false;
   if ( (ebMain.state === green || ebMain.state === yellow ||
         ebWalk.state === green || ebWalk.state === yellow) &&
        !(nbMain.state === red && sbMain.state === red &&
@@ -631,15 +631,15 @@ state s/b flashing red all around, may restart after a time
 // the light state machines advances the light from one state to the next
 // usually based on the expiry of a timer, but may change due to a callback
 
-var baseTime;
-function msToSec(msecs) {
+_సర్వత్ర_   baseTime;
+_విధానము_     msToSec(msecs) {
   if (baseTime === undefined) {
     baseTime = msecs;
   }
-  return (msecs - baseTime) % 1000000/1000;
+  _ఫలము_  (msecs - baseTime) % 1000000/1000;
 }
 
-function logEvent (id, eventName, duration) {
+_విధానము_     logEvent (id, eventName, duration) {
   if (duration === undefined) {
     duration =  "undefined"
   } else {
@@ -650,7 +650,7 @@ function logEvent (id, eventName, duration) {
   }
 }
 
-function turnGreen(signal, duration) {
+_విధానము_     turnGreen(signal, duration) {
   logEvent (signal.id, "green", duration)
   signal.state = green;
   greenCount = greenCount + 1;
@@ -664,13 +664,13 @@ function turnGreen(signal, duration) {
   signal.nextTime = currentTime + duration;
 }
 
-function extendTurn (signal, duration) {
+_విధానము_     extendTurn (signal, duration) {
   logEvent (signal.id, "extendTurn", duration);
   signal.nextState = "extendTurn";
   signal.nextTime = currentTime + duration;
 }
 
-function extendGreen(signal, duration) {
+_విధానము_     extendGreen(signal, duration) {
   logEvent (signal.id, "extending green", duration)
   // signal should already be green, assume no extension, so ignor duration
   signal.nextState = "turnYellow";
@@ -681,14 +681,14 @@ function extendGreen(signal, duration) {
   }
 }
 
-function turnYellow(signal, duration) {
+_విధానము_     turnYellow(signal, duration) {
   logEvent (signal.id, "yellow", duration)
   signal.state = yellow;
   signal.nextState = "turnRed";
   signal.nextTime = currentTime + duration;
 }
 
-function turnRed(signal, duration) {
+_విధానము_     turnRed(signal, duration) {
   logEvent (signal.id, "red", duration)
   signal.state = red;
   signal.nextState = "turnGuardRed";
@@ -699,7 +699,7 @@ function turnRed(signal, duration) {
   }
 }
 
-function turnGuardRed(signal, duration) {
+_విధానము_     turnGuardRed(signal, duration) {
   logEvent (signal.id, "guard red", duration)
   signal.state = red;
   signal.nextState = "turnGreen";
@@ -710,7 +710,7 @@ function turnGuardRed(signal, duration) {
   }
 }
 
-function turnFlashingRed(signal, duration) {
+_విధానము_     turnFlashingRed(signal, duration) {
   logEvent (signal.id, "flashing red", duration)
   signal.state = red;
   signal.nextState = "turnGreen";
@@ -721,12 +721,12 @@ function turnFlashingRed(signal, duration) {
   }
 }
 
-function enableTransition(signal, nextState) { // allow light state machine to fire on next go around
+_విధానము_     enableTransition(signal, nextState) { // allow light state machine to fire on next go around
   signal.nextState = nextState;
   signal.nextTime = currentTime;
 }
 
-function turnStateMachine(signal, currentTime) {
+_విధానము_     turnStateMachine(signal, currentTime) {
   if (signal.nextTime !== undefined && currentTime >= signal.nextTime) { // state change is due
     changed = true;
     if (DEBUG_LEVEL >= STATE_MESSAGES) {
@@ -768,7 +768,7 @@ function turnStateMachine(signal, currentTime) {
   }
 }
 
-function walkStateMachine(signal, currentTime) {
+_విధానము_     walkStateMachine(signal, currentTime) {
   if (signal.nextTime !== undefined && currentTime >= signal.nextTime) { // state change is due
     changed = true;
     if (DEBUG_LEVEL >= STATE_MESSAGES) {
@@ -809,7 +809,7 @@ function walkStateMachine(signal, currentTime) {
   }
 }
 
-function mainStateMachine(signal, currentTime) {
+_విధానము_     mainStateMachine(signal, currentTime) {
   if (signal.nextTime !== undefined && currentTime >= signal.nextTime) { // state change is due
     changed = true;
     if (DEBUG_LEVEL >= STATE_MESSAGES) {
@@ -849,12 +849,12 @@ function mainStateMachine(signal, currentTime) {
 
 //** Traffic Simulation Functions **
 
-function incDecQueue(signal) {
+_విధానము_     incDecQueue(signal) {
   // check for departures when light is green
    // should only do this when light is green and start new departure timer when light goes green
-  var spread;
+  _సర్వత్ర_   spread;
   spread = 0.5;
-  var possibleDepartureTime = currentTime +
+  _సర్వత్ర_   possibleDepartureTime = currentTime +
             యాదృచ్ఛిక_సంఖ్య((1 - spread) * signal.aveDepartureTime, (1 + spread) * signal.aveDepartureTime);
   if (signal.state === green) {
     if (signal.aveDepartureTime === 0) { // special case for walkers
@@ -887,7 +887,7 @@ function incDecQueue(signal) {
 }
 
 
-function simulateTraffic() {
+_విధానము_     simulateTraffic() {
   incDecQueue(ebTurn);
   incDecQueue(ebWalk);
   incDecQueue(ebMain);
@@ -905,19 +905,19 @@ function simulateTraffic() {
 // ** Overall State Machine and Functions
 
 // *Globals*
-var overallNextState;
-var overallNextTime;
-var turnCount = 0;
-var greenCount = 0;
+_సర్వత్ర_   overallNextState;
+_సర్వత్ర_   overallNextTime;
+_సర్వత్ర_   turnCount = 0;
+_సర్వత్ర_   greenCount = 0;
 
-function nextOverallState(nextState, time) {
+_విధానము_     nextOverallState(nextState, time) {
   overallNextState = nextState;
   overallNextTime = time;
 }
 
-function redGuardComplete(signal) {
+_విధానము_     redGuardComplete(signal) {
   /* callback when red guard time complete for a particular signal */
-  var id = signal.id;
+  _సర్వత్ర_   id = signal.id;
   if (id === nbTurn || id === sbTurn || id === ebTurn || id === wbTurn) {
     turnCount = turnCount - 1; //global
     if (turnCount < 0) {
@@ -932,13 +932,13 @@ function redGuardComplete(signal) {
   }
 }
 
-function startNS() {
+_విధానము_     startNS() {
   /* entry point to start overall machine into motion */
   nextOverallState("startNS", currentTime);
 }
 
 
-function overallStateMachine() {
+_విధానము_     overallStateMachine() {
 /*
 - controls the start of travel in either direction
 - extends the main green
@@ -1154,13 +1154,13 @@ overall extends main green in a coordinated way
 
 
 
-var date = new Date();
-var currentTime = date.getTime();
-var currentSecs = msToSec(currentTime);
-var changed = false;
+_సర్వత్ర_   date = new Date();
+_సర్వత్ర_   currentTime = date.getTime();
+_సర్వత్ర_   currentSecs = msToSec(currentTime);
+_సర్వత్ర_   changed = false;
 startNS(); // start up the overall machine 
 
-function loop() {
+_విధానము_     loop() {
   changed = false;
   date = new Date();
   currentTime = date.getTime();
@@ -1202,6 +1202,6 @@ function loop() {
   safetyCheck();
 }
  
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆడించు(loop, 100);
 }

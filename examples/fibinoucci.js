@@ -6,8 +6,8 @@
 // Originally it was thought to be the rate of reproduction of rabbits.
 // More at Wikipedia.com
 
-function box (side) {
-  for (var i = 0; i<4; i++) {
+_విధానము_     box (side) {
+  for (_సర్వత్ర_   i = 0; i<4; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
   }
@@ -16,9 +16,9 @@ function box (side) {
   ముందుకు_జరుగు( side)
 }
 
-function fib(count, side) {
-  var fiblist = [1,1]
-  var fibcount = 1
+_విధానము_     fib(count, side) {
+  _సర్వత్ర_   fiblist = [1,1]
+  _సర్వత్ర_   fibcount = 1
   while (fibcount <= count) {
     console.log("fig " + fibcount + " " + fiblist[0] + "," + fiblist[1])
     if (fibcount == 1) {
@@ -40,7 +40,7 @@ function fib(count, side) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   స్థానము_మార్చు(150,60)
   కోణము(90)

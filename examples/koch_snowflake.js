@@ -1,7 +1,7 @@
 // Koch Snowflakes -- draw an animated set of Koch snowflakes
 
 
-function kochLine (length, order) {
+_విధానము_     kochLine (length, order) {
   //assume drawn on the current కోణము
   if (order == 0) {
     ముందుకు_జరుగు(length);
@@ -17,7 +17,7 @@ function kochLine (length, order) {
   }
 }
 
-function kochSnowflake (length, order) {
+_విధానము_     kochSnowflake (length, order) {
   కోణము (30);
   స్థానము_మార్చు(-length/2,-.3 * length);
   kochLine (length, order);
@@ -31,21 +31,21 @@ function kochSnowflake (length, order) {
 
 ఆది_స్థితి();
 
-var steps = 6;
-var span = 240;
-var i = 0;
+_సర్వత్ర_   steps = 6;
+_సర్వత్ర_   span = 240;
+_సర్వత్ర_   i = 0;
 
-function kochLines () {
+_విధానము_     kochLines () {
   for (i=0; i<steps; i++) {
     స్థానము_మార్చు(span/2 - i*span/steps, - span/2);
     kochLine (span,i);
   }
 }
 
-function kochSnowflakeDelay() {
+_విధానము_     kochSnowflakeDelay() {
 
   చెరిపి_వేయి();
-  var side = గరిష్ఠY() - కనిష్ఠY();
+  _సర్వత్ర_   side = గరిష్ఠY() - కనిష్ఠY();
   if (side > గరిష్ఠX() - కనిష్ఠX()) {
     side = గరిష్ఠX() - కనిష్ఠX()
   }
@@ -61,7 +61,7 @@ function kochSnowflakeDelay() {
   }
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   కుంచికను_దాచు();
   i = 0;
   kochSnowflakeDelay();

@@ -9,7 +9,7 @@ row of slashes
 This does not support using a wider pen width.
 */
 
-function backslash (fColor) {
+_విధానము_     backslash (fColor) {
   // assume pointing up at upper left corner
   // invariant
   ఆకారము_ప్రారంభించు()
@@ -25,7 +25,7 @@ function backslash (fColor) {
   ఆకారము_ముగించు(fColor)
 }
 
-function slash (fColor) {
+_విధానము_     slash (fColor) {
   // assume pointing up at upper left corner
   // invariant
   ఆకారము_ప్రారంభించు()
@@ -41,7 +41,7 @@ function slash (fColor) {
   ఆకారము_ముగించు(fColor)
 }
 
-function dash () {
+_విధానము_     dash () {
   // assume pointing up at upper left corner
   // invariant
   ఆకారము_ప్రారంభించు()
@@ -57,62 +57,62 @@ function dash () {
   ఆకారము_ముగించు(fColor)
 }
 
-function dashBackslashes(count, mode, fColor) {
+_విధానము_     dashBackslashes(count, mode, fColor) {
   // assume pointing up at upper left corner
   // mode = 0 normal; mode =1 skip first
   // invariant
   backup = 0
-  for (var i=0; i<count; i++) {
-    కలమును_కింద_పెట్టు()
+  for (_సర్వత్ర_   i=0; i<count; i++) {
+    కుంచికను_కింద_పెట్టు()
     if (i % 2 == 0) {
       if (mode == 0 || i != 0){
         dash()
       }
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       కుడి_వైపు_తిరుగు(90)
       ముందుకు_జరుగు( 2*size)
       ఎడమ_వైపు_తిరుగు(90)
-      కలమును_కింద_పెట్టు()
+      కుంచికను_కింద_పెట్టు()
       backup = backup + 2
     } else {
       backslash(fColor)
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       కుడి_వైపు_తిరుగు(90)
       ముందుకు_జరుగు( size)
       ఎడమ_వైపు_తిరుగు(90)
-      కలమును_కింద_పెట్టు()
+      కుంచికను_కింద_పెట్టు()
       backup = backup + 1
     }
   }
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ఎడమ_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(backup * size)
   కుడి_వైపు_తిరుగు(90)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
 }
 
 
-function slashes(count, fColor) {
+_విధానము_     slashes(count, fColor) {
   // assume pointing up at upper left corner
   // invariant
-  for (var i=0; i<count; i++) {
+  for (_సర్వత్ర_   i=0; i<count; i++) {
     slash( fColor)
-    కలమును_పైకి_ఎత్తు()
+    కుంచికను_పైకి_ఎత్తు()
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( 3*size)
     ఎడమ_వైపు_తిరుగు(90)
-    కలమును_కింద_పెట్టు()
+    కుంచికను_కింద_పెట్టు()
   }
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   ఎడమ_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(count * 3 * size)
   కుడి_వైపు_తిరుగు(90)
-  కలమును_కింద_పెట్టు()
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_కింద_పెట్టు()
+  కుంచికను_పైకి_ఎత్తు()
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   fColor = "blue"
   size = .17 * Math.min( గరిష్ఠX(), గరిష్ఠY())
@@ -156,13 +156,13 @@ function ప్రదర్శన() {
   కుడి_వైపు_తిరుగు(90)
   dashBackslashes(7, 1, fColor)
 
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   కుడి_వైపు_తిరుగు(90)
   ముందుకు_జరుగు(3*size)
   కుడి_వైపు_తిరుగు( 60)
   ముందుకు_జరుగు( size)
   ఎడమ_వైపు_తిరుగు(150)
-  కలమును_కింద_పెట్టు()
+  కుంచికను_కింద_పెట్టు()
   slashes(3, fColor)
   
   ఎడమ_వైపు_తిరుగు(150)

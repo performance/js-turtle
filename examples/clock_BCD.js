@@ -2,34 +2,34 @@
 
 //*** GLOBALS ***
 
-var hour10;
-var hour1;
-var minute10;
-var minute1;
-var second10;
-var second1;
-var hSpacing;
-var vSpacing;
+_సర్వత్ర_   hour10;
+_సర్వత్ర_   hour1;
+_సర్వత్ర_   minute10;
+_సర్వత్ర_   minute1;
+_సర్వత్ర_   second10;
+_సర్వత్ర_   second1;
+_సర్వత్ర_   hSpacing;
+_సర్వత్ర_   vSpacing;
 
-var hourColor = "red"
-var minuteColor = "green"
-var secondColor = "blue"
-var offColor = "lightgray"
+_సర్వత్ర_   hourColor = "red"
+_సర్వత్ర_   minuteColor = "green"
+_సర్వత్ర_   secondColor = "blue"
+_సర్వత్ర_   offColor = "lightgray"
 
 
 //*** FUNCTIONS ***
 
-function tensDigit (number) {
-  return Math.floor (number/10) % 10
+_విధానము_     tensDigit (number) {
+  _ఫలము_  Math.floor (number/10) % 10
 }
 
 
-function onesDigit (number) {
-  return Math.floor (number % 10)
+_విధానము_     onesDigit (number) {
+  _ఫలము_  Math.floor (number % 10)
 }
 
 
-function getBinaryTime() {
+_విధానము_     getBinaryTime() {
   time = new Date
   hours = time.getHours()
   minutes = time.getMinutes()
@@ -66,7 +66,7 @@ function getBinaryTime() {
 }
 
 
-function drawDot (digit, onColor, offColor, step) {
+_విధానము_     drawDot (digit, onColor, offColor, step) {
   if (digit == 1) {
     రంగు_మార్చు( onColor)
   } else {
@@ -77,7 +77,7 @@ function drawDot (digit, onColor, offColor, step) {
 }
 
 
-function drawNumberDots (digitString, onColor, offColor, spacing) {
+_విధానము_     drawNumberDots (digitString, onColor, offColor, spacing) {
   drawDot( digitString[0], onColor, offColor, spacing)
   drawDot( digitString[1], onColor, offColor, spacing)
   drawDot( digitString[2], onColor, offColor, spacing)
@@ -86,10 +86,10 @@ function drawNumberDots (digitString, onColor, offColor, spacing) {
 }
 
 
-function displayBinaryDots(hSpacing, vSpacing) {
+_విధానము_     displayBinaryDots(hSpacing, vSpacing) {
   bottom = vSpacing * 1.5
   leftSide = -hSpacing * 2.5
-  కలమును_పైకి_ఎత్తు()
+  కుంచికను_పైకి_ఎత్తు()
   స్థానము_మార్చు(leftSide + hSpacing *0, bottom)
   drawNumberDots (hour10, hourColor, offColor, vSpacing)
 
@@ -110,7 +110,7 @@ function displayBinaryDots(hSpacing, vSpacing) {
 }
 
 
-function displayTime() {
+_విధానము_     displayTime() {
   చెరిపి_వేయి()
   కోణము(180)
   spacing = Math.min(గరిష్ఠX(), గరిష్ఠY()) *1.8/6

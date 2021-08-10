@@ -1,8 +1,8 @@
 // Stars and Rhombuses -- tesselation found on a wall paper pattern
 
-function quadRhom( side) {
-  for( var i=0; i<4; i++) {
-    for ( var j=0; j<4; j++) {
+_విధానము_     quadRhom( side) {
+  for( _సర్వత్ర_   i=0; i<4; i++) {
+    for ( _సర్వత్ర_   j=0; j<4; j++) {
       ముందుకు_జరుగు( side)
       కుడి_వైపు_తిరుగు( ang)
       ముందుకు_జరుగు( side)
@@ -16,7 +16,7 @@ function quadRhom( side) {
   }
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
    చుట్టొద్దు()
   కుంచికను_దాచు()
@@ -25,8 +25,8 @@ function ప్రదర్శన() {
   xoffset = 0
   chord = 2* side * Math.cos(degToRad(ang/2))
 
-  for (var fy=గరిష్ఠY(); fy>కనిష్ఠY(); fy=fy - chord) {   
-    for (var fx=కనిష్ఠX(); fx<గరిష్ఠX(); fx=fx + 2*chord) {
+  for (_సర్వత్ర_   fy=గరిష్ఠY(); fy>కనిష్ఠY(); fy=fy - chord) {   
+    for (_సర్వత్ర_   fx=కనిష్ఠX(); fx<గరిష్ఠX(); fx=fx + 2*chord) {
       స్థానము_మార్చు( fx+xoffset, fy)
       కోణము( 90 - ang/2)
       quadRhom( side)

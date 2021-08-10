@@ -10,16 +10,16 @@ the inner single tabs (5).
 Have fun.
 */
 
-function leftTriangle(side) {
-  for (var i=0; i<3; i++) {
+_విధానము_     leftTriangle(side) {
+  for (_సర్వత్ర_   i=0; i<3; i++) {
     ముందుకు_జరుగు(side)
     ఎడమ_వైపు_తిరుగు(120)
   }
 }
 
-function leftTab( side) {
-  var x = కుంచిక.స్థానము.x
-  var y = కుంచిక.స్థానము.y
+_విధానము_     leftTab( side) {
+  _సర్వత్ర_   x = కుంచిక.స్థానము.x
+  _సర్వత్ర_   y = కుంచిక.స్థానము.y
   ఎడమ_వైపు_తిరుగు( 180 - 45)
   ముందుకు_జరుగు( side * .2)
   ఎడమ_వైపు_తిరుగు( 45)
@@ -32,8 +32,8 @@ function leftTab( side) {
 }
 
 
-function rightTriangle(side, tabs) {
-  for (var i=0; i<3; i++) {
+_విధానము_     rightTriangle(side, tabs) {
+  for (_సర్వత్ర_   i=0; i<3; i++) {
     ముందుకు_జరుగు(side)
     if (tabs.includes (""+i)) {
       leftTab(side)
@@ -42,8 +42,8 @@ function rightTriangle(side, tabs) {
   }
 }
 
-function leftPentagon(side) {
-  for (var i=0; i<5; i++) {
+_విధానము_     leftPentagon(side) {
+  for (_సర్వత్ర_   i=0; i<5; i++) {
     ముందుకు_జరుగు(side)
     ఎడమ_వైపు_తిరుగు(72)
     if (i  == 0) {
@@ -63,8 +63,8 @@ function leftPentagon(side) {
   }
 }
 
-function rightPentagon(side) {
-  for (var i=0; i<5; i++) {
+_విధానము_     rightPentagon(side) {
+  for (_సర్వత్ర_   i=0; i<5; i++) {
     ఎడమ_వైపు_తిరుగు(120)
     ముందుకు_జరుగు(side)
     కుడి_వైపు_తిరుగు(120)
@@ -82,7 +82,7 @@ function rightPentagon(side) {
 }
 
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   side = .25 * Math.min( గరిష్ఠX(), గరిష్ఠY())
   స్థానము_మార్చు(-.666 * side, - .333 * side)

@@ -3,9 +3,9 @@
 sSide = 15
 lSide = 2* sSide 
 
-function vRect( sSide, lSide, fColor) {
+_విధానము_     vRect( sSide, lSide, fColor) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<2; i++) {
+  for (_సర్వత్ర_   i=0; i<2; i++) {
     ముందుకు_జరుగు( sSide)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( lSide)
@@ -15,9 +15,9 @@ function vRect( sSide, lSide, fColor) {
   ముందుకు_జరుగు( sSide)
 }
 
-function hRect( sSide, lSide, fColor) {
+_విధానము_     hRect( sSide, lSide, fColor) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<2; i++) {
+  for (_సర్వత్ర_   i=0; i<2; i++) {
     ముందుకు_జరుగు( lSide)
     కుడి_వైపు_తిరుగు(90)
     ముందుకు_జరుగు( sSide)
@@ -27,7 +27,7 @@ function hRect( sSide, lSide, fColor) {
   ముందుకు_జరుగు( lSide)
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   yB = గరిష్ఠY() + sSide
@@ -40,40 +40,40 @@ function ప్రదర్శన() {
   while( కుంచిక.స్థానము.y > కనిష్ఠY()) {
     స్థానము_మార్చు(xB, yB)
     while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
-      కలమును_కింద_పెట్టు()
+      కుంచికను_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
     }
     yB = yB - sSide
 
     స్థానము_మార్చు(xB - lSide/2, yB)
     while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
-      కలమును_కింద_పెట్టు()
+      కుంచికను_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
     }
     yB = yB - sSide
 
     స్థానము_మార్చు(xB - lSide, yB)
     while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
-      కలమును_కింద_పెట్టు()
+      కుంచికను_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
     }
     yB = yB - sSide
 
     స్థానము_మార్చు(xB - 3/2 * lSide, yB)
     while( కుంచిక.స్థానము.x < గరిష్ఠX()) {
-      కలమును_కింద_పెట్టు()
+      కుంచికను_కింద_పెట్టు()
       hRect(sSide, lSide, "darkred")
       vRect(sSide, lSide, "darkred")
-      కలమును_పైకి_ఎత్తు()
+      కుంచికను_పైకి_ఎత్తు()
       ముందుకు_జరుగు( sSide)
     }
     yB = yB - sSide

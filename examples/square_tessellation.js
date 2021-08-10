@@ -2,32 +2,32 @@
 
 colors = ["red", "white", "blue","yellow", "green"]
 
-function squ( side, fColor) {
+_విధానము_     squ( side, fColor) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<4; i++) {
+  for (_సర్వత్ర_   i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     కుడి_వైపు_తిరుగు( 90)
   }
   ఆకారము_ముగించు( fColor)
 }
 
-function squLeft( side, fColor) {
+_విధానము_     squLeft( side, fColor) {
   ఆకారము_ప్రారంభించు()
-  for (var i=0; i<4; i++) {
+  for (_సర్వత్ర_   i=0; i<4; i++) {
     ముందుకు_జరుగు( side)
     ఎడమ_వైపు_తిరుగు( 90)
   }
   ఆకారము_ముగించు( fColor)
 }
 
-// nextColor could be a random function or use less colors
-function nextColor() {
+// nextColor could be a random _విధానము_     or use less colors
+_విధానము_     nextColor() {
   c = colors[ count % colors.length]
   count = count + 1
-  return c
+  _ఫలము_  c
 }
 
-function ప్రదర్శన() {
+_విధానము_     ప్రదర్శన() {
   ఆది_స్థితి()
   count = 0
   rowOffset = s/3
