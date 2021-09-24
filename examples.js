@@ -586,104 +586,104 @@ _విధానము_     ప్రదర్శన() {\n\
 }\n\
 '
 clock ='\
-// Clock, Analog -- draw and animate an analog clock\n\
+// గోడ గడియారము\n\
 \n\
-//GLOBALS\n\
-_సర్వత్ర_   size;\n\
+_సర్వత్ర_   కొలత;\n\
 \n\
-//draw the tick marks around the edge of the clock\n\
-_విధానము_     ticks(x, y, వ్యాసార్థము) {\n\
-   _సర్వత్ర_   tickLen = 7;\n\
-   _సర్వత్ర_   gap = వ్యాసార్థము - tickLen;\n\
+// గడియారము చుట్టూ క్షణముల గీతలు గీయుటకు\n\
+_విధానము_     క్షణముల_గీతలు(x, y, వ్యాసార్థము) {\n\
+   _అత్ర_   గిత_పొడవు = 7;\n\
+   _అత్ర_   ఖాళీ = వ్యాసార్థము - గిత_పొడవు;\n\
    రంగు_మార్చు( నీలము );\n\
    వెడల్పు(1);\n\
-   for (_సర్వత్ర_   theta = 0; theta < 360; theta = theta + 6) {\n\
-      // Thicken hour marks\n\
-      if (theta % 30 != 0) {\n\
-         వెడల్పు(1/130* size);\n\
-      } else {\n\
-         వెడల్పు(3/130* size);\n\
-      }\n\
+   లెక్క_పెడుతూ_ఆవర్తించు( 60, ( కో ) => {\n\
+      _అత్ర_ థీటా = కో * 6;\n\
+      // ప్రతి  ఐదవది దళసరి గా వేయవలెను\n\
+      వెడల్పు( ( ( కో % 5 ) ? 1 : 3)/130* కొలత)\n\
       కుంచికను_పైకి_ఎత్తు();\n\
       స్థానము_మార్చు(0,0);\n\
-      కోణము(theta);\n\
-      ముందుకు_జరుగు(gap);\n\
+      కోణము(థీటా);\n\
+      ముందుకు_జరుగు(ఖాళీ);\n\
       కుంచికను_కింద_పెట్టు();\n\
-      ముందుకు_జరుగు(tickLen);\n\
-   }\n\
+      ముందుకు_జరుగు(గిత_పొడవు);\n\
+   });\n\
+   \n\
 }\n\
 \n\
 \n\
-// draw the hour numbers on the clock face\n\
-_విధానము_     numbers(x, y, వ్యాసార్థము) {\n\
+// గంటలు, నిమిషాలూ సూచించే అంకెలు\n\
+_విధానము_     అంకెలు(x, y, వ్యాసార్థము) {\n\
    కుంచికను_పైకి_ఎత్తు();\n\
-   fontSize = 20/130 * size\n\
-   అక్షరరూపము_స్థాపించు(fontSize+"px sans-serif");\n\
+   _అత్ర_  అక్షర_పరిమాణము = 20/130 * కొలత\n\
+   అక్షరరూపము_స్థాపించు(అక్షర_పరిమాణము+"px sans-serif");\n\
    రంగు_మార్చు("నలుపు");\n\
-   for (_సర్వత్ర_   hour = 1; hour <= 12; hour++) {\n\
+   లెక్క_పెడుతూ_ఆవర్తించు( 12, ( గంట ) =>{\n\
       స్థానము_మార్చు(x,y);\n\
-      కోణము(hour * 30);\n\
+      కోణము(గంట * 30);\n\
       ముందుకు_జరుగు(వ్యాసార్థము); // to center of digit\n\
       కోణము(180);\n\
-      ముందుకు_జరుగు(10/130 * size); // vertical correction to baseline\n\
+      ముందుకు_జరుగు(10/130 * కొలత); // vertical correction to baseline\n\
       కుడి_వైపు_తిరుగు(90);\n\
-      if (hour < 10) {\n\
-        ముందుకు_జరుగు(6/130 * size); // horizontal correction to lower left corner\n\
+      if (గంట < 10) {\n\
+        ముందుకు_జరుగు(6/130 * కొలత); // horizontal correction to lower left corner\n\
       } else {\n\
-        ముందుకు_జరుగు(10/130 * size)\n\
+        ముందుకు_జరుగు(10/130 * కొలత)\n\
       }\n\
       కుడి_వైపు_తిరుగు(180);\n\
-      వ్రాయి(hour);\n\
-   }\n\
+      వ్రాయి(గంట);\n\
+   })\n\
    కుంచికను_కింద_పెట్టు();\n\
 }\n\
 \n\
-// draw one of the clock hands\n\
-_విధానము_     hand (theta, w, length, col) {\n\
-   _సర్వత్ర_   stepSize = 5;\n\
-   _సర్వత్ర_   widthDelta = w / (length / stepSize);\n\
+// చేతులు గీయుటకు\n\
+_విధానము_     చెయ్యి (థీటా, w, పొడవు, రంగు) {\n\
+   _అత్ర_   stepకొలత = 5;\n\
+   _అత్ర_   widthDelta = w / (పొడవు / stepకొలత);\n\
    స్థానము_మార్చు(0, 0);\n\
-   కోణము(theta);\n\
-   రంగు_మార్చు(col);\n\
-   for (_సర్వత్ర_   step = 0; step < length; step = step + stepSize) {\n\
+   కోణము(థీటా);\n\
+   రంగు_మార్చు(రంగు);\n\
+   for (_సర్వత్ర_   step = 0; step < పొడవు; step = step + stepకొలత) \n\
+   // లెక్క_పెడుతూ_ఆవర్తించు( పొడవు, ( అడుగు) => \n\
+   {\n\
       వెడల్పు(w);\n\
-      ముందుకు_జరుగు(stepSize);\n\
+      ముందుకు_జరుగు(stepకొలత);\n\
       w = w - widthDelta;\n\
    }\n\
+   //);\n\
 }\n\
 \n\
-_విధానము_     hands(hours, minutes, seconds) {\n\
-    // draw seconds hand\n\
-    _సర్వత్ర_   secDegreesPerSecond = 6;	// = 360 degrees/60 seconds /minute\n\
-    hand(seconds * secDegreesPerSecond, 4, 100/130 * size, "red");\n\
-    // draw minutes hand \n\
-    _సర్వత్ర_   minDegreePerSecond = 0.1;	// = 360 degrees /3600 seconds /hour\n\
-    _సర్వత్ర_   minutesInSeconds = minutes * 60 + seconds;\n\
-    hand(minutesInSeconds * minDegreePerSecond, 10, 100/130 * size, "blue");\n\
-    // draw hours hand\n\
-    _సర్వత్ర_   hourDegreePerSecond = .1/12;	// = 360 degrees /3600 seconds per hour /12 hours per half day /half day\n\
-    _సర్వత్ర_   hoursInSeconds = ((hours % 12) * 3600) + minutesInSeconds;\n\
-    hand(hoursInSeconds * hourDegreePerSecond, 10, 60/130 * size, "blue");\n\
+_విధానము_     చేతులు(గంటలు, నిమిషములు, క్షణములు) {\n\
+    // క్షణముల చెయ్యి\n\
+    _అత్ర_   secDegreesPerSecond = 6;	// = 360 degrees/60 క్షణములు /minute\n\
+    చెయ్యి(క్షణములు * secDegreesPerSecond, 4, 100/130 * కొలత, "red");\n\
+    // నిమిషముల చెయ్యి \n\
+    _అత్ర_   minDegreePerSecond = 0.1;	// = 360 degrees /3600 క్షణములు /గంట\n\
+    _అత్ర_   నిమిషములుInక్షణములు = నిమిషములు * 60 + క్షణములు;\n\
+    చెయ్యి(నిమిషములుInక్షణములు * minDegreePerSecond, 10, 100/130 * కొలత, "blue");\n\
+    // గంటల చెయ్యి\n\
+    _అత్ర_   గంటDegreePerSecond = .1/12;	// = 360 degrees /3600 క్షణములు per గంట /12 గంటలు per half day /half day\n\
+    _అత్ర_   గంటలుInక్షణములు = ((గంటలు % 12) * 3600) + నిమిషములుInక్షణములు;\n\
+    చెయ్యి(గంటలుInక్షణములు * గంటDegreePerSecond, 10, 60/130 * కొలత, "blue");\n\
 }\n\
 \n\
-// refresh the entire clock\n\
-_విధానము_     clock() {\n\
+// refresh the entire గడియారము\n\
+_విధానము_     గడియారము() {\n\
    చెరిపి_వేయి();\n\
-   size = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
-  numbers(0, 0, 110/130 * size);\n\
+   కొలత = .9 *  Math.min( గరిష్ఠX(), గరిష్ఠY())\n\
+  అంకెలు(0, 0, 110/130 * కొలత);\n\
    రంగు_మార్చు("lightgreen");\n\
    స్థానము_మార్చు(0,0);\n\
-   వెడల్పు(1/130* size)\n\
-   వృత్తము(130/130 * size );\n\
-   ticks(0, 0, 130/130 * size );\n\
-   _సర్వత్ర_   d = new Date();\n\
-   hands(d.getHours(), d.getMinutes(), d.getSeconds());\n\
+   వెడల్పు(1/130* కొలత)\n\
+   వృత్తము(130/130 * కొలత );\n\
+   క్షణముల_గీతలు(0, 0, 130/130 * కొలత );\n\
+   _అత్ర_  సమయము = new Date();\n\
+   చేతులు(సమయము.getHours(), సమయము.getMinutes(), సమయము.getSeconds());\n\
 }\n\
 \n\
 _విధానము_     ప్రదర్శన() {\n\
    కుంచికను_దాచు();\n\
-   // refresh the clock every second\n\
-   ఆడించు(clock,1000);\n\
+   // ప్రతి క్షణము గడియారమును పునరావృతము చేయ వలెను.\n\
+   ఆడించు(గడియారము,1000);\n\
 }\n\
 '
 clock_BCD ='\
