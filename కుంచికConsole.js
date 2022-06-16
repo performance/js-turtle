@@ -112,7 +112,7 @@ function onWindowLoad() {
 
                     if (command !== undefined || command !== "") { // good enough validation??
                         console.log("in it now")
-                        cmd ("ప్రదర్శన()");
+                        cmd ("ಪ್ರದರ್ಶನೆ()");
                     }
                     console.log("passed it")
                     commandChanged()
@@ -435,7 +435,7 @@ function resetClicked() {
  *   None
  *************************************************************************/
 function runClicked() {
-    cmd ("ప్రదర్శన()");
+    cmd ("ಪ್ರದರ್ಶನೆ()");
     commandChanged();
 }
 
@@ -670,13 +670,38 @@ function commandChanged () {
     let commandText = document.getElementById("command").value;
     let codeAreaText = document.getElementById('codeArea').value;
     errorFound = false
-    ఆట_ఆపు()
+    ఆట_ఆపు();
+
+//     const kw_map = {
+//         "_అత్ర_" : "let",
+//        "_సర్వత్ర_" : "var",
+//        "_సర్వదా_" : "const",
+//        "_విధానము_" : "function",
+//        "_ఫలము_" : "return"
+//    };
+
+`_అత్ర_ asdf = 10;
+_సర్వత్ర_ asdf = 10; 
+_సర్వదా_ asdf = 10; 
+_విధానము_ asdf = 10; 
+_ఫలము_ asdf = 10; 
+_ಆತ್ರ_ asdf = 10; 
+_ಸರ್ವತ್ರ_ asdf = 10; 
+_ಸರ್ವದಾ_ asdf = 10; 
+_ವಿಧಾನ_ asdf = 10; 
+_ಫಲ_ asdf = 10; 
+`
 
     const kw_map = {
-         "_అత్ర_" : "let",
-        "_సర్వత్ర_" : "var",
-        "_సర్వదా_" : "const",
-        "_విధానము_" : "function",
+        "_ಆತ್ರ_" : "let",
+        "_ಸರ್ವತ್ರ_" : "var",
+        "_ಸರ್ವದಾ_" : "const",   
+        "_ವಿಧಾನ_" : "function", 
+        "_ಫಲ_" : "return",
+        "_అత్ర_" : "let",           
+        "_సర్వత్ర_" : "var",          
+        "_సర్వదా_" : "const",        
+        "_విధానము_" : "function",    
         "_ఫలము_" : "return"
     };
     try {
@@ -685,8 +710,12 @@ function commandChanged () {
         let replaced = codeAreaText
         Object.entries( kw_map).forEach( ([key,val],i) => {
             const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
+            console.log(" key = ", key, " key_pattern = ", key_pattern, " val = ", val);
             replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
+            console.log( replaced );
         });
+        console.log( codeAreaText )
+        console.log( replaced );
         eval(replaced);
     } catch(e) {
         errorFound = true
@@ -694,9 +723,14 @@ function commandChanged () {
     }
 
     // execute the code in the command box
-    if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
-                         commandText !== "ప్రదర్శన();" ||
-                         demo !== undefined)) {
+    // if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
+    //                      commandText !== "ప్రదర్శన();" ||
+    //                      demo !== undefined)) {
+    if (!errorFound && 
+        ( commandText !== "ప్రదర్శన()" || commandText !== "ప్రదర్శన();" ||
+          commandText !== "ಪ್ರದರ್ಶನೆ()" || commandText !== "ಪ್ರದರ್ಶನೆ();" ||
+          demo !== undefined
+        )) {
     //same as !==ప్రదర్శన() || ==ప్రదర్శన(); && !==undefined
         try {
             console.log("cC cmd: " + commandText + ".")
@@ -794,7 +828,7 @@ function twoDigits(n) {
 // set up the control buttons
 document.getElementById("resetButton").onclick=resetClicked;
 document.getElementById("runButton").onclick=runClicked
-document.getElementById("infoButton").onclick=infoClicked;
+// document.getElementById("infoButton").onclick=infoClicked;
 document.getElementById("body").onresize=fixDragButton;
 document.getElementById("stopButton").onclick=stopClicked;
 document.getElementById("stopButton").hidden=true;
