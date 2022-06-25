@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>కుంచిక : చిత్రలేఖనము</title>
+  <title>ಕುಂಚಿಕ : ಚಿತ್ರಲೇಖನ</title>
   <meta charset="utf-8">
   <link type="text/css" rel="stylesheet" href="కుంచిక.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
@@ -30,8 +30,20 @@
         <div id="leftcolumn">
           <div id="referencewrapper">
             <h4 id="referenceTitle">
-              కుంచిక భాషావలోకనము
-
+              ಕುಂಚಿಕ ಭಾಷಾವಲೋಕನ
+              <!--
+                <button id="referenceClose">
+                  <svg class="fi" viewBox="0 0 64 64">
+                    <line x1="2" y1="2" x2="62" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
+                    <line x1="62" y1="2" x2="2" y2="62" style="stroke:rgb(0,0,0);stroke-width:8" />
+                  </svg>
+                </button>
+              -->
+              <!--
+                add a menu .. sort of a table of contents to jump to contents
+                    <a href="#color">jump to color</a>
+                also roll in the tutorial stuff
+              -->
             </h4>
             <div id="reference" class="verse inputscript-Telugu">
               <ul>
@@ -630,8 +642,18 @@
       </span>
       <div id="midcolumncontainer" class="verse inputscript-Telugu">
         <div id="midcolumn">
-          <h4 id=canvastitle> చిత్రపటము
+          <h4 id=canvastitle> ಚಿತ್ರಪಟ
+            <!-- <button id="infoButton">i</button>
+            <span class='help_text' id='infoButton_help_text'>
+              <p>
+                The <strong>i</strong> button toggles the rollover help text.
+              </p>
+            </span> -->
           </h4>
+          <!--
+          <canvas2 id="కుంచికcanvas2" width="300" height="300"></canvas2>
+          <canvas2 id="imagecanvas2" width="300" height="300" style="display:none"></canvas2>
+-->
           <div id="canvaswrapper">
             <canvas id="కుంచికcanvas"></canvas>
             <canvas id="imagecanvas"></canvas>
@@ -710,33 +732,110 @@
       <div id="rightcolumncontainer">
         <div id="rightcolumn">
           <div id="examplewrapper" class="verse inputscript-Telugu" >
-            <h4> 
+            <h4>
               <span id="codeAreaName"> విధి లేఖ </span> 
               <select id="kuncikaBhaShaa">
-                <option selected value="telugu">తెలుగు</option>
-                <option value="kannada"> ಕನ್ನಡ </option>
+                <option value="telugu">తెలుగు</option>
+                <option selected value="kannada"> ಕನ್ನಡ </option>
                 <option value="samskrutam">संस्कृतम्</option>
                 <option value="english">English</option>
               </select>
               <!-- need to change name Examples to Code Area -->
               <!-- The select options are populated with a tool, DO NOT EDIT. -->
               <select id=examples>
-                <option id="selected" selected value="example"        >  ఉదాహరణములు        </option>
-                <option id="ఇష్టికా_ప్రస్తారము"      value="ఇష్టికా_ప్రస్తారము"    >  ఇష్టికా ప్రస్తారము        </option>
-                <option id="చేప"               value="చేప"             >  చేప                 </option>
-                <option id="అండాకారము"        value="అండాకారము"        > అండాకారము           </option>
-                <option id="clock"            value="clock"            > Analog Clock        </option>
-                <!-- <option id="conway_fractal"   value="conway_fractal"   > Conway Fractal      </option>
-                <option id="example"          value="example"          > Example             </option> -->
-                <!-- <option id="eye_simulator"    value="eye_simulator"    > Eye Simulator       </option>
-                <option id="graphitti"        value="graphitti"        > Graphitti           </option>
-                <option id="heart"            value="heart"            > Heart               </option>
-                <option id="hilbert_curve"    value="hilbert_curve"    > Hilbert  Curve      </option>
-                <option id="life"             value="life"             > Life                </option>
-                <option id="random_stick_men" value="random_stick_men" > Random Stick Men    </option>
-                <option id="star_burst"       value="star_burst"       > Starburst           </option>
-                <option id="triangle_tunnel"  value="triangle_tunnel"  > Triangle Tunnel     </option>
-                <option id="US_flag"          value="US_flag"          > US Flag             </option> -->
+                <option selected value=example> ఉదాహరణములు </option>
+                <option value="arc_test">Arc and Curve Test</option>
+                <option value="basket_weave_tessellation">Basket Weave Tessellation</option>
+                <option value="bounce">Bouncing Rectangles</option>
+                <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా ప్రస్తారము</option>
+                <option value="చేప">చేప</option>
+                <option value="అండాకారము">అండాకారము</option>
+                <option value="cafe_wall_illusion">Cafe Wall Illusion</option>
+                <option value="circle_eye2">Circle Eye2</option>
+                <option value="circle_eye">Circle Eye</option>
+                <option value="clock_BCD">Clock, BCD</option>
+                <option value="clock_digital">Clock, Digital</option>
+                <option value="clock">Clock, Analog</option>
+                <option value="collidescape">Collidescape (tm)</option>
+                <option value="color_changing_dots">Color Changing Dots</option>
+                <option value="compass_rose2">Compass Rose 2</option>
+                <option value="compass_rose">Compass Rose</option>
+                <option value="compass_rose_quilt">Compass Rose Quilt</option>
+                <option value="connected_points">Connected Points</option>
+                <option value="conway_fractal">Conway Fractal</option>
+                <option value="conway_pinwheel">Conway Pinwheel</option>
+                <option value="coordinates">Coordinates</option>
+                <option value="dividing_circle">Dividing a Circle</option>
+                <option value="dodecahedron_graph">Dodecahedron Graph</option>
+                <option value="dragon_curve">Dragon Curve</option>
+                <option value="example">Example</option>
+                <option value="eye_simulator">Eye Simulator</option>
+                <option value="fibinoucci">Fibanochi sequence</option>
+                <option value="gosper_curve">Gosper Curve</option>
+                <option value="graphitti">Graphitti</option>
+                <option value="heart">Heart</option>
+                <option value="herring_bone_tessellation">Herring Bone Tessellation</option>
+                <option value="hexapentakis_truncated_icosahedron_asymmetric_full">
+                  Hexapentakis-Truncated-Icosahedron-Asymmetric full</option>
+                <option value="hexapentakis_truncated_icosahedron_symmetric_full">Hexapentakis-Truncated-Icosahedron
+                  Symmetric full</option>
+                <option value="hexapentakis_truncated_icosahedron_symmetric_half">Hexapentakis Truncated Icosahedron
+                  half</option>
+                <option value="hex_tessellation">Hexagon Tessellation</option>
+                <option value="hilbert_curve">Hilbert Curve</option>
+                <option value="hirschhorn_tiles">Hircshhorn Tiles</option>
+                <option value="home_plate_tessellation">Home Plate Tessellation</option>
+                <option value="icosahedron_graph">Icosahedron Graph</option>
+                <option value="intersection_simulator">Intersection Simulator</option>
+                <option value="jumping_jack">Jumping Jack</option>
+                <option value="koch_line">Koch Lines</option>
+                <option value="koch_snowflake2">Koch Snowflake 2</option>
+                <option value="koch_snowflake">Koch Snowflakes</option>
+                <option value="koch_triangles_stacked">Koch Snowflakes, Stacked</option>
+                <option value="life">Life</option>
+                <option value="miura_origami">Miura Origami</option>
+                <option value="mountain_tessellation">Mountain Tessellation</option>
+                <option value="naifeh_ajlun">Naifah Ajlun</option>
+                <option value="naifeh_cyrene">Naifah Cyrene</option>
+                <option value="naifeh_jeresh">Naifah Jeresh</option>
+                <option value="naifeh_mamluk">Naifeh Mamluk</option>
+                <option value="naifeh_mizen6">Naifeh Mizen Six</option>
+                <option value="naifeh_mizen">Naifeh Mizen Simple</option>
+                <option value="naifeh_petra">Naifeh Petra</option>
+                <option value="naifeh_saida_inverse">Naifeh Saida Inverse</option>
+                <option value="naifeh_saida">Naifeh Saida</option>
+                <option value="nested_hexagons">Nested Hexagons</option>
+                <option value="nested_squares">Nested Squares</option>
+                <option value="pentahex">Pentahex</option>
+                <option value="polygon">Polygon</option>
+                <option value="random_stars">Random Stars</option>
+                <option value="random_stick_men">Random Stick Men</option>
+                <option value="rhombic_star_tessellation">Rhombic Star Tessellation</option>
+                <option value="rice_penta_tessellation_1">Rice Penta Tessellation 1</option>
+                <option value="serendipitous">Serendipitous Circles</option>
+                <option value="sierpinski_curve">Sierpinski Curve</option>
+                <option value="sierpinski_triangle">Sierpinski Triangle</option>
+                <option value="simple_story">Simple Story</option>
+                <option value="sliding_block">Sliding Block Puzzle</option>
+                <option value="snowman">Snowman</option>
+                <option value="snub_icosidodecahedron">Snub Icosidodecahedron Half</option>
+                <option value="spinning_squares">Spinning Squares</option>
+                <option value="spiral">Spiral</option>
+                <option value="square_lines">Square Lines</option>
+                <option value="square_series">Square Series</option>
+                <option value="square_tessellation">Square Tessellation</option>
+                <option value="squiggle">Squiggle</option>
+                <option value="stamps">Stamps</option>
+                <option value="star_burst">Starburst</option>
+                <option value="star">Star</option>
+                <option value="stars_and_rhombuses">Stars and Rhombuses</option>
+                <option value="tree">Tree Symmetrical</option>
+                <option value="triangle_tessellation">Triangle Tesselation</option>
+                <option value="triangle_tunnel">Triangle Tunnel</option>
+                <option value="two_square_tessellation">Two Square Tessellation</option>
+                <option value="US_flag">US Flag</option>
+                <option value="wang_tiles">Wang Tiles</option>
+                <option value="waves">Waves</option>
               </select>
               <!-- The above select options are populated with a tool, DO NOT EDIT. -->
               <span class='left_help_text' id='examples_help_text'>
@@ -750,28 +849,28 @@
               </span>
             </h4>
             <textarea id="codeArea">
-/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */
+              /* ఇಲ್ಲಿ ನಿಮ್ಮ ಪ್ರಕ್ರಿಯೆಗಳು ಬರೆಬಹುದು. ಉದಾಹರಣಕ್ಕೆ:    */
 
-సమ_చతురస్రము = ( భుజము ) => {
-  ఆవర్తించు(4, () => {
-    ముందుకు_జరుగు( భుజము );
-    కుడి_వైపు_తిరుగు(90);
-  });
-}
-
-ప్రదర్శన = () => {
-  కుంచికను_దాచు();
-  రంగు_మార్చు( నీలము );
-  _అత్ర_ భుజము = 100;
-  _అత్ర_ రంగు_సంఖ్య = 0;
-  యావత్_పరిక్రమ( () => భుజము > 0, ()=> {
-    సమ_చతురస్రము( భుజము );
-    కుడి_వైపు_తిరుగు(36);
-    భుజము = భుజము - 10;
-    రంగు_సంఖ్య = ( రంగు_సంఖ్య + 1 ) % 16;
-    రంగు_మార్చు( రంగు_సంఖ్య );
-  } );
-}
+              ಸಮ_ಚತುರ್ಭುಜ = ( ಭುಜ ) => {
+                ಆವರ್ತಿಸಿ(4, () => {
+                  ಮುಂದೆ_ಹೋಗಿ( ಭುಜ );
+                  ಬಲಕ್ಕೆ_ತಿರುಗಿ( 90 );
+                });
+              }
+              
+              ಪ್ರದರ್ಶನೆ = () => {
+                ಕುಂಚಿಕವನ್ನು_ಮರೆಮಾಡಿ();
+                ವರ್ಣ_ಸ್ಥಾಪಿಸಿ( 1 );
+                _ಆತ್ರ_ ಭುಜ = 100;
+                _ಆತ್ರ_ ವರ್ಣ_ಸಂಖ್ಯೆ = 0;
+                ಯಾವತ್_ಪರಿಕ್ರಮ( () => ಭುಜ > 0, () => {
+                  ಸಮ_ಚತುರ್ಭುಜ( ಭುಜ );
+                  ಬಲಕ್ಕೆ_ತಿರುಗಿ( 10 );
+                  ಭುಜ = ಭುಜ - 5;
+                  ವರ್ಣ_ಸಂಖ್ಯೆ = ( ವರ್ಣ_ಸಂಖ್ಯೆ + 1 ) %  16
+                  ವರ್ಣ_ಬದಿಲಿಸಿ (ವರ್ಣ_ಸಂಖ್ಯೆ );
+                } );
+              }
          </textarea> <!-- codeArea -->
             <span class='left_help_text' id='codeArea_help_text'>
               <p>
@@ -869,14 +968,13 @@
               The <strong>Save</strong> text area accepts the name of a JavaScript file name to be saved.
            </p>
          </span>
-
+-->
               <button id="clearButton">లేఖ ను చెరుపు</button>
               <span class='left_help_text' id='clearButton_help_text'>
                 <p>
                   The <strong>లేఖ ను చెరుపు</strong> button clears the code text area to allow entry of new programs.
                 </p>
               </span>
-              -->
             </div> <!-- codebuttons -->
           </div> <!-- examplewrapper -->
         </div> <!-- rightcolumn -->

@@ -45,6 +45,8 @@ if (window.addEventListener) {
 function onWindowLoad() {
     fixDragButton()
     // check if an example was requested in the URL
+    let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;
+    const ప్రదర్శన_విధానము= ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
     let queryString = window.location.search; // was "?..." specified
     if (queryString != undefined && queryString != "") {
         let exampleValue = ""
@@ -112,7 +114,7 @@ function onWindowLoad() {
 
                     if (command !== undefined || command !== "") { // good enough validation??
                         console.log("in it now")
-                        cmd ("ప్రదర్శన()");
+                        cmd (ప్రదర్శన_విధానము);
                     }
                     console.log("passed it")
                     commandChanged()
@@ -422,6 +424,9 @@ function stopClicked() {
  *   None
  *************************************************************************/
 function resetClicked() {
+    let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;
+    const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
+    cmd (ప్రదర్శన_విధానము); 
     ఆది_స్థితి()
 }
 
@@ -435,7 +440,9 @@ function resetClicked() {
  *   None
  *************************************************************************/
 function runClicked() {
-    cmd ("ప్రదర్శన()");
+    let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;
+    const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
+    cmd (ప్రదర్శన_విధానము); 
     commandChanged();
 }
 
@@ -594,8 +601,8 @@ for (let i=0; i< colorCodeElements.length; i++) {
 
 // load the example code when the corresponding demo menu item is clicked
 document.getElementById("examples").onchange = examplesChanged;
-
-document.getElementById("command").onchange=commandChanged;
+document.getElementById("kuncikaBhaShaa").onchange = languageChanged;
+document.getElementById("command").onchange = commandChanged;
 
 /*
 --
@@ -620,6 +627,155 @@ examples
 kirk
 
 */
+
+function ప్రదర్శన_విధానము_పేరు( కుంచికభాషా ) {
+    let demo_name = "ప్రదర్శన()";
+    switch (కుంచికభాషా) {
+        case "telugu":
+            demo_name = "ప్రదర్శన()";
+            break;
+        case "kannada":
+            demo_name = "ಪ್ರದರ್ಶನೆ()";
+            break;    
+        case "samskrutam":
+            demo_name = "प्रदर्शन()";
+            break;
+        case "english":
+            demo_name = "demo()";
+            break;            
+        default:
+            demo_name = "ప్రదర్శన()";
+            break;
+    }
+    return demo_name;
+}
+
+const telugu_labels= {
+    'referenceTitle' : "కుంచిక భాషావలోకనము",
+    'canvastitle' : "చిత్రపటము",
+    'codeAreaName' : "విధి లేఖ",
+    'resetButton' : "ఆది స్థితి",
+    'runButton' : "ఆడించు",
+    'downloadFilename' : "కుంచిక_చిత్రము",
+    'examples' : `<option selected value="చతుర్భుజము">ఉదాహరణములు</option>
+                    <option value="చతుర్భుజము">చతుర్భుజము</option>
+                    <option value="చేప">చేప</option>
+                    <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
+                    <option value="అండాకారము">అండాకారము</option>
+                    `
+};
+
+const kannada_labels= {
+    'referenceTitle' : "ಕುಂಚಿಕ ಭಾಷಾವಲೋಕನ",
+    'canvastitle' : "ಚಿತ್ರಪಟ",
+    'codeAreaName' : "ವಿಧಿ ಲೇಖೆ",
+    'resetButton' : "ಆದಿ ಸ್ಥಿತಿ",
+    'runButton' : "ಆಡಿಸಿ",
+    'downloadFilename' : "ಕುಂಚಿಕೆದ_ಚಿತ್ರ",
+    'examples' : `<option selected value="ಚತುರ್ಭುಜ">ಉದಾಹರಣೆಗಳು</option>
+    <option value="ಚತುರ್ಭುಜ">ಚತುರ್ಭುಜ</option>`
+};
+
+const samskrutam_labels= {
+    'referenceTitle' : "कुंचिक भाषावलोकनम्",
+    'canvastitle' : "चित्रपटम्",
+    'codeAreaName' : "विधि लेख",
+    'resetButton' : "आदि स्थिति",
+    'runButton' : "चालय",
+    'downloadFilename' : "कुंचिकाया:_चित्रम्",
+    'examples' : `<option selected value=चतुर्भुजः>उदाहरणानि</option>
+    <option value="चतुर्भुजः">चतुर्भुजः</option>`
+};
+
+const english_labels= {
+    'referenceTitle' : "Kuncika language overview",
+    'canvastitle' : "Canvas",
+    'codeAreaName' : "Code",
+    'resetButton' : "Initial State",
+    'runButton' : "Run the code",
+    'downloadFilename' : "Kuncika_picture",
+    'examples' : `<option selected value=square>Examples</option>
+    <option value=square>Square</option>`
+};
+
+const localized_labels = {
+    'telugu' : telugu_labels,
+    'kannada' : kannada_labels,
+    'samskrutam' : samskrutam_labels,
+    'english' : english_labels
+};
+
+// const localized_example_options = {
+//     'telugu' : `<option selected value="చతుర్భుజము">ఉదాహరణములు</option>
+//                 <option value="చతుర్భుజము">చతుర్భుజము</option>
+//                 <option value="చేప">చేప</option>
+//                 <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
+//                 <option value="అండాకారము">అండాకారము</option>
+//                 `,
+//     'kannada' : `<option selected value="ಚತುರ್ಭುಜ">ಉದಾಹರಣೆಗಳು</option>
+//     <option value="ಚತುರ್ಭುಜ">ಚತುರ್ಭುಜ</option>`,
+//     'samskrutam' : `<option selected value=चतुर्भुजः>उदाहरणानि</option>
+//     <option value="चतुर्भुजः">चतुर्भुजः</option>`,
+//     'english' : `<option selected value=square>Examples</option>
+//                     <option value=square>Square</option>`
+// };
+
+
+/*************************************************************************
+ * languageChanged -- handler for when the Kuncika bhaSha select changed
+ *
+ * arguments:
+ *   None
+ *
+ * returns:
+ *   None
+ *************************************************************************/
+ function languageChanged () {
+    let codeArea = document.getElementById('codeArea')
+    let examples = document.getElementById('examples')
+    // get selected language
+    let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;
+    const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
+    console.log( కుంచికభాషా, ప్రదర్శన_విధానము );
+    cmd (ప్రదర్శన_విధానము); 
+    //  Stop currently playing example/ code.
+    ఆట_ఆపు();
+    ఆది_స్థితి();
+    //  change all visible labels to that language
+
+    const language_specific_labels = localized_labels[కుంచికభాషా]
+    for (const key in language_specific_labels) {
+        if (Object.hasOwnProperty.call(language_specific_labels, key)) {
+            const local_label = language_specific_labels[key];
+            let element = document.getElementById(key);
+            if ( key === `downloadFilename` ) {
+                element.placeholder = `${local_label}`;
+            } else {
+                element.innerHTML = `${local_label}`
+            }
+            console.log( కుంచికభాషా, ' :: ', key , " => ", local_label);
+        }
+    }
+    
+
+    // TODO(sdurbha): 
+    examplesChanged ();
+
+    //  change visible example to that language.
+    //  Change documentation to the selected language.
+
+}
+
+// eye simulator
+// fractals
+// game of life
+// analog clock
+// Graphitti
+// Heart
+// Hilbert curve
+// Random Stick Men
+// Startburst
+// Triangle Tunnel
 
 
 //**************************************
@@ -647,15 +803,16 @@ function examplesChanged () {
     ఆట_ఆపు()
     let codeArea = document.getElementById('codeArea')
     let examples = document.getElementById('examples')
+    let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;
     try {
         codeArea.value = eval(examples.value);
     } catch (e) {
         showError(e)
     }
-    cmd ("ప్రదర్శన()");
+    const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
+    cmd (ప్రదర్శన_విధానము); 
     commandChanged()
 }
-
 
 /*************************************************************************
  * commandChanged -- handler for when the command box is changed
@@ -669,15 +826,27 @@ function examplesChanged () {
 function commandChanged () {
     let commandText = document.getElementById("command").value;
     let codeAreaText = document.getElementById('codeArea').value;
+    let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;  
+    const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
     errorFound = false
-    ఆట_ఆపు()
+    ఆట_ఆపు();
 
     const kw_map = {
-         "_అత్ర_" : "let",
-        "_సర్వత్ర_" : "var",
-        "_సర్వదా_" : "const",
-        "_విధానము_" : "function",
-        "_ఫలము_" : "return"
+        "_ಆತ್ರ_" : "let",
+        "_ಸರ್ವತ್ರ_" : "var",
+        "_ಸರ್ವದಾ_" : "const",   
+        "_ವಿಧಾನ_" : "function", 
+        "_ಫಲ_" : "return",
+        "_అత్ర_" : "let",           
+        "_సర్వత్ర_" : "var",          
+        "_సర్వదా_" : "const",        
+        "_విధానము_" : "function",    
+        "_ఫలము_" : "return",
+        "_अत्र_" : "let",           
+        "_सर्वत्र_" : "var",          
+        "_सर्वदा_" : "const",        
+        "_विधानम्_" : "function",    
+        "_फलम्_" : "return"        
     };
     try {
         // execute any code in the codeArea box
@@ -685,8 +854,12 @@ function commandChanged () {
         let replaced = codeAreaText
         Object.entries( kw_map).forEach( ([key,val],i) => {
             const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
+            console.log(" key = ", key, " key_pattern = ", key_pattern, " val = ", val);
             replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
+            console.log( replaced );
         });
+        console.log( codeAreaText )
+        console.log( replaced );
         eval(replaced);
     } catch(e) {
         errorFound = true
@@ -694,10 +867,14 @@ function commandChanged () {
     }
 
     // execute the code in the command box
-    if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
-                         commandText !== "ప్రదర్శన();" ||
-                         demo !== undefined)) {
-    //same as !==ప్రదర్శన() || ==ప్రదర్శన(); && !==undefined
+    // if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
+    //                      commandText !== "ప్రదర్శన();" ||
+    //                      demo !== undefined)) {
+
+    if (!errorFound && 
+        ( commandText !== ప్రదర్శన_విధానము|| commandText !== ప్రదర్శన_విధానము+ ";" ||
+          demo !== undefined
+        )) {
         try {
             console.log("cC cmd: " + commandText + ".")
             let replaced = commandText
@@ -749,7 +926,8 @@ function showError(e) {
     రంగు_మార్చు( ఎరుపు );
     అక్షరరూపము_స్థాపించు (height + "pt bold Helvetica, sans-serif")
     వ్రాయి(e.name + ": " + e.message);
-    console.log(e.name + ": " + e.message);
+    console.log(e.name + ": " + e.message );
+    console.log( e );
     if (e.filename !== undefined) {
 
         // చెరిపి_వేయి the line for the file message
@@ -794,7 +972,7 @@ function twoDigits(n) {
 // set up the control buttons
 document.getElementById("resetButton").onclick=resetClicked;
 document.getElementById("runButton").onclick=runClicked
-document.getElementById("infoButton").onclick=infoClicked;
+// document.getElementById("infoButton").onclick=infoClicked;
 document.getElementById("body").onresize=fixDragButton;
 document.getElementById("stopButton").onclick=stopClicked;
 document.getElementById("stopButton").hidden=true;
@@ -853,28 +1031,28 @@ let bottomY = (window.innerHeight // global for lowest Y on page for tool tip
       || document.body.clientHeight) // variations for cross browser support
       - 50; // bottom margin in pixels
 
-for (let i=0; i < mouseOverElementIds.length; i++) {
-    element = document.getElementById(mouseOverElementIds[i]);
-    element.onmouseenter = function (event) {
-        let tooltip = document.getElementById(this.id + "_help_text");
-        //console.log ( "hamburger: " + mouseOverElementIds[i]) + tooltip.innerHTML;
-        onHelpEnter(tooltip);
-        if (event.clientY < bottomY) {
-            tooltip.style.top = event.clientY + "px";
-        } else {
-            tooltip.style.top = bottomY + "px";
-        }
-        if (this.id === "examples" || this.id === "codeArea") { // do on left
-            tooltip.style.right = window.innerWidth - event.clientX + "px";
-        } else { // do on the right side
-            tooltip.style.left = event.clientX + "px";
-        }
-    }
-    element.onmouseleave = function () {
-        let tooltip = document.getElementById(this.id + "_help_text");
-        onHelpExit(tooltip);
-    }
-}
+// for (let i=0; i < mouseOverElementIds.length; i++) {
+//     element = document.getElementById(mouseOverElementIds[i]);
+//     element.onmouseenter = function (event) {
+//         let tooltip = document.getElementById(this.id + "_help_text");
+//         //console.log ( "hamburger: " + mouseOverElementIds[i]) + tooltip.innerHTML;
+//         onHelpEnter(tooltip);
+//         if (event.clientY < bottomY) {
+//             tooltip.style.top = event.clientY + "px";
+//         } else {
+//             tooltip.style.top = bottomY + "px";
+//         }
+//         if (this.id === "examples" || this.id === "codeArea") { // do on left
+//             tooltip.style.right = window.innerWidth - event.clientX + "px";
+//         } else { // do on the right side
+//             tooltip.style.left = event.clientX + "px";
+//         }
+//     }
+//     element.onmouseleave = function () {
+//         let tooltip = document.getElementById(this.id + "_help_text");
+//         onHelpExit(tooltip);
+//     }
+// }
 
 
 /*************************************************************************
