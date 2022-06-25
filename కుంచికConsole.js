@@ -602,7 +602,7 @@ for (let i=0; i< colorCodeElements.length; i++) {
 // load the example code when the corresponding demo menu item is clicked
 document.getElementById("examples").onchange = examplesChanged;
 document.getElementById("kuncikaBhaShaa").onchange = languageChanged;
-document.getElementById("command").onchange=commandChanged;
+document.getElementById("command").onchange = commandChanged;
 
 /*
 --
@@ -650,6 +650,76 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
     return demo_name;
 }
 
+const telugu_labels= {
+    'referenceTitle' : "కుంచిక భాషావలోకనము",
+    'canvastitle' : "చిత్రపటము",
+    'codeAreaName' : "విధి లేఖ",
+    'resetButton' : "ఆది స్థితి",
+    'runButton' : "ఆడించు",
+    'downloadFilename' : "కుంచిక_చిత్రము",
+    'examples' : `<option selected value="చతుర్భుజము">ఉదాహరణములు</option>
+                    <option value="చతుర్భుజము">చతుర్భుజము</option>
+                    <option value="చేప">చేప</option>
+                    <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
+                    <option value="అండాకారము">అండాకారము</option>
+                    `
+};
+
+const kannada_labels= {
+    'referenceTitle' : "ಕುಂಚಿಕ ಭಾಷಾವಲೋಕನ",
+    'canvastitle' : "ಚಿತ್ರಪಟ",
+    'codeAreaName' : "ವಿಧಿ ಲೇಖೆ",
+    'resetButton' : "ಆದಿ ಸ್ಥಿತಿ",
+    'runButton' : "ಆಡಿಸಿ",
+    'downloadFilename' : "ಕುಂಚಿಕೆದ_ಚಿತ್ರ",
+    'examples' : `<option selected value="ಚತುರ್ಭುಜ">ಉದಾಹರಣೆಗಳು</option>
+    <option value="ಚತುರ್ಭುಜ">ಚತುರ್ಭುಜ</option>`
+};
+
+const samskrutam_labels= {
+    'referenceTitle' : "कुंचिक भाषावलोकनम्",
+    'canvastitle' : "चित्रपटम्",
+    'codeAreaName' : "विधि लेख",
+    'resetButton' : "आदि स्थिति",
+    'runButton' : "चालय",
+    'downloadFilename' : "कुंचिकाया:_चित्रम्",
+    'examples' : `<option selected value=चतुर्भुजः>उदाहरणानि</option>
+    <option value="चतुर्भुजः">चतुर्भुजः</option>`
+};
+
+const english_labels= {
+    'referenceTitle' : "Kuncika language overview",
+    'canvastitle' : "Canvas",
+    'codeAreaName' : "Code",
+    'resetButton' : "Initial State",
+    'runButton' : "Run the code",
+    'downloadFilename' : "Kuncika_picture",
+    'examples' : `<option selected value=square>Examples</option>
+    <option value=square>Square</option>`
+};
+
+const localized_labels = {
+    'telugu' : telugu_labels,
+    'kannada' : kannada_labels,
+    'samskrutam' : samskrutam_labels,
+    'english' : english_labels
+};
+
+// const localized_example_options = {
+//     'telugu' : `<option selected value="చతుర్భుజము">ఉదాహరణములు</option>
+//                 <option value="చతుర్భుజము">చతుర్భుజము</option>
+//                 <option value="చేప">చేప</option>
+//                 <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
+//                 <option value="అండాకారము">అండాకారము</option>
+//                 `,
+//     'kannada' : `<option selected value="ಚತುರ್ಭುಜ">ಉದಾಹರಣೆಗಳು</option>
+//     <option value="ಚತುರ್ಭುಜ">ಚತುರ್ಭುಜ</option>`,
+//     'samskrutam' : `<option selected value=चतुर्भुजः>उदाहरणानि</option>
+//     <option value="चतुर्भुजः">चतुर्भुजः</option>`,
+//     'english' : `<option selected value=square>Examples</option>
+//                     <option value=square>Square</option>`
+// };
+
 
 /*************************************************************************
  * languageChanged -- handler for when the Kuncika bhaSha select changed
@@ -673,20 +743,39 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
     ఆది_స్థితి();
     //  change all visible labels to that language
 
+    const language_specific_labels = localized_labels[కుంచికభాషా]
+    for (const key in language_specific_labels) {
+        if (Object.hasOwnProperty.call(language_specific_labels, key)) {
+            const local_label = language_specific_labels[key];
+            let element = document.getElementById(key);
+            if ( key === `downloadFilename` ) {
+                element.placeholder = `${local_label}`;
+            } else {
+                element.innerHTML = `${local_label}`
+            }
+            console.log( కుంచికభాషా, ' :: ', key , " => ", local_label);
+        }
+    }
+    
+
     // TODO(sdurbha): 
-    //  change example options to that language
+    examplesChanged ();
+
     //  change visible example to that language.
     //  Change documentation to the selected language.
 
 }
 
-//eye simulator
+// eye simulator
 // fractals
 // game of life
 // analog clock
 // Graphitti
 // Heart
 // Hilbert curve
+// Random Stick Men
+// Startburst
+// Triangle Tunnel
 
 
 //**************************************
