@@ -832,7 +832,7 @@ function commandChanged () {
     ఆట_ఆపు();
 
     const kw_map = {
-        "_ಆತ್ರ_" : "let",
+        "_ಅತ್ರ_" : "let",
         "_ಸರ್ವತ್ರ_" : "var",
         "_ಸರ್ವದಾ_" : "const",   
         "_ವಿಧಾನ_" : "function", 
@@ -981,9 +981,8 @@ document.getElementById("downloadButton").onclick=downloadClicked;
 document.getElementById("uploadButton").onclick= function () {
     document.getElementById("uploadFile").click();
 };
-document.getElementById("clearButton").onclick=clearClicked;
-//document.getElementById("saveCanvasButton").onclick=saveCanvasClicked;
-
+// document.getElementById("clearButton").onclick=clearClicked;
+document.getElementById("saveCanvasButton").onclick=saveCanvasClicked;
 saveCanvasLink = document.getElementById("saveCanvasButton");
 saveCanvasLink.addEventListener('click', function(ev) {
     saveCanvasLink.href = imagecanvas.toDataURL();
