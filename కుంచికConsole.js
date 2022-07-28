@@ -504,7 +504,6 @@ function downloadClicked(e) {
  *   false to prevent further processing
  *************************************************************************/
 function svgDownloadClicked(e) {
-/*
     e.preventDefault();
     svgClose();
     let BB = get_blob();
@@ -514,7 +513,6 @@ function svgDownloadClicked(e) {
         )
         , (downloadFilename.value || downloadFilename.placeholder) + ".svg"
     );
-*/
     return false;
 }
 
@@ -832,11 +830,12 @@ function commandChanged () {
     ఆట_ఆపు();
 
     const kw_map = {
-        "_ಅತ್ರ_" : "let",
+        "_ಇಲ್ಲಿ_" : "let",
         "_ಸರ್ವತ್ರ_" : "var",
         "_ಸರ್ವದಾ_" : "const",   
         "_ವಿಧಾನ_" : "function", 
         "_ಫಲ_" : "return",
+        "_ఇక్కడ_" : "let",  
         "_అత్ర_" : "let",           
         "_సర్వత్ర_" : "var",          
         "_సర్వదా_" : "const",        
@@ -977,7 +976,7 @@ document.getElementById("body").onresize=fixDragButton;
 document.getElementById("stopButton").onclick=stopClicked;
 document.getElementById("stopButton").hidden=true;
 document.getElementById("downloadButton").onclick=downloadClicked;
-// document.getElementById("saveSVG").onclick=svgDownloadClicked;
+document.getElementById("saveSVG").onclick=svgDownloadClicked;
 document.getElementById("uploadButton").onclick= function () {
     document.getElementById("uploadFile").click();
 };
