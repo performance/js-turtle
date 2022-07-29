@@ -655,7 +655,7 @@ const telugu_labels= {
     'resetButton' : "ఆది స్థితి",
     'runButton' : "ఆడించు",
     'downloadFilename' : "కుంచిక_చిత్రము",
-    'examples' : `<option selected value="చతుర్భుజము">ఉదాహరణములు</option>
+    'examples' : `<option selected value="రంగవల్లీ">ఉదాహరణములు</option>
                     <option value="చతుర్భుజము">చతుర్భుజము</option>
                     <option value="చేప">చేప</option>
                     <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
