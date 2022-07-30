@@ -661,6 +661,7 @@ const telugu_labels= {
                     <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
                     <option value="అండాకారము">అండాకారము</option>
                     <option value="గడియారము">గడియారము</option>
+                    <option value="హిమరేకులు">హిమరేకులు</option>
                     <option value="రంగవల్లీ">రంగవల్లీ</option>
                     `
 };

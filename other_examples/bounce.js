@@ -31,23 +31,23 @@ rain = (drops, n) => {
       // access each drop object
       _అత్ర_ d = drops[i]; // access each drop object and react with it
       // if the drop hits a wall, reverse its motion direction (velocity)
-      యది_చేత్_అన్యథ ( () => (d.y < కనిష్ఠ_Y),
+      యది_తర్హి_అన్యథా ( () => (d.y < కనిష్ఠ_Y),
          () => {
             d.velocityY = -d.velocityY;
          },
          ()=>
-         యది_చేత్( () => (d.y + d.size > గరిష్ఠ_Y && d.velocityY > 0), 
+         యది_తర్హి( () => (d.y + d.size > గరిష్ఠ_Y && d.velocityY > 0), 
             () => {
                d.velocityY = -d.velocityY;
             }
          )  
       )
-      యది_చేత్_అన్యథ ( () => (d.x - d.width/2 < కనిష్ఠ_X),
+      యది_తర్హి_అన్యథా ( () => (d.x - d.width/2 < కనిష్ఠ_X),
          () => {
             d.velocityX = -d.velocityX;
          },
 
-         ()=> యది_చేత్ ( () => (d.x + d.width/2 > గరిష్ఠ_X),
+         ()=> యది_తర్హి ( () => (d.x + d.width/2 > గరిష్ఠ_X),
             () => {
                d.velocityX = -d.velocityX;
             }
