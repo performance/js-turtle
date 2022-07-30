@@ -684,8 +684,9 @@ const samskrutam_labels= {
     'resetButton' : "आदि स्थिति",
     'runButton' : "चालय",
     'downloadFilename' : "कुंचिकाया:_चित्रम्",
-    'examples' : `<option selected value=चतुर्भुजः>उदाहरणानि</option>
-    <option value="चतुर्भुजः">चतुर्भुजः</option>`
+    'examples' : `<option selected value=हिमदळानि>उदाहरणानि</option>
+                  <option value="हिमदळानि">हिमदळानि</option>
+                  <option value="चतुर्भुजः">चतुर्भुजः</option>`
 };
 
 const english_labels= {
