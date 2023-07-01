@@ -11,6 +11,8 @@
 
 DIRECTORY=$1 # name of directory containing a set of JavaScript programs
 
+echo "buildJsString:: ${DIRECTORY} was given as input directory"
+
 if [ ${DIRECTORY}NotSpecified =  NotSpecified ]; then
   echo Input directory not specified
   DIRECTORY=examples

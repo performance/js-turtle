@@ -632,6 +632,9 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
         case "telugu":
             demo_name = "ప్రదర్శన()";
             break;
+        case "korean":
+            demo_name = "데모()";
+            break;
         case "kannada":
             demo_name = "ಪ್ರದರ್ಶನೆ()";
             break;    
@@ -663,6 +666,29 @@ const telugu_labels= {
                     <option value="గడియారము">గడియారము</option>
                     <option value="హిమరేకులు">హిమరేకులు</option>
                     <option value="రంగవల్లీ">రంగవల్లీ</option>
+                    `
+};
+
+다채로운_생선
+달걀
+스퀘어
+벽시계
+벽돌벽
+
+const korean_labels= {
+    'referenceTitle' : "개요",
+    'canvastitle' : "범포",
+    'codeAreaName' : "조리법",
+    'resetButton' : "초기 상태",
+    'runButton' : "생명있는",
+    'downloadFilename' : "붓그림",
+    'examples' : `<option selected value="춤추는_눈송이">예제 레시피</option>
+                    <option value="춤추는_눈송이">춤추는_눈송이  </option>
+                    <option value="다채로운_생선">다채로운_생선  </option>
+                    <option value="달걀">달걀  </option>
+                    <option value="스퀘어">스퀘어  </option>
+                    <option value="벽시계">벽시계  </option>
+                    <option value="벽돌벽">벽돌벽  </option>
                     `
 };
 
@@ -702,6 +728,7 @@ const english_labels= {
 
 const localized_labels = {
     'telugu' : telugu_labels,
+    'korean' : korean_labels,
     'kannada' : kannada_labels,
     'samskrutam' : samskrutam_labels,
     'english' : english_labels
@@ -801,6 +828,12 @@ const localized_labels = {
  * returns:
  *   None
  *************************************************************************/
+// korean debug
+// "춤추는_눈송이"  default  koch
+// 
+
+// 
+
 function examplesChanged () {
     ఆట_ఆపు()
     let codeArea = document.getElementById('codeArea')
@@ -834,22 +867,37 @@ function commandChanged () {
     ఆట_ఆపు();
 
     const kw_map = {
+        // ಕನ್ನಡ -> Kannada
         "_ಇಲ್ಲಿ_" : "let",
         "_ಸರ್ವತ್ರ_" : "var",
         "_ಸರ್ವದಾ_" : "const",   
         "_ವಿಧಾನ_" : "function", 
         "_ಫಲ_" : "return",
+
+        // తెలుగు ->  Telugu
+
         "_ఇక్కడ_" : "let",  
         "_అత్ర_" : "let",           
         "_సర్వత్ర_" : "var",          
         "_సర్వదా_" : "const",        
         "_విధానము_" : "function",    
         "_ఫలము_" : "return",
+
+        // संस्कृतम् ->  Samskritam
+
         "_अत्र_" : "let",           
         "_सर्वत्र_" : "var",          
         "_सर्वदा_" : "const",        
         "_विधानम्_" : "function",    
-        "_फलम्_" : "return"        
+        "_फलम्_" : "return",  
+        
+        // संस्कृतम् ->  Korean
+        
+        "_여기_" : "let",           
+        "_어디에나_" : "var",          
+        "_항상_" : "const",        
+        "_절차_" : "function",   // 순서  ? 
+        "_대답_" : "return"    
     };
     try {
         // execute any code in the codeArea box
