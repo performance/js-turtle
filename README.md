@@ -1,6 +1,11 @@
 # Turtle Graphics for JavaScript
 
-This repository holds the files for the TurtleGraphics.fun web site. So there is the IDE for developing
+This repository holds the files for the [https://performance.github.io/kuncika/ ] (URL) web site.
+
+With Trutlegraphics in a few Indian Languages + Korean as a quick demo. 
+
+ This is a quick and dirty hach, so inherits everythiung else from the upstream project. 
+ So there is the IDE for developing
 Turtle Graphics code, but the documentation and lessons as well. You can visit the live site at
 [https://TurtleGraphics.fun](URL) for more information about Turtle Graphics itself.
 
