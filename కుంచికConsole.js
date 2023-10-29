@@ -639,11 +639,16 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
             demo_name = "ಪ್ರದರ್ಶನೆ()";
             break;    
         case "samskrutam":
+        case "hindi":
+        case "marathi":
             demo_name = "प्रदर्शन()";
             break;
         case "english":
             demo_name = "demo()";
             break;            
+        case "belarusian":
+            demo_name = "паказаць()";
+            break;
         default:
             demo_name = "ప్రదర్శన()";
             break;
@@ -669,18 +674,29 @@ const telugu_labels= {
                     `
 };
 
-다채로운_생선
-달걀
-스퀘어
-벽시계
-벽돌벽
-
 const korean_labels= {
     'referenceTitle' : "개요",
     'canvastitle' : "범포",
     'codeAreaName' : "조리법",
     'resetButton' : "초기 상태",
     'runButton' : "생명있는",
+    'downloadFilename' : "붓그림",
+    'examples' : `<option selected value="춤추는_눈송이">예제 레시피</option>
+                    <option value="춤추는_눈송이">춤추는_눈송이  </option>
+                    <option value="다채로운_생선">다채로운_생선  </option>
+                    <option value="달걀">달걀  </option>
+                    <option value="스퀘어">스퀘어  </option>
+                    <option value="벽시계">벽시계  </option>
+                    <option value="벽돌벽">벽돌벽  </option>
+                    `
+};
+
+const belarusian_labels= {
+    'referenceTitle' : "агляд",
+    'canvastitle' : "палатно",
+    'codeAreaName' : "сцэнар",
+    'resetButton' : "пачатковы_стан",
+    'runButton' : "гуляць",
     'downloadFilename' : "붓그림",
     'examples' : `<option selected value="춤추는_눈송이">예제 레시피</option>
                     <option value="춤추는_눈송이">춤추는_눈송이  </option>
@@ -731,7 +747,8 @@ const localized_labels = {
     'korean' : korean_labels,
     'kannada' : kannada_labels,
     'samskrutam' : samskrutam_labels,
-    'english' : english_labels
+    'english' : english_labels,
+    'belarusian': belarusian_labels
 };
 
 // const localized_example_options = {
@@ -897,7 +914,14 @@ function commandChanged () {
         "_어디에나_" : "var",          
         "_항상_" : "const",        
         "_절차_" : "function",   // 순서  ? 
-        "_대답_" : "return"    
+        "_대답_" : "return", 
+
+        // Belarusian
+        "_тут_"  : "let",
+        "_усюды_"  : "var",
+        "_назаўжды_"  : "const",
+        "_працэдура_"  : "function",
+        "_вынік_"  : "return" 
     };
     try {
         // execute any code in the codeArea box
