@@ -698,13 +698,13 @@ const belarusian_labels= {
     'resetButton' : "пачатковы_стан",
     'runButton' : "гуляць",
     'downloadFilename' : "붓그림",
-    'examples' : `<option selected value="춤추는_눈송이">예제 레시피</option>
-                    <option value="춤추는_눈송이">춤추는_눈송이  </option>
-                    <option value="다채로운_생선">다채로운_생선  </option>
-                    <option value="달걀">달걀  </option>
-                    <option value="스퀘어">스퀘어  </option>
-                    <option value="벽시계">벽시계  </option>
-                    <option value="벽돌벽">벽돌벽  </option>
+    'examples' : `<option selected value="цагляны">цагляны</option>
+                    <option value="яйка">яйка  </option>
+                    <option value="рыба">рыба  </option>
+                    <option value="квадратны">квадратны  </option>
+                    <option value="Рангавалі">Рангавалі  </option>
+                    <option value="сняжынкі">сняжынкі  </option>
+                    <option value="гадзіннік">гадзіннік  </option>
                     `
 };
 
