@@ -21,9 +21,22 @@ fi
 
 rm -f examples.js # చెరిపి_వేయి temporary file
 
-for FILE_NAME in `ls $DIRECTORY` ; do
-  STRING_NAME=`echo $FILE_NAME | sed -e s/.js\$//`
-  (echo "${STRING_NAME} ='\\";
-  sed -Ee "s/$/\\\\n\\\\/" -e "s/<feff>//"< $DIRECTORY/$FILE_NAME;
-  echo "'") >>examples.js
+for SUB_DIR_NAME in `ls -l ${DIRECTORY}| grep ^d | awk '{print $9}'` ; do
+  echo "///////////////////////"
+  echo "// Begin ${SUB_DIR_NAME} " >> examples.js
+  for FILE_NAME in `ls ${DIRECTORY}/${SUB_DIR_NAME}/*.js` ; do
+    STRING_NAME=`echo $(basename ${FILE_NAME}) | sed -e s/.js\$//`
+    (echo "${STRING_NAME} ='\\";
+    sed -Ee "s/$/\\\\n\\\\/" -e "s/<feff>//"< ${FILE_NAME};
+    echo "'") >>examples.js
+  done
+  echo "// End ${SUB_DIR_NAME} " >> examples.js
+  echo "///////////////////////"
 done
+
+# for FILE_NAME in `ls $DIRECTORY` ; do
+#   STRING_NAME=`echo $FILE_NAME | sed -e s/.js\$//`
+#   (echo "${STRING_NAME} ='\\";
+#   sed -Ee "s/$/\\\\n\\\\/" -e "s/<feff>//"< $DIRECTORY/$FILE_NAME;
+#   echo "'") >>examples.js
+# done
