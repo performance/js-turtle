@@ -649,6 +649,9 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
         case "belarusian":
             demo_name = "паказаць()";
             break;
+        case "spanish":
+            demo_name = "mostrar()";
+            break;
         default:
             demo_name = "ప్రదర్శన()";
             break;
@@ -673,6 +676,25 @@ const telugu_labels= {
                     <option value="రంగవల్లీ">రంగవల్లీ</option>
                     `
 };
+
+const spanish_labels= {
+    'referenceTitle' : "idioma descripción",
+    'canvastitle' : "cañamazo",
+    'codeAreaName' : "guión",
+    'resetButton' : "estado inicial",
+    'runButton' : "jugar",
+    'downloadFilename' : "cuadro_pintado",
+    'examples' : `<option selected value="cuadrados_espirales">ejemplos</option>
+                    <option value="cuadrados_espirales">cuadrados espirales</option>
+                    <option value="pez">pez</option>
+                    <option value="pared_de_ladrillo">pared de ladrillo</option>
+                    <option value="forma_de_huevo">forma de huevo</option>
+                    <option value="reloj">reloj</option>
+                    <option value="copos_de_nieve">copos de nieve</option>
+                    <option value="arte_de_arena">arte de arena</option>
+                    `
+};
+
 
 const korean_labels= {
     'referenceTitle' : "개요",
@@ -748,7 +770,8 @@ const localized_labels = {
     'kannada' : kannada_labels,
     'samskrutam' : samskrutam_labels,
     'english' : english_labels,
-    'belarusian': belarusian_labels
+    'belarusian': belarusian_labels,
+    'spanish' : spanish_labels
 };
 
 // const localized_example_options = {
@@ -782,7 +805,7 @@ const localized_labels = {
     // get selected language
     let కుంచికభాషా = document.getElementById('kuncikaBhaShaa').value;
     const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
-    console.log( కుంచికభాషా, ప్రదర్శన_విధానము );
+    console.log("languageChanged ::", కుంచికభాషా, ప్రదర్శన_విధానము );
     cmd (ప్రదర్శన_విధానము); 
     //  Stop currently playing example/ code.
     ఆట_ఆపు();
@@ -900,6 +923,14 @@ function commandChanged () {
         "_సర్వదా_" : "const",        
         "_విధానము_" : "function",    
         "_ఫలము_" : "return",
+
+        // Spanish
+
+        "_aquí_"   : "let",
+        "_en_todas_partes_"   : "var",
+        "_siempre_"   : "const",
+        "_método_"   : "function",
+        "_resultado_"   : "return",
 
         // संस्कृतम् ->  Samskritam
 
