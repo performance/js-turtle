@@ -1760,6 +1760,118 @@ const विरामः = విరామము;
 const चालय = ఆడించు;
 const विलंबय = విలంబించు;
 
+
+// Belarusian
+const так = అవును;
+const няма = కాదు;
+const існуе = ఉంది;
+const не_існуе = లేదు;
+const маляваць =  చిత్రీకరించు; 
+const сціраць = చెరిపి_వేయి; // ??
+const пачатковы_стан = ఆది_స్థితి; 
+const ісці_ў_цэнтр = కేంద్రకమునకు_వెళ్ళు; 
+const спыніць_гульню = ఆట_ఆపు; 
+const вакол = చుట్టు; 
+const Не_абмотваць = చుట్టొద్దు; 
+const пачніце_маляваць_форму = ఆకారము_ప్రారంభించు; 
+const спыніць_маляваць_форму = ఆకారము_ముగించు; //хопіць
+const ісці_наперад =  ముందుకు_జరుగు;  
+const ісці_назад = వెనుకకు_జరుగు;  
+const павярнуць_направа = కుడి_వైపు_తిరుగు;  
+const павярнуць_налева = ఎడమ_వైపు_తిరుగు; 
+const дуга_налева  = ఎడమవైపు_చాపాము; 
+const дуга_направа  = కుడివైపు_చాపాము; 
+const круг = వృత్తము; 
+const дуга = వృత్తము; 
+const запоўнены_круг = నిండు_వృత్తము; 
+const падніміце_пэндзаль =  కుంచికను_పైకి_ఎత్తు;  
+const пакладзеце_пэндзаль = కుంచికను_కింద_పెట్టు; 
+const схавайце_пэндзаль = కుంచికను_దాచు;  
+const выявіць_пэндзаль = కుంచికను_చూపు;  
+const змяніць_становішча = స్థానము_మార్చు;  
+const змяніць_X = xనియోగించు;  
+const змяніць_гарызанталь = xనియోగించు; 
+const змяніць_Y =  yనియోగించు;
+const змяніць_вертыкаль =  yనియోగించు;
+const вугал  = కోణము;
+const змінниць_кіруна  = కోణము;  
+const запісаць  = వ్రాయి;  
+const выпадковы_лік = యాదృచ్ఛిక_సంఖ్య; 
+const усталяваць_шырыню  =  వెడల్పు; 
+const змяніць_колер_на =  రంగు_మార్చు;  
+const ўсталяваць_шрыфт = అక్షరరూపము_స్థాపించు;
+const максімум_X = గరిష్ఠX;
+const мінімум_X = కనిష్ఠX;
+const максімум_Y = గరిష్ఠY;
+const мінімум_Y = కనిష్ఠY;
+const абмежаваць_у_дыяпазоне  = గాడిలో_పెట్టు; 
+const паўтараць = ఆవర్తించు;
+const паўтарыць_лічачы = లెక్క_పెడుతూ_ఆవర్తించు;
+const Паўтараць_пакуль = యావత్_పరిక్రమ;
+const Калі_тады_інакш = యది_తర్హి_అన్యథా;
+const Калі_тады = యది_తర్హి;
+const Паўза = విరామము;
+const гуляць = ఆడించు;
+const адкласці = విలంబించు;
+//
+
+////////
+// Spanish 
+
+
+
+const sí = అవును;
+const no = కాదు;
+const existe = ఉంది;
+const no_existe = లేదు;
+const dibujar = చిత్రీకరించు;
+const borrar = చెరిపి_వేయి;
+const estado_inicial = ఆది_స్థితి;
+const ir_al_centro = కేంద్రకమునకు_వెళ్ళు;
+const detener_el_juego = ఆట_ఆపు;
+const alrededor = చుట్టు;
+const no_enrollar = చుట్టొద్దు;
+const comenzar_a_dibujar_una_forma = ఆకారము_ప్రారంభించు;
+const dejar_de_dibujar_una_forma = ఆకారము_ముగించు;
+const avanzar = ముందుకు_జరుగు;
+const retroceder = వెనుకకు_జరుగు;
+const girar_a_la_derecha = కుడి_వైపు_తిరుగు;
+const girar_a_la_izquierda = ఎడమ_వైపు_తిరుగు;
+const arco_a_la_izquierda = ఎడమవైపు_చాపాము;
+const arco_a_la_derecha = కుడివైపు_చాపాము;
+const círculo_lleno = నిండు_వృత్తము;
+const círculo = వృత్తము;
+const levantar_el_pincel = కుంచికను_పైకి_ఎత్తు;
+const dejar_el_pincel = కుంచికను_కింద_పెట్టు;
+const esconder_el_pincel = కుంచికను_దాచు;
+const mostrar_el_pincel = కుంచికను_చూపు;
+const cambiar_la_posición = స్థానము_మార్చు;
+const usar_x = xనియోగించు;
+const usar_y = yనియోగించు;
+const ángulo = కోణము;
+const cambiar_la_dirección = దిశ_మార్చు;
+const escribir = వ్రాయి;
+const número_aleatorio = యాదృచ్ఛిక_సంఖ్య;
+const ancho = వెడల్పు;
+const cambiar_el_color_a = రంగు_మార్చు;
+const establecer_la_fuente = అక్షరరూపము_స్థాపించు;
+const máximo_X = గరిష్ఠX;
+const mínimo_X = కనిష్ఠX;
+const máximo_Y = గరిష్ఠY;
+const mínimo_Y = కనిష్ఠY;
+const limitar_en_un_rango = గాడిలో_పెట్టు;
+const repetir_contando = లెక్క_పెడుతూ_ఆవర్తించు;
+const repetir = ఆవర్తించు;
+const repetir_mientras = యావత్_పరిక్రమ;
+const si_entonces_de_lo_contrario = యది_తర్హి_అన్యథా;
+const si_entonces = యది_తర్హి;
+const pausa = విరామము;
+const jugar = ఆడించు;
+const aplazar = విలంబించు;
+
+
+/////////////
+
 // Korean 
 
 ///////////////////
@@ -1826,7 +1938,7 @@ const 면_그럼 = యది_తర్హి;
 const 휴식을취하다 = విరామము;
 const 생명있는 = ఆడించు;
 const 미루다 = విలంబించు;
-const 데모 = ప్రదర్శన;
+// const 데모 = ప్రదర్శన;
 //////////////////
 
 
