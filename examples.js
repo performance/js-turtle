@@ -671,6 +671,342 @@ _절차_     데모() {\n\
 }\n\
 '
 // End Korean 
+// Begin Spanish 
+arte_de_arena ='\
+// arte_de_arena\n\
+mostrar = () => {\n\
+  estado_inicial();\n\
+    esconder_el_pincel();\n\
+  repetir(6, () => {\n\
+    cambiar_el_color_a( 0 );\n\
+    girar_a_la_derecha(180);\n\
+    _aquí_ lado = 100;\n\
+    _aquí_ número_de_color = 0;\n\
+    repetir_mientras( () => lado > 0, ()=> {\n\
+  \n\
+      arco_a_la_derecha(lado, 30 );\n\
+  \n\
+      girar_a_la_derecha(30);\n\
+      lado = lado - 10;\n\
+      número_de_color = ( número_de_color  + 15 ) % 16;\n\
+      cambiar_el_color_a( número_de_color );\n\
+    } );\n\
+  });\n\
+\n\
+  girar_a_la_derecha(310);\n\
+  levantar_el_pincel();\n\
+  avanzar(60 );\n\
+  dejar_el_pincel()\n\
+  cambiar_el_color_a( 13 );\n\
+  círculo_lleno(5 );\n\
+  círculo(10);\n\
+}\n\
+'
+copos_de_nieve ='\
+\n\
+\n\
+valor_mínimo = Math.min\n\
+\n\
+_método_     línea_de_Koch (longitud, cantidad_de_capas) {\n\
+  si_entonces_de_lo_contrario( () => (cantidad_de_capas == 0),\n\
+   () => {    avanzar(longitud);  },\n\
+   () => {\n\
+    // pliegue del lado izquierdo\n\
+    línea_de_Koch (longitud/3, cantidad_de_capas-1);\n\
+    girar_a_la_izquierda(60); \n\
+    línea_de_Koch (longitud/3, cantidad_de_capas-1);\n\
+    girar_a_la_derecha(120); \n\
+    línea_de_Koch (longitud/3, cantidad_de_capas-1);\n\
+    girar_a_la_izquierda(60); \n\
+    línea_de_Koch (longitud/3, cantidad_de_capas-1);\n\
+  } )\n\
+}\n\
+\n\
+\n\
+_método_     copo_de_nieve_de_Koch (longitud, cantidad_de_capas) {\n\
+  ángulo (30);\n\
+  cambiar_la_posición(-longitud/2,-.3 * longitud);\n\
+  línea_de_Koch (longitud, cantidad_de_capas);\n\
+  girar_a_la_derecha(120);\n\
+  línea_de_Koch (longitud, cantidad_de_capas);\n\
+  girar_a_la_derecha(120);\n\
+  línea_de_Koch (longitud, cantidad_de_capas);\n\
+  girar_a_la_derecha(120);\n\
+}\n\
+  \n\
+copos_de_nieve = ()=> {\n\
+  colores_de_pétalos.push(número_aleatorio(15) );\n\
+  colores_de_pétalos.shift();\n\
+  repetir_contando (6, ( color ) => {\n\
+    cambiar_el_color_a( colores_de_pétalos [color] );\n\
+    copo_de_nieve_de_Koch( longitud * (color+1) * (color+1), color)\n\
+  } );\n\
+}\n\
+\n\
+_método_     mostrar() {\n\
+  estado_inicial();\n\
+  longitud = .045* valor_mínimo(máximo_X(), máximo_Y())\n\
+  colores_de_pétalos = [];\n\
+  repetir_contando (6, ( color ) => {\n\
+    colores_de_pétalos[color] = número_aleatorio(6);\n\
+  } );\n\
+\n\
+  esconder_el_pincel();\n\
+  jugar(copos_de_nieve,1)\n\
+}\n\
+'
+cuadrados_espirales ='\
+/* Aquí puedes escribir tus procesos. Por ejemplo: */\n\
+\n\
+cuadrado = ( lado ) => {\n\
+  repetir(4, () => {\n\
+    avanzar( lado );\n\
+    girar_a_la_derecha(90);\n\
+  });\n\
+}\n\
+\n\
+mostrar = () => {\n\
+  estado_inicial();\n\
+  esconder_el_pincel();\n\
+  cambiar_el_color_a( 1 );\n\
+  _aquí_ lado = 100;\n\
+  _aquí_ número_de_color = 0;\n\
+  repetir_mientras( () => lado > 0, ()=> {\n\
+    cuadrado( lado );\n\
+    girar_a_la_derecha(36);\n\
+    lado = lado - 10;\n\
+    número_de_color = ( número_de_color + 1 ) % 16;\n\
+    cambiar_el_color_a( número_de_color );\n\
+  } );\n\
+}\n\
+'
+forma_de_huevo ='\
+// origen / fuente: https://pythonturtle.academy/tutorial-drawing-egg-shape-with-python-turtle/\n\
+\n\
+forma_de_huevo = (x, y, tamaño, pendiente) => {\n\
+  levantar_el_pincel()\n\
+  cambiar_la_posición(x,y)\n\
+  dejar_el_pincel()\n\
+  cambiar_la_dirección(270+pendiente)\n\
+  cambiar_el_color_a(4) // rojo \n\
+  arco_a_la_derecha(tamaño,180)\n\
+  cambiar_el_color_a(1) // azul \n\
+  arco_a_la_derecha(2*tamaño,45)\n\
+  cambiar_el_color_a(10) // verde \n\
+  arco_a_la_derecha(0.586*tamaño,90)\n\
+  cambiar_el_color_a(1) // azul\n\
+  arco_a_la_derecha(2*tamaño,45)\n\
+}\n\
+\n\
+\n\
+\n\
+mostrar = () => {\n\
+  estado_inicial();\n\
+  esconder_el_pincel();\n\
+  forma_de_huevo( 90, 90, 40, 0 )\n\
+  forma_de_huevo( 0, 0, 90, 45 )\n\
+}\n\
+'
+pared_de_ladrillo ='\
+// pared_de_ladrillo \n\
+\n\
+_siempre_    altura = 15\n\
+_siempre_    ancho = 2* altura \n\
+\n\
+// ladrillo == ఇటుక \n\
+\n\
+ladrillo = ( altura, ancho, color_de_ladrillo) => {\n\
+  comenzar_a_dibujar_una_forma()\n\
+  repetir (2, () => {\n\
+    avanzar( ancho)\n\
+    girar_a_la_derecha(90)\n\
+    avanzar( altura)\n\
+    girar_a_la_derecha(90)\n\
+  })\n\
+  dejar_de_dibujar_una_forma( color_de_ladrillo)\n\
+  avanzar( ancho)\n\
+}\n\
+\n\
+mostrar = () => {\n\
+  estado_inicial()\n\
+ \n\
+  yB = máximo_Y()\n\
+  xB = mínimo_X()\n\
+   no_enrollar()\n\
+  girar_a_la_derecha( 90)\n\
+  cambiar_el_color_a( 7 ) // blanco\n\
+\n\
+  repetir_mientras( () => కుంచిక.స్థానము.y > mínimo_Y(), () => {\n\
+    cambiar_la_posición(xB, yB)\n\
+    repetir_mientras( () => కుంచిక.స్థానము.x < máximo_X(), () => {\n\
+      dejar_el_pincel()\n\
+      ladrillo(altura, ancho, "darkred")\n\
+      levantar_el_pincel()\n\
+    } )\n\
+    yB = yB - altura\n\
+\n\
+    cambiar_la_posición(xB - ancho/2, yB)\n\
+    repetir_mientras( () => కుంచిక.స్థానము.x < máximo_X(), () => {\n\
+      dejar_el_pincel()\n\
+      ladrillo(altura, ancho, "darkred")\n\
+      levantar_el_pincel()\n\
+    } )\n\
+    yB = yB - altura\n\
+  } )\n\
+}\n\
+'
+pez ='\
+\n\
+raízCuadrada = Math.sqrt\n\
+\n\
+mostrar = () => {\n\
+\n\
+  estado_inicial();\n\
+  esconder_el_pincel();\n\
+\n\
+pez = ( tamaño ) => {\n\
+  círculo( tamaño )\n\
+  girar_a_la_derecha( 90 );\n\
+\n\
+  levantar_el_pincel()\n\
+  avanzar( tamaño );\n\
+  dejar_el_pincel()\n\
+\n\
+  mostrar_el_pincel();\n\
+\n\
+\n\
+  girar_a_la_izquierda( 45 );\n\
+  avanzar( 2 * tamaño );\n\
+  girar_a_la_derecha(90+45)\n\
+\n\
+  avanzar( raízCuadrada( 2 * tamaño * 2 * tamaño * 2 ) );\n\
+\n\
+  girar_a_la_derecha(90+45)\n\
+  avanzar( 2 * tamaño );\n\
+  girar_a_la_izquierda( 45 );\n\
+\n\
+  // esconder_el_pincel();\n\
+\n\
+  levantar_el_pincel()\n\
+  avanzar( tamaño );\n\
+  dejar_el_pincel()\n\
+\n\
+  girar_a_la_derecha( 90 );\n\
+}\n\
+\n\
+color_pez = (número_de_color) =>  {\n\
+  cambiar_el_color_a(número_de_color)\n\
+ pez( 40 + ( número_de_color * 1 ) )\n\
+} \n\
+repetir_contando( 16 , (número_de_color) => color_pez( número_de_color ) )\n\
+\n\
+}\n\
+'
+reloj ='\
+// గోడ reloj\n\
+\n\
+_en_todas_partes_   కొలత;\n\
+\n\
+// reloj చుట్టూ క్షణముల గీతలు గీయుటకు\n\
+_método_     క్షణముల_గీతలు(x, y, వ్యాసార్థము) {\n\
+   _aquí_   గీత_longitud = 7;\n\
+   _aquí_   ఖాళీ = వ్యాసార్థము - గీత_longitud;\n\
+   cambiar_el_color_a( 1 );\n\
+   ancho(1);\n\
+   repetir_contando( 60, ( కో ) => {\n\
+      _aquí_ థీటా = కో * 6;\n\
+      // ప్రతి  ఐదవది దళసరి గా వేయవలెను\n\
+      ancho( ( ( కో % 5 ) ? 1 : 3)/130* కొలత)\n\
+      levantar_el_pincel();\n\
+      cambiar_la_posición(0,0);\n\
+      ángulo(థీటా);\n\
+      avanzar(ఖాళీ);\n\
+      dejar_el_pincel();\n\
+      avanzar(గీత_longitud);\n\
+   });\n\
+   \n\
+}\n\
+\n\
+\n\
+// గంటలు, నిమిషాలూ సూచించే అంకెలు\n\
+_método_     అంకెలు(x, y, వ్యాసార్థము) {\n\
+   levantar_el_pincel();\n\
+   _aquí_  అక్షర_tamaño = 20/130 * కొలత\n\
+   establecer_la_fuente(అక్షర_tamaño+"px sans-serif");\n\
+   cambiar_el_color_a("నలుపు");\n\
+   repetir_contando( 12, ( గంట ) =>{\n\
+      cambiar_la_posición(x,y);\n\
+      ángulo(గంట * 30);\n\
+      avanzar(వ్యాసార్థము); // to center of digit\n\
+      ángulo(180);\n\
+      avanzar(10/130 * కొలత); // vertical correction to baseline\n\
+      girar_a_la_derecha(90);\n\
+      // క్రింది, ఎడమ భాగమునకు అనుప్రస్థ సరదుబాటు\n\
+      avanzar( ( (గంట < 10 ) ? 6 : 10 )/130 * కొలత)\n\
+      // if (గంట < 10) {\n\
+      //   avanzar(6/130 * కొలత); // horizontal correction to lower left corner\n\
+      // } else {\n\
+      //   avanzar(10/130 * కొలత)\n\
+      // }\n\
+      girar_a_la_derecha(180);\n\
+      escribir(గంట);\n\
+   })\n\
+   dejar_el_pincel();\n\
+}\n\
+\n\
+// చేతులు గీయుటకు  \n\
+_método_     చెయ్యి (థీటా, చెయ్యి_ancho, longitud, color) {\n\
+   _aquí_   కూచి_తగ్గింపు = 5;\n\
+   _aquí_   కూచి_తగ్గింపులు = (longitud / కూచి_తగ్గింపు);\n\
+   _aquí_   ancho_సర్దుబాటు =  చెయ్యి_ancho / కూచి_తగ్గింపులు;\n\
+   cambiar_la_posición(0, 0);\n\
+   ángulo(థీటా);\n\
+   cambiar_el_color_a(color);\n\
+   // for (_en_todas_partes_   step = 0; step < longitud; step = step + కూచి_తగ్గింపు) \n\
+   repetir_contando( కూచి_తగ్గింపులు, ( అడుగు) => \n\
+   {\n\
+      ancho( చెయ్యి_ancho ); // కుంచిక ancho\n\
+      avanzar(కూచి_తగ్గింపు);\n\
+      చెయ్యి_ancho =  చెయ్యి_ancho  - ancho_సర్దుబాటు;\n\
+   }\n\
+   );\n\
+}\n\
+\n\
+_método_     చేతులు(గంటలు, నిమిషములు, క్షణములు) {\n\
+    // క్షణముల చెయ్యి\n\
+    _aquí_   క్షణముకెన్ని_డిగ్రీలు = 6;	// = 360 degrees/60 క్షణములు\n\
+    చెయ్యి(క్షణములు * క్షణముకెన్ని_డిగ్రీలు, 4, 100/130 * కొలత, "red");\n\
+    // నిమిషముల చెయ్యి \n\
+    _aquí_   నిమిషానికెన్ని_డిగ్రీలు = 0.1;	// = 360 degrees /3600 క్షణములు /గంట\n\
+    _aquí_   నిమిషములుInక్షణములు = నిమిషములు * 60 + క్షణములు;\n\
+    చెయ్యి(నిమిషములుInక్షణములు * నిమిషానికెన్ని_డిగ్రీలు, 10, 100/130 * కొలత, "blue");\n\
+    // గంటల చెయ్యి\n\
+    _aquí_   గంటకెన్ని_డిగ్రీలు = .1/12;	// = నిమిషానికెన్ని_డిగ్రీలు / 12 గంటలు \n\
+    _aquí_   గంటలుInక్షణములు = ((గంటలు % 12) * 3600) + నిమిషములుInక్షణములు;\n\
+    చెయ్యి(గంటలుInక్షణములు * గంటకెన్ని_డిగ్రీలు, 10, 60/130 * కొలత, "green");\n\
+}\n\
+\n\
+// relojను పునరావృతము చేయుటకు\n\
+_método_     reloj() {\n\
+   borrar();\n\
+   కొలత = .9 *  Math.min( máximo_X(), máximo_Y())\n\
+   అంకెలు(0, 0, 110/130 * కొలత);\n\
+   cambiar_el_color_a("lightgreen");\n\
+   cambiar_la_posición(0,0);\n\
+   ancho(1/130* కొలత)\n\
+   círculo(130/130 * కొలత );\n\
+   క్షణముల_గీతలు(0, 0, 130/130 * కొలత );\n\
+   _aquí_  సమయము = new Date();\n\
+   చేతులు(సమయము.getHours(), సమయము.getMinutes(), సమయము.getSeconds());\n\
+}\n\
+\n\
+_método_     mostrar() {\n\
+   estado_inicial();\n\
+   esconder_el_pincel();\n\
+   jugar(reloj,1000); // relojను ప్రతి క్షణము పునరావృతము చేయ వలెను.\n\
+}\n\
+'
+// End Spanish 
 // Begin ಕನ್ನಡ 
 ಮತ್ಸ್ಯ ='\
 \n\
