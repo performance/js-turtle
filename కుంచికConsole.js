@@ -652,6 +652,9 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
         case "spanish":
             demo_name = "mostrar()";
             break;
+        case "japanese":
+            demo_name = "ひょうじ()"; // 発揮()";
+            break;
         default:
             demo_name = "ప్రదర్శన()";
             break;
@@ -676,6 +679,25 @@ const telugu_labels= {
                     <option value="రంగవల్లీ">రంగవల్లీ</option>
                     `
 };
+
+const japanese_labels= {
+    'referenceTitle' : "言語の概要",
+    'canvastitle' : "描画",
+    'codeAreaName' : "脚本",
+    'resetButton' : "ఆది స్థితి",
+    'runButton' : "ఆడించు",
+    'downloadFilename' : "కుంచిక_చిత్రము",
+    'examples' : `<option selected value="రంగవల్లీ">ఉదాహరణములు</option>
+                    <option value="చతుర్భుజము">చతుర్భుజము</option>
+                    <option value="చేప">చేప</option>
+                    <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
+                    <option value="అండాకారము">అండాకారము</option>
+                    <option value="గడియారము">గడియారము</option>
+                    <option value="హిమరేకులు">హిమరేకులు</option>
+                    <option value="రంగవల్లీ">రంగవల్లీ</option>
+                    `
+};
+
 
 const spanish_labels= {
     'referenceTitle' : "idioma descripción",
