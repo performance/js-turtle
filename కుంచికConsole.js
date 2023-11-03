@@ -627,37 +627,22 @@ kirk
 */
 
 function ప్రదర్శన_విధానము_పేరు( కుంచికభాషా ) {
-    let demo_name = "ప్రదర్శన()";
-    switch (కుంచికభాషా) {
-        case "telugu":
-            demo_name = "ప్రదర్శన()";
-            break;
-        case "korean":
-            demo_name = "데모()";
-            break;
-        case "kannada":
-            demo_name = "ಪ್ರದರ್ಶನೆ()";
-            break;    
-        case "samskrutam":
-        case "hindi":
-        case "marathi":
-            demo_name = "प्रदर्शन()";
-            break;
-        case "english":
-            demo_name = "demo()";
-            break;            
-        case "belarusian":
-            demo_name = "паказаць()";
-            break;
-        case "spanish":
-            demo_name = "mostrar()";
-            break;
-        default:
-            demo_name = "ప్రదర్శన()";
-            break;
-    }
+    const demo_names = {
+        "telugu": "ప్రదర్శన()",
+        "korean": "데모()",
+        "kannada": "ಪ್ರದರ್ಶನೆ()",
+        "samskrutam":"प्रदर्शन()",
+        "hindi":"प्रदर्शन()",
+        "marathi":"प्रदर्शन()",
+        "english": "demo()",
+        "belarusian":"паказаць()",
+        "spanish": "mostrar()",
+        "french": "montrer()"
+    };
+    let demo_name = demo_names[కుంచికభాషా] || "ప్రదర్శన()";
     return demo_name;
 }
+
 
 const telugu_labels= {
     'referenceTitle' : "కుంచిక భాషావలోకనము",
@@ -694,6 +679,25 @@ const spanish_labels= {
                     <option value="arte_de_arena">arte de arena</option>
                     `
 };
+
+const french_labels= {
+    'referenceTitle' : "Description de la langue",
+    'canvastitle' : "Canevas",
+    'codeAreaName' : "Code",
+    'resetButton' : "Restaurer",
+    'runButton' : "Exécuter",
+    'downloadFilename' : "Image générée",
+    'examples' : `<option selected value="carré_en_spirale">Exemples</option>
+                    <option value="carré_en_spirale">Carrés en spirale</option>
+                    <option value="poisson">Poisson</option>
+                    <option value="mur_de_briques">Mur de briques</option>
+                    <option value="forme_d'œuf">Forme d'œuf</option>
+                    <option value="horloge">Horloge</option>
+                    <option value="flocons_de_neige">Flocons de neige</option>
+                    <option value="art_de_sable">Art de sable</option>
+                    `
+};
+
 
 
 const korean_labels= {
@@ -771,7 +775,8 @@ const localized_labels = {
     'samskrutam' : samskrutam_labels,
     'english' : english_labels,
     'belarusian': belarusian_labels,
-    'spanish' : spanish_labels
+    'spanish' : spanish_labels,
+    'french' : french_labels
 };
 
 // const localized_example_options = {
@@ -890,6 +895,94 @@ function examplesChanged () {
     commandChanged()
 }
 
+/// keyword mappings
+
+const kannada_kw_map = {
+    // ಕನ್ನಡ -> Kannada
+    "_ಇಲ್ಲಿ_" : "let",
+    "_ಸರ್ವತ್ರ_" : "var",
+    "_ಸರ್ವದಾ_" : "const",   
+    "_ವಿಧಾನ_" : "function", 
+    "_ಫಲ_" : "return"
+};
+
+    // తెలుగు ->  Telugu
+const telugu_kw_map = {
+    "_ఇక్కడ_" : "let",  
+    "_అత్ర_" : "let",           
+    "_సర్వత్ర_" : "var",          
+    "_సర్వదా_" : "const",        
+    "_విధానము_" : "function",    
+    "_ఫలము_" : "return"
+};
+
+    // Spanish
+const spanish_kw_map = {
+    "_aquí_"   : "let",
+    "_en_todas_partes_"   : "var",
+    "_siempre_"   : "const",
+    "_método_"   : "function",
+    "_resultado_"   : "return"
+};
+
+// Spanish
+const french_kw_map = {
+    "_ici_"   : "let",
+    "_partout_"   : "var",
+    "_toujours_"   : "const",
+    "_méthode_"   : "function",
+    "_résultat_"   : "return"
+};
+    
+// संस्कृतम् ->  Samskrutam
+const samskrutam_kw_map = {
+    "_अत्र_" : "let",           
+    "_सर्वत्र_" : "var",          
+    "_सर्वदा_" : "const",        
+    "_विधानम्_" : "function",    
+    "_फलम्_" : "return"
+};
+    
+// संस्कृतम् ->  Korean
+const korean_kw_map = {
+    "_여기_" : "let",           
+    "_어디에나_" : "var",          
+    "_항상_" : "const",        
+    "_절차_" : "function",
+    "_대답_" : "return"
+};
+
+// Belarusian
+const belarusian_kw_map = {
+    "_тут_"  : "let",
+    "_усюды_"  : "var",
+    "_назаўжды_"  : "const",
+    "_працэдура_"  : "function",
+    "_вынік_"  : "return" 
+};
+
+// English
+const english_kw_map = {
+    "let"  : "let",
+    "var"  : "var",
+    "const"  : "const",
+    "function"  : "function",
+    "return"  : "return" 
+};
+const kw_maps = {
+    "telugu":    telugu_kw_map ,
+    "korean":    korean_kw_map ,
+    "kannada":    kannada_kw_map ,
+    "samskrutam":    samskrutam_kw_map ,
+    "hindi":    samskrutam_kw_map ,
+    "marathi":    samskrutam_kw_map ,
+    "english":    english_kw_map ,
+    "belarusian":    belarusian_kw_map ,
+    "spanish":    spanish_kw_map ,
+    "french":    french_kw_map ,
+};
+///
+
 /*************************************************************************
  * commandChanged -- handler for when the command box is changed
  *
@@ -906,55 +999,7 @@ function commandChanged () {
     const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
     errorFound = false
     ఆట_ఆపు();
-
-    const kw_map = {
-        // ಕನ್ನಡ -> Kannada
-        "_ಇಲ್ಲಿ_" : "let",
-        "_ಸರ್ವತ್ರ_" : "var",
-        "_ಸರ್ವದಾ_" : "const",   
-        "_ವಿಧಾನ_" : "function", 
-        "_ಫಲ_" : "return",
-
-        // తెలుగు ->  Telugu
-
-        "_ఇక్కడ_" : "let",  
-        "_అత్ర_" : "let",           
-        "_సర్వత్ర_" : "var",          
-        "_సర్వదా_" : "const",        
-        "_విధానము_" : "function",    
-        "_ఫలము_" : "return",
-
-        // Spanish
-
-        "_aquí_"   : "let",
-        "_en_todas_partes_"   : "var",
-        "_siempre_"   : "const",
-        "_método_"   : "function",
-        "_resultado_"   : "return",
-
-        // संस्कृतम् ->  Samskritam
-
-        "_अत्र_" : "let",           
-        "_सर्वत्र_" : "var",          
-        "_सर्वदा_" : "const",        
-        "_विधानम्_" : "function",    
-        "_फलम्_" : "return",  
-        
-        // संस्कृतम् ->  Korean
-        
-        "_여기_" : "let",           
-        "_어디에나_" : "var",          
-        "_항상_" : "const",        
-        "_절차_" : "function",   // 순서  ? 
-        "_대답_" : "return", 
-
-        // Belarusian
-        "_тут_"  : "let",
-        "_усюды_"  : "var",
-        "_назаўжды_"  : "const",
-        "_працэдура_"  : "function",
-        "_вынік_"  : "return" 
-    };
+    const kw_map = kw_maps[కుంచికభాషా] || english_kw_map;
     try {
         // execute any code in the codeArea box
         console.log("cC codeArea")
