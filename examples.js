@@ -368,6 +368,340 @@ function demo() {\n\
 }\n\
 '
 // End English 
+// Begin French 
+art_de_sable ='\
+\n\
+afficher = () => {\n\
+  état_initial();\n\
+    cacher_le_pinceau();\n\
+  répéter(6, () => {\n\
+    changer_la_couleur_à( 0 );\n\
+    tourner_à_droite(180);\n\
+    _ici_ côté = 100;\n\
+    _ici_ numéro_de_couleur = 0;\n\
+    répéter_tant_que( () => côté > 0, ()=> {\n\
+  \n\
+      arc_à_droite(côté, 30 );\n\
+  \n\
+      tourner_à_droite(30);\n\
+      côté = côté - 10;\n\
+      numéro_de_couleur = ( numéro_de_couleur  + 15 ) % 16;\n\
+      changer_la_couleur_à( numéro_de_couleur );\n\
+    } );\n\
+  });\n\
+\n\
+  tourner_à_droite(310);\n\
+  lever_le_pinceau();\n\
+  avancer(60 );\n\
+  poser_le_pinceau()\n\
+  changer_la_couleur_à( 13 );\n\
+  cercle_plein(5 );\n\
+  cercle(10);\n\
+}\n\
+'
+carré_en_spirale ='\
+/* Ici vous pouvez écrire vos processus. Par exemple: */\n\
+\n\
+carré = ( côté ) => {\n\
+  répéter(4, () => {\n\
+    avancer( côté );\n\
+    tourner_à_droite(90);\n\
+  });\n\
+}\n\
+\n\
+afficher = () => {\n\
+  état_initial();\n\
+  cacher_le_pinceau();\n\
+  changer_la_couleur_à( 1 ); // bleu\n\
+  _ici_ côté = 100;\n\
+  _ici_ numéro_de_couleur = 0;\n\
+  répéter_tant_que( () => côté > 0, ()=> {\n\
+    carré( côté );\n\
+    tourner_à_droite(36);\n\
+    côté = côté - 10;\n\
+    numéro_de_couleur = ( numéro_de_couleur + 1 ) % 16;\n\
+    changer_la_couleur_à( numéro_de_couleur );\n\
+  } );\n\
+}\n\
+'
+flocons_de_neige ='\
+\n\
+\n\
+valeur_minimale = Math.min\n\
+\n\
+_méthode_     ligne_de_Koch (longueur, profondeur) {\n\
+  si_alors_sinon( () => (profondeur == 0),\n\
+    () => {    avancer(longueur);  },\n\
+    () => {\n\
+    // La bosse du côté gauche\n\
+    ligne_de_Koch (longueur/3, profondeur-1);\n\
+    tourner_à_gauche(60); \n\
+    ligne_de_Koch (longueur/3, profondeur-1);\n\
+    tourner_à_droite(120); \n\
+    ligne_de_Koch (longueur/3, profondeur-1);\n\
+    tourner_à_gauche(60); \n\
+    ligne_de_Koch (longueur/3, profondeur-1);\n\
+  } )\n\
+}\n\
+\n\
+\n\
+_méthode_     flocon_de_neige_de_Koch (longueur, profondeur) {\n\
+  angle (30);\n\
+  changer_la_position(-longueur/2,-.3 * longueur);\n\
+  ligne_de_Koch (longueur, profondeur);\n\
+  tourner_à_droite(120);\n\
+  ligne_de_Koch (longueur, profondeur);\n\
+  tourner_à_droite(120);\n\
+  ligne_de_Koch (longueur, profondeur);\n\
+  tourner_à_droite(120);\n\
+}\n\
+  \n\
+flocons_de_neige = ()=> {\n\
+  couleurs_de_pétales.push(nombre_aléatoire(15) );\n\
+  couleurs_de_pétales.shift();\n\
+  répéter_en_comptant (6, ( క ) => {\n\
+    changer_la_couleur_à( couleurs_de_pétales [క] );\n\
+    flocon_de_neige_de_Koch( longueur * (క+1) * (క+1), క)\n\
+  } );\n\
+}\n\
+\n\
+_méthode_     afficher() {\n\
+  état_initial();\n\
+  longueur = .045* valeur_minimale(maximum_X(), maximum_Y())\n\
+  couleurs_de_pétales = [];\n\
+  répéter_en_comptant (6, ( క ) => {\n\
+    couleurs_de_pétales[క] = nombre_aléatoire(6);\n\
+  } );\n\
+\n\
+  cacher_le_pinceau();\n\
+  jouer(flocons_de_neige,1)\n\
+}\n\
+'
+forme_d_œuf ='\
+// మూలము: https://pythonturtle.academy/tutorial-drawing-egg-shape-with-python-turtle/\n\
+\n\
+forme_d_œuf = (x, y, taille, pente) => {\n\
+  lever_le_pinceau()\n\
+  changer_la_position(x,y)\n\
+  poser_le_pinceau()\n\
+  changer_la_direction(270+pente)\n\
+  changer_la_couleur_à(rouge)\n\
+  arc_à_droite(taille,180)\n\
+  changer_la_couleur_à(bleu)\n\
+  arc_à_droite(2*taille,45)\n\
+  changer_la_couleur_à("vert")\n\
+  arc_à_droite(0.586*taille,90)\n\
+  changer_la_couleur_à(bleu)\n\
+  arc_à_droite(2*taille,45)\n\
+}\n\
+\n\
+afficher = () => {\n\
+  état_initial();\n\
+  cacher_le_pinceau();\n\
+  forme_d_œuf( 90, 90, 40, 0 )\n\
+  forme_d_œuf( 0, 0, 90, 45 )\n\
+}\n\
+'
+horloge ='\
+// గోడ horloge\n\
+\n\
+_partout_   కొలత;\n\
+\n\
+// horloge చుట్టూ క్షణముల గీతలు గీయుటకు\n\
+_méthode_     క్షణముల_గీతలు(x, y, వ్యాసార్థము) {\n\
+   _ici_   గీత_longueur = 7;\n\
+   _ici_   ఖాళీ = వ్యాసార్థము - గీత_longueur;\n\
+   changer_la_couleur_à( bleu );\n\
+   largeur(1);\n\
+   répéter_en_comptant( 60, ( కో ) => {\n\
+      _ici_ థీటా = కో * 6;\n\
+      // ప్రతి  ఐదవది దళసరి గా వేయవలెను\n\
+      largeur( ( ( కో % 5 ) ? 1 : 3)/130* కొలత)\n\
+      lever_le_pinceau();\n\
+      changer_la_position(0,0);\n\
+      angle(థీటా);\n\
+      avancer(ఖాళీ);\n\
+      poser_le_pinceau();\n\
+      avancer(గీత_longueur);\n\
+   });\n\
+   \n\
+}\n\
+\n\
+\n\
+// గంటలు, నిమిషాలూ సూచించే అంకెలు\n\
+_méthode_     అంకెలు(x, y, వ్యాసార్థము) {\n\
+   lever_le_pinceau();\n\
+   _ici_  అక్షర_taille = 20/130 * కొలత\n\
+   définir_la_police(అక్షర_taille+"px sans-serif");\n\
+   changer_la_couleur_à("నలుపు");\n\
+   répéter_en_comptant( 12, ( గంట ) =>{\n\
+      changer_la_position(x,y);\n\
+      angle(గంట * 30);\n\
+      avancer(వ్యాసార్థము); // to center of digit\n\
+      angle(180);\n\
+      avancer(10/130 * కొలత); // vertical correction to baseline\n\
+      tourner_à_droite(90);\n\
+      // క్రింది, ఎడమ భాగమునకు అనుప్రస్థ సరదుబాటు\n\
+      avancer( ( (గంట < 10 ) ? 6 : 10 )/130 * కొలత)\n\
+      // if (గంట < 10) {\n\
+      //   avancer(6/130 * కొలత); // horizontal correction to lower left corner\n\
+      // } else {\n\
+      //   avancer(10/130 * కొలత)\n\
+      // }\n\
+      tourner_à_droite(180);\n\
+      écrire(గంట);\n\
+   })\n\
+   poser_le_pinceau();\n\
+}\n\
+\n\
+// చేతులు గీయుటకు  \n\
+_méthode_     చెయ్యి (థీటా, చెయ్యి_largeur, longueur, couleur) {\n\
+   _ici_   కూచి_తగ్గింపు = 5;\n\
+   _ici_   కూచి_తగ్గింపులు = (longueur / కూచి_తగ్గింపు);\n\
+   _ici_   largeur_సర్దుబాటు =  చెయ్యి_largeur / కూచి_తగ్గింపులు;\n\
+   changer_la_position(0, 0);\n\
+   angle(థీటా);\n\
+   changer_la_couleur_à(couleur);\n\
+   // for (_partout_   step = 0; step < longueur; step = step + కూచి_తగ్గింపు) \n\
+   répéter_en_comptant( కూచి_తగ్గింపులు, ( అడుగు) => \n\
+   {\n\
+      largeur( చెయ్యి_largeur ); // కుంచిక largeur\n\
+      avancer(కూచి_తగ్గింపు);\n\
+      చెయ్యి_largeur =  చెయ్యి_largeur  - largeur_సర్దుబాటు;\n\
+   }\n\
+   );\n\
+}\n\
+\n\
+_méthode_     చేతులు(గంటలు, నిమిషములు, క్షణములు) {\n\
+    // క్షణముల చెయ్యి\n\
+    _ici_   క్షణముకెన్ని_డిగ్రీలు = 6;	// = 360 degrees/60 క్షణములు\n\
+    చెయ్యి(క్షణములు * క్షణముకెన్ని_డిగ్రీలు, 4, 100/130 * కొలత, "red");\n\
+    // నిమిషముల చెయ్యి \n\
+    _ici_   నిమిషానికెన్ని_డిగ్రీలు = 0.1;	// = 360 degrees /3600 క్షణములు /గంట\n\
+    _ici_   నిమిషములుInక్షణములు = నిమిషములు * 60 + క్షణములు;\n\
+    చెయ్యి(నిమిషములుInక్షణములు * నిమిషానికెన్ని_డిగ్రీలు, 10, 100/130 * కొలత, "blue");\n\
+    // గంటల చెయ్యి\n\
+    _ici_   గంటకెన్ని_డిగ్రీలు = .1/12;	// = నిమిషానికెన్ని_డిగ్రీలు / 12 గంటలు \n\
+    _ici_   గంటలుInక్షణములు = ((గంటలు % 12) * 3600) + నిమిషములుInక్షణములు;\n\
+    చెయ్యి(గంటలుInక్షణములు * గంటకెన్ని_డిగ్రీలు, 10, 60/130 * కొలత, "green");\n\
+}\n\
+\n\
+// horlogeను పునరావృతము చేయుటకు\n\
+_méthode_     horloge() {\n\
+   effacer();\n\
+   కొలత = .9 *  Math.min( maximum_X(), maximum_Y())\n\
+   అంకెలు(0, 0, 110/130 * కొలత);\n\
+   changer_la_couleur_à("lightgreen");\n\
+   changer_la_position(0,0);\n\
+   largeur(1/130* కొలత)\n\
+   cercle(130/130 * కొలత );\n\
+   క్షణముల_గీతలు(0, 0, 130/130 * కొలత );\n\
+   _ici_  సమయము = new Date();\n\
+   చేతులు(సమయము.getHours(), సమయము.getMinutes(), సమయము.getSeconds());\n\
+}\n\
+\n\
+_méthode_     afficher() {\n\
+   état_initial();\n\
+   cacher_le_pinceau();\n\
+   jouer(horloge,1000); // horlogeను ప్రతి క్షణము పునరావృతము చేయ వలెను.\n\
+}\n\
+'
+mur_de_briques ='\
+// briques ప్రస్తారము \n\
+\n\
+_toujours_    hauteur = 15\n\
+_toujours_    largeur = 2* hauteur \n\
+\n\
+// briques == ఇటుక \n\
+\n\
+briques = ( hauteur, largeur, briques_couleur) => {\n\
+  commencer_à_dessiner_une_forme()\n\
+  répéter (2, () => {\n\
+    avancer( largeur)\n\
+    tourner_à_droite(90)\n\
+    avancer( hauteur)\n\
+    tourner_à_droite(90)\n\
+  })\n\
+  arrêter_de_dessiner_une_forme( briques_couleur)\n\
+  avancer( largeur)\n\
+}\n\
+\n\
+afficher = () => {\n\
+  état_initial()\n\
+ \n\
+  yB = maximum_Y()\n\
+  xB = minimum_X()\n\
+   ne_pas_enrouler()\n\
+  tourner_à_droite( 90)\n\
+  changer_la_couleur_à( blanc )\n\
+\n\
+  répéter_tant_que( () => కుంచిక.స్థానము.y > minimum_Y(), () => {\n\
+    changer_la_position(xB, yB)\n\
+    répéter_tant_que( () => కుంచిక.స్థానము.x < maximum_X(), () => {\n\
+      poser_le_pinceau()\n\
+      briques(hauteur, largeur, "darkred")\n\
+      lever_le_pinceau()\n\
+    } )\n\
+    yB = yB - hauteur\n\
+\n\
+    changer_la_position(xB - largeur/2, yB)\n\
+    répéter_tant_que( () => కుంచిక.స్థానము.x < maximum_X(), () => {\n\
+      poser_le_pinceau()\n\
+      briques(hauteur, largeur, "darkred")\n\
+      lever_le_pinceau()\n\
+    } )\n\
+    yB = yB - hauteur\n\
+  } )\n\
+}\n\
+'
+poisson ='\
+\n\
+racine_carrée = Math.sqrt\n\
+\n\
+afficher = () => {\n\
+\n\
+  état_initial();\n\
+  cacher_le_pinceau();\n\
+\n\
+poisson = ( taille ) => {\n\
+  cercle( taille )\n\
+  tourner_à_droite( 90 );\n\
+\n\
+  lever_le_pinceau()\n\
+  avancer( taille );\n\
+  poser_le_pinceau()\n\
+\n\
+  montrer_le_pinceau();\n\
+\n\
+\n\
+  tourner_à_gauche( 45 );\n\
+  avancer( 2 * taille );\n\
+  tourner_à_droite(90+45)\n\
+\n\
+  avancer( racine_carrée( 2 * taille * 2 * taille * 2 ) );\n\
+\n\
+  tourner_à_droite(90+45)\n\
+  avancer( 2 * taille );\n\
+  tourner_à_gauche( 45 );\n\
+\n\
+  // cacher_le_pinceau();\n\
+\n\
+  lever_le_pinceau()\n\
+  avancer( taille );\n\
+  poser_le_pinceau()\n\
+\n\
+  tourner_à_droite( 90 );\n\
+}\n\
+\n\
+couleur_poisson = (numéro_de_couleur) =>  {\n\
+  changer_la_couleur_à(numéro_de_couleur)\n\
+ poisson( 40 + ( numéro_de_couleur * 1 ) )\n\
+} \n\
+répéter_en_comptant( 16 , (taille) => couleur_poisson( taille ) )\n\
+\n\
+}\n\
+'
+// End French 
 // Begin Korean 
 달걀 ='\
 // 원천: https://pythonturtle.academy/tutorial-drawing-egg-shape-with-python-turtle/\n\

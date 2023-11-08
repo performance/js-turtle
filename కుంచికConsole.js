@@ -637,7 +637,7 @@ function ప్రదర్శన_విధానము_పేరు( కుం�
         "english": "demo()",
         "belarusian":"паказаць()",
         "spanish": "mostrar()",
-        "french": "montrer()"
+        "french": "afficher()"
     };
     let demo_name = demo_names[కుంచికభాషా] || "ప్రదర్శన()";
     return demo_name;
@@ -691,7 +691,7 @@ const french_labels= {
                     <option value="carré_en_spirale">Carrés en spirale</option>
                     <option value="poisson">Poisson</option>
                     <option value="mur_de_briques">Mur de briques</option>
-                    <option value="forme_d'œuf">Forme d'œuf</option>
+                    <option value="forme_d_œuf">Forme d'œuf</option>
                     <option value="horloge">Horloge</option>
                     <option value="flocons_de_neige">Flocons de neige</option>
                     <option value="art_de_sable">Art de sable</option>
