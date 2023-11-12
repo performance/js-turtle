@@ -757,6 +757,24 @@ const samskrutam_labels= {
                   <option value="चतुर्भुजः">चतुर्भुजः</option>`
 };
 
+const marathi_labels= {
+    'referenceTitle' : "भाषेचे अवलोकन",
+    'canvastitle' : "चित्रषेत्र",
+    'codeAreaName' : "लेखनक्षेत्र",
+    'resetButton' : "प्रथम_स्थिति",
+    'runButton' : "चालवा",
+    'downloadFilename' : "लघुप्रतिमा",
+    'examples' : `<option selected value="रांगोळी">उदाहरणे</option>
+                    <option value="चौकोन">चौकोन</option>
+                    <option value="मासा">मासा</option>
+                    <option value="वीटांची_भींत">वीटांची_भींत</option>
+                    <option value="अंडाकृती">अंडाकृती</option>
+                    <option value="घड्याळ">घड्याळ</option>
+                    <option value="पुष्प">पुष्प</option>
+                    <option value="रांगोळी">रांगोळी</option>
+                    `
+};
+
 const english_labels= {
     'referenceTitle' : "Kuncika language overview",
     'canvastitle' : "Canvas",
@@ -773,27 +791,12 @@ const localized_labels = {
     'korean' : korean_labels,
     'kannada' : kannada_labels,
     'samskrutam' : samskrutam_labels,
+    'marathi' : marathi_labels,
     'english' : english_labels,
     'belarusian': belarusian_labels,
     'spanish' : spanish_labels,
     'french' : french_labels
 };
-
-// const localized_example_options = {
-//     'telugu' : `<option selected value="చతుర్భుజము">ఉదాహరణములు</option>
-//                 <option value="చతుర్భుజము">చతుర్భుజము</option>
-//                 <option value="చేప">చేప</option>
-//                 <option value="ఇష్టికా_ప్రస్తారము">ఇష్టికా_ప్రస్తారము</option>
-//                 <option value="అండాకారము">అండాకారము</option>
-//                 `,
-//     'kannada' : `<option selected value="ಚತುರ್ಭುಜ">ಉದಾಹರಣೆಗಳು</option>
-//     <option value="ಚತುರ್ಭುಜ">ಚತುರ್ಭುಜ</option>`,
-//     'samskrutam' : `<option selected value=चतुर्भुजः>उदाहरणानि</option>
-//     <option value="चतुर्भुजः">चतुर्भुजः</option>`,
-//     'english' : `<option selected value=square>Examples</option>
-//                     <option value=square>Square</option>`
-// };
-
 
 /*************************************************************************
  * languageChanged -- handler for when the Kuncika bhaSha select changed
@@ -942,6 +945,14 @@ const samskrutam_kw_map = {
     "_विधानम्_" : "function",    
     "_फलम्_" : "return"
 };
+// मराठी ->  Marathi
+const marathi_kw_map = {
+    "_इथे_" : "let",           
+    "_सगळी_कडे_" : "var",          
+    "_कायम_" : "const",        
+    "_कृती_" : "function",    
+    "_परत_करा_" : "return"
+};
     
 // संस्कृतम् ->  Korean
 const korean_kw_map = {
@@ -975,8 +986,8 @@ const kw_maps = {
     "kannada":    kannada_kw_map ,
     "samskrutam":    samskrutam_kw_map ,
     "hindi":    samskrutam_kw_map ,
-    "marathi":    samskrutam_kw_map ,
-    "english":    english_kw_map ,
+    "marathi":    marathi_kw_map ,
+    // "english":    english_kw_map ,
     "belarusian":    belarusian_kw_map ,
     "spanish":    spanish_kw_map ,
     "french":    french_kw_map ,
@@ -992,6 +1003,22 @@ const kw_maps = {
  * returns:
  *   None
  *************************************************************************/
+
+function substitute_keywords(కుంచికభాషా, programText ) {
+    let replaced = programText;
+    if ("english" != కుంచికభాషా  )
+    {
+        const kw_map = kw_maps[కుంచికభాషా];
+        Object.entries( kw_map).forEach( ([key,val],i) => {
+            const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
+            replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
+        });
+        console.log( programText );
+        console.log( replaced );
+    }
+    return replaced;
+}
+
 function commandChanged () {
     let commandText = document.getElementById("command").value;
     let codeAreaText = document.getElementById('codeArea').value;
@@ -999,41 +1026,24 @@ function commandChanged () {
     const ప్రదర్శన_విధానము = ప్రదర్శన_విధానము_పేరు( కుంచికభాషా );
     errorFound = false
     ఆట_ఆపు();
-    const kw_map = kw_maps[కుంచికభాషా] || english_kw_map;
+    
+  
     try {
         // execute any code in the codeArea box
-        console.log("cC codeArea")
-        let replaced = codeAreaText
-        Object.entries( kw_map).forEach( ([key,val],i) => {
-            const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
-            console.log(" key = ", key, " key_pattern = ", key_pattern, " val = ", val);
-            replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
-            console.log( replaced );
-        });
-        console.log( codeAreaText )
-        console.log( replaced );
+        const replaced = substitute_keywords(కుంచికభాషా, codeAreaText )
         eval(replaced);
     } catch(e) {
         errorFound = true
         showError(e)
     }
 
-    // execute the code in the command box
-    // if (!errorFound && ( commandText !== "ప్రదర్శన()" ||
-    //                      commandText !== "ప్రదర్శన();" ||
-    //                      demo !== undefined)) {
-
     if (!errorFound && 
-        ( commandText !== ప్రదర్శన_విధానము|| commandText !== ప్రదర్శన_విధానము+ ";" ||
+        ( commandText !== ప్రదర్శన_విధానము|| commandText !== ప్రదర్శన_విధానము + ";" ||
           demo !== undefined
         )) {
         try {
             console.log("cC cmd: " + commandText + ".")
-            let replaced = commandText
-            Object.entries( kw_map).forEach( ([key,val],i) => {
-                const key_pattern = new RegExp('(?<'+ key +'>' + key + ')', 'g' );
-                replaced = replaced.replaceAll( key_pattern, "/* " + key + " */ " + val )
-            });
+            const replaced = substitute_keywords(కుంచికభాషా, commandText );
             eval(replaced);        
         } catch(e) {
             errorFound = true
