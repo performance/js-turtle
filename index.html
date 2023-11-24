@@ -7,7 +7,7 @@
   <link type="text/css" rel="stylesheet" href="కుంచిక.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
   <!-- <script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?prelist=sansktradall&class=verse"></script> -->
-
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/editor/editor.main.min.css">
 </head>
 <!--body onresize="resizeColumns();"> -->
 
@@ -757,38 +757,15 @@
                 </p>
               </span>
             </h4>
-            <textarea id="codeArea">
-/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */
-
-ప్రదర్శన = () => {
-  కుంచికను_దాచు();
-ఆవర్తించు(6, () => {
-  రంగు_మార్చు( 0 );
-  కుడి_వైపు_తిరుగు(180);
-  _అత్ర_ భుజము = 100;
-  _అత్ర_ రంగు_సంఖ్య = 0;
-  యావత్_పరిక్రమ( () => భుజము > 0, ()=> {
-
-    కుడివైపు_చాపాము(భుజము, 30 );
-
-    కుడి_వైపు_తిరుగు(30);
-    భుజము = భుజము - 10;
-    రంగు_సంఖ్య = ( రంగు_సంఖ్య  + 15 ) % 16;
-    రంగు_మార్చు( రంగు_సంఖ్య );
-  } );
-});
-
-కుడి_వైపు_తిరుగు(310);
-కుంచికను_పైకి_ఎత్తు();
-ముందుకు_జరుగు(60 );
-కుంచికను_కింద_పెట్టు()
-రంగు_మార్చు( 13 );
-నిండు_వృత్తము(5 );
-వృత్తము(10);
-
-}
-
-         </textarea> <!-- codeArea -->
+            <div id="codeContainer" style="height: 800px;border:1px solid black;">
+              <script type="module">
+                import * as monaco from 'https://cdn.jsdelivr.net/npm/monaco-editor@0.39.0/+esm';
+              
+                monaco.editor.create(document.querySelector('.monaco'));
+              </script>
+              <div class="monaco" id="codeArea" style="min-height: 400px;width: 100%;">
+              </div> <!-- codeArea -->
+            </div>  
             <span class='left_help_text' id='codeArea_help_text'>
               <p>
                 The code area is for the entry of multi-line programs, helper
@@ -895,6 +872,7 @@
               -->
             </div> <!-- codebuttons -->
           </div> <!-- examplewrapper -->
+
         </div> <!-- rightcolumn -->
       </div> <!-- rightcolumncontainer -->
     </div> <!-- container-->
@@ -902,6 +880,7 @@
 
 
   <!-- scripts -->
+
   <script type="text/javascript" src="examples.js"></script>
   <script type="text/javascript" src="కుంచిక.js"></script>
   <script type="text/javascript" src="కుంచికConsole.js"></script>
