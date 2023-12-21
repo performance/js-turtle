@@ -731,6 +731,7 @@ function ప్రదర్శన_విధానము_పేరు(కుం�
     bulgarian: "показване()",
     spanish: "mostrar()",
     french: "afficher()",
+    chinese: "演示()",
   };
   let demo_name = demo_names[కుంచికభాషా] || "ప్రదర్శన()";
   return demo_name;
@@ -893,6 +894,20 @@ const english_labels = {
     <option value=square>Square</option>`,
 };
 
+const chinese_labels = {
+  referenceTitle: "备注",
+  canvastitle: "画布",
+  codeAreaName: "代码",
+  resetButton: "初始状态",
+  runButton: "运行代码",
+  downloadFilename: "下载",
+  examples: `<option selected value="正方形">正方形</option>
+                    <option value="彩色小鱼">彩色小鱼  </option>
+                    <option value="蛋形">蛋形  </option>
+                    <option value="砖墙">砖墙  </option>
+                    `,
+};
+
 const localized_labels = {
   telugu: telugu_labels,
   korean: korean_labels,
@@ -904,6 +919,7 @@ const localized_labels = {
   bulgarian: bulgarian_labels,
   spanish: spanish_labels,
   french: french_labels,
+  chinese: chinese_labels,
 };
 
 /*************************************************************************
@@ -1094,6 +1110,17 @@ const english_kw_map = {
   function: "function",
   return: "return",
 };
+
+// 中文 ->  Chinese
+const chinese_kw_map = {
+  _令_: "let",
+  _此处_: "let",
+  _各处_: "var",
+  _总是_: "const",
+  _步骤_: "function",
+  _结果_: "return",
+};
+
 const kw_maps = {
   telugu: telugu_kw_map,
   korean: korean_kw_map,
@@ -1106,7 +1133,10 @@ const kw_maps = {
   bulgarian: bulgarian_kw_map,
   spanish: spanish_kw_map,
   french: french_kw_map,
+  chinese: chinese_kw_map,
 };
+
+
 ///
 
 /*************************************************************************
