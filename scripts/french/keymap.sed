@@ -20,8 +20,8 @@ s/ముందుకు_జరుగు/avancer/g
 s/వెనుకకు_జరుగు/reculer/g
 s/కుడి_వైపు_తిరుగు/tourner_à_droite/g
 s/ఎడమ_వైపు_తిరుగు/tourner_à_gauche/g
-s/ఎడమవైపు_చాపాము/arc_à_gauche/g
-s/కుడివైపు_చాపాము/arc_à_droite/g
+s/ఎడమవైపు_చాపము/arc_à_gauche/g
+s/కుడివైపు_చాపము/arc_à_droite/g
 s/నిండు_వృత్తము/cercle_plein/g
 s/వృత్తము/cercle/g
 s/కుంచికను_పైకి_ఎత్తు/lever_le_pinceau/g
