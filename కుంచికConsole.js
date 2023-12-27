@@ -864,6 +864,24 @@ const samskrutam_labels = {
                   <option value="चतुर्भुजः">चतुर्भुजः</option>`,
 };
 
+const hindi_labels = {
+  referenceTitle: "भाषा अवलोकन",
+  canvastitle: "चित्रषेत्र",
+  codeAreaName: "लेखनक्षेत्र",
+  resetButton: "प्रथम_स्थिति",
+  runButton: "चलाओ",
+  downloadFilename: "लघुप्रतिमा",
+  examples: `<option selected value="रांगोली">उदाहरण</option>
+                    <option value="चतुर्भुज">चतुर्भुज</option>
+                    <option value="मछली">मछली</option>
+                    <option value="ईंट_का_दीवार">ईंट_का_दीवार</option>
+                    <option value="अंडाकार">अंडाकार</option>
+                    <option value="घडियार">घडियार</option>
+                    <option value="रंगीन_पुष्प">रंगीन_पुष्प</option>
+                    <option value="रांगोली">रांगोली</option>
+                    `,
+};
+
 const marathi_labels = {
   referenceTitle: "भाषेचे अवलोकन",
   canvastitle: "चित्रषेत्र",
@@ -898,6 +916,7 @@ const localized_labels = {
   korean: korean_labels,
   kannada: kannada_labels,
   samskrutam: samskrutam_labels,
+  hindi: hindi_labels,
   marathi: marathi_labels,
   english: english_labels,
   belarusian: belarusian_labels,
@@ -1050,6 +1069,15 @@ const samskrutam_kw_map = {
   _विधानम्_: "function",
   _फलम्_: "return",
 };
+
+// हिन्दी ->  Hindi
+const hindi_kw_map = {
+  _अत्र_: "let",
+  _सर्वत्र_: "var",
+  _सर्वदा_: "const",
+  _विधानम्_: "function",
+  _फलम्_: "return",
+};
 // मराठी ->  Marathi
 const marathi_kw_map = {
   _इथे_: "let",
@@ -1099,7 +1127,7 @@ const kw_maps = {
   korean: korean_kw_map,
   kannada: kannada_kw_map,
   samskrutam: samskrutam_kw_map,
-  hindi: samskrutam_kw_map,
+  hindi: hindi_kw_map,
   marathi: marathi_kw_map,
   // "english":    english_kw_map ,
   belarusian: belarusian_kw_map,
