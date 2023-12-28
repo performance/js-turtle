@@ -724,6 +724,7 @@ function ప్రదర్శన_విధానము_పేరు(కుం�
     korean: "데모()",
     kannada: "ಪ್ರದರ್ಶನೆ()",
     samskrutam: "प्रदर्शन()",
+    serbian: "prikazati()",
     hindi: "प्रदर्शन()",
     marathi: "प्रदर्शन()",
     english: "demo()",
@@ -806,6 +807,24 @@ const french_labels = {
                     <option value="horloge">Horloge</option>
                     <option value="flocons_de_neige">Flocons de neige</option>
                     <option value="art_de_sable">Art de sable</option>
+                    `,
+};
+
+const serbian_labels = {
+  referenceTitle: "Opis jezika",
+  canvastitle: "Platno",
+  codeAreaName: "Kod",
+  resetButton: "Resetuj",
+  runButton: "Pokreni",
+  downloadFilename: "Generisana slika",
+  examples: `<option selected value="kvadrat_u_spirali">Primeri</option>
+                    <option value="kvadrat_u_spirali">Kvadrati u spirali</option>
+                    <option value="riba">Riba</option>
+                    <option value="zid_od_cigle">Zid od cigle</option>
+                    <option value="forma_jaja">Oblik jaja</option>
+                    <option value="sat">Sat</option>
+                    <option value="pahulje_snega">Pahuljice snega</option>
+                    <option value="umetnost_peska">Umetnost peska</option>
                     `,
 };
 
@@ -935,6 +954,7 @@ const localized_labels = {
   korean: korean_labels,
   kannada: kannada_labels,
   samskrutam: samskrutam_labels,
+  serbian: serbian_labels,
   hindi: hindi_labels,
   marathi: marathi_labels,
   english: english_labels,
@@ -1143,6 +1163,16 @@ const bulgarian_kw_map = {
   _резултат_: "return",
 };
 
+// Serbian
+
+const serbian_kw_map = {
+  _ovde_: "let",
+  _svuda_: "var",
+  _uvek_: "const",
+  _metoda_: "function",
+  _rezultat_: "return",
+};
+
 // English
 const english_kw_map = {
   let: "let",
@@ -1151,6 +1181,7 @@ const english_kw_map = {
   function: "function",
   return: "return",
 };
+
 const kw_maps = {
   telugu: telugu_kw_map,
   korean: korean_kw_map,
@@ -1161,6 +1192,7 @@ const kw_maps = {
   // "english":    english_kw_map ,
   belarusian: belarusian_kw_map,
   bulgarian: bulgarian_kw_map,
+  serbian: serbian_kw_map,
   spanish: spanish_kw_map,
   french: french_kw_map,
   chinese: chinese_kw_map,

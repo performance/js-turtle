@@ -2015,6 +2015,60 @@ const Паўза = విరామము;
 const гуляць = ఆడించు;
 const адкласці = విలంబించు;
 //
+///////////////////
+
+/// Serbian
+
+const da = అవును;
+const ne = కాదు;
+const postoji = ఉంది;
+const ne_postoji = లేదు;
+const crtati = చిత్రీకరించు;
+const izbrisati = చెరిపి_వేయి;
+const početno_stanje = ఆది_స్థితి;
+const otići_u_centar = కేంద్రకమునకు_వెళ్ళు;
+const zaustaviti_igru = ఆట_ఆపు;
+const oko = చుట్టు;
+const ne_uvijati = చుట్టొద్దు;
+const početi_da_crtate_oblik = ఆకారము_ప్రారంభించు;
+const završite_sa_crtanjem_oblika = ఆకారము_ముగించు;
+const napredovati = ముందుకు_జరుగు;
+const nazadovati = వెనుకకు_జరుగు;
+const okrenuti_se_udesno = కుడి_వైపు_తిరుగు;
+const okrenuti_se_ulijevo = ఎడమ_వైపు_తిరుగు;
+const luk_ulijevo = ఎడమవైపు_చాపము;
+const luk_udesno = కుడివైపు_చాపము;
+const pun_krug = నిండు_వృత్తము;
+const krug = వృత్తము;
+const podignite_četku = కుంచికను_పైకి_ఎత్తు;
+const stavite_četku = కుంచికను_కింద_పెట్టు;
+const sakrij_četku = కుంచికను_దాచు;
+const pokažite_četku = కుంచికను_చూపు;
+const promenite_položaj = స్థానము_మార్చు;
+const koristite_x = xనియోగించు;
+const koristite_y = yనియోగించు;
+const ugao = కోణము;
+const promenite_smer = దిశ_మార్చు;
+const napiši = వ్రాయి;
+const nasumični_broj = యాదృచ్ఛిక_సంఖ్య;
+const širina = వెడల్పు;
+const promenite_boju_na = రంగు_మార్చు;
+const postavite_font = అక్షరరూపము_స్థాపించు;
+const maksimalni_X = గరిష్ఠX;
+const minimalni_X = కనిష్ఠX;
+const maksimalni_Y = గరిష్ఠY;
+const minimalni_Y = కనిష్ఠY;
+const ograničite_u_rasponu = గాడిలో_పెట్టు;
+const ponavljajte_brojanje = లెక్క_పెడుతూ_ఆవర్తించు;
+const ponavljajte = ఆవర్తించు;
+const ponavljajte_dok = యావత్_పరిక్రమ;
+const ako_onda_inače = యది_తర్హి_అన్యథా;
+const ako_onda = యది_తర్హి;
+const pauza = విరామము;
+const igrati = ఆడించు;
+const odgoditi = విలంబించు;
+
+//////////////////
 
 // Bulgarian
 
