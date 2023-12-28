@@ -1672,6 +1672,339 @@ _कायम_    रुंदी = 2* ऊंची \n\
 }\n\
 '
 // End Marathi 
+// Begin Serbian 
+forma_jaja ='\
+// మూలము: https://pythonturtle.academy/tutorial-drawing-egg-shape-with-python-turtle/\n\
+\n\
+jaje = (x, y, veličina, nagib) => {\n\
+  podignite_četku();\n\
+  promenite_položaj(x, y);\n\
+  stavite_četku();\n\
+  promenite_smer(270 + nagib);\n\
+  promenite_boju_na(4); // crvena\n\
+  luk_udesno(veličina, 180);\n\
+  promenite_boju_na(1); // plava\n\
+  luk_udesno(2 * veličina, 45);\n\
+  promenite_boju_na(10); // zelena);\n\
+  luk_udesno(0.586 * veličina, 90);\n\
+  promenite_boju_na(1); // plava\n\
+  luk_udesno(2 * veličina, 45);\n\
+};\n\
+\n\
+prikazati = () => {\n\
+  početno_stanje();\n\
+  sakrij_četku();\n\
+  jaje(90, 90, 40, 0);\n\
+  jaje(0, 0, 90, 45);\n\
+};\n\
+'
+kvadrat_u_spirali ='\
+/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */\n\
+\n\
+kvadrat = ( stranica ) => {\n\
+  ponavljajte(4, () => {\n\
+    napredovati( stranica );\n\
+    okrenuti_se_udesno(90);\n\
+  });\n\
+}\n\
+\n\
+prikazati = () => {\n\
+  početno_stanje();\n\
+  sakrij_četku();\n\
+  promenite_boju_na( 1 ); // plava\n\
+  _ovde_ stranica = 100;\n\
+  _ovde_ broj_boje = 0;\n\
+  ponavljajte_dok( () => stranica > 0, ()=> {\n\
+    kvadrat( stranica );\n\
+    okrenuti_se_udesno(36);\n\
+    stranica = stranica - 10;\n\
+    broj_boje = ( broj_boje + 1 ) % 16;\n\
+    promenite_boju_na( broj_boje );\n\
+  } );\n\
+}\n\
+'
+pahulje_snega ='\
+\n\
+\n\
+minimalna_vrednost = Math.min\n\
+\n\
+_metoda_     linija_Koch (dužina, dubina) {\n\
+  ako_onda_inače( () => (dubina == 0),\n\
+   () => {    napredovati(dužina);  },\n\
+   () => {\n\
+    //  ఎడమ వైపు బుడిప \n\
+    linija_Koch (dužina/3, dubina-1);\n\
+    okrenuti_se_ulijevo(60); \n\
+    linija_Koch (dužina/3, dubina-1);\n\
+    okrenuti_se_udesno(120); \n\
+    linija_Koch (dužina/3, dubina-1);\n\
+    okrenuti_se_ulijevo(60); \n\
+    linija_Koch (dužina/3, dubina-1);\n\
+  } )\n\
+}\n\
+\n\
+\n\
+_metoda_     pahulja_snega_Koch (dužina, dubina) {\n\
+  ugao (30);\n\
+  promenite_položaj(-dužina/2,-.3 * dužina);\n\
+  linija_Koch (dužina, dubina);\n\
+  okrenuti_se_udesno(120);\n\
+  linija_Koch (dužina, dubina);\n\
+  okrenuti_se_udesno(120);\n\
+  linija_Koch (dužina, dubina);\n\
+  okrenuti_se_udesno(120);\n\
+}\n\
+  \n\
+pahulje_snega = ()=> {\n\
+  boje_latica.push(nasumični_broj(15) );\n\
+  boje_latica.shift();\n\
+  ponavljajte_brojanje (6, ( క ) => {\n\
+    promenite_boju_na( boje_latica [క] );\n\
+    pahulja_snega_Koch( dužina * (క+1) * (క+1), క)\n\
+  } );\n\
+}\n\
+\n\
+_metoda_     prikazati() {\n\
+  početno_stanje();\n\
+  dužina = .045* minimalna_vrednost(maksimalni_X(), maksimalni_Y())\n\
+  boje_latica = [];\n\
+  ponavljajte_brojanje (6, ( క ) => {\n\
+    boje_latica[క] = nasumični_broj(6);\n\
+  } );\n\
+\n\
+  sakrij_četku();\n\
+  igrati(pahulje_snega,1)\n\
+}\n\
+'
+riba ='\
+\n\
+kvadratni_koren = Math.sqrt\n\
+\n\
+prikazati = () => {\n\
+  početno_stanje();\n\
+  sakrij_četku();\n\
+\n\
+riba = ( వ ) => {\n\
+  krug( వ )\n\
+  okrenuti_se_udesno( 90 );\n\
+\n\
+  podignite_četku()\n\
+  napredovati( వ );\n\
+  stavite_četku()\n\
+\n\
+  pokažite_četku();\n\
+\n\
+\n\
+  okrenuti_se_ulijevo( 45 );\n\
+  napredovati( 2 * వ );\n\
+  okrenuti_se_udesno(90+45)\n\
+\n\
+  napredovati( kvadratni_koren( 2 * వ * 2 * వ * 2 ) );\n\
+\n\
+  okrenuti_se_udesno(90+45)\n\
+  napredovati( 2 * వ );\n\
+  okrenuti_se_ulijevo( 45 );\n\
+\n\
+  // sakrij_četku();\n\
+\n\
+  podignite_četku()\n\
+  napredovati( వ );\n\
+  stavite_četku()\n\
+\n\
+  okrenuti_se_udesno( 90 );\n\
+}\n\
+\n\
+boja_riba = (broj_boje) =>  {\n\
+  promenite_boju_na(broj_boje)\n\
+ riba( 40 + ( broj_boje * 1 ) )\n\
+} \n\
+ponavljajte_brojanje( 16 , (క) => boja_riba( క ) )\n\
+\n\
+}\n\
+'
+sat ='\
+// గోడ sat\n\
+\n\
+_svuda_   కొలత;\n\
+\n\
+// sat చుట్టూ క్షణముల గీతలు గీయుటకు\n\
+_metoda_     క్షణముల_గీతలు(x, y, వ్యాసార్థము) {\n\
+   _ovde_   గీత_dužina = 7;\n\
+   _ovde_   ఖాళీ = వ్యాసార్థము - గీత_dužina;\n\
+   promenite_boju_na( 1 ); // plava\n\
+   širina(1);\n\
+   ponavljajte_brojanje( 60, ( కో ) => {\n\
+      _ovde_ థీటా = కో * 6;\n\
+      // ప్రతి  ఐదవది దళసరి గా వేయవలెను\n\
+      širina( ( ( కో % 5 ) ? 1 : 3)/130* కొలత)\n\
+      podignite_četku();\n\
+      promenite_položaj(0,0);\n\
+      ugao(థీటా);\n\
+      napredovati(ఖాళీ);\n\
+      stavite_četku();\n\
+      napredovati(గీత_dužina);\n\
+   });\n\
+   \n\
+}\n\
+\n\
+\n\
+// గంటలు, నిమిషాలూ సూచించే అంకెలు\n\
+_metoda_     అంకెలు(x, y, వ్యాసార్థము) {\n\
+   podignite_četku();\n\
+   _ovde_  అక్షర_veličina = 20/130 * కొలత\n\
+   postavite_font(అక్షర_veličina+"px sans-serif");\n\
+   promenite_boju_na("నలుపు");\n\
+   ponavljajte_brojanje( 12, ( గంట ) =>{\n\
+      promenite_položaj(x,y);\n\
+      ugao(గంట * 30);\n\
+      napredovati(వ్యాసార్థము); // to center of digit\n\
+      ugao(180);\n\
+      napredovati(10/130 * కొలత); // vertical correction to baseline\n\
+      okrenuti_se_udesno(90);\n\
+      // క్రింది, ఎడమ భాగమునకు అనుప్రస్థ సరదుబాటు\n\
+      napredovati( ( (గంట < 10 ) ? 6 : 10 )/130 * కొలత)\n\
+      // if (గంట < 10) {\n\
+      //   napredovati(6/130 * కొలత); // horizontal correction to lower left corner\n\
+      // } else {\n\
+      //   napredovati(10/130 * కొలత)\n\
+      // }\n\
+      okrenuti_se_udesno(180);\n\
+      napiši(గంట);\n\
+   })\n\
+   stavite_četku();\n\
+}\n\
+\n\
+// చేతులు గీయుటకు  \n\
+_metoda_     చెయ్యి (థీటా, చెయ్యి_širina, dužina, boja) {\n\
+   _ovde_   కూచి_తగ్గింపు = 5;\n\
+   _ovde_   కూచి_తగ్గింపులు = (dužina / కూచి_తగ్గింపు);\n\
+   _ovde_   širina_సర్దుబాటు =  చెయ్యి_širina / కూచి_తగ్గింపులు;\n\
+   promenite_položaj(0, 0);\n\
+   ugao(థీటా);\n\
+   promenite_boju_na(boja);\n\
+   // for (_svuda_   step = 0; step < dužina; step = step + కూచి_తగ్గింపు) \n\
+   ponavljajte_brojanje( కూచి_తగ్గింపులు, ( అడుగు) => \n\
+   {\n\
+      širina( చెయ్యి_širina ); // కుంచిక širina\n\
+      napredovati(కూచి_తగ్గింపు);\n\
+      చెయ్యి_širina =  చెయ్యి_širina  - širina_సర్దుబాటు;\n\
+   }\n\
+   );\n\
+}\n\
+\n\
+_metoda_     చేతులు(గంటలు, నిమిషములు, క్షణములు) {\n\
+    // క్షణముల చెయ్యి\n\
+    _ovde_   క్షణముకెన్ని_డిగ్రీలు = 6;	// = 360 degrees/60 క్షణములు\n\
+    చెయ్యి(క్షణములు * క్షణముకెన్ని_డిగ్రీలు, 4, 100/130 * కొలత, "red");\n\
+    // నిమిషముల చెయ్యి \n\
+    _ovde_   నిమిషానికెన్ని_డిగ్రీలు = 0.1;	// = 360 degrees /3600 క్షణములు /గంట\n\
+    _ovde_   నిమిషములుInక్షణములు = నిమిషములు * 60 + క్షణములు;\n\
+    చెయ్యి(నిమిషములుInక్షణములు * నిమిషానికెన్ని_డిగ్రీలు, 10, 100/130 * కొలత, "blue");\n\
+    // గంటల చెయ్యి\n\
+    _ovde_   గంటకెన్ని_డిగ్రీలు = .1/12;	// = నిమిషానికెన్ని_డిగ్రీలు / 12 గంటలు \n\
+    _ovde_   గంటలుInక్షణములు = ((గంటలు % 12) * 3600) + నిమిషములుInక్షణములు;\n\
+    చెయ్యి(గంటలుInక్షణములు * గంటకెన్ని_డిగ్రీలు, 10, 60/130 * కొలత, "green");\n\
+}\n\
+\n\
+// satను పునరావృతము చేయుటకు\n\
+_metoda_     sat() {\n\
+   izbrisati();\n\
+   కొలత = .9 *  Math.min( maksimalni_X(), maksimalni_Y())\n\
+   అంకెలు(0, 0, 110/130 * కొలత);\n\
+   promenite_boju_na("lightgreen");\n\
+   promenite_položaj(0,0);\n\
+   širina(1/130* కొలత)\n\
+   krug(130/130 * కొలత );\n\
+   క్షణముల_గీతలు(0, 0, 130/130 * కొలత );\n\
+   _ovde_  సమయము = new Date();\n\
+   చేతులు(సమయము.getHours(), సమయము.getMinutes(), సమయము.getSeconds());\n\
+}\n\
+\n\
+_metoda_     prikazati() {\n\
+   početno_stanje();\n\
+   sakrij_četku();\n\
+   igrati(sat,1000); // satను ప్రతి క్షణము పునరావృతము చేయ వలెను.\n\
+}\n\
+'
+umetnost_peska ='\
+\n\
+prikazati = () => {\n\
+  početno_stanje();\n\
+    sakrij_četku();\n\
+  ponavljajte(6, () => {\n\
+    promenite_boju_na( 0 );\n\
+    okrenuti_se_udesno(180);\n\
+    _ovde_ stranica = 100;\n\
+    _ovde_ broj_boje = 0;\n\
+    ponavljajte_dok( () => stranica > 0, ()=> {\n\
+  \n\
+      luk_udesno(stranica, 30 );\n\
+  \n\
+      okrenuti_se_udesno(30);\n\
+      stranica = stranica - 10;\n\
+      broj_boje = ( broj_boje  + 15 ) % 16;\n\
+      promenite_boju_na( broj_boje );\n\
+    } );\n\
+  });\n\
+\n\
+  okrenuti_se_udesno(310);\n\
+  podignite_četku();\n\
+  napredovati(60 );\n\
+  stavite_četku()\n\
+  promenite_boju_na( 13 );\n\
+  pun_krug(5 );\n\
+  krug(10);\n\
+}\n\
+'
+zid_od_cigle ='\
+// cigle ప్రస్తారము \n\
+\n\
+_uvek_    visina = 15\n\
+_uvek_    širina = 2* visina \n\
+\n\
+// cigle == ఇటుక \n\
+\n\
+cigle = ( visina, širina, boja_cigle) => {\n\
+  početi_da_crtate_oblik()\n\
+  ponavljajte (2, () => {\n\
+    napredovati( širina)\n\
+    okrenuti_se_udesno(90)\n\
+    napredovati( visina)\n\
+    okrenuti_se_udesno(90)\n\
+  })\n\
+  završite_sa_crtanjem_oblika( boja_cigle)\n\
+  napredovati( širina)\n\
+}\n\
+\n\
+prikazati = () => {\n\
+  početno_stanje()\n\
+ \n\
+  yB = maksimalni_Y()\n\
+  xB = minimalni_X()\n\
+   ne_uvijati()\n\
+  okrenuti_se_udesno( 90)\n\
+  promenite_boju_na( 7 ); // bela\n\
+\n\
+  ponavljajte_dok( () => కుంచిక.స్థానము.y > minimalni_Y(), () => {\n\
+    promenite_položaj(xB, yB)\n\
+    ponavljajte_dok( () => కుంచిక.స్థానము.x < maksimalni_X(), () => {\n\
+      stavite_četku()\n\
+      cigle(visina, širina, "darkred")\n\
+      podignite_četku()\n\
+    } )\n\
+    yB = yB - visina\n\
+\n\
+    promenite_položaj(xB - širina/2, yB)\n\
+    ponavljajte_dok( () => కుంచిక.స్థానము.x < maksimalni_X(), () => {\n\
+      stavite_četku()\n\
+      cigle(visina, širina, "darkred")\n\
+      podignite_četku()\n\
+    } )\n\
+    yB = yB - visina\n\
+  } )\n\
+}\n\
+'
+// End Serbian 
 // Begin Spanish 
 arte_de_arena ='\
 // arte_de_arena\n\
@@ -2322,7 +2655,7 @@ _విధానము_     ప్రదర్శన() {\n\
     _అత్ర_ రంగు_సంఖ్య = 0;\n\
     యావత్_పరిక్రమ( () => భుజము > 0, ()=> {\n\
   \n\
-      కుడివైపు_చాపాము(భుజము, 30 );\n\
+      కుడివైపు_చాపము(భుజము, 30 );\n\
   \n\
       కుడి_వైపు_తిరుగు(30);\n\
       భుజము = భుజము - 10;\n\
@@ -2344,26 +2677,26 @@ _విధానము_     ప్రదర్శన() {\n\
 // మూలము: https://pythonturtle.academy/tutorial-drawing-egg-shape-with-python-turtle/\n\
 \n\
 అండాకారము = (x, y, పరిమాణము, వాలు) => {\n\
-  కుంచికను_పైకి_ఎత్తు()\n\
-  స్థానము_మార్చు(x,y)\n\
-  కుంచికను_కింద_పెట్టు()\n\
-  దిశ_మార్చు(270+వాలు)\n\
-  రంగు_మార్చు(ఎరుపు)\n\
-  కుడివైపు_చాపాము(పరిమాణము,180)\n\
-  రంగు_మార్చు(నీలము)\n\
-  కుడివైపు_చాపాము(2*పరిమాణము,45)\n\
-  రంగు_మార్చు("ఆకుపచ్చ")\n\
-  కుడివైపు_చాపాము(0.586*పరిమాణము,90)\n\
-  రంగు_మార్చు(నీలము)\n\
-  కుడివైపు_చాపాము(2*పరిమాణము,45)\n\
-}\n\
+  కుంచికను_పైకి_ఎత్తు();\n\
+  స్థానము_మార్చు(x, y);\n\
+  కుంచికను_కింద_పెట్టు();\n\
+  దిశ_మార్చు(270 + వాలు);\n\
+  రంగు_మార్చు(ఎరుపు);\n\
+  కుడివైపు_చాపము(పరిమాణము, 180);\n\
+  రంగు_మార్చు(నీలము);\n\
+  కుడివైపు_చాపము(2 * పరిమాణము, 45);\n\
+  రంగు_మార్చు("ఆకుపచ్చ");\n\
+  కుడివైపు_చాపము(0.586 * పరిమాణము, 90);\n\
+  రంగు_మార్చు(నీలము);\n\
+  కుడివైపు_చాపము(2 * పరిమాణము, 45);\n\
+};\n\
 \n\
 ప్రదర్శన = () => {\n\
   ఆది_స్థితి();\n\
   కుంచికను_దాచు();\n\
-  అండాకారము( 90, 90, 40, 0 )\n\
-  అండాకారము( 0, 0, 90, 45 )\n\
-}\n\
+  అండాకారము(90, 90, 40, 0);\n\
+  అండాకారము(0, 0, 90, 45);\n\
+};\n\
 '
 హిమరేకులు ='\
 \n\

@@ -761,15 +761,15 @@ lt = ఎడమ_వైపు_తిరుగు;
 // ಎಡಕ್ಕೆ_ತಿರುಗಿ = ఎడమ_వైపు_తిరుగు; // ಕನ್ನಡ
 
 /*******************************************************************************
- * ఎడమవైపు_చాపాము -- move the కుంచిక forward along a path curving to the left
- * ఎడమవైపు_చాపాము
+ * ఎడమవైపు_చాపము -- move the కుంచిక forward along a path curving to the left
+ * ఎడమవైపు_చాపము
  * arguments:
  *   వ్యాసార్థము: వ్యాసార్థము of the curve
  *   extent: number of degrees in the curve
  *
  * returns: None
  ******************************************************************************/
-function ఎడమవైపు_చాపాము(వ్యాసార్థము, extent) {
+function ఎడమవైపు_చాపము(వ్యాసార్థము, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
@@ -814,26 +814,26 @@ large-arg-flag
 sweep-flag
 dx and dy are the center of the arc
 
-so this translates "ఎడమవైపు_చాపాము (వ్యాసార్థము, extent)" roughly to:
+so this translates "ఎడమవైపు_చాపము (వ్యాసార్థము, extent)" roughly to:
 
 <path ... d="... a <వ్యాసార్థము> <వ్యాసార్థము> 0 1 <కుంచిక.స్థానము.x> + <వ్యాసార్థము> * sin(<కుంచిక.heading>) <కుంచిక.స్థానము.x> + <వ్యాసార్థము> * cos(<కుంచిక.heading>)
    "l <x of arc end> <y of arc end>"
 arc end is determined from the center of the arc through extent degrees
 */
-curveLeft = ఎడమవైపు_చాపాము;
-curveleft = ఎడమవైపు_చాపాము;
-// ಎಡಕ್ಕೆ_ಚಾಪ  = ఎడమవైపు_చాపాము; // ಕನ್ನಡ
+curveLeft = ఎడమవైపు_చాపము;
+curveleft = ఎడమవైపు_చాపము;
+// ಎಡಕ್ಕೆ_ಚಾಪ  = ఎడమవైపు_చాపము; // ಕನ್ನಡ
 
 /*******************************************************************************
- * కుడివైపు_చాపాము -- move the కుంచిక forward along a path curving to the right
- * కుడివైపు_చాపాము
+ * కుడివైపు_చాపము -- move the కుంచిక forward along a path curving to the right
+ * కుడివైపు_చాపము
  * arguments:
  *   వ్యాసార్థము: వ్యాసార్థము of the curve
  *   extent: number of degrees in the curve
  *
  * returns: None
  ******************************************************************************/
-function కుడివైపు_చాపాము(వ్యాసార్థము, extent) {
+function కుడివైపు_చాపము(వ్యాసార్థము, extent) {
   if (extent == undefined) {
     extent = 359.9999; // this doesn't work if closer to 360, don't know why
   }
@@ -870,9 +870,9 @@ function కుడివైపు_చాపాము(వ్యాసార్థ
   drawIf();
 }
 
-curveRight = కుడివైపు_చాపాము;
-curveright = కుడివైపు_చాపాము;
-// ಬಲಕ್ಕೆ_ಚಾಪ  = కుడివైపు_చాపాము;  // ಕನ್ನಡ
+curveRight = కుడివైపు_చాపము;
+curveright = కుడివైపు_చాపము;
+// ಬಲಕ್ಕೆ_ಚಾಪ  = కుడివైపు_చాపము;  // ಕನ್ನಡ
 
 /*******************************************************************************
  * వృత్తము -- draw a cirle about the current కుంచిక position
@@ -1809,8 +1809,8 @@ const ಮುಂದೆ_ಹೋಗಿ = ముందుకు_జరుగు;
 const ಹಿಂದೆ_ಹೋಗಿ = వెనుకకు_జరుగు;
 const ಬಲಕ್ಕೆ_ತಿರುಗಿ = కుడి_వైపు_తిరుగు;
 const ಎಡಕ್ಕೆ_ತಿರುಗಿ = ఎడమ_వైపు_తిరుగు;
-const ಎಡಕ್ಕೆ_ಚಾಪ = ఎడమవైపు_చాపాము;
-const ಬಲಕ್ಕೆ_ಚಾಪ = కుడివైపు_చాపాము;
+const ಎಡಕ್ಕೆ_ಚಾಪ = ఎడమవైపు_చాపము;
+const ಬಲಕ್ಕೆ_ಚಾಪ = కుడివైపు_చాపము;
 const ವೃತ್ತ = వృత్తము;
 const ಚಾಪ = వృత్తము;
 const ತುಂಬಿದ_ವೃತ್ತ = నిండు_వృత్తము;
@@ -1870,8 +1870,8 @@ const अग्रे_गच्छतु = ముందుకు_జరుగు
 const पृष्ठतो_गच्छतु = వెనుకకు_జరుగు;
 const दक्षिणं_वर्तस्व = కుడి_వైపు_తిరుగు;
 const वामं_वर्तस्व = ఎడమ_వైపు_తిరుగు;
-const वामतश्चापः = ఎడమవైపు_చాపాము;
-const दक्षिणतश्चापः = కుడివైపు_చాపాము;
+const वामतश्चापः = ఎడమవైపు_చాపము;
+const दक्षिणतश्चापः = కుడివైపు_చాపము;
 const वृत्तम् = వృత్తము;
 const चापः = వృత్తము;
 const पूरितं_वृत्तम् = నిండు_వృత్తము;
@@ -1926,8 +1926,8 @@ const ісці_наперад = ముందుకు_జరుగు;
 const ісці_назад = వెనుకకు_జరుగు;
 const павярнуць_направа = కుడి_వైపు_తిరుగు;
 const павярнуць_налева = ఎడమ_వైపు_తిరుగు;
-const дуга_налева = ఎడమవైపు_చాపాము;
-const дуга_направа = కుడివైపు_చాపాము;
+const дуга_налева = ఎడమవైపు_చాపము;
+const дуга_направа = కుడివైపు_చాపము;
 const круг = వృత్తము;
 const дуга = వృత్తము;
 const запоўнены_круг = నిండు_వృత్తము;
@@ -1961,6 +1961,60 @@ const Паўза = విరామము;
 const гуляць = ఆడించు;
 const адкласці = విలంబించు;
 //
+///////////////////
+
+/// Serbian
+
+const da = అవును;
+const ne = కాదు;
+const postoji = ఉంది;
+const ne_postoji = లేదు;
+const crtati = చిత్రీకరించు;
+const izbrisati = చెరిపి_వేయి;
+const početno_stanje = ఆది_స్థితి;
+const otići_u_centar = కేంద్రకమునకు_వెళ్ళు;
+const zaustaviti_igru = ఆట_ఆపు;
+const oko = చుట్టు;
+const ne_uvijati = చుట్టొద్దు;
+const početi_da_crtate_oblik = ఆకారము_ప్రారంభించు;
+const završite_sa_crtanjem_oblika = ఆకారము_ముగించు;
+const napredovati = ముందుకు_జరుగు;
+const nazadovati = వెనుకకు_జరుగు;
+const okrenuti_se_udesno = కుడి_వైపు_తిరుగు;
+const okrenuti_se_ulijevo = ఎడమ_వైపు_తిరుగు;
+const luk_ulijevo = ఎడమవైపు_చాపము;
+const luk_udesno = కుడివైపు_చాపము;
+const pun_krug = నిండు_వృత్తము;
+const krug = వృత్తము;
+const podignite_četku = కుంచికను_పైకి_ఎత్తు;
+const stavite_četku = కుంచికను_కింద_పెట్టు;
+const sakrij_četku = కుంచికను_దాచు;
+const pokažite_četku = కుంచికను_చూపు;
+const promenite_položaj = స్థానము_మార్చు;
+const koristite_x = xనియోగించు;
+const koristite_y = yనియోగించు;
+const ugao = కోణము;
+const promenite_smer = దిశ_మార్చు;
+const napiši = వ్రాయి;
+const nasumični_broj = యాదృచ్ఛిక_సంఖ్య;
+const širina = వెడల్పు;
+const promenite_boju_na = రంగు_మార్చు;
+const postavite_font = అక్షరరూపము_స్థాపించు;
+const maksimalni_X = గరిష్ఠX;
+const minimalni_X = కనిష్ఠX;
+const maksimalni_Y = గరిష్ఠY;
+const minimalni_Y = కనిష్ఠY;
+const ograničite_u_rasponu = గాడిలో_పెట్టు;
+const ponavljajte_brojanje = లెక్క_పెడుతూ_ఆవర్తించు;
+const ponavljajte = ఆవర్తించు;
+const ponavljajte_dok = యావత్_పరిక్రమ;
+const ako_onda_inače = యది_తర్హి_అన్యథా;
+const ako_onda = యది_తర్హి;
+const pauza = విరామము;
+const igrati = ఆడించు;
+const odgoditi = విలంబించు;
+
+//////////////////
 
 // Bulgarian
 
@@ -1981,8 +2035,8 @@ const напред = ముందుకు_జరుగు;
 const назад = వెనుకకు_జరుగు;
 const надясно = కుడి_వైపు_తిరుగు;
 const наляво = ఎడమ_వైపు_తిరుగు;
-const наляво_кликни = ఎడమవైపు_చాపాము;
-const надясно_кликни = కుడివైపు_చాపాము;
+const наляво_кликни = ఎడమవైపు_చాపము;
+const надясно_кликни = కుడివైపు_చాపము;
 const пълен_кръг = నిండు_వృత్తము;
 const кръг = వృత్తము;
 const четката_нагоре = కుంచికను_పైకి_ఎత్తు;
@@ -2033,8 +2087,8 @@ const avancer = ముందుకు_జరుగు;
 const reculer = వెనుకకు_జరుగు;
 const tourner_à_droite = కుడి_వైపు_తిరుగు;
 const tourner_à_gauche = ఎడమ_వైపు_తిరుగు;
-const arc_à_gauche = ఎడమవైపు_చాపాము;
-const arc_à_droite = కుడివైపు_చాపాము;
+const arc_à_gauche = ఎడమవైపు_చాపము;
+const arc_à_droite = కుడివైపు_చాపము;
 const cercle_plein = నిండు_వృత్తము;
 const cercle = వృత్తము;
 const lever_le_pinceau = కుంచికను_పైకి_ఎత్తు;
@@ -2085,8 +2139,8 @@ const पुढे_जा = ముందుకు_జరుగు;
 const मागे_जा = వెనుకకు_జరుగు;
 const उज्वी_कडे_वळा = కుడి_వైపు_తిరుగు;
 const दावी_कडे_वळा = ఎడమ_వైపు_తిరుగు;
-const दावी_कडे_चाप = ఎడమవైపు_చాపాము;
-const उज्वी_कडे_चाप = కుడివైపు_చాపాము;
+const दावी_कडे_चाप = ఎడమవైపు_చాపము;
+const उज्वी_कडे_चाप = కుడివైపు_చాపము;
 const भरलेले_वर्तुळ = నిండు_వృత్తము;
 const वर्तुळ = వృత్తము;
 const कुंचला_उचला = కుంచికను_పైకి_ఎత్తు;
@@ -2137,8 +2191,8 @@ const avanzar = ముందుకు_జరుగు;
 const retroceder = వెనుకకు_జరుగు;
 const girar_a_la_derecha = కుడి_వైపు_తిరుగు;
 const girar_a_la_izquierda = ఎడమ_వైపు_తిరుగు;
-const arco_a_la_izquierda = ఎడమవైపు_చాపాము;
-const arco_a_la_derecha = కుడివైపు_చాపాము;
+const arco_a_la_izquierda = ఎడమవైపు_చాపము;
+const arco_a_la_derecha = కుడివైపు_చాపము;
 const círculo_lleno = నిండు_వృత్తము;
 const círculo = వృత్తము;
 const levantar_el_pincel = కుంచికను_పైకి_ఎత్తు;
@@ -2196,8 +2250,8 @@ const 뒤로가다 = వెనుకకు_జరుగు;
 const 우회전 = కుడి_వైపు_తిరుగు;
 const 왼쪽으로돌아 = ఎడమ_వైపు_తిరుగు;
 
-const 시계반대방향 = ఎడమవైపు_చాపాము;
-const 시계방향 = కుడివైపు_చాపాము;
+const 시계반대방향 = ఎడమవైపు_చాపము;
+const 시계방향 = కుడివైపు_చాపము;
 const 원 = వృత్తము;
 const 곡선 = వృత్తము;
 const 완전한원 = నిండు_వృత్తము;

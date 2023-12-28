@@ -20,8 +20,8 @@ s/ముందుకు_జరుగు/avanzar/g
 s/వెనుకకు_జరుగు/retroceder/g
 s/కుడి_వైపు_తిరుగు/girar_a_la_derecha/g
 s/ఎడమ_వైపు_తిరుగు/girar_a_la_izquierda/g
-s/ఎడమవైపు_చాపాము/arco_a_la_izquierda/g
-s/కుడివైపు_చాపాము/arco_a_la_derecha/g
+s/ఎడమవైపు_చాపము/arco_a_la_izquierda/g
+s/కుడివైపు_చాపము/arco_a_la_derecha/g
 s/నిండు_వృత్తము/círculo_lleno/g
 s/వృత్తము/círculo/g
 s/కుంచికను_పైకి_ఎత్తు/levantar_el_pincel/g

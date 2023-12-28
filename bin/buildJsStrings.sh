@@ -23,6 +23,7 @@ rm -f examples.js # చెరిపి_వేయి temporary file
 
 for SUB_DIR_NAME in `ls -l ${DIRECTORY}| grep ^d | awk '{print $9}'` ; do
   echo "///////////////////////"
+  echo "// Begin ${SUB_DIR_NAME} "
   echo "// Begin ${SUB_DIR_NAME} " >> examples.js
   for FILE_NAME in `ls ${DIRECTORY}/${SUB_DIR_NAME}/*.js` ; do
     STRING_NAME=`echo $(basename ${FILE_NAME}) | sed -e s/.js\$//`
@@ -31,6 +32,7 @@ for SUB_DIR_NAME in `ls -l ${DIRECTORY}| grep ^d | awk '{print $9}'` ; do
     echo "'") >>examples.js
   done
   echo "// End ${SUB_DIR_NAME} " >> examples.js
+  echo "// End ${SUB_DIR_NAME} "
   echo "///////////////////////"
 done
 

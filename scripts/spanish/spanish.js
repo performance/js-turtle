@@ -1,4 +1,3 @@
-
 const sí = అవును;
 const no = కాదు;
 const existe = ఉంది;
@@ -16,8 +15,8 @@ const avanzar = ముందుకు_జరుగు;
 const retroceder = వెనుకకు_జరుగు;
 const girar_a_la_derecha = కుడి_వైపు_తిరుగు;
 const girar_a_la_izquierda = ఎడమ_వైపు_తిరుగు;
-const arco_a_la_izquierda = ఎడమవైపు_చాపాము;
-const arco_a_la_derecha = కుడివైపు_చాపాము;
+const arco_a_la_izquierda = ఎడమవైపు_చాపము;
+const arco_a_la_derecha = కుడివైపు_చాపము;
 const círculo_lleno = నిండు_వృత్తము;
 const círculo = వృత్తము;
 const levantar_el_pincel = కుంచికను_పైకి_ఎత్తు;
