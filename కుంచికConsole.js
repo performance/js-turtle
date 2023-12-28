@@ -732,6 +732,7 @@ function ప్రదర్శన_విధానము_పేరు(కుం�
     bulgarian: "показване()",
     spanish: "mostrar()",
     french: "afficher()",
+    chinese: "演示()",
   };
   let demo_name = demo_names[కుంచికభాషా] || "ప్రదర్శన()";
   return demo_name;
@@ -752,6 +753,24 @@ const telugu_labels = {
                     <option value="గడియారము">గడియారము</option>
                     <option value="హిమరేకులు">హిమరేకులు</option>
                     <option value="రంగవల్లీ">రంగవల్లీ</option>
+                    `,
+};
+
+const chinese_labels = {
+  referenceTitle: "語言參考",
+  canvastitle: "帆布",
+  codeAreaName: "代碼區",
+  resetButton: "初始状态",
+  runButton: "播放",
+  downloadFilename: "కుంచిక_చిత్రము",
+  examples: `<option selected value="沙畫">幾個例子 Examples </option>
+                    <option value="正方形">正方形</option>
+                    <option value="鱼">鱼</option>
+                    <option value="磚牆">磚牆</option>
+                    <option value="蛋形">蛋形</option>
+                    <option value="时钟">时钟</option>
+                    <option value="雪花">雪花</option>
+                    <option value="沙畫">沙畫</option>
                     `,
 };
 
@@ -883,6 +902,24 @@ const samskrutam_labels = {
                   <option value="चतुर्भुजः">चतुर्भुजः</option>`,
 };
 
+const hindi_labels = {
+  referenceTitle: "भाषा अवलोकन",
+  canvastitle: "चित्रषेत्र",
+  codeAreaName: "लेखनक्षेत्र",
+  resetButton: "प्रथम_स्थिति",
+  runButton: "चलाओ",
+  downloadFilename: "लघुप्रतिमा",
+  examples: `<option selected value="रांगोली">उदाहरण</option>
+                    <option value="चतुर्भुज">चतुर्भुज</option>
+                    <option value="मछली">मछली</option>
+                    <option value="ईंट_का_दीवार">ईंट_का_दीवार</option>
+                    <option value="अंडाकार">अंडाकार</option>
+                    <option value="घडियार">घडियार</option>
+                    <option value="रंगीन_पुष्प">रंगीन_पुष्प</option>
+                    <option value="रांगोली">रांगोली</option>
+                    `,
+};
+
 const marathi_labels = {
   referenceTitle: "भाषेचे अवलोकन",
   canvastitle: "चित्रषेत्र",
@@ -918,12 +955,14 @@ const localized_labels = {
   kannada: kannada_labels,
   samskrutam: samskrutam_labels,
   serbian: serbian_labels,
+  hindi: hindi_labels,
   marathi: marathi_labels,
   english: english_labels,
   belarusian: belarusian_labels,
   bulgarian: bulgarian_labels,
   spanish: spanish_labels,
   french: french_labels,
+  chinese: chinese_labels,
 };
 
 /*************************************************************************
@@ -1062,8 +1101,26 @@ const french_kw_map = {
   _résultat_: "return",
 };
 
+// Chinese
+const chinese_kw_map = {
+  _此处_: "let",
+  _到处_: "var",
+  _总是_: "const",
+  _步骤_: "function",
+  _结果_: "return",
+};
+
 // संस्कृतम् ->  Samskrutam
 const samskrutam_kw_map = {
+  _अत्र_: "let",
+  _सर्वत्र_: "var",
+  _सर्वदा_: "const",
+  _विधानम्_: "function",
+  _फलम्_: "return",
+};
+
+// हिन्दी ->  Hindi
+const hindi_kw_map = {
   _अत्र_: "let",
   _सर्वत्र_: "var",
   _सर्वदा_: "const",
@@ -1130,7 +1187,7 @@ const kw_maps = {
   korean: korean_kw_map,
   kannada: kannada_kw_map,
   samskrutam: samskrutam_kw_map,
-  hindi: samskrutam_kw_map,
+  hindi: hindi_kw_map,
   marathi: marathi_kw_map,
   // "english":    english_kw_map ,
   belarusian: belarusian_kw_map,
@@ -1138,6 +1195,7 @@ const kw_maps = {
   serbian: serbian_kw_map,
   spanish: spanish_kw_map,
   french: french_kw_map,
+  chinese: chinese_kw_map,
 };
 ///
 
