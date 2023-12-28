@@ -2359,7 +2359,7 @@ prikazati = () => {\n\
 };\n\
 '
 kvadrat_u_spirali ='\
-/* ఇక్కడ మీ ప్రక్రియ లు వ్రాయ గలరు. ఉదాహరణ కి:    */\n\
+/* Ovde možete napisati svoje procese. Na primer: */\n\
 \n\
 kvadrat = ( stranica ) => {\n\
   ponavljajte(4, () => {\n\
