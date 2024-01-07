@@ -764,14 +764,14 @@ const chinese_labels = {
   runButton: "播放",
   downloadFilename: "下载",
   examples: `<option selected value="沙畫">幾個例子 Examples </option>
-                    <option value="正方形">正方形</option>
-                    <option value="鱼">鱼</option>
-                    <option value="磚牆">磚牆</option>
-                    <option value="蛋形">蛋形</option>
-                    <option value="时钟">时钟</option>
-                    <option value="雪花">雪花</option>
-                    <option value="沙畫">沙畫</option>
-                    <option value="满天星">满天星</option>
+                    <option value="正方形">正方形 Squares</option>
+                    <option value="鱼">鱼 Fish</option>
+                    <option value="磚牆">磚牆 Brick Wall</option>
+                    <option value="蛋形">蛋形 Eggs</option>
+                    <option value="时钟">时钟 Clock</option>
+                    <option value="雪花">雪花 Snowflake</option>
+                    <option value="沙畫">沙畫 Sand picture</option>
+                    <option value="满天星">满天星 Random Stars</option>
                     `,
 };
 
