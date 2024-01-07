@@ -762,7 +762,7 @@ const chinese_labels = {
   codeAreaName: "代碼區",
   resetButton: "初始状态",
   runButton: "播放",
-  downloadFilename: "కుంచిక_చిత్రము",
+  downloadFilename: "下载",
   examples: `<option selected value="沙畫">幾個例子 Examples </option>
                     <option value="正方形">正方形</option>
                     <option value="鱼">鱼</option>
@@ -771,6 +771,7 @@ const chinese_labels = {
                     <option value="时钟">时钟</option>
                     <option value="雪花">雪花</option>
                     <option value="沙畫">沙畫</option>
+                    <option value="满天星">满天星</option>
                     `,
 };
 
